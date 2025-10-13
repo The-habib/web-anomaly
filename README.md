@@ -131,6 +131,14 @@ The application automatically:
 
 This project is open source and available under the MIT License.
 
+### Third-party components and data:
+
+- Common Crawl data: Used under Common Crawl's terms of use
+- Flask: BSD 3-Clause License
+- BeautifulSoup4: MIT License  
+- warcio: Apache 2.0 License
+- Common Crawl API: Respect their terms of service
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
