@@ -139,6 +139,14 @@ This project is open source and available under the MIT License.
 - warcio: Apache 2.0 License
 - Common Crawl API: Respect their terms of service
 
+### Data Usage
+
+This tool accesses Common Crawl archives. Users are responsible for:
+- Respecting website terms found in the archives
+- Complying with robots.txt directives
+- Using data in accordance with applicable laws
+- Providing proper attribution to source websites
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
