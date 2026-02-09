@@ -1,18 +1,20 @@
 from flask import Flask, request, jsonify, render_template, Response, send_from_directory
 import requests
 import json
-from urllib.parse import quote_plus, urljoin, urlparse, urlunparse
+from urllib.parse import quote_plus, urljoin
 from warcio.archiveiterator import ArchiveIterator
 from bs4 import BeautifulSoup
 import re
 import time
-from datetime import datetime
 import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 app = Flask(__name__)
 
 # Cache for Common Crawl records to avoid repeated index lookups
 cc_record_cache = {}
+# Cache for the list of available CC indexes
+cc_indexes_cache = {'indexes': [], 'timestamp': 0}
 
 @app.route('/')
 def index():
@@ -26,6 +28,10 @@ def favicon():
 @app.route('/get-indexes', methods=['GET'])
 def get_indexes():
     try:
+        # Use cache if fresh (< 1 hour)
+        if cc_indexes_cache['indexes'] and (time.time() - cc_indexes_cache['timestamp']) < 3600:
+            return jsonify({'success': True, 'indexes': cc_indexes_cache['indexes']})
+
         # Fetch the Common Crawl index page
         response = requests.get('https://data.commoncrawl.org/crawl-data/index.html')
         if response.status_code == 200:
@@ -45,6 +51,10 @@ def get_indexes():
             # Sort indexes in reverse chronological order (newest first)
             indexes.sort(reverse=True)
             
+            # Update cache
+            cc_indexes_cache['indexes'] = indexes
+            cc_indexes_cache['timestamp'] = time.time()
+            
             return jsonify({
                 'success': True,
                 'indexes': indexes
@@ -63,19 +73,18 @@ def get_indexes():
 
 @app.route('/fetch-commoncrawl', methods=['POST'])
 def fetch_commoncrawl():
+    """Search a single CC index for a URL"""
     data = request.json
     index_name = data.get('indexName', 'CC-MAIN-2024-33')
     target_url = data.get('targetUrl', 'commoncrawl.org/faq')
     user_agent = data.get('userAgent', 'cc-get-started/1.0 (Example data retrieval script; yourname@example.com)')
     
-    # Ensure the URL has a scheme for proper parsing
     if not target_url.startswith(('http://', 'https://')):
         target_url = 'https://' + target_url
     
     server = 'http://index.commoncrawl.org/'
     
     try:
-        # Search the Common Crawl Index
         encoded_url = quote_plus(target_url)
         index_url = f'{server}{index_name}-index?url={encoded_url}&output=json'
         response = requests.get(index_url, headers={'user-agent': user_agent})
@@ -84,20 +93,33 @@ def fetch_commoncrawl():
             records = response.text.strip().split('\n')
             records_list = [json.loads(record) for record in records if record.strip()]
             
+            # Tag every record with its source index
+            for rec in records_list:
+                rec['_source_index'] = index_name
+            
             if records_list:
-                # Fetch the page content from the first record
-                content, base_url, record_info = fetch_page_from_cc(records_list, user_agent, target_url)
+                content, base_url, record_info = fetch_page_from_cc(records_list[:1], user_agent, target_url)
+                
+                records_meta = []
+                for i, rec in enumerate(records_list):
+                    records_meta.append({
+                        'index': i,
+                        'indexName': index_name,
+                        'timestamp': rec.get('timestamp', ''),
+                        'status': rec.get('status', ''),
+                        'mime': rec.get('mime', ''),
+                        'length': rec.get('length', ''),
+                        'digest': rec.get('digest', ''),
+                    })
                 
                 if content:
-                    # Store records in cache for future navigation
-                    cache_key = f"{index_name}:{base_url}"
+                    cache_key = f"single:{index_name}:{target_url}"
                     cc_record_cache[cache_key] = {
                         'records': records_list,
                         'timestamp': time.time(),
                         'index_name': index_name
                     }
                     
-                    # Modify the HTML to route ALL requests through our proxy
                     modified_content = modify_html_for_complete_proxy(
                         content.decode('utf-8', errors='ignore'), 
                         base_url,
@@ -107,14 +129,18 @@ def fetch_commoncrawl():
                     return jsonify({
                         'success': True,
                         'recordsFound': len(records_list),
+                        'records': records_meta,
+                        'currentRecordIndex': 0,
                         'content': modified_content,
                         'baseUrl': base_url,
-                        'indexName': index_name
+                        'indexName': index_name,
+                        'cacheKey': cache_key
                     })
                 else:
                     return jsonify({
                         'success': True,
                         'recordsFound': len(records_list),
+                        'records': records_meta,
                         'content': None,
                         'message': 'No content could be extracted from the records'
                     })
@@ -136,6 +162,211 @@ def fetch_commoncrawl():
             'success': False,
             'error': str(e)
         })
+
+
+def _query_single_index(index_name, encoded_url, user_agent, server):
+    """Helper: query one CC index, return (index_name, records_list) or None."""
+    try:
+        url = f'{server}{index_name}-index?url={encoded_url}&output=json'
+        resp = requests.get(url, headers={'user-agent': user_agent}, timeout=30)
+        if resp.status_code == 200 and resp.text.strip():
+            lines = resp.text.strip().split('\n')
+            records = [json.loads(l) for l in lines if l.strip()]
+            for rec in records:
+                rec['_source_index'] = index_name
+            return (index_name, records)
+    except Exception:
+        pass
+    return None
+
+
+@app.route('/fetch-all-indexes', methods=['POST'])
+def fetch_all_indexes():
+    """Search ALL CC indexes in parallel for a URL and aggregate results."""
+    data = request.json
+    target_url = data.get('targetUrl', 'commoncrawl.org/faq')
+    user_agent = data.get('userAgent', 'chrono-explorer/1.0')
+
+    if not target_url.startswith(('http://', 'https://')):
+        target_url = 'https://' + target_url
+
+    # Get list of all indexes (from cache or fetch)
+    indexes = cc_indexes_cache.get('indexes', [])
+    if not indexes:
+        try:
+            resp = requests.get('https://data.commoncrawl.org/crawl-data/index.html')
+            if resp.status_code == 200:
+                soup = BeautifulSoup(resp.content, 'html.parser')
+                table = soup.find('table')
+                if table:
+                    for row in table.find_all('tr')[1:]:
+                        cols = row.find_all('td')
+                        if cols:
+                            link = cols[0].find('a')
+                            if link and link.text.startswith('CC-MAIN-'):
+                                indexes.append(link.text.strip('/'))
+                indexes.sort(reverse=True)
+                cc_indexes_cache['indexes'] = indexes
+                cc_indexes_cache['timestamp'] = time.time()
+        except Exception:
+            pass
+
+    if not indexes:
+        return jsonify({'success': False, 'error': 'Could not load CC index list'})
+
+    server = 'http://index.commoncrawl.org/'
+    encoded_url = quote_plus(target_url)
+
+    # Query all indexes in parallel
+    all_records = []
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        futures = {
+            executor.submit(_query_single_index, idx, encoded_url, user_agent, server): idx
+            for idx in indexes
+        }
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                _, records = result
+                all_records.extend(records)
+
+    # Sort by timestamp descending (newest first)
+    all_records.sort(key=lambda r: r.get('timestamp', ''), reverse=True)
+
+    if not all_records:
+        return jsonify({
+            'success': True,
+            'recordsFound': 0,
+            'content': None,
+            'message': 'No records found across any time index'
+        })
+
+    # Build metadata for frontend
+    records_meta = []
+    for i, rec in enumerate(all_records):
+        records_meta.append({
+            'index': i,
+            'indexName': rec.get('_source_index', ''),
+            'timestamp': rec.get('timestamp', ''),
+            'status': rec.get('status', ''),
+            'mime': rec.get('mime', ''),
+            'length': rec.get('length', ''),
+            'digest': rec.get('digest', ''),
+        })
+
+    # Cache all records
+    cache_key = f"all:{target_url}"
+    cc_record_cache[cache_key] = {
+        'records': all_records,
+        'timestamp': time.time(),
+        'index_name': None  # mixed indexes
+    }
+
+    # Fetch content from the first (newest) record
+    first_rec = all_records[0]
+    first_index = first_rec.get('_source_index', indexes[0])
+    content, base_url, record_info = fetch_page_from_cc([first_rec], user_agent, target_url)
+
+    if content:
+        modified_content = modify_html_for_complete_proxy(
+            content.decode('utf-8', errors='ignore'),
+            base_url,
+            first_index
+        )
+
+        return jsonify({
+            'success': True,
+            'recordsFound': len(all_records),
+            'records': records_meta,
+            'currentRecordIndex': 0,
+            'content': modified_content,
+            'baseUrl': base_url,
+            'indexName': first_index,
+            'cacheKey': cache_key
+        })
+    else:
+        return jsonify({
+            'success': True,
+            'recordsFound': len(all_records),
+            'records': records_meta,
+            'content': None,
+            'message': 'Records found but could not extract content from the newest one'
+        })
+
+@app.route('/fetch-record', methods=['POST'])
+def fetch_record():
+    """Fetch a specific record by index from a cached records list"""
+    data = request.json
+    cache_key = data.get('cacheKey')
+    record_index = data.get('recordIndex', 0)
+    record_index_name = data.get('recordIndexName')  # per-record index
+    fallback_index_name = data.get('indexName')       # fallback
+    target_url = data.get('targetUrl')
+    user_agent = data.get('userAgent', 'chrono-explorer/1.0')
+    
+    try:
+        record = None
+        index_name = None
+
+        # Try to use cached records first
+        cached = cc_record_cache.get(cache_key)
+        if cached and record_index < len(cached['records']):
+            record = cached['records'][record_index]
+            # Each record carries its own _source_index
+            index_name = record.get('_source_index') or record_index_name or fallback_index_name or cached.get('index_name')
+        else:
+            # Re-fetch from a specific index if we know which one
+            index_name = record_index_name or fallback_index_name
+            if not target_url or not index_name:
+                return jsonify({'success': False, 'error': 'Missing target URL or index name'})
+            
+            if not target_url.startswith(('http://', 'https://')):
+                target_url = 'https://' + target_url
+            
+            server = 'http://index.commoncrawl.org/'
+            encoded_url = quote_plus(target_url)
+            index_url = f'{server}{index_name}-index?url={encoded_url}&output=json'
+            response = requests.get(index_url, headers={'user-agent': user_agent})
+            
+            if response.status_code != 200:
+                return jsonify({'success': False, 'error': f'Index server returned: {response.status_code}'})
+            
+            records = response.text.strip().split('\n')
+            records_list = [json.loads(r) for r in records if r.strip()]
+            
+            if not records_list:
+                return jsonify({'success': False, 'error': 'No records found in this index'})
+            
+            record = records_list[0]  # take first match from this index
+        
+        if not record:
+            return jsonify({'success': False, 'error': 'Record not found'})
+
+        # Fetch the specific record
+        content, base_url, record_info = fetch_page_from_cc([record], user_agent, target_url)
+        
+        if content:
+            modified_content = modify_html_for_complete_proxy(
+                content.decode('utf-8', errors='ignore'),
+                base_url,
+                index_name
+            )
+            
+            return jsonify({
+                'success': True,
+                'content': modified_content,
+                'baseUrl': base_url,
+                'indexName': index_name,
+                'recordIndex': record_index
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': f'Could not extract content from record {record_index}'
+            })
+            
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
 
 def fetch_page_from_cc(records, user_agent, original_url=None):
     for record in records:

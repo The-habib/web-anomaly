@@ -37,6 +37,7 @@
                             <label for="indexName">
                                 <span class="icon">⏰</span>
                                 Time Index
+                                <span class="label-hint">(defaults to all)</span>
                             </label>
                             <select id="indexName" class="time-input">
                                 <option value="" class="index-loading">Calibrating temporal indexes...</option>
@@ -85,6 +86,14 @@
                                 Temporal Echoes Found: 
                                 <span id="recordCount" class="record-count">-</span>
                             </p>
+                            <div id="echoNav" class="echo-nav" style="display:none;">
+                                <button id="echoPrev" class="echo-nav-btn" disabled title="Previous Echo">◀</button>
+                                <span class="echo-nav-label">
+                                    Echo <span id="echoCurrentIndex">1</span> / <span id="echoTotalCount">1</span>
+                                </span>
+                                <button id="echoNext" class="echo-nav-btn" disabled title="Next Echo">▶</button>
+                                <span id="echoTimestamp" class="echo-timestamp"></span>
+                            </div>
                         </div>
                         
                         <div id="resultsContent" class="temporal-content">
@@ -142,7 +151,7 @@
         
         <footer>
             <div class="footer-content">
-                <p>Chrono-Crawl Archive Explorer &copy; 2025 | Powered by Temporal Flux & Common Crawl</p>
+                <p>Chrono-Crawl Archive Explorer | Powered by Temporal Flux & Common Crawl | @Umbr4Dε0rum</p>
                 <div class="quantum-signature">
                     <span>⚡ A Temporal Crawler - All Content From Common Crawl</span>
                 </div>
@@ -151,9 +160,13 @@
     </div>
 
     <script>
-        // Global variable to store fetched data
+        // Global state
         let currentFetchData = null;
         let currentIframe = null;
+        let allRecords = [];        // metadata for all echoes
+        let currentEchoIndex = 0;   // which echo is displayed
+        let echoContents = {};      // cache: index -> {content, baseUrl, indexName}
+        let cacheKey = null;
         
         document.addEventListener('DOMContentLoaded', function() {
             const fetchButton = document.getElementById('fetchButton');
@@ -169,6 +182,14 @@
             const renderMode = document.getElementById('renderMode');
             const currentUrl = document.getElementById('currentUrl');
             
+            // Echo navigation elements
+            const echoNav = document.getElementById('echoNav');
+            const echoPrev = document.getElementById('echoPrev');
+            const echoNext = document.getElementById('echoNext');
+            const echoCurrentIndex = document.getElementById('echoCurrentIndex');
+            const echoTotalCount = document.getElementById('echoTotalCount');
+            const echoTimestamp = document.getElementById('echoTimestamp');
+            
             // Tab functionality
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabContents = document.querySelectorAll('.tab-content');
@@ -176,12 +197,8 @@
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const tabId = button.getAttribute('data-tab');
-                    
-                    // Update active tab button
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-                    
-                    // Show active tab content
                     tabContents.forEach(content => content.classList.remove('active'));
                     document.getElementById(tabId).classList.add('active');
                 });
@@ -192,6 +209,8 @@
             
             fetchButton.addEventListener('click', fetchData);
             renderButton.addEventListener('click', renderData);
+            echoPrev.addEventListener('click', () => navigateEcho(-1));
+            echoNext.addEventListener('click', () => navigateEcho(1));
             
             // Listen for navigation messages from iframe
             window.addEventListener('message', function(event) {
@@ -200,16 +219,143 @@
                 }
             });
             
+            function formatTimestamp(ts) {
+                if (!ts || ts.length < 8) return ts || '';
+                // CC timestamps: YYYYMMDDHHmmss
+                const y = ts.slice(0,4), m = ts.slice(4,6), d = ts.slice(6,8);
+                const hh = ts.slice(8,10) || '00', mm = ts.slice(10,12) || '00', ss = ts.slice(12,14) || '00';
+                return `${y}-${m}-${d} ${hh}:${mm}:${ss}`;
+            }
+            
+            function updateEchoNavUI() {
+                const total = allRecords.length;
+                if (total <= 1) {
+                    echoNav.style.display = 'none';
+                    return;
+                }
+                echoNav.style.display = 'flex';
+                echoCurrentIndex.textContent = currentEchoIndex + 1;
+                echoTotalCount.textContent = total;
+                echoPrev.disabled = currentEchoIndex <= 0;
+                echoNext.disabled = currentEchoIndex >= total - 1;
+                
+                const rec = allRecords[currentEchoIndex];
+                if (rec) {
+                    const parts = [];
+                    if (rec.timestamp) parts.push(formatTimestamp(rec.timestamp));
+                    if (rec.indexName) parts.push(rec.indexName);
+                    echoTimestamp.textContent = parts.length ? '⏱️ ' + parts.join(' · ') : '';
+                } else {
+                    echoTimestamp.textContent = '';
+                }
+            }
+            
+            function displayEchoContent(echoData) {
+                if (echoData && echoData.content) {
+                    resultsContent.textContent = echoData.content;
+                    currentUrl.textContent = echoData.baseUrl || '-';
+                    
+                    // Update render readiness for this echo
+                    currentFetchData = echoData;
+                    renderButton.disabled = false;
+                    renderStatusIndicator.innerHTML = '<span class="status-icon">✅</span> Data Ready for Rendering';
+                    renderStatusIndicator.className = 'status-indicator status-success';
+                    renderMode.textContent = 'Ready';
+                } else {
+                    resultsContent.innerHTML = '<div class="no-temporal-data"><div class="time-gate"></div><p>No temporal echoes found at these coordinates.</p></div>';
+                    currentFetchData = null;
+                    renderButton.disabled = true;
+                    renderStatusIndicator.innerHTML = '<span class="status-icon">⏳</span> Awaiting Temporal Data';
+                    renderStatusIndicator.className = 'status-indicator status-idle';
+                    renderMode.textContent = 'Standby';
+                }
+            }
+            
+            async function navigateEcho(direction) {
+                const newIndex = currentEchoIndex + direction;
+                if (newIndex < 0 || newIndex >= allRecords.length) return;
+                
+                currentEchoIndex = newIndex;
+                updateEchoNavUI();
+                
+                // Check cache first
+                if (echoContents[newIndex]) {
+                    displayEchoContent(echoContents[newIndex]);
+                    return;
+                }
+                
+                // Fetch this record from the backend
+                statusIndicator.innerHTML = '<span class="status-icon">🌀</span> Fetching Echo ' + (newIndex + 1) + '...';
+                statusIndicator.className = 'status-indicator status-loading';
+                resultsContent.innerHTML = '<div class="loading-temporal"><div class="time-vortex"></div><p>Retrieving temporal echo...</p></div>';
+                
+                // Get the per-record index name
+                const recMeta = allRecords[newIndex];
+                const recordIndexName = recMeta ? recMeta.indexName : null;
+                
+                try {
+                    const response = await fetch('/fetch-record', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            cacheKey: cacheKey,
+                            recordIndex: newIndex,
+                            recordIndexName: recordIndexName,
+                            indexName: indexName.value !== '__ALL__' ? indexName.value : null,
+                            targetUrl: targetUrl.value,
+                            userAgent: userAgent.value
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        const echoData = {
+                            content: data.content,
+                            baseUrl: data.baseUrl,
+                            indexName: data.indexName
+                        };
+                        echoContents[newIndex] = echoData;
+                        
+                        // Only update if user hasn't navigated away
+                        if (currentEchoIndex === newIndex) {
+                            displayEchoContent(echoData);
+                            statusIndicator.innerHTML = '<span class="status-icon">✅</span> Echo Retrieved';
+                            statusIndicator.className = 'status-indicator status-success';
+                        }
+                    } else {
+                        if (currentEchoIndex === newIndex) {
+                            statusIndicator.innerHTML = '<span class="status-icon">⚠️</span> Echo Unavailable';
+                            statusIndicator.className = 'status-indicator status-error';
+                            resultsContent.innerHTML = '<div class="temporal-error"><p>' + (data.error || 'Could not retrieve this echo.') + '</p></div>';
+                            currentFetchData = null;
+                            renderButton.disabled = true;
+                        }
+                    }
+                } catch (error) {
+                    if (currentEchoIndex === newIndex) {
+                        statusIndicator.innerHTML = '<span class="status-icon">💥</span> Fetch Failure';
+                        statusIndicator.className = 'status-indicator status-error';
+                        resultsContent.innerHTML = '<div class="temporal-error"><p>Error: ' + error.message + '</p></div>';
+                    }
+                }
+            }
+            
             async function loadIndexes() {
                 try {
                     const response = await fetch('/get-indexes');
                     const data = await response.json();
                     
                     if (data.success) {
-                        // Clear the loading option
                         indexName.innerHTML = '';
                         
-                        // Add all indexes to the dropdown
+                        // Add "All Time Indexes" as default
+                        const allOption = document.createElement('option');
+                        allOption.value = '__ALL__';
+                        allOption.textContent = '🌐 All Time Indexes (search everywhere)';
+                        indexName.appendChild(allOption);
+                        
+                        // Add individual indexes
                         data.indexes.forEach(index => {
                             const option = document.createElement('option');
                             option.value = index;
@@ -217,26 +363,33 @@
                             indexName.appendChild(option);
                         });
                         
-                        // Select the first (newest) index by default
-                        if (data.indexes.length > 0) {
-                            indexName.value = data.indexes[0];
-                        }
+                        // Default to "All"
+                        indexName.value = '__ALL__';
                     } else {
                         indexName.innerHTML = '<option value="">Temporal calibration failed</option>';
-                        console.error('Failed to load indexes:', data.error);
                     }
                 } catch (error) {
                     indexName.innerHTML = '<option value="">Chrono-sync error</option>';
-                    console.error('Error loading indexes:', error);
                 }
             }
             
             async function fetchData() {
                 // Update UI to show loading state
                 fetchButton.disabled = true;
+                const isAllMode = indexName.value === '__ALL__';
+                const loadingMsg = isAllMode 
+                    ? 'Scanning all temporal indexes... This may take a moment.'
+                    : 'Warping through time-space continuum...';
                 statusIndicator.innerHTML = '<span class="status-icon">🌀</span> Temporal Jump in Progress...';
                 statusIndicator.className = 'status-indicator status-loading';
-                resultsContent.innerHTML = '<div class="loading-temporal"><div class="time-vortex"></div><p>Warping through time-space continuum...</p></div>';
+                resultsContent.innerHTML = `<div class="loading-temporal"><div class="time-vortex"></div><p>${loadingMsg}</p></div>`;
+                
+                // Reset all echo state
+                allRecords = [];
+                currentEchoIndex = 0;
+                echoContents = {};
+                cacheKey = null;
+                echoNav.style.display = 'none';
                 
                 // Reset renderer
                 renderButton.disabled = true;
@@ -247,19 +400,18 @@
                 renderContent.innerHTML = '<div class="placeholder-content"><div class="time-gate"></div><p>Rendered content will appear here...</p><p class="error-subtitle">All interactions will be routed through Common Crawl temporal archive</p></div>';
                 
                 try {
-                    // Prepare the request data
+                    const endpoint = isAllMode ? '/fetch-all-indexes' : '/fetch-commoncrawl';
                     const requestData = {
-                        indexName: indexName.value,
                         targetUrl: targetUrl.value,
                         userAgent: userAgent.value
                     };
+                    if (!isAllMode) {
+                        requestData.indexName = indexName.value;
+                    }
                     
-                    // Make the request to the backend
-                    const response = await fetch('/fetch-commoncrawl', {
+                    const response = await fetch(endpoint, {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
+                        headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(requestData)
                     });
                     
@@ -269,42 +421,42 @@
                     
                     const data = await response.json();
                     
-                    // Update UI with results
                     if (data.success) {
                         statusIndicator.innerHTML = '<span class="status-icon">✅</span> Jump Successful';
                         statusIndicator.className = 'status-indicator status-success';
                         recordCount.textContent = data.recordsFound || 0;
                         
-                        // Store the fetched data for rendering
-                        currentFetchData = data;
-                        currentUrl.textContent = data.baseUrl || '-';
+                        // Store records metadata and cache key
+                        allRecords = data.records || [];
+                        cacheKey = data.cacheKey || null;
+                        currentEchoIndex = 0;
                         
-                        // Enable render button if we have content
+                        // Cache the first echo content
+                        const echoData = {
+                            content: data.content,
+                            baseUrl: data.baseUrl,
+                            indexName: data.indexName
+                        };
                         if (data.content) {
-                            renderButton.disabled = false;
-                            renderStatusIndicator.innerHTML = '<span class="status-icon">✅</span> Data Ready for Rendering';
-                            renderStatusIndicator.className = 'status-indicator status-success';
-                            renderMode.textContent = 'Ready';
+                            echoContents[0] = echoData;
                         }
                         
-                        if (data.content) {
-                            resultsContent.textContent = data.content;
-                        } else {
-                            resultsContent.innerHTML = '<div class="no-temporal-data"><div class="time-gate"></div><p>No temporal echoes found at these coordinates.</p></div>';
-                        }
+                        // Show echo navigation if multiple records
+                        updateEchoNavUI();
+                        
+                        // Display the first echo
+                        displayEchoContent(echoData);
+                        
                     } else {
                         statusIndicator.innerHTML = '<span class="status-icon">⚠️</span> Temporal Paradox';
                         statusIndicator.className = 'status-indicator status-error';
                         resultsContent.textContent = data.error || 'An unknown temporal anomaly occurred.';
                     }
                 } catch (error) {
-                    // Handle errors
                     statusIndicator.innerHTML = '<span class="status-icon">💥</span> Jump Failure';
                     statusIndicator.className = 'status-indicator status-error';
                     resultsContent.innerHTML = `<div class="temporal-error"><p>Temporal Jump Error: ${error.message}</p><p class="error-subtitle">Check your coordinates and try again.</p></div>`;
-                    console.error('Fetch error:', error);
                 } finally {
-                    // Re-enable the button
                     fetchButton.disabled = false;
                 }
             }
@@ -321,10 +473,8 @@
                 renderMode.textContent = 'Active - Temporal Isolation with Present Data Redundancy';
                 
                 try {
-                    // Clear previous content
                     renderContent.innerHTML = '';
                     
-                    // Create an iframe to safely render the HTML content
                     const iframe = document.createElement('iframe');
                     iframe.style.width = '100%';
                     iframe.style.height = '100%';
@@ -332,20 +482,15 @@
                     iframe.style.border = 'none';
                     iframe.style.borderRadius = 'var(--border-radius)';
                     iframe.style.background = 'white';
-                    iframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-popups"; // Added allow-popups
+                    iframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-popups";
                     iframe.name = "cc-render-frame";
                     
-                    // Store reference to current iframe
                     currentIframe = iframe;
-                    
-                    // Add the iframe to the render content area
                     renderContent.appendChild(iframe);
                     
-                    // Write the HTML content to the iframe
                     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
                     iframeDoc.open();
                     
-                    // Add viewport meta tag for responsive rendering if not present
                     let content = currentFetchData.content;
                     if (!content.includes('viewport')) {
                         content = content.replace('<head>', '<head><meta name="viewport" content="width=device-width, initial-scale=1.0">');
@@ -354,21 +499,17 @@
                     iframeDoc.write(content);
                     iframeDoc.close();
                     
-                    // Adjust iframe height based on content after load
                     iframe.onload = function() {
                         try {
                             const body = iframe.contentDocument.body;
                             const html = iframe.contentDocument.documentElement;
                             const height = Math.max(
-                                body.scrollHeight,
-                                body.offsetHeight,
-                                html.clientHeight,
-                                html.scrollHeight,
-                                html.offsetHeight
+                                body.scrollHeight, body.offsetHeight,
+                                html.clientHeight, html.scrollHeight, html.offsetHeight
                             );
                             iframe.style.height = Math.max(height, 500) + 'px';
                         } catch (e) {
-                            console.log('Could not adjust iframe height due to cross-origin restrictions');
+                            console.log('Could not adjust iframe height');
                         }
                     };
                     
@@ -380,7 +521,6 @@
                     renderStatusIndicator.innerHTML = '<span class="status-icon">💥</span> Render Failure';
                     renderStatusIndicator.className = 'status-indicator status-error';
                     renderContent.innerHTML = `<div class="temporal-error"><p>Render Error: ${error.message}</p></div>`;
-                    console.error('Render error:', error);
                 }
             }
             
@@ -391,19 +531,13 @@
                 try {
                     const response = await fetch('/navigate', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            url: url,
-                            index: index
-                        })
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ url: url, index: index })
                     });
                     
                     const data = await response.json();
                     
                     if (data.success) {
-                        // Update the iframe with new content
                         if (currentIframe) {
                             const iframeDoc = currentIframe.contentDocument || currentIframe.contentWindow.document;
                             iframeDoc.open();
@@ -417,12 +551,10 @@
                     } else {
                         renderStatusIndicator.innerHTML = '<span class="status-icon">⚠️</span> Navigation Failed';
                         renderStatusIndicator.className = 'status-indicator status-error';
-                        console.error('Navigation error:', data.error);
                     }
                 } catch (error) {
                     renderStatusIndicator.innerHTML = '<span class="status-icon">💥</span> Navigation Error';
                     renderStatusIndicator.className = 'status-indicator status-error';
-                    console.error('Navigation request error:', error);
                 }
             }
         });
