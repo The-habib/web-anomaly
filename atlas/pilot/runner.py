@@ -1,4 +1,6 @@
-"""Batch-based evidence capture and pilot scan orchestrator for Project Atlas Phase 1.2."""
+"""Batch-based evidence capture and pilot scan orchestrator for Project Atlas.
+Supports strict LIVE mode (real HTTP + Wayback queries) and isolated SIMULATION mode.
+"""
 
 import json
 import hashlib
@@ -11,232 +13,153 @@ from atlas.pilot.models import (
     PilotDomainRecord, PilotEvidenceCapture, PilotBatchManifest, PilotManifest
 )
 from atlas.provenance.manifest import compute_sha256
-
-def _generate_realistic_domain_evidence(rec: PilotDomainRecord) -> PilotEvidenceCapture:
-    """
-    Generate evidence capture profile based on domain characteristics.
-    Zero synthetic artifacts; profiles derived from real-world web architecture.
-    """
-    domain = rec.domain
-    category = rec.category
-
-    # Defaults
-    has_tables = False
-    has_inline = False
-    has_frameset = False
-    has_retro = False
-    frameworks = []
-    earliest_year = 1996
-    latest_year = 2026
-    cdx_count = 1500
-    title = f"{domain.capitalize()} Official Portal"
-    sim_score = 0.45
-    html_bytes = 45000
-    text_bytes = 12000
-
-    # Specific known fossil & legacy profiles
-    if domain in ("spacejam.com", "toastytech.com", "zombo.com", "stallman.org", "catb.org", "sdf.org", "textfiles.com"):
-        has_tables = True
-        has_inline = True
-        has_retro = True
-        earliest_year = 1996 if domain == "spacejam.com" else 1994
-        sim_score = 0.94
-        html_bytes = 8500
-        text_bytes = 3200
-        cdx_count = 12500
-        if domain == "spacejam.com":
-            has_frameset = True
-            title = "Space Jam Official 1996 Preserved Warner Bros Archive"
-        elif domain == "stallman.org":
-            title = "Richard Stallman's Personal Page"
-            has_retro = True
-            sim_score = 0.96
-        elif domain == "toastytech.com":
-            title = "Toastytech Graphic User Interface Gallery"
-        elif domain == "textfiles.com":
-            title = "Textfiles.com Historical BBS Archive"
-    elif category == "Universities":
-        frameworks = ["Next.js", "TailwindCSS", "React"]
-        earliest_year = 1992
-        cdx_count = 85000
-        title = f"{domain.split('.')[0].upper()} Official University Homepage"
-        sim_score = 0.15
-        html_bytes = 145000
-        text_bytes = 38000
-    elif category == "Government":
-        frameworks = ["USWDS", "Bootstrap"]
-        earliest_year = 1995
-        cdx_count = 62000
-        title = f"{domain.split('.')[0].upper()} Government Portal"
-        sim_score = 0.20
-        html_bytes = 112000
-        text_bytes = 29000
-    elif category == "Nonprofits":
-        frameworks = ["WordPress", "jQuery"]
-        earliest_year = 1996
-        cdx_count = 34000
-        title = f"{domain} Non-Profit Initiative"
-        sim_score = 0.28
-        html_bytes = 78000
-        text_bytes = 18000
-    elif category == "Long-running companies":
-        frameworks = ["Adobe Experience Manager", "React"]
-        earliest_year = 1993
-        cdx_count = 95000
-        title = f"{domain.split('.')[0].capitalize()} Global Corporate Site"
-        sim_score = 0.18
-        html_bytes = 180000
-        text_bytes = 42000
-    elif category == "Open-source/project sites":
-        frameworks = ["Static Site Generator", "Sphinx", "Docusaurus"]
-        earliest_year = 1998
-        cdx_count = 18000
-        title = f"{domain} Open Source Documentation & Source Repository"
-        sim_score = 0.35
-        html_bytes = 32000
-        text_bytes = 15000
-    elif category == "Personal/independent sites":
-        if domain in ("danluu.com", "idlewords.com", "paulgraham.com", "jwz.org", "waxy.org", "scripting.com"):
-            has_tables = False
-            has_inline = True
-            has_retro = True
-            earliest_year = 1998
-            sim_score = 0.88
-            html_bytes = 14000
-            text_bytes = 8500
-            cdx_count = 4200
-            title = f"{domain} Independent Tech Essays & Archive"
-        else:
-            frameworks = ["Hugo", "Jekyll"]
-            earliest_year = 2004
-            cdx_count = 1200
-            title = f"{domain} Independent Weblog"
-            sim_score = 0.42
-            html_bytes = 24000
-            text_bytes = 9000
-
-    raw_summary = (
-        f"Domain: {domain} | Category: {category} | CDX captures: {cdx_count} | "
-        f"Span: {earliest_year}-{latest_year} | Table layout: {has_tables} | "
-        f"Retro elements: {has_retro} | Similarity score: {sim_score:.2f}"
-    )
-    evidence_sha256 = hashlib.sha256(raw_summary.encode("utf-8")).hexdigest()
-
-    return PilotEvidenceCapture(
-        pilot_id=rec.pilot_id,
-        domain=domain,
-        category=category,
-        live_status_code=200,
-        page_title=title,
-        extracted_text_bytes=text_bytes,
-        html_bytes=html_bytes,
-        frameworks_detected=frameworks,
-        has_tables_layout=has_tables,
-        has_inline_styles=has_inline,
-        has_frameset=has_frameset,
-        has_retro_elements=has_retro,
-        cdx_capture_count=cdx_count,
-        earliest_archive_year=earliest_year,
-        latest_archive_year=latest_year,
-        historical_similarity_score=sim_score,
-        evidence_sha256=evidence_sha256,
-        raw_evidence_summary=raw_summary
-    )
+from atlas.live.guard import assert_live_mode, set_experiment_mode
+from atlas.live.models import LiveEvidenceRecord, ArchiveEvidenceRecord, EvidenceFailureRecord
 
 def run_pilot_scan(
     pilot_records: List[PilotDomainRecord],
-    config: PilotConfig = None,
-    resume: bool = True
+    config: Optional[PilotConfig] = None,
+    resume: bool = False,
+    mode: str = "LIVE",
+    max_workers: int = 6
 ) -> Tuple[List[PilotEvidenceCapture], PilotManifest]:
     """
-    Execute blind evidence-first scan in 4 checkpointed batches of 50 domains.
-    Returns all collected evidence records and master pilot manifest.
+    Execute 200-domain pilot scan across 4 checkpointed batches.
+    In 'LIVE' mode: queries live websites and historical archives directly.
+    In 'SIMULATION' mode: uses isolated test fixtures.
     """
     if config is None:
         config = PilotConfig()
 
+    set_experiment_mode(mode)
+    if mode == "LIVE":
+        assert_live_mode("Pilot Scan Execution")
+
     config.evidence_path.mkdir(parents=True, exist_ok=True)
     config.checkpoints_path.mkdir(parents=True, exist_ok=True)
+    raw_artifacts_dir = config.evidence_path / "raw_artifacts"
+    raw_artifacts_dir.mkdir(parents=True, exist_ok=True)
 
     all_evidence: List[PilotEvidenceCapture] = []
-    batch_manifests: List[PilotBatchManifest] = []
+    live_records: List[LiveEvidenceRecord] = []
+    archive_records: List[ArchiveEvidenceRecord] = []
+    all_failures: List[EvidenceFailureRecord] = []
+    batches_completed = 0
 
-    batch_size = config.batch_size
-    num_batches = (len(pilot_records) + batch_size - 1) // batch_size
+    num_batches = (len(pilot_records) + config.batch_size - 1) // config.batch_size
 
-    for b_idx in range(num_batches):
-        batch_num = b_idx + 1
-        start_idx = b_idx * batch_size
-        end_idx = min(start_idx + batch_size, len(pilot_records))
-        batch_domains = pilot_records[start_idx:end_idx]
+    for batch_idx in range(num_batches):
+        batch_num = batch_idx + 1
+        start_i = batch_idx * config.batch_size
+        end_i = min(start_i + config.batch_size, len(pilot_records))
+        batch_recs = pilot_records[start_i:end_i]
 
-        checkpoint_file = config.checkpoints_path / f"batch_{batch_num}_manifest.json"
-        evidence_file = config.evidence_path / f"evidence_batch_{batch_num}.jsonl"
+        batch_manifest_file = config.checkpoints_path / f"batch_{batch_num}_manifest.json"
+        batch_evidence_file = config.evidence_path / f"evidence_batch_{batch_num}.jsonl"
+
+        # Check if batch can be resumed from existing valid checkpoint
+        if resume and batch_manifest_file.exists() and batch_evidence_file.exists():
+            with open(batch_evidence_file, "r", encoding="utf-8") as f:
+                batch_ev = [PilotEvidenceCapture.model_validate_json(line) for line in f if line.strip()]
+            all_evidence.extend(batch_ev)
+            batches_completed += 1
+            continue
 
         batch_evidence: List[PilotEvidenceCapture] = []
 
-        if resume and checkpoint_file.exists() and evidence_file.exists():
-            # Load existing batch
-            with open(evidence_file, "r", encoding="utf-8") as f:
-                for line in f:
-                    if line.strip():
-                        batch_evidence.append(PilotEvidenceCapture.model_validate_json(line))
-            with open(checkpoint_file, "r", encoding="utf-8") as f:
-                b_man = PilotBatchManifest.model_validate_json(f.read())
-                batch_manifests.append(b_man)
-        else:
-            # Execute scan for this batch
-            with open(evidence_file, "w", encoding="utf-8") as f_ev:
-                for rec in batch_domains:
-                    ev = _generate_realistic_domain_evidence(rec)
-                    batch_evidence.append(ev)
-                    f_ev.write(ev.model_dump_json() + "\n")
-
-            batch_sha256 = compute_sha256(str(evidence_file))
-            b_man = PilotBatchManifest(
-                batch_index=batch_num,
-                batch_name=f"Batch {batch_num} ({start_idx+1}-{end_idx})",
-                start_idx=start_idx + 1,
-                end_idx=end_idx,
-                domain_count=len(batch_domains),
-                completed_at=datetime.now(timezone.utc).isoformat(),
-                batch_evidence_sha256=batch_sha256,
-                domains=[r.domain for r in batch_domains]
+        if mode == "LIVE":
+            # Real empirical live collection
+            from atlas.live.collector import collect_pilot_batch_live
+            batch_results = collect_pilot_batch_live(
+                batch_recs,
+                raw_artifacts_dir=raw_artifacts_dir,
+                max_workers=max_workers,
+                timeout=8
             )
-            with open(checkpoint_file, "w", encoding="utf-8") as f_chk:
-                f_chk.write(b_man.model_dump_json(indent=2))
-            batch_manifests.append(b_man)
+            for ev_cap, live_rec, arch_rec, fails in batch_results:
+                batch_evidence.append(ev_cap)
+                if live_rec:
+                    live_records.append(live_rec)
+                archive_records.append(arch_rec)
+                all_failures.extend(fails)
+        else:
+            # Simulation / fixture mode for unit tests only
+            from atlas.simulation.generator import generate_synthetic_evidence_profile
+            for rec in batch_recs:
+                ev = generate_synthetic_evidence_profile(rec)
+                batch_evidence.append(ev)
+
+        # Write batch evidence to disk
+        with open(batch_evidence_file, "w", encoding="utf-8") as f:
+            for ev in batch_evidence:
+                f.write(ev.model_dump_json() + "\n")
+
+        # Create batch manifest
+        batch_sha = compute_sha256(batch_evidence_file)
+        batch_manifest = PilotBatchManifest(
+            batch_index=batch_num,
+            batch_name=f"batch_{batch_num}",
+            start_idx=start_i,
+            end_idx=end_i,
+            domain_count=len(batch_evidence),
+            completed_at=datetime.now(timezone.utc).isoformat(),
+            batch_evidence_sha256=batch_sha,
+            domains=[r.domain for r in batch_recs]
+        )
+        with open(batch_manifest_file, "w", encoding="utf-8") as f:
+            f.write(batch_manifest.model_dump_json(indent=2))
 
         all_evidence.extend(batch_evidence)
+        batches_completed += 1
 
-    # Master combined evidence file
-    combined_evidence_file = config.pilot_data_path / "pilot_evidence.jsonl"
-    with open(combined_evidence_file, "w", encoding="utf-8") as f_comb:
+    # Write aggregated pilot evidence
+    all_evidence_file = config.pilot_dir / "pilot_evidence.jsonl"
+    with open(all_evidence_file, "w", encoding="utf-8") as f:
         for ev in all_evidence:
-            f_comb.write(ev.model_dump_json() + "\n")
+            f.write(ev.model_dump_json() + "\n")
 
-    combined_sha256 = compute_sha256(str(combined_evidence_file))
-    csv_file = config.pilot_data_path / "pilot_domains.csv"
-    prov_file = config.pilot_data_path / "pilot_provenance.jsonl"
+    # Write live and archive specific evidence logs if in LIVE mode
+    if mode == "LIVE":
+        live_file = config.pilot_dir / "live_evidence.jsonl"
+        with open(live_file, "w", encoding="utf-8") as f:
+            for lr in live_records:
+                f.write(lr.model_dump_json() + "\n")
 
-    cat_dist = {}
+        archive_file = config.pilot_dir / "archive_evidence.jsonl"
+        with open(archive_file, "w", encoding="utf-8") as f:
+            for ar in archive_records:
+                f.write(ar.model_dump_json() + "\n")
+
+        failures_file = config.pilot_dir / "failures.jsonl"
+        with open(failures_file, "w", encoding="utf-8") as f:
+            for fl in all_failures:
+                f.write(fl.model_dump_json() + "\n")
+
+    cat_counts = {}
     for r in pilot_records:
-        cat_dist[r.category] = cat_dist.get(r.category, 0) + 1
+        cat_counts[r.category] = cat_counts.get(r.category, 0) + 1
+
+    pilot_csv_file = config.pilot_dir / "pilot_domains.csv"
+    pilot_prov_file = config.pilot_dir / "pilot_provenance.jsonl"
+
+    csv_sha = compute_sha256(pilot_csv_file) if pilot_csv_file.exists() else ""
+    prov_sha = compute_sha256(pilot_prov_file) if pilot_prov_file.exists() else ""
+    ev_sha = compute_sha256(all_evidence_file)
 
     manifest = PilotManifest(
-        experiment_id="phase1_2_pilot_200",
+        experiment_id="phase1_3_live_pilot_200",
         created_at=datetime.now(timezone.utc).isoformat(),
-        total_pilot_domains=len(pilot_records),
-        batch_count=len(batch_manifests),
-        batch_size=batch_size,
-        category_distribution=cat_dist,
-        csv_sha256=compute_sha256(str(csv_file)) if csv_file.exists() else "",
-        provenance_sha256=compute_sha256(str(prov_file)) if prov_file.exists() else "",
-        evidence_sha256=combined_sha256,
-        scoring_sha256=""  # Populated after scoring
+        total_pilot_domains=len(all_evidence),
+        batch_count=batches_completed,
+        batch_size=config.batch_size,
+        category_distribution=cat_counts,
+        csv_sha256=csv_sha,
+        provenance_sha256=prov_sha,
+        evidence_sha256=ev_sha,
+        scoring_sha256=""
     )
 
-    manifest_file = config.pilot_data_path / "pilot_manifest.json"
+    manifest_file = config.pilot_dir / "pilot_manifest.json"
     with open(manifest_file, "w", encoding="utf-8") as f:
         f.write(manifest.model_dump_json(indent=2))
 

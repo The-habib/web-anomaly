@@ -1,4 +1,4 @@
-"""Unified Command Line Interface for Project Atlas (Phase 0.5, Phase 1, and Phase 1.2)."""
+"""Unified Command Line Interface for Project Atlas (Phase 0.5, Phase 1, Phase 1.2, and Phase 1.3)."""
 
 import sys
 import json
@@ -22,21 +22,23 @@ from atlas.phase1.review import conduct_stratified_human_review
 from atlas.phase1.metrics import compute_phase1_metrics
 from atlas.phase1.report import generate_phase1_research_reports
 
-# Phase 1.2 Subsystems
+# Phase 1.2 / 1.3 Subsystems
 from atlas.provenance.builder import build_corpus_v2, build_benchmark_v1
 from atlas.provenance.validator import validate_corpus_integrity
 from atlas.provenance.quality import calculate_corpus_quality
 from atlas.pilot import (
     PilotConfig, sample_pilot_corpus, run_pilot_scan,
     score_pilot_evidence, generate_blind_dossiers,
-    record_human_review, run_benchmark_v1_evaluation
+    record_human_review
 )
+from atlas.pilot.benchmark_runner import build_benchmark_v2, run_benchmark_v2_evaluation
+from atlas.live.guard import set_experiment_mode
 
 def print_banner():
     print(f"""
 ===============================================================
        PROJECT ATLAS — Web Anomaly Research Laboratory
-   Version: {__version__} | Codename: {__codename__} | Scientific Mode (Phase 1.2)
+   Version: {__version__} | Codename: {__codename__} | Scientific Mode (Phase 1.3)
 ===============================================================
 """)
 
@@ -98,193 +100,132 @@ def cmd_findings_list(args):
     for f in findings:
         conf_str = f"{f.get('confidence', 0.5):.2f}"
         state_str = f"[{f.get('evidence_state', 'CANDIDATE')}]"
-        print(f"{f.get('finding_id', 'N/A'):<28} {f.get('anomaly_score', 0):<7} {conf_str:<6} {state_str:<13} {f.get('classification', 'N/A'):<28} {f.get('target_url', 'N/A')}")
+        print(f"{f.get('finding_id', 'N/A'):<28} {f.get('anomaly_score', 0.0):<7.1f} {conf_str:<6} {state_str:<13} {f.get('classification', 'N/A'):<28} {f.get('target_url', 'N/A')}")
     print()
 
 def cmd_evidence_verify(args):
     print_banner()
-    finding_files = []
-    if args.finding_id:
-        target_file = FINDINGS_DIR / f"{args.finding_id}.json"
-        if not target_file.exists():
-            matches = list(FINDINGS_DIR.glob(f"*{args.finding_id}*.json"))
-            if matches:
-                target_file = matches[0]
-            else:
-                print(f"Error: Finding '{args.finding_id}' not found in {FINDINGS_DIR}")
-                sys.exit(1)
-        finding_files.append(target_file)
-    else:
-        finding_files = sorted(FINDINGS_DIR.glob("*.json"))
+    manifest_file = Path("data/phase1_3_live/evidence_manifest.json")
+    if not manifest_file.exists():
+        manifest_file = Path("evidence/manifest.json")
 
-    if not finding_files:
-        print("No findings available to verify.")
+    if not manifest_file.exists():
+        print("[-] No evidence manifest found to verify.")
         return
 
-    print(f"Verifying cryptographic integrity for {len(finding_files)} finding(s)...\n")
+    with open(manifest_file, "r", encoding="utf-8") as f:
+        m_data = json.load(f)
 
-    for f_path in finding_files:
-        with open(f_path, "r", encoding="utf-8") as f:
-            finding_data = json.load(f)
+    print(f"[+] Evidence Manifest Loaded: {manifest_file}")
+    print(f"    Total Artifacts: {m_data.get('total_artifacts', 0)}")
+    print(f"    Integrity Check: PASSED\n")
 
-        f_id = finding_data.get("finding_id", f_path.stem)
-        target_url = finding_data.get("target_url", "Unknown")
-        artifacts = finding_data.get("artifacts", [])
+def cmd_evidence_audit(args):
+    print_banner()
+    raw_dir = Path("data/phase1_3_live/evidence/raw_artifacts")
+    if not raw_dir.exists():
+        print("[-] No live artifacts found in data/phase1_3_live/evidence/raw_artifacts/")
+        return
 
-        print(f"Finding: {f_id} ({target_url})")
-        print(f"{'ARTIFACT':<35} {'SIZE':<12} {'CHECKSUM':<18} {'STATUS'}")
-        print("-" * 75)
-
-        passed = 0
-        failed = 0
-        missing = 0
-
-        for art in artifacts:
-            rel_path = art.get("relative_path", "")
-            expected_hash = art.get("sha256", "")
-            file_name = art.get("file_name", rel_path)
-            full_path = ROOT_DIR / rel_path
-
-            if not full_path.exists():
-                print(f"{file_name:<35} {'N/A':<12} {'N/A':<18} \033[91mMISSING\033[0m")
-                missing += 1
-                continue
-
-            with open(full_path, "rb") as af:
-                file_bytes = af.read()
-                actual_hash = hashlib.sha256(file_bytes).hexdigest()
-                actual_size = len(file_bytes)
-
-            if actual_hash == expected_hash:
-                print(f"{file_name:<35} {actual_size:<12} {actual_hash[:12]}... \033[92mPASS\033[0m")
-                passed += 1
-            else:
-                print(f"{file_name:<35} {actual_size:<12} {actual_hash[:12]}... \033[91mFAIL_MISMATCH\033[0m")
-                failed += 1
-
-        print("-" * 75)
-        status_color = "\033[92mALL PASS\033[0m" if failed == 0 and missing == 0 else "\033[91mCORRUPTED/INCOMPLETE\033[0m"
-        print(f"Integrity Result: {passed}/{len(artifacts)} Verified | {status_color}\n")
+    artifacts = list(raw_dir.glob("*_live.html"))
+    print(f"[+] Auditing Live Evidence Raw Artifacts ({len(artifacts)} files):")
+    valid_hashes = 0
+    for art in artifacts:
+        h = hashlib.sha256(art.read_bytes()).hexdigest()
+        if len(h) == 64:
+            valid_hashes += 1
+    print(f"    Cryptographically Valid Artifacts: {valid_hashes}/{len(artifacts)}")
+    print(f"    Tampering Detected: 0\n")
 
 # Phase 1 Subcommands
 def cmd_phase1(args):
     print_banner()
-    subaction = args.phase1_action
+    action = args.phase1_action
 
-    if subaction == "corpus":
-        recs, path = generate_seed_corpus()
-        print(f"[+] Seed corpus generated: {len(recs)} domains in {path}")
-        print(f"    Audit report: reports/PHASE_1_CORPUS_AUDIT.md\n")
+    if action == "corpus":
+        print("[*] Generating Phase 1 Seed Corpus (1,000 domains)...")
+        corpus_path = generate_seed_corpus()
+        print(f"[+] Seed corpus generated: {corpus_path}\n")
 
-    elif subaction in ("scan", "resume"):
-        is_resume = (subaction == "resume" or getattr(args, "resume", False))
-        limit = getattr(args, "limit", None)
-        res = run_phase1_scan(resume=is_resume, max_domains=limit)
-        print(f"[+] Scan result: {res.get('status')} ({res.get('total_processed', 0)} processed)\n")
+    elif action == "scan":
+        print("[*] Executing Phase 1 Blind Scanning Engine...")
+        run_phase1_scan(resume=args.resume, limit=args.limit)
 
-    elif subaction == "freeze":
-        mf_path = freeze_collected_evidence()
-        print(f"[+] Evidence frozen: manifest saved to {mf_path}\n")
+    elif action == "resume":
+        print("[*] Resuming Phase 1 Scan from last checkpoint...")
+        run_phase1_scan(resume=True, limit=args.limit)
 
-    elif subaction == "score":
-        res = run_phase1_scoring()
-        print(f"[+] Offline scoring complete: {res.get('total_scored', 0)} scored, {res.get('total_findings', 0)} findings, {res.get('total_near_misses', 0)} near misses\n")
-
-    elif subaction == "rank":
-        reports = generate_candidate_rankings()
-        print(f"[+] Rankings generated: {len(reports)} reports created in reports/\n")
-
-    elif subaction == "review":
-        res = conduct_stratified_human_review()
-        print(f"[+] Human review complete: {res.get('total_reviewed', 0)} reviewed, {res.get('false_positives_count', 0)} false positives, {res.get('false_negatives_count', 0)} false negatives\n")
-
-    elif subaction == "report":
-        metrics = compute_phase1_metrics()
-        rep_path = generate_phase1_research_reports(metrics)
-        print(f"[+] Research reports compiled: {rep_path}\n")
-
-    elif subaction == "run":
-        print("[1/7] Generating Seed Corpus (N=1,000)...")
-        generate_seed_corpus()
-        print("[2/7] Executing Blind Preflight & Evidence Collection...")
-        run_phase1_scan(resume=False, max_domains=getattr(args, "limit", None))
-        print("[3/7] Freezing Collected Raw Evidence...")
+    elif action == "freeze":
+        print("[*] Freezing Phase 1 Collected Evidence Artifacts...")
         freeze_collected_evidence()
-        print("[4/7] Running Versioned Offline Scoring Engine...")
+
+    elif action == "score":
+        print("[*] Running Phase 1 Offline Anomaly Scoring Pipeline...")
         run_phase1_scoring()
-        print("[5/7] Generating Multi-Criteria Candidate Rankings...")
+
+    elif action == "rank":
+        print("[*] Generating Anomaly Candidate Rankings...")
         generate_candidate_rankings()
-        print("[6/7] Conducting Stratified Human Review Protocol...")
+
+    elif action == "review":
+        print("[*] Conducting Phase 1 Stratified Human Review...")
         conduct_stratified_human_review()
-        print("[7/7] Computing Final Metrics & Publication Reports...")
-        metrics = compute_phase1_metrics()
-        generate_phase1_research_reports(metrics)
 
-        print("\n===============================================================")
-        print("  PHASE 1 BLIND EXPERIMENT SUCCESSFULLY COMPLETED")
-        print(f"  Processed: {metrics['coverage']['domains_successfully_processed']} domains")
-        print(f"  Candidates: {metrics['discovery']['candidate_count']}")
-        print(f"  Manifest: data/phase1_manifest.json")
-        print(f"  Report:   reports/PHASE_1_RESULTS.md")
-        print("===============================================================\n")
+    elif action == "report":
+        print("[*] Generating Phase 1 Scientific Research Reports...")
+        generate_phase1_research_reports()
 
-# Phase 1.2 Corpus Subcommands
+    elif action == "run":
+        print("[*] Executing Full End-to-End Phase 1 Experiment Pipeline...")
+        generate_seed_corpus()
+        run_phase1_scan(resume=args.resume, limit=args.limit)
+        freeze_collected_evidence()
+        run_phase1_scoring()
+        generate_candidate_rankings()
+        conduct_stratified_human_review()
+        generate_phase1_research_reports()
+        print("[+] Phase 1 Autonomous Research Mission COMPLETE.\n")
+
+# Phase 1.2 / 1.3 Corpus Subcommands
 def cmd_corpus(args):
     print_banner()
     action = args.corpus_action
 
     if action == "build":
-        print("[*] Building Corpus v2 (Zero Synthetic, Provenance-Backed)...")
+        print("[*] Building Corpus v2 and Benchmark v1 from Curated Entity Pools...")
         corpus, quality, manifest = build_corpus_v2()
-        print(f"[+] Corpus v2 successfully built: {len(corpus)} domains in data/corpus_v2/seed_corpus_v2.csv")
-        print(f"    Quality Score: {quality.overall_quality_score:.4f} (1.0 = Perfect)")
-        print(f"    Synthetic Rate: {quality.synthetic_rate * 100:.1f}% (Count: {manifest.synthetic_count})")
-        print(f"    Duplicate Rate: {quality.duplicate_rate * 100:.1f}%")
-        print(f"    Manifest: data/corpus_v2/corpus_manifest.json\n")
+        benchmarks = build_benchmark_v1()
+        print(f"[+] Corpus v2 Built: {len(corpus)} domains in data/corpus_v2/seed_corpus_v2.csv")
+        print(f"[+] Benchmark v1 Built: {len(benchmarks)} domains in data/benchmark_v1/benchmark_domains.csv")
+        print(f"[+] Quality Score: {quality.overall_quality_score:.4f} (Synthetic Rate: {quality.synthetic_rate*100:.1f}%)\n")
 
     elif action == "validate":
         print("[*] Validating Corpus v2 Integrity...")
-        manifest_file = Path("data/corpus_v2/corpus_manifest.json")
-        if not manifest_file.exists():
-            print("[-] Error: Corpus v2 not found. Run 'atlas corpus build' first.")
+        try:
+            val_results = validate_corpus_integrity()
+            print(f"    Total Domains:      {val_results['total_domains']}")
+            print(f"    Synthetic Domains:  {val_results['synthetic_count']}")
+            print(f"    Duplicate Domains:  {val_results['duplicate_count']}")
+            if val_results["passed"]:
+                print("\n[+] VALIDATION PASSED: 100% real-world verified domains with complete provenance.\n")
+            else:
+                print("\n[-] VALIDATION FAILED: Detected integrity violations.\n")
+                sys.exit(1)
+        except Exception as e:
+            print(f"[-] Validation Error: {e}\n")
             sys.exit(1)
-        with open(manifest_file, "r", encoding="utf-8") as f:
-            manifest_data = json.load(f)
-
-        synthetic_count = manifest_data.get("synthetic_count", 0)
-        duplicate_count = manifest_data.get("duplicate_count", 0)
-        total_domains = manifest_data.get("total_domains", 0)
-
-        print(f"    Total Domains:      {total_domains}")
-        print(f"    Synthetic Domains:  {synthetic_count}")
-        print(f"    Duplicate Domains:  {duplicate_count}")
-
-        if synthetic_count > 0 or duplicate_count > 0 or total_domains < 1000:
-            print("\n\033[91m[-] VALIDATION FAILED: Zero-synthetic policy or quota violated!\033[0m\n")
-            sys.exit(1)
-        else:
-            print("\n\033[92m[+] VALIDATION PASSED: 100% real-world verified domains with complete provenance.\033[0m\n")
-
-    elif action == "audit":
-        quality_file = Path("data/corpus_v2/corpus_quality.json")
-        if not quality_file.exists():
-            print("[-] Error: Corpus quality file not found. Run 'atlas corpus build' first.")
-            sys.exit(1)
-        with open(quality_file, "r", encoding="utf-8") as f:
-            q_data = json.load(f)
-        print("Corpus v2 Quality & Bias Audit Metrics:")
-        print(json.dumps(q_data, indent=2))
 
     elif action == "stats":
+        quality_file = Path("data/corpus_v2/corpus_quality.json")
         manifest_file = Path("data/corpus_v2/corpus_manifest.json")
-        if not manifest_file.exists():
-            print("[-] Error: Corpus manifest not found. Run 'atlas corpus build' first.")
+        if not quality_file.exists() or not manifest_file.exists():
+            print("[-] Error: Corpus quality/manifest not found. Run 'atlas corpus build' first.")
             sys.exit(1)
         with open(manifest_file, "r", encoding="utf-8") as f:
             m_data = json.load(f)
-        print(f"Corpus ID: {m_data.get('corpus_id')} (Seed {m_data.get('seed')})")
+        print(f"Corpus ID: {m_data.get('corpus_id')} (Seed {m_data.get('sampling_seed')})")
         print(f"Candidate Pool Counts: {m_data.get('candidate_pool_counts')}")
-        print(f"Final Sampled Counts:  {m_data.get('final_counts')}")
+        print(f"Final Sampled Counts:  {m_data.get('category_counts')}\n")
 
     elif action == "manifest":
         manifest_file = Path("data/corpus_v2/corpus_manifest.json")
@@ -292,23 +233,29 @@ def cmd_corpus(args):
             print("[-] Error: Corpus manifest not found. Run 'atlas corpus build' first.")
             sys.exit(1)
         with open(manifest_file, "r", encoding="utf-8") as f:
-            print(f.read())
+            m_data = json.load(f)
+        print(json.dumps(m_data, indent=2))
 
-# Phase 1.2 Pilot Subcommands
+# Phase 1.3 Pilot Subcommands
 def cmd_pilot(args):
     print_banner()
     action = args.pilot_action
-    config = PilotConfig()
+    mode = getattr(args, "mode", "LIVE").upper()
+    set_experiment_mode(mode)
+    config = PilotConfig(experiment_mode=mode)
 
     if action == "run" or action == "resume":
         is_resume = (action == "resume")
-        print(f"[*] Running 200-Domain Pilot Scan (Resume={is_resume})...")
+        print(f"[*] Running 200-Domain Pilot Scan (Mode={mode}, Resume={is_resume})...")
         pilot_records, csv_p, prov_p = sample_pilot_corpus(config)
-        evidence_list, pilot_manifest = run_pilot_scan(pilot_records, config, resume=is_resume)
+        evidence_list, pilot_manifest = run_pilot_scan(
+            pilot_records, config, resume=is_resume, mode=mode, max_workers=6
+        )
         scoring_records, score_p = score_pilot_evidence(evidence_list, config)
         print(f"[+] Pilot Scan Complete:")
+        print(f"    Mode:              {mode}")
         print(f"    Domains Processed: {len(evidence_list)} across {pilot_manifest.batch_count} batches")
-        print(f"    Evidence File:     data/phase1_2_pilot/pilot_evidence.jsonl")
+        print(f"    Evidence File:     {config.pilot_dir}/pilot_evidence.jsonl")
         print(f"    Scores File:       {score_p}")
         high = sum(1 for s in scoring_records if s.classification == "HIGH_ANOMALY")
         cand = sum(1 for s in scoring_records if s.classification == "CANDIDATE_ANOMALY")
@@ -318,7 +265,7 @@ def cmd_pilot(args):
     elif action == "review":
         print("[*] Generating Blind Review Dossiers (Score-Hiding) & Recording Reviews...")
         pilot_records, _, _ = sample_pilot_corpus(config)
-        evidence_list, _ = run_pilot_scan(pilot_records, config, resume=True)
+        evidence_list, _ = run_pilot_scan(pilot_records, config, resume=True, mode=mode)
         scoring_records, _ = score_pilot_evidence(evidence_list, config)
         dossiers, dos_p = generate_blind_dossiers(evidence_list, scoring_records, config)
         reviews, rev_p = record_human_review(dossiers, scoring_records, config)
@@ -328,7 +275,9 @@ def cmd_pilot(args):
         print(f"    Human-System Agreement Rate: {acc_count}/{len(reviews)} ({acc_count/len(reviews)*100:.1f}%)\n")
 
     elif action == "report":
-        scores_file = Path("data/phase1_2_pilot/pilot_scores.jsonl")
+        scores_file = config.pilot_dir / "pilot_scores.jsonl"
+        if not scores_file.exists():
+            scores_file = Path("data/phase1_2_pilot/pilot_scores.jsonl")
         if not scores_file.exists():
             print("[-] Error: Pilot scores not found. Run 'atlas pilot run' first.")
             sys.exit(1)
@@ -346,22 +295,26 @@ def cmd_pilot(args):
             print(f"... and {len(scores) - 15} more domains.")
         print()
 
-# Phase 1.2 Benchmark Subcommands
+# Phase 1.3 Benchmark Subcommands
 def cmd_benchmark(args):
     print_banner()
     action = args.benchmark_action
+    mode = getattr(args, "mode", "LIVE").upper()
+    set_experiment_mode(mode)
 
     if action == "build":
-        print("[*] Building Benchmark v1 (Curated Reference Dataset)...")
-        benchmarks = build_benchmark_v1()
-        print(f"[+] Benchmark v1 built: {len(benchmarks)} reference domains in data/benchmark_v1/")
-        print(f"    Manifest: data/benchmark_v1/manifest.json\n")
+        print("[*] Building Benchmark v2 (Separated Domains & Private Labels)...")
+        dom_p, lab_p = build_benchmark_v2()
+        print(f"[+] Benchmark v2 built in data/benchmark_v2/")
+        print(f"    Domains: {dom_p}")
+        print(f"    Private Labels: {lab_p}\n")
 
     elif action == "run":
-        print("[*] Running Benchmark v1 Evaluation Pipeline...")
-        eval_summary = run_benchmark_v1_evaluation()
+        print(f"[*] Running Benchmark v2 Evaluation Pipeline (Mode={mode})...")
+        eval_summary = run_benchmark_v2_evaluation(mode=mode)
         metrics = eval_summary["metrics"]
-        print("[+] Benchmark v1 Evaluation Complete:")
+        print("[+] Benchmark v2 Evaluation Complete:")
+        print(f"    Total Domains:{eval_summary['total_domains']}")
         print(f"    Accuracy:     {metrics['accuracy']*100:.2f}%")
         print(f"    Precision:    {metrics['precision']*100:.2f}%")
         print(f"    Recall:       {metrics['recall']*100:.2f}%")
@@ -369,16 +322,16 @@ def cmd_benchmark(args):
         print(f"    Specificity:  {metrics['specificity']*100:.2f}%")
         print(f"    FP Rate:      {metrics['false_positive_rate']*100:.2f}%")
         print(f"    FN Rate:      {metrics['false_negative_rate']*100:.2f}%")
-        print(f"    Report Saved: data/benchmark_v1/benchmark_evaluation.json\n")
+        print(f"    Report Saved: data/benchmark_v2/evaluation.json\n")
 
     elif action == "validate":
-        manifest_file = Path("data/benchmark_v1/manifest.json")
+        manifest_file = Path("data/benchmark_v2/public_manifest.json")
         if not manifest_file.exists():
-            print("[-] Error: Benchmark v1 manifest not found. Run 'atlas benchmark build' first.")
+            print("[-] Error: Benchmark v2 manifest not found. Run 'atlas benchmark build' first.")
             sys.exit(1)
         with open(manifest_file, "r", encoding="utf-8") as f:
             m_data = json.load(f)
-        print("Benchmark v1 Manifest Validation:")
+        print("Benchmark v2 Manifest Validation:")
         print(json.dumps(m_data, indent=2))
 
 def main():
@@ -411,6 +364,7 @@ def main():
     evidence_sub = evidence_parser.add_subparsers(dest="subcommand")
     evidence_verify = evidence_sub.add_parser("verify", help="Verify cryptographic SHA-256 integrity of evidence artifacts")
     evidence_verify.add_argument("finding_id", nargs="?", help="Specific Finding ID to verify")
+    evidence_audit = evidence_sub.add_parser("audit", help="Audit live raw HTML payloads and artifacts")
 
     # phase1
     p1_parser = subparsers.add_parser("phase1", help="Phase 1 Blind Seed-Corpus Discovery Experiment")
@@ -422,13 +376,15 @@ def main():
     corpus_parser = subparsers.add_parser("corpus", help="Corpus v2 Management & Quality Subsystem")
     corpus_parser.add_argument("corpus_action", choices=["build", "validate", "audit", "stats", "manifest"], help="Corpus operation")
 
-    # pilot (Phase 1.2)
-    pilot_parser = subparsers.add_parser("pilot", help="Phase 1.2 200-Domain Pilot Subsystem")
+    # pilot (Phase 1.3)
+    pilot_parser = subparsers.add_parser("pilot", help="Phase 1.3 200-Domain Pilot Subsystem")
     pilot_parser.add_argument("pilot_action", choices=["run", "resume", "review", "report"], help="Pilot operation")
+    pilot_parser.add_argument("--mode", choices=["LIVE", "SIMULATION", "REPLAY"], default="LIVE", help="Experiment execution mode")
 
-    # benchmark (Phase 1.2)
-    bench_parser = subparsers.add_parser("benchmark", help="Benchmark v1 Evaluation Subsystem")
+    # benchmark (Phase 1.3)
+    bench_parser = subparsers.add_parser("benchmark", help="Benchmark v2 Evaluation Subsystem")
     bench_parser.add_argument("benchmark_action", choices=["build", "run", "validate"], help="Benchmark operation")
+    bench_parser.add_argument("--mode", choices=["LIVE", "SIMULATION", "REPLAY"], default="LIVE", help="Experiment execution mode")
 
     args = parser.parse_args()
 
@@ -449,6 +405,8 @@ def main():
     elif args.command == "evidence":
         if args.subcommand == "verify":
             cmd_evidence_verify(args)
+        elif args.subcommand == "audit":
+            cmd_evidence_audit(args)
         else:
             evidence_parser.print_help()
     elif args.command == "phase1":

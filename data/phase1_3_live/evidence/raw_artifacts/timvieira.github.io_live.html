@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Tim Vieira</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Tim Vieira, Timothy Vieira, Timothy F. Vieira"/>
+    <meta name="description" content="Personal homepage of Tim Vieira." />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond">
+    <style>
+      body {
+          font-family: 'EB Garamond', "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+          text-align: justify;
+          hyphens: auto;
+          -webkit-hyphens: auto;
+      }
+      h1,h2,h3{
+        font-weight: bold;
+      }
+      #bunchoflinks a {
+        margin: 0;
+        text-decoration: none;
+      }
+      #bunchoflinks a span.link-text,
+      #bunchoflinks .explore-link .explore-text,
+      #interests a {
+        text-decoration: none;
+      }
+      #interests a:hover {
+        text-decoration: underline;
+      }
+      #bunchoflinks a span.link-text::before,
+      #bunchoflinks .explore-link .explore-text::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background: currentColor;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+      #bunchoflinks a:hover span.link-text::before,
+      #bunchoflinks .explore-link:hover .explore-text::before {
+        left: 0;
+        width: 100%;
+      }
+      #bunchoflinks a:not(:last-child)::after {
+        content: '\00b7';
+        margin-left: 0.1em;
+        color: #999;
+        text-decoration: none;
+        display: inline-block;
+      }
+      #bunchoflinks a:first-child {
+        margin-left: 0;
+      }
+      .trajectory {
+        list-style: none;
+        padding-left: 50px;
+        padding-right: 15px;
+      }
+      .trajectory li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 0px;
+      }
+      .trajectory li::before {
+        content: '';
+        position: absolute;
+        left: -46px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.25;
+        transition: opacity 0.3s ease;
+      }
+      .trajectory li:hover::before {
+        opacity: 1;
+      }
+      .trajectory li.traj-eth::before { background-image: url('img/logos/eth.png'); }
+      .trajectory li.traj-jhu::before { background-image: url('img/logos/jhu.png'); background-size: 28px; }
+      .trajectory li.traj-umass::before { background-image: url('img/logos/umass.png'); background-size: 26px; }
+      .trajectory li.traj-uiuc::before { background-image: url('img/logos/uiuc.png'); background-size: 20px; }
+      .explore-link { text-decoration: none !important; }
+      .explore-link .graph-icon circle { transition: fill 0.3s ease; }
+      @keyframes colorCycleWord {
+        0%,100% { color: #3a5a8c; }
+        16% { color: #8c4a3a; }
+        33% { color: #6a8a52; }
+        50% { color: #b06030; }
+        66% { color: #7a5a8a; }
+        83% { color: #3a7a7a; }
+      }
+      @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+      .explore-link:hover .explore-text { animation: colorCycleWord 6s ease-in-out infinite; }
+      .explore-link:hover .graph-icon { animation: breathe 1.5s ease-in-out infinite; }
+      .explore-link:hover .n1 { fill: #3a5a8c; }
+      .explore-link:hover .n2 { fill: #8c4a3a; }
+      .explore-link:hover .n3 { fill: #6a8a52; }
+      .explore-link:hover .n4 { fill: #b06030; }
+      .explore-link:hover .n5 { fill: #7a5a8a; }
+    </style>
+
+  </head>
+  <body>
+
+    <div id="container" class="clearfix">
+
+      <div id="column-1">
+
+        <div id="name-container" class="box">
+          <img id="mug-inline" src="img/tim-maia.jpg" alt="mugshot" onclick="this.classList.toggle('expanded')" />
+          <div id="name-links">
+            <h1 id="name">Tim Vieira</h1>
+            <div id="bunchoflinks">
+              <a id="blog" href="blog/"><span class="link-text">Blog</span></a>
+              <a id="github" href="http://github.com/timvieira"><span class="link-text">Github</span></a>
+              <a id="scholar" href="https://scholar.google.com/citations?user=Avtv7FkAAAAJ&hl=en"><span class="link-text">Scholar</span></a>
+              <a id="twitter" href="http://twitter.com/xtimv"><span class="link-text">X</span></a>
+              <a id="linkedin" href="https://www.linkedin.com/in/tim-vieira-608b0396/"><span class="link-text">LinkedIn</span></a>
+              <a id="instagram" href="https://www.instagram.com/tim.vieira/"><span class="link-text">Instagram</span></a>
+              <a id="explore" href="experimental/research-graph.html" class="explore-link"><span class="explore-text">Explore</span> <svg class="graph-icon" width="18" height="16" viewBox="0 0 18 16" style="vertical-align: middle; position: relative; top: -1px;"><line x1="3" y1="4" x2="9" y2="2" stroke="currentColor" stroke-width="0.9" opacity="0.35"/><line x1="9" y1="2" x2="15" y2="5" stroke="currentColor" stroke-width="0.9" opacity="0.35"/><line x1="3" y1="4" x2="6" y2="10" stroke="currentColor" stroke-width="0.9" opacity="0.35"/><line x1="9" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="0.9" opacity="0.35"/><line x1="15" y1="5" x2="12" y2="12" stroke="currentColor" stroke-width="0.9" opacity="0.35"/><line x1="6" y1="10" x2="12" y2="12" stroke="currentColor" stroke-width="0.9" opacity="0.35"/><circle class="n1" cx="3" cy="4" r="2.0" fill="currentColor" stroke="none"/><circle class="n2" cx="9" cy="2" r="1.2" fill="currentColor" stroke="none"/><circle class="n3" cx="15" cy="5" r="1.7" fill="currentColor" stroke="none"/><circle class="n4" cx="6" cy="10" r="1.0" fill="currentColor" stroke="none"/><circle class="n5" cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="interests" class="box">
+
+            <h2>About</h2>
+
+            <p>
+              I am a computer scientist driven by an allergy to inefficiency
+              and a love of elegant solutions to tough problems. I believe
+              that investing in the right theoretical foundations leads to
+              solutions that are more general, more interpretable, and
+              longer-lasting.
+            </p>
+
+            <p>
+              My current work focuses on making language models more
+              controllable and programmable using probabilistic inference
+              techniques. My broader interests include
+              <a href="experimental/research-graph.html#theme=dp&amp;mode=cards">dynamic programming</a>,
+              <a href="experimental/research-graph.html#theme=tokenization&amp;mode=cards">tokenization</a>,
+              <a href="experimental/research-graph.html#theme=parsing&amp;mode=cards">structured prediction</a>,
+              <a href="experimental/research-graph.html#theme=autodiff&amp;mode=cards">automatic differentiation</a>,
+              <a href="experimental/research-graph.html#theme=sampling&amp;mode=cards">sampling methods</a>,
+              <a href="experimental/research-graph.html#theme=swor&amp;mode=cards">sampling without replacement</a>,
+              <a href="experimental/research-graph.html#theme=beam&amp;mode=cards">beam search</a>,
+              the <a href="experimental/research-graph.html#theme=gumbel&amp;mode=cards">Gumbel trick</a>,
+              <a href="experimental/research-graph.html#theme=automata&amp;mode=cards">formal language theory</a>,
+              <a href="experimental/research-graph.html#theme=logic-programming&amp;mode=cards">logic programming</a>,
+              and <a href="experimental/research-graph.html#theme=alignment&amp;mode=cards">reinforcement learning</a>. I publish
+              on many of these topics and explore them in a more tutorial
+              style on my blog, <a href="blog/">Graduate Descent</a>.
+            </p>
+
+            <p>My path has taken me through several institutions, where
+              I've had the privilege of working with great collaborators and
+              mentors:</p>
+
+            <ul class="trajectory">
+              <li class="traj-eth">Consulting research scientist with <a href="http://rycolab.io">Ryan Cotterell</a> at ETH Zürich (remote from NYC).</li>
+              <li class="traj-jhu">PhD with <a href="http://cs.jhu.edu/~jason">Jason Eisner</a> at Johns Hopkins. Developed <a href="https://github.com/timvieira/dyna-pi"><code>dyna-pi</code></a>, a system for automatically analyzing and improving dynamic programming algorithms.</li>
+              <li class="traj-umass">Research programmer with <a href="http://www.cs.umass.edu/~mccallum/">Andrew McCallum</a> at UMass. Worked on Rexa (a research paper search engine) and <a href="http://factorie.cs.umass.edu/">Factorie</a> (a probabilistic programming framework).</li>
+              <li class="traj-uiuc">BS in computer science (minor in mathematics) at UIUC. Research with <a href="https://www.cis.upenn.edu/~danroth/">Dan Roth</a> on textual entailment.</li>
+            </ul>
+
+        </div>
+
+        <div id="fun" class="box">
+
+          <h2>Fun</h2>
+          When I'm not in front of a whiteboard or computer, I'm
+          probably <a href="https://www.instagram.com/p/BCmaClQTQO4/?taken-by=tim.vieira">climbing
+          things</a>, <a href="https://www.youtube.com/watch?v=fMwk8XgqCc8">walking
+          around on my hands</a>, or hanging out with
+          <a href="http://dirichlet.net">Hanna Wallach</a>, our <a href="https://www.instagram.com/maia.the.pomsky/">adorable dog</a>, and our newest family member.
+          <br/>
+          <br/>
+
+          <div class="project clearfix">
+
+            <div id="movement-div" class="thumbnail">
+              <a href="https://www.instagram.com/tim.vieira/">
+                <img id="movement"
+                     style="background-color:black;"
+                     src="img/climb-kneepit.png" alt="" />
+              </a>
+            </div>
+
+            <!--Roller Derby. My alter ego, Mr. Sprinkles, played roller derby for many years.-->
+            <div id="derby-div" class="thumbnail ">
+              <img id="derby"
+                   style="background-color:black;"
+                   src="img/rambo-v-cider.jpg" alt="" />
+            </div>
+
+            <!-- In high school, I was big into <a href="http://streetboarding.com/">snakeboarding</a>. -->
+            <div id="snakeboard-div" class="thumbnail">
+              <a href="http://www.youtube.com/watch?v=BFVBQBDtxUw">
+                <img id="snakeboard" src="img/skate-and-break/TIM_bonertobs180.jpg" alt="" />
+              </a>
+            </div>
+
+            <!--
+            <i>The 5th Ave</i> - I installed the hydraulics myself!
+            -->
+            <div id="lowrider-1-div" class="thumbnail">
+              <a title="My bouncing '84 Fifth Ave."
+                 href="http://www.youtube.com/watch?v=iIXSJnfQK68">
+                <img id="lowrider-1" src="img/fifth-avenue.jpg" alt="" />
+              </a>
+            </div>
+
+            <!--
+              <i>The Big Bad Baby Blue Buick</i> - hydraulics and gold spinning
+              wheels.
+              -->
+            <div id="lowrider-2-div" class="thumbnail">
+              <a title="The Big Bad Baby Blue Buick"
+                 href="http://www.youtube.com/watch?v=HDZezucXcZg">
+                <img id="lowrider-2" src="img/rimz0rz.jpg" alt="" />
+              </a>
+            </div>
+
+          </div>
+
+
+<!--
+<object width="100" height="100">
+    <param name="movie" value="img/skate-and-break/mctwist.swf">
+    <embed src="img/skate-and-break/mctwist.swf" width="100" height="100">
+    </embed>
+</object>
+
+<object width="100" height="100">
+    <param name="movie" value="img/skate-and-break/handspin.swf">
+    <embed src="img/skate-and-break/handspin.swf" width="100" height="100">
+    </embed>
+</object>
+
+<object width="100" height="100">
+    <param name="movie" value="img/skate-and-break/rodeo.swf">
+    <embed src="img/skate-and-break/rodeo.swf" width="100" height="100">
+    </embed>
+</object>
+    -->
+
+        </div>
+
+      </div>
+
+      <div id="column-2">
+
+        <div id="mugshot" class="box">
+          <img id="mug" src="img/tim-maia.jpg" alt="mugshot" />
+        </div>
+
+        <div id="blogbox" class="box">
+
+          <h2>Blog</h2>
+
+          Technical blog: <a href="blog/">Graduate Descent</a>.
+
+        </div>
+        <div id="publications" class="box">
+
+          <h2>Publications</h2>
+
+
+          <ul>
+
+            
+
+           
+
+           
+
+           
+
+           
+
+           
+
+           
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2604.15672">
+                  Faster LLM Inference via Sequential Monte Carlo
+                </a>
+                <span class="pub-author">
+                  Yahya Emara,
+                  Mauricio Barba da Costa,
+                  Chi-Chih Chang,
+                  Cameron Freer,
+                  Tim Vieira,
+                  Ryan Cotterell,
+                  Mohamed S. Abdelfattah
+                </span>
+                <a class="pub-venue" href="">Preprint</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2604.15672">arXiv</a>
+                <a class="extra code" href="https://github.com/abdelfattah-lab/smcsd">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2604.28147">
+                  On the Proper Treatment of Units in Surprisal Theory
+                </a>
+                <span class="pub-author">
+                  Samuel Kiegeland,
+                  Vésteinn Snæbjarnarson,
+                  Tim Vieira,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2026.aclweb.org/">ACL 2026</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2604.28147">arXiv</a>
+                <a class="extra code" href="https://github.com/samuki/units-surprisal">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2604.21191">
+                  Prefix Parsing is Just Parsing
+                </a>
+                <span class="pub-author">
+                  Clemente Pasti,
+                  Andreas Opedal,
+                  Timothy J. O'Donnell,
+                  Ryan Cotterell,
+                  Tim Vieira
+                </span>
+                <a class="pub-venue" href="https://2026.aclweb.org/">ACL 2026</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2604.21191">arXiv</a>
+                <a class="extra code" href="https://github.com/genlm/prefix-acl-26">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2603.05432">
+                  Ensembling Language Models with Sequential Monte Carlo
+                </a>
+                <span class="pub-author">
+                  Robin Shing Moon Chan,
+                  Tianyu Liu,
+                  Samuel Kiegeland,
+                  Clemente Pasti,
+                  Jacob Hoover Vigly,
+                  Timothy J. O'Donnell,
+                  Ryan Cotterell,
+                  Tim Vieira
+                </span>
+                <a class="pub-venue" href="">Preprint</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2603.05432">arXiv</a>
+                <a class="extra code" href="https://github.com/chanr0/smc_ensembling">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2603.05193">
+                  Transducing Language Models
+                </a>
+                <span class="pub-author">
+                  Vésteinn Snæbjarnarson,
+                  Samuel Kiegeland,
+                  Tianyu Liu,
+                  Reda Boumasmoud,
+                  Ryan Cotterell,
+                  Tim Vieira
+                </span>
+                <a class="pub-venue" href="https://iclr.cc/">ICLR 2026</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2603.05193">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/transducing-language-models">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=qOyF214xmg">OpenReview</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2504.05410">
+                  Fast Controlled Generation from Language Models with Adaptive Weighted Rejection Sampling
+                </a>
+                <span class="pub-author">
+                  Benjamin Lipkin,
+                  Benjamin LeBrun,
+                  Jacob Hoover Vigly,
+                  João Loula,
+                  David R. MacIver,
+                  Li Du,
+                  Jason Eisner,
+                  Ryan Cotterell,
+                  Vikash Mansinghka,
+                  Timothy J. O'Donnell,
+                  Alexander K. Lew,
+                  Tim Vieira
+                </span>
+                <a class="pub-venue" href="https://colmweb.org/">CoLM 2025</a>
+                (Outstanding paper award 🏆)
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2504.05410">arXiv</a>
+                <a class="extra" href="https://www.cs.jhu.edu/news/hopkins-computer-scientists-win-colm-outstanding-paper-award/">JHU news</a>
+                <a class="extra" href="https://techxplore.com/news/2025-12-algorithm-faster-reliable-language-outputs.html">TechXplore</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2504.10637">
+                  Better Estimation of the KL Divergence Between Language Models
+                </a>
+                <span class="pub-author">
+                  Afra Amini, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115467">NeurIPS 2025</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2504.10637">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/kl-rb">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=um9kHMof0c">OpenReview</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2025.findings-acl.1300/">
+                  Syntactic Control of Language Models by Posterior Inference
+                </a>
+                <span class="pub-author">
+                  Vicky Xefteri,
+                  Tim Vieira,
+                  Ryan Cotterell,
+                  Afra Amini
+                </span>
+                <a class="pub-venue" href="https://2025.aclweb.org/">Findings of ACL 2025</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2506.07154">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/syntactic-control">code</a>
+                <a class="extra" href="https://aclanthology.org/2025.findings-acl.1300/">ACL Anthology</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://openreview.net/forum?id=xoXn62FzD0">
+                  Syntactic and Semantic Control of Large Language Models via Sequential Monte Carlo
+                </a>
+                <span class="pub-author">
+                  João Loula,
+                  Benjamin LeBrun,
+                  Li Du,
+                  Ben Lipkin,
+                  Clemente Pasti,
+                  Gabriel Grand,
+                  Tianyu Liu,
+                  Yahya Emara,
+                  Marjorie Freedman,
+                  Jason Eisner,
+                  Ryan Cotterell,
+                  Vikash Mansinghka,
+                  Alexander K. Lew,
+                  Tim Vieira,
+                  Timothy J. O'Donnell
+                </span>
+                <a class="pub-venue" href="https://iclr.cc/">ICLR 2025</a>
+                (selected for oral presentation 🎤)
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2504.13139">arXiv</a>
+                <a class="extra code" href="https://github.com/genlm/genlm-control">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=xoXn62FzD0">OpenReview</a>
+                <a class="extra slides" href="https://timvieira.github.io/doc/2025-iclr-control-slides.pdf">slides</a>
+                <a class="extra video" href="https://slideslive.com/39036841/syntactic-and-semantic-control-of-large-language-models-via-sequential-monte-carlo">video</a>
+                <a class="extra" href="https://news.mit.edu/2025/making-ai-generated-code-more-accurate-0418">MIT News</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2407.11606">
+                  The Foundations of Tokenization: Statistical and Computational Concerns
+                </a>
+                <span class="pub-author">
+                  Juan Luis Gastaldi,
+                  John Terilla,
+                  Luca Malagutti,
+                  Brian DuSell,
+                  Tim Vieira,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://iclr.cc/">ICLR 2025</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2407.11606">arXiv</a>
+                <a class="extra" href="https://openreview.net/forum?id=B5iOSxM2I0">OpenReview</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2407.06057">
+                  Variational Best-of-N Alignment
+                </a>
+                <span class="pub-author">
+                  Afra Amini,
+                  Tim Vieira,
+                  Elliott Ash,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://iclr.cc/">ICLR 2025</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2407.06057">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/vbon">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=W9FZEQj3vv">OpenReview</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2506.07956">
+                  Language Models over Canonical Byte-Pair Encodings
+                </a>
+                <span class="pub-author">
+                  Tim Vieira,
+                  Tianyu Liu,
+                  Clemente Pasti,
+                  Yahya Emara,
+                  Brian DuSell,
+                  Benjamin LeBrun,
+                  Mario Giulianelli,
+                  Juan Luis Gastaldi,
+                  Timothy J. O'Donnell,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://icml.cc/virtual/2025/papers.html">ICML 2025</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2506.07956">arXiv</a>
+                <a class="extra code" href="https://github.com/genlm/canonical-icml-2025">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=eCVrfVDNSY">OpenReview</a>
+                <a class="extra poster" href="https://icml.cc/media/icml-2025/Slides/44596.pdf">poster</a>
+                <a class="extra" href="https://proceedings.mlr.press/v267/vieira25b">PMLR</a>
+                <a class="extra" href="https://icml.cc/virtual/2025/poster/44596">ICML page</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2412.03719">
+                  From Language Models over Tokens to Language Models over Characters
+                </a>
+                <span class="pub-author">
+                  Tim Vieira,
+                  Ben LeBrun,
+                  Mario Giulianelli,
+                  Juan Luis Gastaldi,
+                  Brian DuSell,
+                  John Terilla,
+                  Timothy J. O'Donnell,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://icml.cc/virtual/2025/papers.html">ICML 2025</a>
+                (spotlight 🌟; arXiv version 2024)
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2412.03719">arXiv</a>
+                <a class="extra code" href="https://github.com/genlm/genlm-bytes">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=sQS0roNQZR">OpenReview</a>
+                <a class="extra" href="https://proceedings.mlr.press/v267/vieira25a.html">PMLR</a>
+                <a class="extra" href="https://icml.cc/virtual/2025/poster/43839">ICML page</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2410.02691">
+                  On the Proper Treatment of Tokenization in Psycholinguistics
+                </a>
+                <span class="pub-author">
+                  Mario Giulianelli,
+                  Luca Malagutti,
+                  Juan Luis Gastaldi,
+                  Brian DuSell,
+                  Tim Vieira,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2024.emnlp.org/">EMNLP 2024</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2410.02691">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/psycho-toke">code</a>
+                <a class="extra" href="https://aclanthology.org/2024.emnlp-main.1032/">ACL Anthology</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2024.findings-acl.592">
+                  Direct Preference Optimization with an Offset
+                </a>
+                <span class="pub-author">
+                  Afra Amini, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2024.aclweb.org/">Findings of ACL 2024</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2402.10571">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/odpo">code</a>
+                <a class="extra" href="https://openreview.net/forum?id=GSiTfZFWBs">OpenReview</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2603.13242">
+                  Automating the Analysis and Improvement of Dynamic Programming Algorithms with Applications to Natural Language Processing
+                </a>
+                <span class="pub-author">
+                  Tim Vieira
+                </span>
+                <a class="pub-venue" href="#">PhD Dissertation 2023</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="https://github.com/timvieira/dyna-pi">code</a>
+                <a class="extra slides" href="https://docs.google.com/presentation/d/10LTArMtqI3nc0xnBkq_m7b7Qk312PL4Vb_26q6fA6QU/edit?usp=sharing">slides</a>
+                <a class="extra video" href="https://youtu.be/SUOvgaxFxP4">video</a>
+                <a class="extra" href="https://jscholarship.library.jhu.edu/items/f78cc5e6-9dba-451f-b45c-6a390a255355">library</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2023.emnlp-main.827">
+                  An Exploration of Left-Corner Transformations
+                </a>
+                <span class="pub-author">
+                  Andreas Opedal,
+                  Eleftheria Tsipidi,
+                  Tiago Pimentel,
+                  Ryan Cotterell,
+                  Tim Vieira
+                </span>
+                <a class="pub-venue" href="https://2023.emnlp.org/">EMNLP 2023</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2311.16258">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/left-corner">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2023.emnlp-main.328/">
+                  Efficient Algorithms for Recognizing Weighted Tree-Adjoining Languages
+                </a>
+                <span class="pub-author">
+                  Alexandra Butoi,
+                  Tim Vieira,
+                  Ryan Cotterell,
+                  David Chiang
+                </span>
+                <a class="pub-venue" href="https://2023.emnlp.org/">EMNLP 2023</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="http://arxiv.org/abs/2310.15276">arXiv</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2023.acl-long.204/">
+                  Efficient Semiring-Weighted Earley Parsing
+                </a>
+                <span class="pub-author">
+                  Andreas Opedal,
+                  Ran Zmigrod,
+                  Tim Vieira,
+                  Ryan Cotterell,
+                  Jason Eisner
+                </span>
+                <a class="pub-venue" href="https://2023.aclweb.org/">ACL 2023</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2307.02982">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/earleys-algo">code</a>
+                <a class="extra video" href="https://www.cs.jhu.edu/~jason/papers/opedal+al.acl23.mp4">video</a>
+                <a class="extra poster" href="https://www.cs.jhu.edu/~jason/papers/opedal+al.acl23.poster.pdf">poster</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2023.findings-acl.38/">
+                  A Formal Perspective on Byte-Pair Encoding
+                </a>
+                <span class="pub-author">
+                  Vilém Zouhar,
+                  Clara Meister,
+                  Juan Gastaldi,
+                  Li Du,
+                  Tim Vieira,
+                  Mrinmaya Sachan,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2023.aclweb.org/">Findings of ACL 2023</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2306.16837">arXiv</a>
+                <a class="extra code" href="https://github.com/zouharvi/formal-bpe">code</a>
+                <a class="extra video" href="https://youtu.be/aB7oaS0rlvI">video</a>
+                <a class="extra poster" href="https://github.com/zouharvi/formal-bpe/blob/master/meta/poster.pdf">poster</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2209.06809">
+                  On the Intersection of Context-Free and Regular Languages
+                </a>
+                <span class="pub-author">
+                  Clemente Pasti,
+                  Andreas Opedal,
+                  Tiago Pimentel,
+                  Tim Vieira,
+                  Jason Eisner,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2023.eacl.org/">EACL 2023</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2209.06809">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/bar-hillel">code</a>
+                <a class="extra video" href="https://aclanthology.org/2023.eacl-main.52.mp4">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2022.emnlp-main.656">
+                  Algorithms for Weighted Pushdown Automata
+                </a>
+                <span class="pub-author">
+                  Alexandra Butoi,
+                  Brian DuSell,
+                  Tim Vieira,
+                  Ryan Cotterell,
+                  David Chiang
+                </span>
+                <a class="pub-venue" href="https://2022.emnlp.org/">EMNLP 2022</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2210.06884">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/wpda">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2022.emnlp-main.567/">
+                  Algorithms for Weighted Finite-State Automata with Failure Arcs
+                </a>
+                <span class="pub-author">
+                  Anej Svete,
+                  Benjamin Dayan,
+                  Ryan Cotterell,
+                  Tim Vieira,
+                  Jason Eisner
+                </span>
+                <a class="pub-venue" href="https://2022.emnlp.org/">EMNLP 2022</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2301.06862">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/failure-backward">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2022.naacl-main.360/">
+                  Exact Paired-Permutation Testing for Structured Test Statistics
+                </a>
+                <span class="pub-author">
+                  Ran Zmigrod, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2022.naacl.org/">NAACL 2022</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2205.01416">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/paired-perm-test">code</a>
+                <a class="extra video" href="https://youtu.be/kRyKkAdonmY">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2512.23665">
+                  Automating the Analysis of Parsing Algorithms (and other Dynamic Programs)
+                </a>
+                <span class="pub-author">
+                  Tim Vieira, Ryan Cotterell, Jason Eisner
+                </span>
+                <a class="pub-venue" href="">Manuscript 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2512.23665">arXiv</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2021.findings-emnlp.322/">
+                  Searching for More Efficient Dynamic Programs
+                </a>
+                <span class="pub-author">
+                  Tim Vieira, Ryan Cotterell, Jason Eisner
+                </span>
+                <a class="pub-venue" href="https://2021.emnlp.org/">Findings of EMNLP 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2109.06966">arXiv</a>
+                <a class="extra slides" href="https://docs.google.com/presentation/d/1K3qWo0eC8xwOpugxG8ZWfLyLHXg1ch-Q-6b32-Z2Gpc/edit?usp=sharing">slides</a>
+                <a class="extra video" href="https://underline.io/lecture/38281-searching-for-more-efficient-dynamic-programs">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2021.emnlp-main.52/">
+                  Conditional Poisson Stochastic Beam Search
+                </a>
+                <span class="pub-author">
+                  Clara Meister,
+                  Afra Amini,
+                  Tim Vieira,
+                  Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2021.emnlp.org/">EMNLP 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2109.11034">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/cpsbs">code</a>
+                <a class="extra video" href="https://aclanthology.org/2021.emnlp-main.52.mp4">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2021.emnlp-main.824/">
+                  Efficient Sampling of Dependency Structures
+                </a>
+                <span class="pub-author">
+                  Ran Zmigrod, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2021.emnlp.org/">EMNLP 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2109.06521">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/treesample">code</a>
+                <a class="extra video" href="https://aclanthology.org/2021.emnlp-main.824.mp4">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://doi.org/10.1162/tacl_a_00391">
+                  Efficient Computation of Expectations under Spanning Tree Distributions
+                </a>
+                <span class="pub-author">
+                  Ran Zmigrod*, Tim Vieira*, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="http://transacl.org">TACL 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2008.12988">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/tree_expectations">code</a>
+                <a class="extra video" href="https://aclanthology.org/2021.tacl-1.41.mp4">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2021.acl-long.106/">
+                  On Finding the K-best Non-projective Dependency Trees
+                </a>
+                <span class="pub-author">
+                  Ran Zmigrod, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2021.aclweb.org/">ACL 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2106.00780">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/spanningtrees">code</a>
+                <a class="extra video" href="https://aclanthology.org/2021.acl-long.106.mp4">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2021.acl-short.32/">
+                  Higher-order Derivatives of Weighted Finite-state Machines
+                </a>
+                <span class="pub-author">
+                  Ran Zmigrod, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2021.aclweb.org/">ACL 2021</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2106.00749">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/wfsm">code</a>
+                <a class="extra video" href="https://aclanthology.org/2021.acl-short.32.mp4">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2020.emnlp-main.170/">
+                  If Beam Search is the Answer, What was the Question?
+                </a>
+                <span class="pub-author">
+                  Clara Meister, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2020.emnlp.org/">EMNLP 2020</a>
+                (Honorable mention paper 🏆)
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2010.02650">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/uid-decoding">code</a>
+                <a class="extra video" href="https://slideslive.com/38938891/if-beam-search-is-the-answer-what-was-the-question">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2020.emnlp-main.390/">
+                  Please Mind the Root: Decoding Arborescences for Dependency Parsing
+                </a>
+                <span class="pub-author">
+                  Ran Zmigrod, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="https://2020.emnlp.org/">EMNLP 2020</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2010.02550">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/spanningtrees">code</a>
+                <a class="extra video" href="https://slideslive.com/38939014/please-mind-the-root-decoding-arborescences-for-dependency-parsing">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="http://dx.doi.org/10.1162/tacl_a_00346">
+                  Best-First Beam Search
+                </a>
+                <span class="pub-author">
+                  Clara Meister, Tim Vieira, Ryan Cotterell
+                </span>
+                <a class="pub-venue" href="http://transacl.org">TACL 2020</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/2007.03909">arXiv</a>
+                <a class="extra code" href="https://github.com/rycolab/bfbs">code</a>
+                <a class="extra slides" href="https://drive.google.com/file/d/1RJoeh4vpAkGyGqUZtqTHfwJys-wxl8z_/view?usp=sharing">slides</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://arxiv.org/abs/2010.10503">
+                  Evaluation of Logic Programs with Built-Ins and Aggregation: A Calculus for Bag Relations
+                </a>
+                <span class="pub-author">
+                  Matthew Francis-Landau, Tim Vieira, Jason Eisner
+                </span>
+                <a class="pub-venue" href="https://wrla2020.webs.upv.es/">WRLA 2020</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="https://github.com/matthewfl/dyna-R">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/2020.lrec-1.699/">
+                  The Universal Decompositional Semantics Dataset and Decomp Toolkit
+                </a>
+                <span class="pub-author">
+                  Aaron Steven White,
+                  Elias Stengel-Eskin,
+                  Siddharth Vashishtha,
+                  Venkata Subrahmanyan Govindarajan,
+                  Dee Ann Reisinger,
+                  Tim Vieira,
+                  Keisuke Sakaguchi,
+                  Sheng Zhang,
+                  Francis Ferraro,
+                  Rachel Rudinger,
+                  Kyle Rawlins,
+                  Benjamin Van Durme
+                </span>
+                <a class="pub-venue" href="https://lrec2020.lrec-conf.org/en/">LREC 2020</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra arXiv" href="https://arxiv.org/abs/1909.13851">arXiv</a>
+                <a class="extra code" href="http://decomp.io/">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://timvieira.github.io/doc/2018-draft-vocrf2.pdf">
+                  Forward-Backward with Failure Arcs: Faster Inference for Variable-Order Conditional Random Fields
+                </a>
+                <span class="pub-author">
+                  Tim Vieira*, Ryan Cotterell*, Jason Eisner
+                </span>
+                <a class="pub-venue" href="https://arxiv.org">arXiv 2018</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="https://github.com/timvieira/vocrf">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://timvieira.github.io/doc/2017-mapl-dyna.pdf">
+                  Dyna: Toward a Self-Optimizing Declarative Language for Machine Learning Applications
+                </a>
+                <span class="pub-author">
+                  Tim Vieira,
+                  Matthew Francis-Landau,
+                  Nathaniel Wesley Filardo,
+                  Farzad Khorasani,
+                  Jason Eisner
+                </span>
+                <a class="pub-venue" href="https://sites.google.com/view/mapl2017/home">MAPL 2017</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra slides" href="https://timvieira.github.io/doc/2017-mapl-dyna-slides.pptx">slides</a>
+                <a class="extra video" href="https://www.youtube.com/watch?v=8ixPuuQVNh8">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://doi.org/10.1162/tacl_a_00060">
+                  Learning to Prune: Exploring the Frontier of Fast and Accurate Parsing
+                </a>
+                <span class="pub-author">
+                  Tim Vieira, Jason Eisner
+                </span>
+                <a class="pub-venue" href="http://transacl.org">TACL 2017</a>
+                (oral presentation at ACL 2017 🎤)
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="http://github.com/timvieira/learning-to-prune">code</a>
+                <a class="extra slides" href="https://timvieira.github.io/doc/2017-tacl-pruning-slides.pptx">slides</a>
+                <a class="extra video" href="https://vimeo.com/234953773">video</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/D16-1206/">
+                  Speed-Accuracy Tradeoffs in Tagging with Variable-Order CRFs and Structured Sparsity
+                </a>
+                <span class="pub-author">
+                  Tim Vieira*, Ryan Cotterell*, Jason Eisner
+                </span>
+                <a class="pub-venue" href="http://emnlp2016.net">EMNLP 2016</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="http://github.com/timvieira/vocrf">code</a>
+                <a class="extra poster" href="https://timvieira.github.io/doc/2016-emnlp-vocrf-poster.pdf">poster</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/D16-1177/">
+                  Universal Decompositional Semantics on Universal Dependencies
+                </a>
+                <span class="pub-author">
+                  Aaron Steven White,
+                  Drew Reisinger,
+                  Keisuke Sakaguchi,
+                  Tim Vieira,
+                  Sheng Zhang,
+                  Rachel Rudinger,
+                  Kyle Rawlins,
+                  Benjamin Van Durme
+                </span>
+                <a class="pub-venue" href="http://emnlp2016.net">EMNLP 2016</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="http://github.com/hltcoe/PredPatt">code</a>
+                <a class="extra" href="http://decomp.net/">website</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/N16-1080/">
+                  A Joint Model of Orthography and Morphological Segmentation
+                </a>
+                <span class="pub-author">
+                  Ryan Cotterell, Tim Vieira, Hinrich Schütze
+                </span>
+                <a class="pub-venue" href="http://naacl.org/naacl-hlt-2016/">NAACL 2016</a>
+                (Best short paper runner up! 🏆)
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="https://github.com/ryancotterell/treeseg">code</a>
+                <a class="extra slides" href="https://timvieira.github.io/doc/2016-naacl-orthomorphoseg-slides.pptx">slides</a>
+                <a class="extra data" href="http://ryancotterell.github.io/canonical-segmentation/">data</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="http://dx.doi.org/10.1162/tacl_a_00118">
+                  Reasoning about Quantities in Natural Language
+                </a>
+                <span class="pub-author">
+                  Subhro Roy, Tim Vieira, Dan Roth
+                </span>
+                <a class="pub-venue" href="http://transacl.org">TACL 2015</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="https://github.com/CogComp/cogcomp-nlp/tree/master/quantifier">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://aclanthology.org/C12-1122/">
+                  Grammarless Parsing for Joint Inference
+                </a>
+                <span class="pub-author">
+                  Jason Naradowsky, Tim Vieira, David A. Smith
+                </span>
+                <a class="pub-venue" href="http://aclweb.org/anthology/C/C12/">COLING 2012</a>
+              </div>
+              <div class="pub-extras">
+                <a class="extra code" href="http://github.com/narad/narad-bp">code</a>
+              </div>
+           </li>
+
+           <li style="">
+              <div class="pub">
+                <a class="pub-title" href="https://timvieira.github.io/doc/2009-tac-entailment.pdf">
+                  Relation Alignment for Textual Entailment Recognition
+                </a>
+                <span class="pub-author">
+                  Mark Sammons,
+                  V. G. Vinod Vydiswaran,
+                  Tim Vieira,
+                  Nikhil Johri,
+                  Ming-Wei Chang,
+                  Dan Goldwasser,
+                  Vivek Srikumar,
+                  Gourab Kundu,
+                  Yuancheng Tu,
+                  Kevin Small,
+                  Josh Rule,
+                  Quang Do,
+                  Dan Roth
+                </span>
+                <a class="pub-venue" href="https://tac.nist.gov/2009/">TAC 2009</a>
+              </div>
+              <div class="pub-extras">
+              </div>
+           </li>
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$(function() {
+  $('#lowrider-1').hover(function() {
+    $(this).attr('src', 'img/lowrider1.gif');
+  }, function() {
+    $(this).attr('src', 'img/fifth-avenue.jpg');
+  });
+});
+
+$(function() {
+  $('#snakeboard').hover(function() {
+    $(this).attr('src', 'img/table-bail.gif');
+    //$(this).attr('src', 'img/rail.gif');
+  }, function() {
+    $(this).attr('src', 'img/skate-and-break/bonertobs180.jpg');
+  });
+});
+
+$(function() {
+  $('#movement-div').hover(function() {
+    //$("#movement").attr('src', 'img/dyno.gif');
+    $("#movement").attr('src', 'img/double-kong.gif');
+  }, function() {
+    $("#movement").attr('src', 'img/climb-kneepit.png');
+  });
+});
+
+$(function() {
+  $('#derby-div').hover(function() {
+    $('#derby').attr('src', 'img/derby-pwnd.gif');
+  }, function() {
+    $('#derby').attr('src', 'img/rambo-v-cider.jpg');
+  });
+});
+
+$(function() {
+  $('#lowrider-2').hover(function() {
+    $(this).attr('src', 'img/spinnerz.gif');
+  }, function() {
+    $(this).attr('src', 'img/rimz0rz.jpg');
+  });
+});
+
+function preload(imgs) {
+  return $(imgs).each(function(){
+    var img = new Image();
+    img.src = this;
+  });
+}
+
+preload([
+    'img/derby-pwnd.gif',
+    'img/double-kong.gif',
+    'img/rail.gif',
+    'img/dyno.gif',
+    'img/table-bail.gif',
+    'img/lowrider1.gif',
+    'img/spinnerz.gif',
+]);
+
+</script>
+
+
+  </body>
+</html>

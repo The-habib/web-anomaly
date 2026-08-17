@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mercurial SCM</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/hg-custom.css?v=70b71731" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=c662edbd"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script src="_static/version-icon.js?v=d72dac06"></script>
+    <link rel="icon" href="_static/logo-droplets.svg"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About" href="about.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>   
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo-square-light.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="_static/logo-square-dark.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Guide</a></li>
+
+<li class="toctree-l1"><a class="reference external" href="https://wiki.mercurial-scm.org/UsingExtensions">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="relnotes.html">Release Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/7.2.html">Mercurial 7.2 (2026-01-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/7.1.html">Mercurial 7.1 (2025-08-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/7.0.html">Mercurial 7.0 (2025-03-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.9.html">Mercurial 6.9 (2024-11-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.8.html">Mercurial 6.8 (2024-07-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.7.html">Mercurial 6.7 (2024-03-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.6.html">Mercurial 6.6 (2023-11-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.5.html">Mercurial 6.5 (2023-07-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.4.html">Mercurial 6.4 (2023-03-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.3.html">Mercurial 6.3 (2022-11-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.2.html">Mercurial 6.2 (2022-07-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.1.html">Mercurial 6.1 (2022-02-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/6.0.html">Mercurial 6.0 (2021-11-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.9.html">Mercurial 5.9 (2021-08-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.8.html">Mercurial 5.8 (2021-05-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.7.html">Mercurial 5.7 (2021-01-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.6.html">Mercurial 5.6 (2020-10-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.5.html">Mercurial 5.5 (2020-08-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.4.html">Mercurial 5.4 (2020-04-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.3.html">Mercurial 5.3 (2020-01-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.2.html">Mercurial 5.2 (2019-11-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.1.html">Mercurial 5.1 (2019-07-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/5.0.html">Mercurial 5.0 (2019-04-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.9.html">Mercurial 4.9 (2019-01-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.8.html">Mercurial 4.8 (2018-10-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.7.html">Mercurial 4.7 (2018-08-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.6.html">Mercurial 4.6 (2017-11-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.5.html">Mercurial 4.5 (2018-02-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.4.html">Mercurial 4.4 (2017-11-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.3.html">Mercurial 4.3 (2017-08-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.2.html">Mercurial 4.2 (2017-05-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.1.html">Mercurial 4.1 (2017-02-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/4.0.html">Mercurial 4.0 (2016-11-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/3.9.html">Mercurial 3.9 (2016-08-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/3.8.html">Mercurial 3.8 (2016-04-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/3.7.html">Mercurial 3.7 (2016-02-01)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="contribute.html">Contribute</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute-website.html">Contribute to hg-website</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">hg help</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="help/commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help/topics.html">Additional topics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">More</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="steering-committee.html">Steering Committee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute-website.html">Contribute to hg-website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://foss.heptapod.net/mercurial/hg-website" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-gitlab"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mercurial SCM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="mercurial-scm">
+<h1 class="sd-d-none">Mercurial SCM<a class="headerlink" href="#mercurial-scm" title="Link to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mt-1 sd-mb-2 sd-ml-1 sd-mr-2 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-4 sd-g-md-4 sd-g-lg-4 sd-flex-row-reverse docutils">
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<a class="sd-m-auto reference internal image-reference" href="_images/logo-hg.svg"><img alt="_images/logo-hg.svg" class="sd-m-auto" src="_images/logo-hg.svg" style="width: 150px;" />
+</a>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 sd-align-major-justify sd-fs-5 docutils">
+<p class="rubric">Work easier, Work faster</p>
+<p>Mercurial is a free, distributed source control management tool. It efficiently handles
+projects of any size and offers an easy and intuitive interface.</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="rubric" id="quick-start">Quick Start</p>
+<p><em>Clone a project and push changes</em></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>hg<span class="w"> </span>clone<span class="w"> </span>https://www.mercurial-scm.org/repo/hello
+<span class="nb">cd</span><span class="w"> </span>hello
+<span class="c1"># (edit files)</span>
+hg<span class="w"> </span>add<span class="w"> </span><span class="o">(</span>new<span class="w"> </span>files<span class="o">)</span>
+hg<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;My changes&#39;</span>
+hg<span class="w"> </span>push
+</pre></div>
+</div>
+<p><em>Create a project and commit</em></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>hg<span class="w"> </span>init<span class="w"> </span><span class="o">(</span>project-directory<span class="o">)</span>
+<span class="nb">cd</span><span class="w"> </span><span class="o">(</span>project-directory<span class="o">)</span>
+<span class="c1"># (add some files)</span>
+hg<span class="w"> </span>add
+hg<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;Initial commit&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p class="rubric">How you can benefit from Mercurial</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+It is <a class="reference internal" href="about.html"><span class="std std-doc">fast and powerful</span></a></div>
+<p class="sd-card-text">Mercurial efficiently handles <a class="reference internal" href="who.html"><span class="std std-doc">projects of any size and kind</span></a>. Every clone
+contains the whole project history, so most actions are local, fast and convenient.
+Mercurial supports a multitude of
+<a class="reference external" href="https://www.mercurial-scm.org/wiki/WorkingPractices">workflows</a> and you can easily
+enhance its functionality with <a class="reference external" href="https://www.mercurial-scm.org/wiki/UsingExtensions">extensions</a>.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference internal" href="about.html"><span class="std std-doc">Learn more »</span></a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+It is <a class="reference internal" href="learn.html"><span class="std std-doc">easy to learn</span></a></div>
+<p class="sd-card-text">You can follow our simple <a class="reference internal" href="guide.html"><span class="std std-doc">guide</span></a> to learn how to revision your documents
+with Mercurial, or just use the <a class="reference internal" href="quickstart.html"><span class="std std-doc">quick start</span></a> to get going instantly.
+A short overview of Mercurial’s decentralized model is also
+<a class="reference external" href="https://www.mercurial-scm.org/wiki/UnderstandingMercurial">available</a>.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference internal" href="learn.html"><span class="std std-doc">Learn more »</span></a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+And it just works</div>
+<p class="sd-card-text">Mercurial strives to deliver on each of its promises. Most tasks simply work on the
+first try and without requiring arcane knowledge.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference internal" href="guide.html"><span class="std std-doc">Learn more »</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+<div class="section ablog__blog_comments">
+   
+</div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="about.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">About</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mercurial developers
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Mercurial developers.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

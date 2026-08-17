@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>
+		Space Jam: A New Legacy | Official Site	</title>
+	<link rel="shortcut icon" type="image/png" href="https://www.spacejam.com/images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<meta name="title" content="Space Jam: A New Legacy | Official Site">
+	<meta name="description" content="Space Jam: A New Legacy">
+	<meta name="keywords" content="Space Jam: A New Legacy, SJANL, LeBron James, Bugs Bunny, Daffy Duck, Elmer Fudd, Porky Pig, Sylvester, Tweety, animation, movie, family, Warner bros, wb, official trailer, trailer">
+	<meta property="og:url" content="https://www.spacejam.com/">
+	<meta property="og:title" content="Space Jam: A New Legacy | Official Site">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Space Jam: A New Legacy | Official Site">
+	<meta property="og:description" content="Space Jam: A New Legacy">
+	<meta property="og:image" content="https://www.spacejam.com/images/share.jpg">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@warnerbros">
+	<meta name="twitter:creator" content="@warnerbros">
+	<meta name="twitter:title" content="Space Jam: A New Legacy | Official Site">
+	<meta name="twitter:description" content="Space Jam: A New Legacy">
+	<meta name="twitter:image" content="https://www.spacejam.com/images/share.jpg">
+	<meta name="twitter:url" content="https://www.spacejam.com/">
+
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+		<div class="rg-image-wrapper">
+			{{if itemsCount > 1}}
+			<div class="rg-image-nav">
+				<a href="#" class="rg-image-nav-prev">Previous Image</a>
+				<a href="#" class="rg-image-nav-next">Next Image</a>
+			</div>
+			{{/if}}
+			<div class="rg-image"></div>
+			<div class="rg-loading"></div>
+		</div>
+
+	</script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	<!--[if lte IE 8]>
+
+	<link rel="stylesheet" type="text/css" href="css/ie8-style.css" />
+    	
+	<![endif]-->
+
+	<!--[if lte IE 9]>
+
+	<link rel="stylesheet" type="text/css" href="css/ie8-style.css" />
+    	
+	<![endif]-->
+
+
+	<script src="js/jquery-3.4.1.js"></script>
+
+	<script>		
+
+function crawlerDetect(userAgent) {
+  const crawlers = {
+    'Google': 'Google'
+  };
+ 
+  const crawlerAgents = Object.values(crawlers).join('|');
+  const regex = new RegExp(crawlerAgents, 'i'); // 'i' for case-insensitive match
+ 
+  return regex.test(userAgent);
+}
+ 
+// Example usage (in a browser environment):
+const userAgent = navigator.userAgent;
+const isCrawler = crawlerDetect(userAgent);
+
+
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		  let data = JSON.parse(xhttp.responseText);
+		  let country_value = data.CountryIsoCode.toLowerCase();
+		  if(country_value !== "" || country_value !== undefined){
+			console.log(country_value);
+			let track_value = '';
+			if(track_value.indexOf('?country=') == -1){
+
+			if (country_value === 'us' || country_value === 'in' || country_value === 'ch' || isCrawler ) {				
+				
+				return;
+			} else if (country_value !== 'us' || country_value !== 'in' || country_value !== 'ch' || !isCrawler) {				
+
+			const middleEast = ['lb', 'ae', 'sa', 'qa', 'kw', 'om', 'bh', 'jo'];
+			if (middleEast.includes(country_value)) {
+				country_value = 'me';
+			}
+			  switch(country_value.toLowerCase()){		
+				case 'gb':
+					window.location = 'https://www.warnerbros.co.uk/movies/space-jam-new-legacy';
+					break;
+				
+				
+				default:
+					window.location = 'https://www.spacejamanewlegacy.net/';
+					break;
+			  }
+			}
+		}
+		  }
+		 
+		}
+	};
+	xhttp.open("GET", "https://d2nmfu57zhrblt.cloudfront.net", true);
+	xhttp.send();
+</script>		 
+
+
+
+	<!-- OneTrust Prod Script -->
+       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="f3f4db7f-8c17-460b-ae85-a2a518c10380-test" ></script>
+	
+	<!-- Prism Script -->
+		<!--Prod Tracking -->
+	<script async src="https://lightning.spacejam.com/cdp/psm/brands/spacejam/web/release/psm.min.js"></script>
+	
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N78PCMF');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body style="font-family:DIN Next W05;">
+
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N78PCMF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<!-- IE OLD BROWSER -->
+	<div id="olderbrowser" class="outdated" style="background:#000000">
+		<div class="ie-quote">
+			<img src="images/tt_small.png" class="img-responsive center-block" alt="Space Jam: A New Legacy"/>
+			<p style="font-size:15px; color:#FFFFFF">
+				Looks like you are using an unsupported browser.<br/>To get the most out of this experience please upgrade to the latest version of<br/>Internet Explorer.			</p>
+		</div>
+	</div>
+	<!-- //IE OLD BROWSER -->
+
+	<div id="wrapper" style="display:none;">
+
+		<!-- HEADER -->
+		<header class="header">
+			<div id="navIcon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav class="nav-container">
+				<ul class="nav-ul"></ul>
+			</nav>
+		</header>
+		<!-- //HEADER -->
+
+
+		<!-- BACKGROUND VIDEO -->
+		<div class="siteBackground"></div>
+		<!-- BACKGROUND VIDEO -->
+
+		<!-- //TABS -->
+		<div class="tab-content">
+
+			<!-- HOME SECTION -->
+			<div id="home" class="tab-pane active">
+				<div id="homeDesktop" class="home-centered">
+               		<!--<div class="mask-img"><a href="javascript:void(0);" data-link="http://www.spacejam.com/2021" class="external-link"><img src="images/mask.png" class="" alt=""/></a></div>-->
+					<div class="home-content-top animated fadeInDown hidden">
+						<img src="images/names.png" class="img-responsive center-block movie-cast" alt="Space Jam: A New Legacy"/>
+					</div>
+					<div class="home-content-middle">
+						<h1 class="hidden"><img src="images/tt.png" class="img-responsive center-block movie-tt animated zoomIn" alt="Space Jam: A New Legacy"></h1>
+						<div class="spacejam-retro">
+							<div class="retro-links retro-link-left">
+								<a href="javascript:void(0);" data-link="https://www.spacejam.com/1996/" class="external-link">
+									<img src="images/p-jamlogo.gif" class="img-responsive retro-link-img" alt="Space Jam"/>
+									<div class="retro-link-text">
+										<span class="retro-year">1996</span>
+										<span class="retro-text">SITE</span>
+									</div>
+								</a>
+							</div>
+							<div class="retro-links retro-link-right">
+								<a href="javascript:void(0);" data-link="https://www.spacejam.com/2021/" class="external-link">
+									<img src="images/spacejam.png" class="img-responsive retro-link-img" alt="Space Jam"/>
+									<div class="retro-link-text">
+										<span class="retro-year">2021</span>
+										<span class="retro-text">SITE</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="home-content-bottom">
+						<img src="images/date.png" class="img-responsive center-block animated zoomIn movie-date" alt="Space Jam: A New Legacy">
+						<!--<div class="cta-wrapper animated fadeInUp">
+							<div class="cta-btn">
+								<div class="save-btn-wrapper">
+									<div class="cta-save-btn">SAVE TO CALENDER</div>
+									<div class="cal_container">
+										<div style="border-right: 1px solid white;"><a href="" target="_blank" id="google_calendar" class="googleCalendarTrack" title="Google Calender"><img src="images/icons/google_cal.png" class="img-responsive" alt="google calendar" /></a>
+										</div>
+										<div style="border-right: 1px solid white;"><a href="" download id="ios_calendar" class="iosCalendarTrack" title="Apple Calender"><img src="images/icons/ical.png" class="img-responsive" alt="ios calendar" /></a>
+										</div>
+										<div id="outlookDiv"><a href="" id="outlook_calendar" class="outlookCalendarTrack" title="Microsoft Outlook"><img src="images/icons/outlook_cal.png" alt="outlook calendar" class="img-responsive" /></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cta-btn">
+								<div class="cta-btn-link syca_triggerToTickets">GET TICKETS</div>
+							</div>
+						</div>
+						<div class="socialFollow">
+							<div><a href="https://www.facebook.com/" target="_blank" class="socialFollowLink"><img src="images/icons/fb.png" class="img-responsive" alt="Facebook" /></a>
+							</div>
+							<div><a href="https://twitter.com/" target="_blank" class="socialFollowLink"><img src="images/icons/tw.png" class="img-responsive" alt="Twitter" /></a>
+							</div>
+							<div><a href="https://www.instagram.com/" target="_blank" class="socialFollowLink"><img src="images/icons/insta.png" class="img-responsive" alt="Instagram" /></a>
+							</div>
+						</div>-->
+					</div>
+				</div>
+
+				<div id="homeMobile" class="home-centered">
+					<div class="home-content-top animated fadeInDown hidden">
+						<img src="images/names.png" class="img-responsive center-block movie-cast" alt="Space Jam: A New Legacy"/>
+					</div>
+					<div class="home-content-middle">
+						<img src="images/tt_portrait.png" class="img-responsive center-block movie-tt" alt="Space Jam: A New Legacy">
+					</div>
+					<div class="home-content-bottom animated fadeInUp hidden">
+						<img src="images/date.png" class="img-responsive center-block movie-date" alt="Space Jam: A New Legacy">
+						<div class="spacejam-retro">
+							<div class="retro-links retro-link-left">
+								<a href="javascript:void(0);" data-link="https://www.spacejam.com/1996/" class="external-link">
+									<img src="images/p-jamlogo.gif" class="img-responsive retro-link-img" alt="Space Jam"/>
+									<div class="retro-link-text">
+										<span class="retro-year">1996</span>
+										<span class="retro-text">SITE</span>
+									</div>
+								</a>
+							</div>
+							<div class="retro-links retro-link-right">
+								<a href="javascript:void(0);" data-link="https://www.spacejam.com/2021/" class="external-link">
+									<img src="images/spacejam.png" class="img-responsive retro-link-img" alt="Space Jam"/>
+									<div class="retro-link-text">
+										<span class="retro-year">2021</span>
+										<span class="retro-text">SITE</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- <div class="hbo-tout-mobile">
+							<a href="javascript:void(0);" data-link="https://www.hbomax.com/geo-availability?utm_medium=Partner&utm_source=Partner%20Owned&utm_campaign=Same%20Day%20Premieres&utm_id=CPM-63OOXDXM6M" class="external-link"><img src="images/hbomax_tout.png" class="img-responsive" alt="HBO Max"/></a>
+							<div><a href="javascript:void(0);" data-link="https://gettickets.spacejam.com/" class="external-link"><img src="images/tickets_tout.png" class="img-responsive" alt="Get Tickets"/></a></div>
+							<div class="spacejam-logos">
+								<p>ENTER THE SITES: </p>
+								<a href="javascript:void(0);" data-link="https://www.spacejam.com/1996/" class="external-link"><img src="images/p-jamlogo.gif" class="img-responsive" alt="Space Jam"/></a>
+								<a href="javascript:void(0);" data-link="https://www.spacejam.com/2021/" class="external-link"><img src="images/spacejam.png" class="img-responsive" alt="Space Jam"/></a>
+							</div>
+                    	</div> -->
+
+						<!--<div class="tout-container tout-mobile"><a href="#" target="_blank" class="hboMax-tout"><img src="images/hbomax_tout.png" class="img-responsive" alt="HBOMax Tout"></a></div>-->
+
+						<!--<div class="cta-wrapper animated fadeInUp">
+							<div class="cta-btn">
+								<div class="save-btn-wrapper">
+									<div class="cta-save-btn">SAVE TO CALENDER</div>
+									<div class="cal_container">
+										<div style="border-right: 1px solid white;"><a href="" target="_blank" id="google_calendar" class="googleCalendarTrack" title="Google Calender"><img src="images/icons/google_cal.png" class="img-responsive" alt="google calendar" /></a>
+										</div>
+										<div style="border-right: 1px solid white;"><a href="" download id="ios_calendar" class="iosCalendarTrack" title="Apple Calender"><img src="images/icons/ical.png" class="img-responsive" alt="ios calendar" /></a>
+										</div>
+										<div id="outlookDiv"><a href="" id="outlook_calendar" class="outlookCalendarTrack" title="Microsoft Outlook"><img src="images/icons/outlook_cal.png" alt="outlook calendar" class="img-responsive" /></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cta-btn">
+								<div class="cta-btn-link syca_triggerToTickets">GET TICKETS</div>
+							</div>
+						</div>
+						<div class="socialFollow">
+							<div><a href="https://www.facebook.com/" target="_blank" class="socialFollowLink"><img src="images/icons/fb.png" class="img-responsive" alt="Facebook" /></a>
+							</div>
+							<div><a href="https://twitter.com/" target="_blank" class="socialFollowLink"><img src="images/icons/tw.png" class="img-responsive" alt="Twitter" /></a>
+							</div>
+							<div><a href="https://www.instagram.com/" target="_blank" class="socialFollowLink"><img src="images/icons/insta.png" class="img-responsive" alt="Instagram" /></a>
+							</div>
+						</div>-->
+					</div>
+                     <!-- <div class="mask-img"><a href="javascript:void(0);" data-link="http://www.spacejam.com/2021" class="external-link"><img src="images/mask.png" class="" alt=""/></a></div>-->
+				</div>
+                
+                
+                <!--<div class="tout_wrapper">
+					<div class="hbo-tout">
+						<a href="javascript:void(0);" data-link="https://www.hbomax.com/geo-availability?utm_medium=Partner&utm_source=Partner%20Owned&utm_campaign=Same%20Day%20Premieres&utm_id=CPM-63OOXDXM6M" class="external-link"><img src="images/hbomax_tout.png" class="img-responsive" alt="HBO Max"/></a>
+						<a href="javascript:void(0);" data-link="https://gettickets.spacejam.com/" class="external-link get_tickets"><img src="images/tickets_tout.png" class="img-responsive" alt="Get Tickets"/></a>
+					</div>
+					<div class="spacejam-logos">
+                        <p>ENTER THE SITES: </p>
+                        <a href="javascript:void(0);" data-link="https://www.spacejam.com/1996/" class="external-link"><img src="images/p-jamlogo.gif" class="img-responsive" alt="Space Jam"/></a>
+                        <a href="javascript:void(0);" data-link="https://www.spacejam.com/2021/" class="external-link"><img src="images/spacejam.png" class="img-responsive" alt="Space Jam"/></a>
+					</div>
+				</div>-->
+			</div>
+			<!-- //HOME SECTION -->
+
+			<!-- TRAILER SECTION -->
+			<div id="trailer" class="tab-pane">
+				<div class="dark-background"></div>
+				<div class="trailer-wrap">
+					<div id="trailerVid"></div>
+					<div id="trailerVidDefault" style="display: none">
+						<video src="" poster="" autoplay controls controlslist="nodownload" preload="auto" id="htmlPlayer"></video>
+					</div>
+				</div>
+				<div class="trailer-toggle open">
+					<span></span>
+				</div>
+				<div id="trailerNav" style="transform: translateX(0px);"></div>
+				<div id="trailer-buttons">
+					<div class="back" id="trailer-back" style="opacity: 0; pointer-events: none;">
+						<img src="images/icons/left-arrow-thumb.png" alt="Previous"/> </div>
+					<div class="forward" id="trailer-forward" style="opacity: 0; pointer-events: none;">
+						<img src="images/icons/right-arrow-thumb.png" alt="Next"> </div>
+				</div>
+			</div>
+			<!-- //TRAILER SECTION -->
+
+			<!-- GALLERY SECTION -->
+			<div id="gallery" class="tab-pane">
+				<div class="dark-background"></div>
+				<div class="gallery_content">
+					<div id="rg-gallery" class="rg-gallery">
+						<div class="rg-thumbs">
+							<!-- Elastislide Carousel Thumbnail Viewer -->
+							<div class="es-carousel-wrapper">
+								<div class="es-carousel" style="display:none;">
+									<ul>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img8.png" data-large="images/gallery/img8.jpg" alt="Gallery JPG Image 8"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img1.png" data-large="images/gallery/img1.jpg" alt="Gallery JPG Image 1"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img2.png" data-large="images/gallery/img2.jpg" alt="Gallery JPG Image 2"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img3.png" data-large="images/gallery/img3.jpg" alt="Gallery JPG Image 3"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img4.png" data-large="images/gallery/img4.jpg" alt="Gallery JPG Image 4"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img5.png" data-large="images/gallery/img5.jpg" alt="Gallery JPG Image 5"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img6.png" data-large="images/gallery/img6.jpg" alt="Gallery JPG Image 6"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img7.png" data-large="images/gallery/img7.jpg" alt="Gallery JPG Image 7"
+												/></a>
+										</li>
+																				<li><a href="#"><img src="images/gallery/thumbs/thumb-img9.png" data-large="images/gallery/img9.jpg" alt="Gallery JPG Image 9"
+												/></a>
+										</li>
+																			</ul>
+								</div>
+							</div>
+							<!-- End Elastislide Carousel Thumbnail Viewer -->
+						</div>
+						<!-- rg-thumbs -->
+					</div>
+				</div>
+			</div>
+			<!-- //GALLERY SECTION -->
+
+			<!-- SYNOPSIS SECTION -->
+			<div id="synopsis" class="tab-pane">
+				<div class="dark-background"></div>
+				<div class="container">
+					<div class="row">
+						<div class="synopsis_content">
+							<h2 class="movie-title"></h2>
+							<h2 class="movie-title-img"><img src="images/tt_small.png" class="img-responsive center-block" alt="Space Jam: A New Legacy" /></h2>
+							<div class="left-content">
+								<div class="movie-story" style="font-size:17px;">
+									<p>Welcome to the Jam! Basketball champion and global icon LeBron James goes on an epic adventure alongside timeless Tune Bugs Bunny with the animated/live-action event “Space Jam: A New Legacy,” from director Malcolm D. Lee and an innovative filmmaking team including Ryan Coogler and Maverick Carter. This transformational journey is a manic mashup of two worlds that reveals just how far some parents will go to connect with their kids. When LeBron and his young son Dom are trapped in a digital space by a rogue A.I., LeBron must get them home safe by leading Bugs, Lola Bunny and the whole gang of notoriously undisciplined Looney Tunes to victory over the A.I.’s digitized champions on the court: a powered-up roster of professional basketball stars as you’ve never seen them before. It’s Tunes versus Goons in the highest-stakes challenge of his life, that will redefine LeBron’s bond with his son and shine a light on the power of being yourself. The ready-for-action Tunes destroy convention, supercharge their unique talents and surprise even “King” James by playing the game their own way.</p><p>James stars alongside Oscar nominee Don Cheadle (the “Avengers” films, “Hotel Rwanda”), Khris Davis (“Judas and the Black Messiah,” TV’s “Atlanta”), Sonequa Martin-Green (TV’s “The Walking Dead,” “Star Trek: Discovery”), newcomer Cedric Joe, Jeff Bergman (“Looney Tunes Cartoons”), Eric Bauza (“Looney Tunes Cartoons”), and Zendaya (upcoming “Dune,” “Malcolm & Marie”).</p><p>Lee (“Girls Trip,” “Night School”) directs from a screenplay by Juel Taylor & Tony Rettenmaier & Keenan Coogler & Terence Nance and Jesse Gordon and Celeste Ballard, story by Juel Taylor & Tony Rettenmaier & Keenan Coogler & Terence Nance and Terence Nance. Based on “Space Jam,” written by Leo Benvenuti & Steve Rudnick and Timothy Harris & Herschel Weingrod. The film’s producers are Ryan Coogler, LeBron James, Maverick Carter and Duncan Henderson, and the executive producers are Sev Ohanian, Zinzi Coogler, Allison Abbate, Jesse Ehrman, Jamal Henderson, Spencer Beighley, Justin Lin, Terence Nance and Ivan Reitman.</p><p>The director’s behind-the-scenes creative team includes director of photography Salvatore Totino (“Spider-Man: Homecoming”), animation producer Troy Nethercott (“Wonder Park”), production designers Kevin Ishioka (“The Mule”), Akin McKenzie (Netflix’s “When They See Us”) and Clint Wallace (upcoming “Eternals”), editor Bob Ducsay (“Godzilla: King of the Monsters,” “Star Wars Episode VIII – The Last Jedi”) and costume designer Melissa Bruning (“Rampage,” “War for the Planet of the Apes”). The music is by Kris Bowers (“Greenbook,” Netflix’s “Bridgerton”).</p><p>Warner Bros. Pictures Presents a Proximity/The SpringHill Company Production, a Malcolm D. Lee Film, “Space Jam: A New Legacy.” The film will be distributed worldwide by Warner Bros. Pictures. It will be released in theaters nationwide on July 16, 2021.</p>								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //SYNOPSIS SECTION -->
+
+			<!-- SHOP SECTION -->
+			<div id="shop" class="tab-pane">
+				<div class="container">
+					<div class="row">
+						<div class="hidden-lg hidden-md hidden-sm col-xs-1"></div>
+						<div class="shop_content col-lg-12 col-md-12 col-sm-12 col-xs-10">
+							<h2 class="movie-title"></h2>
+							<h3 class="text-center tagline-shop"></h3>
+						</div>
+						<div class="hidden-lg hidden-md hidden-sm col-xs-1"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //SHOP SECTION -->
+
+			<!-- PARTNERS SECTION -->
+			<div id="partners" class="tab-pane">
+				<div class="container">
+					<div class="row">
+						<div class="hidden-lg hidden-md hidden-sm col-xs-1"></div>
+						<div class="section-container col-lg-12 col-md-12 col-sm-12 col-xs-10 ">
+							<h2></h2>
+							<div class="row"></div>
+						</div>
+						<div class="hidden-lg hidden-md hidden-sm col-xs-1"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //PARTNERS SECTION -->
+
+			<!-- GAMES SECTION -->
+			<div id="games" class="tab-pane">
+				<div class="container">
+					<div class="row">
+						<div class="hidden-lg hidden-md hidden-sm col-xs-1"></div>
+						<div class="section-container col-lg-12 col-md-12 col-sm-12 col-xs-10 ">
+							<h2></h2>
+							<div class="row"></div>
+						</div>
+						<div class="hidden-lg hidden-md hidden-sm col-xs-1"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //GAMES SECTION -->
+
+			<!-- TICKET SECTION -->
+			<div id="tickets" class="tab-pane">
+				<div class="dark-background"></div>
+				<div class="syca_mtsContainer">
+
+					<div class="syca_permissionBox">
+						<div class="syca_permissionBoxContents">
+							<div class="syca_permissionBoxClose">
+								<img src="assets/images/close-button.png" class="permissionBoxCloseImgIcon">
+							</div>
+							<div class="syca_displayDirURLDIv">
+								<p class="syca_permissionBoxContentsMsg syca_googleMapPopupText"></p>
+								<div class="syca_permissionBoxContentsBtn">
+									<a id="syca_setDirURL" target="_blank"></a>
+								</div>
+							</div>
+							<div class="syca_displayTktURLDIv">
+								<p class="syca_permissionBoxContentsMsg syca_vendorPopupText"></p>
+								<div class="syca_permissionBoxContentsBtn">
+									<a id="syca_setMovTktURL" target="_blank"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="syca_mtsDetailsPanel">
+						<div id="syca_topStickyBar">
+							<img src="assets/images/syca_goToTop.png">
+						</div>
+						<div id="syca_mtsDetailsPanelForScroll" class="syca_mtsDetailsPanelForScrollMob" onscroll="scollPos();">
+							<div class="syca_movieBannerWrapperForMobile"></div>
+							<div class="syca_movieBannerWrapperForMobileTablet"></div>
+
+							<!-- <div class="syca_movieLogo"></div> -->
+							<div class="syca_mtsDetailsPanelScrollOuterDiv">
+								<div class="syca_mtsDetailsPanelScrollDiv">
+									<div class="syca_topFilterPanel">
+										<div class="syca_searchTextBoxAndDateWrapper">
+											<p class="syca_topFilterTitle"></p>
+											<div class="syca_topAutoCompleteFilter">
+												<input id="syca_topAutocompleteFilterInput" type="text" spellcheck="false" autocomplete="off">
+												<span class="syca_topAutoCompleteFilterIconWrapper"></span>
+											</div>
+											<p class="syca_dateSelectTitle"></p>
+											<div class="syca_datePanel">
+												<div class="syca_datePanelArrow syca_datePanelArrowLeft">
+													<button id="syca_datePanelArrowLeftBtn" class="syca_datePanelArrowBtn" style="display: none;"></button>
+												</div>
+												<div class="syca_dateBoxContainer">
+													<div id="syca_dateBoxSlider" class="syca_dateBoxSlider">
+													</div>
+												</div>
+												<div class="syca_datePanelArrow syca_datePanelArrowRight">
+													<button id="syca_datePanelArrowRightBtn" class="syca_datePanelArrowBtn" style="display: block;"></button>
+												</div>
+											</div>
+										</div>
+										<div class="syca_formateAndTimeFilterWrapper">
+											<div class="syca_topDropdownFilter">
+												<p class="syca_formatFilterTitle"></p>
+												<div class="syca_topFilterFormatWise">
+													<!-- <select id="syca_formatFilter" onchange="changeFormateScreenData(this.value)"></select> -->
+													<ul id="syca_formatFilter">
+													</ul>
+												</div>
+												<div class="syca_clearBoth"></div>
+												<p class="syca_timingFilterTitle"></p>
+												<div class="syca_topFilterTimingWise">
+													<!-- <select id="syca_timingFilter" onchange="changeTimeScreenData(this.value)"></select> -->
+													<ul id="syca_timingFilter">
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="syca_clearBoth"></div>
+									</div>
+									<div class="syca_clearBoth"></div>
+									<div class="syca_mtsLoader" id="syca_mtsLoader">
+										<div></div>
+										<div></div>
+									</div>
+									<div class="syca_movieInformation"></div>
+									<div class="syca_noDataOnFilter"></div>
+									<div class="syca_clearBoth"></div>
+									<div class="syca_theaterDetailsContainer">
+										<div id="syca_theaterDetailsAccordian" class="syca_theaterDetailsAccordian">
+											<div id="syca_theaterDetailsAccordianInnerContent">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="syca_moreShowtimesBottom">
+									<h3 class="syca_moreMovieShowTimes"></h3>
+									<div id="syca_moreMovieShowsMain">
+										<ul id="syca_moreMovieShowsList">
+										</ul>
+										<div class="syca_clearBoth"></div>
+										<div class="syca_loadMoreOuter">
+											<div id="loadMore" class="hvr-shutter-out-verticalMoreCity"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="syca_mapLocationPanel">
+						<div class="syca_ticketingBannerPopUpContainer">
+							<img src="assets/images/logoOnMap.png" class="syca_ticketingBannerPopMapImg">
+							<img src="assets/images/markerOnBanner.png" class="syca_ticketingBannerPopBannerImg syca_mapHiddenForAll">
+						</div>
+						<div class="syca_movieBannerWrapper">
+							<img src="assets/images/fullbanner.jpg">
+						</div>
+						<div class="syca_movieBannerWrapperWithMap">
+
+						</div>
+						<div class="syca_mapWrapper">
+							<div class="syca_mapCloseOnlyForMbile">
+								<img src="assets/images/close-button.png" class="mapCloseImgIcon">
+							</div>
+							<div class="syca_MapLoaderOuter">
+								<div class="syca_MapLoader">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="syca_DirectionErrorMsg">
+								<div class="syca_DirectionErrorMsgDis"></div>
+								<img src="assets/images/close-button.png" class="errorCloseImgIcon">
+							</div>
+							<div class="syca_SameNodesDirectionErrorMsg">
+								<div class="syca_SameNodesDirectionErrorMsgDis"></div>
+								<img src="assets/images/close-button.png" class="errorCloseImgIcon">
+							</div>
+							<div class="mapDirectionOption">
+								<div class="directionContainer">
+									<div class="mapDirectionOptionSelect" id="getDrivingDir">
+										<img src="assets/images/syca_car.png">
+									</div>
+									<div class="mapDirectionOptionSelect" id="getTrainDir">
+										<img src="assets/images/syca_train.png">
+									</div>
+									<div class="mapDirectionOptionSelect" id="getWalkingDir">
+										<img src="assets/images/syca_walking.png">
+									</div>
+								</div>
+								<div class="clickForDirection">
+								</div>
+							</div>
+							<div id="map-canvas"></div>
+						</div>
+					</div>
+					<div class="syca_clearBoth"></div>
+				</div>
+			</div>
+			<!-- //TICKET SECTION -->
+		</div>
+		<!-- //TABS -->
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer-default hidden">
+				<div class="main-footer">
+					<div class="footer-links">
+						<a id="btnShareMobile" class="share-btn-mobile"></a>
+						<a id="btnCredits"></a>
+						<a id="btnShare" class="share-btn"></a>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="copyright">
+					<p></p>
+				</div>
+				<div id="containerShare">
+					<div id="closeShare">
+						<span></span>
+						<span></span>
+					</div>
+					<p></p>
+				</div>
+			</div>
+
+			<!--Footer Default-->
+			<div class="footer-centered">
+				<div class="legal-logos">
+					<img src="images/legal/legal-left.png" alt="Legals">
+					<img src="images/legal/legal-right.png" alt="Legals">
+				</div>
+				<ul class="footer-links"><li id="btnCreditsCenter"></li>
+				</ul>
+				<div class="copyright">
+					<p></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!--Footer Center-->
+		</footer>
+		<!-- //FOOTER -->
+
+		<div id="containerCredits">
+			<div id="closeCredits">
+				<span></span>
+				<span></span>
+			</div>
+						<div class="billing-container">
+				<img src="images/legal/billingblock.png" class="img-responsive center-block" alt="Billing-block"> </div>
+						<div class="footer-links"></div>
+			<div class="copyright">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<!-- //WRAPPER -->
+
+	<!-- PARTNERS MODAL -->
+	<div id="partner-1" class="modal" role="dialog" style="display: none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+					<div class="section-overlay-container"><a class="section-close" data-dismiss="modal"><img src="images/icons/cancel.png" alt="Close"> </a>
+						<div class="section-overlay-box">
+							<img src="images/partners/partner1.jpg" class="img-responsive center-block" alt="Partner">
+						</div>
+						<p></p>
+						<a class="overlay-visit-btn" href="" target="_blank"></a>
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //PARTNERS MODAL -->
+
+	<!-- TRAILER MODAL -->
+	<div id="trailer-overlay" class="modal" role="dialog" style="display: none;" data-backdrop="static" data-keyboard="false">
+		<div id="trailer-close" data-dismiss="modal">
+			<span></span>
+			<span></span>
+		</div>
+		<div class="outer">
+			<div class="middle">
+				<div id="videoPlayer"> </div>
+				<div class="introTrailer-cta">
+					<img src="images/tt_small.png" class="img-responsive center-block movie-title animated fadeInUp" alt="Space Jam: A New Legacy">
+					<!--<div class="cta-wrapper animated fadeInUp">
+						<div class="cta-btn">
+							<div class="save-btn-wrapper">
+								<div class="cta-save-btn">SAVE TO CALENDER</div>
+								<div class="cal_container">
+									<div style="border-right: 1px solid white;"><a href="" target="_blank" id="google_calendar" class="googleCalendarTrack" title="Google Calender"><img src="images/icons/google_cal.png" class="img-responsive" alt="google calendar" /></a>
+									</div>
+									<div style="border-right: 1px solid white;"><a href="" download id="ios_calendar" class="iosCalendarTrack" title="Apple Calender"><img src="images/icons/ical.png" class="img-responsive" alt="ios calendar" /></a>
+									</div>
+									<div id="outlookDiv"><a href="" id="outlook_calendar" class="outlookCalendarTrack" title="Microsoft Outlook"><img src="images/icons/outlook_cal.png" alt="outlook calendar" class="img-responsive" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //TRAILER MODAL -->
+
+	<!-- LOADER MODAL -->
+	<div id="loader-overlay" class="modal" role="dialog" style="display: none; background:#001450">
+		<div class="outer">
+			<div class="middle">
+				<div class="loader-progress">
+					<img src="images/tt_small.png" class="img-responsive center-block" alt="Space Jam: A New Legacy"/>
+					<div class="progress-container">
+						<div class="progres-bar" style="background:#f2bd16"></div>
+					</div>
+					<p class="progress-text" style="color:#FFFFFF">0%</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //LOADER MODAL -->
+	<!-- SHOP PRODUCT MODAL -->
+	<div id="shop-overlay" class="modal shop-image-Modal" role="dialog" style="display: none;">
+		<div class="outer"><a id="shop-close" data-dismiss="modal"><img src="images/icons/cancel.png" alt="Close"></a>
+			<div class="middle"><img src="" class="img-responsive center-block" alt="Shop"/>
+			</div>
+		</div>
+	</div>
+	<!-- //SHOP PRODUCT MODAL -->
+	<!--External URL Popup-->
+	<div class="externalurl" id="externalLinkPopup">
+			<div class="wrapper-external">
+				<div class="external-text-wrapper">
+					<p>You're about to leave the <br> Space Jam: A New Legacy site! </p>
+				</div>
+				<div class="external-button-wrapper">
+					<div class="go-back">Go Back</div>
+					<a href="" target="_blank" class="continue">Continue</a>
+				</div>
+			</div>
+	</div>
+	<!--External URL Popup-->
+
+	<script src="https://www.youtube.com/player_api"></script>
+	<script src="js/teasertrackingcustom.js"></script>
+	<script src="js/teasertracking.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+	<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/textContent.js"></script>
+	<script type="text/javascript" src="js/introTrailer.js"></script>
+	<script type="text/javascript" src="js/gallery.js"></script>
+	<script type="text/javascript" src="js/video.js"></script>
+	<script type="text/javascript" src="js/progress.js"></script>
+
+	<!-- JS for ticketing section start -->
+	<script type="text/javascript" src="assets/js/custom.js" defer="defer"></script>
+	<!-- JS for ticketing section end -->
+
+	<script>
+		$( '#loader-overlay' ).modal( 'show' );
+		
+		$( window ).on( "load", readyFn );
+
+		function readyFn() {
+			//alert('ready');
+			window.dataLayer.push({
+				event: 'GroupsUpdated'
+			});
+		}
+	</script>
+		
+
+</body>
+</html>

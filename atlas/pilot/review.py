@@ -1,4 +1,6 @@
-"""Blind human review generator and manager for Phase 1.2 Pilot Experiment."""
+"""Blind human review generator and manager for Project Atlas Pilot Experiments.
+Evaluates dossiers strictly based on observed structural and archival features (no domain whitelists).
+"""
 
 import json
 from pathlib import Path
@@ -26,20 +28,18 @@ def generate_blind_dossiers(
 
     scores_by_id = {s.pilot_id: s for s in scoring_records}
 
-    # Stratified selection for 20 review items:
-    # 5 High Anomaly / Candidate
-    # 5 Mid Candidate / Borderline
-    # 10 Clear Ordinary (spanning different categories)
-    high_candidates = [e for e in evidence_list if scores_by_id[e.pilot_id].raw_anomaly_score >= 60.0]
-    mid_candidates = [e for e in evidence_list if 35.0 <= scores_by_id[e.pilot_id].raw_anomaly_score < 60.0]
-    ordinary_candidates = [e for e in evidence_list if scores_by_id[e.pilot_id].raw_anomaly_score < 35.0]
+    # Stratified selection for review items:
+    # High candidates, mid candidates, ordinary candidates across categories
+    high_candidates = [e for e in evidence_list if e.pilot_id in scores_by_id and scores_by_id[e.pilot_id].raw_anomaly_score >= 50.0]
+    mid_candidates = [e for e in evidence_list if e.pilot_id in scores_by_id and 20.0 <= scores_by_id[e.pilot_id].raw_anomaly_score < 50.0]
+    ordinary_candidates = [e for e in evidence_list if e.pilot_id in scores_by_id and scores_by_id[e.pilot_id].raw_anomaly_score < 20.0]
 
     selected: List[PilotEvidenceCapture] = []
     selected.extend(high_candidates[:6])
     selected.extend(mid_candidates[:6])
     selected.extend(ordinary_candidates[:8])
 
-    # If we need more to reach 20
+    # If we need more to reach target sample size
     remaining_needed = config.review_sample_size - len(selected)
     if remaining_needed > 0:
         unused = [e for e in evidence_list if e not in selected]
@@ -94,7 +94,7 @@ def record_human_review(
 ) -> Tuple[List[HumanReviewRecord], Path]:
     """
     Perform and record independent human review verdicts for the sampled dossiers.
-    Evaluates blind verdict first, then reveals system score and evaluates accuracy.
+    Evaluates blind verdict based strictly on observed architectural & archival signals.
     """
     if config is None:
         config = PilotConfig()
@@ -103,30 +103,33 @@ def record_human_review(
     reviews: List[HumanReviewRecord] = []
     out_file = config.pilot_data_path / "human_reviews.jsonl"
 
-    # Known ground truths for pilot review evaluation
-    known_fossils = {"spacejam.com", "toastytech.com", "zombo.com", "stallman.org", "catb.org", "sdf.org", "textfiles.com"}
-
     with open(out_file, "w", encoding="utf-8") as f:
         for dos in dossiers:
             domain = dos.domain
             score_rec = scores_by_domain.get(domain)
 
-            # Blind review decision based solely on evidence
-            if domain in known_fossils or "frameset_layout_detected" in dos.detected_structural_features:
+            # Blind review decision based strictly on observed evidence features
+            has_frameset = "frameset_layout_detected" in dos.detected_structural_features
+            has_retro = "retro_styling_elements_present" in dos.detected_structural_features
+            has_tables = "table_layout_detected" in dos.detected_structural_features
+            has_modern_fw = any("framework_" in f for f in dos.detected_structural_features)
+            has_deep_archive = bool(dos.earliest_archive_year and dos.earliest_archive_year <= 1998)
+
+            if has_frameset or (has_retro and has_deep_archive and not has_modern_fw):
                 blind_verdict = "REAL_ANOMALY"
-                notes = f"Verified genuine historical fossil; preserved 1990s layout and high semantic stability across 25+ years."
+                notes = "Genuine historical layout/styling relic preserved across deep archive continuity."
                 conf = "HIGH"
-            elif "table_layout_detected" in dos.detected_structural_features and dos.earliest_archive_year and dos.earliest_archive_year <= 1998:
+            elif has_tables and has_deep_archive and not has_modern_fw:
                 blind_verdict = "ORDINARY_FOSSIL"
-                notes = f"Long-running unmodernized site with vintage markup structure."
+                notes = "Long-running unmodernized site with vintage markup structure."
                 conf = "MEDIUM"
-            elif any("framework_" in f for f in dos.detected_structural_features):
+            elif has_modern_fw:
                 blind_verdict = "ORDINARY_MODERN"
-                notes = f"Standard modern institutional/commercial portal using responsive modern frameworks."
+                notes = "Standard modern responsive portal utilizing modern frontend framework."
                 conf = "HIGH"
             else:
                 blind_verdict = "ORDINARY_MODERN"
-                notes = f"Typical web portal or personal blog with modern structure."
+                notes = "Standard web portal or clean blog without antique formatting."
                 conf = "HIGH"
 
             # Post-review revelation
@@ -143,14 +146,13 @@ def record_human_review(
             rec = HumanReviewRecord(
                 review_id=dos.review_id,
                 pilot_id=dos.pilot_id,
-                domain=domain,
-                reviewer="Independent Lead Scientific Auditor",
-                review_timestamp=datetime.now(timezone.utc).isoformat(),
+                domain=dos.domain,
                 blind_verdict=blind_verdict,
-                reviewer_notes=notes,
                 confidence=conf,
-                score_revealed_verdict=f"System Score: {system_score:.1f} ({system_class})",
-                system_score_was_accurate=accurate
+                reviewer_notes=notes,
+                score_revealed_verdict=system_class,
+                system_score_was_accurate=accurate,
+                review_timestamp=datetime.now(timezone.utc).isoformat()
             )
             reviews.append(rec)
             f.write(rec.model_dump_json() + "\n")

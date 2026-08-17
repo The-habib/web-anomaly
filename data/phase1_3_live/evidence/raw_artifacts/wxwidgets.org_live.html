@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<title>
+  
+  	wxWidgets: Cross-Platform GUI Library
+  
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="wxWidgets Team">
+<link href="/atom.xml" rel="alternate" title="wxWidgets News" type="application/atom+xml" />
+<link href="/blog/atom.xml" rel="alternate" title="Developer Blog" type="application/atom+xml" />
+<link rel="shortcut icon" href="/assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+<link href="/assets/css/global.min.css" rel="stylesheet" media="screen">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49KD5EXDEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-49KD5EXDEN');
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <a href="#content" class="sr-only">Skip to content</a>
+    <div class="container">
+      <header>
+  <div class="container p-0">
+    <div class="row align-items-center">
+      <div class="col col-xl-7">
+        <img class="img-fluid" src="/assets/img/header-logo.png" alt="wxWidgets - Cross-Platform GUI Library" width="428" height="101"/>
+      </div>
+      <div class="col col-xl-5 d-none d-lg-block d-xl-block">
+        <div class="row align-items-center">
+          <div class="col-3 px-0 py-3">
+            <a href="/about/Ukraine/"><img class="img-fluid rounded" src="/assets/img/Ukraine-flag.png" alt="Stop Russia agression of Ukraine"></a>
+          </div>
+          <div class="col-9">
+            <div class="card-body px-0 py-3">
+              <h5 class="card-title"><a href="/about/Ukraine/">Stop the War in Ukraine</a></h5>
+              <p class="card-text">wxWidgets is united with the people of Ukraine and the international community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark rounded">
+  <div class="navbar-header">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+
+  
+    <li class="nav-item"><a class="nav-link" href="/">Home</a>
+  
+    </li>
+
+  
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+      <div class="dropdown-menu" aria-labelledby="navbarAbout">
+    
+      
+        <a class="dropdown-item" href="/about/">Overview</a>
+      
+    
+      
+        <a class="dropdown-item" href="/about/screenshots/">Screenshots</a>
+      
+    
+      
+        <a class="dropdown-item" href="/about/translations/">Translations</a>
+      
+    
+      
+        <a class="dropdown-item" href="/about/team/">The Team</a>
+      
+    
+      
+        <a class="dropdown-item" href="/about/licence/">License</a>
+      
+    
+      </div>
+  
+    </li>
+
+  
+    <li class="nav-item"><a class="nav-link" href="/downloads/">Downloads</a>
+  
+    </li>
+
+  
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDocumentation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDocumentation">
+    
+      
+        <a class="dropdown-item" href="/docs/book/">The Book</a>
+      
+    
+      
+        <a class="dropdown-item" href="/docs/">Reference Manuals</a>
+      
+    
+      
+        <a class="dropdown-item" href="/docs/faq/">Frequently Asked Questions</a>
+      
+    
+      
+        <a class="dropdown-item" href="https://wiki.wxwidgets.org/">Community Wiki</a>
+      
+    
+      
+        <a class="dropdown-item" href="/docs/tutorials/">Tutorials</a>
+      
+    
+      </div>
+  
+    </li>
+
+  
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarSupport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+      <div class="dropdown-menu" aria-labelledby="navbarSupport">
+    
+      
+        <a class="dropdown-item" href="https://github.com/wxWidgets/wxWidgets/issues">Issue Tracker</a>
+      
+    
+      
+        <div class="dropdown-divider"></div>
+      
+    
+      
+        <a class="dropdown-item" href="/support/mailing-lists/">Mailing Lists</a>
+      
+    
+      
+        <a class="dropdown-item" href="https://forums.wxwidgets.org/">Forums</a>
+      
+    
+      
+        <a class="dropdown-item" href="/support/irc/">IRC Channel</a>
+      
+    
+      
+        <div class="dropdown-divider"></div>
+      
+    
+      
+        <a class="dropdown-item" href="/support/commercial/">Commercial Support</a>
+      
+    
+      </div>
+  
+    </li>
+
+  
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDevelopers" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Developers</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDevelopers">
+    
+      
+        <a class="dropdown-item" href="/develop/">Resources</a>
+      
+    
+      
+        <a class="dropdown-item" href="/develop/code-repository/">Code Repository</a>
+      
+    
+      
+        <a class="dropdown-item" href="/develop/coding-guidelines/">Coding Guidelines</a>
+      
+    
+      
+        <a class="dropdown-item" href="/blog/">Developer Blog</a>
+      
+    
+      
+        <a class="dropdown-item" href="/gsoc/">Summer of Code</a>
+      
+    
+      </div>
+  
+    </li>
+
+  
+    <li class="nav-item"><a class="nav-link" href="/thanks/">Thanks</a>
+  
+    </li>
+
+  </ul>
+  <form class="form-inline" role="search" action="/search/">
+    <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+  </form>
+</div>
+
+</nav>
+
+      <div class="row mt-4" id="content">
+        <div class="col-md-9">
+          <article>
+            <div class="jumbotron p-4 mb-3">
+  <div class="row home-intro">
+    <div class="col-lg-12 home-intro-text">
+      <p style="font-size: 1.25rem;">
+        wxWidgets is a C++ library that lets developers create applications for
+        Windows, macOS, Linux and other platforms with a single code base. It
+        has popular language bindings for
+        <a href="https://wxpython.org/" target="_blank">Python</a>,
+        <a href="https://rubygems.org/gems/wxruby3" target="_blank">Ruby</a>,
+        <a href="https://github.com/pkulchenko/wxlua" target="_blank">Lua</a>,
+        <a href="https://crates.io/crates/wxdragon" target="_blank">Rust</a>,
+        <a href="https://pub.dev/packages/wx_dart" target="_blank">Dart</a>,
+        <a href="https://wxperl.sourceforge.net/" target="_blank">Perl</a> and
+        several other languages, and unlike other cross-platform toolkits,
+        wxWidgets gives applications a truly native look and feel because it
+        uses the platform's native API rather than emulating the GUI. It's also
+        extensive, free, open-source and mature.
+      </p>
+    </div>
+  </div>
+  <div style="margin-top: 20px;">
+    <div class="d-block d-sm-none btn-group-vertical">
+        <a href="/about/" class="btn btn-lg btn-primary"><i class="fas fa-info-circle fa-fw"></i> Learn more &raquo;</a>
+        <a href="/downloads/" class="btn btn-lg btn-primary"><i class="fas fa-download fa-fw"></i> Download now &raquo;</a>
+    </div>
+    <div class="d-none d-sm-block text-center">
+      <p>
+        <a href="/about/" class="btn btn-lg btn-primary"><i class="fas fa-info-circle fa-fw"></i> Learn more &raquo;</a> &nbsp; or &nbsp;
+        <a href="/downloads/" class="btn btn-lg btn-primary"><i class="fas fa-download fa-fw"></i> Download now &raquo;</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<h1>Latest News</h1>
+
+
+
+  <h3><a href="/news/2026/07/wxwidgets-3.2.11-and-3.3.3-released/">wxWidgets 3.2.11 and 3.3.3 Released</a></h3>
+
+  <p class="text-muted">Posted on <time datetime="2026-07-07T00:00:00+00:00">July 07, 2026</time></p>
+
+  <p>Making releases in both stable 3.2 and latest 3.3 series simultaneously seems
+to have worked well the <a href="https://wxwidgets.org/news/2026/03/wxwidgets-3.2.10-and-3.3.2-released/">last time</a>, so we are doing it again today with the
+release of the latest stable 3.2.11 and the latest development 3.3.3 versions
+of wxWidgets. As before, 3.3.3 contains all the changes from 3.2.11 as well as
+the additional improvements not present in 3.2 series, such as further
+improvements to dark mode support in wxMSW, including implementing it for
+message dialogs and support for switching between light and dark modes during
+run-time.</p>
+
+<p>Both releases can be downloaded from GitHub, please follow these links to
+download archives with the library sources and documentation as well as
+binaries for the selected Windows compilers such as <a href="https://visualstudio.microsoft.com/">Microsoft Visual
+C++</a> and <a href="https://mingw-w64.org/">MinGW-w64</a>: for <a href="https://github.com/wxWidgets/wxWidgets/releases/tag/v3.2.11">3.2.11 release</a> and
+for <a href="https://github.com/wxWidgets/wxWidgets/releases/tag/v3.3.3">3.3.3 one</a>. Online documentation has also been updated and
+can be accessed at <a href="https://docs.wxwidgets.org/3.2.11/">3.2.11 documentation home</a> and
+<a href="https://docs.wxwidgets.org/3.3.3/">3.3.3</a> respectively.</p>
+
+<p>If you are new to wxWidgets, you may find the <a href="https://docs.wxwidgets.org/3.3.3/overview_install.html">installation guide</a> a
+good starting point. If you are upgrading to 3.3.3 from a previous version,
+please make sure to check the <a href="https://raw.githubusercontent.com/wxWidgets/wxWidgets/v3.3.3/docs/changes.txt">change log</a> and, especially, the
+<em>INCOMPATIBLE CHANGES</em> section there.</p>
+
+<h3 id="changes-since-previous-releases">Changes since previous releases</h3>
+
+<p>3.2.11 includes an unusually huge amount of bug fixes for possible security
+problems, probably prompted by the increasing use of <a href="https://en.wikipedia.org/wiki/Large_language_model">LLMs</a> for finding
+them and also helped by the addition of extra fuzzers. Upgrading to this
+version is strongly recommended if you use any of the functions or classes
+mentioned below in untrusted contexts:</p>
+
+<ul>
+  <li>Fix multiple buffer overflows in <code class="language-plaintext highlighter-rouge">wxBMPHandler</code>: when loading malformed BMP
+files with invalid RLE data (<a href="https://github.com/wxWidgets/wxWidgets/issues/26496">#26496</a>), invalid palette for 8bpp BMPs
+(<a href="https://github.com/wxWidgets/wxWidgets/issues/26438">#26438</a>), invalid 4bpp BMPs (<a href="https://github.com/wxWidgets/wxWidgets/issues/26511">#26511</a>).</li>
+  <li>Fix multiple buffer overflows in <code class="language-plaintext highlighter-rouge">wxXPMDecoder</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26442">#26442</a>) including when
+parsing XPM files with unterminated quote (<a href="https://github.com/wxWidgets/wxWidgets/issues/26499">#26499</a>) or with invalid width
+(<a href="https://github.com/wxWidgets/wxWidgets/issues/26519">#26519</a>).</li>
+  <li>Fix multiple problems in <code class="language-plaintext highlighter-rouge">wxGIFHandler</code>: reject more invalid GIFs and do it
+without leaking memory (<a href="https://github.com/wxWidgets/wxWidgets/issues/26501">#26501</a>), fix buffer overflows when decoding
+invalid GIFs (<a href="https://github.com/wxWidgets/wxWidgets/issues/26521">#26521</a>, <a href="https://github.com/wxWidgets/wxWidgets/issues/26524">#26524</a>).</li>
+  <li>Fix buffer overflow in <code class="language-plaintext highlighter-rouge">wxTarInputStream</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26530">#26530</a>).</li>
+  <li>Fix out-of-bounds read in <code class="language-plaintext highlighter-rouge">wxFileType::ExpandCommand()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26531">#26531</a>).</li>
+  <li>Fix buffer overflow in <code class="language-plaintext highlighter-rouge">wxVsnprintf()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26522">#26522</a>).</li>
+  <li>Fix out-of-bounds read in <code class="language-plaintext highlighter-rouge">wxRegEx::Replace()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26541">#26541</a>).</li>
+  <li>Fix out-of-bounds read in <code class="language-plaintext highlighter-rouge">wxUString</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26548">#26548</a>).</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">wxDateTime::Format()</code> handling of invalid format (<a href="https://github.com/wxWidgets/wxWidgets/issues/26543">#26543</a>).</li>
+  <li>Fix buffer overflow in <code class="language-plaintext highlighter-rouge">wxGethostby{addr,name}_r()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26528">#26528</a>) and
+<code class="language-plaintext highlighter-rouge">wxGethostbyxxx_r()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26553">#26553</a>).</li>
+  <li>Fix multiple buffer overflows in <code class="language-plaintext highlighter-rouge">wxIFFDecoder</code>: out-of-bounds palette write
+(<a href="https://github.com/wxWidgets/wxWidgets/issues/26440">#26440</a>), out-of-bounds write on bad BMHD chunk (<a href="https://github.com/wxWidgets/wxWidgets/issues/26497">#26497</a>) and others
+(<a href="https://github.com/wxWidgets/wxWidgets/issues/26505">#26505</a>, <a href="https://github.com/wxWidgets/wxWidgets/issues/26518">#26518</a>).</li>
+  <li>Fix out-of-bounds read in <code class="language-plaintext highlighter-rouge">wxPCXHandler</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26441">#26441</a>).</li>
+  <li>Fix reading ANI images with invalid frame count (<a href="https://github.com/wxWidgets/wxWidgets/issues/26492">#26492</a>).</li>
+  <li>Fix write overflow in TGA files with invalid colour map (<a href="https://github.com/wxWidgets/wxWidgets/issues/26493">#26493</a>).</li>
+  <li>Fix multiple buffer overflows in <code class="language-plaintext highlighter-rouge">wxSound</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26506">#26506</a>, <a href="https://github.com/wxWidgets/wxWidgets/issues/26525">#26525</a>).</li>
+  <li>Fix reading too short extra field in ZIP64 files (<a href="https://github.com/wxWidgets/wxWidgets/issues/26507">#26507</a>).</li>
+  <li>Fix out-of-bounds table read in <code class="language-plaintext highlighter-rouge">wxMBConvUTF7::ToWChar()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26517">#26517</a>).</li>
+  <li>Fix buffer overflow reading corrupted message catalogs (<a href="https://github.com/wxWidgets/wxWidgets/issues/26513">#26513</a>).</li>
+  <li>Fix buffer overflow for too big tables in wxHTML (<a href="https://github.com/wxWidgets/wxWidgets/issues/26554">#26554</a>).</li>
+</ul>
+
+<p>Other, non security-related, bug fixes include:</p>
+
+<ul>
+  <li>Fix behaviour of <code class="language-plaintext highlighter-rouge">wxCondition</code> and <code class="language-plaintext highlighter-rouge">wxSemaphore::WaitTimeout()</code> for the
+dates after <a href="https://en.wikipedia.org/wiki/Year_2038_problem">year 2038</a> under Unix (<a href="https://github.com/wxWidgets/wxWidgets/issues/26466">#26466</a>).</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">wxCaret</code> position in scrolled windows (<a href="https://github.com/wxWidgets/wxWidgets/issues/26282">#26282</a>).</li>
+  <li>Correct loading of some bitmaps: 32bpp ones without valid alpha (<a href="https://github.com/wxWidgets/wxWidgets/issues/24219">#24219</a>),
+those using delta-RLE bitmap background colour (<a href="https://github.com/wxWidgets/wxWidgets/issues/23599">#23599</a>) and those using
+<code class="language-plaintext highlighter-rouge">BI_BITFIELDS</code> mode (<a href="https://github.com/wxWidgets/wxWidgets/issues/23601">#23601</a>).</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">wxGrid::GetFrozen{Row,Col}LabelWindow()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26617">#26617</a>).</li>
+  <li>Fix compilation of <code class="language-plaintext highlighter-rouge">wxPropertyGrid</code> macros when
+<code class="language-plaintext highlighter-rouge">wxNO_IMPLICIT_WXSTRING_ENCODING</code> is defined (<a href="https://github.com/wxWidgets/wxWidgets/issues/26651">#26651</a>).</li>
+  <li>wxGTK specific fixes:
+    <ul>
+      <li>Fix copy/paste when a clipboard manager is running (<a href="https://github.com/wxWidgets/wxWidgets/issues/26265">#26265</a>).</li>
+      <li>Fix crash with EGL-based <code class="language-plaintext highlighter-rouge">wxGLCanvas</code> in wxNotebook (<a href="https://github.com/wxWidgets/wxWidgets/issues/26340">#26340</a>).</li>
+      <li>Fix possible <code class="language-plaintext highlighter-rouge">wxTextCtrl</code> crash with GSpell attached (<a href="https://github.com/wxWidgets/wxWidgets/issues/26464">#26464</a>).</li>
+      <li>Fix drawing of very large bitmaps (<a href="https://github.com/wxWidgets/wxWidgets/issues/25656">#25656</a>).</li>
+      <li>Fix memory leak in <code class="language-plaintext highlighter-rouge">wxDataViewChoiceRenderer.</code></li>
+      <li>Fix resource leak when using EGL with X11 (<a href="https://github.com/wxWidgets/wxWidgets/issues/26341">#26341</a>).</li>
+      <li>Fix showing title bar under Wayland with <code class="language-plaintext highlighter-rouge">wxBORDER_NONE</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26357">#26357</a>).</li>
+      <li>Remove wrong maximum text length limitation in “picker” controls (<a href="https://github.com/wxWidgets/wxWidgets/issues/26314">#26314</a>).</li>
+      <li>Fix appearance of dashed lines drawn by <code class="language-plaintext highlighter-rouge">wxDC::DrawLine()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26449">#26449</a>).</li>
+      <li>Fix non-resizable TLW size when setting initial client size (<a href="https://github.com/wxWidgets/wxWidgets/issues/26480">#26480</a>).</li>
+    </ul>
+  </li>
+  <li>wxMSW specific fixes:
+    <ul>
+      <li>Fix <code class="language-plaintext highlighter-rouge">wxBufferedPaintDC</code> when using RTL layout (<a href="https://github.com/wxWidgets/wxWidgets/issues/26266">#26266</a>).</li>
+    </ul>
+  </li>
+  <li>wxOSX specific fixes:
+    <ul>
+      <li>Fix crash after destroying <code class="language-plaintext highlighter-rouge">wxFileSystemWatcher</code> in wxOSX (<a href="https://github.com/wxWidgets/wxWidgets/issues/26658">#26658</a>).</li>
+      <li>Fix possible crash in <code class="language-plaintext highlighter-rouge">wxFont::SetNativeFontInfo()</code> in wxOSX (<a href="https://github.com/wxWidgets/wxWidgets/issues/26411">#26411</a>).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>3.3.3 release includes all the fixes from 3.2.11 above as well as some extra
+improvements:</p>
+
+<ul>
+  <li>Add dark mode support to <code class="language-plaintext highlighter-rouge">wxMessageBox</code> and other dialogs in wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26570">#26570</a>).</li>
+  <li>Support switching between light/dark modes in wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26516">#26516</a>).</li>
+  <li>Add support for stylus events to wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26223">#26223</a>).</li>
+  <li>Add accessibility support to <code class="language-plaintext highlighter-rouge">wxSVGFileDC</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26379">#26379</a>).</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">wxWebView::Print()</code> and <code class="language-plaintext highlighter-rouge">PrintToPDF()</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26239">#26239</a>, <a href="https://github.com/wxWidgets/wxWidgets/issues/26583">#26583</a>).</li>
+  <li>Improve <code class="language-plaintext highlighter-rouge">wxRibbon</code> appearance in high DPI (<a href="https://github.com/wxWidgets/wxWidgets/issues/26117">#26117</a>, <a href="https://github.com/wxWidgets/wxWidgets/issues/26409">#26409</a>).</li>
+  <li>Improve <code class="language-plaintext highlighter-rouge">wxStaticText</code> label wrapping in wxGTK.</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">wxMoveToTrash()</code> function (<a href="https://github.com/wxWidgets/wxWidgets/issues/26256">#26256</a>).</li>
+  <li>Enable drawing color emoji using Direct2D in wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26657">#26657</a>).</li>
+  <li>Implement C++20 &lt;=&gt; operator for <code class="language-plaintext highlighter-rouge">wxString</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26306">#26306</a>).</li>
+  <li>Add support for private fonts to wxQt (<a href="https://github.com/wxWidgets/wxWidgets/issues/26403">#26403</a>).</li>
+  <li>Support building wxOSX under macOS 27 (<a href="https://github.com/wxWidgets/wxWidgets/issues/26578">#26578</a>).</li>
+</ul>
+
+<p>And, finally, some bug fixes which don’t apply to the stable branch:</p>
+
+<ul>
+  <li>Improve <code class="language-plaintext highlighter-rouge">wxTarInputStream</code> robustness (<a href="https://github.com/wxWidgets/wxWidgets/issues/26607">#26607</a>).</li>
+  <li>Treat truncated reads as errors in <code class="language-plaintext highlighter-rouge">wxDataInputStream</code> (<a href="https://github.com/wxWidgets/wxWidgets/issues/26600">#26600</a>).</li>
+  <li>Improve wxAUI behaviour on DPI changes in wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26075">#26075</a>).</li>
+  <li>Fix regression when using <code class="language-plaintext highlighter-rouge">wxImageList</code> in high DPI in wxGTK (<a href="https://github.com/wxWidgets/wxWidgets/issues/26349">#26349</a>).</li>
+  <li>Fix regression with <code class="language-plaintext highlighter-rouge">wxCheckBox</code> label in screen readers in wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26270">#26270</a>).</li>
+  <li>Fix regression with <code class="language-plaintext highlighter-rouge">wxPD_CAN_SKIP</code> in 3.3.2 in wxMSW (<a href="https://github.com/wxWidgets/wxWidgets/issues/26287">#26287</a>).</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">wxDataViewCtrl</code> icons rendering under macOS 26 (<a href="https://github.com/wxWidgets/wxWidgets/issues/26374">#26374</a>).</li>
+  <li>Fix wxOSX <code class="language-plaintext highlighter-rouge">wxOverlay</code> leaving phantoms in Mission Control (<a href="https://github.com/wxWidgets/wxWidgets/issues/26380">#26380</a>).</li>
+</ul>
+
+<h3 id="feedback">Feedback</h3>
+
+<p>Please let us know about your experience with this release via any of the
+following channels:</p>
+
+<ul>
+  <li><a href="https://www.wxwidgets.org/support/mailing-lists/">Mailing lists</a></li>
+  <li><a href="https://forums.wxwidgets.org/">Discussion forums</a></li>
+  <li><a href="https://www.wxwidgets.org/support/irc/">#wxwidgets IRC Channel</a></li>
+  <li><a href="https://stackoverflow.com/questions/tagged/wxwidgets">Stack Overflow</a></li>
+</ul>
+
+<p>or by commenting under this post.</p>
+
+<p>Thanks to all contributors to this release and we hope that you will enjoy
+working with it!</p>
+
+
+  
+  <p><a href="/news/2026/07/wxwidgets-3.2.11-and-3.3.3-released/#disqus_thread" data-disqus-identifier="/news/2026/07/wxwidgets-3.2.11-and-3.3.3-released">Comments</a></p>
+  
+
+  <h3><a href="/news/2026/04/wxdart-0.9.2-released/">wxDart 0.9.2 released</a></h3>
+
+  <p class="text-muted">Posted on <time datetime="2026-04-06T00:00:00+00:00">April 06, 2026</time></p>
+
+  <p>Version 0.9.2 of <a href="https://www.wxdesigner-software.com/">wxDart</a> has been released.</p>
+
+<p><a href="https://dart.dev/">Dart</a> is a programming language developed by Google. It
+uses static typing and can be compiled to an executable binary or to
+JavaScript or WebAssembly to run in a web browser.</p>
+
+<p>wxDart consists of two separate libraries which offer the same API and can be used independently.</p>
+<ul>
+  <li>wxDart Flutter uses the <a href="https://flutter.dev">Flutter</a> library as its backend and is written in pure Dart.</li>
+  <li>wxDart Native provides Dart bindings to the wxWidgets C++ GUI library.</li>
+</ul>
+
+<p>wxDart Flutter has been written from the ground up and does not depend on any
+C++ or C code. It uses the wxWidgets API, adding many desktop features to
+Flutter. Apps compiled with wxDart Flutter run almost anywhere (including
+Android and iOS), but it mainly targets the web.</p>
+
+<p>Like wxWidgets itself, wxDart Native mainly targets the classical desktop
+environments and offers native look and feel.</p>
+
+<p>Check out the <a href="https://wxdesigner-software.com/fireworks">Fireworks demo</a>
+written with wxDart Flutter, compiled to WebAssembly, and see how it uses
+wxWidgets API in its <a href="https://github.com/RobertRoeb/wx_dart/blob/main/example/lib/assets/tut/fireworks.dart">source code</a>.</p>
+
+<p>wxDart and its documentation are hosted on pub.dev <a href="https://pub.dev/packages/wx_dart">here</a>.</p>
+
+
+  
+  <p><a href="/news/2026/04/wxdart-0.9.2-released/#disqus_thread" data-disqus-identifier="/news/2026/04/wxdart-0.9.2-released">Comments</a></p>
+  
+
+  <h3><a href="/news/2025/03/wxwidgets-example-applications-now-available-on-github/">wxWidgets Book Examples Now Available on GitHub</a></h3>
+
+  <p class="text-muted">Posted on <time datetime="2025-03-05T00:00:00+00:00">March 05, 2025</time></p>
+
+  <p>A comprehensive collection of wxWidgets example applications is now available to the community. These applications were originally developed as supplementary material for the Polish book <a href="https://ksiegarnia.pwn.pl/Programowanie-wieloplatformowe-z-C-i-wxWidgets-3,750527898,p.html">Cross-Platform Programming with C++ and wxWidgets 3</a> and are now publicly accessible on GitHub in the dedicated <a href="https://github.com/bartoszwarzocha/wxwidgets_book_examples">repository</a> All example applications are released under the wxWidgets License.</p>
+
+<h3 id="repository-contents">Repository Contents</h3>
+
+<p>The repository contains more than 25 example applications, showcasing various wxWidgets functionalities. These include, among others:</p>
+
+<ul>
+  <li>User interface components and custom controls</li>
+  <li>File handling, logging, and system operations</li>
+  <li>Networking (HTTP, FTP, and Socket communication)</li>
+  <li>Multithreading</li>
+  <li>OpenGL and 3D graphics</li>
+  <li>Developing a custom code editor with wxScintilla</li>
+</ul>
+
+<p>Additionally, some projects demonstrate more advanced features, making them useful for both beginners and experienced developers looking to integrate wxWidgets into their applications.</p>
+
+<p>All the examples were tested on:</p>
+<ul>
+  <li>Windows 11 (Visual Studio 2022, wxWidgets 3.3.x)</li>
+  <li>Linux Mint 22 (wxWidgets 3.2.6)</li>
+</ul>
+
+<p>Each project includes configuration files for Visual Studio, Code::Blocks, and Makefile, ensuring compatibility across different development environments.</p>
+
+<p>All examples have been fully translated into English to support a global audience of developers.</p>
+
+<p>All projects have been re-tested, updated, and adapted to the latest versions of wxWidgets and C++20, ensuring modern compatibility and performance.</p>
+
+<p>The repository also includes the <code class="language-plaintext highlighter-rouge">upgrade_wxwidgets.py</code> script, which facilitates both upgrading and adapting projects to any version of the wxWidgets library.</p>
+
+<p>This resource provides an excellent starting point for developers interested in exploring wxWidgets through working examples. Users are encouraged to review the code and adapt it to their own projects.</p>
+
+
+  
+  <p><a href="/news/2025/03/wxwidgets-example-applications-now-available-on-github/#disqus_thread" data-disqus-identifier="/news/2025/03/wxwidgets-example-applications-now-available-on-github">Comments</a></p>
+  
+
+  <h3><a href="/news/2024/05/wxruby3-1.0.0-released/">wxRuby3 1.0.0 released</a></h3>
+
+  <p class="text-muted">Posted on <time datetime="2024-05-18T00:00:00+00:00">May 18, 2024</time></p>
+
+  <p>It’s time! wxRuby3 has reached its 1.0.0 stable release.</p>
+
+<p>This release targets the <a href="2024-05-13-wxwidgets-3.2.5-released.md">wxWidgets 3.2.5 release</a> by default, which contains (among many others) quite some fixes which
+came from the development of wxRuby3, and can be installed from <a href="https://rubygems.org/gems/wxruby3">RubyGems</a> or
+downloaded from <a href="https://github.com/mcorino/wxRuby3/releases/download/v1.0.0/wxruby3-1.0.0.gem">Github</a>.</p>
+
+<p>This release is the result of about 1.5 years of development, starting at the abandoned remains of wxRuby2, taking a
+page out of the wxPython Phoenix book and ending with this release.</p>
+
+<p>wxRuby3 is a cross-platform GUI library for Ruby, based on the mature wxWidgets GUI toolkit for C++. It uses native
+widgets wherever possible, providing the correct look, feel and behavior to GUI applications on Windows, macOS and
+Linux/GTK. wxRuby aims to provide a comprehensive solution to developing professional-standard desktop applications in
+Ruby.
+wxRuby3 also provides extensive usage documentation at its <a href="https://github.com/mcorino/wxRuby3/wiki">Wiki</a> as well as
+a complete <a href="https://mcorino.github.io/wxRuby3/index.html">API reference</a>.</p>
+
+<h2 id="what-has-changed-in-this-release">What has changed in this release?</h2>
+
+<ul>
+  <li>improved documentation</li>
+  <li>support building against wxWidgets GIT master version</li>
+  <li>improved stability</li>
+  <li>add Wx::Overlay and Wx::DCOverlay</li>
+  <li>add 2D affine transformation support</li>
+  <li>add Wx::GraphicsRenderer</li>
+  <li>various DC support improvements</li>
+  <li>add large 2D drawing sample</li>
+</ul>
+
+<p><strong>Full Changelog</strong>: https://github.com/mcorino/wxRuby3/compare/v0.9.8…v1.0.0</p>
+
+<h2 id="how-to-install">How to install?</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install wxruby3
+</code></pre></div></div>
+
+<p>See the <a href="https://mcorino.github.io/wxRuby3/file.INSTALL.html">INSTALL</a> documentation for more details.
+Binary packages for major platforms are available as release assets on Github.</p>
+
+<h2 id="where-can-i-learn-more">Where can I learn more?</h2>
+
+<p>Usage Documentation: see the <a href="https://github.com/mcorino/wxRuby3/wiki">Wiki</a></p>
+
+<p>API Documentation: see <a href="https://mcorino.github.io/wxRuby3/index.html">here</a></p>
+
+<p>Source code: <a href="https://github.com/mcorino/wxruby3">Github</a></p>
+
+<p>Rubygems: <a href="https://rubygems.org/gems/wxruby3">wxRuby3</a></p>
+
+<h2 id="where-can-i-provide-feedback">Where can I provide feedback?</h2>
+
+<p>Report problems, bugs, instructions using <a href="https://github.com/mcorino/wxRuby3/issues">Github Issues</a>.</p>
+
+<p>Start discussions, submit ideas, feature requests etc. using <a href="https://github.com/mcorino/wxRuby3/discussions">Github Discussion</a>.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>Thanks go to the dedicated wxWidgets team for providing such a fantastic GUI library to build wxRuby3 on as well
+as to the wxPython Phoenix team for providing the idea of code generation from the wxWidgets interface docs.</p>
+
+<p>For more credits see <a href="https://mcorino.github.io/wxRuby3/file.CREDITS.html">here</a>.</p>
+
+
+  
+  <p><a href="/news/2024/05/wxruby3-1.0.0-released/#disqus_thread" data-disqus-identifier="/news/2024/05/wxruby3-1.0.0-released">Comments</a></p>
+  
+
+  <h3><a href="/news/2023/11/modern-icon-sets-wxartprovider-released/">Modern Icon Sets wxArtProvider Released</a></h3>
+
+  <p class="text-muted">Posted on <time datetime="2023-11-21T00:00:00+00:00">November 21, 2023</time></p>
+
+  <p><a href="https://github.com/perazz">perazz</a> has released <a href="https://github.com/perazz/wxMaterialDesignArtProvider">wxMaterialDesignArtProvider</a>, a custom <code class="language-plaintext highlighter-rouge">wxArtProvider</code> class providing SVG-based icons from the <a href="https://github.com/marella/material-design-icons">Material Design</a>, <a href="https://github.com/simple-icons/simple-icons/tree/develop">SimpleIcons</a>, <a href="https://github.com/FortAwesome/Font-Awesome">FontAwesome</a> and <a href="https://github.com/microsoft/fluentui-system-icons">FluentUI system</a> datasets. All these datasets come with permissive licenses (MIT, CC BY 4.0, CC0 1.0, Apache 2.0) that should make it easy to embed it in new and existing projects.</p>
+
+<p>All SVG icons are hardcoded into headers such that no external files are needed to build the art provider class. Each dataset belongs to a custom client (so that filled/outline versions can be used for hovering effects) and color customization is provided via a simple regex-based extension.</p>
+
+<p>Hopefully this can be useful to people who want to make their existing wxWidgets applications access modern icon sets with limited effort.</p>
+
+<p><img src="/blog/2023/11/21/modern-icon-sets-wxartprovider-released/wxMaterialDesignArtProvider_browser.png" class="img-fluid" alt="Screenshots of the wxMaterialDesignArtProvider sample browser in macOS and Windows" /></p>
+
+
+
+  
+  <p><a href="/news/2023/11/modern-icon-sets-wxartprovider-released/#disqus_thread" data-disqus-identifier="/news/2023/11/modern-icon-sets-wxartprovider-released">Comments</a></p>
+  
+
+
+<p class="text-center" style="margin-top: 2em;">
+  <a class="btn btn-lg btn-outline-primary" href="/news/archive/"><i class="fas fa-calendar-alt fa-fw"></i> News Archive</a>
+</p>
+
+          </article>
+        </div>
+        <div class="col-md-3">
+          <aside>
+            
+<div class="card border-primary mb-4">
+  <div class="card-header bg-primary text-light">Quick Links</div>
+  <div class="card-body">
+    <ul class="nav nav-pills flex-column">
+    
+      <li class="nav-item"><a class="nav-link" href="https://docs.wxwidgets.org/latest/overview_helloworld.html" title="Hello World in wxWidgets">
+        <i class="fas fa-star fa-fw"></i> Hello World in wxWidgets</a></li>
+    
+      <li class="nav-item"><a class="nav-link" href="https://docs.wxwidgets.org/3.2/" title="Online Manual">
+        <i class="fas fa-book fa-fw"></i> Online Manual</a></li>
+    
+      <li class="nav-item"><a class="nav-link" href="https://wiki.wxwidgets.org/" title="Community Wiki">
+        <i class="fas fa-info fa-fw"></i> Community Wiki</a></li>
+    
+      <li class="nav-item"><a class="nav-link" href="https://github.com/wxWidgets/wxWidgets/issues/new" title="Report a Bug">
+        <i class="fas fa-bug fa-fw"></i> Report a Bug</a></li>
+    
+      <li class="nav-item"><a class="nav-link" href="https://github.com/wxWidgets/wxWidgets" title="GitHub Repository">
+        <i class="fab fa-github fa-fw"></i> GitHub Repository</a></li>
+    
+      <li class="nav-item"><a class="nav-link" href="/develop/roadmap/" title="Development Roadmap">
+        <i class="fas fa-forward fa-fw"></i> Development Roadmap</a></li>
+    
+    </ul>
+  </div>
+</div>
+
+<div class="card border-primary mb-4">
+  <div class="card-header bg-primary text-light">Follow Us</div>
+  <div class="card-body">
+    <ul class="nav nav-pills flex-column">
+    
+      <li class="nav-item"><a class="nav-link" href="/atom.xml" title="News RSS Feed">
+        <i class="fas fa-rss fa-fw"></i> News RSS Feed</a></li>
+    
+      <li class="nav-item"><a class="nav-link" href="/blog/" title="Developer Blog">
+        <i class="fas fa-pencil-alt fa-fw"></i> Developer Blog</a></li>
+    
+    </ul>
+  </div>
+</div>
+
+
+<div class="card border-primary mb-4 logos" style="display: none;">
+  <div class="card-header bg-primary text-light">Solutions</div>
+  <div class="card-body text-center"></div>
+</div>
+
+          </aside>
+        </div>
+      </div>
+      <hr><footer><p>Copyright &copy; 2026 wxWidgets</p></footer>
+    </div>
+    <script defer src="/assets/js/global.min.js"></script>
+
+
+    
+    <script type="text/javascript">
+      var disqus_shortname = "wxwidgets";
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+    
+  </body>
+</html>
