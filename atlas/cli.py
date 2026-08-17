@@ -366,6 +366,53 @@ def main():
     evidence_verify.add_argument("finding_id", nargs="?", help="Specific Finding ID to verify")
     evidence_audit = evidence_sub.add_parser("audit", help="Audit live raw HTML payloads and artifacts")
 
+def cmd_research(args):
+    print_banner()
+    if args.research_action == "release-check":
+        from atlas.research.release_gate import run_scientific_release_check
+        print("[*] Executing Scientific Release Gate Audit...")
+        passed, report = run_scientific_release_check()
+        print("\nSCIENTIFIC RELEASE GATE RESULTS:")
+        print("-" * 50)
+        for check_name, status in report["checks"].items():
+            print(f"{check_name.upper():<36}: {status}")
+        print("-" * 50)
+        print(f"SCIENTIFIC RELEASE: {report['scientific_release']}\n")
+        if not passed:
+            sys.exit(1)
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog="atlas",
+        description="Project Atlas — Autonomous Web Anomaly & Archaeological Research Platform"
+    )
+    subparsers = parser.add_subparsers(dest="command", help="Available commands")
+
+    # scan
+    scan_parser = subparsers.add_parser("scan", help="Run full evidence pipeline on a single target URL")
+    scan_parser.add_argument("url", help="Target URL to inspect")
+
+    # experiment
+    exp_parser = subparsers.add_parser("experiment", help="Manage experiment ledger")
+    exp_sub = exp_parser.add_subparsers(dest="subcommand")
+    exp_new = exp_sub.add_parser("new", help="Provision next numbered experiment in ledger")
+    exp_new.add_argument("title", help="Experiment Title")
+    exp_new.add_argument("--hypothesis", "-H", help="Hypothesis statement", default="")
+    exp_new.add_argument("--urls", "-u", nargs="*", help="Initial target URLs", default=[])
+    exp_list = exp_sub.add_parser("list", help="List all experiments in ledger")
+
+    # findings
+    findings_parser = subparsers.add_parser("findings", help="Inspect research findings")
+    findings_sub = findings_parser.add_subparsers(dest="subcommand")
+    findings_list = findings_sub.add_parser("list", help="List all recorded findings")
+
+    # evidence
+    evidence_parser = subparsers.add_parser("evidence", help="Evidence operations")
+    evidence_sub = evidence_parser.add_subparsers(dest="subcommand")
+    evidence_verify = evidence_sub.add_parser("verify", help="Verify cryptographic SHA-256 integrity of evidence artifacts")
+    evidence_verify.add_argument("finding_id", nargs="?", help="Specific Finding ID to verify")
+    evidence_audit = evidence_sub.add_parser("audit", help="Audit live raw HTML payloads and artifacts")
+
     # phase1
     p1_parser = subparsers.add_parser("phase1", help="Phase 1 Blind Seed-Corpus Discovery Experiment")
     p1_parser.add_argument("phase1_action", choices=["corpus", "scan", "resume", "freeze", "score", "rank", "review", "report", "run"], help="Phase 1 workflow action")
@@ -385,6 +432,10 @@ def main():
     bench_parser = subparsers.add_parser("benchmark", help="Benchmark v2 Evaluation Subsystem")
     bench_parser.add_argument("benchmark_action", choices=["build", "run", "validate"], help="Benchmark operation")
     bench_parser.add_argument("--mode", choices=["LIVE", "SIMULATION", "REPLAY"], default="LIVE", help="Experiment execution mode")
+
+    # research (Phase 1.4)
+    research_parser = subparsers.add_parser("research", help="Scientific Release Gate & Research Validation")
+    research_parser.add_argument("research_action", choices=["release-check"], help="Research action")
 
     args = parser.parse_args()
 
@@ -417,9 +468,12 @@ def main():
         cmd_pilot(args)
     elif args.command == "benchmark":
         cmd_benchmark(args)
+    elif args.command == "research":
+        cmd_research(args)
     else:
         print_banner()
         parser.print_help()
 
 if __name__ == "__main__":
     main()
+
