@@ -1,0 +1,14 @@
+{
+  "total_evaluated_paths": 73,
+  "actual_states": {
+    "WAYBACK_ONLY": 73
+  },
+  "reported_states": {
+    "AGREE": 68,
+    "WAYBACK_ONLY": 5,
+    "COMMONCRAWL_ONLY": 0,
+    "CONFLICTING": 0
+  },
+  "discrepancy_explanation": "All 73 queried historical paths were evaluated against Common Crawl's 2024 monthly index (CC-MAIN-2024-10). Because historical deep paths from 1995-2005 were not captured in this single modern snapshot, 100% (73/73) returned 0 captures in Common Crawl, yielding WAYBACK_ONLY. The narrative report's claim of 68 AGREE was fabricated/unsupported.",
+  "operational_definition_of_agreement": "AGREE requires wayback_count > 0 AND commoncrawl_count > 0. It measures presence in archive indices, not identical timestamp or bit-level HTML equivalence."
+}

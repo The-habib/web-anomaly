@@ -422,6 +422,27 @@ def cmd_phase1_5(args):
         print(f"Reference Relics Recovered:{metrics['deep_arm']['reference_recovery']}")
         print("-" * 55)
 
+def cmd_phase1_6(args):
+    print_banner()
+    from atlas.research.release_gate_phase1_6 import run_phase1_6_release_check
+    if args.p16_action == "release-check":
+        print("[*] Executing Phase 1.6 Scientific Release Gate Audit...")
+        passed, report = run_phase1_6_release_check()
+        print("\nPHASE 1.6 SCIENTIFIC RELEASE GATE RESULTS:")
+        print("-" * 55)
+        for check_name, status in report["checks"].items():
+            print(f"{check_name:<36}: {status}")
+        print("-" * 55)
+        print(f"AUDIT CLASSIFICATION: {report['audit_classification']}")
+        print(f"SCIENTIFIC RELEASE:   {report['scientific_release']}\n")
+        if not passed:
+            sys.exit(1)
+    elif args.p16_action == "audit":
+        from scripts.audit_phase1_5_independently import audit_phase1_5
+        passed, report = audit_phase1_5()
+        if not passed:
+            sys.exit(1)
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -484,6 +505,10 @@ def main():
     p15_parser.add_argument("--mode", choices=["LIVE", "SIMULATION", "REPLAY"], default="LIVE", help="Execution mode")
     p15_parser.add_argument("--limit", type=int, help="Limit domains for test runs", default=None)
 
+    # phase1_6 (Phase 1.6 Audit & Reconciliation)
+    p16_parser = subparsers.add_parser("phase1_6", help="Phase 1.6 Independent Scientific Audit & Reconciliation Subsystem")
+    p16_parser.add_argument("p16_action", choices=["release-check", "audit"], help="Phase 1.6 action")
+
     args = parser.parse_args()
 
     if args.command == "scan":
@@ -519,6 +544,8 @@ def main():
         cmd_research(args)
     elif args.command == "phase1_5":
         cmd_phase1_5(args)
+    elif args.command == "phase1_6":
+        cmd_phase1_6(args)
     else:
         print_banner()
         parser.print_help()

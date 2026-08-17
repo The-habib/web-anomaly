@@ -1,0 +1,60 @@
+{
+  "candidate_paths": {
+    "true_canonical_candidate_paths": 16174,
+    "reported_candidate_paths": 4812,
+    "discrepancy_explanation": "Report used an ad-hoc category subtable (sum 4,812) instead of the true candidate registry (16,174 records).",
+    "candidate_sources": {
+      "ROOT_PAGE_LINK": 15430,
+      "WAYBACK_CDX": 744
+    },
+    "candidate_categories": {
+      "personal_blog": 148,
+      "general_directory": 12414,
+      "archive_directory": 92,
+      "software_project": 34,
+      "public_files": 180,
+      "legacy_docs": 312,
+      "year_prefixed": 3,
+      "academic_user_space": 2991
+    }
+  },
+  "http_requests": {
+    "root_http_requests": 300,
+    "deep_http_requests": 2834,
+    "total_http_requests": 3134,
+    "archive_cdx_queries_root": 300,
+    "archive_cdx_queries_deep": 73,
+    "total_archive_cdx_queries": 373
+  },
+  "raw_artifacts": {
+    "frozen_html_payloads_total": 2760,
+    "root_html_payloads": 300,
+    "deep_html_payloads": 2460,
+    "requests_without_payload": 374,
+    "reason_for_no_payload": "HTTP errors, empty bodies, redirects, or non-HTML content (e.g. binaries/documents)."
+  },
+  "retrieval_cap_distribution": {
+    "cap_limit_per_domain": 15,
+    "domains_at_cap": 178,
+    "domains_at_cap_percentage": 59.3,
+    "domains_below_cap": 25,
+    "domains_below_cap_percentage": 8.3,
+    "domains_with_zero_retrievals": 97,
+    "domains_with_zero_retrievals_percentage": 32.3
+  },
+  "prioritizer_reduction": {
+    "true_raw_paths": 16174,
+    "selected_retrievals": 2834,
+    "true_reduction_percentage": 82.48,
+    "reported_reduction_percentage": 41.1,
+    "reported_reduction_basis": "(4,812 - 2,834) / 4,812 = 41.1%"
+  },
+  "efficiencies": {
+    "bytes_downloaded_total": 469906918,
+    "storage_footprint_bytes": 466319708,
+    "runtime_seconds": 1230.86,
+    "avg_requests_per_domain": 10.45,
+    "avg_bytes_per_request": 149938.39,
+    "avg_bytes_per_domain": 1566356.4
+  }
+}

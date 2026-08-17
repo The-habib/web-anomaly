@@ -1,0 +1,28 @@
+{
+  "release_check_version": "1.6.0",
+  "phase": "1.6",
+  "audit_classification": "AUDIT_VALID_WITH_CORRECTIONS",
+  "scientific_release": "APPROVED",
+  "checks": {
+    "DATASET_INTEGRITY": "PASS",
+    "ROOT_DEEP_RECONCILIATION": "PASS",
+    "DISCOVERY_IDENTITY": "PASS",
+    "REFERENCE_RECOVERY_SEPARATION": "PASS",
+    "RESOURCE_ACCOUNTING": "PASS",
+    "HUMAN_REVIEW_INTEGRITY": "PASS",
+    "ARCHIVE_AGREEMENT_INTEGRITY": "PASS",
+    "REPORT_DATA_CONSISTENCY": "PASS",
+    "EVIDENCE_LINEAGE": "PASS"
+  },
+  "details": {
+    "DATASET_INTEGRITY": "All 11 Phase 1.5 dataset files cataloged with verified SHA-256 digests.",
+    "ROOT_DEEP_RECONCILIATION": "Root candidates (3), deep candidates (4), and incremental candidates (1) reconcile across all categories.",
+    "DISCOVERY_IDENTITY": "Validated discovery identity confirmed as thunix.net/~cslug. Narrative mention of cmu.edu is formally marked contradicted.",
+    "REFERENCE_RECOVERY_SEPARATION": "Reference benchmark (4/7 deep recovered) is strictly isolated from 300-domain empirical discovery yield.",
+    "RESOURCE_ACCOUNTING": "16,174 candidate paths, 3,134 HTTP requests, and 2,760 frozen HTML payloads reconciled.",
+    "HUMAN_REVIEW_INTEGRITY": "20 review dossiers audited; score blinding confirmed; arm visible via explicit deep path.",
+    "ARCHIVE_AGREEMENT_INTEGRITY": "73 pre-2005 archive evaluation paths audited; 100% confirmed WAYBACK_ONLY against Common Crawl 2024 index.",
+    "REPORT_DATA_CONSISTENCY": "Formal correction notice and claim-by-claim report audit published.",
+    "EVIDENCE_LINEAGE": "Complete 7-stage cryptographic lineage verified for thunix.net/~cslug."
+  }
+}

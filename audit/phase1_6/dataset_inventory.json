@@ -1,0 +1,210 @@
+{
+  "data/phase1_5/study_domains.csv": {
+    "path": "data/phase1_5/study_domains.csv",
+    "description": "300-Domain Cohort Sampled from Corpus v2",
+    "size_bytes": 32062,
+    "record_count": 300,
+    "schema_keys": [
+      "study_id",
+      "domain",
+      "category",
+      "canonical_url",
+      "source_type",
+      "source_name",
+      "source_reference"
+    ],
+    "sha256": "e26bd9a11aff586165884a9460a2cbea57b47ac0345878782feffa391ca1ab5c",
+    "producer": "atlas.deep.sampler",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/root_results.jsonl": {
+    "path": "data/phase1_5/root_results.jsonl",
+    "description": "Arm A (Root Baseline) Scan & Scoring Results",
+    "size_bytes": 54275,
+    "record_count": 300,
+    "schema_keys": [
+      "study_id",
+      "domain",
+      "category",
+      "score",
+      "classification",
+      "triggered_rules",
+      "status_code"
+    ],
+    "sha256": "7694b18e872c57eb9c88c4ddc0b057f5a9258b39bff0f1e44ff2d6747b84a026",
+    "producer": "atlas.deep.runner",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/deep_results.jsonl": {
+    "path": "data/phase1_5/deep_results.jsonl",
+    "description": "Arm B (Deep Expansion) Paired Scan & Scoring Results",
+    "size_bytes": 154740,
+    "record_count": 300,
+    "schema_keys": [
+      "study_id",
+      "domain",
+      "category",
+      "root_score",
+      "root_classification",
+      "root_triggered_rules",
+      "root_status_code",
+      "deep_candidates_found",
+      "deep_retrievals_attempted",
+      "deep_max_score",
+      "deep_best_path",
+      "deep_classification",
+      "deep_triggered_rules",
+      "is_incremental_candidate",
+      "is_new_validated_discovery",
+      "is_incremental_false_positive",
+      "recovered_false_negative",
+      "novelty"
+    ],
+    "sha256": "c615f0e77b846b6a4e168287a71968b65d8f2b4625a69feb47487558ffea0839",
+    "producer": "atlas.deep.runner",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/path_candidates.jsonl": {
+    "path": "data/phase1_5/path_candidates.jsonl",
+    "description": "Extracted Historical/Live Candidate Path Registry",
+    "size_bytes": 4742193,
+    "record_count": 16174,
+    "schema_keys": [
+      "domain",
+      "candidate_url",
+      "path",
+      "path_category",
+      "discovery_source",
+      "first_observed_year",
+      "last_observed_year",
+      "capture_count",
+      "retrieval_priority"
+    ],
+    "sha256": "4bd44bdc7d5cbaf8a52f82e7f0679c2ae9c5291c84fa0e4826c4b5ad739ee38a",
+    "producer": "atlas.deep.collector",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/blind_paired_dossiers.jsonl": {
+    "path": "data/phase1_5/blind_paired_dossiers.jsonl",
+    "description": "Score-Hidden Paired Review Dossiers",
+    "size_bytes": 7740,
+    "record_count": 20,
+    "schema_keys": [
+      "dossier_id",
+      "domain",
+      "category",
+      "root_observed_path",
+      "deep_observed_path",
+      "total_candidates_found",
+      "total_retrievals_evaluated",
+      "review_instructions"
+    ],
+    "sha256": "acf418b6681f827d587e0ae37164c6976c2eeaf7aa2b9848cbd90b51a6dfa1a5",
+    "producer": "atlas.deep.review",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/human_reviews.jsonl": {
+    "path": "data/phase1_5/human_reviews.jsonl",
+    "description": "Paired Human Archaeological Review Verdicts",
+    "size_bytes": 6566,
+    "record_count": 20,
+    "schema_keys": [
+      "dossier_id",
+      "domain",
+      "category",
+      "root_verdict",
+      "deep_verdict",
+      "assessment_changed_by_depth",
+      "reviewer_notes",
+      "reviewed_at"
+    ],
+    "sha256": "2907aa555369a29a8f1d538217c29a1dd09b98fb1a0773e0b990e82d59375185",
+    "producer": "atlas.deep.review",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/archive_disagreements.jsonl": {
+    "path": "data/phase1_5/archive_disagreements.jsonl",
+    "description": "Cross-Archive Disagreement Records (Wayback vs CC)",
+    "size_bytes": 23470,
+    "record_count": 73,
+    "schema_keys": [
+      "domain",
+      "path_url",
+      "wayback_capture_count",
+      "wayback_earliest_year",
+      "commoncrawl_capture_count",
+      "commoncrawl_earliest_year",
+      "agreement_state",
+      "disagreement_summary"
+    ],
+    "sha256": "ec4099364879cf4581ff6611ab01be4584b2368721d3b5267ee1275d8d76b7fe",
+    "producer": "atlas.deep.cross_archive",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/resource_metrics.json": {
+    "path": "data/phase1_5/resource_metrics.json",
+    "description": "Network, Storage & Compute Resource Ledger",
+    "size_bytes": 409,
+    "record_count": 1,
+    "schema_keys": [
+      "total_http_requests_root",
+      "total_http_requests_deep",
+      "total_archive_cdx_queries_root",
+      "total_archive_cdx_queries_deep",
+      "total_bytes_downloaded_root",
+      "total_bytes_downloaded_deep",
+      "total_runtime_seconds",
+      "storage_footprint_bytes",
+      "cost_per_domain_bytes",
+      "cost_per_validated_discovery_bytes"
+    ],
+    "sha256": "83d674c860ad5efc1da5cebbc24ece1681c326b1b8ad338e1f30c86058ede1b0",
+    "producer": "atlas.deep.runner",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/experiment_manifest.json": {
+    "path": "data/phase1_5/experiment_manifest.json",
+    "description": "Phase 1.5 Experiment Configuration & Integrity Manifest",
+    "size_bytes": 384,
+    "record_count": 1,
+    "schema_keys": [
+      "experiment_id",
+      "total_study_domains",
+      "sampling_seed",
+      "domains_csv_sha256",
+      "batch_count",
+      "total_path_candidates_discovered",
+      "total_archive_disagreements_recorded",
+      "runtime_seconds",
+      "created_at"
+    ],
+    "sha256": "f3421e9187f45928287b524c5cb32ee6b698b85016f30b2f4541d921b61487c6",
+    "producer": "atlas.deep.runner",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/evidence_manifest.json": {
+    "path": "data/phase1_5/evidence_manifest.json",
+    "description": "Cryptographic Index of Frozen Raw HTML Payloads",
+    "size_bytes": 672450,
+    "record_count": 1,
+    "schema_keys": [
+      "manifest_id",
+      "created_at",
+      "total_artifacts",
+      "artifacts"
+    ],
+    "sha256": "dce98940adaa79248616a2b0e362c149ef2aea022f5b94f4fab276b399ac6322",
+    "producer": "atlas.deep.runner",
+    "git_commit": "47e6c9c"
+  },
+  "data/phase1_5/failures.jsonl": {
+    "path": "data/phase1_5/failures.jsonl",
+    "description": "Runtime Failures and Exceptions Log",
+    "size_bytes": 0,
+    "record_count": 0,
+    "schema_keys": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "producer": "atlas.deep.runner",
+    "git_commit": "47e6c9c"
+  }
+}
