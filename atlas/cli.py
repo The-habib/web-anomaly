@@ -1,4 +1,4 @@
-"""Unified Command Line Interface for Project Atlas (Phase 0.5 & Phase 1)."""
+"""Unified Command Line Interface for Project Atlas (Phase 0.5, Phase 1, and Phase 1.2)."""
 
 import sys
 import json
@@ -22,11 +22,21 @@ from atlas.phase1.review import conduct_stratified_human_review
 from atlas.phase1.metrics import compute_phase1_metrics
 from atlas.phase1.report import generate_phase1_research_reports
 
+# Phase 1.2 Subsystems
+from atlas.provenance.builder import build_corpus_v2, build_benchmark_v1
+from atlas.provenance.validator import validate_corpus_integrity
+from atlas.provenance.quality import calculate_corpus_quality
+from atlas.pilot import (
+    PilotConfig, sample_pilot_corpus, run_pilot_scan,
+    score_pilot_evidence, generate_blind_dossiers,
+    record_human_review, run_benchmark_v1_evaluation
+)
+
 def print_banner():
     print(f"""
 ===============================================================
        PROJECT ATLAS — Web Anomaly Research Laboratory
-   Version: {__version__} | Codename: {__codename__} | Scientific Mode (Phase 1)
+   Version: {__version__} | Codename: {__codename__} | Scientific Mode (Phase 1.2)
 ===============================================================
 """)
 
@@ -194,25 +204,18 @@ def cmd_phase1(args):
         print(f"[+] Research reports compiled: {rep_path}\n")
 
     elif subaction == "run":
-        # Full end-to-end execution of Phase 1
         print("[1/7] Generating Seed Corpus (N=1,000)...")
         generate_seed_corpus()
-
         print("[2/7] Executing Blind Preflight & Evidence Collection...")
         run_phase1_scan(resume=False, max_domains=getattr(args, "limit", None))
-
         print("[3/7] Freezing Collected Raw Evidence...")
         freeze_collected_evidence()
-
         print("[4/7] Running Versioned Offline Scoring Engine...")
         run_phase1_scoring()
-
         print("[5/7] Generating Multi-Criteria Candidate Rankings...")
         generate_candidate_rankings()
-
         print("[6/7] Conducting Stratified Human Review Protocol...")
         conduct_stratified_human_review()
-
         print("[7/7] Computing Final Metrics & Publication Reports...")
         metrics = compute_phase1_metrics()
         generate_phase1_research_reports(metrics)
@@ -224,6 +227,159 @@ def cmd_phase1(args):
         print(f"  Manifest: data/phase1_manifest.json")
         print(f"  Report:   reports/PHASE_1_RESULTS.md")
         print("===============================================================\n")
+
+# Phase 1.2 Corpus Subcommands
+def cmd_corpus(args):
+    print_banner()
+    action = args.corpus_action
+
+    if action == "build":
+        print("[*] Building Corpus v2 (Zero Synthetic, Provenance-Backed)...")
+        corpus, quality, manifest = build_corpus_v2()
+        print(f"[+] Corpus v2 successfully built: {len(corpus)} domains in data/corpus_v2/seed_corpus_v2.csv")
+        print(f"    Quality Score: {quality.overall_quality_score:.4f} (1.0 = Perfect)")
+        print(f"    Synthetic Rate: {quality.synthetic_rate * 100:.1f}% (Count: {manifest.synthetic_count})")
+        print(f"    Duplicate Rate: {quality.duplicate_rate * 100:.1f}%")
+        print(f"    Manifest: data/corpus_v2/corpus_manifest.json\n")
+
+    elif action == "validate":
+        print("[*] Validating Corpus v2 Integrity...")
+        manifest_file = Path("data/corpus_v2/corpus_manifest.json")
+        if not manifest_file.exists():
+            print("[-] Error: Corpus v2 not found. Run 'atlas corpus build' first.")
+            sys.exit(1)
+        with open(manifest_file, "r", encoding="utf-8") as f:
+            manifest_data = json.load(f)
+
+        synthetic_count = manifest_data.get("synthetic_count", 0)
+        duplicate_count = manifest_data.get("duplicate_count", 0)
+        total_domains = manifest_data.get("total_domains", 0)
+
+        print(f"    Total Domains:      {total_domains}")
+        print(f"    Synthetic Domains:  {synthetic_count}")
+        print(f"    Duplicate Domains:  {duplicate_count}")
+
+        if synthetic_count > 0 or duplicate_count > 0 or total_domains < 1000:
+            print("\n\033[91m[-] VALIDATION FAILED: Zero-synthetic policy or quota violated!\033[0m\n")
+            sys.exit(1)
+        else:
+            print("\n\033[92m[+] VALIDATION PASSED: 100% real-world verified domains with complete provenance.\033[0m\n")
+
+    elif action == "audit":
+        quality_file = Path("data/corpus_v2/corpus_quality.json")
+        if not quality_file.exists():
+            print("[-] Error: Corpus quality file not found. Run 'atlas corpus build' first.")
+            sys.exit(1)
+        with open(quality_file, "r", encoding="utf-8") as f:
+            q_data = json.load(f)
+        print("Corpus v2 Quality & Bias Audit Metrics:")
+        print(json.dumps(q_data, indent=2))
+
+    elif action == "stats":
+        manifest_file = Path("data/corpus_v2/corpus_manifest.json")
+        if not manifest_file.exists():
+            print("[-] Error: Corpus manifest not found. Run 'atlas corpus build' first.")
+            sys.exit(1)
+        with open(manifest_file, "r", encoding="utf-8") as f:
+            m_data = json.load(f)
+        print(f"Corpus ID: {m_data.get('corpus_id')} (Seed {m_data.get('seed')})")
+        print(f"Candidate Pool Counts: {m_data.get('candidate_pool_counts')}")
+        print(f"Final Sampled Counts:  {m_data.get('final_counts')}")
+
+    elif action == "manifest":
+        manifest_file = Path("data/corpus_v2/corpus_manifest.json")
+        if not manifest_file.exists():
+            print("[-] Error: Corpus manifest not found. Run 'atlas corpus build' first.")
+            sys.exit(1)
+        with open(manifest_file, "r", encoding="utf-8") as f:
+            print(f.read())
+
+# Phase 1.2 Pilot Subcommands
+def cmd_pilot(args):
+    print_banner()
+    action = args.pilot_action
+    config = PilotConfig()
+
+    if action == "run" or action == "resume":
+        is_resume = (action == "resume")
+        print(f"[*] Running 200-Domain Pilot Scan (Resume={is_resume})...")
+        pilot_records, csv_p, prov_p = sample_pilot_corpus(config)
+        evidence_list, pilot_manifest = run_pilot_scan(pilot_records, config, resume=is_resume)
+        scoring_records, score_p = score_pilot_evidence(evidence_list, config)
+        print(f"[+] Pilot Scan Complete:")
+        print(f"    Domains Processed: {len(evidence_list)} across {pilot_manifest.batch_count} batches")
+        print(f"    Evidence File:     data/phase1_2_pilot/pilot_evidence.jsonl")
+        print(f"    Scores File:       {score_p}")
+        high = sum(1 for s in scoring_records if s.classification == "HIGH_ANOMALY")
+        cand = sum(1 for s in scoring_records if s.classification == "CANDIDATE_ANOMALY")
+        ord_ = sum(1 for s in scoring_records if s.classification == "ORDINARY")
+        print(f"    Distribution:      HIGH={high}, CANDIDATE={cand}, ORDINARY={ord_}\n")
+
+    elif action == "review":
+        print("[*] Generating Blind Review Dossiers (Score-Hiding) & Recording Reviews...")
+        pilot_records, _, _ = sample_pilot_corpus(config)
+        evidence_list, _ = run_pilot_scan(pilot_records, config, resume=True)
+        scoring_records, _ = score_pilot_evidence(evidence_list, config)
+        dossiers, dos_p = generate_blind_dossiers(evidence_list, scoring_records, config)
+        reviews, rev_p = record_human_review(dossiers, scoring_records, config)
+        acc_count = sum(1 for r in reviews if r.system_score_was_accurate)
+        print(f"[+] Generated {len(dossiers)} blind dossiers in {dos_p}")
+        print(f"[+] Recorded {len(reviews)} reviews in {rev_p}")
+        print(f"    Human-System Agreement Rate: {acc_count}/{len(reviews)} ({acc_count/len(reviews)*100:.1f}%)\n")
+
+    elif action == "report":
+        scores_file = Path("data/phase1_2_pilot/pilot_scores.jsonl")
+        if not scores_file.exists():
+            print("[-] Error: Pilot scores not found. Run 'atlas pilot run' first.")
+            sys.exit(1)
+        scores = []
+        with open(scores_file, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    scores.append(json.loads(line))
+        print(f"Pilot Results Summary ({len(scores)} domains total):")
+        print(f"{'PILOT ID':<12} {'DOMAIN':<30} {'CATEGORY':<25} {'SCORE':<8} {'CLASSIFICATION'}")
+        print("-" * 95)
+        for s in scores[:15]:
+            print(f"{s['pilot_id']:<12} {s['domain']:<30} {s['category']:<25} {s['raw_anomaly_score']:<8.1f} {s['classification']}")
+        if len(scores) > 15:
+            print(f"... and {len(scores) - 15} more domains.")
+        print()
+
+# Phase 1.2 Benchmark Subcommands
+def cmd_benchmark(args):
+    print_banner()
+    action = args.benchmark_action
+
+    if action == "build":
+        print("[*] Building Benchmark v1 (Curated Reference Dataset)...")
+        benchmarks = build_benchmark_v1()
+        print(f"[+] Benchmark v1 built: {len(benchmarks)} reference domains in data/benchmark_v1/")
+        print(f"    Manifest: data/benchmark_v1/manifest.json\n")
+
+    elif action == "run":
+        print("[*] Running Benchmark v1 Evaluation Pipeline...")
+        eval_summary = run_benchmark_v1_evaluation()
+        metrics = eval_summary["metrics"]
+        print("[+] Benchmark v1 Evaluation Complete:")
+        print(f"    Accuracy:     {metrics['accuracy']*100:.2f}%")
+        print(f"    Precision:    {metrics['precision']*100:.2f}%")
+        print(f"    Recall:       {metrics['recall']*100:.2f}%")
+        print(f"    F1 Score:     {metrics['f1_score']*100:.2f}%")
+        print(f"    Specificity:  {metrics['specificity']*100:.2f}%")
+        print(f"    FP Rate:      {metrics['false_positive_rate']*100:.2f}%")
+        print(f"    FN Rate:      {metrics['false_negative_rate']*100:.2f}%")
+        print(f"    Report Saved: data/benchmark_v1/benchmark_evaluation.json\n")
+
+    elif action == "validate":
+        manifest_file = Path("data/benchmark_v1/manifest.json")
+        if not manifest_file.exists():
+            print("[-] Error: Benchmark v1 manifest not found. Run 'atlas benchmark build' first.")
+            sys.exit(1)
+        with open(manifest_file, "r", encoding="utf-8") as f:
+            m_data = json.load(f)
+        print("Benchmark v1 Manifest Validation:")
+        print(json.dumps(m_data, indent=2))
 
 def main():
     parser = argparse.ArgumentParser(
@@ -262,6 +418,18 @@ def main():
     p1_parser.add_argument("--resume", action="store_true", help="Resume from last checkpoint")
     p1_parser.add_argument("--limit", type=int, help="Limit number of domains for test runs", default=None)
 
+    # corpus (Phase 1.2)
+    corpus_parser = subparsers.add_parser("corpus", help="Corpus v2 Management & Quality Subsystem")
+    corpus_parser.add_argument("corpus_action", choices=["build", "validate", "audit", "stats", "manifest"], help="Corpus operation")
+
+    # pilot (Phase 1.2)
+    pilot_parser = subparsers.add_parser("pilot", help="Phase 1.2 200-Domain Pilot Subsystem")
+    pilot_parser.add_argument("pilot_action", choices=["run", "resume", "review", "report"], help="Pilot operation")
+
+    # benchmark (Phase 1.2)
+    bench_parser = subparsers.add_parser("benchmark", help="Benchmark v1 Evaluation Subsystem")
+    bench_parser.add_argument("benchmark_action", choices=["build", "run", "validate"], help="Benchmark operation")
+
     args = parser.parse_args()
 
     if args.command == "scan":
@@ -285,6 +453,12 @@ def main():
             evidence_parser.print_help()
     elif args.command == "phase1":
         cmd_phase1(args)
+    elif args.command == "corpus":
+        cmd_corpus(args)
+    elif args.command == "pilot":
+        cmd_pilot(args)
+    elif args.command == "benchmark":
+        cmd_benchmark(args)
     else:
         print_banner()
         parser.print_help()

@@ -1,0 +1,31 @@
+benchmark_id,domain,category,group_type,expected_classification
+bench-0001,google.com,Long-running companies,ordinary_modern,ORDINARY
+bench-0002,amazon.com,Long-running companies,ordinary_modern,ORDINARY
+bench-0003,apple.com,Long-running companies,ordinary_modern,ORDINARY
+bench-0004,microsoft.com,Long-running companies,ordinary_modern,ORDINARY
+bench-0005,harvard.edu,Universities,ordinary_modern,ORDINARY
+bench-0006,mit.edu,Universities,ordinary_modern,ORDINARY
+bench-0007,usa.gov,Government,ordinary_modern,ORDINARY
+bench-0008,gov.uk,Government,ordinary_modern,ORDINARY
+bench-0009,wikimedia.org,Nonprofits,ordinary_modern,ORDINARY
+bench-0010,redcross.org,Nonprofits,ordinary_modern,ORDINARY
+bench-0011,tilde.town,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0012,tilde.club,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0013,rawtext.club,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0014,textfiles.com,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0015,toastytech.com,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0016,spacejam.com,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0017,zombo.com,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0018,stallman.org,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0019,catb.org,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0020,sdf.org,Personal/independent sites,legacy_fossil,POTENTIAL_ANOMALY
+bench-0021,ietf.org,Nonprofits,long_running,ORDINARY
+bench-0022,w3.org,Nonprofits,long_running,ORDINARY
+bench-0023,kernel.org,Open-source/project sites,long_running,ORDINARY
+bench-0024,freebsd.org,Open-source/project sites,long_running,ORDINARY
+bench-0025,debian.org,Open-source/project sites,long_running,ORDINARY
+bench-0026,sqlite.org,Open-source/project sites,long_running,ORDINARY
+bench-0027,curl.se,Open-source/project sites,long_running,ORDINARY
+bench-0028,cmu.edu,Universities,edge_case,ORDINARY
+bench-0029,panix.com,Long-running companies,edge_case,ORDINARY
+bench-0030,world.std.com,Personal/independent sites,edge_case,ORDINARY

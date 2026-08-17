@@ -1,0 +1,473 @@
+{
+  "benchmark_version": "v1.0",
+  "evaluated_at": "2026-08-17T20:33:57.194997+00:00",
+  "total_domains": 30,
+  "confusion_matrix": {
+    "true_positives": 7,
+    "true_negatives": 20,
+    "false_positives": 0,
+    "false_negatives": 3
+  },
+  "metrics": {
+    "accuracy": 0.9,
+    "precision": 1.0,
+    "recall": 0.7,
+    "f1_score": 0.8235,
+    "specificity": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.3
+  },
+  "group_accuracy": {
+    "ordinary_modern": {
+      "total": 10,
+      "correct": 10,
+      "accuracy": 1.0,
+      "mean_score": 0.0
+    },
+    "legacy_fossil": {
+      "total": 10,
+      "correct": 7,
+      "accuracy": 0.7,
+      "mean_score": 64.0
+    },
+    "long_running": {
+      "total": 7,
+      "correct": 7,
+      "accuracy": 1.0,
+      "mean_score": 0.0
+    },
+    "edge_case": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "mean_score": 0.0
+    }
+  },
+  "individual_results": [
+    {
+      "benchmark_id": "bench-0001",
+      "domain": "google.com",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0002",
+      "domain": "amazon.com",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0003",
+      "domain": "apple.com",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0004",
+      "domain": "microsoft.com",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0005",
+      "domain": "harvard.edu",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0006",
+      "domain": "mit.edu",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0007",
+      "domain": "usa.gov",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0008",
+      "domain": "gov.uk",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0009",
+      "domain": "wikimedia.org",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0010",
+      "domain": "redcross.org",
+      "group_type": "ordinary_modern",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0011",
+      "domain": "tilde.town",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": false,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0012",
+      "domain": "tilde.club",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": false,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0013",
+      "domain": "rawtext.club",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": false,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0014",
+      "domain": "textfiles.com",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 90.0,
+      "confidence": 0.95,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_tables_layout",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0015",
+      "domain": "toastytech.com",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 90.0,
+      "confidence": 0.95,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_tables_layout",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0016",
+      "domain": "spacejam.com",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 100.0,
+      "confidence": 1.0,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_frameset_architecture",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0017",
+      "domain": "zombo.com",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 90.0,
+      "confidence": 0.95,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_tables_layout",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0018",
+      "domain": "stallman.org",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 90.0,
+      "confidence": 0.95,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_tables_layout",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0019",
+      "domain": "catb.org",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 90.0,
+      "confidence": 0.95,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_tables_layout",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0020",
+      "domain": "sdf.org",
+      "group_type": "legacy_fossil",
+      "expected_classification": "POTENTIAL_ANOMALY",
+      "predicted_classification": "HIGH_ANOMALY",
+      "raw_score": 90.0,
+      "confidence": 0.95,
+      "is_correct": true,
+      "triggered_rules": [
+        "high_historical_stability",
+        "html_tables_layout",
+        "retro_styling_elements",
+        "deep_archive_persistence_1996"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0021",
+      "domain": "ietf.org",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0022",
+      "domain": "w3.org",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0023",
+      "domain": "kernel.org",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": true,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0024",
+      "domain": "freebsd.org",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": true,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0025",
+      "domain": "debian.org",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": true,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0026",
+      "domain": "sqlite.org",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": true,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0027",
+      "domain": "curl.se",
+      "group_type": "long_running",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": true,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0028",
+      "domain": "cmu.edu",
+      "group_type": "edge_case",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0029",
+      "domain": "panix.com",
+      "group_type": "edge_case",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.6,
+      "is_correct": true,
+      "triggered_rules": [
+        "deep_archive_persistence_1996",
+        "modern_framework_penalty"
+      ]
+    },
+    {
+      "benchmark_id": "bench-0030",
+      "domain": "world.std.com",
+      "group_type": "edge_case",
+      "expected_classification": "ORDINARY",
+      "predicted_classification": "ORDINARY",
+      "raw_score": 0.0,
+      "confidence": 0.55,
+      "is_correct": true,
+      "triggered_rules": [
+        "modern_framework_penalty"
+      ]
+    }
+  ]
+}
