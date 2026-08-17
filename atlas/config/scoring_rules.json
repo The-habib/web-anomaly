@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "min_discovery_threshold": 4,
+  "rules": [
+    {
+      "id": "persistence_15yr",
+      "name": "15+ Year Web Persistence",
+      "category": "temporal",
+      "weight": 2,
+      "description": "Page or host has been continuously archived and accessible for over 15 years."
+    },
+    {
+      "id": "resurrection",
+      "name": "Domain / URL Resurrection",
+      "category": "temporal",
+      "weight": 5,
+      "description": "URL was active, disappeared for >= 2 years (404/NXDOMAIN), and returned with active content."
+    },
+    {
+      "id": "hidden_sitemap",
+      "name": "Unlisted Sitemap Discovery",
+      "category": "structural",
+      "weight": 2,
+      "description": "Valid sitemap XML found at non-standard or unlinked endpoints."
+    },
+    {
+      "id": "robots_txt_anomaly",
+      "name": "Robots.txt Historical Discrepancy",
+      "category": "policy",
+      "weight": 2,
+      "description": "Robots.txt contains anomalous disallow directives pointing to forgotten endpoints or fossil paths."
+    },
+    {
+      "id": "technology_fossil",
+      "name": "Historical Technology Fossil",
+      "category": "technological",
+      "weight": 4,
+      "description": "Markup contains legacy technologies (e.g., Macromedia Flash, FrontPage, Netscape tags, XHTML 1.0, archaic CMS)."
+    },
+    {
+      "id": "major_redesign",
+      "name": "Abrupt Structural / Tech Shift",
+      "category": "evolutionary",
+      "weight": 3,
+      "description": "Drastic content length, DOM structure, or tech-stack shift observed in temporal timeline."
+    },
+    {
+      "id": "low_discoverability",
+      "name": "Low Discoverability / Zero Inbound",
+      "category": "graph",
+      "weight": 4,
+      "description": "Page is not linked from homepage or main navigation yet remains publicly live."
+    },
+    {
+      "id": "orphaned_survivor",
+      "name": "Orphaned Surviving Subpage",
+      "category": "structural",
+      "weight": 3,
+      "description": "Deep subpage active while parent directory or homepage has been retired or replaced."
+    },
+    {
+      "id": "forgotten_archive",
+      "name": "Forgotten Public File / Directory Index",
+      "category": "content",
+      "weight": 3,
+      "description": "Open directory index or exposed backup/archive directory on a live server."
+    }
+  ]
+}
