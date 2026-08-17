@@ -1,0 +1,3981 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="theme-device ">
+
+<head>
+    <title>The science of loudness</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="impact-site-verification" value="805abea2-eaaa-4a33-8250-9448e4976bd2">
+    
+
+    
+    <meta name="amos-face" content="https://cdn.fasterthanli.me/content/articles/the-virtue-of-unsynn/amos-face~6eabffd6c6ca3b04.avif">
+
+    
+    <link rel="icon" type="image/jxl" href="https://cdn.fasterthanli.me/content/img/favicon~72ac4ba96bed6dad.jxl">
+    <link rel="icon" type="image/webp" href="https://cdn.fasterthanli.me/content/img/favicon~679ae9c272874bba.webp">
+    <link rel="icon" type="image/avif" href="https://cdn.fasterthanli.me/content/img/favicon~fc5931f361bf516c.avif">
+
+    <meta property="og:site_name" content="fasterthanli.me">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta name="theme-color" content="#f64c4c">
+    <meta property="og:title" content="The science of loudness"><meta property="og:image" content="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/_thumb~ce672f8fe6712272.png">
+    <meta property="og:image:width" content="3842">
+    <meta property="og:image:height" content="2162">
+
+    <meta property="og:description" content="My watch has a “Noise” app: it shows , for decibels.
+My amp has a volume knob, which also shows decibels, although.. negative ones, this time.
+And finally, my video editing software has a ton of me...">
+    <meta name="description" content="My watch has a “Noise” app: it shows , for decibels.
+My amp has a volume knob, which also shows decibels, although.. negative ones, this time.
+And finally, my video editing software has a ton of me...">
+    <meta name="author" content="Amos Wenger"><meta name="article:tag" content="audio"><meta name="article:tag" content="maths"><meta name="article:tag" content="physics"><meta property="article:published_time" content="2025-08-22T20:30:00Z"><link href="/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Outfit:wght@100..900&display=swap">
+
+    <style>
+        @font-face {
+    font-family: "ZedTextFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/ZedTextL-Regular~69f269ea849a04f6.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ZedTextFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/ZedTextL-Bold~f8c62afa20558c5b.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SymbolsNfMonoFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/SymbolsNerdFontMono-Regular-subset~592f1c6ab55eb2ef.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/IosevkaFTLNerdFont-Regular-subset~bf272da82490b046.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/IosevkaFTLNerdFont-Bold-subset~1b29fcdaf00aca13.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ZedDisplayFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/ZedDisplayL-Heavy~d4e1b849e7cfad26.woff2) format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BerkeleyMonoFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/BerkeleyMono-Condensed~53d681071fb8e699.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BerkeleyMonoFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/BerkeleyMono-Bold-Condensed~53932dfc510a8962.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BerkeleyMonoFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/BerkeleyMono-Condensed-Oblique~47fd27e8529fd046.woff2) format("woff2");
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BerkeleyMonoFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/BerkeleyMono-Bold-Condensed-Oblique~46de397d0dd66acd.woff2) format("woff2");
+    font-weight: 700;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BerkeleyMonoFtl";
+    src: url(https://cdn.fasterthanli.me/content/fonts/BerkeleyMono-Condensed-Oblique~47fd27e8529fd046.woff2) format("woff2");
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --small-bp-under: 699px;
+    --medium-bp-over: 700px;
+    --medium-large-bp-over: 950px;
+    --large-bp-over: 1400px;
+
+    --font-size-base: 13.24px;
+    /* mostly-banned: sharp, angular corners across the site */
+    --border-radius: 0;
+
+    --secondary-color: light-dark(#24213f, #333);
+    --topnav-height: 4.2em;
+
+    --font-inline-code-size: 1em;
+
+    --font-display: "Outfit", sans-serif;
+    --font-title: "Outfit", sans-serif;
+    --font-text: "Commissioner", sans-serif;
+    --font-ui: "Commissioner", sans-serif;
+    --font-code: "IosevkaFtl", "SymbolsNfMonoFtl", monospace;
+    --font-symbol: "SymbolsNfMonoFtl", monospace;
+
+    --ftl-blue: #e30a47;
+    --ftl-blue-light: #ff4a60;
+
+    --line-height: 1.74;
+
+    --page-width: 920px;
+    --present-page-width: 45vw;
+
+    --dark-bg: #1f1f1f;
+    --dark-bg-2: #282828;
+
+    --inlay-bg: #f6f6f6;
+    --inlay-bg-dark: #282828;
+
+    --p-black: #1b1f23;
+    --p-white-dark: black;
+
+    --p-white: #fff;
+    --p-black-dark: white;
+
+    --amos-color: light-dark(#c3e1fd4d, #4b56694d);
+    --amos-border-color: light-dark(#9bc3e8cc, #67a3c366);
+
+    --bear-color: light-dark(#f7eebd4d, #4d4d4d4d);
+    --bear-border-color: light-dark(#e9d992cc, #c3b16766);
+
+    --exclusive-border-color: light-dark(#b49d4e, color-mix(in srgb, #a1872e, black 10%));
+    --exclusive-background-color: light-dark(color-mix(in srgb, #fffbdf, white 4%), color-mix(in srgb, color-mix(in srgb, #261c01, transparent 12%), white 10%));
+    --exclusive-chip-bg-color: light-dark(#f7e53a, #f7de35);
+    --exclusive-chip-text-color: rgb(50, 50, 50);
+
+    --secondary-text-color: light-dark(#636363, #d8d8d8);
+
+    --accent-color: light-dark(#e30a47, #ff4a60);
+    --link-color: var(--accent-color);
+
+    --text-decoration-thickness: 1px;
+    --text-decoration-color: color-mix(in srgb, var(--link-color) 77%, transparent);
+
+    --visited-link-color: light-dark(#8223c1, color(#8223c1 lightness(+30%)));
+
+    --discreet-link-color: var(--link-color);
+
+    --secondary-color: light-dark(#24213f, #333);
+    --secondary-border-color: light-dark(
+        color-mix(in srgb, #24213f 97%, black 3%),
+        color-mix(in srgb, #333 85%, black 15%)
+    );
+
+    --code-border-color: transparent;
+
+    --code-font-size: 1.1rem;
+    --text-font-size: 1.18rem;
+    --ui-font-size: 0.98rem;
+
+    --box-shadow-color: light-dark(#ccc, #3a3a3a);
+    --page-html-bg: var(--html-bg);
+    --secondary-bg: light-dark(#fafafa, #1a1a1a);
+    --html-bg: light-dark(#ffffff, #0a0a0a);
+
+    --p-white: #fff;
+    --p-black: #1b1f23;
+
+    --border-color: light-dark(#e2e8f0, #232323);
+
+    --page-padding-inline: 1.4rem;
+    --page-padding-block: 1.4rem;
+}
+
+@media (max-width: 699px) {
+    :root {
+        --page-padding-inline: 1.2rem;
+        --page-padding-block: 0.9rem;
+    }
+}
+
+@media (min-width: 700px) {
+    :root {
+        --page-padding-inline: 3.1rem;
+        --page-padding-block: 1.4rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    :root {
+        --page-padding-inline: 4.2rem;
+        --page-padding-block: 1.8rem;
+    }
+}
+html {
+    font-family: var(--font-text);
+    background: var(--html-bg);
+    color: light-dark(#1a1a1e, #e0e0e0);
+    font-size: var(--font-size-base);
+    scroll-padding-top: 20px;
+    color-scheme: light dark;
+}
+
+/* articles & most pages are white; the homepage is grey so its white cards pop */
+html.is-frontpage {
+    --html-bg: light-dark(#f3f4f6, #0a0a0a);
+}
+
+html.prez {
+    font-size: 22px;
+    transform: scaleX(-1);
+    color-scheme: dark !important;
+
+    .markup-container {
+        code,
+        code pre {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: calc(var(--font-size-base) * 1.05);
+    }
+}
+
+@media (min-width: 950px) {
+    html {
+        font-size: calc(var(--font-size-base) * 1.12);
+    }
+}
+
+body {
+    line-height: var(--line-height);
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+abbr {
+    text-decoration: underline;
+    text-decoration-thickness: var(--text-decoration-thickness);
+    text-decoration-style: dashed;
+    cursor: help;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration-thickness: var(--text-decoration-thickness);
+    text-decoration-color: var(--text-decoration-color);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+.sublink {
+    display: inline-block;
+    padding: 0.4em;
+    font-size: 80%;
+    text-decoration: none;
+    color: light-dark(#333, #ccc);
+
+    &:before {
+        content: "» ";
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:hover {
+        color: var(--link-color);
+    }
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+hr {
+    margin: 1.2rem auto;
+    background: none;
+    color: var(--secondary-color);
+}
+
+math {
+    font-size: 1.12em;
+}
+
+.body-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    min-height: 100vh;
+
+    .content {
+        flex-grow: 1;
+
+        main {
+            min-height: 100%;
+        }
+    }
+}
+
+.button-row {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    font-family: var(--ui-font);
+
+    border-radius: var(--border-radius);
+    background: var(--accent-color);
+
+    padding: 0 1rem;
+    height: 36px;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+
+    &,
+    &:visited {
+        color: white;
+    }
+
+    &,
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:hover {
+        background: color-mix(in srgb, white 5%, var(--accent-color));
+        transform: scale(0.99);
+    }
+
+    &.disabled {
+        cursor: disabled;
+        background: #eaeaea;
+    }
+
+    &.secondary {
+        background: light-dark(
+        color-mix(in srgb, black 20%, var(--accent-color)),
+        color-mix(in srgb, black 35%, var(--accent-color))
+        );
+    }
+
+    &.large {
+        font-size: 1rem;
+        padding: 1.2rem 0.8rem;
+
+        img {
+            margin-right: 0.4em;
+            width: 1.4em;
+            height: 1.4em;
+        }
+    }
+
+    .label {
+        white-space: nowrap;
+    }
+
+    img {
+        margin-right: 0.7rem;
+        width: 1.2em;
+        height: 1.2em;
+    }
+}
+
+.medium-and-up {
+    display: none;
+
+    @include mixins.when-medium {
+        display: initial;
+    }
+}
+
+.bottom-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reading-time,
+.video-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+
+    abbr {
+        text-decoration: none;
+        text-underline: none;
+    }
+}
+
+.future-indicator,
+.draft-indicator,
+.ongoing-indicator,
+.exclusive-indicator,
+.early-access-indicator,
+.complete-indicator, .video-indicator {
+    color: light-dark(white, white);
+    background: var(--accent-color);
+
+    border-radius: 1em;
+    padding: 0.1em 0.8em;
+    vertical-align: middle;
+    font-size: 0.7em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.ongoing-indicator {
+    background: var(--link-color);
+}
+
+.complete-indicator {
+    background: var(--link-color);
+}
+
+.exclusive-indicator, .early-access-indicator {
+    background: var(--exclusive-chip-bg-color);
+    color: var(--exclusive-chip-text-color);
+}
+
+.video-indicator {
+    background: #ff6b35;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, var(--page-width)) 1fr;
+    align-items: start;
+
+    > .table-of-contents menu {
+        display: none;
+    }
+
+    > .page-html {
+        grid-column: 2;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        min-height: calc(100vh - 150px);
+        background: var(--page-html-bg);
+    }
+
+    > .table-of-contents {
+        grid-column: 3;
+        justify-self: start;
+        width: min(17rem, 100%);
+    }
+
+    .page-html-padded {
+        padding-block: var(--page-padding-block);
+        padding-inline: var(--page-padding-inline);
+
+        .page-thumbnail-container.main-thumbnail {
+            max-width: calc(100% + 2 * var(--page-padding-inline));
+            width: calc(100% + 2 * var(--page-padding-inline));
+            margin-inline-start: calc(-1 * var(--page-padding-inline));
+            margin-block-start: calc(-1 * var(--page-padding-block) - 2px);
+        }
+    }
+
+    .table-of-contents {
+        font-size: .92rem;
+        font-family: var(--font-ui);
+
+        a {
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            padding-top: 0;
+
+            &,
+            a {
+                color: inherit;
+            }
+        }
+
+        h1 {
+            font-size: 1.15em;
+        }
+
+        h2 {
+            font-size: 1.12em;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 1em;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        menu {
+            font-size: inherit;
+            li {
+                list-style-type: none;
+                text-indent: none;
+                margin: 0;
+                padding: 0;
+
+                padding-inline: 0.7em;
+                line-height: 1.35;
+
+                color: var(--secondary-text-color);
+                border-left: 2px solid transparent;
+                transition: color 0.12s ease, border-color 0.12s ease;
+
+                &.past {
+                    color: light-dark(#5a5a5a, #9a9a9a);
+                }
+
+                &:not(.reading):hover {
+                    color: light-dark(#111, #fafafa);
+                    border-left-color: light-dark(#d4d4d4, #444);
+                }
+
+                &.reading {
+                    color: var(--accent-color);
+                    border-left-color: var(--accent-color);
+                    font-weight: 600;
+                    position: relative;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none !important;
+                    display: inline-block;
+                    width: 100%;
+
+                    padding-top: 0.32em;
+                    padding-bottom: 0.32em;
+                }
+
+                &[data-level="3"] a {
+                    padding-left: 0.5em;
+                }
+
+                &[data-level="4"] a {
+                    padding-left: 1em;
+                }
+
+                &[data-level="5"] a {
+                    padding-left: 1.5em;
+                }
+
+                &[data-level="6"] a {
+                    padding-left: 2em;
+                }
+            }
+        }
+    }
+}
+
+.table-of-contents .toc-header {
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.7em;
+}
+
+@media (min-width: 950px) {
+    main {
+        > .table-of-contents {
+            padding: 1em 2em;
+
+            menu {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+        > .table-of-contents {
+            width: min(20rem, 100%);
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .table-of-contents {
+        position: sticky;
+        top: 60px;
+
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+}
+
+.series-nav {
+    padding-top: 0.4rem;
+    padding-bottom: 2.8rem;
+
+    .series-title {
+        font-weight: 200;
+        font-size: 1rem;
+
+        a {
+            font-weight: 350;
+        }
+    }
+
+    .series-circles {
+        font-family: var(--font-ui);
+        padding-top: 0.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.15rem;
+
+        .series-circle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 0.3rem;
+
+            width: 1.8rem;
+            height: 1.8rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+
+            h2 {
+                font-family: inherit;
+                font-size: inherit;
+                padding: 0;
+                margin: 0;
+            }
+
+            &.series-circle-past {
+                background: var(--link-color);
+                color: light-dark(#fafafa, #1a1a1a);
+            }
+
+            &.series-circle-current {
+                background: var(--link-color);
+                color: light-dark(#fafafa, #1a1a1a);
+            }
+
+            &.series-circle-future {
+                color: inherit;
+                background: light-dark(#f1f1f1, color-mix(in srgb, #2a2a2a 95%, white));
+
+                &:hover {
+                    background: light-dark(#e5e5e5, #3a3a3a);
+                }
+            }
+        }
+    }
+}
+
+.nav-bottom {
+    background: var(--accent-color);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+
+    padding: 2em 2em;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+
+    .nav-outlinks {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.4rem;
+
+        &.icons {
+            gap: 1.2em;
+
+            a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .inline-icon-container {
+                svg {
+                    --side: 2em;
+                    width: var(--side);
+                    height: var(--side);
+                    vertical-align: middle;
+                    fill: white;
+                }
+
+                margin-block: 0.4em;
+                margin-inline-end: 0.4em;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s;
+
+            &:hover {
+                transform: scale(1.1) rotate(0.5deg);
+            }
+        }
+    }
+}
+
+.hide-when-small {
+    @include mixins.when-small {
+        display: none;
+    }
+}
+
+@keyframes loading-bounce {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(2deg);
+    }
+    60% {
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+}
+
+.inline-icon {
+    width: 0.92em;
+    height: 0.92em;
+}
+
+#page-topnav {
+    font-family: var(--font-ui);
+    height: var(--topnav-height);
+    z-index: 10;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--accent-color);
+
+    padding: 0;
+    margin: 0;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.modal {
+    z-index: 100;
+}
+
+media-player {
+    line-height: 0;
+    aspect-ratio: initial;
+
+    video {
+        height: 100%;
+    }
+}
+
+figure.code-block {
+    width: 100%;
+}
+
+.page-thumbnail-container {
+    pointer-events: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-block-end: -4.1em;
+    position: relative;
+    display: inline-block;
+    overflow-x: hidden;
+
+    img {
+        mask-image: linear-gradient( to bottom, black 10%, transparent 92% );
+        -webkit-mask-image: linear-gradient( to bottom, black 10%, transparent 92% );
+    }
+}
+
+.page-thumbnail {
+    height: auto;
+    overflow: hidden;
+    display: block;
+}
+
+::target-text {
+    background-color: rgba(255, 217, 0, 0.4);
+    color: inherit;
+    outline: 2px solid rgba(255, 217, 0, 0.7);
+    border-radius: 2px;
+    padding: 0 2px;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: rgba(255, 217, 0, 0.3);
+        outline: 2px solid rgba(255, 217, 0, 0.6);
+    }
+}
+
+.post-list {
+    .month-header {
+        font-family: var(--font-display);
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+}
+
+.exclusive-star {
+    position: absolute;
+    z-index: 10;
+
+    --side: 3.4rem;
+    top: calc(var(--side) * -0.4);
+    right: calc(var(--side) * -0.4);
+
+    transition: all 0.2s;
+
+    @include mixins.when-small {
+        display: none;
+    }
+
+    img {
+        width: var(--side);
+        height: var(--side);
+        transform: scaleX(-1);
+    }
+
+    &:hover {
+        transform: scale(1.05) rotate(0.5deg);
+    }
+}
+
+.post-list-item {
+    --item-radius: 0;
+    border-radius: var(--item-radius);
+    padding: 1.25em 1.5em;
+
+    position: relative;
+    background: light-dark(#ffffff, #141416);
+    box-shadow: 0 1px 3px light-dark(rgba(20, 24, 40, 0.06), rgba(0, 0, 0, 0.3));
+
+    &.no-summary {
+        margin-bottom: 1.4em;
+    }
+
+    &.exclusive {
+        border: var(--border-width) solid var(--exclusive-border-color);
+        position: relative;
+    }
+
+    &.video {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .video-embed {
+            width: 100%;
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            .video-thumb-link {
+                display: block;
+                position: relative;
+
+                .video-thumb-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5em;
+                    background: rgba(0,0,0,0.3);
+                    border-radius: 8px;
+                    transition: background 0.2s;
+
+                    .play-icon {
+                        font-size: 3em;
+                        color: white;
+                        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+                    }
+
+                    .silver-badge {
+                        background: linear-gradient(135deg, #c0c0c0, #a0a0a0);
+                        color: #333;
+                        padding: 0.3em 0.8em;
+                        border-radius: 4px;
+                        font-size: 0.9em;
+                        font-weight: bold;
+                    }
+                }
+
+                &:hover .video-thumb-overlay {
+                    background: rgba(0,0,0,0.5);
+                }
+            }
+        }
+
+        .post-list-item-inner {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 699px) {
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: none !important;
+
+        border-radius: 0;
+        margin-inline: calc(-1 * var(--page-padding-small));
+        margin-block-end: -0.4em;
+
+        background: transparent;
+
+        .page-thumbnail-container {
+            max-width: calc(100% + 2 * var(--page-padding-inline));
+            width: calc(100% + 2 * var(--page-padding-inline));
+            margin-inline: calc(-1 * var(--page-padding-inline));
+            border-radius: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 1.4em;
+        }
+
+        .post-list-item-thumb {
+            border-radius: 0;
+        }
+    }
+
+    .post-link {
+        display: inline-block;
+        text-wrap: balance;
+        white-space: unset;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .post-list-thumb {
+        float: right;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+        width: 140px;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @media (max-width: 699px) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+
+    .post-list-title {
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 1.5em;
+        line-height: 1.3;
+        margin: 0 0 0.5em 0;
+
+        b {
+            color: light-dark(#000, #000);
+            background: light-dark(#fffb94cc, #fff796f7);
+            padding: 0.1em 0.15em;
+            font-weight: bold;
+            border-radius: var(--border-radius);
+        }
+    }
+
+    .post-metadata {
+        font-family: var(--font-ui);
+        font-size: 0.85em;
+        opacity: 0.7;
+        color: var(--secondary-text-color);
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75em;
+
+        margin-bottom: 0.75em;
+        padding-bottom: 0.75em;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .post-summary {
+        font-size: 0.95em;
+        line-height: 1.6;
+        opacity: 0.9;
+
+        &.snippet {
+            line-break: anywhere;
+        }
+
+        p {
+            margin-block: 0.5em;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul li {
+            margin-left: 2em;
+        }
+
+        figure,
+        picture,
+        img,
+        video,
+        iframe,
+        figure,
+        .tip,
+        .youtube-embed,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .dialog,
+        .tip,
+        .recap,
+        blockquote,
+        .responsive-table
+        {
+            display: none !important;
+        }
+
+        b {
+            color: light-dark(#000, #000);
+            background: light-dark(#fffb94cc, #fff796f7);
+
+            padding: 0.14em 0.18em;
+            font-weight: bold;
+            border-radius: var(--border-radius);
+            padding: 0.25em 0.375em;
+        }
+    }
+
+    .read-more {
+        font-family: var(--font-ui);
+        font-size: 0.9em;
+        margin-top: 1em;
+
+        a {
+            color: var(--ftl-blue);
+            text-decoration: none;
+            font-weight: 500;
+
+            &::after {
+                content: " →";
+                transition: transform 0.2s;
+                display: inline-block;
+            }
+
+            &:hover {
+                text-decoration: underline;
+
+                &::after {
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+}
+
+.post-block-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.post-summary.snippet {
+    white-space: pre;
+}
+
+.pagination {
+    --pagination-color: var(--accent-color);
+    background: var(--pagination-color);
+    color: white;
+    border-radius: var(--border-radius);
+
+    font-size: 1rem;
+    margin: 2em auto;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+
+    .pagination-section {
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+
+        flex-grow: 1;
+        display: flex;
+        flex-basis: 33%;
+        justify-content: center;
+        align-items: center;
+
+        > * {
+            color: white;
+            padding: 0.4em 0.8em;
+            text-decoration: none;
+        }
+
+        &:first-child {
+            justify-content: flex-start;
+
+            a {
+                border-right: 1px solid rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        &:last-child {
+            justify-content: flex-end;
+
+            a {
+                border-left: 1px solid rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}
+
+img, video {
+    height: auto;
+}
+
+.markup-container {
+    font-size: var(--text-font-size);
+    font-weight: 400;
+
+    --figure-width: min(93%, 50rem);
+    --dialog-width: min(93%, 40rem);
+    --paragraph-block-start: 0.4em;
+    --paragraph-block-end: 1.2em;
+    --figure-block-margin: 1.8em;
+    font-weight: 400;
+    overflow-x: hidden;
+
+    &.figure-caption {
+        --paragraph-block-end: 0.2em;
+    }
+
+    p, ul, blockquote {
+        margin-block-start: var(--paragraph-block-start);
+        margin-block-end: var(--paragraph-block-end);
+    }
+
+    div {
+        h1, h2, h3, h4, h5, h6 {
+            &:first-child {
+                margin-block-start: 0;
+            }
+        }
+    }
+
+    blockquote p:last-child {
+        margin-block-end: 0;
+    }
+
+    ul p {
+        margin-block-end: 0.4rem;
+    }
+
+    a:first-child {
+        > h1, h2, h3, h4, h5, h6 {
+            margin-block-start: 0em !important;
+        }
+    }
+
+    p {
+        [data-kind="media"],
+        [data-kind="diagram"] {
+            display: block;
+            height: auto;
+            max-width: var(--figure-width);
+            margin-inline: auto;
+            margin-block: var(--figure-block-margin);
+            overflow: hidden;
+
+            &.transparent-for-dark {
+                @media (prefers-color-scheme: light) {
+                    background: #111;
+                }
+            }
+        }
+
+        > math[display="block"] {
+            max-width: var(--figure-width);
+            margin-inline: auto;
+            margin-block: var(--figure-block-margin);
+            font-size: 1.22em;
+        }
+    }
+
+    .svelte-component {
+        margin-block: var(--figure-block-margin);
+
+        font-family: var(--font-ui);
+        font-size: 1rem;
+
+        svg {
+            filter: none !important;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            &:first-child {
+                margin-block-start: 0em !important;
+            }
+        }
+    }
+
+    .post-list-item {
+        margin-block-end: 1.4em;
+    }
+
+    /* tables */
+
+    .responsive-table {
+        overflow-x: auto;
+        max-width: var(--figure-width);
+        margin-inline: auto;
+        margin-block: var(--figure-block-margin);
+
+        table {
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+
+    > .disclosure {
+        font-family: var(--font-ui);
+        font-size: var(--ui-font-size);
+        padding: .6em 1em;
+
+        background: light-dark(#f1f3f5, #15171b);
+        box-shadow: 0 1px 2px light-dark(rgba(20, 24, 40, 0.05), rgba(0, 0, 0, 0.25));
+        border-radius: var(--border-radius);
+        margin-inline: auto;
+        margin-block: var(--figure-block-margin);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    > .playwall {
+        position: relative;
+
+        margin-inline: auto;
+        margin-block: var(--figure-block-margin);
+        max-width: 600px;
+
+        border: 1px solid var(--exclusive-border-color);
+        border-radius: 8px;
+        padding: 0.8em 1.2em;
+
+        h1 {
+            padding-block-start: 0;
+            margin-block-start: 0;
+        }
+    }
+
+    a.anchor {
+        text-decoration: none;
+        color: light-dark(var(--p-black), var(--p-white));
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-title);
+        font-weight: 900;
+        text-wrap: balance;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-weight: 250;
+    }
+
+    h2 {
+        font-size: 1.72rem;
+        margin-block-start: 1.6em;
+        margin-block-end: 0.32em;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-block-start: 1.4em;
+        margin-block-end: 0.24em;
+        font-weight: 630;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        margin-block-start: .4em;
+        margin-block-end: 0.16em;
+        font-weight: 630;
+    }
+
+    h5 {
+        font-size: 1rem;
+        margin-block-start: .4em;
+        margin-block-end: 0.08em;
+        font-weight: 630;
+    }
+
+    h6 {
+        font-size: 1rem;
+        margin-block-start: .4em;
+        margin-block-end: 0.04em;
+        font-weight: 630;
+    }
+
+    a:not(.anchor):not([role="button"]) {
+        transition: 0.17s;
+        transition-property: background, box-shadow, color, display, text-decoration-thickness;
+
+        &:focus-within {
+            outline: none;
+            text-decoration: underline;
+            text-decoration-thickness: var(--text-decoration-thickness);
+        }
+    }
+
+    ul ul {
+        margin-block-end: 0;
+    }
+
+    ul li,
+    ol li {
+        margin-inline-start: 2rem;
+        line-height: 1.6;
+    }
+
+    /* UI elements */
+
+    .page-title {
+        font-weight: 700;
+        line-height: 1.2;
+        padding-block-start: 0;
+        font-size: 2.6rem;
+        padding: 1.4rem 0;
+
+        padding-block-end: .4rem;
+
+        &.has-series {
+            padding-block-end: 0.8rem;
+        }
+    }
+
+    .page-metadata {
+        font-family: var(--font-ui);
+        font-size: 1rem;
+
+        color: var(--secondary-text-color);
+
+        line-height: 100%;
+        font-weight: 400;
+        padding: 0.2em 0;
+        margin-block-end: 1.8em;
+
+        light-dark(color-mix(in srgb, #000 0%, white 98%), color-mix(in srgb, #000 80%, white));
+        box-shadow: 0 0 4px transparent;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1em;
+
+        &:hover {
+            text-shadow: none;
+        }
+
+        .author-attribution {
+            display: flex;
+            gap: 0.4em;
+            align-items: center;
+
+            picture img {
+                width: 1.4em;
+                height: 1.4em;
+            }
+        }
+    }
+
+    .reddit-button-container,
+    .youtube-button-container {
+        display: flex;
+        justify-content: center;
+
+        .inline-icon-container {
+            margin-inline-end: 0.8rem;
+        }
+    }
+
+    /* figures */
+
+    figure {
+        max-width: var(--figure-width);
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the caption with the image */
+        width: fit-content;
+        margin-inline: auto;
+        margin-block: var(--figure-block-margin);
+
+        @include mixins.when-small {
+            max-width: 100%;
+        }
+
+        &.code-block {
+            --code-border-color: var(--border-color);
+
+            &,
+            code {
+                border-radius: var(--border-radius);
+                font-size: var(--code-font-size);
+            }
+
+            code {
+                padding: 0.6em 0.8em;
+            }
+        }
+
+        &:not(.code-block) {
+            border-radius: 6.9px;
+            padding: .8em;
+
+            @media (max-width: 1199px) {
+                max-width: 95%;
+            }
+
+            @media (max-width: 699px) {
+                max-width: 100%;
+            }
+
+            video,
+            img,
+            embed {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+
+            figcaption {
+                align-self: stretch;
+                max-width: min-content;
+                min-width: 100%;
+
+                margin-inline: auto;
+                margin-block: 0em;
+
+                padding-block-start: 0.4em;
+                padding-inline: 0em;
+
+                .markup-container, cite {
+                    font-family: var(--font-ui);
+                    font-size: var(--ui-font-size);
+                }
+
+                cite {
+                    opacity: .8;
+                    font-style: normal;
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        &:before {
+                            content: "→ ";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* footnotes */
+
+    .footnote-definition {
+        .footnote-definition-label {
+            float: left;
+        }
+
+        text-indent: 1rem;
+    }
+
+    .youtube-embed {
+        background: black;
+        position: relative;
+        aspect-ratio: 16/9;
+        margin-block-end: 1rem;
+
+        iframe {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+
+    /* tables */
+
+    table {
+        margin-block-end: 2rem;
+        width: 100%;
+        border: 1px solid light-dark(#e5e5e5, #3a3a3a);
+        border-collapse: collapse;
+        font-size: 90%;
+    }
+
+    td,
+    th {
+        padding: 0.25rem 0.5rem;
+        border: 1px solid light-dark(#e5e5e5, #3a3a3a);
+    }
+
+    tbody tr:nth-child(odd) {
+        td,
+        th {
+            background-color: light-dark(#f7f7f7, #1a1a1a);
+        }
+    }
+
+    strong {
+        font-weight: 650;
+    }
+
+    .asciicast {
+        text-align: center;
+        margin: 20px auto !important;
+    }
+
+    ul,
+    ol {
+        li {
+            margin-block-end: 0.4rem;
+        }
+    }
+
+    code {
+        font-family: var(--font-code);
+    }
+
+    code:not(.scroll-wrapper) {
+        vertical-align: 0em;
+        font-size: var(--font-inline-code-size);
+    }
+
+    .dialog {
+        margin-block: var(--figure-block-margin);
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+
+        font-size: var(--ui-font-size);
+
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+
+        .dialog-head {
+            align-self: flex-start;
+            --head-side: 4.2em;
+            flex-basis: var(--head-side);
+            width: var(--head-side);
+            height: var(--head-side);
+            margin: 0rem 0.4rem;
+            flex-shrink: 0;
+
+            img,
+            embed,
+            svg {
+                width: 100%;
+                height: auto;
+            }
+
+            &.round {
+                img,
+                embed,
+                svg {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .dialog-text {
+            --paragraph-block-end: .4em;
+
+            max-width: var(--dialog-width);
+            align-self: flex-start;
+            border-radius: 0.8em;
+
+            padding-inline: 0.9em;
+            padding-block: 0.2em;
+
+            overflow: hidden;
+
+            font-family: var(--font-ui);
+            font-weight: 400;
+            background-color: var(--bubble-color);
+            color: var(--text-color);
+
+            @media (prefers-color-scheme: light) {
+                --bubble-color: oklch(93.46% 0.0187 256.35);
+                --text-color: oklch(26.03% 0 0);
+            }
+            @media (prefers-color-scheme: dark) {
+                --bubble-color: oklch(0.35 0.02 67.46);
+                --text-color: oklch(99% 0 0);
+            }
+
+            &, p, ul, blockquote {
+                font-size: 1em;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                margin-block-start: .4em;
+            }
+
+            .full-width,
+            .code-block {
+                max-width: 100%;
+
+                code {
+                    border: none !important;
+                }
+            }
+        }
+
+        &.right {
+            flex-direction: row-reverse;
+
+            .dialog-text {
+                --bubble-color: oklch(62.44% 0.2054 255.56);
+                --text-color: oklch(0.98 0 0);
+                color-scheme: dark;
+
+                --link-color: oklch(97.89% 0 32.16);
+                --text-decoration-color: oklch(97.89% 0 32.16);
+            }
+        }
+    }
+
+    .tip,
+    .recap {
+        font-size: 0.89em;
+        max-width: var(--dialog-width);
+        padding: 0.5em 1em;
+
+        background: light-dark(#f1f3f5, #15171b);
+        box-shadow: 0 1px 2px light-dark(rgba(20, 24, 40, 0.05), rgba(0, 0, 0, 0.25));
+        border-radius: var(--border-radius);
+        margin-inline: auto;
+        margin-block: var(--figure-block-margin);
+
+        .full-width {
+            max-width: 100%;
+        }
+
+        .tip-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-block-start: 0.2rem;
+            margin-block-end: 0.2rem;
+
+            font-family: var(--font-title);
+            font-size: 1.1em;
+
+            img {
+                --side: 2.4em;
+                margin-inline-start: 0;
+                transform: none;
+                margin-inline-end: 0.5rem;
+                width: var(--side);
+                height: var(--side);
+            }
+        }
+
+        p,
+        ul {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+    }
+
+    blockquote {
+        max-width: var(--dialog-width);
+        width: auto;
+        margin-inline: auto;
+        margin-block: var(--figure-block-margin);
+
+        text-wrap: balance;
+        font-size: 0.89em;
+        padding: 0.6em 1em;
+        color: inherit;
+
+        background: light-dark(rgba(251, 251, 251, 0.5), rgba(37, 35, 35, 0.5));
+        border: 10px solid var(--accent-color);
+        border-left-width: 2px;
+        border-top-width: 2px;
+
+        clip-path: polygon( 0 0, calc(100% - 12px) calc(-2 * 2px), calc(100% + 2px) 12px, 100% 100%, 12px 100%, calc(-2 * 2px) calc(100% - 12px), 0 0 );
+    }
+
+    .small {
+        font-size: 1.2rem;
+    }
+
+    span.local-datetime {
+        font-weight: bold;
+    }
+
+    .sponsor-list {
+        line-height: 1.6;
+        font-size: 1rem;
+        font-family: var(--font-ui);
+
+        margin-block: var(--figure-block-margin);
+    }
+
+    .patreon-plug {
+        padding-block-start: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.3rem;
+
+        @include mixins.when-small {
+            font-size: 1rem;
+        }
+    }
+
+    svg,
+    img[src$=".svg"],
+    embed[src$=".svg"] {
+        &[title$="for-dark"] {
+            filter: invert(87%) hue-rotate(180deg);
+        }
+
+        &:not([title$="for-dark"]) {
+            filter: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            &[title$="for-dark"] {
+                filter: none;
+            }
+
+            &:not([title$="for-dark"]) {
+                filter: invert(87%) hue-rotate(180deg);
+            }
+        }
+    }
+}
+
+.markup-container,
+.disclosure,
+.playwall,
+blockquote {
+    > :last-child {
+        &.code-block {
+            margin-block-end: 0.6em !important;
+        }
+    }
+}
+
+img.float-left {
+    float: left;
+    margin-inline-end: 1em;
+}
+
+
+@keyframes grow {
+    0%   { transform: scale(1); }
+    80%  { transform: scale(1); }
+    90%  { transform: scale(1.01) rotate(-1deg); }
+    100% { transform: scale(1); }
+}
+
+/* For the animated border: */
+@keyframes job-ad-border {
+    0% {
+        border-image: linear-gradient(120deg, #88f, #8fc 40%, #f8f 60%, #88f) 1;
+    }
+    25% {
+        border-image: linear-gradient(160deg, #f8f, #88f 40%, #8fc 60%, #f8f) 1;
+    }
+    50% {
+        border-image: linear-gradient(210deg, #8fc, #f8f 40%, #88f 60%, #8fc) 1;
+    }
+    75% {
+        border-image: linear-gradient(260deg, #f8f, #8fc 40%, #88f 60%, #f8f) 1;
+    }
+    100% {
+        border-image: linear-gradient(120deg, #88f, #8fc 40%, #f8f 60%, #88f) 1;
+    }
+}
+
+.champion-plug {
+    font-family: var(--font-ui);
+    font-size: var(--ui-font-size);
+
+    margin-bottom: 1.4em;
+    padding: 1.2em 1.5em;
+    border: 1px solid light-dark(#e5e5e5, #3a3a3a);
+    border-radius: var(--border-radius);
+    background: light-dark(rgba(251, 251, 251, 0.6), rgba(37, 35, 35, 0.6));
+
+    max-width: var(--figure-width);
+    margin-inline: auto;
+    margin-block: var(--figure-block-margin);
+
+    .champion-content {
+        display: flex;
+        align-items: center;
+        gap: 1.2em;
+
+        @include mixins.when-small {
+            flex-direction: column;
+            text-align: center;
+            gap: 0.8em;
+        }
+    }
+
+    .champion-logo {
+        flex-shrink: 0;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .champion-logo-img {
+            max-height: 80px;
+            max-width: 160px;
+            height: auto;
+            width: auto;
+            object-fit: contain;
+
+            @include mixins.when-small {
+                max-height: 70px;
+                max-width: 140px;
+            }
+        }
+    }
+
+    .champion-text {
+        flex: 1;
+        line-height: 1.5;
+
+        .champion-sponsor-label {
+            font-size: 0.95em;
+            color: light-dark(#666, #aaa);
+            margin-bottom: 0.4em;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-weight: 600;
+                color: light-dark(#333, #ddd);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .champion-tagline {
+            font-size: 0.9em;
+            color: light-dark(#777, #999);
+            font-style: italic;
+            margin-bottom: 0.6em;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: light-dark(#333, #ddd);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .champion-cta {
+            margin-top: 0.6em;
+            display: flex;
+            align-items: center;
+            gap: 0.8em;
+
+            .champion-cta-button {
+                display: inline-block;
+                padding: 0.4em 0.8em;
+                background: light-dark(#007acc, #135479);
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                font-size: 0.85em;
+                font-weight: 600;
+                transition: all 0.2s ease;
+                border: none;
+
+                &:hover {
+                    transform: translateY(-1px);
+
+                    // Default hover colors when no custom styling
+                    &:not([style*="background:"]) {
+                        background: light-dark(#005999, #3a8bb8);
+                        box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
+                    }
+
+                    // When custom background is set, darken it on hover
+                    &[style*="background:"] {
+                        filter: brightness(0.9);
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                    }
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+            }
+
+            .champion-policy {
+                font-size: 0.85em;
+                color: light-dark(#666, #aaa);
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dual-feature-plug {
+    font-family: var(--font-ui);
+    font-size: var(--ui-font-size);
+
+    max-width: var(--figure-width);
+    margin-inline: auto;
+    margin-block: var(--figure-block-margin);
+
+    padding: 1.2em 1.5em;
+    border: 1px solid light-dark(#e5e5e5, #3a3a3a);
+    border-radius: var(--border-radius);
+    background: light-dark(rgba(245, 248, 251, 0.6), rgba(35, 37, 42, 0.6));
+
+    .dual-feature-content {
+        p {
+            font-size: 0.95em;
+            color: light-dark(#666, #aaa);
+            margin-block: 0;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-weight: 600;
+                color: light-dark(#333, #ddd);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .video-container {
+            margin-top: 1em;
+        }
+
+        .dual-feature-video-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3em;
+            padding: 0.3em 0.6em;
+            background: light-dark(#eb0707, #c31414);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin-left: 0.4em;
+
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: currentColor;
+                filter: none !important;
+            }
+
+            &:hover {
+                background: light-dark(
+                    color-mix(in srgb, #e52e2e, black 10%),
+                    color-mix(in srgb, #d4372c, black 10%)
+                );
+                transform: translateY(-1px);
+                box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+                text-decoration: none;
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+aside {
+    max-width: var(--figure-width);
+    margin-inline: auto;
+    margin-block: var(--figure-block-margin);
+
+    font-family: var(--font-ui);
+    font-size: var(--ui-font-size);
+
+    background: light-dark(#f1f3f5, #15171b);
+    box-shadow: 0 1px 2px light-dark(rgba(20, 24, 40, 0.05), rgba(0, 0, 0, 0.25));
+    padding: 1.2em 1.6em;
+    border-radius: var(--border-radius);
+}
+
+.job-ad {
+    margin-bottom: 1.4em;
+
+    /* Animated border effect */
+    position: relative;
+    border: 4px solid;
+    border-image: linear-gradient(120deg, #88f, #8fc 40%, #f8f 60%, #88f) 1;
+    animation: job-ad-border 3s linear infinite;
+
+    border-color: #88f;
+    animation: grow 2s linear infinite;
+    background: light-dark(black, white);
+    color: light-dark(white, black);
+
+    padding: 2em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+
+    p {
+        margin-block-end: 1.2em;
+
+        &:last-child {
+            margin-block-end: 0;
+        }
+    }
+
+    > :last-child {
+        flex-basis: 30%;
+        transform: scaleX(-100%);
+    }
+}
+
+:root {
+    --code-border-color: transparent;
+    --code-bg-color: light-dark(#f1f1f1, #292522);
+    --code-bg-color-dark: #292522;
+}
+
+/* Arborium theme variables: Melange Light & Dark */
+:root {
+    --arb-at-light: #bc5c00;
+    --arb-co-light: #904180;
+    --arb-cb-light: #904180;
+    --arb-fb-light: #465aa4;
+    --arb-f-light: #465aa4;
+    --arb-fm-light: #465aa4;
+    --arb-k-light: #bc5c00;
+    --arb-kc-light: #bc5c00;
+    --arb-ko-light: #bc5c00;
+    --arb-kd-light: #bc5c00;
+    --arb-ke-light: #bc5c00;
+    --arb-kf-light: #bc5c00;
+    --arb-ki-light: #bc5c00;
+    --arb-kp-light: #bc5c00;
+    --arb-kr-light: #bc5c00;
+    --arb-kt-light: #bc5c00;
+    --arb-ky-light: #bc5c00;
+    --arb-o-light: #bc5c00;
+    --arb-pr-light: #bc5c00;
+    --arb-p-light: #54433a;
+    --arb-pb-light: #54433a;
+    --arb-pd-light: #54433a;
+    --arb-ps-light: #904180;
+    --arb-s-light: #3a684a;
+    --arb-ss-light: #bf0021;
+    --arb-tg-light: #bc5c00;
+    --arb-td-light: #bc5c00;
+    --arb-te-light: #bc5c00;
+    --arb-t-light: #bc5c00;
+    --arb-tb-light: #bc5c00;
+    --arb-tq-light: #bc5c00;
+    --arb-v-light: #54433a;
+    --arb-vb-light: #bf0021;
+    --arb-vp-light: #bc5c00;
+    --arb-c-light: #7d6658;
+    --arb-c-light-style: normal;
+    --arb-cd-light: #7d6658;
+    --arb-cd-light-style: normal;
+    --arb-m-light: #465aa4;
+    --arb-l-light: #904180;
+    --arb-da-light: #3a684a;
+    --arb-dd-light: #bf0021;
+    --arb-n-light: #904180;
+    --arb-tl-light: #54433a;
+    --arb-em-light-style: normal;
+    --arb-st-light-weight: bold;
+    --arb-tu-light: #465aa4;
+    --arb-tu-light-decoration: underline;
+    --arb-tr-light: #465aa4;
+    --arb-se-light: #a06d00;
+    --arb-tt-light: #bc5c00;
+    --arb-tt-light-weight: bold;
+    --arb-tx-light-decoration: line-through;
+    --arb-sp-light: #54433a;
+    --arb-in-light: #bc5c00;
+    --arb-sc-light: #bc5c00;
+    --arb-rp-light: #bc5c00;
+    --arb-cn-light: #bc5c00;
+    --arb-ex-light: #bc5c00;
+    --arb-pp-light: #bc5c00;
+    --arb-ch-light: #3a684a;
+    --arb-cs-light: #3a684a;
+    --arb-vm-light: #54433a;
+    --arb-fd-light: #465aa4;
+    --arb-tf-light: #bc5c00;
+    --arb-fc-light: #465aa4;
+    --arb-km-light: #bc5c00;
+    --arb-dr-light: #bc5c00;
+    --arb-rx-light: #3a684a;
+
+    --arb-at-dark: #c1a78e;
+    --arb-co-dark: #cf9bc2;
+    --arb-cb-dark: #cf9bc2;
+    --arb-fb-dark: #a3a9ce;
+    --arb-f-dark: #a3a9ce;
+    --arb-fm-dark: #a3a9ce;
+    --arb-k-dark: #bd8183;
+    --arb-kc-dark: #bd8183;
+    --arb-ko-dark: #bd8183;
+    --arb-kd-dark: #bd8183;
+    --arb-ke-dark: #bd8183;
+    --arb-kf-dark: #bd8183;
+    --arb-ki-dark: #bd8183;
+    --arb-kp-dark: #bd8183;
+    --arb-kr-dark: #bd8183;
+    --arb-kt-dark: #bd8183;
+    --arb-ky-dark: #bd8183;
+    --arb-o-dark: #bd8183;
+    --arb-pr-dark: #c1a78e;
+    --arb-p-dark: #ece1d7;
+    --arb-pb-dark: #ece1d7;
+    --arb-pd-dark: #ece1d7;
+    --arb-ps-dark: #cf9bc2;
+    --arb-s-dark: #85b695;
+    --arb-ss-dark: #d47766;
+    --arb-tg-dark: #bd8183;
+    --arb-td-dark: #bd8183;
+    --arb-te-dark: #bd8183;
+    --arb-t-dark: #c1a78e;
+    --arb-tb-dark: #c1a78e;
+    --arb-tq-dark: #c1a78e;
+    --arb-v-dark: #ece1d7;
+    --arb-vb-dark: #d47766;
+    --arb-vp-dark: #c1a78e;
+    --arb-c-dark: #867462;
+    --arb-c-dark-style: normal;
+    --arb-cd-dark: #867462;
+    --arb-cd-dark-style: normal;
+    --arb-m-dark: #a3a9ce;
+    --arb-l-dark: #cf9bc2;
+    --arb-da-dark: #85b695;
+    --arb-dd-dark: #d47766;
+    --arb-n-dark: #cf9bc2;
+    --arb-tl-dark: #ece1d7;
+    --arb-em-dark-style: normal;
+    --arb-st-dark-weight: bold;
+    --arb-tu-dark: #a3a9ce;
+    --arb-tu-dark-decoration: underline;
+    --arb-tr-dark: #a3a9ce;
+    --arb-se-dark: #ebc06d;
+    --arb-tt-dark: #c1a78e;
+    --arb-tt-dark-weight: bold;
+    --arb-tx-dark-decoration: line-through;
+    --arb-sp-dark: #ece1d7;
+    --arb-in-dark: #bd8183;
+    --arb-sc-dark: #bd8183;
+    --arb-rp-dark: #bd8183;
+    --arb-cn-dark: #bd8183;
+    --arb-ex-dark: #bd8183;
+    --arb-pp-dark: #bd8183;
+    --arb-ch-dark: #85b695;
+    --arb-cs-dark: #85b695;
+    --arb-vm-dark: #ece1d7;
+    --arb-fd-dark: #a3a9ce;
+    --arb-tf-dark: #c1a78e;
+    --arb-fc-dark: #a3a9ce;
+    --arb-km-dark: #bd8183;
+    --arb-dr-dark: #bd8183;
+    --arb-rx-dark: #85b695;
+}
+
+$arb-tokens: at, co, cb, cr, fb, f, fm, k, kc, ko, kd, ke, kf, ki, kp, kr, kt, ky, o, pr, p, pb, pd, ps, s, ss, tg, td, te, t, tb, tq, v, vb, vp, c, cd, m, l, da, dd, n, tl, em, st, tu, tr, se, tt, tx, sp, eb, er, ns, in, sc, rp, cn, ex, pp, ch, cs, vm, fd, tf, fc, km, dr, rx;
+
+@mixin arborium-mode($mode) {
+    @each $token in $arb-tokens {
+        a-#{$token} {
+            color: var(--arb-#{$token}-#{$mode});
+            font-weight: var(--arb-#{$token}-#{$mode}-weight, normal);
+            font-style: var(--arb-#{$token}-#{$mode}-style, normal);
+            text-decoration: var(--arb-#{$token}-#{$mode}-decoration, none);
+        }
+    }
+}
+
+code.scroll-wrapper {
+    background: var(--code-bg-color);
+    border: 1px solid var(--code-border-color);
+    color: inherit;
+}
+
+/* Default: light */
+@include arborium-mode("light");
+
+/* System preference: dark */
+@media (prefers-color-scheme: dark) {
+    @include arborium-mode("dark");
+
+    code.scroll-wrapper {
+        background: var(--code-bg-color-dark);
+    }
+}
+
+/* Explicit data-theme overrides */
+:root[data-theme="light"] {
+    @include arborium-mode("light");
+
+    code.scroll-wrapper {
+        background: var(--code-bg-color);
+    }
+}
+
+:root[data-theme="dark"] {
+    @include arborium-mode("dark");
+
+    code.scroll-wrapper {
+        background: var(--code-bg-color-dark);
+    }
+}
+
+.youtube-thumbnail-link {
+    max-width: 80%;
+    margin-inline: auto;
+    margin-block: var(--figure-block-margin);
+}
+
+
+    </style>
+
+    <script>
+    window.home = {
+        profile: null,
+        user_info: null,
+        viewer: {
+  "has_bronze": false,
+  "has_gold": false,
+  "has_silver": false,
+  "is_admin": false,
+  "tier_cause": null
+},
+        sponsors: [
+  "Luis",
+  "Raphaël Thériault",
+  "Jean-David Gadina",
+  "Samit Basu",
+  "AdrianEddy",
+  "Borys Minaiev",
+  "Adam Gutglick",
+  "Dominik Wagner",
+  "Em Sharnoff",
+  "Jelle Besseling",
+  "Nicolas Coulange",
+  "Aleksandre Khokhiashvili",
+  "Valentin Mariette",
+  "Antoine Rouaze",
+  "Ives van Hoorne",
+  "René Ribaud",
+  "Egor Ternovoi",
+  "Mathias Brossard",
+  "Boris Dolgov",
+  "Michal Hošna",
+  "Olly Swanson",
+  "Nyefan",
+  "Daniel Strittmatter",
+  "you got maiL",
+  "Simon Menke",
+  "Alex Rudy",
+  "Angelo",
+  "jalciné",
+  "Tabitha",
+  "Marcus Griep",
+  "Zaki",
+  "Urs Metz",
+  "Guy Waldman",
+  "Raine Godmaire",
+  "Andy Gocke",
+  "Ben Mitchell",
+  "Hazel Duvall",
+  "Mattia Valzelli",
+  "Senyo Simpson",
+  "Miguel Raz Guzmán Macedo",
+  "Dirkjan Ochtman",
+  "Yufan Lou",
+  "psentee",
+  "Diego Roig",
+  "Brian L. Troutwine",
+  "asaaki",
+  "Isak Sunde Singh",
+  "David Smith",
+  "Henrik Tudborg",
+  "Mathew Haji",
+  "Menno Finlay-Smits",
+  "Jonathan Adams",
+  "villem",
+  "Édomaur odéon",
+  "Marc-Andre Giroux",
+  "qrpth",
+  "Joshua Roesslein",
+  "Pete Bevin",
+  "Aiden Scandella",
+  "Daniel Wagner-Hall",
+  "Enrico Zschemisch",
+  "Hadrien G.",
+  "playest",
+  "Carson Page",
+  "milan",
+  "Yves",
+  "Beat Scherrer",
+  "Ripta Pasay",
+  "Matt Jackson",
+  "Josh Triplett",
+  "Luke Konopka",
+  "FELIX",
+  "Dimitri Merejkowsky",
+  "Christopher Valerio",
+  "belzael",
+  "Lena Schönburg",
+  "Romain Ruetschi",
+  "Alexandra Østermark",
+  "David White",
+  "Matt Jadczak",
+  "Gorazd Brumen",
+  "Integer 32, LLC",
+  "Twan Walpot",
+  "Mark",
+  "Timothée Gerber",
+  "Brooke",
+  "Blake Johnson",
+  "Chris Thackrey",
+  "Tom Forbes",
+  "David Barsky",
+  "Marty Penner",
+  "Justin Smith",
+  "Andy F",
+  "Kamran Khan",
+  "eliferrous",
+  "Dylan Anthony",
+  "Marcus Griep",
+  "Christian Bourjau",
+  "Ronen Cohen",
+  "jatescher",
+  "xd009642",
+  "Mark Old",
+  "Zac Harrold",
+  "ZacJW",
+  "Jim",
+  "callym",
+  "Romet Tagobert",
+  "Antoine PESTEL-ROPARS",
+  "Johnathan Pagnutti",
+  "Bob Ippolito",
+  "traxys",
+  "Mason Ginter",
+  "Alan O'Donnell",
+  "Xavier Groleau",
+  "Peter Shih",
+  "genny",
+  "ofrighil",
+  "Andrew Henshaw",
+  "Ben Wishovich",
+  "xales",
+  "Makoto Nakashima",
+  "SeniorMars",
+  "Braidon Whatley",
+  "Steven Pham",
+  "Nicolas Riebesel",
+  "Ryan",
+  "WeblWabl",
+  "Olivia Crain",
+  "Jörn Huxhorn",
+  "hgranthorner",
+  "Colin VanDervoort",
+  "Ian McLinden",
+  "Mario Fleischhacker",
+  "Michał Bartoszkiewicz",
+  "Horváth-Lázár Péter",
+  "Chris Emery",
+  "Yuriy Taraday",
+  "Geoff Cant",
+  "Chris",
+  "Malik Bougacha",
+  "Santiago Lema",
+  "Mikkel Rasmussen",
+  "Astrid",
+  "Geoffrey Thomas",
+  "Stephan Buys",
+  "Mike English",
+  "Corey Alexander",
+  "Zachary Thomas",
+  "ShikChen",
+  "Taneli Kaivola",
+  "Jimmy Hartzell",
+  "Anna M",
+  "Chris Sims",
+  "Jeff Crocker",
+  "Jake Demarest-Mays",
+  "Philipp Angerer",
+  "anichno",
+  "Matthias Zepper",
+  "Tyler Bloom",
+  "Max Bruckner",
+  "compwhizii",
+  "Julien Roncaglia",
+  "Tiziano Santoro",
+  "Richard Stephens",
+  "Paige Ruten",
+  "The0x539",
+  "Dave Minter",
+  "Daniel Silverstone",
+  "prairiewolf",
+  "Mark Tomlin",
+  "frankwang",
+  "Julian Schmid",
+  "Zalán Bálint Lévai",
+  "Richard Pringle",
+  "Eugene Bulkin",
+  "David Cornu",
+  "Tomáš Šedovič",
+  "budrick",
+  "Tobias Bahls",
+  "Manuel Hutter",
+  "L0r3m1p5um",
+  "Jan-Stefan Janetzky",
+  "Guilherme Neubaner",
+  "Scott Sanderson",
+  "RedstoneWizard08",
+  "Max von Forell",
+  "Olivier Peyrusse",
+  "Torben Clasen",
+  "Björn Marschollek",
+  "Chris Walker",
+  "Geoffroy Couprie",
+  "James Rhodes",
+  "Jesse Luehrs",
+  "John VanEnk",
+  "James Leitch",
+  "James Brown",
+  "Marco Carmosino",
+  "Kai Kaufman",
+  "Sean Bryant",
+  "Matt Heise",
+  "Neil Blakey-Milner",
+  "Xirvik Servers",
+  "Zoran Zaric",
+  "Thehbadger",
+  "Victor Song",
+  "Pete LeVasseur",
+  "avborhanian",
+  "Toon Willems",
+  "Michael",
+  "Ross Williams",
+  "Sawyer Knoblich",
+  "me",
+  "Vincent Mutolo",
+  "Justy",
+  "Marcin Kołodziej",
+  "C J Silverio",
+  "Vladimir",
+  "Guillaume E",
+  "Kevin Murphy",
+  "Brandon Piña",
+  "Lyssieth",
+  "kuerbsikakteen",
+  "Romain Kelifa",
+  "Tanner Muro",
+  "Justin Ossevoort",
+  "std__mpa",
+  "Gioele Pannetto",
+  "Radu Matei",
+  "Wyatt Herkamp",
+  "notryanb",
+  "knutwalker",
+  "Reto Trappitsch",
+  "Kyle Lacy",
+  "Philipp Hatt",
+  "Mateusz Wykurz",
+  "Anson VanDoren",
+  "Niels Abildgaard",
+  "Sung Jeon",
+  "clement",
+  "old.woman.josiah",
+  "Hamilton Chapman",
+  "Lawrence Bethlenfalvy",
+  "Dom",
+  "Lach",
+  "Laine Taffin Altman",
+  "Vinay Mehta",
+  "Sam Leonard",
+  "Adam Lassek",
+  "rektide",
+  "Lucille Blumire",
+  "Matej Volf",
+  "Marie Janssen",
+  "pinkhatbeard",
+  "Matt Campbell",
+  "Yann Schwartz",
+  "Lyrenhex",
+  "Zeeger Lubsen",
+  "zoey",
+  "Benjamin Röjder Delnavaz",
+  "Luke Yue"
+]
+    };
+    </script>
+
+    
+    
+<meta property="home:page-path" content="/content/articles/the-science-of-loudness/_index.md"><!-- inserted by home -->
+<script type="module" src="https://cdn.fasterthanli.me/dist/assets/bundle-DwX0IkwA.js" defer></script><link rel="stylesheet" href="https://cdn.fasterthanli.me/dist/assets/bundle-DCh2U5HF.css" media="print" onload="this.media='all'"></head>
+
+<body>
+<div class="body-inner">
+<div class="content">
+  <a id="home-page-top" href="#home-page-top"></a>
+  <div id="page-topnav" class="page-topnav"></div>
+  <main>
+    
+    <div class="page-html has-toc">
+      
+  
+
+  <div class="page-html-padded markup-container page-markup">
+
+  
+    
+    
+
+    
+    
+
+    <h1 class="page-title">
+        The science of loudness
+    </h1>
+
+    
+
+    
+    
+
+    
+    
+    <div class="page-metadata with-reading-time">
+        
+        <span>Aug 22, 2025</span>
+        
+         
+
+        <span class="reading-time">
+        <svg id="clock-icon" class="inline-icon" width="1.1em" height="1.1em" style="padding: .1em;" alt="clock icon" enable-background="new 0 0 443.294 443.294" viewBox="0 0 443.294 443.294" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z"></path><path d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z"></path></svg>
+
+        <abbr title="Estimated reading time, at 220 words per minute, where one word = 5 characters">
+            
+                13 min
+            
+        </abbr>
+    </span>
+        
+    <span class="tags">
+        
+            
+                <span><a href="/tags/audio">#audio</a></span>
+            
+            
+                <span>&middot;</span>
+            
+        
+            
+                <span><a href="/tags/maths">#maths</a></span>
+            
+            
+                <span>&middot;</span>
+            
+        
+            
+                <span><a href="/tags/physics">#physics</a></span>
+            
+            
+        
+    </span>
+        <span class="indicators">
+    
+        
+
+        
+    
+
+    
+</span>
+    </div> 
+     
+
+    
+        
+<p id="sponsor-list" class="sponsor-list">
+    Thanks to my sponsors:
+    <span id="visible-sponsors">
+    
+    Nicolas Coulange, ZacJW, Kamran Khan, Michael, Jake Demarest-Mays, Olivia Crain, Andy F, Geoffroy Couprie, Joshua Roesslein, Lach, Pete Bevin, Henrik Tudborg, Taneli Kaivola, Marie Janssen, ShikChen, Daniel Strittmatter, Mason Ginter, Daniel Wagner-Hall, Matt Jackson, notryanb
+        and <a href="#" id="show-all-sponsors"><span id="more-sponsors-count">240</span> more</a>
+    
+    </span>
+    <span id="all-sponsors" style="display: none;">Nicolas Coulange, ZacJW, Kamran Khan, Michael, Jake Demarest-Mays, Olivia Crain, Andy F, Geoffroy Couprie, Joshua Roesslein, Lach, Pete Bevin, Henrik Tudborg, Taneli Kaivola, Marie Janssen, ShikChen, Daniel Strittmatter, Mason Ginter, Daniel Wagner-Hall, Matt Jackson, notryanb, Isak Sunde Singh, Jonathan Adams, Ben Mitchell, Adam Gutglick, std__mpa, Peter Shih, hgranthorner, John VanEnk, Tyler Bloom, Toon Willems, Daniel Silverstone, Gioele Pannetto, Ripta Pasay, Brandon Piña, Yves, Urs Metz, Torben Clasen, David Barsky, Vincent Mutolo, Geoffrey Thomas, Kai Kaufman, James Rhodes, Hazel Duvall, Sung Jeon, Scott Sanderson, Steven Pham, me, Mario Fleischhacker, Lena Schönburg, Matthias Zepper, Andy Gocke, Brian L. Troutwine, Laine Taffin Altman, David Cornu, Justy, Hadrien G., Alex Rudy, Jean-David Gadina, Enrico Zschemisch, Mattia Valzelli, Philipp Hatt, Valentin Mariette, Aiden Scandella, Carson Page, Édomaur odéon, Nicolas Riebesel, Yann Schwartz, Jim, Mikkel Rasmussen, Blake Johnson, Ronen Cohen, Vinay Mehta, Xavier Groleau, Sawyer Knoblich, Justin Smith, Kevin Murphy, Romet Tagobert, Dominik Wagner, Paige Ruten, Egor Ternovoi, knutwalker, Ives van Hoorne, Angelo, Zac Harrold, Olivier Peyrusse, Antoine Rouaze, Makoto Nakashima, Astrid, Mark Old, Dirkjan Ochtman, Tabitha, Zachary Thomas, Yuriy Taraday, Sam Leonard, Marcin Kołodziej, Benjamin Röjder Delnavaz, Andrew Henshaw, Thehbadger, genny, SeniorMars, Ross Williams, Luke Yue, Marc-Andre Giroux, Jelle Besseling, traxys, Guy Waldman, Geoff Cant, Simon Menke, Jeff Crocker, Vladimir, Neil Blakey-Milner, Christopher Valerio, clement, Malik Bougacha, The0x539, Chris Sims, Dom, Menno Finlay-Smits, anichno, Lucille Blumire, RedstoneWizard08, Anna M, Zalán Bálint Lévai, Chris Emery, Lyssieth, Romain Kelifa, Reto Trappitsch, eliferrous, Jörn Huxhorn, Matt Jadczak, Manuel Hutter, Jesse Luehrs, Chris, Lawrence Bethlenfalvy, Marcus Griep, Michał Bartoszkiewicz, Ben Wishovich, James Leitch, Twan Walpot, Tom Forbes, Justin Ossevoort, asaaki, Wyatt Herkamp, Michal Hošna, Ian McLinden, Tomáš Šedovič, Hamilton Chapman, Marcus Griep, Horváth-Lázár Péter, Senyo Simpson, Tobias Bahls, Borys Minaiev, Timothée Gerber, psentee, Mathew Haji, Alexandra Østermark, Integer 32, LLC, Chris Walker, kuerbsikakteen, Lyrenhex, frankwang, zoey, Luke Konopka, Colin VanDervoort, Björn Marschollek, Max Bruckner, Mark Tomlin, L0r3m1p5um, xales, ofrighil, qrpth, Max von Forell, villem, Raphaël Thériault, rektide, Olly Swanson, WeblWabl, Ryan, Brooke, Stephan Buys, Mathias Brossard, Julien Roncaglia, Yufan Lou, Matt Campbell, Braidon Whatley, Beat Scherrer, FELIX, milan, Miguel Raz Guzmán Macedo, Xirvik Servers, Raine Godmaire, Marco Carmosino, Matej Volf, Alan O&#x27;Donnell, Bob Ippolito, compwhizii, avborhanian, Eugene Bulkin, Kyle Lacy, Mark, Matt Heise, old.woman.josiah, Dylan Anthony, Tanner Muro, Diego Roig, Marty Penner, Sean Bryant, Em Sharnoff, Guilherme Neubaner, callym, AdrianEddy, Zaki, Johnathan Pagnutti, Radu Matei, belzael, Samit Basu, prairiewolf, budrick, xd009642, Santiago Lema, René Ribaud, Gorazd Brumen, Victor Song, Tiziano Santoro, pinkhatbeard, Luis, jalciné, David Smith, Pete LeVasseur, Jimmy Hartzell, Jan-Stefan Janetzky, Boris Dolgov, Niels Abildgaard, Josh Triplett, Romain Ruetschi, Mike English, jatescher, James Brown, Julian Schmid, Corey Alexander, Antoine PESTEL-ROPARS, Christian Bourjau, Mateusz Wykurz, Dimitri Merejkowsky, Aleksandre Khokhiashvili, Anson VanDoren, Guillaume E, Zeeger Lubsen, Philipp Angerer, David White, Dave Minter, playest, Nyefan, you got maiL, Richard Stephens, C J Silverio, Zoran Zaric, Adam Lassek, Chris Thackrey, Richard Pringle</span>
+
+    
+</p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('show-all-sponsors').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('visible-sponsors').style.display = 'none';
+        document.getElementById('all-sponsors').style.display = 'inline';
+        this.style.display = 'none';
+    });
+});
+</script>
+
+     
+
+    <div class="after-page-metadata-spacer"></div>
+
+    
+    
+
+
+
+    
+
+    
+
+    
+    <div class="git-repo-svelte-component" data-repo-name="fam"></div>
+    
+
+    <p data-bo="246">My watch has a “Noise” app: it shows <math display="inline"><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></math>, for decibels.</p>
+
+<p data-bo="313"><video controls playsinline preload="none" loading="lazy" width="3840" height="2160" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/apple-watch-decibel-meter.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/apple-watch-decibel-meter.thumb" class="" title="" alt="A video of my Apple Watch showing me how loud the sound coming from my speakers is.
+"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/apple-watch-decibel-meter~d96a722c49fdda5d.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/apple-watch-decibel-meter~e53858e76f36614d.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/apple-watch-decibel-meter~fb169411c4d8653e.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video></p><p data-bo="464">My amp has a volume knob, which also shows decibels, although.. negative ones, this time.</p>
+
+<p data-bo="555"><video controls playsinline preload="none" loading="lazy" width="3840" height="2160" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/adjust-volume.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/adjust-volume.thumb" class="" title="" alt="A video of me adjusting my volume on my Cambridge AXR100 amplifier. The
+volume goes from -61 to -32 decibels in that video.
+"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/adjust-volume~46153fb1ad60f230.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/adjust-volume~a8af11cbe6d90598.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/adjust-volume~9a7388f3f768f948.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video></p><p data-bo="746">And finally, my video editing software has a ton of meters — which are all in decibel or
+decibel-adjacent units.</p>
+
+<p data-bo="862"><video controls playsinline preload="none" loading="lazy" width="2002" height="1127" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/tons-of-meters@2x.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/tons-of-meters@2x.thumb" class="" title="" alt="A screenshot of DaVinci Resolve, showing various meters: we have Bus 1,
+Control Room with TP, Loudness, YouTube (LUFS), then Loudness History
+with Integrated, Momentary and Short Term. In the Mixer, each track has
+its meter.
+"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/tons-of-meters@2x~9cc29f2809d1202a.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/tons-of-meters@2x~da316f2ab0e0aeb5.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/tons-of-meters@2x~e50f9e76cf48090c.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video></p><p data-bo="1178">How do all these decibels fit together?</p>
+
+<p data-bo="1219">Are the decibels from my watch and the decibels from my amp related? And if so,
+how? I’ve decided to spend twenty minutes of <em>your</em> time answering that question.</p>
+
+<p data-bo="1382">I’ve also spent about a month of <em>my</em> time making FAM: the fasterthanlime audio meter, in Rust
+of course, with <a href="https://lib.rs/crates/egui">egui</a>. If you’re a patron of any tier,
+you can clone and run it right now, and if you’re not, well you can’t.</p>
+
+<p data-bo="1633"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~9e7cf3a6b222ca55.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~1b44895b5c64f833.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~33ed443080c5f042.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~2d84bafc1cc31ea8.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~2d84bafc1cc31ea8.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~b2a29e53f269631c.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~1e517c06a6f9e64c.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~bf3b7c3b6e191cbe.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~519a72e0f6896d76.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~519a72e0f6896d76.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~381ef66778f8cfc3.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~1ee2a47decad072e.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~de41fda36c755fe7.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~6fc6ba1ac8905303.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~6fc6ba1ac8905303.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/fam-demo@2x~2d84bafc1cc31ea8.jxl" loading="lazy" width="800" height="508" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/fam-demo@2x.jxl" class="" title="" alt="A screenshot of fam, the fasterthanlime audio meter
+"></picture></p><div class="git-repo-svelte-component" data-repo-name="fam"></div>
+<a id="what-even-is-sound" href="#what-even-is-sound" class="anchor"><h2>What even is sound?</h2></a>
+<p data-bo="1838">Sound, like wind, is more of a concept than a thing, since it’s the name
+we’ve given to a specific behavior of particles.</p>
+
+<p data-bo="1961">When you strum a guitar, the chord vibrates:</p>
+
+<p data-bo="2007"><video controls playsinline preload="none" loading="lazy" width="1920" height="1080" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/guitar-strum.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/guitar-strum.thumb" class="" title="" alt="Slow-motion footage of me strumming a guitar.
+"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/guitar-strum~2a97d544efe1d40b.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/guitar-strum~586000efb82d5667.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/guitar-strum~bce2ad313a02d448.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video></p><p data-bo="2115">…<a href="https://www.nidcd.nih.gov/health/how-do-we-hear">transferring
+energy</a> to the body of the
+guitar, which amplifies it and projects it into the air as a pressure wave!</p>
+
+<p data-bo="2285">This wave eventually makes its way to the ear, where some processing is already
+done via its unique mechanical design: after being collected by the the outer ear,
+the wave is ferried through the ear canal into the eardrum, where three tiny bones
+amplify it. Then it’s destination: inner ear, where hair cells travel up and down
+some fluid.</p>
+
+<figure
+class="paragraph-like"
+ data-bo="2626"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~d477c8cbe04df59a.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~70ed2c6abf8f0e5a.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~9a388c5d79d39cac.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~acf14b50760ab72e.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~acf14b50760ab72e.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~9acb006c4d037d64.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~09dbd8b9dbb3eb23.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~e79c18c4f8e0da3e.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~e5add86162639fa8.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~e5add86162639fa8.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~fa37bf83c6abe7b0.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~b23fdd9eac3d66b2.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~2c5a42dd994b0b15.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~0aa6dfd582b1b08d.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~0aa6dfd582b1b08d.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/image~acf14b50760ab72e.jxl" loading="lazy" width="960" height="710" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/image.jxl" title="" alt="A schematic of the entire hearing system "></picture><figcaption><cite><a href="https:&#x2f;&#x2f;www.nidcd.nih.gov&#x2f;health&#x2f;how-do-we-hear
+">NIH&#x2f;NIDCD
+</a></cite></figcaption>
+</figure><p data-bo="2825">Eventually, it’s converted by chemicals into electrical signals and interpreted
+by the brain as sound.</p>
+
+<p data-bo="2929">People experiencing hearing loss and who use a <a href="https://en.wikipedia.org/wiki/Cochlear_implant" id="cochlear implant">cochlear implant</a> bypass the
+mechanical parts of that pipeline, relying instead on microphones and speech
+processors.</p>
+
+<figure
+class="paragraph-like" data-bo="3096" style="width: 450px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~3ed22fc1a270d9f9.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~72efd855f5aa6d23.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~098e9bcba43ef097.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~bd005a9b08a4f9d9.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~bd005a9b08a4f9d9.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~4de2eef6850802de.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~55c891e051ad5dcd.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~38e662066216f436.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~e6903d47a5f247eb.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~e6903d47a5f247eb.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~7bd75c67fe874bc7.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~2b9ea5f12f90d167.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~225a79c7858a8448.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~dc181c714b8ee22d.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~dc181c714b8ee22d.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/cochlear-implant~bd005a9b08a4f9d9.jxl" loading="lazy" width="450" height="1211" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/cochlear-implant.jxl" title="Cochlear implant at the museum Kulturama in Zürich, Switzerland. " alt=""></picture><figcaption><div class="markup-container figure-caption"><p>Cochlear implant at the museum Kulturama in Zürich, Switzerland.</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Cochlear_implant_2.jpg
+">Tiia Monto
+</a></cite></figcaption>
+</figure><p data-bo="3364">Although those implants do not replicate natural hearing, they give the brain
+enough information to recognize and process human speech, and environmental sounds.</p>
+
+<p data-bo="3595">For the rest of us, our ears detect tiny changes in pressure.</p>
+
+<a id="under-pressure" href="#under-pressure" class="anchor"><h2>Under pressure</h2></a>
+<p data-bo="3677">You have to realize that there is pressure constantly being applied to our
+bodies all the time, on the order of one atmosphere, or about one hundred
+thousand pascals, the SI unit for pressure.</p>
+
+<p data-bo="3871">But you’ll notice that my watch’s “Noise” app doesn’t use pascals. In fact,
+no audio equipment I’ve ever looked at uses pascals. Instead, they show sound
+pressure level, defined as follows:</p>
+
+<p data-bo="4062"><math display="block"><msub><mi>L</mi><mi>p</mi></msub><mo>=</mo><mn>20</mn><mspace width="0.2777778em" /><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mrow><mn>10</mn></mrow></msub></mrow><mrow><mo stretchy="true">(</mo><mfrac><mrow><mi>p</mi></mrow><mrow><msub><mi>p</mi><mn>0</mn></msub></mrow></mfrac><mo stretchy="true">)</mo></mrow><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">L</mi></mrow></msub></mrow></math></p>
+
+<p data-bo="4145">Decibels are a logarithmic unit expressing a ratio — in this case the ratio
+between <math display="inline"><mi>p</mi></math>, a pressure we measured, and <math display="inline"><msub><mi>p</mi><mn>0</mn></msub></math>, a reference pressure.</p>
+
+<p data-bo="4294">In air (because sound can also travel through water and other media), we
+usually pick 20 micropascals, which is about the quietest sound the human ear
+can detect.</p>
+
+<p data-bo="4458"><math display="block"><msub><mi>p</mi><mn>0</mn></msub><mo>=</mo><mn>20</mn><mspace width="0.2777778em" /><mi>µ</mi><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">a</mi></mrow></math></p>
+
+<p data-bo="4492">Instead of having a linear scale that spans 8 orders of magnitudes (from
+micropascals to the thousands), decibels give us a nice human-friendly scale
+going from <math display="inline"><mn>0</mn><mspace width="0.16666667em" /><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></math> to <math display="inline"><mn>194</mn><mspace width="0.16666667em" /><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></math>:</p>
+
+<div class="responsive-table" data-bo="4694"><table><thead><td>Decibels</td><td>Example</td></thead><tr><td>0</td><td>Faintest sound heard by human ear</td></tr><tr><td>30</td><td>Whisper, quiet library</td></tr><tr><td>60</td><td>Normal conversation, sewing machine, or typewriter</td></tr><tr><td>90</td><td>Lawnmower, shop tools, or truck traffic (90 dB for 8 hours per day is the maximum exposure without protection*)</td></tr><tr><td>100</td><td>Chainsaw, pneumatic drill, or snowmobile (2 hours per day is the maximum exposure without protection)</td></tr><tr><td>115</td><td>Sandblasting, loud music concert, or automobile horn (15 minutes per day is the maximum exposure without protection)</td></tr><tr><td>140</td><td>Gun muzzle blast or jet engine (noise causes pain, and even brief exposure injures unprotected ears, and injury may occur even with hearing protectors)</td></tr><tr><td>180</td><td>Rocket launching pad</td></tr></table></div><p data-bo="5428"><em>Source: <a href="https://www.merckmanuals.com/en-ca/home/multimedia/table/measurement-of-loudness">Merck Manual</a></em></p>
+
+<figure
+class="paragraph-like" data-bo="5536" style="width: 450px"
+><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/decibels~9b342d0df8629407.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/decibels.svg" width="450" height="auto" title="" alt="Graphing decibels vs pascals "><figcaption><cite><a href="https:&#x2f;&#x2f;www.desmos.com&#x2f;calculator&#x2f;neoyyut0xa
+">Own work, graphed via Desmos
+</a></cite></figcaption>
+</figure><p data-bo="5757">Above <math display="inline"><mn>194</mn><mspace width="0.16666667em" /><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></math>, we don’t get sound waves, we get shock waves — the pressure
+amplitude would need to be more than one atmosphere, resulting in negative
+absolute pressure, which is impossible. Once you reach a vacuum… that’s it.
+There’s no going any more vacuumy.</p>
+
+<a id="signal-processing" href="#signal-processing" class="anchor"><h2>Signal processing</h2></a>
+<p data-bo="6056">We haven’t yet elucidated what the decibels on my amp mean. I would call
+those <math display="inline"><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">S</mi></mrow></msub></mrow></math>, for decibel “relative to full scale”, because at
+<math display="inline"><mn>0</mn><mspace width="0.16666667em" /><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></math>, we would get the absolute maximum power the amp can output
+(which would be damaging to my ears <em>and</em> to my relationship with the
+neighbors).</p>
+
+<p data-bo="6364">The formula is the same, except that we don’t pick a reference <math display="inline"><msub><mi>p</mi><mn>0</mn></msub></math> like
+with sound pressure levels. Here, we consider an input signal and an output signal:</p>
+
+<p data-bo="6523"><math display="block"><mi>L</mi><mo>=</mo><mn>20</mn><mspace width="0.2777778em" /><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mrow><mn>10</mn></mrow></msub></mrow><mrow><mo stretchy="true">(</mo><mfrac><mrow><msub><mi>x</mi><mn>2</mn></msub></mrow><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo stretchy="true">)</mo></mrow><mtext>&nbsp;dB</mtext></math></p>
+
+<p data-bo="6598">Say the solid curve here is our input signal, with amplitude <math display="inline"><mn>1</mn></math>, and the dotted
+curve is the signal after it comes out of.. some system, with amplitude <math display="inline"><mn>0.2</mn></math>:</p>
+
+<p data-bo="6759"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/amplitude-1-to-0.2~3ad99774f10c1f3f.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/amplitude-1-to-0.2.svg" width="400" height="auto" title="" alt=""></p><p data-bo="6820">Based on those amplitudes, our system has a gain of:</p>
+
+<p data-bo="6874"><math display="block"><mi>L</mi><mo>=</mo><mn>20</mn><mspace width="0.2777778em" /><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mrow><mn>10</mn></mrow></msub></mrow><mrow><mo stretchy="true">(</mo><mfrac><mrow><mn>0.2</mn></mrow><mrow><mn>1</mn></mrow></mfrac><mo stretchy="true">)</mo></mrow><mo>≈</mo><mi>−</mi><mn>14</mn><mspace width="0.2777778em" /><mtext>dB</mtext></math></p>
+
+<p data-bo="6961">Because of the way human hearing works, it makes more sense to design a volume
+control around decibels. It is, in fact, logarithmic, but it feels more linear
+to the ear.</p>
+
+<div data-bo="7134" class="dialog">
+<div class="dialog-head bear-mark" title="Cool bear says:">
+  <picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~a9635512c248538c.w400.jxl 1x,https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~ff7d544e857abfc9.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~1aa8718807b2a71e.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~7010eabf1d70d303.jxl 1x,https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~7010eabf1d70d303.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~6d942171cade4d3f.w400.avif 1x,https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~06a52b43f6e3d546.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~18eb126743dc56d9.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~878df1cc87d6ed50.avif 1x,https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~878df1cc87d6ed50.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~1705a9c37db6c792.w400.webp 1x,https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~70614544e97d8c4e.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~d752b58b01819a19.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~1eecd3d081b40415.webp 1x,https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~1eecd3d081b40415.webp 2x"><img src="https://cdn.fasterthanli.me/content/img/reimena/coolbear-neutral~7010eabf1d70d303.jxl" loading="lazy" width="42" height="42" data-kind="media" data-input-path="/content/img/reimena/coolbear-neutral.jxl" alt="Cool bear"></picture>
+</div>
+<div class="dialog-text markup-container">
+<p data-bo="7150">If you don’t do that, you end up with a very frustrating volume control where the
+upper 80% are way too loud, and the value you want is between two ticks on the low
+end of the slider. I’m sure you’ve seen those before, I know I have.</p>
+
+</div>
+</div><p data-bo="7385">Those <math display="inline"><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">S</mi></mrow></msub></mrow></math> are the ones we’re interested in as broadcast engineers:
+since we’re dealing with a signal directly.</p>
+
+<p data-bo="7512">Of course, most of the time, a signal will be transformed back into a sound
+wave, and then we’ll have to worry about <math display="inline"><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">L</mi></mrow></msub></mrow></math>…</p>
+
+<p data-bo="7653">But as long as it’s within an audio system, we have to worry about exceeding
+levels. With an analog signal, that typically results in distortion, which…
+can be done on purpose for style, and exceeding levels in a digital system
+typically results in clipping, a very harsh form of distortion.</p>
+
+<p data-bo="7948"><video controls playsinline preload="none" loading="lazy" width="588" height="184" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/clipping@2x.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping@2x.thumb" class="" title="" alt="An example of clipping — I'm dragging the volume of a track and it's going too high.
+"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping@2x~90f3f5d6c2a25ad3.av1+opus.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping@2x~efc63f66eebd4446.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping@2x~d60830eee9932e98.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video></p><p data-bo="8096">Which sounds quite awful — you may recognize that from public announcement
+systems in parks or maybe trains:</p>
+
+<p data-bo="8208"><video controls playsinline preload="none" loading="lazy" width="825" height="603" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/clipping-example@2x.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping-example@2x.thumb" class="" title="" alt="A video of DaVinci Resolve. I have a Soft Clipper set to Hard and I'm putting the threshold down to -18 dB.
+"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping-example@2x~55501179d67c28eb.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping-example@2x~a83288a37e003dfd.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/clipping-example@2x~e192712e161ecdae.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video></p><p data-bo="8385">To avoid that, we have watch our levels. And over the past hundred years,
+we’ve come up with a bunch of solutions to do that, all of which are flawed
+in some way.</p>
+
+<p data-bo="8549">In the 1930s, the BBC came up with meters that look like this:</p>
+
+<figure
+class="paragraph-like" data-bo="8613" style="width: 500px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~81b950d7e74b023f.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~565299aac59ee127.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~46ab7bd78d8797b7.w900.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~30163545878e2f80.w1800.jxl 2x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~d7038ab475df0e34.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~d7038ab475df0e34.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~199bb6004a3cee89.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~343b32c6d5e953d4.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~2788fe73da965542.w900.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~a3492f37472035d2.w1800.avif 2x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~4e24f99ef69b8e34.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~4e24f99ef69b8e34.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~e7386095d46e8267.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~556c0dc412037081.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~e0ced4d10f90ab6c.w900.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~80fa3d56ffc62538.w1800.webp 2x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~fb474c64358f8976.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~fb474c64358f8976.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sifam-type34-british-ppm~d7038ab475df0e34.jxl" loading="lazy" width="500" height="1743" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/sifam-type34-british-ppm.jxl" title="A typical British quasi-PPM. Each division between '1' and '7' is exactly four decibels and '6' is the intended maximum level. " alt=""></picture><figcaption><div class="markup-container figure-caption"><p>A typical British quasi-PPM.
+Each division between '1' and '7' is exactly four decibels and '6' is the intended maximum level.</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Sifam.type34A.British.ppm.jpg">Hyrumph on Wikimedia Commons</a></cite></figcaption>
+</figure><p data-bo="8963">Well, that one isn’t from the 1930s, but the basic idea hasn’t changed.</p>
+
+<p data-bo="9036">Independently and around the same time, the Germans <em>also</em> developed level
+meters, putting actual decibels on the scale…</p>
+
+<figure
+class="paragraph-like" data-bo="9160" style="width: 600px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~16b0533652df817f.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~5c3e1edfc0452a23.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~db41a23e5e267189.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~0b564a3545e3e5e8.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~0b564a3545e3e5e8.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~a70e057ede369652.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~11b6fd225be8fe8e.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~130c3ba7b845167c.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~0425ec643f8874f7.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~0425ec643f8874f7.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~2e76c7bbef2e3ea5.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~848817173fa7bba4.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~70e36a25266b6a50.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~8490ebfe72e5b43d.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~8490ebfe72e5b43d.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske~0b564a3545e3e5e8.jxl" loading="lazy" width="600" height="584" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/lichtzeiger-instrument-siemens-halske.jxl" title="A German PPM from Siemens &amp; Halske" alt=""></picture><figcaption><div class="markup-container figure-caption"><p>A German PPM from Siemens &amp; Halske</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Lichtzeiger_Instrument_Siemens_%26_Halske.jpg">Max Koschuh on Wikimedia Commons</a></cite></figcaption>
+</figure><p data-bo="9433">…and giving them the cute little nickname “Lichtzeigerinstrument” (light
+pointer instruments).</p>
+
+<p data-bo="9531">Today we would call them both “quasi-PPMs”, PPM for “peak programme meter”,
+and quasi because… they don’t actually report peaks accurately.</p>
+
+<p data-bo="9674">Type II PPMs, for example, have an integration time of 10ms — any peak shorter
+than that gets under-reported. This succession of notes, which all have the
+exact same volume but are getting longer and longer, shows how the quasi-PPM
+under-reports at first:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="9933"><video controls playsinline preload="none" loading="lazy" width="1059" height="565" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/mvmeter-ppm@2x.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/mvmeter-ppm@2x.thumb" title="I don't own one, so the best I can do is show you a plug-in that simulates it! " alt="A capture of Ableton 12 Suite showing mvMeter2 in PPM (IIa - BBC) mode. "><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/mvmeter-ppm@2x~dcb665ce4b26a5f0.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/mvmeter-ppm@2x~8b487c6aca175c78.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/mvmeter-ppm@2x~699ef720caebf26c.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video><figcaption><div class="markup-container figure-caption"><p>I don't own one, so the best I can do is show you a plug-in that simulates it!</p>
+</div><cite><a href="https:&#x2f;&#x2f;www.tbproaudio.de&#x2f;products&#x2f;mvmeter2">mvMeter2 plug-in</a></cite></figcaption>
+</figure><a id="root-mean-square" href="#root-mean-square" class="anchor"><h2>Root Mean Square</h2></a>
+<p data-bo="10276">But quasi-PPMs are still <em>pretty good</em> at showing peaks. A lot more than, say,
+VU meters (for Volume Unit), which were invented in the US in the 1940s, and
+which get us a lot closer to “loudness”.</p>
+
+<p data-bo="10474">What VU meters measure is similar to the Root Mean Square, which gives us the
+average level of a signal over a period of time:</p>
+
+<p data-bo="10602"><math display="block"><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi></mrow><mo>=</mo><msqrt><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><munderover><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt></math></p>
+
+<p data-bo="10662">A typical VU meter has an integration time of 300ms (vs 10ms for a Type II PPM
+if you remember), giving us even more severe under-reporting of peaks:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="10813"><video controls playsinline preload="none" loading="lazy" width="598" height="566" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/vumeter@2x.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/vumeter@2x.thumb" title="" alt="A capture of Ableton 12 Suite showing mvMeter2 in PPM (IIa - BBC) mode. "><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/vumeter@2x~342f62a4ef8dbf70.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/vumeter@2x~875e1ba9d6914623.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/vumeter@2x~e96385f35e6ddead.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video><figcaption><cite><a href="https:&#x2f;&#x2f;www.tbproaudio.de&#x2f;products&#x2f;mvmeter2">mvMeter2 plug-in</a></cite></figcaption>
+</figure><p data-bo="11031">Which is fine!</p>
+
+<p data-bo="11047">Here’s another side-by-side example — using an RMS meter this time, which is
+close enough to an actual VU meter:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="11163"><video controls playsinline preload="none" loading="lazy" width="1600" height="1016" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/rms-vs-sp.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/rms-vs-sp.thumb" title="A prototype of the fasterthanlime audio meter playing one of my tracks, we see that the sample peak is consistently higher than the root mean square." alt=""><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/rms-vs-sp~1017b9185da9b4bd.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/rms-vs-sp~fdfdc98487e986c2.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/rms-vs-sp~6eaea19d28421853.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video><figcaption><div class="markup-container figure-caption"><p>A prototype of the fasterthanlime audio meter playing one of my tracks, we see that the sample peak is consistently higher than the root mean square.</p>
+</div></figcaption>
+</figure><p data-bo="11389">A VU meter is not meant to show short peaks it’s meant to let a radio operator
+know how loud a song roughly is, so they can adjust the volume, and the
+listeners don’t have to.</p>
+
+<p data-bo="11566">However, I’m happy to report that, since the 1940s, both our understanding of
+human hearing <em>and</em> technology have improved.</p>
+
+<a id="sample-peak-true-peak" href="#sample-peak-true-peak" class="anchor"><h2>Sample Peak, True Peak</h2></a>
+<p data-bo="11718">First off, most audio processing is now done in the digital domain. Which is
+both a blessing and a curse.</p>
+
+<p data-bo="11825">Here’s Ableton showing a piece of audio:</p>
+
+<p data-bo="11867"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~2f5caafb3620e335.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~21b43f0cc8ba0fc2.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~70c14c253b98c1b2.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~8fef010746b81656.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~8fef010746b81656.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~012c5784cd14e87f.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~37aab387983ad5d1.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~cbe0f9fe7b030e49.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~b825044a773fc8b4.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~b825044a773fc8b4.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~06ddbfeb5298426e.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~32a7734aa404846e.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~1cbb3a7dc86d5c52.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~3ca437222353821d.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~3ca437222353821d.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio1@2x~8fef010746b81656.jxl" loading="lazy" width="677" height="278" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/ableton-audio1@2x.jxl" class="" title="" alt="An Ableton screenshot cropped to show just the wave."></picture></p><p data-bo="11977">If we zoom in, we can see the wave:</p>
+
+<p data-bo="12014"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~53a9cfd426ffe74f.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~96e41ea86e103c7e.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~b49b384e85e44890.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~c9dbf958908cf217.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~c9dbf958908cf217.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~6a3d780aac36cf90.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~9ca29e8bc3824022.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~3124573257e930ba.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~a02a5d29f2365a09.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~a02a5d29f2365a09.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~0b43b0a41896b66c.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~33e673ca59857e52.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~920ed38a2ac5a425.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~202671db85fb9bde.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~202671db85fb9bde.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio2@2x~c9dbf958908cf217.jxl" loading="lazy" width="713" height="275" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/ableton-audio2@2x.jxl" class="" title="" alt="The wave is now made up of a faster wave.
+"></picture></p><p data-bo="12123">We can zoom in some more:</p>
+
+<p data-bo="12150"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~1c92f85109ce100a.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~390929cf706f0ef7.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~3635f981cf11df0b.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~2ae20573da4f8616.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~2ae20573da4f8616.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~05f77325cfebc862.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~8fec7cc8b883c2e5.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~22db7baca2f3bf00.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~7e6b1a28ef7a57d9.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~7e6b1a28ef7a57d9.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~1d7bbf0645b53343.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~2b2c4d651741c0db.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~fbae04ef4503875c.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~c58816a61eb5aa0e.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~c58816a61eb5aa0e.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-audio3@2x~2ae20573da4f8616.jxl" loading="lazy" width="714" height="278" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/ableton-audio3@2x.jxl" class="" title="" alt="We're now seeing what looks like a graph almost
+"></picture></p><p data-bo="12265">And eventually, Ableton will show us individual audio samples:</p>
+
+<p data-bo="12329"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~052ae70f771e352a.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~ee7328210f7ccf13.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~5a03caf0216e83dd.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~71e13357289c4163.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~71e13357289c4163.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~5f4e90a94688a7b7.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~b6ea5c1559bdd4e9.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~abba0f09b3262c54.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~dc7726cdfe4fae00.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~dc7726cdfe4fae00.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~4aa7d1ff32991d41.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~cd1e976c05271145.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~36cad3da36234e16.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~e18c4b9fcf842076.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~e18c4b9fcf842076.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x~71e13357289c4163.jxl" loading="lazy" width="712" height="276" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/ableton-individual-audio-samples@2x.jxl" class="" title="" alt=""></picture></p><p data-bo="12395">Today’s PPMs are not “quasi” anymore. It’s really easy to make a sample peak
+monitor, because you just look at a window of samples, say, a thousand of them,
+and keep whichever value is the furthest from zero! That’s your peak!</p>
+
+<p data-bo="12623">Your sample peak! Not your true peak!</p>
+
+<p data-bo="12662">Because the actual sound wave is reconstructed from a limited amount of discrete
+samples, it’s possible for all samples to be below the maximum desired level,
+and yet for the reconstructed wave to be above it!</p>
+
+<div id="svelte-component-inter-sample-peaks" class="paragraph-like">(JavaScript is needed for this bit)</div>
+<p data-bo="12985">To actually measure the true peak, one can use a sinc filter to upsample the signal,
+which fills in additional samples between the original ones — letting us know how high
+that sound wave truly goes.</p>
+
+<div id="svelte-component-inter-sample-peaks-upsample-4x" class="paragraph-like">(JavaScript is needed for this bit)</div>
+<a id="the-loudness-wars" href="#the-loudness-wars" class="anchor"><h2>The Loudness Wars</h2></a>
+<p data-bo="13334">That takes care of peaks. What about loudness then? Well, we made progress there
+too. First, in the wrong direction.</p>
+
+<p data-bo="13452">The idea of compression is to get rid of dynamic range by taking anything above
+a certain level and progressively making it smaller:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="13586"><video controls playsinline preload="none" loading="lazy" width="987" height="765" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/compression-demo@2x.mp4" poster="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/compression-demo@2x.thumb" title="A demonstration of compression in DaVinci Resolve 20 using the very text for this article. " alt=""><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/compression-demo@2x~b793bee98a319a84.mp4" type="video/mp4; codecs=av01.0.08M.08,opus"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/compression-demo@2x~5238336a64dfb6ea.h264+aac.mp4" type="video/mp4; codecs=avc1.640034,mp4a.40.2"><source src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/compression-demo@2x~816f2ad781d279be.vp9+opus.webm" type="video/webm; codecs=vp09.00.41.08,opus">Your browser does not support the video tag.</video><figcaption><div class="markup-container figure-caption"><p>A demonstration of compression in DaVinci Resolve 20 using the very text for this article.</p>
+</div></figcaption>
+</figure><p data-bo="13749">We can apply gain to the resulting signal without clipping, making the whole
+thing louder. That gain is called “make-up” gain, because it makes up for the
+loud bits that were made quieter by the compression. I can’t believe that just
+clicked for me now.</p>
+
+<p data-bo="14004">During the 2000s, sound engineers started abusing compression to make their
+albums sound louder and louder, based on the theory that people preferred louder
+things.</p>
+
+<figure
+class="paragraph-like" data-bo="14170" style="width: 400px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~1ba6bfb32bc3be85.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~0f38ba587834210f.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~e8925be3c1351987.w900.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~cf66928e1b2ee308.w1800.jxl 2x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~f89fd41cf736c029.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~f89fd41cf736c029.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~b18845b831a3269e.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~643dda211ef4bb7c.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~38b55a92f8b572a0.w900.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~ed59fc165ec34fdd.w1800.avif 2x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~32d607a1d3fab387.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~32d607a1d3fab387.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~4dcfe9463ee23b45.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~15f72dad7c1b47a9.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~3c45d13b377f61c6.w900.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~8ce9c1370c7d352f.w1800.webp 2x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~25ad284b20c98de5.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~25ad284b20c98de5.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/abba-supertrouper~f89fd41cf736c029.jxl" loading="lazy" width="400" height="4240" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/abba-supertrouper.jxl" title="The song 'Super Trouper' as shown on the major issues of the album, the 1980 Super Trouper LP, 2001 Jon Astley remaster, 2005 The Complete Studio Recordings box set disc 7, and 2011 Super Trouper Deluxe Edition remaster disc 1. " alt=""></picture><figcaption><div class="markup-container figure-caption"><p>The song "Super Trouper" as shown on the major issues of the album, the 1980 Super Trouper LP, 2001 Jon Astley remaster, 2005 The Complete Studio Recordings box set disc 7, and 2011 Super Trouper Deluxe Edition remaster disc 1.</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:ABBA_-_Super_Trouper_Title_Track_Remaster_Waveform_Comparisons_(Small_Version).png
+">Kosmosi
+</a></cite></figcaption>
+</figure><p data-bo="14658">These “loudness wars” lasted until the mid-2010s, when the music industry
+finally <a href="https://www.soundonsound.com/techniques/end-loudness-war">tackled the problem</a>,
+by inventing a proper loudness unit: LKFS.</p>
+
+<p data-bo="14865">The first interesting thing about LKFS is that it takes into account multiple
+channels and does a downmix into one value:</p>
+
+<figure
+class="paragraph-like" data-bo="14988" style="width: 900px"
+><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/bs1770-fig1~23a2478f02262418.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/bs1770-fig1.drawio" width="900" height="auto" title="Simplified block diagram of multichannel loudness algorithm " alt=""><figcaption><div class="markup-container figure-caption"><p>Simplified block diagram of multichannel loudness algorithm</p>
+</div></figcaption>
+</figure><p data-bo="15128">Which begs the question: what did the BBC do, with <em>their</em> PPMs?</p>
+
+<p data-bo="15194">Well, they didn’t have to worry about stereo until the late 50s, when they
+started experimenting with stereo themselves, with two separate AM transmitters.</p>
+
+<p data-bo="15351">So, two separate PPMs was one option:</p>
+
+<figure
+class="paragraph-like" data-bo="15390" style="width: 400px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~7a81911d9225a2b7.w400.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~916bed4e68a74182.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~916bed4e68a74182.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~e2d4d0e4e25dbf92.w400.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~5319dc0dd7edcfc3.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~5319dc0dd7edcfc3.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~671ea7b1a68af5fb.w400.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~366aa38b3e8cb89e.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~366aa38b3e8cb89e.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.ab.png~916bed4e68a74182.jxl" loading="lazy" width="400" height="222" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/paqt-meter.ab.png.jxl" title="Screenshot of BBC-type Peak programme meter in AB (left/right) mode" alt=""></picture><figcaption><div class="markup-container figure-caption"><p>Screenshot of BBC-type Peak programme meter in AB (left/right) mode</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Paqt_meter.ab.png">Harumphy</a></cite></figcaption>
+</figure><p data-bo="15624">…and then they had a different variant that showed the sum and the difference
+of both channels, which came in two versions, M3:</p>
+
+<figure
+class="paragraph-like" data-bo="15755" style="width: 400px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~903a523f4b461d8d.w400.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~8082482cbedc946e.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~8082482cbedc946e.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~6ed734865594195a.w400.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~c31c61d30aaa2d2b.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~c31c61d30aaa2d2b.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~af9ae93652383740.w400.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~8ef7d23975ce1e77.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~8ef7d23975ce1e77.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m3.png~8082482cbedc946e.jxl" loading="lazy" width="400" height="222" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/paqt-meter.m3.png.jxl" title="Screenshot of BBC-type Peak programme meter in M3 (sum/difference) mode" alt=""></picture><figcaption><div class="markup-container figure-caption"><p>Screenshot of BBC-type Peak programme meter in M3 (sum/difference) mode</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Paqt_meter.m3.png">Harumphy</a></cite></figcaption>
+</figure><p data-bo="15993">And M6:</p>
+
+<figure
+class="paragraph-like" data-bo="16002" style="width: 400px"
+><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~af5dad72c10c9b6a.w400.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~baa6430e7402d444.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~baa6430e7402d444.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~29c1cef8603cbcb4.w400.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~dc21844b24328ce3.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~dc21844b24328ce3.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~d27794dfa3d4f149.w400.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~882172032879f3c6.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~882172032879f3c6.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/paqt-meter.m6.png~baa6430e7402d444.jxl" loading="lazy" width="400" height="222" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/paqt-meter.m6.png.jxl" title="Screenshot of BBC-type Peak programme meter in M6 (sum/difference) mode" alt=""></picture><figcaption><div class="markup-container figure-caption"><p>Screenshot of BBC-type Peak programme meter in M6 (sum/difference) mode</p>
+</div><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Paqt_meter.m6.png">Harumphy</a></cite></figcaption>
+</figure><p data-bo="16240">This is important because if you have two waves of opposite phase, they cancel
+each other out!</p>
+
+<p data-bo="16336"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/phase~d8671e44422a4d06.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/phase.drawio" width="433" height="103" title="" alt=""></p><p data-bo="16375">But the first stage of LKFS computation is filtering, to model how humans
+perceive sound.</p>
+
+<p data-bo="16466">The first filter boosts everything above 1000Hz:</p>
+
+<figure
+class="paragraph-like" data-bo="16516" style="width: 500px"
+><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/bs1770-fig2~87b23fefa7792198.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/bs1770-fig2.svg" width="500" height="auto" title="Response of stage 1 of the pre-filter used to account for the acoustic effects of the head " alt=""><figcaption><div class="markup-container figure-caption"><p>Response of stage 1 of the pre-filter used to account for the acoustic effects of the head</p>
+</div><cite><a href="https:&#x2f;&#x2f;www.desmos.com&#x2f;calculator&#x2f;vg9gb68rc1">Graphed with Desmos</a></cite></figcaption>
+</figure><p data-bo="16773">And the second is a high-pass filter, which attenuates anything under 100Hz.</p>
+
+<figure
+class="paragraph-like" data-bo="16851" style="width: 500px"
+><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/bs1770-fig4~74b6b50d033655cb.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/bs1770-fig4.svg" width="500" height="auto" title="Second stage weighting curve" alt=""><figcaption><div class="markup-container figure-caption"><p>Second stage weighting curve</p>
+</div><cite><a href="https:&#x2f;&#x2f;www.desmos.com&#x2f;calculator&#x2f;ekzxpirfec">Graphed with Desmos</a></cite></figcaption>
+</figure><p data-bo="17038">Next, we integrate over some interval <math display="inline"><mi>T</mi></math> to calculate the power of the filtered signal:</p>
+
+<p data-bo="17128"><math display="block"><msub><mi>z</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>T</mi></mrow></mfrac><msubsup><mo movablelimits="false">∫</mo><mn>0</mn><mi>T</mi></msubsup><msubsup><mi>y</mi><mi>i</mi><mn>2</mn></msubsup><mspace width="0.16666667em" /><mi>d</mi><mi>t</mi></math></p>
+
+<p data-bo="17174">And finally, this should look familiar: it’s very close to the <math display="inline"><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></math>
+formula from earlier:</p>
+
+<p data-bo="17274"><math display="block"><mrow><msub><mi mathvariant="normal">L</mi><mi mathvariant="normal">K</mi></msub></mrow><mo>=</mo><mi>−</mi><mn>0.691</mn><mo>+</mo><mn>10</mn><mo>⋅</mo><msub><mi>log</mi><mrow><mn>10</mn></mrow></msub><mo>⁡</mo><mspace width="0.1667em" /><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>⋅</mo><msub><mi>z</mi><mi>i</mi></msub></mrow></math></p>
+
+<p data-bo="17346">But because this time we’re measuring a power, not an amplitude, we use a 10x
+factor instead of a 20.</p>
+
+<p data-bo="17449"><math display="inline"><msub><mi>G</mi><mi>i</mi></msub></math> are the weighting coefficients for individual channels, given in table 3 of
+BS.1770-5 as:</p>
+
+<p data-bo="17546"><math display="block"><mtable class="menv-alignlike menv-align"><mtr><mtd><msub><mi>G</mi><mi>L</mi></msub></mtd><mtd><mo>=</mo><mn>1.0</mn></mtd><mtd><mn>0</mn><mspace width="0.2777778em" /><mtext>DB</mtext></mtd></mtr><mtr><mtd><msub><mi>G</mi><mi>R</mi></msub></mtd><mtd><mo>=</mo><mn>1.0</mn></mtd><mtd><mn>0</mn><mspace width="0.2777778em" /><mtext>DB</mtext></mtd></mtr><mtr><mtd><msub><mi>G</mi><mi>C</mi></msub></mtd><mtd><mo>=</mo><mn>1.0</mn></mtd><mtd><mn>0</mn><mspace width="0.2777778em" /><mtext>DB</mtext></mtd></mtr><mtr><mtd><msub><mi>G</mi><mrow><mi>L</mi><mi>s</mi></mrow></msub></mtd><mtd><mo>=</mo><mn>1.41</mn></mtd><mtd><mo>∼</mo><mspace width="0.22222222em" /><mi>+</mi><mn>1.5</mn><mspace width="0.2777778em" /><mtext>DB</mtext></mtd></mtr><mtr><mtd><msub><mi>G</mi><mrow><mi>R</mi><mi>s</mi></mrow></msub></mtd><mtd><mo>=</mo><mn>1.41</mn></mtd><mtd><mo>∼</mo><mspace width="0.22222222em" /><mi>+</mi><mn>1.5</mn><mspace width="0.2777778em" /><mtext>DB</mtext></mtd></mtr></mtable></math></p>
+
+<p data-bo="17765">Depending on the interval chosen to calculate loudness, we call the result
+different things:</p>
+
+<ul><li><math display="inline"><mi>M</mi></math> for momentary (400 milliseconds)</li>
+<li><math display="inline"><mi>S</mi></math> for short-term (3 seconds)</li>
+</ul>
+<p data-bo="17936">As for I, it’s the integrated loudness, and it takes into account an entire
+piece of media, minus the quiet parts, using a standard gating mechanism.</p>
+
+<p data-bo="18087">This prevents any “cheating” done by audio engineers to make their songs louder
+than the others, because we finally have one number that is relatively good at
+predicting how loud something will sound to the human ear.</p>
+
+<p data-bo="18306">When mastering for YouTube, we target an integrated loudness level of <math display="inline"><mi>−</mi><mn>14</mn><mspace width="0.2777778em" /><mrow><mi mathvariant="normal">L</mi><mi mathvariant="normal">U</mi><mi mathvariant="normal">F</mi><mi mathvariant="normal">S</mi></mrow></math>.</p>
+
+<p data-bo="18401">In the “Stats for nerds” section of a YouTube video (that you can find in the context menu),
+there is a content loudness section:</p>
+
+<p data-bo="18532"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~b259f80f0571f0d5.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~4bf73d85e2edd3f8.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~ea8817a8c2238c93.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~9fc54b3fdedf2ecc.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~9fc54b3fdedf2ecc.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~1df1ebf63a3eb81c.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~f19488c8170f80fc.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~f481faf4a8f1f7aa.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~0b173d78ea6ba912.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~0b173d78ea6ba912.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~08d9961b0340c742.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~644f39d8653e51ae.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~b4e2dab9e515cf7b.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~ab3072f14c7a0691.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~ab3072f14c7a0691.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-minus2.9~9fc54b3fdedf2ecc.jxl" loading="lazy" width="1242" height="412" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/yt-minus2.9.jxl" class="transparent-for-dark" title="A stats for nerds panel from YouTube showing a content loudness of -2.9dB
+" alt=""></picture></p><p data-bo="18701">On <a href="https://youtu.be/izGwDsrQ1eQ">that video</a> of George Michael’s “Careless
+Whisper” they left a bit of headroom: their integrated loudness is <math display="inline"><mi>−</mi><mn>14</mn><mo>−</mo><mn>2.9</mn><mo>=</mo><mi>−</mi><mn>16.9</mn><mspace width="0.2777778em" /><mrow><mi mathvariant="normal">L</mi><mi mathvariant="normal">U</mi><mi mathvariant="normal">F</mi><mi mathvariant="normal">S</mi></mrow></math>.</p>
+
+<p data-bo="18883">I checked with ffmpeg’s <code>-af ebur128</code> filter:</p>
+
+<figure role="region" aria-label="Terminal code block" class="code-block has-language-tag home-ansi" translate="no" data-lang="term" data-bo="18930"><span class="language-tag" title="Terminal"></span><code class="scroll-wrapper"><i class="b fg-cyn">~/Downloads</i>
+<i class="b fg-red">❯ </i><i class="fg-blu">ffmpeg </i><i class="fg-cyn">-i </i><i class="u fg-cyn">careless-whisper.webm </i><i class="fg-cyn">-af ebur128 -f null -</i>
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+✂️
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.106979   TARGET:-23 LUFS    M:-120.7 S:-120.7     I: -70.0 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.206979   TARGET:-23 LUFS    M:-120.7 S:-120.7     I: -70.0 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.306979   TARGET:-23 LUFS    M:-120.7 S:-120.7     I: -70.0 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.406979   TARGET:-23 LUFS    M: -20.6 S:-120.7     I: -20.6 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.506979   TARGET:-23 LUFS    M: -20.5 S:-120.7     I: -20.6 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.606979   TARGET:-23 LUFS    M: -21.4 S:-120.7     I: -20.8 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.706979   TARGET:-23 LUFS    M: -25.0 S:-120.7     I: -21.6 LUFS       LRA:   0.0 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 0.806979   TARGET:-23 LUFS    M: -33.5 S:-120.7     I: -21.6 LUFS       LRA:   0.0 LU
+✂️
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>t: 300.606979 TARGET:-23 LUFS    M: -60.3 S: -60.3     I: -16.9 LUFS       LRA:   8.2 LU
+<i class="fg-ansi155 bg-ansi0">[Parsed_ebur128_0 @ 0x6000002640b0] </i>Summary:
+
+  Integrated loudness:
+    I:         -16.9 LUFS
+    Threshold: -27.1 LUFS
+
+  Loudness range:
+    LRA:         8.2 LU
+    Threshold: -37.1 LUFS
+    LRA low:   -22.0 LUFS
+    LRA high:  -13.8 LUFS
+✂️
+</code></figure><p data-bo="20954">Because -16.9 is below the target of -14, YouTube does not apply any change to this video.</p>
+
+<p data-bo="21046">By contrast, <a href="https://www.youtube.com/watch?v=CvBfHwUxHIk">Rihanna’s Umbrella</a>
+is mastered to <math display="inline"><mi>−</mi><mn>8.8</mn><mspace width="0.2777778em" /><mtext>LUFS</mtext></math>, so YouTube turns the volume down:</p>
+
+<p data-bo="21198"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~5b8452bdc40b4dff.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~fa39d41b5cfdc1d7.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~ea7b147dc692b1ec.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~1aeccd2a5a15d6e0.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~1aeccd2a5a15d6e0.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~1c630fc9c893c228.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~e7ae750c2166ba60.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~d21cc9de64037e64.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~137a53cd9667ad54.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~137a53cd9667ad54.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~35866e172fb417ab.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~dc0bbfc505a3118d.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~72306e27fee0a154.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~77b546ff91f26138.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~77b546ff91f26138.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-loudness-5.3db~1aeccd2a5a15d6e0.jxl" loading="lazy" width="1256" height="412" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/yt-loudness-5.3db.jxl" class="transparent-for-dark" title="A stats for nerds panel from YouTube showing a content loudness of 5.3dB
+" alt=""></picture></p><p data-bo="21372">Going from 100% to 55% is a change of… hey, we can calculate that!</p>
+
+<p data-bo="21442"><math display="block"><mn>20</mn><mspace width="0.2777778em" /><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mrow><mn>10</mn></mrow></msub></mrow><mrow><mo stretchy="true">(</mo><mfrac><mrow><mn>0.55</mn></mrow><mrow><mn>1</mn></mrow></mfrac><mo stretchy="true">)</mo></mrow><mo>≈</mo><mi>−</mi><mn>5.2</mn><mspace width="0.2777778em" /><mtext>dB</mtext></math></p>
+
+<p data-bo="21527">And that’s what the “stats for nerds” overlay is showing: it’s 5.2, 5.3 above their
+target loudness, so they’re turning the volume down.</p>
+
+<div data-bo="21667" class="dialog right">
+<div class="dialog-head" title="Amos says:">
+  <picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~7e12af3470699bdc.w400.jxl 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~a0ea81dcadb8636e.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~d884997b42fbba49.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~55a3477398fe0cb1.jxl 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~55a3477398fe0cb1.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~45a3cd0b732f5ccc.w400.avif 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~e48742392d184dda.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~eea766689482b5e8.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~b094ff3737f6454a.avif 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~b094ff3737f6454a.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~87fb82d4e532a923.w400.webp 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~b07c9412606c8946.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~181264732affc244.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~3a98ffaa495414b6.webp 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~3a98ffaa495414b6.webp 2x"><img src="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~55a3477398fe0cb1.jxl" loading="lazy" width="42" height="42" data-kind="media" data-input-path="/content/img/reimena/amos-neutral.jxl" alt="Amos"></picture>
+</div>
+<div class="dialog-text markup-container">
+<p data-bo="21684">Personally, I find it strange that they show the difference between their
+loudness target and the content’s integrated loudness in decibels.</p>
+
+<p data-bo="21829">If they want to display the delta, they should use LU, loudness units. And
+honestly, they could just say the target is <math display="inline"><mi>−</mi><mn>14</mn></math> and give us the actual loudness
+of a track in LUFS. This is stats for <em>nerds</em>! Not stats for normies!</p>
+
+</div>
+</div><p data-bo="22057">Even more recently, YouTube has introduced “DRC” (for dynamic range compression):</p>
+
+<p data-bo="22140"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~c216a9e66086cd69.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~08d0c8dca52306a6.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~4bec3a77728316d5.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~c6d6ed6b8a67fb63.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~c6d6ed6b8a67fb63.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~38a80bb7f9d82970.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~c82f1dcbf82ce05b.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~119d2e76005a0406.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~96316551cdc1925d.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~96316551cdc1925d.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~3db3482c44aa9a8d.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~2569abd04b20f4fe.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~f830556f902e152d.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~3dd20ff2b0a242dc.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~3dd20ff2b0a242dc.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-drc~c6d6ed6b8a67fb63.jxl" loading="lazy" width="1240" height="412" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/yt-drc.jxl" class="transparent-for-dark" title="A YouTube stats for nerds overlay showing DRC instead of 55% or something.
+" alt=""></picture></p><p data-bo="22305">As seen here on this <a href="https://www.youtube.com/watch?v=IVKUZz4t1w4">Scott the Woz
+video</a>, which is mastered way below
+YouTube’s target loudness level, at around <math display="inline"><mi>−</mi><mn>23</mn><mspace width="0.2777778em" /><mtext>LUFS</mtext></math>, the target for
+“broadcast” rather than “streaming”.</p>
+
+<p data-bo="22540">YouTube’s user-facing name for it is “Stable Volume”, it’s not supposed to kick in
+for music because it ruins music and you can turn it off in the settings:</p>
+
+<p data-bo="22698"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~441e0796ef57ad22.w400.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~ce85dd993e303e9c.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~ce85dd993e303e9c.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~7771dad20e5bdcb5.w400.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~8b2ddf92436b2a62.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~8b2ddf92436b2a62.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~98a6a56c11826dc8.w400.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~4eb8ef6f836dec7f.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~4eb8ef6f836dec7f.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/yt-settings-menu~ce85dd993e303e9c.jxl" loading="lazy" width="350" height="662" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/yt-settings-menu.jxl" class="" title="" alt="The settings menu for YouTube with stable volume at the top checked.
+"></picture></p><a id="a-weighting" href="#a-weighting" class="anchor"><h2>A-weighting</h2></a>
+<p data-bo="22864">LKFS, and LUFS (same thing different name) aren’t the only units that try to
+take psychoacoustics into account: the Apple Watch’s Noise app <em>also</em> does
+filtering.</p>
+
+<p data-bo="23028">The first experiments regarding “how loud humans think sound is” date <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.29.588">back
+to 1927</a>:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="23176"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~7566e6920a483562.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~658dd795837c2b7e.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~2d0bd9127f7f74e4.w900.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~5540acf7602a5f0b.w1800.jxl 2x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~8889d70ea5c0b290.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~8889d70ea5c0b290.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~333c2e5ebba6f52a.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~4c12dbef4eb9d5e8.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~3c6c78930696b210.w900.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~5bc1ac80ab035490.w1800.avif 2x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~6c29f2de198c4c7e.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~6c29f2de198c4c7e.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~a50d5aebfb89e8b7.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~a2523b2155e1d044.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~14c3b062d896d49a.w900.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~3a667e3cb620ff26.w1800.webp 2x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~72883f8e59f8eb80.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~72883f8e59f8eb80.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/kingsbury-1927@2x~8889d70ea5c0b290.jxl" loading="lazy" width="1036" height="972" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/kingsbury-1927@2x.jxl" title="Note: 'T.U.' stands for telephone units, and 'cycle' for Hertz. " alt="A DIRECT COMPARISON OF THE LOUDNESS OF PURE TONES BY B. A. KINGSBURY "></picture><figcaption><div class="markup-container figure-caption"><p>Note: "T.U." stands for telephone units, and "cycle" for Hertz.</p>
+</div></figcaption>
+</figure><p data-bo="23406">A few years later, Fletcher &amp; Munson publish this equal-contour loudness graph:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="23487"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~d7d6a617713f9dd3.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~0a64ed97282b1aa3.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~00155f85d84c66d0.w900.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~8d9440c7268f9554.w1800.jxl 2x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~914098f884d16b43.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~914098f884d16b43.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~7a4c64d42c9bb648.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~b67ff2c0ea9a8239.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~ce6c91aac7509d7c.w900.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~f05a9a8c3cf2c327.w1800.avif 2x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~13ff9f8ab0b8a7e6.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~13ff9f8ab0b8a7e6.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~8e8eae7897050dd4.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~938f198786629689.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~e10b80fc45d57c6f.w900.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~142f06537fca7dfb.w1800.webp 2x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~03ecc042cb4752c7.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~03ecc042cb4752c7.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/equal-loudness-contour@2x~914098f884d16b43.jxl" loading="lazy" width="1134" height="870" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/equal-loudness-contour@2x.jxl" title="An equal-contour loudness from Fletcher &amp; Munson, 1933 " alt=""></picture><figcaption><div class="markup-container figure-caption"><p>An equal-contour loudness from Fletcher &amp; Munson, 1933</p>
+</div><cite><a href="https:&#x2f;&#x2f;archive.org&#x2f;details&#x2f;bstj12-4-377
+">Loudness, Its Definition, Measurement and Calculation
+</a></cite></figcaption>
+</figure><p data-bo="23759">Which takes a minute to figure out. Each of the lines determine a level of
+loudness. Their test subjects reported that, for example, a 1000Hz sound blasted
+at 40 decibels felt as loud as a 100Hz sound at 62 decibels.</p>
+
+<p data-bo="23977">In other words: we are much, much more sensitive to sounds at 1000Hz than to
+those at 100Hz.</p>
+
+<p data-bo="24071">That dip around 3 to 4 KHz is where our hearing is most sensitive: we made our
+smoke detectors beep at that frequency for maximum alert, and our babies cry at
+that frequency for similar reasons.</p>
+
+<p data-bo="24267">From that graph, an <a href="https://www.iso.org/standard/4099.html">ISO standard</a> was
+derived, specifying the A-weighting curve, which predates LKFS’s K-weighting
+by almost 50 years:</p>
+
+<figure
+class="paragraph-like" data-bo="24444" style="width: 600px"
+><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/acoustic-weighting-curves~eba784b3d8a7bfeb.svg" loading="lazy" data-kind="diagram" data-input-path="/content/articles/the-science-of-loudness/acoustic-weighting-curves.svg" width="600" height="auto" title="" alt="A-weighting, B, C and D-weighting curves. There is a peak around 2-5Khz for the A curve, as expected. "><figcaption><cite><a href="https:&#x2f;&#x2f;commons.wikimedia.org&#x2f;wiki&#x2f;File:Lindos2.svg
+">Lindosland on Wikimedia Commons
+</a></cite></figcaption>
+</figure><p data-bo="24765">Although more basic and somewhat outdated, A-weighting is used in a bunch of places.</p>
+
+<p data-bo="24851"><a href="https://www.prefecturedepolice.interieur.gouv.fr/demarches/les-sons-amplifies-quelle-reglementation-applicable">French law</a>
+requires sound level meters like these in every music venue:</p>
+
+<figure
+class="paragraph-like"
+ data-bo="25038"><picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~1487e367c058c3c1.w400.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~cff0998f19a7ff76.jxl 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~cff0998f19a7ff76.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~f8540178f0dbbb74.w400.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~0efd76cffb8c4a1d.avif 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~0efd76cffb8c4a1d.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~b5252202d6ff19b6.w400.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~8bbe32a7d41eb0aa.webp 1x,https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~8bbe32a7d41eb0aa.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/the-science-of-loudness/sonometre-afficheur-amix~cff0998f19a7ff76.jxl" loading="lazy" width="564" height="315" data-kind="media" data-input-path="/content/articles/the-science-of-loudness/sonometre-afficheur-amix.jxl" title="" alt="A display showing 100 dBA, 84 dBA Leq(10min) and 88 dbC Leq(10min). "></picture><figcaption><cite><a href="https:&#x2f;&#x2f;www.levenly.com&#x2f;fr&#x2f;a&#x2f;17598&#x2f;amix-aff17-3.html
+">Amix AFF17-3
+</a></cite></figcaption>
+</figure><div data-bo="25293" class="dialog right">
+<div class="dialog-head" title="Amos says:">
+  <picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~7e12af3470699bdc.w400.jxl 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~a0ea81dcadb8636e.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~d884997b42fbba49.w900.jxl 1x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~55a3477398fe0cb1.jxl 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~55a3477398fe0cb1.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~45a3cd0b732f5ccc.w400.avif 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~e48742392d184dda.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~eea766689482b5e8.w900.avif 1x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~b094ff3737f6454a.avif 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~b094ff3737f6454a.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~87fb82d4e532a923.w400.webp 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~b07c9412606c8946.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~181264732affc244.w900.webp 1x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~3a98ffaa495414b6.webp 1x,https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~3a98ffaa495414b6.webp 2x"><img src="https://cdn.fasterthanli.me/content/img/reimena/amos-neutral~55a3477398fe0cb1.jxl" loading="lazy" width="42" height="42" data-kind="media" data-input-path="/content/img/reimena/amos-neutral.jxl" alt="Amos"></picture>
+</div>
+<div class="dialog-text markup-container">
+<p data-bo="25310">As of 2023, the levels to respect are <math display="inline"><mn>102</mn><mspace width="0.16666667em" /><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi></msub></mrow></math> and
+<math display="inline"><mn>118</mn><mspace width="0.16666667em" /><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mi mathvariant="normal">C</mi></msub></mrow></math> Level Equivalent (LEQ), or, “average sound energy” over 15
+minutes.</p>
+
+</div>
+</div><p data-bo="25463">American work safety organizations give different recommendations when it comes
+to maximum sound exposure:</p>
+
+<p data-bo="25571"><a href="https://en.wikipedia.org/wiki/Occupational_Safety_and_Health_Administration">OSHA</a>:</p>
+
+<div class="responsive-table" data-bo="25657"><table><thead><td>Duration per day</td><td>Sound level (dBA)</td></thead><tr><td>8 hours</td><td>90</td></tr><tr><td>4 hours</td><td>95</td></tr><tr><td>2 hours</td><td>100</td></tr><tr><td>1 hour</td><td>105</td></tr><tr><td>30 minutes</td><td>110</td></tr><tr><td>15 minutes</td><td>115</td></tr></table></div><p data-bo="25986"><a href="https://en.wikipedia.org/wiki/National_Institute_for_Occupational_Safety_and_Health">NIOSH</a>:</p>
+
+<div class="responsive-table" data-bo="26081"><table><thead><td>Duration per day</td><td>Sound level (dBA)</td></thead><tr><td>8 hours</td><td>85</td></tr><tr><td>4 hours</td><td>88</td></tr><tr><td>2 hours</td><td>91</td></tr><tr><td>1 hour</td><td>94</td></tr><tr><td>30 minutes</td><td>97</td></tr><tr><td>15 minutes</td><td>100</td></tr><tr><td>7.5 minutes</td><td>103</td></tr><tr><td>3.75 minutes</td><td>106</td></tr><tr><td>1.88 minutes</td><td>109</td></tr><tr><td>0.94 minutes</td><td>112</td></tr></table></div><p data-bo="26574">These tables use <math display="inline"><mrow><mi mathvariant="normal">d</mi><msub><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi></msub></mrow></math> ; and so does the Apple Watch Noise app.</p>
+
+<p data-bo="26649">Now that we know how all these units fit together, we can all be fun at the next party.</p>
+
+
+
+    
+    <div class="git-repo-svelte-component" data-repo-name="fam"></div>
+    
+
+    
+
+    
+
+    
+    <aside>
+        Discuss this page on
+        <a target="_blank" href="https://fasterthanli.me/api/comments?url=https%3A%2F%2Ffasterthanli.me%2Farticles%2Fthe-science-of-loudness&title=The+science+of+loudness">Reddit</a> .
+    </aside>
+    
+
+    
+        <div class="gentle-nudge-island" data-context="end-of-page">
+            (JavaScript is required to see this. Or maybe my stuff broke)
+        </div>
+     
+
+    
+
+
+
+    <div class="bottom-nav">
+        <p style="margin-bottom: 0.8em;">
+            Did you know I also make videos? Check them out on <a href="https://youtube.com/@fasterthanlime">YouTube</a>!
+        </p>
+
+        
+        
+            <p style="margin-bottom: 0.8em;">
+                Here's another article just for you:
+            </p>
+            
+
+    
+
+
+
+
+<div
+    class="post-list-item random"
+    
+    data-youtube="0mqFCqw_XvI"
+>
+    
+
+    
+
+    <div class="post-list-item-inner">
+        
+            
+            
+            <div class="post-list-thumb">
+                <picture><source type="image/jxl" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~1992d85196b18e08.w400.jxl 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~e40b7f0566105ebf.w800.jxl 2x"><source type="image/jxl" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~cb6e049114ad3a57.w900.jxl 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~8d381685e10bbd44.w1800.jxl 2x"><source type="image/jxl" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~543e05c559d7666f.jxl 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~543e05c559d7666f.jxl 2x"><source type="image/avif" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~d4a5536e08b767fa.w400.avif 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~fc777106337e215d.w800.avif 2x"><source type="image/avif" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~9656a3798443bdce.w900.avif 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~78851fda6973500d.w1800.avif 2x"><source type="image/avif" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~fe4fda46e22a1dc9.avif 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~fe4fda46e22a1dc9.avif 2x"><source type="image/webp" media="(max-width: 400px)" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~5b9318fc7a437c93.w400.webp 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~510f37c51515c3c5.w800.webp 2x"><source type="image/webp" media="(max-width: 900px)" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~4376f607bf76f462.w900.webp 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~39d9b9f8cc2f1add.w1800.webp 2x"><source type="image/webp" srcset="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~a5994634e3ccf952.webp 1x,https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~a5994634e3ccf952.webp 2x"><img src="https://cdn.fasterthanli.me/content/articles/introducing-facet-reflection-for-rust/_thumb~543e05c559d7666f.jxl" loading="lazy" width="2560" height="1440" data-kind="media" data-input-path="/content/articles/introducing-facet-reflection-for-rust/_thumb.jxl" alt="Thumbnail for Introducing facet: Reflection for Rust"></picture>
+            </div>
+            
+        
+        <h2 class="post-list-title">
+            <a class="post-link" href="https://fasterthanli.me/articles/introducing-facet-reflection-for-rust" rel="noopener">
+                
+
+                
+                    Introducing facet: Reflection for Rust
+                
+            </a>
+         </h2>
+          <div class="post-blocks">
+              <div class="post-block small">
+                  <div class="post-metadata">
+                      <div class="post-date">Jun 05, 2025</div>
+                      <span class="reading-time">
+        <svg id="clock-icon" class="inline-icon" width="1.1em" height="1.1em" style="padding: .1em;" alt="clock icon" enable-background="new 0 0 443.294 443.294" viewBox="0 0 443.294 443.294" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z"></path><path d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z"></path></svg>
+
+        <abbr title="Estimated reading time, at 220 words per minute, where one word = 5 characters">
+            
+                20 min
+            
+        </abbr>
+    </span>
+                      
+    <span class="tags">
+        
+            
+                <span><a href="/tags/rust">#rust</a></span>
+            
+            
+                <span>&middot;</span>
+            
+        
+            
+                <span><a href="/tags/reflection">#reflection</a></span>
+            
+            
+                <span>&middot;</span>
+            
+        
+            
+                <span><a href="/tags/facet">#facet</a></span>
+            
+            
+        
+    </span>
+                      <span class="indicators">
+    
+        
+
+        
+    
+
+    
+</span>
+                  </div>
+              </div>
+
+              <div class="post-block big">
+                  <a class="post-block-link" href="https://fasterthanli.me/articles/introducing-facet-reflection-for-rust" rel="noopener">
+                    <div class="post-summary markup-container "><p data-bo="946">I have long been at war against Rust compile times.</p>
+
+<p data-bo="999">Part of the solution for me was to buy my way into Apple Silicon dreamland,
+where builds are, like… faster. I remember every time I SSH into an x86_64
+server, even the nice 64-core ones.</p>
+
+<p data-bo="1189">And another part was, of course, to get dirty with Rust itself.</p>
+
+<p data-bo="1254">I wrote <a href="/articles/why-is-my-rust-build-so-slow">Why is my Rust build so slow?</a>,
+which goes in-depth into rust build performance, down to rustc self-profiling even!</p>
+
+
+
+
+
+
+
+
+
+<a id="let-they-who-are-without-syn" href="#let-they-who-are-without-syn" class="anchor"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="monomorphization" href="#monomorphization" class="anchor"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="a-different-strategy" href="#a-different-strategy" class="anchor"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="today-tomorrow" href="#today-tomorrow" class="anchor"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                  </a>
+
+                  <div class="read-more">
+                      <a href="https://fasterthanli.me/articles/introducing-facet-reflection-for-rust" rel="noopener">
+                          Read more
+                      </a>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+        
+    </div>
+  
+  </div>
+
+    </div>
+
+    
+    
+    <nav class="table-of-contents">
+        <menu>
+            <a href="#home-page-top" class="toc-entry">
+              <h2 class="toc-header">
+                  Contents
+              </h2>
+            </a>
+
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#what-even-is-sound">What even is sound?</a>
+            </li>
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#under-pressure">Under pressure</a>
+            </li>
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#signal-processing">Signal processing</a>
+            </li>
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#root-mean-square">Root Mean Square</a>
+            </li>
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#sample-peak-true-peak">Sample Peak, True Peak</a>
+            </li>
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#the-loudness-wars">The Loudness Wars</a>
+            </li>
+            
+            <li data-level="2">
+              <a class="toc-entry" href="#a-weighting">A-weighting</a>
+            </li>
+            
+        </menu>
+    </nav>
+    
+
+  </main>
+</div> <!-- content -->
+<div class="nav-bottom">
+    <div class="nav-content">
+        <div class="nav-outlinks icons">
+            <a href="/discord" title="Discord">
+                <span class="inline-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="fi_5968898" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512">
+<g>
+	<path d="M433.43,93.222c-32.633-14.973-67.627-26.005-104.216-32.324c-0.666-0.122-1.332,0.183-1.675,0.792   c-4.501,8.005-9.486,18.447-12.977,26.655c-39.353-5.892-78.505-5.892-117.051,0c-3.492-8.39-8.658-18.65-13.179-26.655   c-0.343-0.589-1.009-0.894-1.675-0.792c-36.568,6.298-71.562,17.33-104.216,32.324c-0.283,0.122-0.525,0.325-0.686,0.589   c-66.376,99.165-84.56,195.893-75.64,291.421c0.04,0.467,0.303,0.914,0.666,1.198c43.793,32.161,86.215,51.685,127.848,64.627   c0.666,0.203,1.372-0.04,1.796-0.589c9.848-13.449,18.627-27.63,26.154-42.543c0.444-0.873,0.02-1.909-0.888-2.255   c-13.925-5.282-27.184-11.723-39.939-19.036c-1.009-0.589-1.09-2.032-0.161-2.723c2.684-2.011,5.369-4.104,7.932-6.217   c0.464-0.386,1.11-0.467,1.655-0.224c83.792,38.257,174.507,38.257,257.31,0c0.545-0.264,1.191-0.182,1.675,0.203   c2.564,2.113,5.248,4.226,7.952,6.237c0.928,0.691,0.867,2.134-0.141,2.723c-12.755,7.456-26.014,13.754-39.959,19.016   c-0.908,0.345-1.312,1.402-0.867,2.275c7.689,14.892,16.468,29.073,26.134,42.523c0.404,0.569,1.13,0.813,1.796,0.609   c41.835-12.941,84.257-32.466,128.05-64.627c0.384-0.284,0.626-0.711,0.666-1.178c10.676-110.441-17.881-206.376-75.7-291.421   C433.954,93.547,433.712,93.344,433.43,93.222z M171.094,327.065c-25.227,0-46.014-23.16-46.014-51.604   s20.383-51.604,46.014-51.604c25.831,0,46.417,23.364,46.013,51.604C217.107,303.905,196.723,327.065,171.094,327.065z    M341.221,327.065c-25.226,0-46.013-23.16-46.013-51.604s20.383-51.604,46.013-51.604c25.832,0,46.417,23.364,46.014,51.604   C387.235,303.905,367.054,327.065,341.221,327.065z"></path>
+</g>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>
+                </span>
+                Discord
+            </a>
+            <a rel="me" href="https://github.com/sponsors/fasterthanlime" title="GitHub Sponsors" target="_blank">
+                <span class="inline-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<path
+		d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+</svg>
+                </span>
+                GitHub Sponsors
+            </a>
+
+            <a href="https://patreon.com/fasterthanlime" title="Patreon" target="_blank">
+                <span class="inline-icon-container">
+                    <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+<path d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+</svg>
+                </span>
+                Patreon
+            </a>
+        </div>
+
+        <div class="nav-outlinks icons">
+            <a rel="me" href="https://bsky.app/profile/fasterthanli.me" title="Bluesky" target="_blank">
+                <span class="inline-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="600" height="530" viewBox="0 0 600 530"><path fill="#ffffff" d="M135.72 44.03C202.216 93.951 273.74 195.17 300 249.49c26.262-54.316 97.782-155.54 164.28-205.46C512.26 8.009 590-19.862 590 68.825c0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.45-163.25-81.433C20.15 217.613 9.997 86.535 9.997 68.825c0-88.687 77.742-60.816 125.72-24.795z"/></svg>
+                </span>
+                Bluesky
+            </a>
+
+            <a rel="me" href="https://hachyderm.io/@fasterthanlime" title="Mastodon" target="_blank">
+                <span class="inline-icon-container">
+                    <svg width="230.842" height="247.477" viewBox="0 0 216.414 232.01" xmlns="http://www.w3.org/2000/svg"><path style="stroke-width:1.06667" d="M115.057 0C83.418.259 52.984 3.685 35.248 11.83c0 0-35.176 15.735-35.176 69.42 0 12.293-.239 26.992.15 42.58C1.5 176.331 9.848 228.074 58.39 240.922c22.381 5.924 41.598 7.165 57.074 6.314 28.065-1.556 43.82-10.015 43.82-10.015l-.926-20.364s-20.056 6.324-42.58 5.553c-22.316-.765-45.875-2.406-49.484-29.805-.333-2.406-.5-4.98-.5-7.683 0 0 21.907 5.355 49.67 6.627 16.976.778 32.895-.995 49.064-2.924 31.008-3.703 58.007-22.808 61.4-40.266 5.347-27.5 4.907-67.109 4.907-67.109 0-53.685-35.174-69.42-35.174-69.42C177.925 3.685 147.473.26 115.834 0h-.777zM79.25 41.947c13.179 0 23.157 5.066 29.756 15.198l6.416 10.753 6.416-10.753c6.597-10.132 16.576-15.198 29.756-15.198 11.39 0 20.566 4.004 27.574 11.815 6.793 7.81 10.176 18.369 10.176 31.654v65.004H163.59V87.326c0-13.3-5.596-20.05-16.79-20.05-12.375 0-18.577 8.007-18.577 23.841v34.535H102.62V91.117c0-15.834-6.204-23.842-18.58-23.842-11.193 0-16.789 6.751-16.789 20.051v63.094H41.498V85.416c0-13.285 3.383-23.844 10.178-31.654 7.006-7.81 16.183-11.815 27.574-11.815z" transform="scale(.9375)"/></svg>
+                </span>
+                Mastodon
+            </a>
+
+            <a href="https://youtube.com/@fasterthanlime" title="YouTube" target="_blank">
+                <span class="inline-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </span>
+                YouTube
+            </a>
+        </div>
+
+        <div class="nav-outlinks icons">
+            <a href="https://www.tiktok.com/@fasterthanlime" title="TikTok" target="_blank">
+                <span class="inline-icon-container">
+                    <svg id="fi_3046120" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m480.32 128.39c-29.22 0-56.18-9.68-77.83-26.01-24.83-18.72-42.67-46.18-48.97-77.83-1.56-7.82-2.4-15.89-2.48-24.16h-83.47v228.08l-.1 124.93c0 33.4-21.75 61.72-51.9 71.68-8.75 2.89-18.2 4.26-28.04 3.72-12.56-.69-24.33-4.48-34.56-10.6-21.77-13.02-36.53-36.64-36.93-63.66-.63-42.23 33.51-76.66 75.71-76.66 8.33 0 16.33 1.36 23.82 3.83v-62.34-22.41c-7.9-1.17-15.94-1.78-24.07-1.78-46.19 0-89.39 19.2-120.27 53.79-23.34 26.14-37.34 59.49-39.5 94.46-2.83 45.94 13.98 89.61 46.58 121.83 4.79 4.73 9.82 9.12 15.08 13.17 27.95 21.51 62.12 33.17 98.11 33.17 8.13 0 16.17-.6 24.07-1.77 33.62-4.98 64.64-20.37 89.12-44.57 30.08-29.73 46.7-69.2 46.88-111.21l-.43-186.56c14.35 11.07 30.04 20.23 46.88 27.34 26.19 11.05 53.96 16.65 82.54 16.64v-60.61-22.49c.02.02-.22.02-.24.02z"></path></g></svg>
+                </span>
+                TikTok
+            </a>
+
+            <a href="https://www.instagram.com/fasterthanlime" title="Instagram" target="_blank">
+                <span class="inline-icon-container">
+                    <svg height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg" id="fi_1384031"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"></path><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"></path><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"></path></svg>
+                </span>
+                Instagram
+            </a>
+
+            <a href="/index.xml" title="RSS" target="_blank">
+                <span class="inline-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/></svg>
+                </span>
+                RSS
+            </a>
+        </div>
+    </div>
+
+    <div class="nav-content">
+        <div class="nav-outlinks">
+            <a href="/about">About</a>
+
+            <a href="/legal-notice">Legal Notice</a>
+
+            <a href="/privacy-policy">Privacy Policy</a>
+
+            <a href="/terms-and-conditions">Terms and Conditions</a>
+        </div>
+    </div>
+</div> <!-- nav-bottom -->
+</div> <!-- body-wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,2965 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1. Inline consent gate — no external fetch, runs sync -->
+    <!-- Reads the OptanonConsent cookie set by OneTrust on prior visits -->
+    <script>
+        (function() {
+          function getCookie(name) {
+            var match = document.cookie.match(name + '=([^;]*)');
+            return match ? match[1] : undefined;
+          }
+
+          // Read the OneTrust OptanonConsent cookie to check C0004 status
+          function hasOTConsent(groupId) {
+            var otCookie = getCookie('OptanonConsent');
+            if (!otCookie) return false;
+            var decoded = decodeURIComponent(otCookie);
+            var grpMatch = decoded.match(/groups=([^&]*)/);
+            if (!grpMatch) return false;
+            return grpMatch[1].split(',').some(function(g) {
+              var parts = g.split(':');
+              return parts[0] === groupId && parts[1] === '1';
+            });
+          }
+
+          window.optimizely = window.optimizely || [];
+
+          if (!hasOTConsent('C0004')) {
+            // Use optOut — sets optimizelyOptOut cookie, persists across page loads
+            window.optimizely.push({
+              "type": "optOut",
+              "isOptOut": true
+            });
+          }
+        })();
+    </script>
+    <!-- 2. Optimizely snippet — loads normally  -->
+    <!-- Snippet reads the disable call above and self-disables if no consent -->
+    <script src="https://cdn.optimizely.com/js/22725870682.js"></script>
+        <!-- Google Tag Manager PRD -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MRXF6D4');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv=X-UA-Compatible>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="msvalidate.01" content="D4910DA08AA9C6A8B0037878280E64A0" />
+
+
+    <link href="https://www.unisys.com/dws-deep-dive/" rel="canonical" />
+
+    
+
+    <meta name="description" content="In this podcast series we interview industry experts, examine how AI, IoT, automation, analytics, cloud, mobile & other technologies affects digital workplace." />
+<meta name="pageId" content="12151" />
+<meta name="idio:contenttype" property="idio:contenttype" content="GenericPage" />
+
+    <title>Digital Workplace Deep Dive Podcast | Unisys</title>
+    <link rel="apple-touch-icon" href="/Unisys-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Unisys-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Unisys-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/Unisys-touch-icon-ipad-retina.png">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css?version=2021.4.1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico?version=2021.4.1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico?version=2021.4.1.0" />
+<meta name="og:title" property="og:title" content="Digital Workplace Deep Dive Podcast">
+<meta name="og:type" property="og:type" content="article">
+<meta name="og:url" property="og:url" content="https://www.unisys.com/dws-deep-dive/">
+<meta name="og:image" property="og:image" content="https://www.unisys.com/siteassets/homepage/og-social-1200x627.png">
+<meta name="og:description" property="og:description" content="In this podcast series we interview industry experts, examine how AI, IoT, automation, analytics, cloud, mobile & other technologies affects digital workplace.">
+<meta name="og:locale" property="og:locale" content="en">
+<meta name="article:content_type" property="article:content_type" content="Generic Page">
+<meta name="article:published_time" property="article:published_time" content="06/23/2022 21:52:24 PM">
+<meta name="article:modified_time" property="article:modified_time" content="11/7/2024 11:36:38 AM">
+
+    
+    
+
+    <script nonce="3f618aec-f9cb-41e9-9d24-26e0fedc94a9">
+!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: {connectionString: 'InstrumentationKey=bfab609e-027e-4a6d-af16-7e0cff17feb9;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/;ApplicationId=55f5d2bc-1787-4621-a9c0-b108d588a275', disableCookiesUsage: true }});
+</script>
+
+    <style>
+
+</style>
+<style>
+
+.podcast-subscriptions-card {
+ -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #003134;
+}
+
+.podcast-subscriptions-card__icons {
+    -webkit-column-gap: 1.875rem;
+    -moz-column-gap: 1.875rem;
+    column-gap: 1.875rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    row-gap: 1.25rem;
+    width: 100%;
+  }
+
+@media (min-width: 80em) {
+.podcast-subscriptions-card__icons {
+    -webkit-column-gap: 3.125rem;
+    -moz-column-gap: 3.125rem;
+    /* column-gap: 3.125rem; */
+}
+}
+
+.podcast_subscription__link {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.5rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.podcast_subscription__link img {
+    color: #fff;
+    max-height: 100%;
+    max-width: 100%;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+</style>
+</style>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+        <!-- Google Tag Manager PRD (noscript) -->
+        <noscript>
+            <iframe sandbox src="https://www.googletagmanager.com/ns.html?id=GTM-MRXF6D4"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+
+<div class="page-container">
+    <div class="lpd-page-container">
+        
+
+
+
+
+
+
+
+
+
+
+<header class="header lpd" data-module="header-lpd">
+    <div class="header__sticky">
+        <button class="header__hamburger-menu-lpd-toggle" aria-label="Primary Navigation">
+            <span class="header__hamburger-menu-lpd-toggle-icon-open">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#hamburger-open-lpd"></use>
+                </svg>
+            </span>
+            <span class="header__hamburger-menu-lpd-toggle-icon-close">
+                <svg viewBox="0 0 40 40">
+                    <use xlink:href="#hamburger-close-lpd"></use>
+                </svg>
+            </span>
+        </button>
+            <a href="/" class="header__logo" aria-label="Unisys Logo">
+                <span class="dark">
+                    <svg viewBox="0 0 190 38">
+                        <use xlink:href="#logo-dark"></use>
+                    </svg>
+                </span>
+            </a>
+        <nav class="hamburger-menu-lpd__primary-nav" aria-label="Primary Navigation">
+            <div id="marker"></div>
+                        <button class="hamburger-menu-lpd__primary-link">
+                            <div class="label">Solutions</div>
+                            <div class="hamburger-menu-lpd__primary-link-icon">
+                                <svg viewBox="0 0 24 23">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </button>
+                        <a href="/solutions/artificial-intelligence/" class="hamburger-menu-lpd__primary-link-no-child">
+                            <div class="label">Artificial Intelligence</div>
+                        </a>
+                        <button class="hamburger-menu-lpd__primary-link">
+                            <div class="label">Resources</div>
+                            <div class="hamburger-menu-lpd__primary-link-icon">
+                                <svg viewBox="0 0 24 23">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="hamburger-menu-lpd__primary-link">
+                            <div class="label">About</div>
+                            <div class="hamburger-menu-lpd__primary-link-icon">
+                                <svg viewBox="0 0 24 23">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </button>
+
+        </nav>
+        <div class="header__right">
+            <button class="header__search-toggle" aria-label="Open Search">
+                <span class="header__search-toggle-icon-open">
+                    <svg viewBox="0 0 25 26">
+                            <use xlink:href="#search-lpd"></use>
+
+                    </svg>
+                </span>
+                <span class="header__search-toggle-icon-close">
+                    <svg viewBox="0 0 40 40">
+                        <use xlink:href="#hamburgerv1-close-lpd"></use>
+                    </svg>
+                </span>
+            </button>
+                <button class="header__language-toggle" aria-label="en">
+                    <span class="header__language-toggle-icon-open">
+                        <svg viewBox="0 0 24 24">
+                            <use xlink:href="#globe-lpd"></use>
+                        </svg>
+                    </span>
+                    <span class="header__language-toggle-icon-close">
+                        <svg viewBox="0 0 40 40">
+                            <use xlink:href="#hamburgerv1-close-lpd"></use>
+                        </svg>
+                    </span>
+                </button>
+
+
+
+
+
+
+
+        <a href="/contact-us/" class="btn_lpd btn-outline--primary" data-module="buttonLpd" target="" title="">
+             <div class="btn-content">
+                <span>Contact Us</span>
+            </div>
+        </a>
+
+
+
+            <a href="/contact-us/" class="header__support-toggle" aria-label="/Contact%20Us">
+                <span class="header__support-toggle-icon-open">
+                    <svg viewBox="0 0 24 24">
+                        <use xlink:href="#support"></use>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+
+
+
+<div class="header__sticky-hidden">
+    <div class="sticky-navigation">
+        <div class="sticky-navigation__actions">
+            <button class="sticky-navigation__button prev">
+                <svg viewBox="0 0 18 18">
+                    <use xlink:href="#link-arrow-right-icon" />
+                </svg>
+            </button>
+            <button class="sticky-navigation__button next">
+                <svg viewBox="0 0 18 18">
+                    <use xlink:href="#link-arrow-right-icon" />
+                </svg>
+            </button>
+        </div>
+        <nav class="sticky-navigation__jump-links container"
+             aria-label="Jump Links"
+             data-mobile-placeholder="Jump to:"
+             data-mobile-label="Viewing:">
+        </nav>
+    </div>
+</div>    
+
+<!--Mega menu dropdown for tablet and desktop viewports -->
+<div class="mega-menu" data-language="en">
+                <section class="mega-menu__section">
+                    <div class="mega-menu__submenu">
+                        <div class="mega-menu-integrated-tab">
+                            <div class="mega-menu-integrated-tab__inner">
+                                <div class="mega-menu-integrated-tab__tabs" role="tablist" aria-label="Primary Navigation">
+                                                <button class="mega-menu-integrated-tab__tab selected " role="tab" aria-selected="true"
+                                                    >
+
+                                                    Artificial Intelligence
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Cloud and Applications
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Cybersecurity
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Data Center Services
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Digital Workplace
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Enterprise Computing
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab gray-bg" role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Consulting
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab gray-bg" role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Industries
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                </div>
+                                <div class="vertical"></div>
+                                <div class="mega-menu-integrated-tab__panels">
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Artificial Intelligence&nbsp;</h4>
+                        <div class="mega-menu-tab__description">
+Productivity accelerator. Innovation catalyst. Creative collaborator. Whatever your vision for AI, Unisys provides the solutions, expertise and tools to realize the full business potential of your organization.</div>
+
+                        <a class="mega-menu-tab__cta" href="/solutions/artificial-intelligence/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/our-clients/advancing-public-service-efficiency-at-the-austrian-ministry-of-finance/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-see-ai-in-action.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-see-ai-in-action.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-see-ai-in-action.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-see-ai-in-action.jpg">
+                <source srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-see-ai-in-action.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-see-ai-in-action.jpg" alt="See AI in action" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+See AI in action</div>
+                    <p class="mega-menu-featured-small-card__description">
+Advancing public service efficiency at the Austrian Ministry of Finance.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/our-clients/advancing-public-service-efficiency-at-the-austrian-ministry-of-finance/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Read more</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/report/ai/are-you-maximizing-the-power-of-generative-ai/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-innovate-excel-with-generative-ai.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-innovate-excel-with-generative-ai.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-innovate-excel-with-generative-ai.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-innovate-excel-with-generative-ai.jpg">
+                <source srcset="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-innovate-excel-with-generative-ai.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/images/mega-menu-nav-featured/small-cards/nav-ai-innovate-excel-with-generative-ai.jpg" alt="Innovate and excel with generative AI" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Innovate and excel with generative AI</div>
+                    <p class="mega-menu-featured-small-card__description">
+Explore expert insights from Harvard Business Review.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/report/ai/are-you-maximizing-the-power-of-generative-ai/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Read more</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                    <div class="mega-menu-tab__featured-title">
+                            <a class="mega-menu-tab__cta" href="/solutions/cai/">
+                                <span class="label">Solution overview</span>
+                            </a>
+                    </div>
+                <ul class="mega-menu-tab__submenu-list" role="menubar">
+                        <a href="/solutions/cai/applications/">
+                            <li role="menuitem">
+                                Application Services
+                            </li>
+                        </a>
+                        <a href="/solutions/cai/cloud-management/">
+                            <li role="menuitem">
+                                Cloud Management
+                            </li>
+                        </a>
+                        <a href="/solutions/cai/cybersecurity/">
+                            <li role="menuitem">
+                                Cybersecurity
+                            </li>
+                        </a>
+                        <a href="/solutions/cai/data-analytics/">
+                            <li role="menuitem">
+                                Data and Analytics
+                            </li>
+                        </a>
+                </ul>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/rapid-value-assessments/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg">
+                <source srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg?format=webp" type="image/webp">
+                <img src="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg" alt="RVA" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Clear answers on cloud and security</div>
+                    <p class="mega-menu-featured-small-card__description">
+Trade assumptions for evidence. Get clear, prioritized findings on your cloud costs, security gaps, and more in a matter of weeks.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/rapid-value-assessments/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Explore options</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/cp/ai-driven-transformation/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/your-ai-journey/your-ai-journey-hero-1.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/your-ai-journey/your-ai-journey-hero-1.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/your-ai-journey/your-ai-journey-hero-1.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/your-ai-journey/your-ai-journey-hero-1.jpg">
+                <source srcset="/siteassets/microsites/your-ai-journey/your-ai-journey-hero-1.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/microsites/your-ai-journey/your-ai-journey-hero-1.jpg" alt="Your AI journey. Our expert navigation." loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Your AI journey. Our expert navigation.</div>
+                    <p class="mega-menu-featured-small-card__description">
+Turn AI someday into AI today. With Unisys, you can turn ambitious ideas into tangible results, driving your business forward responsibly.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/cp/ai-driven-transformation/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Download report</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Cybersecurity</h4>
+                        <div class="mega-menu-tab__description">
+Unisys delivers business solutions with built-in security to defend your digital assets, counter threats, earn customer confidence, and meet compliance standards.</div>
+
+                        <a class="mega-menu-tab__cta" href="/solutions/cai/cybersecurity/">
+                            <span class="label">Read more</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+
+
+
+
+<div class="mega-menu-featured-big-card " href="/our-clients/queensland-government-department-of-transport-and-main-roads-qtmr/">
+        <picture class="mega-menu-featured-big-card__image">
+            <source media="(max-width: 767px)" srcset="/siteassets/images/clients/heroes/s-z/hero-clients-queensland-featured.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="/siteassets/images/clients/heroes/s-z/hero-clients-queensland-featured.jpg">
+            <source media="(max-width: 1279px)" srcset="/siteassets/images/clients/heroes/s-z/hero-clients-queensland-featured.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 1279px)" srcset="/siteassets/images/clients/heroes/s-z/hero-clients-queensland-featured.jpg">
+            <source srcset="/siteassets/images/clients/heroes/s-z/hero-clients-queensland-featured.jpg?format=webp" type="image/webp">
+            <img src="/siteassets/images/clients/heroes/s-z/hero-clients-queensland-featured.jpg" alt="Queensland drives identity security forward" loading="lazy">
+        </picture>
+
+    <div class="mega-menu-featured-big-card__container">
+            <div class="mega-menu-featured-big-card__content">
+                <div class="mega-menu-featured-big-card__title">
+Queensland Transport and Main Roads: Driving identity security forward</div>
+                <p class="mega-menu-featured-big-card__description">
+Smart biometrics and cloud solutions secure 5 million driver licenses.</p>
+            </div>
+
+            <a href="/our-clients/queensland-government-department-of-transport-and-main-roads-qtmr/" class="mega-menu-featured-big-card__icon">
+                    <span class="label">Read client story</span>
+                <svg viewBox="0 0 18 18" class="right">
+                    <use xlink:href="#link-arrow-right-icon" />
+                </svg>
+            </a>
+    </div>
+</div>        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Data Center Services</h4>
+                        <div class="mega-menu-tab__description">
+Get expert coverage across every data center discipline &mdash; from assessment and liquid cooling to AIOps, field services, and service desk support. See how Unisys keeps high-performing facilities running at scale.</div>
+
+                        <a class="mega-menu-tab__cta" href="/solutions/data-center-services/">
+                            <span class="label">See services</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+
+
+
+
+<div class="mega-menu-featured-big-card " href="/siteassets/collateral/info-sheets/info-052026unisys-data-center-services.pdf" target="_blank">
+        <picture class="mega-menu-featured-big-card__image">
+            <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/big-cards/data-center-services-featured.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/big-cards/data-center-services-featured.jpg">
+            <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/big-cards/data-center-services-featured.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/big-cards/data-center-services-featured.jpg">
+            <source srcset="/siteassets/images/mega-menu-nav-featured/big-cards/data-center-services-featured.jpg?format=webp" type="image/webp">
+            <img src="/siteassets/images/mega-menu-nav-featured/big-cards/data-center-services-featured.jpg" alt="Data Center Services" loading="lazy">
+        </picture>
+
+    <div class="mega-menu-featured-big-card__container">
+            <div class="mega-menu-featured-big-card__content">
+                <div class="mega-menu-featured-big-card__title">
+Data centers built to run. Operations backed to last.</div>
+                <p class="mega-menu-featured-big-card__description">
+Keep your infrastructure reliable, secure, and ready for what&rsquo;s next with help from Unisys.</p>
+            </div>
+
+            <a href="/siteassets/collateral/info-sheets/info-052026unisys-data-center-services.pdf" class="mega-menu-featured-big-card__icon" target="_blank">
+                    <span class="label">See info sheet</span>
+                <svg viewBox="0 0 18 18" class="right">
+                    <use xlink:href="#link-arrow-right-icon" />
+                </svg>
+            </a>
+    </div>
+</div>        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                    <div class="mega-menu-tab__featured-title">
+                            <a class="mega-menu-tab__cta" href="/solutions/dws/">
+                                <span class="label">Solution overview</span>
+                            </a>
+                    </div>
+                <ul class="mega-menu-tab__submenu-list" role="menubar">
+                        <a href="/solutions/dws/field-services-and-support/agentic-service-desk/">
+                            <li role="menuitem">
+                                Agentic Service Desk
+                            </li>
+                        </a>
+                        <a href="/solutions/dws/communication-collaboration-solutions/">
+                            <li role="menuitem">
+                                Communication and Collaboration
+                            </li>
+                        </a>
+                        <a href="/solutions/dws/device-management/">
+                            <li role="menuitem">
+                                Device Management
+                            </li>
+                        </a>
+                        <a href="/solutions/dws/digital-workplace-services/device-subscription-service/">
+                            <li role="menuitem">
+                                Device Subscription Service
+                            </li>
+                        </a>
+                        <a href="/solutions/dws/digital-workplace-services/">
+                            <li role="menuitem">
+                                Digital Workplace Services
+                            </li>
+                        </a>
+                        <a href="/solutions/dws/field-services-and-support/">
+                            <li role="menuitem">
+                                Field Services and Support
+                            </li>
+                        </a>
+                </ul>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/video/dws/ai-enabled-frontline-support-at-scale/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/dws-mega-menu-featured-video-img.png?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/dws-mega-menu-featured-video-img.png">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/dws-mega-menu-featured-video-img.png?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/dws-mega-menu-featured-video-img.png">
+                <source srcset="/globalassets/mega-menu-nav/featured_small_card_block/dws-mega-menu-featured-video-img.png?format=webp" type="image/webp">
+                <img src="/globalassets/mega-menu-nav/featured_small_card_block/dws-mega-menu-featured-video-img.png" alt="DWS Featured image" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Enable a secure end-to-end workplace.</div>
+                    <p class="mega-menu-featured-small-card__description">
+Elevate your digital workplace with secure, compliant, persona-based solutions that transform IT support from reactive to proactive.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/video/dws/ai-enabled-frontline-support-at-scale/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Watch video</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/rapid-value-assessments/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg">
+                <source srcset="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg?format=webp" type="image/webp">
+                <img src="/globalassets/mega-menu-nav/featured_small_card_block/rva-featured-777x437.jpg" alt="RVA" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Your digital workplace, evaluated</div>
+                    <p class="mega-menu-featured-small-card__description">
+Get evidence-based findings on your devices and digital workplace in weeks, with prioritized actions your team can act on immediately.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/rapid-value-assessments/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Explore options</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                    <div class="mega-menu-tab__featured-title">
+                            <a class="mega-menu-tab__cta" href="/solutions/ecs/">
+                                <span class="label">Solution overview</span>
+                            </a>
+                    </div>
+                <ul class="mega-menu-tab__submenu-list" role="menubar">
+                        <a href="/solutions/cai/applications/">
+                            <li role="menuitem">
+                                Application Services
+                            </li>
+                        </a>
+                        <a href="/solutions/business-process-outsourcing/">
+                            <li role="menuitem">
+                                Business Process Outsourcing
+                            </li>
+                        </a>
+                        <a href="/solutions/clearpath-forward/">
+                            <li role="menuitem">
+                                ClearPath Services and Solutions
+                            </li>
+                        </a>
+                        <a href="/solutions/unisys-logistics-optimization/">
+                            <li role="menuitem">
+                                Logistics Optimization
+                            </li>
+                        </a>
+                        <a href="/solutions/next-gen-compute/">
+                            <li role="menuitem">
+                                Next-Gen Compute
+                            </li>
+                        </a>
+                </ul>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/our-clients/mab-kargo/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/collateral/news/air-cargo-week--mab-kargo-selects-unisys-logistics-optimization.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/collateral/news/air-cargo-week--mab-kargo-selects-unisys-logistics-optimization.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/collateral/news/air-cargo-week--mab-kargo-selects-unisys-logistics-optimization.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/collateral/news/air-cargo-week--mab-kargo-selects-unisys-logistics-optimization.jpg">
+                <source srcset="/siteassets/images/collateral/news/air-cargo-week--mab-kargo-selects-unisys-logistics-optimization.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/images/collateral/news/air-cargo-week--mab-kargo-selects-unisys-logistics-optimization.jpg" alt="Air Cargo Week : MAB Kargo selects Unisys logistics optimization" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+MAB Kargo's quest for air cargo efficiency</div>
+                    <p class="mega-menu-featured-small-card__description">
+In an industry where every inch of space and every minute counts, the quest for efficiency and profitability led MAB Kargo to Unisys Logistics Optimization.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/our-clients/mab-kargo/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Read more</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/blog-post/ecs/quantum-advantage-what-to-know-before-problem-solving-gets-turbocharged/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/solutions/enterprise-computing-quantum-iq---featured-small.png?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/solutions/enterprise-computing-quantum-iq---featured-small.png">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/solutions/enterprise-computing-quantum-iq---featured-small.png?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/solutions/enterprise-computing-quantum-iq---featured-small.png">
+                <source srcset="/siteassets/images/solutions/enterprise-computing-quantum-iq---featured-small.png?format=webp" type="image/webp">
+                <img src="/siteassets/images/solutions/enterprise-computing-quantum-iq---featured-small.png" alt="Quantum IQ" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Taking the quantum leap</div>
+                    <p class="mega-menu-featured-small-card__description">
+Quantum computing can potentially improve how your business operates. It can reveal greater efficiencies, reduce risk and increase output &mdash; all in an instant.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/blog-post/ecs/quantum-advantage-what-to-know-before-problem-solving-gets-turbocharged/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Read more</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Consulting</h4>
+                        <div class="mega-menu-tab__description">
+The nature of work is changing. Let's evolve your business together. Future-proof your organization with consulting services from Unisys and advance as a digital-first entity.</div>
+
+                        <a class="mega-menu-tab__cta" href="/solutions/consulting/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/our-clients/cloud-ready-calibration/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/cloud-solutions/client-cloud-ready-calibration-featured.png?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/cloud-solutions/client-cloud-ready-calibration-featured.png">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/cloud-solutions/client-cloud-ready-calibration-featured.png?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/cloud-solutions/client-cloud-ready-calibration-featured.png">
+                <source srcset="/siteassets/microsites/cloud-solutions/client-cloud-ready-calibration-featured.png?format=webp" type="image/webp">
+                <img src="/siteassets/microsites/cloud-solutions/client-cloud-ready-calibration-featured.png" alt="Cloud ready calibration" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+NI: Cloud-ready calibration</div>
+                    <p class="mega-menu-featured-small-card__description">
+Modernizing and migrating applications to the cloud.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/our-clients/cloud-ready-calibration/" class="mega-menu-featured-small-card__icon">
+                <span class="label">View story</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/our-clients/california-state-university/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/cfu_featured.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/cfu_featured.jpg">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/cfu_featured.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_small_card_block/cfu_featured.jpg">
+                <source srcset="/globalassets/mega-menu-nav/featured_small_card_block/cfu_featured.jpg?format=webp" type="image/webp">
+                <img src="/globalassets/mega-menu-nav/featured_small_card_block/cfu_featured.jpg" alt="California State University" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+California State University</div>
+                    <p class="mega-menu-featured-small-card__description">
+Enhancing student experience and improving graduation rates at the largest US four-year public university.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/our-clients/california-state-university/" class="mega-menu-featured-small-card__icon">
+                <span class="label">View story</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                    <div class="mega-menu-tab__featured-title">
+                            <a class="mega-menu-tab__cta" href="/solutions/industries/">
+                                <span class="label">Industries Overview</span>
+                            </a>
+                    </div>
+                <ul class="mega-menu-tab__submenu-list" role="menubar">
+                        <a href="/solutions/industries/energy-utilities/">
+                            <li role="menuitem">
+                                Energy &amp; Utilities
+                            </li>
+                        </a>
+                        <a href="/solutions/industries/financial-services/">
+                            <li role="menuitem">
+                                Financial Services
+                            </li>
+                        </a>
+                        <a href="/solutions/industries/healthcare-and-life-sciences/">
+                            <li role="menuitem">
+                                Healthcare &amp; Life Sciences
+                            </li>
+                        </a>
+                        <a href="/solutions/industries/higher-education/">
+                            <li role="menuitem">
+                                Higher Education
+                            </li>
+                        </a>
+                        <a href="/solutions/industries/manufacturing/">
+                            <li role="menuitem">
+                                Manufacturing
+                            </li>
+                        </a>
+                        <a href="/solutions/industries/public-sector/">
+                            <li role="menuitem">
+                                Public Sector
+                            </li>
+                        </a>
+                        <a href="/solutions/industries/retail-and-consumer-goods/">
+                            <li role="menuitem">
+                                Retail &amp; Consumer Goods
+                            </li>
+                        </a>
+                </ul>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+        </div>
+    </div>
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mega-menu__section">
+                    <div class="mega-menu__submenu">
+                        <div class="mega-menu-integrated-tab">
+                            <div class="mega-menu-integrated-tab__inner">
+                                <div class="mega-menu-integrated-tab__tabs" role="tablist" aria-label="Primary Navigation">
+                                                <button class="mega-menu-integrated-tab__tab selected " role="tab" aria-selected="true"
+                                                    >
+
+                                                    Client Stories
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Insights
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Research
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Resource Center
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                </div>
+                                <div class="vertical"></div>
+                                <div class="mega-menu-integrated-tab__panels">
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Client Stories</h4>
+                        <div class="mega-menu-tab__description">
+Explore videos and stories where Unisys has helped businesses and governments improve the lives of their customers and citizens.</div>
+
+                        <a class="mega-menu-tab__cta" href="/our-clients/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/our-clients/carnival/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/carnival/carnival-featured/?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/carnival/carnival-featured/">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/carnival/carnival-featured/?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/carnival/carnival-featured/">
+                <source srcset="/siteassets/microsites/carnival/carnival-featured/?format=webp" type="image/webp">
+                <img src="/siteassets/microsites/carnival/carnival-featured/" alt="Carnival" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Carnival Cruise Line</div>
+                    <p class="mega-menu-featured-small-card__description">
+Processing 5.6 billion transactions a year for 6 million guests.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/our-clients/carnival/" class="mega-menu-featured-small-card__icon">
+                <span class="label">See story</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/our-clients/cushmanwakefield/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/cushman-featured-skyline.png?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/cushman-featured-skyline.png">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/cushman-featured-skyline.png?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/mega-menu-nav-featured/small-cards/cushman-featured-skyline.png">
+                <source srcset="/siteassets/images/mega-menu-nav-featured/small-cards/cushman-featured-skyline.png?format=webp" type="image/webp">
+                <img src="/siteassets/images/mega-menu-nav-featured/small-cards/cushman-featured-skyline.png" alt="Cushman" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Cushman &amp; Wakefield</div>
+                    <p class="mega-menu-featured-small-card__description">
+Unifying fragmented IT across 60 countries with cloud, security and digital workplace.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/our-clients/cushmanwakefield/" class="mega-menu-featured-small-card__icon">
+                <span class="label">See story</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <ul class="mega-menu-tab__submenu-list" role="menubar">
+                        <a href="/blog/">
+                            <li role="menuitem">
+                                Blog Posts
+                            </li>
+                        </a>
+                        <a href="/dws-deep-dive/">
+                            <li role="menuitem">
+                                Podcasts
+                            </li>
+                        </a>
+                        <a href="/videos-and-webinars/">
+                            <li role="menuitem">
+                                Videos and Webinars
+                            </li>
+                        </a>
+                </ul>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/cp/unisys-cloud-insights-report-2025/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/cloud-insight-nav-image.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/cloud-insight-nav-image.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/cloud-insight-nav-image.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/cloud-insight-nav-image.jpg">
+                <source srcset="/siteassets/images/cloud-insight-nav-image.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/images/cloud-insight-nav-image.jpg" alt="Cloud Insights Report 2025" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Cloud Insights Report 2025</div>
+                    <p class="mega-menu-featured-small-card__description">
+Explore winning strategies from 1,000+ IT and Business leaders.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/cp/unisys-cloud-insights-report-2025/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Download report</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/report/dws/research-insights-frontline-in-focus/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/cta-1-card/cta1-front-line-in-focus.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/cta-1-card/cta1-front-line-in-focus.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/cta-1-card/cta1-front-line-in-focus.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/cta-1-card/cta1-front-line-in-focus.jpg">
+                <source srcset="/siteassets/cta-1-card/cta1-front-line-in-focus.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/cta-1-card/cta1-front-line-in-focus.jpg" alt="Frontline in focus" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Research insights: Frontline in focus</div>
+                    <p class="mega-menu-featured-small-card__description">
+Amplify frontline worker output with tailored technology.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/report/dws/research-insights-frontline-in-focus/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Learn more</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Research</h4>
+                        <div class="mega-menu-tab__description">
+Embark on a journey toward a resilient future with access to Unisys' comprehensive research, developed in collaboration with top industry analysts and research firms.</div>
+
+                        <a class="mega-menu-tab__cta" href="/research/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/siteassets/collateral/microsite/cloud-report-campaign/pdf/unisys-ai-cloud-insights-report-2026.pdf">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/2026-unisys-ai--cloud-insights-report/unisys-ai-cloud-insights-2026-report-featured.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/2026-unisys-ai--cloud-insights-report/unisys-ai-cloud-insights-2026-report-featured.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/2026-unisys-ai--cloud-insights-report/unisys-ai-cloud-insights-2026-report-featured.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/2026-unisys-ai--cloud-insights-report/unisys-ai-cloud-insights-2026-report-featured.jpg">
+                <source srcset="/siteassets/microsites/2026-unisys-ai--cloud-insights-report/unisys-ai-cloud-insights-2026-report-featured.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/microsites/2026-unisys-ai--cloud-insights-report/unisys-ai-cloud-insights-2026-report-featured.jpg" alt="Unisys AI &amp; Cloud Insights Report 2026" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+The 2026 AI &amp; Cloud Insights Report</div>
+                    <p class="mega-menu-featured-small-card__description">
+See how 1,000 senior leaders turn AI and cloud into measurable business value.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/siteassets/collateral/microsite/cloud-report-campaign/pdf/unisys-ai-cloud-insights-report-2026.pdf" class="mega-menu-featured-small-card__icon">
+                <span class="label">Download report</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="https://explore.unisys.com/story/digital-workplace-insights-report-2025/page/1?_ga=2.245325383.315259610.1767626469-603785935.1765285521">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/dws-insights-report/digital-workplace-insights-report-2025-featured-777x437.png?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/microsites/dws-insights-report/digital-workplace-insights-report-2025-featured-777x437.png">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/dws-insights-report/digital-workplace-insights-report-2025-featured-777x437.png?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/microsites/dws-insights-report/digital-workplace-insights-report-2025-featured-777x437.png">
+                <source srcset="/siteassets/microsites/dws-insights-report/digital-workplace-insights-report-2025-featured-777x437.png?format=webp" type="image/webp">
+                <img src="/siteassets/microsites/dws-insights-report/digital-workplace-insights-report-2025-featured-777x437.png" alt="DWS Insights Report" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Digital Workplace Insights Report 2025</div>
+                    <p class="mega-menu-featured-small-card__description">
+Our latest research shows how employee experience can double your revenue odds.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="https://explore.unisys.com/story/digital-workplace-insights-report-2025/page/1?_ga=2.245325383.315259610.1767626469-603785935.1765285521" class="mega-menu-featured-small-card__icon">
+                <span class="label">Download report</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Resource Center</h4>
+                        <div class="mega-menu-tab__description">
+Find, share and explore assets in support of your key operational objectives.</div>
+
+                        <a class="mega-menu-tab__cta" href="/resource-center/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+        </div>
+    </div>
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mega-menu__section">
+                    <div class="mega-menu__submenu">
+                        <div class="mega-menu-integrated-tab">
+                            <div class="mega-menu-integrated-tab__inner">
+                                <div class="mega-menu-integrated-tab__tabs" role="tablist" aria-label="Primary Navigation">
+                                                <button class="mega-menu-integrated-tab__tab selected " role="tab" aria-selected="true"
+                                                    >
+
+                                                    About Unisys
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Careers
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Investor Relations
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <button class="mega-menu-integrated-tab__tab " role="tab" aria-selected="false"
+                                                    tabindex="-1">
+
+                                                    Partners
+                                                    <span class="icon">
+                                                        <svg viewBox="0 0 23 27">
+                                                            <use xlink:href="#right-arrow-icon" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                </div>
+                                <div class="vertical"></div>
+                                <div class="mega-menu-integrated-tab__panels">
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <ul class="mega-menu-tab__submenu-list" role="menubar">
+                        <a href="/about-unisys/">
+                            <li role="menuitem">
+                                About Unisys
+                            </li>
+                        </a>
+                        <a href="/leadership/">
+                            <li role="menuitem">
+                                Leadership
+                            </li>
+                        </a>
+                        <a href="/investor-relations/board-of-directors/">
+                            <li role="menuitem">
+                                Board of Directors
+                            </li>
+                        </a>
+                        <a href="/newsroom/">
+                            <li role="menuitem">
+                                Newsroom
+                            </li>
+                        </a>
+                        <a href="/awards/">
+                            <li role="menuitem">
+                                Awards
+                            </li>
+                        </a>
+                        <a href="/blog/#announcementsAndUpdates">
+                            <li role="menuitem">
+                                Announcements and Updates
+                            </li>
+                        </a>
+                </ul>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+                    <div class="mega-menu-tab__small-cards">
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/awards/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/awards/new-awards-hero.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/awards/new-awards-hero.jpg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/awards/new-awards-hero.jpg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/awards/new-awards-hero.jpg">
+                <source srcset="/siteassets/images/awards/new-awards-hero.jpg?format=webp" type="image/webp">
+                <img src="/siteassets/images/awards/new-awards-hero.jpg" alt="Unisys Awards" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Awards and Recognition</div>
+                    <p class="mega-menu-featured-small-card__description">
+Recognized by analysts, partners, and the industry, these awards showcase our thought leadership, achievements, and innovation.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/awards/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Explore</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+
+
+
+
+<div class="mega-menu-featured-small-card " href="/newsroom/">
+    <div class="mega-menu-featured-small-card__inner">
+            <picture class="mega-menu-featured-small-card__image">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/collateral/news/nr-30425-featured.jpeg?format=webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="/siteassets/images/collateral/news/nr-30425-featured.jpeg">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/collateral/news/nr-30425-featured.jpeg?format=webp" type="image/webp">
+                <source media="(max-width: 1279px)" srcset="/siteassets/images/collateral/news/nr-30425-featured.jpeg">
+                <source srcset="/siteassets/images/collateral/news/nr-30425-featured.jpeg?format=webp" type="image/webp">
+                <img src="/siteassets/images/collateral/news/nr-30425-featured.jpeg" alt="Unisys to Participate in Upcoming Sidoti Small-Cap Virtual Conference" loading="lazy">
+            </picture>
+
+        <div class="mega-menu-featured-small-card__container">
+                <div class="mega-menu-featured-small-card__content">
+                    <div class="mega-menu-featured-small-card__title">
+Newsroom</div>
+                    <p class="mega-menu-featured-small-card__description">
+Discover recent Unisys news and news articles about Unisys Corporation, our solutions, Unisys stock, and more.</p>
+                </div>
+        </div>
+    </div>
+
+        <a href="/newsroom/" class="mega-menu-featured-small-card__icon">
+                <span class="label">Read more</span>
+            <svg viewBox="0 0 18 18" class="right">
+                <use xlink:href="#link-arrow-right-icon" />
+            </svg>
+        </a>
+</div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Careers</h4>
+                        <div class="mega-menu-tab__description">
+Curiosity, creativity, and a constant desire to improve. Our associates shape tomorrow by going beyond expertise to bring solutions to life.</div>
+
+                        <a class="mega-menu-tab__cta" href="/careers/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+
+
+
+
+<div class="mega-menu-featured-big-card " href="/about-unisys/inclusivity-powers-innovation/">
+        <picture class="mega-menu-featured-big-card__image">
+            <source media="(max-width: 767px)" srcset="/siteassets/images/about-unisys/dei/hero-dei.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="/siteassets/images/about-unisys/dei/hero-dei.jpg">
+            <source media="(max-width: 1279px)" srcset="/siteassets/images/about-unisys/dei/hero-dei.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 1279px)" srcset="/siteassets/images/about-unisys/dei/hero-dei.jpg">
+            <source srcset="/siteassets/images/about-unisys/dei/hero-dei.jpg?format=webp" type="image/webp">
+            <img src="/siteassets/images/about-unisys/dei/hero-dei.jpg" alt="Diversity, Equity and Inclusion" loading="lazy">
+        </picture>
+
+    <div class="mega-menu-featured-big-card__container">
+            <div class="mega-menu-featured-big-card__content">
+                <div class="mega-menu-featured-big-card__title">
+Inclusivity powers innovation</div>
+                <p class="mega-menu-featured-big-card__description">
+Unlocking untapped potential in every person is vital for innovation. Our approach is simple: foster an inclusive environment that welcomes and values everyone.</p>
+            </div>
+
+            <a href="/about-unisys/inclusivity-powers-innovation/" class="mega-menu-featured-big-card__icon">
+                    <span class="label">Read more</span>
+                <svg viewBox="0 0 18 18" class="right">
+                    <use xlink:href="#link-arrow-right-icon" />
+                </svg>
+            </a>
+    </div>
+</div>        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Investor Relations</h4>
+                        <div class="mega-menu-tab__description">
+We're a global technology solutions company that's dedicated to driving progress for the world's leading organizations.</div>
+
+                        <a class="mega-menu-tab__cta" href="/investor-relations/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+
+
+
+
+<div class="mega-menu-featured-big-card " href="/about-unisys/sustainability-and-corporate-social-responsibility/">
+        <picture class="mega-menu-featured-big-card__image">
+            <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_big_card_block/sustainability-csr-featured.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="/globalassets/mega-menu-nav/featured_big_card_block/sustainability-csr-featured.jpg">
+            <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_big_card_block/sustainability-csr-featured.jpg?format=webp" type="image/webp">
+            <source media="(max-width: 1279px)" srcset="/globalassets/mega-menu-nav/featured_big_card_block/sustainability-csr-featured.jpg">
+            <source srcset="/globalassets/mega-menu-nav/featured_big_card_block/sustainability-csr-featured.jpg?format=webp" type="image/webp">
+            <img src="/globalassets/mega-menu-nav/featured_big_card_block/sustainability-csr-featured.jpg" alt="Sustainability CSR" loading="lazy">
+        </picture>
+
+    <div class="mega-menu-featured-big-card__container">
+            <div class="mega-menu-featured-big-card__content">
+                <div class="mega-menu-featured-big-card__title">
+Sustainability and Corporate Social Responsibility</div>
+                <p class="mega-menu-featured-big-card__description">
+At Unisys, corporate social responsibility (CSR) means putting accountability, innovation, inclusivity, and ethics at the center of how we work.</p>
+            </div>
+
+            <a href="/about-unisys/sustainability-and-corporate-social-responsibility/" class="mega-menu-featured-big-card__icon">
+                    <span class="label">Learn more</span>
+                <svg viewBox="0 0 18 18" class="right">
+                    <use xlink:href="#link-arrow-right-icon" />
+                </svg>
+            </a>
+    </div>
+</div>        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mega-menu-integrated-tab__panel" tabindex="0" role="tabpanel">
+    <div class="mega-menu-tab">
+        <div class="mega-menu-tab__left-section">
+                <div class="mega-menu-tab__content">
+                        <h4 class="mega-menu-tab__title">
+Partners</h4>
+                        <div class="mega-menu-tab__description">
+We collaborate with an ecosystem of partners to provide our clients with cutting-edge products and services in many of the largest industries in the world.</div>
+
+                        <a class="mega-menu-tab__cta" href="/partners/">
+                            <span class="label">Explore</span>
+                            <svg viewBox="0 0 18 18" class="right">
+                                <use xlink:href="#link-arrow-right-icon" />
+                            </svg>
+                        </a>
+                </div>
+        </div>
+
+        <div class="mega-menu-tab__right-section">
+        </div>
+    </div>
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+</div>
+
+
+    
+
+<!--Mega menu dropdown for mobile viewports -->
+<div class="mega-menu__sm-device" data-language="en">
+        <nav class="mega-menu__primary-nav" aria-label="Primary Navigation">
+                    <button class="mega-menu__primary-link">
+                        <div class="label">Solutions</div>
+                        <span class="icon">
+                            <svg viewBox="0 0 23 27">
+                                <use xlink:href="#right-arrow-icon"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <a href="/solutions/artificial-intelligence/" class="mega-menu__primary-link-no-child">
+                        <div class="label">Artificial Intelligence</div>
+                    </a>
+                    <button class="mega-menu__primary-link">
+                        <div class="label">Resources</div>
+                        <span class="icon">
+                            <svg viewBox="0 0 23 27">
+                                <use xlink:href="#right-arrow-icon"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="mega-menu__primary-link">
+                        <div class="label">About</div>
+                        <span class="icon">
+                            <svg viewBox="0 0 23 27">
+                                <use xlink:href="#right-arrow-icon"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                <a href="/contact-us/" class="mega-menu__primary-link-no-child mega-menu__contact-us">
+                    <div class="label">Contact Us</div>
+                </a>
+        </nav>
+        <div class="mega-menu__secondary-section">
+                    <nav class="mega-menu__secondary-nav">
+                        <button class="mega-menu__back to-primary-nav">
+                            <span class="icon">
+                                <svg viewBox="0 0 23 27">
+                                    <use xlink:href="#right-arrow-icon"></use>
+                                </svg>
+                            </span>
+                            Back
+                        </button>
+
+                        <div class="mega-menu__secondary-title">Solutions</div>
+                                <a href="/solutions/artificial-intelligence/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Artificial Intelligence</div>
+                                </a>
+                                <button class="mega-menu__secondary-nav-link ">
+                                    <div class="label">Cloud and Applications</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 23 27">
+                                            <use xlink:href="#right-arrow-icon"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <a href="/solutions/cai/cybersecurity/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Cybersecurity</div>
+                                </a>
+                                <a href="/solutions/data-center-services/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Data Center Services</div>
+                                </a>
+                                <button class="mega-menu__secondary-nav-link ">
+                                    <div class="label">Digital Workplace</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 23 27">
+                                            <use xlink:href="#right-arrow-icon"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <button class="mega-menu__secondary-nav-link ">
+                                    <div class="label">Enterprise Computing</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 23 27">
+                                            <use xlink:href="#right-arrow-icon"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <a href="/solutions/consulting/" class="mega-menu__secondary-nav-link-no-child gray-bg">
+                                    <div class="label">Consulting</div>
+                                </a>
+                                <button class="mega-menu__secondary-nav-link gray-bg">
+                                    <div class="label">Industries</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 23 27">
+                                            <use xlink:href="#right-arrow-icon"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                    </nav>
+                    <div class="mega-menu__tertiary-section">
+                                <nav class="mega-menu__tertiary-nav">
+                                    <button class="mega-menu__back to-secondary-nav">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 23 27">
+                                                <use xlink:href="#right-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                        Back
+                                    </button>
+
+                                    <div class="mega-menu__tertiary-title">
+Cloud Applications and Infrastructure</div>
+                                        <a href="/solutions/cai/" class="mega-menu__tertiary-link featured">
+                                            <div class="label">Solution overview</div>
+                                        </a>
+                                        <a href="/solutions/cai/applications/" class="mega-menu__tertiary-link">
+                                            <div class="label">Application Services</div>
+                                        </a>
+                                        <a href="/solutions/cai/cloud-management/" class="mega-menu__tertiary-link">
+                                            <div class="label">Cloud Management</div>
+                                        </a>
+                                        <a href="/solutions/cai/cybersecurity/" class="mega-menu__tertiary-link">
+                                            <div class="label">Cybersecurity</div>
+                                        </a>
+                                        <a href="/solutions/cai/data-analytics/" class="mega-menu__tertiary-link">
+                                            <div class="label">Data and Analytics</div>
+                                        </a>
+                                </nav>
+                                <nav class="mega-menu__tertiary-nav">
+                                    <button class="mega-menu__back to-secondary-nav">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 23 27">
+                                                <use xlink:href="#right-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                        Back
+                                    </button>
+
+                                    <div class="mega-menu__tertiary-title">
+Digital Workplace</div>
+                                        <a href="/solutions/dws/" class="mega-menu__tertiary-link featured">
+                                            <div class="label">Solution overview</div>
+                                        </a>
+                                        <a href="/solutions/dws/field-services-and-support/agentic-service-desk/" class="mega-menu__tertiary-link">
+                                            <div class="label">Agentic Service Desk</div>
+                                        </a>
+                                        <a href="/solutions/dws/communication-collaboration-solutions/" class="mega-menu__tertiary-link">
+                                            <div class="label">Communication and Collaboration</div>
+                                        </a>
+                                        <a href="/solutions/dws/device-management/" class="mega-menu__tertiary-link">
+                                            <div class="label">Device Management</div>
+                                        </a>
+                                        <a href="/solutions/dws/digital-workplace-services/device-subscription-service/" class="mega-menu__tertiary-link">
+                                            <div class="label">Device Subscription Service</div>
+                                        </a>
+                                        <a href="/solutions/dws/digital-workplace-services/" class="mega-menu__tertiary-link">
+                                            <div class="label">Digital Workplace Services</div>
+                                        </a>
+                                        <a href="/solutions/dws/field-services-and-support/" class="mega-menu__tertiary-link">
+                                            <div class="label">Field Services and Support</div>
+                                        </a>
+                                </nav>
+                                <nav class="mega-menu__tertiary-nav">
+                                    <button class="mega-menu__back to-secondary-nav">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 23 27">
+                                                <use xlink:href="#right-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                        Back
+                                    </button>
+
+                                    <div class="mega-menu__tertiary-title">
+Enterprise Computing</div>
+                                        <a href="/solutions/ecs/" class="mega-menu__tertiary-link featured">
+                                            <div class="label">Solution overview</div>
+                                        </a>
+                                        <a href="/solutions/cai/applications/" class="mega-menu__tertiary-link">
+                                            <div class="label">Application Services</div>
+                                        </a>
+                                        <a href="/solutions/business-process-outsourcing/" class="mega-menu__tertiary-link">
+                                            <div class="label">Business Process Outsourcing</div>
+                                        </a>
+                                        <a href="/solutions/clearpath-forward/" class="mega-menu__tertiary-link">
+                                            <div class="label">ClearPath Services and Solutions</div>
+                                        </a>
+                                        <a href="/solutions/unisys-logistics-optimization/" class="mega-menu__tertiary-link">
+                                            <div class="label">Logistics Optimization</div>
+                                        </a>
+                                        <a href="/solutions/next-gen-compute/" class="mega-menu__tertiary-link">
+                                            <div class="label">Next-Gen Compute</div>
+                                        </a>
+                                </nav>
+                                <nav class="mega-menu__tertiary-nav">
+                                    <button class="mega-menu__back to-secondary-nav">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 23 27">
+                                                <use xlink:href="#right-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                        Back
+                                    </button>
+
+                                    <div class="mega-menu__tertiary-title">
+<a style="text-decoration: none;" href="/solutions/industries/"><strong>Industries Overview</strong></a></div>
+                                        <a href="/solutions/industries/" class="mega-menu__tertiary-link featured">
+                                            <div class="label">Industries Overview</div>
+                                        </a>
+                                        <a href="/solutions/industries/energy-utilities/" class="mega-menu__tertiary-link">
+                                            <div class="label">Energy &amp; Utilities</div>
+                                        </a>
+                                        <a href="/solutions/industries/financial-services/" class="mega-menu__tertiary-link">
+                                            <div class="label">Financial Services</div>
+                                        </a>
+                                        <a href="/solutions/industries/healthcare-and-life-sciences/" class="mega-menu__tertiary-link">
+                                            <div class="label">Healthcare &amp; Life Sciences</div>
+                                        </a>
+                                        <a href="/solutions/industries/higher-education/" class="mega-menu__tertiary-link">
+                                            <div class="label">Higher Education</div>
+                                        </a>
+                                        <a href="/solutions/industries/manufacturing/" class="mega-menu__tertiary-link">
+                                            <div class="label">Manufacturing</div>
+                                        </a>
+                                        <a href="/solutions/industries/public-sector/" class="mega-menu__tertiary-link">
+                                            <div class="label">Public Sector</div>
+                                        </a>
+                                        <a href="/solutions/industries/retail-and-consumer-goods/" class="mega-menu__tertiary-link">
+                                            <div class="label">Retail &amp; Consumer Goods</div>
+                                        </a>
+                                </nav>
+                    </div>
+                    <nav class="mega-menu__secondary-nav">
+                        <button class="mega-menu__back to-primary-nav">
+                            <span class="icon">
+                                <svg viewBox="0 0 23 27">
+                                    <use xlink:href="#right-arrow-icon"></use>
+                                </svg>
+                            </span>
+                            Back
+                        </button>
+
+                        <div class="mega-menu__secondary-title">Resources</div>
+                                <a href="/our-clients/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Client Stories</div>
+                                </a>
+                                <button class="mega-menu__secondary-nav-link ">
+                                    <div class="label">Insights</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 23 27">
+                                            <use xlink:href="#right-arrow-icon"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <a href="/research/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Research</div>
+                                </a>
+                                <a href="/resource-center/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Resource Center</div>
+                                </a>
+                    </nav>
+                    <div class="mega-menu__tertiary-section">
+                                <nav class="mega-menu__tertiary-nav">
+                                    <button class="mega-menu__back to-secondary-nav">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 23 27">
+                                                <use xlink:href="#right-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                        Back
+                                    </button>
+
+                                    <div class="mega-menu__tertiary-title">
+Insights</div>
+                                        <a href="/blog/" class="mega-menu__tertiary-link">
+                                            <div class="label">Blog Posts</div>
+                                        </a>
+                                        <a href="/dws-deep-dive/" class="mega-menu__tertiary-link">
+                                            <div class="label">Podcasts</div>
+                                        </a>
+                                        <a href="/videos-and-webinars/" class="mega-menu__tertiary-link">
+                                            <div class="label">Videos and Webinars</div>
+                                        </a>
+                                </nav>
+                    </div>
+                    <nav class="mega-menu__secondary-nav">
+                        <button class="mega-menu__back to-primary-nav">
+                            <span class="icon">
+                                <svg viewBox="0 0 23 27">
+                                    <use xlink:href="#right-arrow-icon"></use>
+                                </svg>
+                            </span>
+                            Back
+                        </button>
+
+                        <div class="mega-menu__secondary-title">About</div>
+                                <button class="mega-menu__secondary-nav-link ">
+                                    <div class="label">About Unisys</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 23 27">
+                                            <use xlink:href="#right-arrow-icon"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <a href="/careers/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Careers</div>
+                                </a>
+                                <a href="/investor-relations/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Investor Relations</div>
+                                </a>
+                                <a href="/partners/" class="mega-menu__secondary-nav-link-no-child ">
+                                    <div class="label">Partners</div>
+                                </a>
+                    </nav>
+                    <div class="mega-menu__tertiary-section">
+                                <nav class="mega-menu__tertiary-nav">
+                                    <button class="mega-menu__back to-secondary-nav">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 23 27">
+                                                <use xlink:href="#right-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                        Back
+                                    </button>
+
+                                    <div class="mega-menu__tertiary-title">
+About Unisys</div>
+                                        <a href="/about-unisys/" class="mega-menu__tertiary-link">
+                                            <div class="label">About Unisys</div>
+                                        </a>
+                                        <a href="/leadership/" class="mega-menu__tertiary-link">
+                                            <div class="label">Leadership</div>
+                                        </a>
+                                        <a href="/investor-relations/board-of-directors/" class="mega-menu__tertiary-link">
+                                            <div class="label">Board of Directors</div>
+                                        </a>
+                                        <a href="/newsroom/" class="mega-menu__tertiary-link">
+                                            <div class="label">Newsroom</div>
+                                        </a>
+                                        <a href="/awards/" class="mega-menu__tertiary-link">
+                                            <div class="label">Awards</div>
+                                        </a>
+                                        <a href="/blog/#announcementsAndUpdates" class="mega-menu__tertiary-link">
+                                            <div class="label">Announcements and Updates</div>
+                                        </a>
+                                </nav>
+                    </div>
+        </div>
+</div>
+    
+
+
+    <div class="language-menu" data-language="en">
+        <div class="container">
+            <h4>Language Selection</h4>
+            <div class="language-menu__current">
+                <p>Your selected language is currently:</p>
+                <div class="currentSelection">English</div>
+            </div>
+            <ul>
+                        <li>
+                            <a href="/" class="arrow-link"
+                               >
+                                <span>English</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/de/" class="arrow-link"
+                               >
+                                <span>Deutsch</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/es/" class="arrow-link"
+                               >
+                                <span>Espa&#xF1;ol</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/fr/" class="arrow-link"
+                               >
+                                <span>Fran&#xE7;aise</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pt/" class="arrow-link"
+                               >
+                                <span>Portugu&#xEA;s</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://japan.unisys.com/en/" class="arrow-link"
+                                target="_blank" >
+                                <span>&#x65E5;&#x672C;&#x8A9E;</span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+
+<div class="header-searchlpd" data-suggestions-endpoint="/HeaderSearchApi/GetSuggestions" data-language="en">
+    <div class="container">
+        <div class="header-searchlpd__drawer">
+            <div class="header-searchlpd__bar">
+                
+
+
+<form action="/search/" autocomplete="off">
+    <div class="header-searchlpd__field">
+        <label class="header-searchlpd__label">Ask me about security, cloud, digital workplace solutions</label>
+        <input type="text" name="query" class="header-searchlpd__input" aria-label="Ask me about security, cloud, digital workplace solutions" autocomplete="off">
+        <span class="search__icon">
+            <svg viewBox="0 0 40 40">
+                <use xlink:href="#search-icon-rebrand" />
+            </svg>
+        </span>
+        <button type="button" class="header-searchlpd__clear" aria-label="Clear">
+            <svg viewBox="0 0 40 40">
+                <use xlink:href="#close-icon-rebrand" />
+            </svg>
+        </button>
+    </div>
+    <div class="header-searchlpd__submit">
+        <button type="submit" class="btn_lpd  btn-thin-outline--primary" data-module="buttonLpd" aria-label="Search">
+            <div class="btn-content">
+                <span>Search</span>
+            </div>
+        </button>
+    </div>
+</form>       
+                <div class="header-searchlpd__suggestions-loaded">
+                    <ul class="header-searchlpd__suggestion-list"></ul>
+                </div>
+            </div>
+        
+        </div>
+        
+            <div class="header-searchlpd__popular-searches">
+                    <span class="header-searchlpd__popular-label">Popular Search:</span>
+                <div class="header-searchlpd__popular-terms">
+                        <a href="https://www.unisys.com/search/?query=Adopt AI" class="header-searchlpd__popular-link" target="_blank">Adopt AI</a>
+                        <a href="https://www.unisys.com/search/?query=Migrate To Cloud" class="header-searchlpd__popular-link" target="_blank">Migrate To Cloud</a>
+                </div>
+            </div>
+    </div>
+</div>
+</header>
+
+
+        <main id="main" style="">
+            <div class=page-container-with-frame>
+                <div data-hero="true">
+                    <!-- This div is required in order for the header to change on scrolling past the first hero -->
+                    <!-- Main Hero Goes Here -->
+                    
+
+
+
+
+<section class="short-title__hero">
+
+        <figure class="short-title__graphic">
+            <svg viewBox="0 0 867 785">
+                <use xlink:href="#bloom-wireframe" />
+            </svg>
+        </figure>
+
+    <div class="short-title__inner">
+            <!-- Short Title Illustration Dark -->
+                <header class="short-title__content-group">
+                        <h1 class="short-title__title">
+Digital Workplace Deep Dive Podcast</h1>
+                </header>
+        <!-- end div generic-hero-v2__inner-->
+    </div>
+    <!-- end div generic-hero-v2-->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                
+
+
+
+
+    <div class="generic-content-right-rail container">
+        <div class="sidebar-vertical-callout-text">
+
+
+
+    <div  class="spotlight-card-generic-lpd theme__bold-teal">
+            <div class="spotlight-card-generic-lpd-heading">
+    
+                <h4 class="spotlight-card-generic-lpd__title">
+Subscribe</h4>
+            </div>
+            <div class="spotlight-card-generic-lpd__content rtf">
+                
+<div class="podcast-subscriptions-card">
+<div class="podcast-subscriptions-card__icons"><a class="podcast_subscription__link" href="https://podcasts.apple.com/us/podcast/digital-workplace-deep-dive/id1489076959" target="_blank" rel="noopener" aria-label="apple"> <img src="/siteassets/images/podcast/img/apple-podcast-icon.png" alt="Podcasts on Apple" width="80" height="80" /> </a> <a class="podcast_subscription__link" href="https://www.amazon.com/Digital-Workplace-Deep-Dive/dp/B08K577GCK/ref=sr_1_1?dchild=1&amp;keywords=digital+workplace+deep+dive&amp;qid=1619533614&amp;sr=8-1" target="_blank" rel="noopener" aria-label="amazon"> <img src="/siteassets/images/podcast/img/podcast-subscribe-amazon-icon.png" alt="Podcasts on Amazon Music" width="80" height="80" /> </a> <a class="podcast_subscription__link" href="https://open.spotify.com/show/1h2QJ6DEAz8IIfir7k6PlE" target="_blank" rel="noopener" aria-label="spotify"> <img src="/siteassets/images/podcast/img/podcast-subscribe-spotify-icon.png" alt="Podcasts on Spotify" width="80" height="80" /> </a> <a class="podcast_subscription__link" href="/podcast/dws/feed/" target="_blank" rel="noopener" aria-label="rssfeed"> <img src="/siteassets/images/podcast/img/podcast-subscribe-rssfeed-icon.png" alt="RSS feed" width="80" height="80" /> </a></div>
+</div>
+            </div>
+    </div>
+
+
+
+
+
+
+<div   class="share-this">
+    <span class="share-this__title">Share this</span>
+    <div class="share-this__icons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.unisys.com/dws-deep-dive/" class="share-this__link" aria-label="linkedin"
+                target="_blank" onClick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://www.unisys.com/dws-deep-dive/', '', 'resizable,height=260,width=370'); return false;" >
+
+                
+                <svg viewBox="0 0 40 40">
+                    <title>LinkedIn</title>
+                    <use xlink:href="#linkedin-social-icon" />
+                </svg>
+            </a>
+            <a href="https://twitter.com/share?url=https://www.unisys.com/dws-deep-dive/&amp;text=Digital Workplace Deep Dive Podcast" class="share-this__link" aria-label="twitter"
+                target="_blank" onClick="window.open('https://twitter.com/share?url=https://www.unisys.com/dws-deep-dive/&amp;text=Digital Workplace Deep Dive Podcast', '', 'resizable,height=260,width=370'); return false;" >
+
+                
+                <svg viewBox="0 0 64 64">
+                    <title>Twitter</title>
+                    <use xlink:href="#twitter-social-icon" />
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/sharer.php?u=https://www.unisys.com/dws-deep-dive/" class="share-this__link" aria-label="facebook"
+                target="_blank" onClick="window.open('https://www.facebook.com/sharer.php?u=https://www.unisys.com/dws-deep-dive/', '', 'resizable,height=260,width=370'); return false;" >
+
+                
+                <svg viewBox="0 0 40 40">
+                    <title>Facebook</title>
+                    <use xlink:href="#facebook-social-icon" />
+                </svg>
+            </a>
+            <a href="mailto:?subject=Digital Workplace Deep Dive Podcast&amp;body=https://www.unisys.com/dws-deep-dive/" class="share-this__link" aria-label="email"
+               >
+
+                
+                <svg viewBox="0 0 40 40">
+                    <title>Email</title>
+                    <use xlink:href="#email-social-icon" />
+                </svg>
+            </a>
+    </div>
+</div>
+
+        </div>
+
+        <div class="generic-content-right-rail__copy">
+
+<p>Each of these podcast episodes go deep into one aspect of the digital workplace. Interviewing industry experts, we examine how AI, IoT, automation, analytics, cloud, mobile and other technologies are affecting the digital workplace. We hear from leaders who have built successful digital workplaces for their employees.</p>        </div>
+    </div>
+
+
+
+<div class="block  recentblogspodcastsblock col-12 ">
+
+
+
+    <div  class="featured-grid container">
+            <h2 class="featured-grid__title">
+Recent podcasts</h2>
+        <div class="featured-grid__grid" >
+                    <a href="/podcast/dws/59-ai-is-the-cats-meow/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2026/podcast-59-ai-is-the-cats-meow-featured.jpg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2026/podcast-59-ai-is-the-cats-meow-featured.jpg" alt="59 - AI is the cat&#x2019;s meow" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>29 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">AI is the cat&rsquo;s meow. Is it earning its keep in your digital workplace? (Ep. 59)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/58-how-ai-and-automation-are-fixing-broken-government-services/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2025/podcast-58-ai-and-automation-featured.jpg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2025/podcast-58-ai-and-automation-featured.jpg" alt="How AI and automation are fixing broken government services (Ep. 58)" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>29 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">How AI and automation are fixing broken government services (Ep. 58)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/57-why-agentic-ai-is-the-colleague-youve-been-waiting-for/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2025/podcast-57-featured.jpeg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2025/podcast-57-featured.jpeg" alt="Why agentic AI is the colleague you&#x27;ve been waiting for (Ep. 57)" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>19 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">Why agentic AI is the colleague you've been waiting for (Ep. 57)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/56-mine-the-untapped-gold-in-your-itsm-platform/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2025/podcast-56-gold-in-your-itsm-platform-featured.jpg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2025/podcast-56-gold-in-your-itsm-platform-featured.jpg" alt="Mine the untapped gold in your ITSM platform" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>18 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">Mine the untapped gold in your ITSM platform (Ep. 56)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/55-how-a-windows-11-migration-can-actually-save-you-money/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2024/podcast-55-featured.jpeg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2024/podcast-55-featured.jpeg" alt="How a Windows 11 migration can actually save you money (Ep. 55)" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>19 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">How a Windows 11 migration can actually save you money (Ep. 55)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/54-why-smart-offices-get-better-attendance/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2024/podcast-54-why-smart-offices-featured.jpeg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2024/podcast-54-why-smart-offices-featured.jpeg" alt="Why smart offices get better attendance (Ep. 54)" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>29 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">Why smart offices get better attendance (Ep. 54)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/53-ai-at-the-service-desk-what-actually-works/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2024/podcast-53-ai-at-service-desk-featured.jpeg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2024/podcast-53-ai-at-service-desk-featured.jpeg" alt="AI at the service desk: What actually works (Ep. 53)" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>21 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">AI at the service desk: What actually works (Ep. 53)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+                    <a href="/podcast/dws/52-the-perfect-swirl-gen-ai-meets-traditional-for-better-outcomes/" class="small-featured-news-card-v2 theme__bold-teal">
+                            <picture class="small-featured-news-card-v2__image">
+                                <source srcset="/siteassets/images/podcast/2024/podcast-52-the-perfect-swirl-gen-ai-featured.jpg?w=500&h=500&format=webp" type="image/webp">
+                                <img src="/siteassets/images/podcast/2024/podcast-52-the-perfect-swirl-gen-ai-featured.jpg" alt="The perfect swirl: Gen AI meets traditional for better outcomes (Ep. 52)" loading="lazy" width="500" height="500">
+                            </picture>
+                        <span class="small-featured-news-card-v2__content">
+                            <span class="small-featured-news-card-v2__type">
+                                <span class="small-featured-news-card-v2__type-label">
+                                    <svg viewBox="0 0 40 40">
+                                        <use xlink:href="#podcast-icon" />
+                                    </svg>
+                                    <span class="type-label">Podcast</span>
+                                </span>
+                                    <div>27 Min Listen</div>
+                            </span>
+
+                            <h3 class="small-featured-news-card-v2__title">The perfect swirl: Gen AI meets traditional for better outcomes (Ep. 52)</h3>
+                            <span class="small-featured-news-card-v2__link">
+                                <span>
+                                    Listen
+                                </span>
+                                <span class="arrow-link__icon">
+                                <svg viewBox="0 0 18 18" class="right">
+                                    <use xlink:href="#link-arrow-right-icon" />
+                                </svg>
+                                </span>
+
+                            </span>
+                        </span>
+                    </a>
+        </div>
+            <div class="featured-grid__actions">
+                
+
+
+    <a href="/search/?assets=Podcasts" class="btn-v2 btn--primary" target="_blank" title="" aria-label="">
+                <div class="btn-content">
+                    <span>View all podcasts</span>
+                </div>
+</a>
+
+            </div>
+    </div>
+</div>
+
+                
+
+                
+
+
+    <div class="">
+        <footer class="footer-KBT">
+            <div class="footer-KBT__container container">
+                <div class="footer-KBT__inner">
+                    <nav class="footer-KBT__links" aria-label="Footer Links Listing">
+                                <div class="footer__row">
+                                    <ul>
+                                                <li>
+                                                    <a href="/resource-center/">Insights</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/investor-relations/">Investor Relations</a>
+                                                </li>
+                                    </ul>
+                                </div>
+                                <div class="footer__row">
+                                    <ul>
+                                                <li>
+                                                    <a href="/leadership/">Leadership</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/support/">Support</a>
+                                                </li>
+                                    </ul>
+                                </div>
+                                <div class="footer__row">
+                                    <ul>
+                                                <li>
+                                                    <a href="/about-unisys/">About Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/about-unisys/sustainability-and-corporate-social-responsibility/human-rights/">Modern Slavery Act Statement</a>
+                                                </li>
+                                    </ul>
+                                </div>
+                                <div class="footer__row">
+                                    <ul>
+                                                <li>
+                                                    <a href="/careers/">Careers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/about-unisys/ai-mission-statement/">Responsible AI Statement</a>
+                                                </li>
+                                    </ul>
+                                </div>
+                    </nav>
+                    <div class="footer-KBT__right-section">
+                            <div class="footer-KBT__tagline">Keep Breaking Through</div>
+                            <nav class="footer-KBT__social-links">
+                                <ul>
+                                        <li>
+                                            
+
+
+
+
+<a  href="https://www.linkedin.com/company/unisys"
+   target="_blank"
+   rel=noreferrer
+   class=""
+   aria-label="linkedin"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>LinkedIn</title>
+            <use xlink:href="#linkedin-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                        <li>
+                                            
+
+
+
+
+<a  href="https://x.com/unisys"
+   target="_blank"
+   rel=noreferrer
+   class=""
+   aria-label="twitter"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>Twitter</title>
+            <use xlink:href="#twitter-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                        <li>
+                                            
+
+
+
+
+<a  href="https://www.youtube.com/channel/UCVFzCw3E0iGDp-5OmR8Ddww"
+   target="_blank"
+   rel=noreferrer
+   class=""
+   aria-label="youtube"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>YouTube</title>
+            <use xlink:href="#youtube-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                        <li>
+                                            
+
+
+
+
+<a  href="https://www.facebook.com/UnisysCorp/"
+   target="_blank"
+   rel=noreferrer
+   class=""
+   aria-label="facebook"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>Facebook</title>
+            <use xlink:href="#facebook-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                        <li>
+                                            
+
+
+
+
+<a  href="https://www.instagram.com/unisyscorp/"
+   target="_blank"
+   rel=noreferrer
+   class=""
+   aria-label="instagram"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>Instagram</title>
+            <use xlink:href="#instagram-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                        <li>
+                                            
+
+
+
+
+<a  href="/blog/"
+   rel=
+   class=""
+   aria-label="blog"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>Blog</title>
+            <use xlink:href="#blog-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                        <li>
+                                            
+
+
+
+
+<a  href="/dws-deep-dive/"
+   rel=
+   class=""
+   aria-label="podcast"
+   >
+
+        <svg viewBox="0 0 64 64">
+            <title>Podcasts</title>
+            <use xlink:href="#podcast-social-icon-rebrand" />
+        </svg>
+</a>
+                            </li>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+                <div class="footer-KBT__marker"></div>
+                <div class="footer-KBT__bottom">
+                    <div class="footer-KBT__bottom-left">
+                        <div class="footer-KBT__logo">
+                            <a href="/" aria-label="Unisys">
+                                <svg viewBox="0 0 49 46">
+                                    <use xlink:href="#unisys-logo-light" />
+                                </svg>
+                            </a>
+                        </div>
+                            <nav class="footer-KBT__sub-links" aria-label="Footer Sub-links Listing">
+
+                                    <div class="footer-KBT__column">
+                                        <ul>
+                                                <li>
+                                                    <a href="/unisys-legal/terms-of-use/" >Terms of use</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/unisys-legal/privacy/" >Privacy notice</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/unisys-legal/cookies/" >Cookies</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-KBT__column">
+                                        <ul>
+                                                <li>
+                                                    <a href="/unisys-legal/do-not-sell-my-personal-information/" >Do not sell or share my information</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/sitemap/" >Sitemap</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/contact-us/" >Contact us</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+
+                            </nav>
+
+                    </div>
+                        <div class="footer-KBT__copyright">&#xA9; Unisys 2026</div>
+                </div>
+                    <div class="footer-KBT__usage-of-ai">
+Some content on this website may be created or assisted by AI. We review all content for accuracy and quality but Unisys does not guarantee that all information is free from errors or omissions.</div>
+            </div>
+        </footer>
+        <!-- JavaScript -->
+        <script>
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", "/assets/images/svgsheet.svg", true);
+            ajax.send();
+            ajax.onload = function () {
+                var div = document.createElement("div");
+                div.style.display = 'none';
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        </script>
+        <script src="/assets/js/main.bundle.js"></script>
+    </div>
+
+
+                
+
+
+<script type="text/javascript">
+    (function () {
+        // The OneTrust category ID for Targeting/Personalisation cookies
+        var TARGETING_CATEGORY = 'C0004';
+
+        // The UTM cookie name and querystring identifier come from CMS GeneralSettings
+        var UTM_COOKIE_NAME = 'uni_utm';
+        var UTM_IDENTIFIER  = 'utm_source';
+
+        // ── Helpers ──────────────────────────────────────────────────────────
+
+        /**
+         * Reads a cookie value by name from document.cookie.
+         */
+        function getCookie(name) {
+            var match = document.cookie.match(new RegExp('(?:^|;)\\s*' + name + '=([^;]*)'));
+            return match ? decodeURIComponent(match[1]) : null;
+        }
+
+        /**
+         * Checks whether a specific OneTrust category has been accepted.
+         * Reads the persisted OptanonConsent cookie (format: "C0001:1,C0002:0,...").
+         */
+        function isOneTrustCategoryAccepted(categoryId) {
+            var consentCookie = getCookie('OptanonConsent');
+            if (!consentCookie) {
+                return false;
+            }
+            // Extract the groups parameter value: "C0001:1,C0002:1,C0004:1"
+            var groupsMatch = consentCookie.match(/groups=([^&]*)/);
+            if (!groupsMatch) {
+                return false;
+            }
+            var groups = decodeURIComponent(groupsMatch[1]);
+            // Match "C0004:1" — category accepted
+            return new RegExp('(^|,)' + categoryId + ':1(,|$)').test(groups);
+        }
+
+        /**
+         * Writes the UTM querystring into the tracking cookie.
+         */
+        function setUtmCookie(value) {
+            document.cookie = UTM_COOKIE_NAME + '=' + (value || '') + '; path=/; SameSite=Lax';
+        }
+
+        /**
+         * Core logic — only runs if C0004 (Targeting) consent is active.
+         */
+        function trySetUtmCookie() {
+            if (!isOneTrustCategoryAccepted(TARGETING_CATEGORY)) {
+                return;
+            }
+            if (new RegExp('[?&]' + UTM_IDENTIFIER + '=').test(location.search)) {
+                setUtmCookie(location.search);
+            }
+        }
+
+        // ── Execution ─────────────────────────────────────────────────────────
+
+        // Attempt 1: OneTrust has already loaded and consent is already known
+        // (return visitor or consent set earlier in this session)
+        trySetUtmCookie();
+
+        // Attempt 2: User interacts with the OneTrust banner on this page load.
+        // OneTrust fires 'OneTrustGroupsUpdated' on the document whenever consent
+        // state changes (accept all / reject all / save preferences).
+        document.addEventListener('OneTrustGroupsUpdated', function () {
+            trySetUtmCookie();
+        });
+
+        // Attempt 3: OptanonWrapper is a globally defined function that OneTrust
+        // calls after it has initialised on every page load. This is the recommended
+        // OneTrust integration point for re-running consent-dependent logic.
+        // We merge with any existing OptanonWrapper rather than overwriting it.
+        var _existingOptanonWrapper = window.OptanonWrapper;
+        window.OptanonWrapper = function () {
+            if (typeof _existingOptanonWrapper === 'function') {
+                _existingOptanonWrapper();
+            }
+            trySetUtmCookie();
+        };
+    })();
+</script>
+            </div>
+        </main>
+    </div>
+</div>
+
+    <!-- JavaScript -->
+
+    
+    <script defer="defer" nonce="3f618aec-f9cb-41e9-9d24-26e0fedc94a9" src="/Util/Find/epi-util/find.js"></script>
+<script nonce="3f618aec-f9cb-41e9-9d24-26e0fedc94a9">
+document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}})
+</script>
+
+    
+
+    <script>
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "/assets/images/svgsheet.svg" /* + "?version=version" */, true);
+        ajax.send();
+        ajax.onload = function () {
+            var div = document.createElement("div");
+            div.style.display = 'none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+        window.onload = function () {
+            Browser_Detection.init();
+            updateExternalImagePath.isExternalContentReviewPage();
+        }
+    </script>
+    <script src="/assets/js/main.bundle.js"></script>
+    <script src="/assets/js/features/ExternalContentReviewLink.js"></script>
+    <script src="/assets/js/features/UnisysUpdateBrowser.js"></script>
+    <script src="/assets/js/vendors/jquery/jquery-3.6.3.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="codeberg-auto">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>org/PrivacyPolicy.md at main - Codeberg/org - Codeberg.org</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="author" content="Codeberg">
+	<meta name="description" content="org - Official Codeberg Documents and their unofficial translations.">
+	<meta name="keywords" content="git,non-profit,foss,oss,free,software,open,source,code,hosting">
+	<meta name="referrer" content="same-origin">
+
+
+	<link rel="alternate" type="application/atom+xml" title="" href="/Codeberg/org.atom">
+	<link rel="alternate" type="application/rss+xml" title="" href="/Codeberg/org.rss">
+
+	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="/assets/img/favicon.png" type="image/png">
+
+	
+<script>
+	
+	window.addEventListener('error', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.addEventListener('unhandledrejection', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.config = {
+		appUrl: 'https:\/\/codeberg.org\/',
+		appSubUrl: '',
+		assetVersionEncoded: encodeURIComponent('16.0.0-dev-694-33ae492b~gitea-1.22.0'), 
+		assetUrlPrefix: '\/assets',
+		runModeIsProd:  true ,
+		customEmojis: new Set(["git","gitea","codeberg","gitlab","github","gogs","forgejo"]),
+		pageData: {"DATETIMESTRINGS":{"FUTURE":"in future","NOW":"now","relativetime.1day":"yesterday","relativetime.1month":"last month","relativetime.1week":"last week","relativetime.1year":"last year"},"PLURALSTRINGS_FALLBACK":{},"PLURALSTRINGS_LANG":{"relativetime.days":["%d day ago","%d days ago"],"relativetime.duration.days":["%d day","%d days"],"relativetime.duration.hours":["%d hour","%d hours"],"relativetime.duration.mins":["%d minute","%d minutes"],"relativetime.duration.months":["%d month","%d months"],"relativetime.duration.secs":["%d second","%d seconds"],"relativetime.duration.weeks":["%d week","%d weeks"],"relativetime.duration.years":["%d year","%d years"],"relativetime.hours":["%d hour ago","%d hours ago"],"relativetime.mins":["%d minute ago","%d minutes ago"],"relativetime.months":["%d month ago","%d months ago"],"relativetime.weeks":["%d week ago","%d weeks ago"],"relativetime.years":["%d year ago","%d years ago"]},"PLURAL_RULE_FALLBACK":0,"PLURAL_RULE_LANG":0},
+		notificationSettings: {"EventSourceUpdateTime":10000,"MaxTimeout":60000,"MinTimeout":10000,"TimeoutStep":10000}, 
+		enableTimeTracking:  true ,
+		
+		mermaidMaxSourceCharacters:  50000 ,
+		
+		i18n: {
+			copy_success: "Copied!",
+			copy_error: "Copy failed",
+			error_occurred: "An error occurred",
+			network_error: "Network error",
+			remove_label_str: "Remove item \"%s\"",
+			modal_confirm: "Confirm",
+			modal_cancel: "Cancel",
+			more_items: "More items",
+			incorrect_root_url: "This Forgejo instance is configured to be served on \"https://codeberg.org/\". You are currently viewing Forgejo through a different URL, which may cause parts of the application to break. The canonical URL is controlled by Forgejo admins via the ROOT_URL setting in the app.ini.",
+		},
+	};
+	
+	window.config.pageData = window.config.pageData || {};
+</script>
+<script src="/assets/js/webcomponents.js?v=16.0.0-dev-694-33ae492b~gitea-1.22.0"></script>
+
+	
+
+	
+	<meta property="og:title" content="org/PrivacyPolicy.md at main">
+
+
+	<meta property="og:url" content="https://codeberg.org//Codeberg/org/src/branch/main/PrivacyPolicy.md">
+
+
+	<meta property="og:type" content="object">
+
+
+	<meta property="og:image" content="https://codeberg.org/Codeberg/org/-/summary-card">
+	
+		<meta property="og:image:width" content="1200">
+	
+	
+		<meta property="og:image:height" content="600">
+	
+	
+		<meta property="og:image:alt" content="Summary card of repository Codeberg/org, described as: Official Codeberg Documents and their unofficial translations.">
+	
+
+<meta property="og:site_name" content="Codeberg.org">
+
+	<link rel="stylesheet" href="/assets/css/index.css?v=16.0.0-dev-694-33ae492b~gitea-1.22.0">
+<link rel="stylesheet" href="/assets/css/theme-codeberg-auto.css?v=16.0.0-dev-694-33ae492b~gitea-1.22.0">
+
+	
+</head>
+<body class="no-js" hx-swap="outerHTML" hx-ext="morph" hx-push-url="false">
+	
+	<noscript>
+		<style>
+			#tou-announcement { display: flex !important; justify-content: center; }
+			#tou-announcement > :first-child, #tou-announcement > :last-child { display: none; }
+		</style>
+	</noscript>
+	<div id="tou-announcement" class="tw-hidden">
+		<div style="width: 108.3px"></div>
+		<div>
+		<span>Codeberg has changed its Terms of Use. <a href="https://codeberg.org/Codeberg/org/compare/17bdb39b0c1ecd0e423f3ba592650ce57fcdfbf5..71149c7fc95ccfeae36109b5cddca339e4aa1473?files=TermsOfUse.md#diff-d760d688bb9b929b62db808bfc76abe4493d095a">View complete changes</a>.</span>
+		<ol>
+			<li>LLM-generated content is being restricted. <a href="https://codeberg.org/Codeberg/org/commit/71149c7fc95ccfeae36109b5cddca339e4aa1473">View change</a> or <a href="https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html">read the blog post</a></li>
+			<li>Cryptocurrency projects are no longer allowed. <a href="https://codeberg.org/Codeberg/org/commit/f383b648fd733ab88083dc390b91e77cd7589980">View change</a></li>
+		</ol>
+		</div>
+		<button class="ui secondary button small"><svg viewBox="0 0 16 16" class="svg octicon-x" aria-hidden="true" width="16" height="16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-3.22 3.22a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06"/></svg> Dismiss</button>
+	</div>
+	<div class="full height">
+		<noscript>
+			<div class="tw-ml-2 tw-mr-2 tw-text-center tw-text-text-light-2">This website requires JavaScript.</div>
+		</noscript>
+
+		
+
+		
+			
+
+
+<nav id="navbar" aria-label="Navigation bar">
+	<div class="navbar-left ui secondary menu">
+		
+		<a class="item" id="navbar-logo" href="/" aria-label="Home">
+			<div class="branding" aria-hidden="true">
+				<img width="30" height="30" loading="lazy" class="light-logo" src="/assets/img/svg/cb-logo.svg" alt="Logo">
+				<img width="30" height="30" loading="lazy" class="dark-logo" src="/assets/img/svg/cb-logo-mono.svg" alt="Logo">
+			</div>
+		</a>
+
+		
+		<div class="ui secondary menu item navbar-mobile-right only-mobile">
+			
+			<button class="item tw-w-auto ui icon mini button tw-p-2 tw-m-0" id="navbar-expand-toggle" aria-label="Toggle menu"><svg viewBox="0 0 16 16" class="svg octicon-three-bars" aria-hidden="true" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75M1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5"/></svg></button>
+		</div>
+
+		
+		
+			<a class="item" href="/explore/repos">Explore</a>
+		
+
+		
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F">About</a>
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/faq/">FAQ</a>
+			<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.codeberg.org">Help</a>
+		
+
+		<a class="item donation-pretty" href="https://donate.codeberg.org">Donate</a>
+
+	</div>
+
+	
+	<div class="navbar-right ui secondary menu">
+		
+			
+				<a class="item" href="/user/sign_up">
+					<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-person" aria-hidden="true" width="16" height="16"><path d="M10.561 8.073a6 6 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6 6 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0M10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0"/></svg>
+					<span>Register</span>
+				</a>
+			
+			<a class="item" rel="nofollow" href="/user/login?redirect_to=%2fCodeberg%2forg%2fsrc%2fbranch%2fmain%2fPrivacyPolicy.md">
+				<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-sign-in" aria-hidden="true" width="16" height="16"><path d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 0 1 0 1.5h-2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 0 1.5h-2.5A1.75 1.75 0 0 1 2 13.25Zm6.56 4.5h5.69a.75.75 0 0 1 0 1.5H8.56l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734Z"/></svg>
+				<span>Sign in</span>
+			</a>
+		
+	</div>
+</nav>
+
+		
+
+
+
+<div role="main" aria-label="org/PrivacyPolicy.md at main" class="page-content repository file list ">
+	<div class="secondary-nav">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="flex-item tw-items-center">
+				<div class="flex-item-leading">
+					
+
+	<img class="ui avatar tw-align-middle" src="/repo-avatars/279db4cb4e13bbbd50468f16a2fd94c50d528dbdb88c11a4b5098f4eb7123dca" width="24" height="24" alt="Codeberg/org">
+
+
+				</div>
+				<div class="flex-item-main">
+					<div class="flex-item-title tw-font-normal">
+						<a class="muted" href="/Codeberg">Codeberg</a>/<a class="muted tw-font-semibold" href="/Codeberg/org">org</a>
+					</div>
+				</div>
+				<div class="flex-item-trailing">
+					
+					
+						
+					
+					
+					
+				</div>
+			</div>
+			
+				<div class="repo-buttons button-row">
+					
+					
+					
+					
+					<a class="ui compact small basic button" href="/Codeberg/org.rss" data-tooltip-content="RSS feed">
+						<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="16" height="16"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+					</a>
+					
+					
+	
+	<div class="ui disabled labeled button" data-tooltip-content="Sign in to watch this repository.">
+		<div class="ui compact small basic button">
+			<svg viewBox="0 0 16 16" class="svg octicon-eye" aria-hidden="true" width="16" height="16"><path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14s-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2M1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5s2.825-.742 3.955-1.715c1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5s-2.825.742-3.955 1.715c-1.124.967-1.954 2.096-2.366 2.717M8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10"/></svg><span class="text not-mobile">Watch</span>
+		</div>
+		<a class="ui basic label" href="/Codeberg/org/watchers"
+			aria-label="59 watchers"
+			>
+			59
+		</a>
+	</div>
+
+
+					
+					<form hx-target="this" hx-post="/Codeberg/org/action/star" hx-on::after-settle="this.querySelector('button').focus()" method="post" action="/Codeberg/org/action/star">
+	<div class="ui labeled button" data-tooltip-content="Sign in to star this repository.">
+		<button type="submit" class="ui compact small basic button" disabled aria-label="Star">
+			
+				<svg viewBox="0 0 16 16" class="svg octicon-star" aria-hidden="true" width="16" height="16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg><span class="text not-mobile">Star</span>
+			
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/Codeberg/org/stars"
+			aria-label="178 stars"
+			>
+			178
+		</a>
+	</div>
+</form>
+
+					
+					
+					
+
+
+	<div class="ui labeled button
+		
+			disabled
+		"
+		
+			data-tooltip-content="Sign in to fork this repository."
+		
+	>
+		<a class="ui compact small basic button"
+			
+				
+			
+		>
+			<svg viewBox="0 0 16 16" class="svg octicon-repo-forked" aria-hidden="true" width="16" height="16"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0"/></svg><span class="text not-mobile">Fork</span>
+		</a>
+		<dialog id="fork-repo-modal">
+			<article>
+				<header>You've already forked org</header>
+				<div class="content tw-text-left">
+					<div class="ui list">
+						
+					</div>
+					
+				</div>
+			</article>
+		</dialog>
+		<a class="ui basic label" href="/Codeberg/org/forks"
+			aria-label="45 forks"
+			>
+			45
+		</a>
+	</div>
+
+
+
+
+					
+					
+				</div>
+			
+		</div>
+		
+		
+		
+	</div>
+
+	<overflow-menu class="ui container secondary pointing tabular top attached borderless menu tw-pt-0 tw-my-0">
+		
+			<div class="overflow-menu-items">
+				
+					<a class="active item" href="/Codeberg/org">
+						<svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="16" height="16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg> Code
+					</a>
+				
+
+				
+					<a class="item" href="/Codeberg/org/issues">
+						<svg viewBox="0 0 16 16" class="svg octicon-issue-opened" aria-hidden="true" width="16" height="16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0"/></svg> Issues
+						
+							<span class="ui small label">18</span>
+						
+					</a>
+				
+
+				
+
+				
+					<a class="item" href="/Codeberg/org/pulls">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg> Pull requests
+						
+							<span class="ui small label">17</span>
+						
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+					<a class="item" href="/Codeberg/org/activity">
+						<svg viewBox="0 0 16 16" class="svg octicon-pulse" aria-hidden="true" width="16" height="16"><path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.75.75 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.75.75 0 0 1 6 2"/></svg> Activity
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+			</div>
+		
+	</overflow-menu>
+	<div class="ui tabs divider"></div>
+</div>
+
+	<div class="ui container ">
+		
+
+
+
+
+	<div id="flash-message" hx-swap-oob="true"></div>
+
+
+		
+		
+
+		
+			
+			
+		
+		
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+
+
+
+		
+		
+
+		
+		
+		
+		<div class="repo-button-row">
+			<div class="button-sequence tw-gap-y-2">
+				
+
+
+
+
+
+
+	
+
+
+
+
+<script type="module">
+	const data = {
+		'textReleaseCompare': "Compare",
+		'textCreateTag': "Create tag %s",
+		'textCreateBranch': "Create branch %s",
+		'textCreateBranchFrom': "from \"%s\"",
+		'textBranches': "Branches",
+		'textTags': "Tags",
+		'textDefaultBranchLabel': "default",
+
+		'mode': 'branches',
+		'showBranchesInDropdown':  true ,
+		'searchFieldPlaceholder': 'Filter branch or tag...',
+		'branchForm':  null ,
+		'disableCreateBranch':  true ,
+		'setAction':  null ,
+		'submitForm':  null ,
+		'viewType': "branch",
+		'refName': "main",
+		'commitIdShort': "71149c7fc9",
+		'tagName': "",
+		'branchName': "main",
+		'noTag':  null ,
+		'defaultSelectedRefName': "main",
+		'repoDefaultBranch': "main",
+		'enableFeed':  true ,
+		'rssURLPrefix': '\/Codeberg\/org/rss/branch/',
+		'branchURLPrefix': '\/Codeberg\/org/src/branch/',
+		'branchURLSuffix': '/PrivacyPolicy.md',
+		'tagURLPrefix': '\/Codeberg\/org/src/tag/',
+		'tagURLSuffix': '/PrivacyPolicy.md',
+		'repoLink': "/Codeberg/org",
+		'treePath': "PrivacyPolicy.md",
+		'branchNameSubURL': "branch/main",
+		'noResults': "No results found.",
+	};
+	
+	window.config.pageData.branchDropdownDataList = window.config.pageData.branchDropdownDataList || [];
+	window.config.pageData.branchDropdownDataList.push(data);
+</script>
+
+<div class="js-branch-tag-selector ">
+	
+	<div class="ui dropdown custom">
+		<button class="branch-dropdown-button gt-ellipsis ui basic small compact button tw-flex tw-m-0">
+			<span class="text tw-flex tw-items-center tw-mr-1 gt-ellipsis">
+				
+					
+						<svg viewBox="0 0 16 16" class="svg octicon-git-branch" aria-hidden="true" width="16" height="16"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.5 2.5 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25m-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0m8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5M4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"/></svg>
+					
+					<strong ref="dropdownRefName" class="tw-ml-2 tw-inline-block gt-ellipsis">main</strong>
+				
+			</span>
+			<svg viewBox="0 0 16 16" class="dropdown icon svg octicon-triangle-down" aria-hidden="true" width="14" height="14"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427"/></svg>
+		</button>
+	</div>
+</div>
+
+				
+					
+					
+					
+					
+					<a id="new-pull-request" role="button" class="ui compact basic button" href="/Codeberg/org/compare/main...main"
+						data-tooltip-content="Compare">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg>
+					</a>
+				
+				
+				
+
+				
+
+				
+				
+
+
+
+	<span class="breadcrumb repo-path tw-ml-1">
+		<a class="section" href="/Codeberg/org/src/branch/main" title="org">org</a><span class="breadcrumb-divider">/</span><span class="active section" title="PrivacyPolicy.md">PrivacyPolicy.md</span>
+				<button class="btn interact-fg tw-p-2" data-clipboard-text="PrivacyPolicy.md" data-tooltip-content="Copy path"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button></span>
+
+
+			</div>
+			<div class="tw-flex tw-items-center max-[390px]:tw-w-full">
+				
+				
+				
+			</div>
+		</div>
+
+		
+			
+
+			
+
+		
+
+		
+			<div class="tab-size-4 non-diff-file-content">
+
+	
+		<div id="repo-file-commit-box" class="ui segment list-header tw-mb-4 tw-flex tw-justify-between">
+			<div class="latest-commit">
+				
+	
+		<img loading="lazy" alt="" class="ui avatar tw-align-middle tw-mr-2" src="/avatars/095f54d002ad70e2ca3217eb66f9cff2?size=64" title="Moritz Marquardt" width="24" height="24"/>
+		
+			<a class="muted author-wrapper" title="momar" href="/momar"><strong>momar</strong></a>
+		
+	
+	
+
+<a href="/Codeberg/org/commit/1c1164294c42645f6af326e41351e0c32b64cb62" rel="nofollow" class="sha label">
+	<span class="shortsha">1c1164294c</span></a>
+
+	
+
+	
+	<span class="grey commit-summary" title="Add name of our current data protection officer"><span class="message-wrapper"><a href="/Codeberg/org/commit/1c1164294c42645f6af326e41351e0c32b64cb62" class="default-link muted">Add name of our current data protection officer</a></span>
+		
+	</span>
+
+
+			</div>
+			
+				
+					<div class="text grey age">
+						<relative-time prefix="" tense="past" datetime="2026-01-13T21:20:02+01:00" data-tooltip-content data-tooltip-interactive="true">2026-01-13 21:20:02 +01:00</relative-time>
+					</div>
+				
+			
+		</div>
+	
+
+	<h4 class="file-header ui top attached header tw-flex tw-items-center tw-justify-between tw-flex-wrap">
+		<div class="file-header-left tw-flex tw-items-center tw-pr-4 tw-flex-wrap tw-gap-2">
+			
+				<div class="file-info tw-font-mono">
+	
+	
+	
+	
+		<div class="file-info-entry">
+			10 KiB
+		</div>
+	
+	
+	
+	
+	
+	
+	
+</div>
+
+			
+		</div>
+		<div class="file-header-right file-actions tw-flex tw-items-center tw-flex-wrap">
+			
+				<div class="ui compact icon buttons">
+					<a href="?display=source" class="ui mini basic button " data-tooltip-content="View source"><svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="15" height="15"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg></a>
+					<a href="/Codeberg/org/src/branch/main/PrivacyPolicy.md" class="ui mini basic button active" data-tooltip-content="View rendered"><svg viewBox="0 0 16 16" class="svg octicon-file" aria-hidden="true" width="15" height="15"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg></a>
+				</div>
+			
+			
+				<div class="ui buttons tw-mr-1">
+					
+					<a class="ui mini basic button" href="/Codeberg/org/raw/branch/main/PrivacyPolicy.md">Raw</a>
+					
+						<a class="ui mini basic button" href="/Codeberg/org/src/commit/71149c7fc95ccfeae36109b5cddca339e4aa1473/PrivacyPolicy.md">Permalink</a>
+					
+					
+						<a class="ui mini basic button" href="/Codeberg/org/blame/branch/main/PrivacyPolicy.md">Blame</a>
+					
+					<a class="ui mini basic button" href="/Codeberg/org/commits/branch/main/PrivacyPolicy.md">History</a>
+					
+				</div>
+				<a download class="btn-octicon" href="/Codeberg/org/raw/branch/main/PrivacyPolicy.md" data-tooltip-content="Download file">
+					<svg viewBox="0 0 16 16" class="svg octicon-download" aria-hidden="true" width="16" height="16"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06z"/></svg>
+				</a>
+				<a href="#" id="copy-content" class="btn-octicon " data-link="/Codeberg/org/raw/branch/main/PrivacyPolicy.md" data-tooltip-content="Copy content">
+					<svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+				</a>
+				
+					
+						<a class="btn-octicon" href="/Codeberg/org/rss/branch/main/PrivacyPolicy.md" data-tooltip-content="RSS feed">
+							<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="14" height="14"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+						</a>
+					
+				
+				
+					
+						<span class="btn-octicon disabled" data-tooltip-content="You must fork this repository to make or propose changes to this file.">
+							<svg viewBox="0 0 16 16" class="svg octicon-pencil" aria-hidden="true" width="16" height="16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.25.25 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></svg>
+						</span>
+					
+					
+						<span class="btn-octicon disabled" data-tooltip-content="You must have write access to make or propose changes to this file.">
+							<svg viewBox="0 0 16 16" class="svg octicon-trash" aria-hidden="true" width="16" height="16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75M4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.75 1.75 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15M6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25"/></svg>
+						</span>
+					
+				
+			
+			
+		</div>
+	</h4>
+	<div class="ui bottom attached table unstackable segment">
+		
+		<div class="file-view markup markdown">
+			
+				<h1 id="user-content-privacy-policy" dir="auto">Privacy Policy</h1>
+<h2 id="user-content-1-general-information" dir="auto">1 General Information</h2>
+<p dir="auto"><strong>We do not want to need your data.</strong> We therefore want to be fully transparent about how we use it, and are always open to viable suggestions on how to reduce your data footprint on our servers. We try to use privacy-friendly open source software and not rely on third parties as much as possible, both as a provider of our public FOSS forge and as a German non-profit organization.</p>
+<p dir="auto">This document outlines our responsibilities and duties regarding the processing of your personal data, as defined by Article 13 of the European Union&#39;s General Data Protection Regulation (GDPR), and provides information on the rights that you have as a data subject.</p>
+<h2 id="user-content-2-contact" dir="auto">2 Contact</h2>
+<p dir="auto"><strong>Controller (legally responsible association body):</strong><br/>
+Codeberg e. V.<br/>
+Executive Board<br/>
+Arminiusstraße 2 - 4<br/>
+10551 Berlin<br/>
+Germany</p>
+<p dir="auto"><strong>Data Protection Officer:</strong> Phil Roggenbuck, <a href="mailto:privacy@codeberg.org" rel="nofollow">privacy@codeberg.org</a></p>
+<p dir="auto">If you want to report a privacy violation through third party content hosted on Codeberg, please contact our moderation team: <a href="mailto:abuse@codeberg.org" rel="nofollow">abuse@codeberg.org</a></p>
+<p dir="auto">Should you wish to report a complaint or if you feel that Codeberg e. V. has not addressed your concern in a satisfactory manner, you may contact the responsible Information Commissioner&#39;s Office: <a href="https://www.datenschutz-berlin.de" rel="nofollow">https://www.datenschutz-berlin.de</a></p>
+<h2 id="user-content-3-data-processing-reasons-legal-basis" dir="auto">3 Data Processing Reasons &amp; Legal Basis</h2>
+<h3 id="user-content-3-1-data-of-platform-users" dir="auto">3.1 Data of Platform Users</h3>
+<p dir="auto">When accessing Codeberg.org and its services, the following information is processed by Codeberg e. V. for the reasons outlined below:</p>
+<ol dir="auto">
+<li>Account details (username, e-mail addresses, name, linked accounts), for the purpose of providing you with an account on our platform.
+<ul dir="auto">
+<li>Data is recorded during account registration on Codeberg.org at <a href="https://codeberg.org" rel="nofollow">https://codeberg.org</a> (under &#34;Register&#34;).</li>
+<li>Data can be changed on the user account page at <a href="https://codeberg.org/user/settings" rel="nofollow">https://codeberg.org/user/settings</a>.</li>
+<li>Pseudonyms can be used in the public profile, there is no requirement to use real personal information besides a reachable e-mail address.</li>
+<li>Legal basis for processing this data is the user&#39;s consent to either share the data on our platform or to receive notifications (Art. 6.1.a GDPR).</li>
+</ul>
+</li>
+<li>Voluntarily provided author details (name, e-mail address) when using e.g. the third-party software &#34;Git&#34; (<a href="https://git-scm.com" rel="nofollow">https://git-scm.com</a>) to create/upload &#34;commits&#34; to Codeberg, for the purpose of being able to reconstruct the original authorship of uploaded code for copyright &amp; licensing reasons.
+<ul dir="auto">
+<li>Data is provided voluntarily by the user, usually during setup, and is then automatically included in newly created commits.</li>
+<li>Legal basis for processing this data is the license of the project as a legal contract (Art. 6.1.b GDPR).</li>
+<li>Attention: Most licenses approved by Codeberg are irrevocable and apply indefinitely, to the extent permitted by copyright law. Such licenses are considered to be legal contracts. As a distributor of open-source content, Codeberg e. V. reserves the right to maintain a copy of commit authorship records indefinitely. Additionally, Codeberg e. V. reserves the right to distribute such authorship records to all parties that wish to download, view or otherwise inspect content published using an allowed license. Such parties possess a legitimate interest to this information, as commit authorship records are necessary for adhering to the legal terms stipulated by the project license.</li>
+</ul>
+</li>
+<li>Payment information (IBAN, legal name, e-mail address), for the purpose of processing donations.
+<ul dir="auto">
+<li>Payment information is recorded upon donation through the selected third-party payment processor, as chosen on <a href="https://donate.codeberg.org" rel="nofollow">https://donate.codeberg.org</a>.</li>
+<li>Codeberg e. V. records identifiers provided by the third-party payment processor. Such identifiers can include an IBAN, legal name, e-mail address or other data.</li>
+<li>Legal basis for processing this data is to fulfill legal obligations for processing donations (Art. 6.1.c GDPR).</li>
+</ul>
+</li>
+<li>Technical metadata for the purpose of providing the platform services and avoiding misuse of our resources.
+<ul dir="auto">
+<li>Data is processed during regular use of our website, and includes the IP address of the requesting computer, the browser and operating system you are using, the date and time of access, the Uniform Resource Locators (URL) requested on our website, as well as the previously visited website (referrer URL). When stored in logs, the IP address is truncated so that this data is not associated with your personal data.</li>
+<li>Further metadata includes technically necessary cookies to identify the session of a logged-in user or to protect users from so-called CSRF attacks. Codeberg does NOT use cookies or other techniques for user-targeted analytics or advertisements.</li>
+<li>Legal basis for processing this data is a legitimate interest of the platform operator (Art. 6.1.f GDPR).</li>
+</ul>
+</li>
+<li>When projects hosted on Codeberg process personal data using Codeberg&#39;s resources (e.g. within our CI, by using repos as storage, or through a website hosted on Codeberg Pages), the project owner is primarily responsible for the data processing and must make sure to adhere to the GDPR as well as their local legislature independently from these terms.</li>
+</ol>
+<h3 id="user-content-3-2-data-of-association-members" dir="auto">3.2 Data of Association Members</h3>
+<p dir="auto">Codeberg e. V. processes and stores the following information of its association members for the reasons outlined below:</p>
+<ol dir="auto">
+<li>Membership details (name, e-mail addresses, postal address, date of birth), for the purpose of managing the association and pursuing our association purposes as stated in § 2 of our bylaws.
+<ul dir="auto">
+<li>Data is recorded during registration at <a href="https://join.codeberg.org" rel="nofollow">https://join.codeberg.org</a> or when a membership application is sent in writing to the executive board.</li>
+<li>Legal basis for processing this data is to fulfill contractual obligations arising from the association membership (Art. 6.1.b GDPR) and legal obligations (e.g. archiving) arising from that (Art. 6.1.c GDPR).</li>
+</ul>
+</li>
+<li>Payment information, for the purpose of processing membership fees
+<ul dir="auto">
+<li>Payment information (IBAN, real or company name) is recorded upon the submission of a membership application at <a href="https://join.codeberg.org" rel="nofollow">https://join.codeberg.org</a>.</li>
+<li>Codeberg e. V. records identifiers provided by the third-party payment processor. Such identifiers can include an IBAN, legal name, e-mail address or other data.</li>
+<li>Legal basis for processing this data is to fulfill contractual obligations arising from the association membership (Art. 6.1.b GDPR) and legal obligations (e.g. archiving) arising from that (Art. 6.1.c GDPR).</li>
+</ul>
+</li>
+<li>Photos from e.g. events &amp; meetings, for example for social media or our blog
+<ul dir="auto">
+<li>Requires explicit consent by everyone depicted on those pictures (or, for minors, their legal guardians according to Art. 8 GDPR).</li>
+<li>Legal basis for processing this data is the person&#39;s consent (Art. 6.1.a GDPR).</li>
+</ul>
+</li>
+</ol>
+<h2 id="user-content-4-data-handling-by-association-bodies-third-parties" dir="auto">4 Data Handling by Association Bodies &amp; Third Parties</h2>
+<p dir="auto">Personal data may only be processed by the association bodies which are responsible for their respective tasks. This specifically means that:</p>
+<ol dir="auto">
+<li>Members of the <em>executive board</em> and <em>presidium</em> can process membership details &amp; payment information in order to fulfill their duties, as outlined by the Bylaws.</li>
+<li><em>Cash auditors</em> can access bank statements and other financial details. Such data may only be used for fulfilling the task of auditing the association&#39;s finances.</li>
+<li>Codeberg&#39;s <em>Moderation Team</em> can access private repositories &amp; additional metadata required to investigate potential violations of our terms.</li>
+<li><em>Infrastructure administrators</em> can access all resources and personal information stored on our servers. This is required for maintaining the infrastructure necessary for providing Codeberg e. V.&#39;s services.</li>
+<li>An <em>association member</em> may have a legitimate interest to contact other association members (e.g. due to § 37 BGB). If a legitimate interest is established, Codeberg e. V. is legally required to produce a list of all association members, as well as their contact information (e.g. an e-mail address).</li>
+<li>Tasks involving processing personal data may be delegated to other people within the association by the responsible person.</li>
+<li>For the members of the executive board, name, date of birth &amp; place of residence must be made public through the &#34;Vereinsregister&#34;.</li>
+</ol>
+<p dir="auto">All servers of Codeberg e. V. are physically located in Germany.</p>
+<p dir="auto">Third parties may be involved with processing personal data under a specific data processing agreement. A full list of third-parties can be provided upon request.
+This is limited to hosting providers for backup &amp; certain services (although our main infrastructure is bare-metal), payment processors (as described in Art. 3 of the privacy policy), as well as banking &amp; payroll management.</p>
+<h2 id="user-content-5-data-retention" dir="auto">5 Data Retention</h2>
+<ol dir="auto">
+<li>Account details are stored until the deletion of the account.</li>
+<li>Membership details &amp; payment records are stored for up to 10 years after the membership has ended due to legal obligations.</li>
+<li>Technical metadata like IP addresses are not stored for more than 7 days or as required by German legislature.</li>
+<li>Personal data may exist in encrypted backups for up to 1 year. If the data retention period is exceeded at the time of restoration of a backup, affected personal data will be purged.</li>
+<li>Personal data is stored in accordance with the statutory archiving obligations in Germany.</li>
+</ol>
+<h2 id="user-content-6-data-subject-rights" dir="auto">6 Data Subject Rights</h2>
+<p dir="auto">As a subject of personal data processing, you have the following rights:</p>
+<ol dir="auto">
+<li><strong>Right to access:</strong> You can request copies of your personal data, as defined in Art. 15 GDPR.</li>
+<li><strong>Right to rectification:</strong> you can request that Codeberg e. V. corrects any information you believe is inaccurate, or completes any information you believe is incomplete, as defined in Art. 16 GDPR.</li>
+<li><strong>Right to erasure:</strong> you can request that Codeberg e. V. erases your personal data, under the condition that the retention and processing of the information is not required by law and is not neccessary due to the reasons outlined in Art. 17 (3) GDPR.</li>
+<li><strong>Right to restrict processing:</strong> you can request that Codeberg e. V. restricts the processing of your personal data, as defined in Art. 18 GDPR.</li>
+<li><strong>Right to object to processing:</strong> you can object to and withdraw consent to Codeberg e. V. processing your personal data, as defined in Art. 21 GDPR.</li>
+<li><strong>Right to data portability:</strong> you can request that Codeberg e. V. transfers the data that we have collected to another organization, or directly to you, as defined in Art. 20 GDPR.</li>
+<li><strong>If you make a request, we have one month to respond to you.</strong> If you would like to exercise any of these rights, please use the contact information listed in Art. 2 of this privacy policy.</li>
+</ol>
+
+			
+		</div>
+	</div>
+</div>
+
+		
+	</div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer class="page-footer" role="group" aria-label="Footer">
+	<div class="grid" aria-label="Links">
+		<div class="not-mobile">
+			<div class="branding" aria-hidden="true">
+				<img class="light-logo" loading="lazy" src="/assets/img/svg/cb-logo.svg" alt="Logo">
+				<img class="dark-logo" loading="lazy" src="/assets/img/svg/cb-logo-mono.svg" alt="Logo">
+			</div>
+			<div class="powered-by">
+				<div class="title">Powered by </div>
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org" aria-label="Forgejo">
+					<div class="branding" aria-hidden="true">
+						<img class="light-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark.svg" alt="Forgejo logo">
+						<img class="dark-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark-mono.svg" alt="Forgejo logo">
+					</div>
+				</a>
+				with <a class="tw-mt-0" href="/Codeberg-Infrastructure/forgejo" target="_blank">modifications</a>
+			</div>
+		</div>
+		<div>
+			<b id="codeberg-codeberg">Codeberg</b>
+			<ul>
+				<li><a href="https://blog.codeberg.org" target="_blank">Blog</a></li>
+				<li><a href="https://docs.codeberg.org" target="_blank">Documentation</a></li>
+				<li><a href="/Codeberg/Community/issues">Community issues</a></li>
+				
+				<li><a href="/Codeberg/Contributing">Contributing</a>
+				<li><a href="https://docs.codeberg.org/contact/#abuse" target="_blank">Report abuse</a>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-association">Association</b>
+			<ul>
+				<li><a href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F" target="_blank">Who are we?</a></li>
+				<li><a href="https://codeberg.org/codeberg/org/src/en/bylaws.md" target="_blank">Bylaws / Satzung</a></li>
+				<li><a href="https://docs.codeberg.org/improving-codeberg/donate/" target="_blank">Donate</a></li>
+				<li><a href="https://join.codeberg.org" target="_blank">Join / Support</a></li>
+				<li><a href="https://docs.codeberg.org/contact/" target="_blank">Contact</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-service">Services</b>
+			<ul>
+				<li><a href="https://codeberg.page" target="_blank">Codeberg Pages</a></li>
+				<li><a href="https://translate.codeberg.org" target="_blank">Codeberg Translate</a></li>
+				<li><a href="https://docs.codeberg.org/ci/#using-codeberg's-instance-of-woodpecker-ci" target="_blank">Woodpecker CI</a></li>
+				
+					<li><a href="/api/swagger">Forgejo API</a></li>
+				
+				<li><a href="https://status.codeberg.eu" target="_blank">Status page</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-legal">Legal</b>
+			<ul>
+				<li><a href="https://codeberg.org/codeberg/org/src/Imprint.md" target="_blank">Imprint / Impressum</a></li>
+				<li><a href="/codeberg/org/src/PrivacyPolicy.md" target="_blank">Privacy Policy</a></li>
+				<li><a href="/assets/licenses.txt">Licenses</a></li>
+				<li><a href="/codeberg/org/src/TermsOfUse.md">Terms of Use</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-bottom-grid">
+		<div class="footer-social">
+			<a href="https://social.anoxinon.de/@Codeberg" target="_blank" rel="noopener noreferrer">Mastodon</a> |
+			<a href="matrix:r/codeberg-space:matrix.org?action=join" target="_blank" rel="noopener noreferrer">Matrix Space</a>
+			<a href="https://matrix.to/#/#codeberg-space:matrix.org" target="_blank" rel="noopener noreferrer">(Web link)</a>
+			<button class="btn interact-fg tw-p-2 tw-inline" data-clipboard-text="#codeberg-space:matrix.org" data-tooltip-content="Copy to clipboard"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button>
+			<p class="only-mobile">
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org">Powered by Forgejo</a>
+			</p>
+		</div>
+		<div class="footer-language-switch">
+			<div class="ui language bottom floating slide up dropdown link item button">
+				<svg viewBox="0 0 16 16" class="svg octicon-globe" aria-hidden="true" width="16" height="16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M5.78 8.75a9.64 9.64 0 0 0 1.363 4.177q.383.64.857 1.215c.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a10 10 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.51 6.51 0 0 0 4.666 5.5q-.184-.271-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948m-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948q.18-.295.353-.552a6.51 6.51 0 0 0-4.666 5.5m10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948q-.18.296-.353.552a6.51 6.51 0 0 0 4.666-5.5Zm2.733-1.5a6.51 6.51 0 0 0-4.666-5.5q.184.272.353.552c.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+				<div class="text">English</div>
+				<div class="menu language-menu">
+					
+						<a lang="id-ID" data-url="/?lang=id-ID" class="item ">Bahasa Indonesia</a>
+					
+						<a lang="da" data-url="/?lang=da" class="item ">Dansk</a>
+					
+						<a lang="de-DE" data-url="/?lang=de-DE" class="item ">Deutsch</a>
+					
+						<a lang="en-US" data-url="/?lang=en-US" class="item active selected">English</a>
+					
+						<a lang="es-ES" data-url="/?lang=es-ES" class="item ">Español</a>
+					
+						<a lang="eo" data-url="/?lang=eo" class="item ">Esperanto</a>
+					
+						<a lang="fil" data-url="/?lang=fil" class="item ">Filipino</a>
+					
+						<a lang="fr-FR" data-url="/?lang=fr-FR" class="item ">Français</a>
+					
+						<a lang="it-IT" data-url="/?lang=it-IT" class="item ">Italiano</a>
+					
+						<a lang="lv-LV" data-url="/?lang=lv-LV" class="item ">Latviešu</a>
+					
+						<a lang="hu-HU" data-url="/?lang=hu-HU" class="item ">Magyar nyelv</a>
+					
+						<a lang="nl-NL" data-url="/?lang=nl-NL" class="item ">Nederlands</a>
+					
+						<a lang="nds" data-url="/?lang=nds" class="item ">Plattdüütsch</a>
+					
+						<a lang="pl-PL" data-url="/?lang=pl-PL" class="item ">Polski</a>
+					
+						<a lang="pt-PT" data-url="/?lang=pt-PT" class="item ">Português de Portugal</a>
+					
+						<a lang="pt-BR" data-url="/?lang=pt-BR" class="item ">Português do Brasil</a>
+					
+						<a lang="sl" data-url="/?lang=sl" class="item ">Slovenščina</a>
+					
+						<a lang="fi-FI" data-url="/?lang=fi-FI" class="item ">Suomi</a>
+					
+						<a lang="sv-SE" data-url="/?lang=sv-SE" class="item ">Svenska</a>
+					
+						<a lang="tr-TR" data-url="/?lang=tr-TR" class="item ">Türkçe</a>
+					
+						<a lang="cs-CZ" data-url="/?lang=cs-CZ" class="item ">Čeština</a>
+					
+						<a lang="el-GR" data-url="/?lang=el-GR" class="item ">Ελληνικά</a>
+					
+						<a lang="bg" data-url="/?lang=bg" class="item ">Български</a>
+					
+						<a lang="ru-RU" data-url="/?lang=ru-RU" class="item ">Русский</a>
+					
+						<a lang="uk-UA" data-url="/?lang=uk-UA" class="item ">Українська</a>
+					
+						<a lang="fa-IR" data-url="/?lang=fa-IR" class="item ">فارسی</a>
+					
+						<a lang="ja-JP" data-url="/?lang=ja-JP" class="item ">日本語</a>
+					
+						<a lang="zh-CN" data-url="/?lang=zh-CN" class="item ">简体中文</a>
+					
+						<a lang="zh-TW" data-url="/?lang=zh-TW" class="item ">繁體中文（台灣）</a>
+					
+						<a lang="zh-HK" data-url="/?lang=zh-HK" class="item ">繁體中文（香港）</a>
+					
+						<a lang="ko-KR" data-url="/?lang=ko-KR" class="item ">한국어</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tw-hidden">
+		
+			Page: 254ms<br>
+			Template: 6ms
+		
+	</div>
+  
+	
+		<div class="symbol-of-tolerance" role="img"></div>
+	
+</footer>
+
+
+	<script src="/assets/js/index.js?v=16.0.0-dev-694-33ae492b~gitea-1.22.0" onerror="alert('Failed to load asset files from {path}. Please make sure the asset files can be accessed.'.replace('{path}', this.src))"></script>
+
+	
+</body>
+</html>
+

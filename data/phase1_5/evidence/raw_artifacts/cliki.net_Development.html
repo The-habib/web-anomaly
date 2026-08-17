@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CLiki: Development</title>
+    <link rel="alternate" type="application/atom+xml" title="ATOM feed of edits to current article"
+                  href="/site/feed/article.atom?title=Development">
+    <link  rel="stylesheet" href="/static/css/style.css">
+    <link  rel="stylesheet" href="/static/css/colorize.css">
+  </head>
+
+  <body>
+    <span class="hidden">CLiki - Development</span>
+    <div id="content"><div id="content-area"><div id="article-title">Development</div><div id="article">Development, building, testing, and documentation aids.<p><b>Editor/IDE support</b><p><li>
+<b>Emacs</b>
+<ul>
+<li><a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a> is the Superior Lisp Interaction Mode for Emacs
+<li><a href="https://shinmera.github.io/portacle/" rel="noopener noreferrer">Portacle</a> is a portable and multiplatform development environment, pre-configured with SBCL, Quicklisp, Emacs, Slime and Git. Download, extract and use. No installation needed.</li>
+<li><a href="https://github.com/susam/emacs4cl" rel="noopener noreferrer">Emacs4CL</a> is a do-it-yourself kit to set up Common Lisp development environment with SBCL, Emacs, Slime, Paredit, Rainbow Delimiters and Quicklisp. Provides a step-by-step guide and a line-by-line explanation of every line of code that goes into <tt>~/.emacs.d/init.el</tt> (or <tt>~/.emacs</tt>)  to turn vanilla Emacs into a Common Lisp development environment.</li>
+</li></ul>
+</li><p><li>
+<b>vi/<a href="/vim" class="internal" rel="noopener noreferrer">vim</a></b>
+<ul>
+<li><a href="https://github.com/vlime/vlime" rel="noopener noreferrer">VLIME</a> is a Common Lisp dev environment for Vim (and Neovim), similar to SLIME for Emacs and SLIMV for Vim. (Also look for some newer forks.)
+<li><a href="https://github.com/kovisoft/slimv" rel="noopener noreferrer">Slimv</a> provides <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a>-like Lisp and Clojure REPL inside Vim with profiling, Hyperspec lookup, Paredit-like structured editing
+<li><a href="https://www.vim.org/scripts/script.php?script_id=2357" rel="noopener noreferrer">Nekthuth</a> is a vim plugin and CL library which gives vim users some interactive Lisp development/IDE features akin to <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a>
+<li><a href="https://www.vim.org/scripts/script.php?script_id=221" rel="noopener noreferrer">VIlisp</a>, an (inferior) inferior lisp mode for vim.
+<li><a href="/Limp" class="internal" rel="noopener noreferrer">Limp</a>, another (slightly less inferior) inferior lisp mode for Vim.
+<li><a href="http://www-users.cs.umn.edu/~gini/lisp/vi-for-lisp.html" rel="noopener noreferrer">Using vi with Lisp</a>
+</li></li></li></li></li></li></ul>
+</li><p><li>
+  <b>Atom</b>
+    <ul>
+      <li><a href="/SLIMA" class="internal" rel="noopener noreferrer">SLIMA</a> is an Atom plugin for Common Lisp development. </li>
+    </ul>
+</li><p><li>
+<b>Eclipse</b>
+<ul>
+<li><a href="/Cusp" class="internal" rel="noopener noreferrer">Cusp</a> An Eclipse plugin that comes out of the box with SBCL and Swank for Windows, Linux, and OSX
+<li><a href="/Dandelion" class="internal" rel="noopener noreferrer">Dandelion</a> Another Eclipse plugin, currently available with CLISP (for WinXP, MacosX, Linux). It supports the developer with syntax analyses as you type (limited), syntax highlighting, code completion, parenthesis matching, apropos and a listener.
+</li></li></ul>
+</li><p><li>
+<b>Other</b>
+<ul>
+<li> <a href="/Lem" class="internal" rel="noopener noreferrer">Lem</a> is a stand-alone, Emacs-like editor built in Common Lisp.
+<li> <a href="/CLOG" class="internal" rel="noopener noreferrer">CLOG</a> Builder is a standalone full featured cross platform (Linux, Windows, Mac and Android) IDE for Common Lisp and also a GUI Builder for <a href="/CLOG" class="internal" rel="noopener noreferrer">CLOG</a>.
+<li><a href="/MCLIDE" class="internal" rel="noopener noreferrer">MCLIDE</a> is an open source Mac OS X IDE for Lisp implementations using the <a href="/SWANK" class="internal" rel="noopener noreferrer">SWANK</a> protocol of <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a>. It supports Common Lisp, Clojure, and Scheme.
+<li><a href="/Climacs" class="internal" rel="noopener noreferrer">Climacs</a> is an Emacs-like text editor written in Common Lisp using <a href="/McCLIM" class="internal" rel="noopener noreferrer">McCLIM</a>.
+<li><a href="/Hemlock" class="internal" rel="noopener noreferrer">Hemlock</a> is an Emacs-like editor written in CL not using <a href="/CLIM" class="internal" rel="noopener noreferrer">CLIM</a>.
+<li><a href="/Able" class="internal" rel="noopener noreferrer">Able</a> a IDE written in CL itself, for Mac/Windows/Linux, also with interaction mode.
+<li><a href="/LispIDE" class="internal" rel="noopener noreferrer">LispIDE</a> is a basic editor for several Lisp and Scheme implementations available for Windows.
+<li><a href="https://github.com/lisp-mirror/clcon" rel="noopener noreferrer">Clcon</a> is a cross-platform Lisp IDE with permissive license. It uses <a href="/SWANK" class="internal" rel="noopener noreferrer">SWANK</a> protocol of <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a> to connect to server. Under construction, no releases yet.
+</li></li></li></li></li></li></li></li></ul>
+</li><p><ul>
+<li><b>Cross-editor plugins</b>
+  <ul>
+  <li><a href="https://shaunlebron.github.io/parinfer/" rel="noopener noreferrer">Parinfer</a> is a mode that helps keeping both indentation and parens balanced. It is easy to start with and yet it offers advanced features à la Paredit. It is available on many editors (Emacs, Vim, Atom, Sublime Text, Visual Studio Code, LightTable, CodeMirror,…).
+</li>
+</ul><p></li></ul><p><b>Build/make tools</b> (main topic: <a href="/build" class="internal" rel="noopener noreferrer">build</a>) see also: tools to <a href="/Obtain%20libraries" class="internal" rel="noopener noreferrer">Obtain libraries</a>.
+<ul><li><a href="/asdf" class="internal" rel="noopener noreferrer">asdf</a> -
+  ASDF (Another System Definition Facility) is an extensible <a href="/build" class="category" rel="noopener noreferrer">build</a> facility for Common Lisp software
+  </li><li><a href="/ASDlite" class="internal" rel="noopener noreferrer">ASDlite</a> -
+  ASDlite is a light-weight version of <a href="/ASDF" class="internal" rel="noopener noreferrer">ASDF</a>, a popular <a href="/build" class="category" rel="noopener noreferrer">build</a> facility for Common Lisp
+  </li><li><a href="/corona" class="internal" rel="noopener noreferrer">corona</a> -
+  <a href="https://github.com/eudoxia0/corona" rel="noopener noreferrer">Corona</a> is a library for building and controlling virtual machines
+  </li><li><a href="/Epsilon" class="internal" rel="noopener noreferrer">Epsilon</a> -
+  This library provides <a href="/SBCL" class="category" rel="noopener noreferrer">SBCL</a> with monolithic library support necessary to securely <a href="/build" class="category" rel="noopener noreferrer">build</a>, load and distribute binary packages
+  </li><li><a href="/evol" class="internal" rel="noopener noreferrer">evol</a> -
+  evol - entrenched virtues of lisp (love reversed) aims to be a compatible and full-fledged replacement for the <a href="http://en.wikipedia.org/wiki/GNU_build_system" rel="noopener noreferrer">GNU autotools stack</a> targeted at coping with the autotools' shortcomings while not repeating the mistakes made and still being made at comparable <a href="/build" class="category" rel="noopener noreferrer">build</a> tool projects
+  </li><li><a href="/mk-defsystem" class="internal" rel="noopener noreferrer">mk-defsystem</a> -
+  <a href="https://gitlab.common-lisp.net/mantoniotti/mk-defsystem" rel="noopener noreferrer">MK-DEFSYSTEM</a> is a system definition utility; it fills a similar role for CL as make(1) does for <a href="/C" class="internal" rel="noopener noreferrer">C</a>
+  </li><li><a href="/Overlord" class="internal" rel="noopener noreferrer">Overlord</a> -
+  Overlord is an experimental <a href="/build" class="category" rel="noopener noreferrer">build</a> system for Common Lisp, inspired by <a href="https://github.com/apenwarr/redo" rel="noopener noreferrer">Redo</a>
+  </li><li><a href="/poiu" class="internal" rel="noopener noreferrer">poiu</a> -
+  poiu is an <a href="/asdf" class="category" rel="noopener noreferrer">asdf</a> extension that <a href="/build" class="category" rel="noopener noreferrer">build</a>s in parallel
+  </li><li><a href="/XCVB" class="internal" rel="noopener noreferrer">XCVB</a> -
+  XCVB, an eXtensible Component Verifier and Builder for Lisp is an attempt to replace <a href="/asdf" class="internal" rel="noopener noreferrer">asdf</a>
+  </li></ul><p><b>Deployment</b> (main topic: <a href="/deployment" class="internal" rel="noopener noreferrer">deployment</a>)
+<ul><li><a href="/cl-daemonize" class="internal" rel="noopener noreferrer">cl-daemonize</a> -
+  cl-daemonize is a tool to daemonize a Lisp process without the need for screen/detachtty
+  </li><li><a href="/cl-launch" class="internal" rel="noopener noreferrer">cl-launch</a> -
+  <a href="/cl-launch" class="internal" rel="noopener noreferrer">cl-launch</a> is a <a href="/unix" class="category" rel="noopener noreferrer">unix</a> utility to make your Lisp software easily invokable from the shell command-line
+  </li><li><a href="/Consfigurator" class="internal" rel="noopener noreferrer">Consfigurator</a> -
+  A system for declarative <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> management using Common Lisp
+  </li><li><a href="/Creating%20Executables" class="internal" rel="noopener noreferrer">Creating Executables</a> -
+  Most Common Lisp implementations support creating native-format executable files
+  </li><li><a href="/lispx-proxy" class="internal" rel="noopener noreferrer">lispx-proxy</a> -
+  lispx-proxy (Lisp Execution Proxy) is a Lisp application launcher for <a href="/Windows" class="category" rel="noopener noreferrer">Windows</a> (A *nix port with limited functionality is also available)
+  </li><li><a href="/Unix%20shell%20scripting" class="internal" rel="noopener noreferrer">Unix shell scripting</a> -
+  This is a guide for writing <a href="/Unix" class="category" rel="noopener noreferrer">Unix</a> shell scripts in various Common Lisp implementations
+  </li></ul><p><b>Testing</b> (main topic: <a href="/test%20framework" class="internal" rel="noopener noreferrer">test framework</a>)
+<ul><li><a href="/1am" class="internal" rel="noopener noreferrer">1am</a> -
+  a minimal <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> used in <a href="/lparallel" class="category" rel="noopener noreferrer">lparallel</a> and <a href="/lfarm" class="category" rel="noopener noreferrer">lfarm</a>, written by the same author
+  </li><li><a href="/check-it" class="internal" rel="noopener noreferrer">check-it</a> -
+  check-it is a property-based testing tool designed to be used from within other <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a>s
+  </li><li><a href="/CheckL" class="internal" rel="noopener noreferrer">CheckL</a> -
+  <a href="https://github.com/rpav/CheckL" rel="noopener noreferrer">CheckL</a> is less of a test &quot;framework&quot; and more of a quicker, less formal, but more &quot;live&quot; way to write tests, which can easily be formalized into <a href="/FiveAM" class="category" rel="noopener noreferrer">FiveAM</a> tests at a later point
+  </li><li><a href="/cl-quickcheck" class="internal" rel="noopener noreferrer">cl-quickcheck</a> -
+  cl-quickcheck is a <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> for property-based testing
+  </li><li><a href="/cl-test-grid" class="internal" rel="noopener noreferrer">cl-test-grid</a> -
+  cl-test-grid is a project for collaborative testing of <a href="/Quicklisp" class="internal" rel="noopener noreferrer">Quicklisp</a> libraries on different platforms and implementations
+  </li><li><a href="/cl-unit-test" class="internal" rel="noopener noreferrer">cl-unit-test</a> -
+  cl-unit-test has been tested by itself with 100% test code coverage
+  </li><li><a href="/CLUnit" class="internal" rel="noopener noreferrer">CLUnit</a> -
+  CLUnit is a Common Lisp unit testing framework
+  </li><li><a href="/CLUnit2" class="internal" rel="noopener noreferrer">CLUnit2</a> -
+  Maintained fork of <a href="/CLUnit" class="internal" rel="noopener noreferrer">CLUnit</a>
+  </li><li><a href="/de.setf.utility" class="internal" rel="noopener noreferrer">de.setf.utility</a> -
+  de setf utility is a collection of Common Lisp <a href="/utilities" class="category" rel="noopener noreferrer">utilities</a> functions and several purpose-specific libraries
+  </li><li><a href="/FiveAM" class="internal" rel="noopener noreferrer">FiveAM</a> -
+  <a href="http://common-lisp.net/project/fiveam/" rel="noopener noreferrer">FiveAM</a> is a <a href="/Test%20Framework" class="category" rel="noopener noreferrer">Test Framework</a> whose goal is to be as simple as possible
+  </li><li><a href="/FReT" class="internal" rel="noopener noreferrer">FReT</a> -
+  <a href="https://github.com/MBcode/sfmishras/tree/master/fret" rel="noopener noreferrer">FReT</a> (Framework for Regression Testing) is a unit <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> with interactive testing and authoring of tests
+  </li><li><a href="/journal" class="internal" rel="noopener noreferrer">journal</a> -
+  A library for <a href="/logging" class="category" rel="noopener noreferrer">logging</a>, tracing, testing and <a href="/persistence" class="category" rel="noopener noreferrer">persistence</a>
+  </li><li><a href="/LIFT" class="internal" rel="noopener noreferrer">LIFT</a> -
+  The LIsp Framework for Testing is another testing framework in the JUnit / SUnit lineage
+  </li><li><a href="/lisp-unit" class="internal" rel="noopener noreferrer">lisp-unit</a> -
+  lisp-unit is a simple Common Lisp <a href="/Test%20Framework" class="category" rel="noopener noreferrer">Test Framework</a>
+  </li><li><a href="/lisp-unit2" class="internal" rel="noopener noreferrer">lisp-unit2</a> -
+  <a href="https://github.com/AccelerationNet/lisp-unit2" rel="noopener noreferrer">Lisp-unit2</a> is a major refactoring of the Common Lisp <a href="/Test%20Framework" class="category" rel="noopener noreferrer">Test Framework</a> lisp-unit
+  </li><li><a href="/MSL-Test" class="internal" rel="noopener noreferrer">MSL-Test</a> -
+  MSL-Test (<a href="https://cl-pdx.com/static/test.lisp" rel="noopener noreferrer">test.lisp</a>) is <a href="/Paul%20Foley" class="internal" rel="noopener noreferrer">Paul Foley</a>'s <a href="/Test%20Framework" class="category" rel="noopener noreferrer">Test Framework</a>
+  </li><li><a href="/NST" class="internal" rel="noopener noreferrer">NST</a> -
+  <a href="https://github.com/jphmrst/cl-nst" rel="noopener noreferrer">NST</a> is a <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> for Common Lisp offering separate and reusable fixture definitions, test groups, extensible test criteria, <a href="/ASDF" class="internal" rel="noopener noreferrer">ASDF</a> integration, and optional JUnit <a href="/XML" class="internal" rel="noopener noreferrer">XML</a> output
+  </li><li><a href="/parachute" class="internal" rel="noopener noreferrer">parachute</a> -
+  Parachute is a simple-to-use and extensible testing framework with compatibility layers to other test frameworks
+  </li><li><a href="/portch" class="internal" rel="noopener noreferrer">portch</a> -
+  Portch is a small framework for organizing and running tests written with <a href="http://www.cliki.net/ptester" rel="noopener noreferrer">ptester</a>  [the portable version of  Franz's <a href="http://www.cliki.net/tester" rel="noopener noreferrer">tester</a> library]
+  </li><li><a href="/ptester" class="internal" rel="noopener noreferrer">ptester</a> -
+  ptester is a portable version of Franz's <a href="/tester" class="internal" rel="noopener noreferrer">tester</a> library
+  </li><li><a href="/rove" class="internal" rel="noopener noreferrer">rove</a> -
+  rove is a <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> with <a href="/roswell" class="internal" rel="noopener noreferrer">roswell</a> integration
+  </li><li><a href="/rtch" class="internal" rel="noopener noreferrer">rtch</a> -
+  rtch is a <a href="/Development" class="category" rel="noopener noreferrer">Development</a> tool and <a href="http://web.archive.org/web/20080207112747/http://tourdelisp.blogspot.com/2008/01/common-lisp-libraries-victims-of-drive.html" rel="noopener noreferrer">hackbrary</a> which facilitates organizing tests in the RT <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> in a directory hierarchy
+  </li><li><a href="/selenium-lisp-connector" class="internal" rel="noopener noreferrer">selenium-lisp-connector</a> -
+  selenium-lisp-connector is a Lisp client for <a href="https://www.seleniumhq.org/projects/remote-control/" rel="noopener noreferrer">Selenium Remote Control</a>, a test tool that allows you to write automated web application UI tests in any programming language against any HTTP website using any mainstream JavaScript-enabled browser
+  </li><li><a href="/testbild" class="internal" rel="noopener noreferrer">testbild</a> -
+  testbild is a library for outputting <a href="http://testanything.org/" rel="noopener noreferrer">Test Anything Protocol</a> (TAP) and <a href="http://en.wikipedia.org/wiki/XUnit" rel="noopener noreferrer">xUnit</a> formats
+  </li><li><a href="/tester" class="internal" rel="noopener noreferrer">tester</a> -
+  <a href="https://franz.com/support/documentation/current/doc/test-harness.htm" rel="noopener noreferrer">tester</a> is the <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> harness that Franz uses for <a href="/ACL" class="internal" rel="noopener noreferrer">Allegro CL</a>
+  </li><li><a href="/try" class="internal" rel="noopener noreferrer">try</a> -
+  Try is a library for unit testing with equal support for interactive and non-interactive workflows
+  </li><li><a href="/unit-test" class="internal" rel="noopener noreferrer">unit-test</a> -
+  unit-test is a <a href="/Test%20Framework" class="category" rel="noopener noreferrer">Test Framework</a> by Alain Picard
+  </li><li><a href="/xlunit" class="internal" rel="noopener noreferrer">xlunit</a> -
+  XLUnit is a <a href="/Test%20Framework" class="category" rel="noopener noreferrer">Test Framework</a> based on <a href="http://git.kpe.io/?p=xptest.git;a=summary" rel="noopener noreferrer">XPTest</a> and JUnit
+  </li><li><a href="/XPTEST" class="internal" rel="noopener noreferrer">XPTEST</a> -
+  A <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> based on the paper <a href="https://swing.fit.cvut.cz/projects/stx/doc/online/english/tools/misc/testfram.htm" rel="noopener noreferrer">Simple Smalltalk Testing: With Patterns</a>
+  </li></ul><p><b>Configuration</b> (main topic: <a href="/configuration" class="internal" rel="noopener noreferrer">configuration</a>)
+<ul><li><a href="/Chameleon" class="internal" rel="noopener noreferrer">Chameleon</a> -
+  Chameleon is a <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> management library shipped with profile support
+  </li><li><a href="/cl-menusystem" class="internal" rel="noopener noreferrer">cl-menusystem</a> -
+  <a href="/cl-menusystem" class="internal" rel="noopener noreferrer">cl-menusystem</a> is a library for making pretty menus for controlling an application and editing the multitude of special variables which invariably exist to control an app's settings
+  </li><li><a href="/clerk" class="internal" rel="noopener noreferrer">clerk</a> -
+  <a href="https://github.com/lisp-maintainers/clerk" rel="noopener noreferrer">Clerk</a> is a cron-like <a href="/Schedulers" class="internal" rel="noopener noreferrer">scheduler</a> for tasks to execute at given intervals
+  </li><li><a href="/clinicap" class="internal" rel="noopener noreferrer">clinicap</a> -
+  clinicap is a dialect of ini <a href="/file%20format" class="category" rel="noopener noreferrer">file format</a> parser and writer, implemented in Common Lisp
+  </li><li><a href="/Consfigurator" class="internal" rel="noopener noreferrer">Consfigurator</a> -
+  A system for declarative <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> management using Common Lisp
+  </li><li><a href="/NFiles" class="internal" rel="noopener noreferrer">NFiles</a> -
+  A library that deals with customizable path resolution, file <a href="/persistence" class="category" rel="noopener noreferrer">persistence</a> and loading
+  </li><li><a href="/persistent-variables" class="internal" rel="noopener noreferrer">persistent-variables</a> -
+  Persistent-variables is a <a href="/convenience%20library" class="category" rel="noopener noreferrer">convenience library</a> that makes it easy to serialize and deserialize variables
+  </li><li><a href="/py-configparser" class="internal" rel="noopener noreferrer">py-configparser</a> -
+  <a href="https://common-lisp.net/project/py-configparser/" rel="noopener noreferrer">py-configparser</a> allows reading and writing of <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> files stored in the Windows INI <a href="/file%20format" class="category" rel="noopener noreferrer">file format</a>
+  </li><li><a href="/sawyer" class="internal" rel="noopener noreferrer">sawyer</a> -
+  <a href="https://github.com/toml-lang/toml" rel="noopener noreferrer">TOML</a> parser in Lisp, fully supporting version 0.4.0
+  </li><li><a href="/trivial-configuration-parser" class="internal" rel="noopener noreferrer">trivial-configuration-parser</a> -
+  trivial-configuration-parser is a <a href="/trivial" class="category" rel="noopener noreferrer">trivial</a> <a href="/parser" class="category" rel="noopener noreferrer">parser</a> library for <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> files
+  </li><li><a href="/ubiquitous" class="internal" rel="noopener noreferrer">ubiquitous</a> -
+  Ubiquitous is a very easy-to-use library for persistent <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> storage
+  </li><li><a href="/Universal-Config" class="internal" rel="noopener noreferrer">Universal-Config</a> -
+  This library tries to provide a layer for <a href="/configuration" class="category" rel="noopener noreferrer">configuration</a> files and storage that should be able to map any type of object to any configuration format and back
+  </li><li><a href="/YAML" class="internal" rel="noopener noreferrer">YAML</a> -
+  <a href="https://yaml.org/" rel="noopener noreferrer">Yet Another Markup Language</a>:
+  </li></ul><p><b>Logging</b> (main topic: <a href="/logging" class="internal" rel="noopener noreferrer">logging</a>)
+<ul><li><a href="/a-cl-logger" class="internal" rel="noopener noreferrer">a-cl-logger</a> -
+  A common lisp <a href="/logging" class="category" rel="noopener noreferrer">logging</a> library providing context sensitive logging of more than just strings to more than just local files / output streams
+  </li><li><a href="/cl-grip" class="internal" rel="noopener noreferrer">cl-grip</a> -
+  cl-grip is a high-level <a href="/logging" class="category" rel="noopener noreferrer">logging</a> system for Common Lisp, focusing on a clear user interface, support for flexible structured logging, and easy extensibility for different backends to support direct logging to various inputs
+  </li><li><a href="/cl-log" class="internal" rel="noopener noreferrer">cl-log</a> -
+  CL-LOG is a general purpose <a href="/logging" class="category" rel="noopener noreferrer">logging</a> utility, loosely modelled in some respects after <a href="/Gary%20King" class="internal" rel="noopener noreferrer">Gary King</a>'s <a href="/Log5" class="internal" rel="noopener noreferrer">Log5</a>
+  </li><li><a href="/cl-syslog" class="internal" rel="noopener noreferrer">cl-syslog</a> -
+  Common Lisp interface to local and remote Syslog facilities
+  </li><li><a href="/flood" class="internal" rel="noopener noreferrer">flood</a> -
+  Comfortable, powerful and tiny logging library for common lisp
+  </li><li><a href="/hu.dwim.logger" class="internal" rel="noopener noreferrer">hu.dwim.logger</a> -
+  hu,dwim,logger is a <a href="/logging" class="category" rel="noopener noreferrer">logging</a> library
+  </li><li><a href="/irc-logger" class="internal" rel="noopener noreferrer">irc-logger</a> -
+  irc-logger is a <a href="/networking" class="internal" rel="noopener noreferrer">networking</a> library written by <a href="/Kevin%20Rosenberg" class="internal" rel="noopener noreferrer">Kevin Rosenberg</a> which uses the <a href="/cl-irc" class="internal" rel="noopener noreferrer">cl-irc</a> library to provide multichannel Internet Relay Chat (<a href="/IRC" class="category" rel="noopener noreferrer">IRC</a>) logging
+  </li><li><a href="/journal" class="internal" rel="noopener noreferrer">journal</a> -
+  A library for <a href="/logging" class="category" rel="noopener noreferrer">logging</a>, tracing, testing and <a href="/persistence" class="category" rel="noopener noreferrer">persistence</a>
+  </li><li><a href="/Log4CL" class="internal" rel="noopener noreferrer">Log4CL</a> -
+  Log4CL is high performance extensible <a href="/logging" class="category" rel="noopener noreferrer">logging</a> library for Common Lisp
+  </li><li><a href="/log5" class="internal" rel="noopener noreferrer">log5</a> -
+  Log5 is a <a href="/logging" class="category" rel="noopener noreferrer">logging</a> <a href="/library" class="category" rel="noopener noreferrer">library</a> organized around five things: categories, outputs, senders, messages and contexts
+  </li><li><a href="/LoGS" class="internal" rel="noopener noreferrer">LoGS</a> -
+  A programmable log analysis engine available under the terms of the <a href="/GPL" class="category" rel="noopener noreferrer">GPL</a>
+  </li><li><a href="/logv" class="internal" rel="noopener noreferrer">logv</a> -
+  Logv is a cognitively lightweight <a href="/logging" class="category" rel="noopener noreferrer">logging</a> utility for Common Lisp
+  </li><li><a href="/pounds" class="internal" rel="noopener noreferrer">pounds</a> -
+  Provides two kinds of memory-mapped files: a <a href="https://github.com/fjames86/pounds/blob/master/database.lisp" rel="noopener noreferrer">database</a>, and a <a href="https://github.com/fjames86/pounds/blob/master/log.lisp" rel="noopener noreferrer">circular log</a>
+  </li><li><a href="/Tungsten" class="internal" rel="noopener noreferrer">Tungsten</a> -
+  Tungsten is a Common Lisp toolkit providing a wide range of features
+  </li><li><a href="/Verbose" class="internal" rel="noopener noreferrer">Verbose</a> -
+  Verbose is a logging framework that aims to provide a good default setup as well as an extensible back-end to suit all your logging needs
+  </li><li><a href="/vom" class="internal" rel="noopener noreferrer">vom</a> -
+  A tiny <a href="/logging" class="category" rel="noopener noreferrer">logging</a> library for Common Lisp
+  </li></ul><p><b>Documentation</b> (main topic: <a href="/documentation%20tool" class="internal" rel="noopener noreferrer">documentation tool</a>)
+<ul><li><a href="/ADP" class="internal" rel="noopener noreferrer">ADP</a> -
+  Add Documentation, Please is a library for <a href="/literate%20programming" class="category" rel="noopener noreferrer">literate programming</a> and semi-automatic API generation
+  </li><li><a href="/Albert" class="internal" rel="noopener noreferrer">Albert</a> -
+  Albert is a Common Lisp doc-generator, comparable to Javadoc and Doxygen
+  </li><li><a href="/argdoc" class="internal" rel="noopener noreferrer">argdoc</a> -
+  simple package documentation library for common lisp
+  </li><li><a href="/atdoc" class="internal" rel="noopener noreferrer">atdoc</a> -
+  Atdoc generates documentation for Common Lisp packages
+  </li><li><a href="/CL-API" class="internal" rel="noopener noreferrer">CL-API</a> -
+  <a href="/CL-API" class="internal" rel="noopener noreferrer">CL-API</a> is a <a href="/documentation%20tool" class="category" rel="noopener noreferrer">documentation tool</a> that generates an API in HTML format, given a package name and reading docstrings
+  </li><li><a href="/cl-docweaver" class="internal" rel="noopener noreferrer">cl-docweaver</a> -
+  A document weaver for Common Lisp
+  </li><li><a href="/cl-gendoc" class="internal" rel="noopener noreferrer">cl-gendoc</a> -
+  cl-gendoc is a simple but flexible modular <a href="/document" class="internal" rel="noopener noreferrer">document</a> generator for Common Lisp
+  </li><li><a href="/CLDOC" class="internal" rel="noopener noreferrer">CLDOC</a> -
+  <a href="https://common-lisp.net/project/cldoc/" rel="noopener noreferrer">CLDOC</a> reads lisp source files and generates documentation using the  selected output driver
+  </li><li><a href="/clod" class="internal" rel="noopener noreferrer">clod</a> -
+  CLOD is a Common Lisp doc-generator, similar to <a href="/Albert" class="internal" rel="noopener noreferrer">Albert</a>, <a href="/Cldoc" class="internal" rel="noopener noreferrer">Cldoc</a> and so on
+  </li><li><a href="/Declt" class="internal" rel="noopener noreferrer">Declt</a> -
+  Declt (pronounce &quot;dec'let&quot;) is a reference manual generator for
+  </li><li><a href="/docudown" class="internal" rel="noopener noreferrer">docudown</a> -
+  Docudown is a Lisp <a href="/documentation%20tool" class="category" rel="noopener noreferrer">documentation tool</a> built on top of <a href="/CL-Markdown" class="internal" rel="noopener noreferrer">CL-Markdown</a>
+  </li><li><a href="/documentation-template" class="internal" rel="noopener noreferrer">documentation-template</a> -
+  documentation-template is a <a href="/documentation%20tool" class="category" rel="noopener noreferrer">documentation tool</a> that automatically produces HTML documentation from the exported symbols of a package
+  </li><li><a href="/helambdap" class="internal" rel="noopener noreferrer">helambdap</a> -
+  HEΛP (&quot;HELP&quot;) is yet another CL code documentation utility, which has been inspired by JavaDoc and doxygen
+  </li><li><a href="/hyperdoc" class="internal" rel="noopener noreferrer">hyperdoc</a> -
+  Hyperdoc means mapping symbols to documentation URIs for libraries as well
+  </li><li><a href="/hyperspec-lookup" class="internal" rel="noopener noreferrer">hyperspec-lookup</a> -
+  <a href="https://gitlab.common-lisp.net/hyperspec-lookup/hyperspec-lookup" rel="noopener noreferrer">hyperspec-lookup</a> is an <a href="/ANSI" class="internal" rel="noopener noreferrer">ANSI</a> Common Lisp library that gives the user an interface to mapping symbols to URLs for the <a href="/CLHS" class="internal" rel="noopener noreferrer">Common Lisp Hyperspec</a> and Common Lisp Object System (CLOS) <a href="/MOP" class="internal" rel="noopener noreferrer">MetaObject Protocol</a>
+  </li><li><a href="/incf-cl" class="internal" rel="noopener noreferrer">incf-cl</a> -
+  (INCF CL) is a collection of <a href="/utilities" class="category" rel="noopener noreferrer">utilities</a>
+  </li><li><a href="/LispDoc" class="internal" rel="noopener noreferrer">LispDoc</a> -
+  LispDoc is a <a href="/documentation%20tool" class="category" rel="noopener noreferrer">documentation tool</a> (probably somewhat <a href="/OpenMCL" class="internal" rel="noopener noreferrer">OpenMCL</a> specific) that automatically generates <a href="/HTML" class="internal" rel="noopener noreferrer">HTML</a> documentation for all symbols exported from one or more packages from their documentation strings
+  </li><li><a href="/manifest" class="internal" rel="noopener noreferrer">manifest</a> -
+  Manifest is a <a href="/documentation%20tool" class="category" rel="noopener noreferrer">documentation tool</a> for semi-automatically documenting Common Lisp packages as a set of <a href="/web" class="category" rel="noopener noreferrer">web</a> pages, using the <a href="/toot" class="internal" rel="noopener noreferrer">toot</a> web server
+  </li><li><a href="/MGL-PAX" class="internal" rel="noopener noreferrer">MGL-PAX</a> -
+  MGL-PAX is a documentation system, browser, generator
+  </li><li><a href="/qbook" class="internal" rel="noopener noreferrer">qbook</a> -
+  <a href="https://common-lisp.net/project/bese/qbook.html" rel="noopener noreferrer">qbook</a>
+  </li><li><a href="/sb-texinfo" class="internal" rel="noopener noreferrer">sb-texinfo</a> -
+  <a href="https://nikodemus.github.io/sb-texinfo//" rel="noopener noreferrer">sb-texinfo</a> was originally written for processing the <a href="/SBCL" class="category" rel="noopener noreferrer">SBCL</a> docstrings by Rudi Sclatte in 2004, and has been maintained as part of SBCL since then
+  </li><li><a href="/Staple" class="internal" rel="noopener noreferrer">Staple</a> -
+  A tool to generate documentation about Lisp projects through an HTML template
+  </li><li><a href="/tinaa" class="internal" rel="noopener noreferrer">tinaa</a> -
+  Tinaa is Not An Acronym
+  </li></ul><p><b>Version control software:</b> (main topic: <a href="/version%20control" class="internal" rel="noopener noreferrer">version control</a>)
+<ul><li><a href="/cache-cache" class="internal" rel="noopener noreferrer">cache-cache</a> -
+  A tool to cache <a href="https://about.gitlab.com/" rel="noopener noreferrer">GitLab</a> data locally for searching
+  </li><li><a href="/cl-darcs" class="internal" rel="noopener noreferrer">cl-darcs</a> -
+  cl-darcs is a client for the <a href="http://www.darcs.net/" rel="noopener noreferrer">darcs</a> <a href="/version%20control" class="category" rel="noopener noreferrer">version control</a> system written in Common Lisp
+  </li><li><a href="/cl-git" class="internal" rel="noopener noreferrer">cl-git</a> -
+  A Common Lisp implementation of parsers for the <a href="https://git-scm.com/" rel="noopener noreferrer">git</a> object <a href="/file%20format" class="category" rel="noopener noreferrer">file format</a>s
+  </li><li><a href="/cl-github" class="internal" rel="noopener noreferrer">cl-github</a> -
+  cl-github is a <a href="/library" class="category" rel="noopener noreferrer">library</a> for working with the <a href="https://github.com/" rel="noopener noreferrer">github</a> <a href="/version%20control" class="category" rel="noopener noreferrer">version control</a> <a href="/web%20API" class="category" rel="noopener noreferrer">web API</a>
+  </li><li><a href="/cl-gitlab" class="internal" rel="noopener noreferrer">cl-gitlab</a> -
+  <a href="https://github.com/vindarel/cl-gitlab" rel="noopener noreferrer">cl-gitlab</a> is a library to connect to GitLab's <a href="/version%20control" class="category" rel="noopener noreferrer">version control</a> <a href="/web%20API" class="category" rel="noopener noreferrer">web API</a> following a minimalistic (and thus solid) approach
+  </li><li><a href="/CLLIB" class="internal" rel="noopener noreferrer">CLLIB</a> -
+  CLLIB is a varied collection of Common lisp tools and routines in <a href="/CLOCC" class="internal" rel="noopener noreferrer">CLOCC</a>
+  </li><li><a href="/database-migrations" class="internal" rel="noopener noreferrer">database-migrations</a> -
+  database-migrations is a <a href="/library" class="category" rel="noopener noreferrer">library</a> for handling relational (SQL) schema changes and versioning, much like Ruby on Rails migrations
+  </li><li><a href="/glitter" class="internal" rel="noopener noreferrer">glitter</a> -
+  glitter is a native Common Lisp library for working with git <a href="/version%20control" class="category" rel="noopener noreferrer">version control</a> repositories
+  </li><li><a href="/Meta-CVS" class="internal" rel="noopener noreferrer">Meta-CVS</a> -
+  <a href="https://www.kylheku.com/~kaz/mcvs.html" rel="noopener noreferrer">Meta-CVS</a> builds a more capable <a href="/version%20control" class="category" rel="noopener noreferrer">version control</a> system around CVS
+  </li></ul><p><b>Literate programming systems:</b> (main topic: <a href="/literate%20programming" class="internal" rel="noopener noreferrer">literate programming</a>)
+<ul>
+<li><a href="https://gitlab.common-lisp.net/cl-org-mode/cl-org-mode" rel="noopener noreferrer">cl-org-mode</a> has a tangle feature to do literate programming in org-mode.
+<li><a href="/literate-lisp" class="internal" rel="noopener noreferrer">literate-lisp</a> provides tangle-free Org support for ASDF
+<li><a href="/CLWeb" class="internal" rel="noopener noreferrer">CLWeb</a> A literate programming system for Common Lisp.
+<li><a href="/MGL-PAX" class="internal" rel="noopener noreferrer">MGL-PAX</a>: A literate programming system turned inside out.
+</li></li></li></li></ul><p><b>Miscellaneous</b>
+<ul>
+<li><a href="https://github.com/michaelw/redshank" rel="noopener noreferrer">Redshank</a> refactoring and editing extensions to SLIME.
+<li><a href="https://cons.pulp.se/post/468541538/tdd-and-slime" rel="noopener noreferrer">slime-lispunit</a> for more convenient TDD with SLIME (see also <a href="https://mailman.common-lisp.net/pipermail/slime-devel/2006-September/005241.html" rel="noopener noreferrer">this post</a>).
+<li>Matthias Holzl's <a href="http://www.gauss.muc.de/tools/dbc/dbc-intro.html" rel="noopener noreferrer">Design by Contract</a> package.
+<li><a href="/cl-heredoc" class="internal" rel="noopener noreferrer">cl-heredoc</a> - Common Lisp reader heredoc dispatcher, very useful for testing parsers
+<li><a href="http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/tools/step/0.html" rel="noopener noreferrer">Step</a> is a portable code single-stepper and debugger.
+<li><a href="http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/tools/metering/0.html" rel="noopener noreferrer">METERING</a> is a portable code profiling tool, for gathering timing and consing statistics while a program is running.
+<li><a href="/Benchmark" class="internal" rel="noopener noreferrer">Benchmark</a>s: Benchmarking Suites can be used to compare different implementations.
+</li></li></li></li></li></li></li></ul><p><b>Topic</b>
+<ul><li><a href="/ASDF%20System%20Connections" class="internal" rel="noopener noreferrer">ASDF System Connections</a> -
+  ASDF-System-Connections provides auto-loading of systems that only make sense when several other systems are loaded
+  </li><li><a href="/ASDF-extension" class="internal" rel="noopener noreferrer">ASDF-extension</a> -
+  This is the topic page for extensions to <a href="/ASDF" class="internal" rel="noopener noreferrer">ASDF</a>
+  </li><li><a href="/breeze" class="internal" rel="noopener noreferrer">breeze</a> -
+  Experiments in workflow with Common Lisp
+  </li><li><a href="/cl-heredoc" class="internal" rel="noopener noreferrer">cl-heredoc</a> -
+  cl-heredoc is an implementation of &quot;<a href="https://en.wikipedia.org/wiki/Here_document" rel="noopener noreferrer">here documents</a>&quot; that allow the user to
+  </li><li><a href="/CLPM" class="internal" rel="noopener noreferrer">CLPM</a> -
+  CLPM stands for <a href="https://common-lisp.net/project/clpm/" rel="noopener noreferrer">Common Lisp Package Manager</a>
+  </li><li><a href="/Dandelion" class="internal" rel="noopener noreferrer">Dandelion</a> -
+  Dandelion is a plugin for Eclipse that supports <a href="/Lisp" class="internal" rel="noopener noreferrer">Lisp</a> programming in the Eclipse platform
+  </li><li><a href="/Ecclesia" class="internal" rel="noopener noreferrer">Ecclesia</a> -
+  <a href="/Utilities" class="category" rel="noopener noreferrer">Utilities</a> for parsing Lisp code, e.g
+  </li><li><a href="/Editor%20Hints" class="internal" rel="noopener noreferrer">Editor Hints</a> -
+  The Editor Hints system is intended to provide a number of facilities to provide hints in lisp code that can be consulted by editor interfaces to determine how to indent, etc
+  </li><li><a href="/gtfl" class="internal" rel="noopener noreferrer">gtfl</a> -
+  GTFL is a graphical terminal for Common Lisp
+  </li><li><a href="/hyperobject" class="internal" rel="noopener noreferrer">hyperobject</a> -
+  <a href="http://git.kpe.io/?p=hyperobject.git;a=summary" rel="noopener noreferrer">Hyperobject</a> is a <a href="/Object%20Representation" class="category" rel="noopener noreferrer">Object Representation</a> package for <a href="/development" class="category" rel="noopener noreferrer">development</a>
+  </li><li><a href="/IDE" class="internal" rel="noopener noreferrer">IDE</a> -
+  Integrated <a href="/Development" class="category" rel="noopener noreferrer">Development</a> Environments: the usual free Lisp IDE nowadays is GNU <a href="/Emacs" class="internal" rel="noopener noreferrer">Emacs</a> with <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a>
+  </li><li><a href="/LIFT" class="internal" rel="noopener noreferrer">LIFT</a> -
+  The LIsp Framework for Testing is another testing framework in the JUnit / SUnit lineage
+  </li><li><a href="/LW-ADD-ONS" class="internal" rel="noopener noreferrer">LW-ADD-ONS</a> -
+  <a href="http://weitz.de/lw-add-ons/" rel="noopener noreferrer">LW-ADD-ONS</a> is a collection of &quot;enhancements&quot; to the <a href="/LispWorks" class="category" rel="noopener noreferrer">LispWorks</a> IDE
+  </li><li><a href="/McCLIM%20Listener" class="internal" rel="noopener noreferrer">McCLIM Listener</a> -
+  The <a href="/McCLIM" class="internal" rel="noopener noreferrer">McCLIM</a> Listener is an <a href="/Application" class="category" rel="noopener noreferrer">Application</a> / <a href="/Development" class="category" rel="noopener noreferrer">Development</a> tool that is part of <a href="/McCLIM" class="internal" rel="noopener noreferrer">McCLIM</a>
+  </li><li><a href="/mcclim-desktop" class="internal" rel="noopener noreferrer">mcclim-desktop</a> -
+  A <a href="/clim-desktop" class="internal" rel="noopener noreferrer">clim-desktop</a> clone
+  </li><li><a href="/outer-parentheses-free-repl" class="internal" rel="noopener noreferrer">outer-parentheses-free-repl</a> -
+  outer-parentheses-free-repl (OPFR) lets you input the outermost s-exp into your <a href="/REPL" class="internal" rel="noopener noreferrer">REPL</a> without having to surround it with parentheses
+  </li><li><a href="/Quickproject" class="internal" rel="noopener noreferrer">Quickproject</a> -
+  Quickproject is a library for creating a Common Lisp project skeleton
+  </li><li><a href="/require-module" class="internal" rel="noopener noreferrer">require-module</a> -
+  A variant of <a href="/site/HyperSpec/Body/fun_providecm_require.html" class="hyperspec" rel="noopener noreferrer">require</a> which has a portable mechanism for searching for and locating files corresponding to modules
+  </li><li><a href="/rlwrap" class="internal" rel="noopener noreferrer">rlwrap</a> -
+  <a href="https://github.com/hanslub42/rlwrap" rel="noopener noreferrer">rlwrap</a> provides a nicer repl outside of <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a> for implementations that don't have a user-friendly REPL on the terminal, such as SBCL (but unlike CLISP)
+  </li><li><a href="/rtch" class="internal" rel="noopener noreferrer">rtch</a> -
+  rtch is a <a href="/Development" class="category" rel="noopener noreferrer">Development</a> tool and <a href="http://web.archive.org/web/20080207112747/http://tourdelisp.blogspot.com/2008/01/common-lisp-libraries-victims-of-drive.html" rel="noopener noreferrer">hackbrary</a> which facilitates organizing tests in the RT <a href="/test%20framework" class="category" rel="noopener noreferrer">test framework</a> in a directory hierarchy
+  </li><li><a href="/SLIME%20Tips" class="internal" rel="noopener noreferrer">SLIME Tips</a> -
+  This page is for collecting tips for avoiding problems with and making the best use of <a href="/SLIME" class="internal" rel="noopener noreferrer">SLIME</a>, the Emacs-based Lisp <a href="/development" class="category" rel="noopener noreferrer">development</a> environment
+  </li><li><a href="/SWINE" class="internal" rel="noopener noreferrer">SWINE</a> -
+  Swine is the addition of <a href="/Slime" class="internal" rel="noopener noreferrer">Slime</a> editing commands to <a href="/Climacs" class="internal" rel="noopener noreferrer">Climacs</a> using <a href="/Slime" class="internal" rel="noopener noreferrer">Slime</a>'s SWANK backend
+  </li><li><a href="/Toplevel" class="internal" rel="noopener noreferrer">Toplevel</a> -
+  A top-level command implementation vaguely reminiscent of Allegro CL's is available for <a href="/CMUCL" class="internal" rel="noopener noreferrer">CMUCL</a> at <a href="/Paul%20Foley" class="internal" rel="noopener noreferrer">Paul Foley</a>'s <a href="http://users.actrix.co.nz/mycroft/cl.html" rel="noopener noreferrer">http://users.actrix.co.nz/mycroft/cl.html</a> page
+  </li><li><a href="/vim" class="internal" rel="noopener noreferrer">vim</a> -
+  The Vi family of editors (with vim probably being the most frequently used implementation) is almost universally &quot;the other editor&quot; to <a href="/Emacs" class="internal" rel="noopener noreferrer">Emacs</a>
+  </li><li><a href="/WinCommand" class="internal" rel="noopener noreferrer">WinCommand</a> -
+  WinCommand is an <a href="/Application" class="category" rel="noopener noreferrer">Application</a> that can run a console (like CLisp or cmd) inside a window
+  </li></ul></div></div>
+  <div id="footer" class="buttonbar"><ul><li><a href="/Development">Current version</a></li>
+      <li><a href="/site/history?article=Development">History</a></li>
+      <li><a href="/site/backlinks?article=Development">Backlinks</a></li><li><a href="/site/edit-article?title=Development&amp;from-revision=3952342790">Edit</a></li><li><a href="/site/edit-article?create=t">Create</a></li></ul></div>
+  </div>
+  <div id="header-buttons" class="buttonbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/site/recent-changes">Recent Changes</a></li>
+      <li><a href="/CLiki">About</a></li>
+      <li><a href="/Text%20Formatting">Text Formatting</a></li>
+      <li><a href="/site/tools">Tools</a></li>
+    </ul>
+    <div id="search">
+      <form action="/site/search">
+        <label for="search_query" class="hidden">Search CLiki</label>
+        <input type="text" name="query" id="search_query" value="" />
+        <input type="submit" value="search" />
+      </form>
+    </div>
+  </div>
+  <div id="pageheader">
+    <div id="header">
+      <span id="logo">CLiki</span>
+      <span id="slogan">the common lisp wiki</span>
+      <div id="login"><form method="post" action="/site/login">
+                 <label for="login_name" class="hidden">Account name</label>
+                 <input type="text" name="name" id="login_name" class="login_input" />
+                 <label for= "login_password" class="hidden">Password</label>
+                 <input type="password" name="password" id="login_password" class="login_input" />
+                 <input type="submit" name="login" value="login" id="login_submit" /><br />
+                 <div id="register"><a href="/site/register">register</a></div>
+                 <input type="submit" name="reset-pw" value="reset password" id="reset_pw" />
+               </form>
+      </div>
+    </div>
+  </div>
+  </body></html>

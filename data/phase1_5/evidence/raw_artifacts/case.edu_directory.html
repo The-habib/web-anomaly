@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type"        content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Style-Type"  content="text/css"/>
+    <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+    <meta name="geo.placename" content="Case Western Reserve University" />
+    <meta name="icbm" content="41.5034086,-81.6088122" />
+    <meta name="geo.region" content="Ohio" />
+    <meta name="geo.position" content="41.5034086,-81.6088122" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="rights" content="Copyright © 2018 Case Western Reserve University. All rights reserved." />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/cwru-components/dist/cwru-components/cwru-components.min.css" rel="stylesheet" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/cwru-components/dist/cwru-components/cwru-components.esm.min.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/cwru-components/dist/cwru-components/cwru-components.js"></script>
+<link rel="stylesheet" href="/its-template/components/cwruits.css?/its-template/components" media="all" />
+<script type="text/javascript" src="js/nav.js"></script>
+
+<title>Directory | Case Western Reserve University</title>
+<style>
+ul[role="radiogroup"] { list-style-type: none; padding: 0; }
+ul.horiz > li { display: inline; }
+</style>
+  </head>
+  <body data-cwruits-template="components">
+
+<div id="cwruravealert"></div>
+<script src="//webapps.case.edu/t4/rave/add_banner"></script>
+
+<cwru-header
+  site-name="University Directory"
+  site-url="index.html"
+  homepage="true"
+></cwru-header>
+
+<cwru-center max="var(--max-container)">
+
+<cwru-main-nav>
+  <!---->
+  <cwru-nav-item href="searchtips.html" text="Search Tips"><!----></cwru-nav-item>
+  <cwru-nav-item href="faq.html" text="FAQ"><!----></cwru-nav-item>
+  <cwru-nav-item href="https://case.edu/" text="University Home"><!----></cwru-nav-item>
+  <cwru-nav-item href="https://case.edu/utech/" text="UTech Home"><!----></cwru-nav-item>
+  <cwru-nav-item href="https://case.edu/alumni/" text="Alumni Association"><!----></cwru-nav-item>
+</cwru-main-nav>
+
+<cwru-main-container>
+
+        <h2>Look Someone Up</h2>
+        <form method="get" action="lookup" name="who" class="horizontal-form">
+          <div id="search_basic" style="display: block;">
+            <div class="form-question">
+              <label class="form-label">Search Text:</label>
+              <div class="form-response">
+                <input type="text" id="search_text" name="search_text" size="40" />
+              </div>
+            </div>
+          </div>
+          <div id="search_adv" style="display: none;">
+            <div class="form-question">
+              <label class="form-label">Last Name:</label>
+              <div class="form-response">
+                <input type="text" id="surname" name="surname" size="40" />
+              </div>
+            </div>
+            <div class="form-question">
+              <label class="form-label">First Name:</label>
+              <div class="form-response">
+                <input type="text" id="givenname" name="givenname" size="40" />
+              </div>
+            </div>
+            <p id="search_noauth" style="display: none;">
+              <a href="https://login.case.edu/cas/login" id="cas_login">Log in</a> to search by department.
+            </p>
+            <div id="search_auth" style="display: block;">
+              <div class="form-question">
+                <label class="form-label">Department:</label>
+                <div class="form-response">
+                  <input type="text" id="department" name="department" size="40" />
+                </div>
+              </div>
+              <div class="form-question">
+                <label class="form-label">Location code:</label>
+                <div class="form-response">
+                  <input type="text" id="location" name="location" size="40" />
+                </div>
+              </div>
+            </div>
+            <div id="category_l" class="form-question-vertical">
+              <label class="form-label">Category:</label>
+              <div class="form_response" aria-labelledby="category_l">
+                <div class="form-response">
+                  <input type="radio" name="category" value="all" checked="checked" id="all_radio" />
+                  <label for="all_radio">All</label>
+                </div>
+                <div class="form-response">
+                  <input type="radio" name="category" value="faculty" id="faculty_radio" />
+                  <label for="faculty_radio">Faculty</label>
+                </div>
+                <div class="form-response">
+                  <input type="radio" name="category" value="staff" id="staff_radio" />
+                  <label for="staff_radio">Staff</label>
+                </div>
+                <div class="form-response">
+                  <input type="radio" name="category" value="student" id="student_radio" />
+                  <label for="student_radio">Student</label>
+                </div>
+                <div class="form-response">
+                  <input type="radio" name="category" value="emeriti" id="emeriti_radio" />
+                  <label for="emeriti_radio">Emeriti</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="search_method_l" class="form-question-vertical">
+            <label class="form-label">Search Method</label>
+            <div class="form_response" aria-labelledby="search_method_l">
+              <div class="form-response">
+                <input type="radio" name="search_method" value="regular" checked="checked" id="search_regular" />
+                <label for="search_regular">Regular</label>
+              </div>
+              <div class="form-response">
+                <input type="radio" name="search_method" value="phonetic" id="search_phonetic" />
+                <label for="search_phonetic">Phonetic match (Match search text by sound, not spelling.)</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-question-buttons">
+            <input type="submit" value="Search" />
+            <input type="reset" value="Clear" />
+          </div>
+          <p><a href="javascript:void(0)" id="link_change_view" onclick="switch_display();">ADVANCED SEARCH &gt;&gt;&gt;</a></p>
+        </form>
+        <p>
+          This directory and the display of data herein are the confidential property of Case Western Reserve University of Cleveland, Ohio. The material compiled herein is solely
+          for purposes of permitting ease of internal communications, principally among faculty, staff, and students, to ensure efficient internal operation of University business.
+          Unauthorized reproduction, reconstruction from memory, entry into data retrieval systems, disclosure, use, or transfer of any portion of this directory is strictly
+          prohibited.
+        </p>
+<script type="text/javascript">
+var edu_cwru_utech_login = 0;
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+</cwru-main-container>
+  <div style="clear: both"></div>
+</cwru-center>
+
+<div>
+  <cwru-footer-all>
+    <cwru-footer-dept-info
+      dept-name="University Technology, [U]Tech"
+      site-feedback="#"
+    >
+      <cwru-address
+        slot="address"
+        address-type="Campus Location"
+        campus-location-name="Kelvin Smith Library, Lower Level"
+        street-info="11055 Euclid Ave."
+        city-state-zip="Cleveland, OH 44106"
+      ></cwru-address>
+      <cwru-phone-number
+        slot="phone-num"
+        phone-label="Phone"
+        phone-num="216.368.4357"
+      ></cwru-phone-number>
+      <cwru-email-address
+        slot="email"
+        email-label="Email"
+        email-link="mailto:help@case.edu"
+        email-link-text="help@case.edu"
+      ></cwru-email-address>
+    </cwru-footer-dept-info>
+    <cwru-footer-socialmedia-block>
+      <cwru-footer-socialmedia-link
+        social-type="facebook"
+        social-link="https://www.facebook.com/CWRUUTech/"
+      ></cwru-footer-socialmedia-link>
+      <cwru-footer-socialmedia-link
+        social-type="x"
+        social-link="https://x.com/CWRU_UTech/"
+      ></cwru-footer-socialmedia-link>
+      <cwru-footer-socialmedia-link
+        social-type="instagram"
+        social-link="https://www.instagram.com/cwru_utech/"
+      ></cwru-footer-socialmedia-link>
+    </cwru-footer-socialmedia-block>
+  </cwru-footer-all>
+</div>
+
+</body>
+</html>
+

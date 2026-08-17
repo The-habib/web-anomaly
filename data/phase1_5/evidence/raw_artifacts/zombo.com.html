@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zombo.com - No Limits - You Can Do Anything</title>
+  <meta name="description" content="Zombo.com where you can do anything. Zombocom has no limits. Zombo is unlimited." />
+  <meta name="keywords" content="zombo, zombo.com, zombo dot com, zombocom, you can do anything, no limits, unlimited, playful, fun, loading, wizard" />
+  <link rel="stylesheet" href="zombo.css" />
+  <style>
+    /* Inline style for the new disclaimer */
+    .legal-disclaimer {
+      margin-top: 20px;
+      font-family: sans-serif;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+    .legal-disclaimer a {
+      color: #555;
+      text-decoration: underline;
+    }
+    .legal-disclaimer a:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <img class="logo" src="zombocom.png" alt="Zombo.com" />
+    </header>
+
+    <section class="loader-area" aria-label="Loading bar">
+      <div class="loader-wrap">
+        <div class="loading-title">
+          
+        <button id="audioToggle" class="speaker" type="button" aria-label="Toggle music" aria-pressed="false">
+          <svg class="icon icon-off" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <path d="M11 5 6.5 8.5H3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h3.5L11 19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z" fill="currentColor"/>
+            <path d="M21 9 15 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M15 9 21 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-on" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <path d="M11 5 6.5 8.5H3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h3.5L11 19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z" fill="currentColor"/>
+            <path d="M16.5 9.5a4 4 0 0 1 0 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M19.5 7a7.5 7.5 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".95"/>
+          </svg>
+        </button>
+
+        <span class="loading-word">Loading…</span>
+          <span id="loadPct" class="loading-pct">0%</span>
+        </div>
+
+        <div class="loading-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Loading progress">
+          <div id="loadFill" class="loading-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="scrollbox" aria-label="Scrolling message">
+        <div id="scrollWindow" class="scrollwindow" aria-live="polite"></div>
+      </div>
+
+      <div class="legal-disclaimer">
+        <p>Welcome to… New Management. This domain was purchased openly via GoDaddy. We come in peace (and with a wallet): we’d love to also purchase the rights to the former site's content to help revive the infinite. Until then, everything here is new & unique. Old content rights owners, please <a href="/cdn-cgi/l/email-protection#d3a9bcbeb1bcebe0e4f3b2a7f3b4beb2babffdb0bcbe">reach out</a>. Anything is possible.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <audio id="zomboAudio" preload="auto" loop>
+    <source src="zombo_words.ogg" type="audio/ogg" />
+    <source src="zombo_words.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="zombo.js"></script>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0a6d4ef7b6c54b8eaefa23bad2be6702"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>

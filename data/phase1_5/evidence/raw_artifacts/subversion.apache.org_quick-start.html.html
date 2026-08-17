@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Apache Subversion: Quick Start</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="stylesheet" href="/style/site.css" type="text/css" media="all">
+<meta name="theme-color" content="#98b0d4">
+</head>
+
+<body>
+<div id="site-banner">
+<div style="font-style: italic;" 
+     id="site-banner-apachelogo">
+  <a href="https://www.apache.org/"
+  ><img src="https://apache.org/foundation/press/kit/asf_logo_wide.svg"
+        height="80"
+        alt="Apache Software Foundation" /></a>
+</div>
+<a href="/">
+  <img src="/images/svn-name-banner.svg"
+       width="379" height="80"
+       alt="[S] Subversion"
+       id="site-banner-svnlogo" /></a>
+</div> <!-- #site-banner -->
+
+<div id="site-nav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+  <nav id="site-nav-menu">
+  <p>About Subversion
+    <ul>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/docs/">Documentation</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/roadmap.html">Roadmap</a></li>
+      <li><a href="/security/">Security</a></li>
+      <li><a href="/quick-start.html">Quick Start</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </p>
+  <p>Getting Subversion
+      <ul>
+      <li><a href="/packages.html">Binary Packages</a></li>
+      <li><a href="/download.cgi">Source Download</a></li>
+      <li><a href="/docs/release-notes/">Release Notes</a></li>
+    </ul>
+  </p>
+  <p>Community
+    <ul>
+      <li><a href="/mailing-lists.html">Mailing Lists</a></li>
+      <li><a href="/reporting-issues.html">Reporting Issues</a></li>
+      <li><a href="https://cwiki.apache.org/confluence/display/SVN/">Wiki</a></li>
+      <li><a href="/contributing.html">Getting Involved</a></li>
+      <li><a href="/source-code.html">Source Code</a></li>
+      <li><a class="linkaway"
+             href="https://apache.org/foundation/policies/conduct.html">Code of Conduct</a></li>
+    </ul>
+  </p>
+  <p>About the <acronym title="Apache Software Foundation">ASF</acronym>
+    <ul>
+      <li><a class="linkaway"
+             href="https://www.apache.org/licenses/">License</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+    </ul>
+  </p>
+
+<p id="site-search">
+  <form action="https://www.google.com/search" method="get"
+        style="margin-top: 10px; margin-bottom: 10px; display: inline;">
+  <div style="display: inline;">
+    <input value="subversion.apache.org" name="sitesearch" type="hidden" />
+    <input name="q" id="query" type="text" placeholder="Search..."
+           style="width: 10em"
+           />
+    <input name="Search" value="Go" type="submit"/>
+  </div>
+  </form>
+</p> <!-- #site-search -->
+
+<p id="site-apachecon-block">
+  <p><a href="https://www.apache.org/events/current-event.html"
+    ><img src="https://www.apache.org/events/current-event-125x125.png"
+          alt="ApacheCon"
+  /></a></p>
+</p> <!-- #site-apachecon-block -->
+
+<p id="site-svnbook-block">
+<p>Read the official Subversion
+   documentation <a href="https://svnbook.red-bean.com/" class="linkaway nopadding">online</a>!</p>
+<p><a href="https://svnbook.red-bean.com/"
+      ><img src="/images/svnbook-cover.jpg"
+            alt="Version Control With Subversion"/></a></p>
+</p> <!-- #site-svnbook-block -->
+
+<p id="copyright">
+<p>Copyright &#169; 2026 <a href="https://www.apache.org/" class="nopadding">The Apache
+   Software Foundation</a>, Licensed under
+   the <a href="https://www.apache.org/licenses/LICENSE-2.0" class="nopadding">Apache
+   License, Version 2.0</a>.  Apache, Apache Subversion, and
+   the Apache logo are trademarks of The Apache Software
+   Foundation.  Subversion and the Apache Subversion logo are
+   registered trademarks of The Apache Software Foundation.</p>
+<p><a href="https://privacy.apache.org/policies/privacy-policy-public.html"
+   class="nopadding">Privacy policy</a></p>
+</p> <!-- #copyright -->
+</nav>
+</div> <!-- #site-nav -->
+
+<div id="site-content">
+<div id="site-notice">
+
+<!-- PUT SITE-WIDE NOTICES HERE AS NECESSARY -->
+
+</div> <!-- #site-notice -->
+
+<!-- **************** BEGIN CONTENT ***************** -->
+
+<h1>Apache Subversion: Quick Start</h1>
+
+<ul>
+  <li><a href="#installing-the-client"
+      >Installing the SVN client</a></li>
+  <li><a href="#terminology"
+      >Terminology</a></li>
+  <li><a href="#basic-tasks"
+      >Basic tasks</a></li>
+  <li><a href="#setting-up-a-local-repo"
+      >Setting up a local repository</a></li>
+  <li><a href="#more-help"
+      >Getting more help</a></li>
+</ul>
+
+<div class="h2" id="installing-the-client">
+<h2>Installing the SVN client
+  <a class="sectionlink" href="#installing-the-client"
+    title="Link to this section"></a>
+</h2>
+
+<p>Install the <tt>svn</tt> client to start collaborating on a project that
+is using Subversion as its version control system.</p>
+
+<p>To install the client program, you can build it yourself from a source
+code release or download a binary package.  The list of sites where you
+can obtain a pre-built Subversion client is available at the <a
+href="/packages.html">official binary packages page</a>.  If you want
+to compile the software for yourself, grab the source at the
+<a href="/source-code.html">Source Code</a> page.</p>
+
+<p>Right after you install the client you should be able to test it by
+issuing the svn command.  You should see the following output:</p>
+<pre>
+$ svn
+Type 'svn help' for usage.
+</pre>
+
+<p>Now you can start using the command line client to interact with the remote
+repository.</p>
+
+<div class="notice">
+<p>If you are not familiar with Subversion, you may be better served by a
+graphical client.  We do not maintain a list of such clients; instead,
+we recommend you do a Web search for <tt>Subversion GUI</tt> client.</p>
+</div>
+
+</div>  <!-- #installing-the-client -->
+
+<div class="h2" id="terminology">
+<h2>Terminology
+  <a class="sectionlink" href="#terminology"
+    title="Link to this section"></a>
+</h2>
+
+<div class="h3" id="what-is-a-repository">
+<h3>What is a Repository?
+  <a class="sectionlink" href="#what-is-a-repository"
+    title="Link to this section"></a>
+</h3>
+
+<p>The repository is a version control database that often resides on a
+server and is usually exposed either by an Apache HTTP Server
+(through the <tt>mod_dav_svn</tt> module) or by an svnserve server.
+The repository acts as a single source of truth and &mdash; as a central
+storage &mdash; it contains the complete history of changes of the versioned
+data in form of revisions.</p>
+
+<p>Repository URL examples:</p>
+<ul>
+  <li>Apache HTTP Server:
+    <tt>https://svn.example.com/repos/MyRepo/MyProject/trunk</tt></li>
+  <li>svnserve:
+    <tt>svn://svn.example.com/repos/MyRepo/MyProject/branches/MyBranch</tt></li>
+  <li>Direct access (Unix-style):
+    <tt>file:///var/svn/repos/MyRepo/MyProject/tags/1.1.0</tt></li>
+  <li>Direct access (Windows-style):
+    <tt>file:///C:/Repositories/MyRepo/trunk/MyProject</tt></li>
+</ul>
+
+</div>  <!-- #what-is-a-repository -->
+
+<div class="h3" id="what-is-a-working-copy">
+<h3>What is a Working Copy?
+  <a class="sectionlink" href="#what-is-a-working-copy"
+    title="Link to this section"></a>
+</h3>
+
+<p>The working copy is your local and private workspace that you use to
+interact with the central Subversion repository.  You use the working
+copy to modify the contents of your project and fetch changes committed
+by others.</p>
+
+<p>The working copy contains your project's data and looks and acts like a
+regular directory on your local file system, but with one major
+difference - the working copy tracks the status and changes of files
+and directories within.  You can think of the working copy as of a
+regular directory with version-control capabilities.  A working copy
+has an administrative directory named <tt>.svn</tt> at its root.  The
+administrative directory contains metadata necessary for Subversion to
+manage the version-control capabilities.</p>
+
+<p>There can be as much working copies from the same repository or project
+as you want with any combination of local modifications.</p>
+
+</div>  <!-- #what-is-a-working-copy -->
+
+</div>  <!-- #terminology -->
+
+<div class="h2" id="basic-tasks">
+<h2>Basic tasks
+  <a class="sectionlink" href="#basic-tasks"
+    title ="Link to this section"></a>
+</h2>
+
+<div class="h3" id="importing-data">
+<h3>Importing data into the repository
+  <a class="sectionlink" href="#importing-data"
+    title="Link to this section"></a>
+</h3>
+
+<p>In case you want to import existing non-versioned data into an SVN
+repository, you should run the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.import.html"
+  ><tt>svn import</tt></a> command.  Here is an example:</p>
+<pre>
+$ svn import https://svn.example.com/repos/MyRepo/MyProject/trunk -m "Initial project import"
+</pre>
+
+</div>  <!-- #importing-data -->
+
+<div class="h3" id="checking-out-a-working-copy">
+<h3>Checking out a working copy
+  <a class="sectionlink" href="#checking-out-a-working-copy"
+    title="Link to this section"></a>
+</h3>
+
+<p>To begin making modifications to your project's data, you have to
+create a local copy of the versioned project.  You can use the command
+line <tt>svn</tt> client or any GUI-based client that you prefer.  Your
+local copy of the project is called a working copy and
+you create it by issuing the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.checkout.html"
+><tt>svn checkout</tt></a> command.  Here is an example:</p>
+<pre>
+$ svn checkout https://svn.example.com/repos/MyRepo/MyProject/trunk MyWorkingCopy
+</pre>
+
+<p>As a result, you will get a working copy of the trunk of a project
+called MyProject that resides in MyRepo repository.  The working copy
+will be located in MyWorkingCopy directory on your computer.  Note that
+instead of checking out the trunk, you can check out some branch
+or a tag (assuming they already exist in the repository).</p>
+
+<p>You can get the working copy of the whole repository MyRepo, too.  But
+you should refrain from doing so.  Generally speaking, you do not need
+to have a working copy of the whole repository for your work because
+your working copy can be instantly switched to another development
+branch.  Moreover, Subversion repository can contain a number of 
+unrelated projects and it is better to have a dedicated working copy
+for each of them, not a single working copy for all of the projects.</p>
+
+</div>  <!-- #checking-out-a-working-copy -->
+
+<div class="h3" id="updating-a-working-copy">
+<h3>Updating a working copy 
+  <a class="sectionlink" href="#updating-a-working-copy"
+    title="Link to this section"></a>
+</h3>
+
+<p>You are not the only person working on the project, right?  This means
+that your colleagues are also making modifications to the project's
+data.  To stay up to date and to fetch the modifications committed by
+others, you should run the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.update.html"
+><tt>svn update</tt></a> command in your working copy.  As a result,
+your working copy will sync with the repository and download the
+changes made by your colleagues.</p>
+
+<p>It is a good practice to update your working copy before committing
+local modifications to the repository.</p>
+
+</div>  <!-- #updating-a-working-copy -->
+
+<div class="h3" id="making-changes">
+<h3>Making changes in your local working copy
+  <a class="sectionlink" href="#making-changes"
+    title="Link to this section"></a>
+</h3>
+
+<p>Most of the time, you are going to perform modifications to the
+project's data by modifying the contents of the working copy.  As soon
+as you are satisfied with the modifications and you've reviewed them
+thoroughly, you are ready to commit them to the central repository.</p>
+
+<div class="h4" id="modifying-existing-files">
+<h4>Modifying existing files
+  <a class="sectionlink" href="#modifying-existing-files"
+    title="Link to this section"></a>
+</h4>
+
+<p>Modify the files as you usually do using your favorite text
+processor, graphics editor, audio editing software, IDE, etc.  As
+soon as you save the changes to disk, Subversion will recognize them
+automatically.</p>
+
+</div>  <!-- #modifying-existing-files -->
+
+<div class="h4" id="committing-changes">
+<h4>Committing your changes to the repository
+  <a class="sectionlink" href="#committing-changes"
+    title="Link to this section"></a>
+</h4>
+
+<p>In order to publish the changes you made in your working copy, you
+should run the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.commit.html"
+><tt>svn commit</tt></a> command.</p>
+
+<div class="notice">
+<p>Review your changes before committing them!  Use the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.status.html"
+><tt>svn status</tt></a>
+and
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.diff.html"
+><tt>svn diff</tt></a> commands to review the changes.</p>
+</div>
+
+<p>Here is an example of the commit command:</p>
+<pre>
+$ svn commit -m "My Descriptive Log Message"
+</pre>
+
+<p>Note the <tt>-m (--message)</tt> option. You should always include
+a descriptive commit log message.  It should help others including
+yourself understand the reason why you made this commit.  It is a
+good idea to include a summary of your changes in the log message, too.</p>
+
+</div>  <!-- #committing-changes -->
+
+</div>  <!-- #making-changes -->
+
+<div class="h3" id="performing-file-and-dir-operations">
+<h3>Performing file and directory operations
+  <a class="sectionlink" href="#performing-file-and-dir-operations"
+    title="Link to this section"></a>
+</h3>
+
+<p>You can perform any actions with your project's data within the working
+copy, but operations that involve copying, moving, renaming and
+deleting must be performed using the corresponding <tt>svn</tt>
+commands.</p>
+
+<p>Subversion does not use heurisic-tracking for tree changes in a working
+copy.  Subversion requires explicit tracking of tree changes.  If you
+perform a tree changes such as move or copy with regular filesystem
+commands, Subversion will not know about this operation.  To track tree
+changes Subversion should be made aware of them.</p>
+
+<div class="h4" id="adding-new-files-and-directories">
+<h4>Adding new files and directories
+  <a class="sectionlink" href="#adding-new-files-and-directories"
+    title="Link to this section"></a>
+</h4>
+
+<p>Put new files or directories to the working copy and Subversion will
+see them as "unversioned".  It will not automatically start tracking
+the new files unless you run the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.add.html"
+><tt>svn add</tt></a> command:</p>
+<pre>
+$ svn add foo.cs
+</pre>
+
+</div>  <!-- #adding-new-files-and-directories -->
+
+<div class="h4" id="moving-and-renaming-files-and-directories">
+<h4>Moving and renaming files and directories
+  <a class="sectionlink" href="#moving-and-renaming-files-and-directories"
+    title="Link to this section"></a>
+</h4>
+
+<p>Move and rename files and directories using the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.move.html"
+><tt>svn move</tt></a> or <tt>svn rename</tt> command:</p>
+<pre>
+$ svn move foo.cs bar.cs
+</pre>
+
+<p>The command <tt>svn rename</tt> is an alias for the <tt>svn move</tt>.</p>
+
+</div>  <!-- #moving-and-renaming-files-and-directories -->
+
+<div class="h4" id="copying-files-and-directories">
+<h4>Copying files and directories
+          <a class="sectionlink" href="#copying-files-and-directories"
+          title="Link to this section"></a>
+</h4>
+
+<p>Copy files and directories using the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.copy.html"
+><tt>svn copy</tt></a> command:</p>
+<pre>
+$ svn copy foo.cs bar.cs
+</pre>
+
+</div>  <!-- #copying-files-and-directories -->
+
+<div class="h4" id="deleting-files-and-directories">
+<h4>Deleting files and directories
+  <a class="sectionlink" href="#deleting-files-and-directories"
+    title="Link to this section"></a>
+</h4>
+
+<p>Delete files and directories using the svn delete
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.delete.html"
+><tt>svn delete</tt></a> command:</p>
+<pre>
+$ svn delete foo.cs
+</pre>
+
+</div>  <!-- #deleting-files-and-directories -->
+
+<div class="h4" id="reverting-local-changes">
+<h4>Reverting or discarding local changes
+  <a class="sectionlink" href="#reverting-local-changes"
+    title="Link to this section"></a>
+</h4>
+
+<p>Discard your local uncommitted changes using the
+<a href="https://svnbook.red-bean.com/en/1.8/svn.ref.svn.c.revert.html"
+><tt>svn revert</tt></a> command:</p>
+<pre>
+$ svn revert foo.cs
+</pre>
+
+<div class="notice">
+<p>Discarded uncommitted changes will be lost forever.  You will not be
+able to recover the reverted changes.  Use <tt>svn revert</tt> with
+caution!
+</p>
+</div>
+
+</div>  <!-- #reverting-local-changes -->
+
+</div>  <!-- #performing-file-and-dir-operations -->
+
+<div class="h3" id="branching-and-tagging">
+<h3>Branching and tagging
+  <a class="sectionlink" href="#branching-and-tagging"
+    title="Link to this section"></a>
+</h3>
+
+<p>You should use the <tt>svn copy</tt> command to create branches and
+tags.  This is the same command that is used to copy items in your
+working copy and in the repository when you want them to be
+historically related.</p>
+
+<p>The command <tt>svn copy</tt> is used for branching because branch is
+technically a copy of the source you copy from.  However, it is not
+an ordinary copy that you are familiar with when copying files on your
+local file system.  Branches in Subversion repositories are so called
+<a href="https://svnbook.red-bean.com/en/1.8/svn.branchmerge.using.html#svn.branchmerge.using.create"
+>"Cheap Copies"</a> that are similar to symlinks.  Therefore, creating a
+new branch takes minimal time to complete and takes practically no
+space in the Subversion repository.  You can create branches and use
+them for any change you want regardless of the change's size and scope.</p>
+
+<div class="h4" id="url-to-url-copy">
+<h4>Creating a branch using direct URL to URL copy
+  <a class="sectionlink" href="#url-to-url-copy"
+    title="Link to this section"></a>
+</h4>
+
+<p>Branching in Subversion is simple.  In the simplest form, creating a
+new branch requires you to run the command against the remote
+repository's URLs.  For example, let's create a new branch out of the
+mainline trunk:</p>
+<pre>
+$ svn copy https://example.com/MyRepo/trunk https://example.com/MyRepo/branches/MyNewBranch -m "Creating a new branch"
+</pre>
+
+</div>  <!-- #url-to-url-copy -->
+
+</div>  <!-- #branching-and-tagging -->
+
+</div>  <!-- #basic-tasks -->
+
+<div class="h2" id="setting-up-a-local-repo">
+<h2>Setting up a local repository
+  <a class="sectionlink" href="#setting-up-a-local-repo"
+    title="Link to this section"></a>
+</h2>
+
+<p>You can create a Subversion repository on your computer and use
+<tt>file://</tt> scheme to interact with it locally.  This approach can help
+you use Subversion locally to track personal files and single-person
+projects.</p>
+
+<p>The following procedure creates a minimal environment for an existing
+project.  It converts a directory with a project into a working copy of a
+newly-created local Subversion repository.  As result you can modify the files
+in the working copy and track the changes in your local repository.</p>
+
+<p>On Unix:</p>
+  <ol>
+    <li>Create a parent directory <tt>.svnrepos</tt> where you will place
+        your SVN repositories:
+        <pre>$ mkdir -p $HOME/.svnrepos/</pre></li>
+    <li>Create a new repository MyRepo under <tt>.svnrepos</tt>:
+        <pre>$ svnadmin create ~/.svnrepos/MyRepo</pre></li>
+    <li>Create a recommended project layout in the new repository:
+        <pre>$ svn mkdir -m "Create directory structure." \
+  file://$HOME/.svnrepos/MyRepo/trunk \
+  file://$HOME/.svnrepos/MyRepo/branches \
+  file://$HOME/.svnrepos/MyRepo/tags</pre></li>
+    <li>Change directory to <tt>./MyProject</tt> where your unversioned
+        project is located:
+        <pre>$ cd $HOME/MyProject</pre></li>
+    <li>Convert the current directory into a working copy of the trunk/ in
+        the repository:
+        <pre>$ svn checkout file://$HOME/.svnrepos/MyRepo/trunk ./</pre></li>
+    <li>Schedule your project's files to be added to the repository:
+        <pre>$ svn add --force ./</pre></li>
+    <li>Commit the project's files:
+        <pre>$ svn commit -m "Initial import."</pre></li>
+    <li>Update your working copy:
+        <pre>$ svn update</pre></li>
+  </ol>
+
+<p>On Windows:</p>
+  <ol>
+    <li>Create a parent directory <tt>C:\Repositories</tt> where you will place
+        your SVN repositories:
+        <pre>mkdir C:\Repositories</pre></li>
+    <li>Create a new repository MyRepo under <tt>C:\Repositories</tt>:
+        <pre>svnadmin create C:\Repositories\MyRepo</pre></li>
+    <li>Create a recommended project layout in the new repository:
+        <pre>svn mkdir -m "Create directory structure." ^
+  file:///C:/Repositories/MyRepo/trunk ^
+  file:///C:/Repositories/MyRepo/branches ^
+  file:///C:/Repositories/MyRepo/tags </pre></li>
+    <li>Change directory to <tt>C:\MyProject</tt> where your unversioned
+        project is located:
+        <pre>cd C:\MyProject</pre></li>
+    <li>Convert the current directory into a working copy of the trunk/ in
+        the repository:
+        <pre>svn checkout file:///C:/Repositories/MyRepo/trunk .</pre></li>
+    <li>Schedule your project's files to be added to the repository:
+        <pre>svn add --force ./</pre></li>
+    <li>Commit the project's files:
+        <pre>svn commit -m "Initial import."</pre></li>
+    <li>Update your working copy:
+        <pre>svn update</pre></li>
+  </ol>
+
+<p>See also the
+<a href="https://svnbook.red-bean.com/nightly/en/svn.intro.quickstart.html"
+>Quick Start instructions in The Subversion Book</a>.</p>
+
+</div>  <!-- #setting-up-a-local-repo -->
+
+<div class="h2" id="more-help">
+<h2>Getting more help
+  <a class="sectionlink" href="#more-help"
+    title="Link to this section"></a>
+</h2>
+
+<p>If you are new to Apache Subversion (SVN), read Version Control with
+Subversion book (SVNBook).  SVNBook is the Bible of SVN and must-read
+for Subversion users and administrators.  You can find SVNBook 1.8 at
+<a href="https://svnbook.red-bean.com/en/1.8/"
+>https://svnbook.red-bean.com/en/1.8/</a></p>
+
+</div>  <!-- #more-help -->
+
+<!-- ***************** END CONTENT ****************** -->
+</div>  <!-- #site-content -->
+</body>
+</html>

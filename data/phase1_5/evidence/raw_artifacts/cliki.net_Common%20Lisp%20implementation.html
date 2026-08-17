@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CLiki: Common Lisp implementation</title>
+    <link rel="alternate" type="application/atom+xml" title="ATOM feed of edits to current article"
+                  href="/site/feed/article.atom?title=Common%20Lisp%20implementation">
+    <link  rel="stylesheet" href="/static/css/style.css">
+    <link  rel="stylesheet" href="/static/css/colorize.css">
+  </head>
+
+  <body>
+    <span class="hidden">CLiki - Common Lisp implementation</span>
+    <div id="content"><div id="content-area"><div id="article-title">Common Lisp implementation</div><div id="article"><a href="/Common%20Lisp" class="category" rel="noopener noreferrer">Common Lisp</a> implementations and their <a href="/Features" class="internal" rel="noopener noreferrer">*features*</a>.<p><h2>Comparison of actively developed Common Lisp implementations</h2><p>All the implementations below provide an <a href="/FFI" class="internal" rel="noopener noreferrer">FFI</a> and sockets interface. Callbacks mean in this context that the FFI is capable of passing lisp-functions as callbacks to foreign functions. The startup file is loaded when the Lisp starts. Not all platforms listed may be actively supported.<p>Note: Some implementation builds fail to include FFI, sockets, and/or threads. Fink CLISP fails to includes threads, and MacPorts anything fails to include FFI. Aptitude lisps are severely out of date: SBCL fails on Xen, and ECL crashes during installation.<p><table>
+<tr>
+ <th>Implementation</th>
+ <th>Supported Platforms</th>
+ <th>Compiler</th>
+ <th>Threads?</th>
+ <th>Features</th>
+ <th>Startup file</th>
+ <th>License</th>
+</tr>
+<tr>
+ <td><a href="/CLISP" class="internal" rel="noopener noreferrer">CLISP</a></td>
+ <td>Windows, Mac OS X, Linux, Solaris, FreeBSD, NetBSD, OpenBSD, Dragonfly BSD</td>
+ <td>Bytecode</td>
+ <td>Yes (experimental)</td>
+ <td>Small image size, very efficient bignums, Callbacks,
+  <a href="https://clisp.sourceforge.io/impnotes/modules.html" rel="noopener noreferrer">modules</a></td>
+ <td>~/.clisprc.lisp</td>
+ <td>GPL2</td>
+</tr>
+<tr>
+ <td><a href="/CMUCL" class="internal" rel="noopener noreferrer">CMUCL</a></td>
+ <td>Linux, Mac OS X, Solaris, FreeBSD, NetBSD, OpenBSD, IRIX, HPUX</td>
+ <td>Bytecode, Native &amp; Block Compilation</td>
+ <td>No</td>
+ <td>High quality native compiler, foreign callbacks</td>
+ <td>~/.cmucl-init.lisp</td>
+ <td>BSD3</td>
+</tr>
+<tr>
+ <td><a href="/ECL" class="internal" rel="noopener noreferrer">ECL</a></td>
+ <td>Linux, FreeBSD, NetBSD, OpenBSD, Solaris, Windows, Mac OS X, iOS, Android</td>
+ <td>Native via <a href="/C" class="internal" rel="noopener noreferrer">C</a>, also bytecode</td>
+ <td>Yes (all platforms)</td>
+ <td>Executable delivery and portability. Integrates well with C programs (i.e. Embeddable, native powerful FFI).</td>
+ <td>~/.eclrc</td>
+ <td>LGPL2</td>
+</tr>
+<tr>
+ <td><a href="/CCL" class="internal" rel="noopener noreferrer">CCL</a></td>
+ <td>Mac OS X, Linux, FreeBSD, Solaris, Android, Windows XP and later, Heroku</td>
+ <td>Native</td>
+ <td>Yes (all platforms)</td>
+ <td>Small image size, fast compiler, convenient and powerful FFI, callbacks, executable delivery, precise gc</td>
+ <td>~/ccl-init.lisp</td>
+ <td>Apache 2</td>
+</tr>
+<tr>
+ <td><a href="/SBCL" class="internal" rel="noopener noreferrer">SBCL</a></td>
+ <td>Linux, Mac OS X, FreeBSD, NetBSD, OpenBSD, Windows <a href="http://www.sbcl.org/platform-table.html" rel="noopener noreferrer">(sbcl's platform table)</a></td>
+ <td>Native</td>
+ <td>Yes</td>
+ <td>High quality native compiler; callbacks; executable delivery;</td>
+ <td>~/.sbclrc</td>
+ <td>BSD2+PD</td>
+</tr>
+<tr>
+ <td><a href="/ABCL" class="internal" rel="noopener noreferrer">ABCL</a></td>
+ <td>JVM, Google App Engine</td>
+ <td>JVM bytecode</td>
+ <td>Yes</td>
+ <td>FFI to Java, platform independence</td>
+ <td>~/.abclrc</td>
+ <td>GPL+Classpath exception</td>
+</tr>
+<tr>
+ <td><a href="/MKCL" class="internal" rel="noopener noreferrer">MKCL</a></td>
+ <td>Linux, Windows XP and later</td>
+ <td>Native via C, bytecode-compiled interpreter</td>
+ <td>Yes</td>
+ <td>POSIX compliant runtime on Linux, Embeddable, FFI with callbacks.</td>
+ <td>~/.mkclrc</td>
+ <td>LGPL</td>
+</tr>
+</table><p><a href="/Daniel%20Weinreb" class="internal" rel="noopener noreferrer">Daniel Weinreb</a> has a current (as of February 2010) <a href="http://web.archive.org/web/20161105160832/https://common-lisp.net/~dlw/LispSurvey.html" rel="noopener noreferrer">survey of Common Lisp implementations</a> that is more detailed than the chart above.<p>All Common Lisp implementations (some of these may be non-free and/or not actively developed):<p><ul><li><a href="/ABCL" class="internal" rel="noopener noreferrer">ABCL</a> -
+  <a href="https://abcl.org/" rel="noopener noreferrer">Armed Bear Common Lisp</a> (aka ABCL) is a
+  </li><li><a href="/ACL" class="internal" rel="noopener noreferrer">ACL</a> -
+  ACL refers to <a href="http://www.franz.com/products/allegrocl/" rel="noopener noreferrer">Allegro Common Lisp</a> from <a href="http://www.franz.com/" rel="noopener noreferrer">Franz, Inc.</a>, a non-free <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>
+  </li><li><a href="/bocl" class="internal" rel="noopener noreferrer">bocl</a> -
+  <a href="/bocl" class="internal" rel="noopener noreferrer">bocl</a> is the Bootstraping <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>
+  </li><li><a href="/CCL" class="internal" rel="noopener noreferrer">CCL</a> -
+  CCL is the <a href="/Clozure" class="internal" rel="noopener noreferrer">Clozure</a> <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>
+  </li><li><a href="/Clasp" class="internal" rel="noopener noreferrer">Clasp</a> -
+  Clasp is a Common Lisp implementation that interoperates with <a href="/C%2B%2B" class="new" rel="noopener noreferrer">C++</a> and uses <a href="/LLVM" class="internal" rel="noopener noreferrer">LLVM</a> for just-in-time (JIT) compilation to native code
+  </li><li><a href="/CLISP" class="internal" rel="noopener noreferrer">CLISP</a> -
+  CLISP is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> by <a href="http://www.haible.de/bruno/" rel="noopener noreferrer">Bruno Haible</a>, then of Karlsruhe University, and <a href="http://www.mathe2.uni-bayreuth.de/stoll/programs/index.html" rel="noopener noreferrer">Michael Stoll</a>, then of Munich University, both in Germany
+  </li><li><a href="/CMUCL" class="internal" rel="noopener noreferrer">CMUCL</a> -
+  <a href="/CMUCL" class="internal" rel="noopener noreferrer">CMUCL</a> is a high-performance, free (mostly <a href="/Public%20Domain" class="internal" rel="noopener noreferrer">Public Domain</a>) <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> that aims towards <a href="/ANSI" class="internal" rel="noopener noreferrer">ANSI</a> compatibility and runs on a number of Unix platforms - including <a href="/Linux" class="internal" rel="noopener noreferrer">Linux</a>/ix86, <a href="/Linux" class="internal" rel="noopener noreferrer">Linux</a>/Alpha,
+  </li><li><a href="/Corman%20Common%20Lisp" class="internal" rel="noopener noreferrer">Corman Common Lisp</a> -
+  Corman Lisp is a Common Lisp development environment for Microsoft Windows operating systems running on Intel platforms
+  </li><li><a href="/ECL" class="internal" rel="noopener noreferrer">ECL</a> -
+  Embeddable Common Lisp, a member of the <a href="/KCL%20Family" class="category" rel="noopener noreferrer">KCL Family</a>, is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> initially developed by Giuseppe Attardi, maintained for many years by <a href="/Juan%20Jose%20Garcia-Ripoll" class="category" rel="noopener noreferrer">Juan Jose Garcia-Ripoll</a> and currently maintained by <a href="/Daniel%20Kochma%C5%84ski" class="category" rel="noopener noreferrer">Daniel Kochmański</a>
+  </li><li><a href="/emacs-cl" class="internal" rel="noopener noreferrer">emacs-cl</a> -
+  <a href="http://www.lisp.se/emacs-cl/" rel="noopener noreferrer">Emacs Common Lisp</a> is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> written in Emacs Lisp
+  </li><li><a href="/GCL" class="internal" rel="noopener noreferrer">GCL</a> -
+  <a href="/GNU" class="internal" rel="noopener noreferrer">GNU</a> Common Lisp is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> of the <a href="/KCL%20Family" class="category" rel="noopener noreferrer">KCL Family</a> that uses gcc to compile Lisp into native binaries
+  </li><li><a href="/JSCL" class="internal" rel="noopener noreferrer">JSCL</a> -
+  <a href="/jscl" class="internal" rel="noopener noreferrer">jscl</a> is the Common Lisp to JavaScript Compiler, a subset of <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>
+  </li><li><a href="/KCL%20Family" class="internal" rel="noopener noreferrer">KCL Family</a> -
+  The KCL Family is a family of <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>s originated from the influential <a href="https://en.wikipedia.org/wiki/Kyoto_Common_Lisp" rel="noopener noreferrer">KCL</a>
+  </li><li><a href="/MCL" class="internal" rel="noopener noreferrer">MCL</a> -
+  MCL is <a href="ftp://ftp.clozure.com/pub/MCL/" rel="noopener noreferrer">Macintosh Common Lisp</a>, a venerable commercial <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>
+  </li><li><a href="/Medley" class="internal" rel="noopener noreferrer">Medley</a> -
+  Medley was the last release of the Xerox Lisp environment, before the whole environment was renamed Medley
+  </li><li><a href="/MKCL" class="internal" rel="noopener noreferrer">MKCL</a> -
+  ManKai Common Lisp
+  </li><li><a href="/Movitz" class="internal" rel="noopener noreferrer">Movitz</a> -
+  Movitz is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> that targets the x86 PC architecture &quot;on-the-metal&quot;
+  </li><li><a href="/npt" class="internal" rel="noopener noreferrer">npt</a> -
+  <a href="/ANSI" class="internal" rel="noopener noreferrer">ANSI</a> Common Lisp implementation built in <a href="/C" class="internal" rel="noopener noreferrer">C</a>
+  </li><li><a href="/Poplog" class="internal" rel="noopener noreferrer">Poplog</a> -
+  Poplog is a multi-language programming system which includes its own <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>, as well as Standard ML, Prolog, and Pop-11
+  </li><li><a href="/SBCL" class="internal" rel="noopener noreferrer">SBCL</a> -
+  Steel Bank Common Lisp is an open source / free software <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>
+  </li><li><a href="/ThinLisp" class="internal" rel="noopener noreferrer">ThinLisp</a> -
+  ThinLisp is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> that translates a subset of Common Lisp to very efficient <a href="/C" class="category" rel="noopener noreferrer">C</a> code
+  </li><li><a href="/UABCL" class="internal" rel="noopener noreferrer">UABCL</a> -
+  UABCL, a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a>, is a port of ABCL to dotNet and Mono
+  </li><li><a href="/UfasoftCommonLisp" class="internal" rel="noopener noreferrer">UfasoftCommonLisp</a> -
+  <a href="http://www.ufasoft.com/lisp" rel="noopener noreferrer">Ufasoft Common Lisp</a> development system
+  </li><li><a href="/WCL" class="internal" rel="noopener noreferrer">WCL</a> -
+  WCL is a <a href="/Common%20Lisp%20implementation" class="category" rel="noopener noreferrer">Common Lisp implementation</a> that provides Common Lisp as a Unix shared library that can be linked with Lisp and C code to produce efficient applications
+  </li><li><a href="/XCL" class="internal" rel="noopener noreferrer">XCL</a> -
+  XCL is a <a href="/Common%20lisp%20implementation" class="category" rel="noopener noreferrer">Common lisp implementation</a> featuring a kernel written in C++ and an optimizing compiler with backends for x86 and x86-64
+  </li></ul><p>For <a href="/non-free" class="internal" rel="noopener noreferrer">non-free</a> implementations, see also <a href="https://en.wikipedia.org/wiki/Common_Lisp#Commercial_implementations" rel="noopener noreferrer">this list on wikipedia</a>.<p>If performance is an important criterion for you, you might be interested in the <a href="/Performance%20Benchmarks" class="internal" rel="noopener noreferrer">Performance Benchmarks</a> page. <p>You may also use this <a href="https://gitlab.com/com-informatimago/com-informatimago/blob/master/small-cl-pgms/what-implementation.lisp" rel="noopener noreferrer">what-implementation</a> CL program to help you determine what implementation to use. You may use it with <tt>telnet://hubble.informatimago.com:8101</tt>.</div></div>
+  <div id="footer" class="buttonbar"><ul><li><a href="/Common%20Lisp%20implementation">Current version</a></li>
+      <li><a href="/site/history?article=Common%20Lisp%20implementation">History</a></li>
+      <li><a href="/site/backlinks?article=Common%20Lisp%20implementation">Backlinks</a></li><li><a href="/site/edit-article?title=Common%20Lisp%20implementation&amp;from-revision=3977733110">Edit</a></li><li><a href="/site/edit-article?create=t">Create</a></li></ul></div>
+  </div>
+  <div id="header-buttons" class="buttonbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/site/recent-changes">Recent Changes</a></li>
+      <li><a href="/CLiki">About</a></li>
+      <li><a href="/Text%20Formatting">Text Formatting</a></li>
+      <li><a href="/site/tools">Tools</a></li>
+    </ul>
+    <div id="search">
+      <form action="/site/search">
+        <label for="search_query" class="hidden">Search CLiki</label>
+        <input type="text" name="query" id="search_query" value="" />
+        <input type="submit" value="search" />
+      </form>
+    </div>
+  </div>
+  <div id="pageheader">
+    <div id="header">
+      <span id="logo">CLiki</span>
+      <span id="slogan">the common lisp wiki</span>
+      <div id="login"><form method="post" action="/site/login">
+                 <label for="login_name" class="hidden">Account name</label>
+                 <input type="text" name="name" id="login_name" class="login_input" />
+                 <label for= "login_password" class="hidden">Password</label>
+                 <input type="password" name="password" id="login_password" class="login_input" />
+                 <input type="submit" name="login" value="login" id="login_submit" /><br />
+                 <div id="register"><a href="/site/register">register</a></div>
+                 <input type="submit" name="reset-pw" value="reset password" id="reset_pw" />
+               </form>
+      </div>
+    </div>
+  </div>
+  </body></html>

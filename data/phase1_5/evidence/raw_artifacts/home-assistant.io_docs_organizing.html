@@ -1,0 +1,943 @@
+
+
+<!doctype html>
+  <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Grouping your assets - Home Assistant</title>
+    <meta name="author" content="Home Assistant">
+    <meta name="description" content="Grouping your assets makes it easier to find them and allows you to target groups in automations.">
+    
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="canonical" href="https://www.home-assistant.io/docs/organizing/">
+    
+
+    
+
+
+
+
+<meta property="fb:app_id" content="338291289691179">
+<meta property="og:title" content="Grouping your assets">
+<meta property="og:site_name" content="Home Assistant">
+
+<meta property="og:url" content="https://www.home-assistant.io/docs/organizing/">
+
+<meta property="og:type" content="article">
+<meta property="og:description" content="Grouping your assets makes it easier to find them and allows you to target groups in automations.">
+<meta property="og:image" content="https://www.home-assistant.io/images/default-social.png">
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@home_assistant">
+
+<meta name="twitter:title" content="Grouping your assets">
+<meta name="twitter:description" content="Grouping your assets makes it easier to find them and allows you to target groups in automations.">
+<meta name="twitter:image" content="https://www.home-assistant.io/images/default-social.png">
+
+
+
+<link rel="me" href="https://fosstodon.org/@homeassistant">
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3/dist/style.min.css" rel="stylesheet" />
+    <link href="/stylesheets/prism.css?1304e8e8c717584921b418a0a8dca04b" rel="stylesheet">
+    <link href="/stylesheets/screen.css?4290b2a2ad5b90daa18b608d9c7479f5" media="screen, projection, print" rel="stylesheet">
+    <link href="/atom.xml" rel="alternate" title="Home Assistant" type="application/atom+xml">
+    <link rel='shortcut icon' href='/images/favicon.ico' />
+    <link rel='icon' type='image/png' href='/images/favicon-192x192.png' sizes='192x192' />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Instrument+Sans:ital,wdth,wght@0,99,400..700;1,99,400..700&amp;" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" integrity="sha384-GPb5RlngihS9H0z1D137JsvzmeZ7tCpWEF4t5YDoTZyMsPP8S7h7vFDh4XhheU83" crossorigin="anonymous"></script>
+  </head>
+
+  <body  class="documentation-page   ">
+    <header class='site-header '>
+      
+
+
+
+<div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
+      <a href="/" class="site-title">
+        <div class="logo"></div>
+      </a>
+      <a class="release-date" href="/blog/2026/08/05/release-20268/" title="Latest version 2026.8.2 released August 14, 2026">
+        2026.8.2
+      </a>
+    </div>
+
+    <div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
+      <nav>
+        <input type="checkbox" id="toggle" />
+        <label
+          for="toggle"
+          class="toggle"
+          data-open="Main Menu"
+          data-close="⨉"
+        ></label>
+        <ul class="menu pull-right">
+          <li><a  href="/installation/">Getting started</a></li>
+          <li>
+            <a class="active" href="/docs/">Documentation <iconify-icon inline icon='mdi:chevron-down' title='Chevron down'></iconify-icon></a>
+            <ul>
+              <li><a href="/installation/"><iconify-icon inline icon='simple-icons:homeassistant' title='Homeassistant'></iconify-icon> Installation</a></li>
+              <li><a href="/docs/automation/"><iconify-icon inline icon='mdi:robot-happy' title='Robot happy'></iconify-icon> Automations</a></li>
+              <li><a href="/dashboards/"><iconify-icon inline icon='mdi:gauge' title='Gauge'></iconify-icon> Dashboards</a></li>
+              <li><a href="/voice_control/"><iconify-icon inline icon='mdi:comment-processing-outline' title='Comment processing outline'></iconify-icon> Voice assistants</a></li>
+              <li><a href="/docs/organizing/"><iconify-icon inline icon='mdi:view-grid' title='View grid'></iconify-icon> Device organization</a></li>
+              <li><a href="/docs/energy/"><iconify-icon inline icon='mdi:solar-power-variant' title='Solar power variant'></iconify-icon> Energy management</a></li>
+              <li><a href="/docs/templating/"><iconify-icon inline icon='mdi:code-braces' title='Code braces'></iconify-icon> Templating</a></li>
+              <li><a href="/docs/configuration/"><iconify-icon inline icon='mdi:cog' title='Cog'></iconify-icon> Configuration using the YAML file</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Our hardware <iconify-icon inline icon='mdi:chevron-down' title='Chevron down'></iconify-icon></a>
+            <ul>
+              <li><a href="/green/">Home Assistant Green</a></li>
+              <li><a href="/connect/zbt-2/">Connect ZBT-2</a></li>
+              <li><a href="/connect/zwa-2/">Connect ZWA-2</a></li>
+              <li><a href="/voice-pe/">Voice Preview Edition</a></li>
+            </ul>
+          </li>
+          <li><a  href="/integrations/">Integrations</a></li>
+          <li><a  href="/blog/">Blog</a></li>
+          <li><a  href="/help/">Need help?</a></li>
+          <li>
+            <div class="docsearch" id="docsearch"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    </header>
+
+    <div class="page-content">
+
+      
+
+      <div class="grid-wrapper">
+        <div class="grid grid-center">
+
+          <aside id="toc-bar" class="grid__item desk-wide-one-sixth">
+                
+                <section class="aside-module grid__item one-whole">
+                  <div class='section'>
+                    <label for="toc-toggle"><span class="title epsilon"><iconify-icon inline icon='mdi:toc' title='Toc'></iconify-icon> On this page</span> <input type="checkbox" id="toc-toggle"/> <span class="toc-current"></span></label>
+                    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#area">Area</a></li>
+<li class="toc-entry toc-h2"><a href="#floor">Floor</a></li>
+<li class="toc-entry toc-h2"><a href="#labels">Labels</a></li>
+<li class="toc-entry toc-h2"><a href="#category">Category</a></li>
+<li class="toc-entry toc-h2"><a href="#group-integration">Group Integration</a></li>
+<li class="toc-entry toc-h2"><a href="#related-topics">Related topics</a></li>
+</ul>
+                  </div>
+                </section>
+              </aside>
+
+          
+          
+
+          
+          <div class="grid__item two-thirds desk-wide-seven-twelfths lap-one-whole palm-one-whole">
+          
+
+            
+              <article class="page">
+  
+  <header>
+    
+    
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        
+          
+            
+            ▸ <a href="/docs/">Documentation</a>
+          
+        
+          
+        
+      </div>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.home-assistant.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Documentation",
+            "item": "https://www.home-assistant.io/docs/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Grouping your assets",
+            "item": "https://www.home-assistant.io/docs/organizing/"
+          }
+        ]
+      }
+      </script>
+    
+    <h1 class="title indent">
+      
+        Grouping your assets
+      
+    </h1>
+  </header>
+  
+  
+  <p>Once you have more devices, you may want to target entire groups of devices in automations. It also becomes more challenging to find items in lists.</p>
+<p>There are a few tools to group your assets: <a href="#area">Areas</a>, <a href="#floor">floors</a>, <a href="#labels">labels</a>, <a href="#category">categories</a> and <a href="#group-integration">group integration</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Taxonomy</th>
+<th>Automation target</th>
+<th>Entity can have multiple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Area</td>
+<td><iconify-icon inline icon="openmoji:check-mark" title="Check mark"></iconify-icon></td>
+<td><iconify-icon inline icon="openmoji:cross-mark" title="Cross mark"></iconify-icon></td>
+</tr>
+<tr>
+<td>Floor</td>
+<td><iconify-icon inline icon="openmoji:check-mark" title="Check mark"></iconify-icon></td>
+<td><iconify-icon inline icon="openmoji:cross-mark" title="Cross mark"></iconify-icon></td>
+</tr>
+<tr>
+<td>Label</td>
+<td><iconify-icon inline icon="openmoji:check-mark" title="Check mark"></iconify-icon></td>
+<td><iconify-icon inline icon="openmoji:check-mark" title="Check mark"></iconify-icon></td>
+</tr>
+<tr>
+<td>Category</td>
+<td><iconify-icon inline icon="openmoji:cross-mark" title="Cross mark"></iconify-icon></td>
+<td><iconify-icon inline icon="openmoji:cross-mark" title="Cross mark"></iconify-icon></td>
+</tr>
+<tr>
+<td>Group integration</td>
+<td><iconify-icon inline icon="openmoji:check-mark" title="Check mark"></iconify-icon></td>
+<td><iconify-icon inline icon="openmoji:check-mark" title="Check mark"></iconify-icon></td>
+</tr>
+</tbody>
+</table>
+<p>For example, a smart plug with energy monitoring is a single device, but it has multiple entities of different types: a switch entity and a sensor entity. Each of those entities can only belong to one area and one floor, but they can each have multiple labels and be a member of multiple groups.</p>
+<p>When you assign a device to an area, all its entities inherit that area. You can override this for individual entities. For example, you could keep the sensor entities of the smart plug in the living room, but assign the switch entity to the kitchen.</p>
+<h2>Area <a class="title-link" name="area" href="#area"></a>
+</h2>
+<ul>
+<li>
+<p>Groups <span class="terminology">devices<span class="terminology-tooltip">A device is a model representing a physical or logical unit that contains entities.</span></span> and <span class="terminology">entities<span class="terminology-tooltip">An entity represents a sensor, actor, or function in Home Assistant. Entities are used to monitor physical properties or to control other entities. An entity is usually part of a device or a service.<a class="terminology-link" href="/docs/configuration/entities_domains/"> [Learn more]</a></span></span>.</p>
+</li>
+<li>
+<p>Can be assigned to one floor.</p>
+</li>
+<li>
+<p>Reflects a physical area (or room) in your home.</p>
+</li>
+<li>
+<p>Can be used in automations: Allows targeting an entire group of devices with an action. For example, turning off all the lights in the living room.</p>
+</li>
+<li>
+<p>Areas can also be used to automatically generate cards, such as the <a href="/dashboards/area/">Area card</a>.</p>
+</li>
+</ul>
+<h2>Floor <a class="title-link" name="floor" href="#floor"></a>
+</h2>
+<ul>
+<li>Groups areas.</li>
+<li>
+<span class="terminology">Devices<span class="terminology-tooltip">A device is a model representing a physical or logical unit that contains entities.</span></span> and <span class="terminology">entities<span class="terminology-tooltip">An entity represents a sensor, actor, or function in Home Assistant. Entities are used to monitor physical properties or to control other entities. An entity is usually part of a device or a service.<a class="terminology-link" href="/docs/configuration/entities_domains/"> [Learn more]</a></span></span> cannot be assigned to floors, but to areas only.</li>
+<li>Can have multiple areas.</li>
+<li>Can be used in automations and scripts as a target for actions. For example, to turn off all the lights on the downstairs floor when you go to bed.</li>
+</ul>
+<img class="no-shadow" src="/images/organizing/floors.png" alt="Screenshots showing areas settings page, which now also shows the areas grouped by floor.">
+<h2>Labels <a class="title-link" name="labels" href="#labels"></a>
+</h2>
+<ul>
+<li>Can be assigned to areas, devices, entities, automations, scenes, scripts, and helpers.</li>
+<li>Can be used in automations and scripts as a target for actions.</li>
+<li>Labels can also be used to filter data in tables. For example, you can filter the list of devices to show only devices with the label <code>heavy energy usage</code> or turn these devices off when there is not a lot of solar energy available.</li>
+</ul>
+<img class="no-shadow" src="/images/organizing/labels.png" alt="Screenshots showing the new labels assigned to automations.">
+<h2>Category <a class="title-link" name="category" href="#category"></a>
+</h2>
+<ul>
+<li>Groups items in a table.</li>
+<li>Categories are unique for each table. The automations page can have different categories than the scene, scripts, or helpers settings page.</li>
+</ul>
+<img class="no-shadow" src="/images/organizing/categories.png" alt="Screenshots the new categories. Automations are grouped into their categories, making it easier to get an overview or to filter them.">
+<h2>Group Integration <a class="title-link" name="group-integration" href="#group-integration"></a>
+</h2>
+<ul>
+<li>Designed to combine multiple entities into one entity representing the group.</li>
+<li>The combined entity can also have an area and labels.</li>
+<li>An entity can be a member of multiple groups.</li>
+<li>Can be used in automations and scripts as a target for actions.</li>
+<li>Does not assist with organizing entities in the UI like the other methods above. For example, you cannot use group integration to sort or filter other entities.</li>
+</ul>
+
+
+  
+
+<div class="text related-topics">
+  <h2>Related topics<a class="title-link" href="#related-topics" name="related-topics"></a>
+</h2>
+  <ul>
+    
+    
+    
+    
+    
+    <li>
+      <a href="/docs/organizing/areas/" class="topic">
+        Areas
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    <li>
+      <a href="/docs/organizing/floors/" class="topic">
+        Floors
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    <li>
+      <a href="/docs/organizing/labels/" class="topic">
+        Labels
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    <li>
+      <a href="/docs/organizing/categories/" class="topic">
+        Categories
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    <li>
+      <a href="/integrations/group/" class="topic">
+        Group integration
+      </a>
+    </li>
+    </ul>
+</div>
+
+
+  
+<div class="material-card text feedback">
+  <h4>
+<iconify-icon inline icon="mdi:feedback" title="Feedback"></iconify-icon> <b> Help us improve our documentation</b><a href="#feedback_section" class="title-link" name="feedback_section"></a>
+</h4>
+  Suggest an edit to this page, or provide/view feedback for this page.
+  <div class="links">
+    <ul aria-label="Page feedback options">
+    <li><a href="https://github.com/home-assistant/home-assistant.io/tree/current/source/_docs/organizing.markdown" target="_blank" title="Edit this page" rel="external nofollow"><iconify-icon inline icon="mdi:edit"></iconify-icon> Edit</a></li>
+    
+    <li><a href="https://github.com/home-assistant/home-assistant.io/issues/new?template=feedback.yml&amp;url=https%3A%2F%2Fwww.home-assistant.io%2Fdocs%2Forganizing%2F&amp;version=2026.8.2&amp;labels=current" target="_blank" title="Provide feedback on this page" rel="external nofollow"><iconify-icon inline icon="mdi:comment-edit-outline"></iconify-icon> Provide feedback</a></li>
+    <li><a href="https://github.com/home-assistant/home-assistant.io/issues?utf8=%E2%9C%93&amp;q=%22%2Fdocs%2Forganizing%2F%22&amp;in=body" target="_blank" title="View given feedback for this page" rel="external nofollow"><iconify-icon inline icon="mdi:comment-text-multiple-outline"></iconify-icon> View given feedback</a></li>
+    
+  </ul>
+  </div>
+</div>
+
+
+</article>
+
+            
+          </div>
+
+
+          
+          
+          
+          
+            
+              <aside id="sidebar" class="grid__item one-third desk-wide-one-quarter lap-one-whole palm-one-whole">
+            
+            <div class="grid">
+  
+
+
+
+
+  <section class="vertical-nav aside-module grid__item one-whole lap-one-half">
+  <div class="section">
+    <h2 class="h1 title epsilon"><iconify-icon inline icon='mdi:bookshelf' title='Bookshelf'></iconify-icon> Documentation</h2>
+    <ul class="divided sidebar-menu">
+      <li>
+        <a  href='/docs/'>Overview </a>
+        |
+        <a  href='/faq/'>FAQ </a>
+        |
+        <a  href='/docs/glossary/'>Glossary </a>
+      </li>
+
+      <li>
+  <iconify-icon icon="mdi:robot-happy"></iconify-icon> <a  href='/docs/automation/'>Automations </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:gauge' title='Gauge'></iconify-icon> <a  href='/dashboards'>Dashboards </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:microphone' title='Microphone'></iconify-icon> <a  href='/voice_control/'>Voice assistants </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:category' title='Category'></iconify-icon> <a class='active' href='/docs/organizing/'>Organization </a>
+  
+  <ul>
+    <li><a class='active' href='/docs/organizing/'>Grouping your assets </a></li>
+    <li><a  href='/docs/organizing/tables'>Working with tables </a></li>
+    <li><a  href='/docs/organizing/areas/'>Areas </a></li>
+    <li><a  href='/docs/organizing/floors/'>Floors </a></li>
+    <li><a  href='/docs/organizing/labels/'>Labels </a></li>
+    <li><a  href='/docs/organizing/categories/'>Categories </a></li>
+    <li><a  href='/docs/frontend/icons/'>Icons </a></li>
+  </ul>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:solar-power-variant' title='Solar power variant'></iconify-icon> <a  href='/docs/energy/'>Home energy management </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:code-braces' title='Code braces'></iconify-icon> <a  href='/docs/templating/'>Templating </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:update' title='Update'></iconify-icon> <a  href='/common-tasks/general/'>Common tasks </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:cogs' title='Cogs'></iconify-icon> <a  href='/docs/configuration/basic'>Configuration </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:account-security' title='Account security'></iconify-icon> <a  href='/docs/authentication/'>Authentication </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:palette' title='Palette'></iconify-icon> <a  href='/docs/tools/'>Tools and helpers </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:cellphone' title='Cellphone'></iconify-icon> <a href="https://companion.home-assistant.io/docs">iOS and Android apps</a>
+</li>
+
+<li>
+  <iconify-icon inline icon='bitcoin-icons:node-hardware-filled' title='Node hardware filled'></iconify-icon> Official hardware
+  <ul>
+    <li><a href="https://support.nabucasa.com/hc/categories/24638797677853">Home Assistant Green</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24734620813469">Home Assistant Connect ZBT-1</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/29400540866973">Home Assistant Connect ZBT-2</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/28669861145885">Home Assistant Connect ZWA-2</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24734575925149">Home Assistant Yellow</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24451727188125">Home Assistant Voice Preview Edition</a></li>
+  </ul>
+</li>
+
+    </ul>
+  </div>
+</section>
+
+<section id="toc-module" class="aside-module grid__item one-whole lap-one-half">
+        <div class='section'>
+          <h2 class="h1 title epsilon"><iconify-icon inline icon='mdi:toc' title='Toc'></iconify-icon> On this page</h2>
+          <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#area">Area</a></li>
+<li class="toc-entry toc-h2"><a href="#floor">Floor</a></li>
+<li class="toc-entry toc-h2"><a href="#labels">Labels</a></li>
+<li class="toc-entry toc-h2"><a href="#category">Category</a></li>
+<li class="toc-entry toc-h2"><a href="#group-integration">Group Integration</a></li>
+<li class="toc-entry toc-h2"><a href="#related-topics">Related topics</a></li>
+</ul>
+        </div>
+      </section>
+</div>
+
+          </aside>
+          
+        </div>
+      </div>
+
+      
+        <button id="back-to-top-button" type="button" aria-label="Back to top" aria-describedby="back-to-top-tooltip">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <g id="back-to-top">
+              <circle id="background" cx="20" cy="20" r="20" fill="#18BCF2"/>
+              <path id="arrow" d="M20 18.8L15.4 23.4L14 22L20 16L26 22L24.6 23.4L20 18.8Z" fill="white"/>
+              <circle id="depth" cx="20" cy="20.0098" r="17" transform="rotate(-90 20 20.0098)" stroke="white" stroke-width="2"/>
+            </g>
+          </svg>
+
+          <div id="back-to-top-tooltip" class="back-to-top-btn-tooltip">Back to top</div>
+        </button>
+      
+
+      <footer>
+        <div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item">
+      <div class="skyline grid">
+        <div class="skyline grid__item one-whole">
+          <div class="footer-skyline">
+          </div>
+        </div>
+      </div>
+      <div class="footer-nav grid">
+        <div class="company grid__item one-quarter lap-one-half palm-one-whole">
+          <div class="title">
+            <img
+              src="/images/footer-logo-text.svg"
+              height="72"
+              alt="Home Assistant"
+            />
+          </div>
+          <p>
+            Home Assistant is a project from the <a href="https://www.openhomefoundation.org/">Open Home Foundation</a>.
+          </p>
+        </div>
+
+        <div class="grid__item one-quarter lap-one-half palm-one-whole">
+          <h3>Join us and contribute!</h3>
+          <ul>
+            <li><a class="external-link" href="https://github.com/home-assistant/">GitHub repo</a></li>
+            <li><a class="external-link" href="https://developers.home-assistant.io">Developers Portal</a></li>
+            <li><a class="external-link" href="https://design.home-assistant.io">Design Portal</a></li>
+            <li><a class="external-link" href="https://data.home-assistant.io">Data Science Portal</a></li>
+            <li><a class="external-link" href="https://community.home-assistant.io">Community Forum</a></li>
+            <li><a class="external-link" href="https://creators.home-assistant.io/">Creator Network</a></li>
+            <li><a class="external-link" href="https://works-with.home-assistant.io/">Works with Home Assistant</a></li>
+            <li><a href="/community">Our community</a></li>
+            <li><a href="/help/reporting_issues/">Reporting issues</a></li>
+          </ul>
+          <h3>System status</h3>
+          <ul>
+            <li>
+              <a class="external-link"  href="https://alerts.home-assistant.io">Integration Alerts</a>
+            </li>
+            <li><a href="/security/">Security Alerts</a></li>
+            <li>
+              <a class="external-link" href="https://status.home-assistant.io">System Status</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__item one-quarter lap-one-half palm-one-whole">
+          <h3>Companion apps</h3>
+          <ul>
+            <li><a class="external-link" href="https://apps.apple.com/app/id1099568401">iOS and Apple devices</a></li>
+            <li><a class="external-link" href="https://play.google.com/store/apps/details?id=io.homeassistant.companion.android">Android and Wear OS</a></li>
+            <li><a class="external-link" href="https://companion.home-assistant.io/">...and more!</a></li>
+          </ul>
+
+          <h3>Support us</h3>
+          <ul>
+            <li><a href="https://store.openhomefoundation.org" target="_blank">Merch store</a></li>
+            <li><a href="/cloud/">Home Assistant Cloud</a></li>
+          </ul>
+
+          <h3>Governance</h3>
+          <ul>
+            <li><a href="/privacy/">Privacy Notices</a></li>
+            <li><a href="/developers/cla/">Contributor License Agreement</a></li>
+            <li><a href="/tos/">Terms of Service</a></li>
+            <li><a href="/code_of_conduct/">Code of Conduct</a></li>
+            <li><a href="/developers/credits/">Credits</a></li>
+            <li><a href="/developers/license/">License</a></li>
+          </ul>
+        </div>
+
+        <div class="socials grid__item one-quarter lap-one-half palm-one-whole">
+
+          <h3>Follow us</h3>
+          <p><a class="external-link" href='https://newsletter.openhomefoundation.org/#/portal'>Sign up for our newsletter</a></p>
+          <ul class="icons">
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://youtube.com/@home_assistant"
+                title="YouTube"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://reddit.com/r/homeassistant"
+                title="Reddit"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:reddit"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://github.com/home-assistant"
+                title="GitHub"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:github"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://fosstodon.org/@homeassistant"
+                title="Mastodon"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:mastodon"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://bsky.app/profile/home-assistant.io"
+                title="Bluesky"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:bluesky"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://x.com/home_assistant"
+                title="X (formerly Twitter)"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:x"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.facebook.com/homeassistantio"
+                title="Facebook"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.instagram.com/homeassistant/"
+                title="Instagram"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.linkedin.com/company/home-assistant"
+                title="LinkedIn"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+            </li>
+            
+          </ul>
+
+          <div class="web-notice">
+            <p>
+              For partnership inquiries please check out <a href="https://works-with.home-assistant.io/">Works with Home Assistant</a>. For media, <a href="/cdn-cgi/l/email-protection#137e76777a72537c63767d7b7c7e76757c667d7772677a7c7d3d7c6174">email our team</a>. For other questions, you can <a href="/cdn-cgi/l/email-protection#95fdf0f9f9fad5fdfaf8f0b8f4e6e6fce6e1f4fbe1bbfcfa">contact support</a> (No technical support!)
+            </p>
+            <p>
+              Website powered by <a href="https://jekyllrb.com/">Jekyll</a><br />
+              Originally based on the <a href="https://github.com/coogie/oscailte">Oscailte theme</a>
+            </p>
+            <a href="https://www.netlify.com">
+              <img
+                src="/images/frontpage/netlify.svg"
+                alt="Deploys by Netlify Badge"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </footer>
+
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.3.1/lite-youtube.js" integrity="sha384-7o3d1sg8jSS1LMKzzIEucWtWFI1X4lFCC5gu2ylAgH3KmHcJgjTqp6LWfIvbbmf9" crossorigin="anonymous"></script>
+
+<script src="/javascripts/terminology_tooltip.js?e20ec01246c34f18bd926ceed25bc742" type="text/javascript" defer></script>
+
+<script src="/javascripts/prism.js?5d6619066a1fc5cd819a93c132b539ac" type="text/javascript" defer></script>
+<script src="/javascripts/prism-signature.js?c46f2dc6f8d4fd987db580bda61368b5" type="text/javascript" defer></script>
+<script src="/javascripts/prism-jinja2.js?b7346561200c43c055e61149a77b3187" type="text/javascript" defer></script>
+<script src="/static/doc-data-640212571aa9.js" type="text/javascript" defer></script>
+<script src="/javascripts/prism-template-links.js?7bedbf54ec266241edb843530c111903" type="text/javascript" defer></script>
+<script src="/javascripts/prism-doc-links.js?aecc2ca96596f960444d87dad9394ee3" type="text/javascript" defer></script>
+<script src="/javascripts/docsearch-options.js?e5a07874723ea642e221f06a88902a18" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.min.js" integrity="sha384-f/IEhh8fvOc2ALU79emLlUqAYXyqlA/zYhM+g5GlWMk15QBjTXy05TtmfT1TbtV6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  docsearch({
+    container: '#docsearch',
+    appId: 'FBHBYS3J0U',
+    indexName: 'home-assistant',
+    apiKey: "fcd41bf156f5ee0e390f8b860e3a2489",
+    transformItems(items) {
+      return items.map((item) => ({
+        ...item,
+        url: rewriteDocSearchPreviewUrl(item.url),
+        url_without_anchor: rewriteDocSearchPreviewUrl(item.url_without_anchor),
+      }));
+    },
+  });
+  document.querySelector('.site-title').addEventListener('contextmenu', function (ev) {
+    ev.preventDefault();
+    document.location.assign("https://design.home-assistant.io/#brand/logo")
+  });
+</script>
+
+
+
+
+<script type="text/javascript">
+  {
+    const article = document.querySelector("article.post");
+    if (article) {
+      const iframes = article.querySelectorAll("iframe[data-src]");
+      let loaded = false;
+      if (iframes) {
+        document.addEventListener('mousemove', loadLazyFrames, { passive: true, once: true });
+        document.addEventListener('touchmove', loadLazyFrames, { passive: true, once: true });
+        document.addEventListener('scroll', loadLazyFrames, { passive: true, once: true });
+
+        function loadLazyFrames() {
+          if (loaded) return;
+          loaded = true;
+
+          iframes.forEach((iframe) => {
+            const src = iframe.getAttribute("data-src");
+            if (src) {
+              iframe.setAttribute("src", src);
+              iframe.removeAttribute("data-src");
+            }
+          });
+        }
+      }
+    }
+  }
+</script>
+
+
+<script type="text/javascript">
+  {
+    const scrollButton = document.getElementById("back-to-top-button");
+    const depthCircle = document.getElementById("depth");
+    const footer = document.querySelector("footer");
+
+    if (scrollButton && depthCircle && footer) {
+      const circumference = depthCircle.getTotalLength();
+
+      depthCircle.style.strokeDasharray = circumference;
+      depthCircle.style.strokeDashoffset = circumference;
+
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        const footerTop = footer.offsetTop;
+        const windowHeight = window.innerHeight;
+
+        const scrollStart = 0;
+        const scrollEnd = footerTop - windowHeight;
+        let scrollProgress;
+
+        if (scrollEnd <= scrollStart) {
+          scrollProgress = 1;
+        } else {
+          scrollProgress = Math.min(
+            Math.max((scrollY - scrollStart) / (scrollEnd - scrollStart), 0),
+            1
+          );
+        }
+
+        const footerOffset = -50;
+        const footerIsVisible = scrollY + windowHeight >= footerTop - footerOffset;
+
+        if (scrollY > 100 && !footerIsVisible) {
+          scrollButton.classList.add("visible");
+        } else {
+          scrollButton.classList.remove("visible");
+        }
+
+        const offset = circumference - (scrollProgress * circumference);
+        depthCircle.style.strokeDashoffset = offset;
+      };
+
+      scrollButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      handleScroll();
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  // Re-scroll to the hash anchor after page layout has settled.
+  // Browsers attempt the initial scroll before fonts, icons, and deferred
+  // scripts finish loading, so the target position is often wrong.
+  if (window.location.hash) {
+    window.addEventListener("load", function () {
+      requestAnimationFrame(function () {
+        var el = document.querySelector(window.location.hash);
+        if (el) el.scrollIntoView();
+      });
+    });
+  }
+</script>
+
+<script type="text/javascript">
+  {
+    const tocCurrent = document.querySelector(".toc-current");
+    const blogTocList = document.querySelector("#toc-module #toc");
+
+    if (tocCurrent || blogTocList) {
+      const headings = Array.from(
+        document.querySelectorAll("article h2, article h3")
+      );
+
+      if (headings.length > 0) {
+        const getHeadingText = (heading) =>
+          heading.childNodes[0].textContent.trim();
+
+        if (tocCurrent) {
+          tocCurrent.textContent = getHeadingText(headings[0]);
+        }
+
+        const siteHeader = document.querySelector(".site-header");
+        const tocBar = document.getElementById("toc-bar");
+
+        const getScrollOffset = () => {
+          if (siteHeader && (window.innerWidth > 1280)) {
+            return siteHeader.offsetHeight + 58;
+          } else if (siteHeader && tocBar) {
+            return siteHeader.offsetHeight + tocBar.offsetHeight + 20;
+          }
+
+          return 140;
+        };
+
+        const updateTocCurrent = () => {
+          const scrollY = window.scrollY + getScrollOffset();
+          let current = headings[0];
+
+          for (const heading of headings) {
+            if (heading.offsetTop <= scrollY) {
+              current = heading;
+            } else {
+              break;
+            }
+          }
+
+          if (tocCurrent) {
+            tocCurrent.textContent = getHeadingText(current);
+          }
+
+          const titleLink = current.querySelector("a.title-link");
+          const slug = titleLink && titleLink.getAttribute("name");
+
+          const tocLists = [
+            document.querySelector("#toc-bar #toc"),
+            blogTocList,
+          ].filter(Boolean);
+
+          for (const tocList of tocLists) {
+            tocList.querySelectorAll("a[aria-current]").forEach((a) => {
+              a.removeAttribute("aria-current");
+            });
+            if (slug) {
+              const activeLink = tocList.querySelector(`a[href="#${slug}"]`);
+              if (activeLink) {
+                activeLink.setAttribute("aria-current", "true");
+              }
+            }
+          }
+        };
+
+        window.addEventListener("scroll", updateTocCurrent, { passive: true });
+        updateTocCurrent();
+      }
+
+      const tocToggle = document.getElementById("toc-toggle");
+      const tocList = document.getElementById("toc");
+      if (tocToggle && tocList) {
+        tocList.addEventListener("click", (e) => {
+          if (e.target.closest("a")) {
+            tocToggle.checked = false;
+          }
+        });
+      }
+    }
+  }
+</script>
+
+
+  </body>
+</html>

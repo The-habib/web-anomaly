@@ -1,0 +1,918 @@
+
+
+<!doctype html>
+  <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboards - Home Assistant</title>
+    <meta name="author" content="Home Assistant">
+    <meta name="description" content="Build customizable dashboards for your smart home with drag and drop, no coding required.">
+    
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="canonical" href="https://www.home-assistant.io/dashboards/">
+    
+
+    
+
+
+
+
+<meta property="fb:app_id" content="338291289691179">
+<meta property="og:title" content="Dashboards">
+<meta property="og:site_name" content="Home Assistant">
+
+<meta property="og:url" content="https://www.home-assistant.io/dashboards/">
+
+<meta property="og:type" content="website">
+<meta property="og:description" content="Build customizable dashboards for your smart home with drag and drop, no coding required.">
+<meta property="og:image" content="https://www.home-assistant.io/images/default-social.png">
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@home_assistant">
+
+<meta name="twitter:title" content="Dashboards">
+<meta name="twitter:description" content="Build customizable dashboards for your smart home with drag and drop, no coding required.">
+<meta name="twitter:image" content="https://www.home-assistant.io/images/default-social.png">
+
+
+
+<link rel="me" href="https://fosstodon.org/@homeassistant">
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3/dist/style.min.css" rel="stylesheet" />
+    <link href="/stylesheets/prism.css?1304e8e8c717584921b418a0a8dca04b" rel="stylesheet">
+    <link href="/stylesheets/screen.css?4290b2a2ad5b90daa18b608d9c7479f5" media="screen, projection, print" rel="stylesheet">
+    <link href="/atom.xml" rel="alternate" title="Home Assistant" type="application/atom+xml">
+    <link rel='shortcut icon' href='/images/favicon.ico' />
+    <link rel='icon' type='image/png' href='/images/favicon-192x192.png' sizes='192x192' />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Instrument+Sans:ital,wdth,wght@0,99,400..700;1,99,400..700&amp;" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" integrity="sha384-GPb5RlngihS9H0z1D137JsvzmeZ7tCpWEF4t5YDoTZyMsPP8S7h7vFDh4XhheU83" crossorigin="anonymous"></script>
+  </head>
+
+  <body  class="documentation-page   ">
+    <header class='site-header '>
+      
+
+
+
+<div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
+      <a href="/" class="site-title">
+        <div class="logo"></div>
+      </a>
+      <a class="release-date" href="/blog/2026/08/05/release-20268/" title="Latest version 2026.8.2 released August 14, 2026">
+        2026.8.2
+      </a>
+    </div>
+
+    <div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
+      <nav>
+        <input type="checkbox" id="toggle" />
+        <label
+          for="toggle"
+          class="toggle"
+          data-open="Main Menu"
+          data-close="⨉"
+        ></label>
+        <ul class="menu pull-right">
+          <li><a  href="/installation/">Getting started</a></li>
+          <li>
+            <a class="active" href="/docs/">Documentation <iconify-icon inline icon='mdi:chevron-down' title='Chevron down'></iconify-icon></a>
+            <ul>
+              <li><a href="/installation/"><iconify-icon inline icon='simple-icons:homeassistant' title='Homeassistant'></iconify-icon> Installation</a></li>
+              <li><a href="/docs/automation/"><iconify-icon inline icon='mdi:robot-happy' title='Robot happy'></iconify-icon> Automations</a></li>
+              <li><a href="/dashboards/"><iconify-icon inline icon='mdi:gauge' title='Gauge'></iconify-icon> Dashboards</a></li>
+              <li><a href="/voice_control/"><iconify-icon inline icon='mdi:comment-processing-outline' title='Comment processing outline'></iconify-icon> Voice assistants</a></li>
+              <li><a href="/docs/organizing/"><iconify-icon inline icon='mdi:view-grid' title='View grid'></iconify-icon> Device organization</a></li>
+              <li><a href="/docs/energy/"><iconify-icon inline icon='mdi:solar-power-variant' title='Solar power variant'></iconify-icon> Energy management</a></li>
+              <li><a href="/docs/templating/"><iconify-icon inline icon='mdi:code-braces' title='Code braces'></iconify-icon> Templating</a></li>
+              <li><a href="/docs/configuration/"><iconify-icon inline icon='mdi:cog' title='Cog'></iconify-icon> Configuration using the YAML file</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Our hardware <iconify-icon inline icon='mdi:chevron-down' title='Chevron down'></iconify-icon></a>
+            <ul>
+              <li><a href="/green/">Home Assistant Green</a></li>
+              <li><a href="/connect/zbt-2/">Connect ZBT-2</a></li>
+              <li><a href="/connect/zwa-2/">Connect ZWA-2</a></li>
+              <li><a href="/voice-pe/">Voice Preview Edition</a></li>
+            </ul>
+          </li>
+          <li><a  href="/integrations/">Integrations</a></li>
+          <li><a  href="/blog/">Blog</a></li>
+          <li><a  href="/help/">Need help?</a></li>
+          <li>
+            <div class="docsearch" id="docsearch"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    </header>
+
+    <div class="page-content">
+
+      
+
+      <div class="grid-wrapper">
+        <div class="grid grid-center">
+
+          
+
+          
+          
+
+          
+          <div class="grid__item two-thirds desk-wide-seven-twelfths lap-one-whole palm-one-whole">
+          
+
+            
+              <article class="page">
+  
+  <header>
+    
+    
+    <h1 class="title indent">
+      
+        Dashboards
+      
+    </h1>
+  </header>
+  
+  
+  <p>Your dashboard is what you and your family see when you open the Home Assistant app or website. It is the at-a-glance view of your home: which lights are on, what the temperature is in each room, who is home, and what is happening right now. From the same dashboard, a single tap dims the lights, starts your robot vacuum, or arms the alarm.</p>
+<p>Home Assistant comes with a dashboard out of the box, automatically generated from the devices you add. From there, you can build your own dashboards visually, with drag and drop, no coding required. Make a focused dashboard for the kitchen tablet, a simple one for guests, and a detailed one for yourself.</p>
+<p>You can customize your dashboard using various options:</p>
+<ul>
+<li>Different card types to visualize your data and control your smart home devices.</li>
+<li>
+<a href="/integrations/frontend/#defining-themes">Themes</a> (even at a per card basis).</li>
+<li>Override names and icons of entities.</li>
+<li>Use custom cards from our amazing community.</li>
+</ul>
+<p class="img">
+  <img src="/images/dashboards/section_view_rearrange_cards.gif" alt="Screencast showing how to edit a dashboard in section view and how to rearrange cards">
+  Screencast showing how to edit a dashboard in section view and how to rearrange cards
+</p>
+<h2>Explore the interactive demo dashboard <a class="title-link" name="explore-the-interactive-demo-dashboard" href="#explore-the-interactive-demo-dashboard"></a>
+</h2>
+<p>Try it yourself with <a href="https://demo.home-assistant.io">the interactive demo</a>.</p>
+<h2>Get started with your own dashboard <a class="title-link" name="get-started-with-your-own-dashboard" href="#get-started-with-your-own-dashboard"></a>
+</h2>
+<p>To create your own dashboard, follow the steps on <a href="/dashboards/dashboards/#creating-a-new-dashboard">creating a new dashboard</a>.</p>
+<h2>Discuss dashboard <a class="title-link" name="discuss-dashboard" href="#discuss-dashboard"></a>
+</h2>
+<ul>
+<li>Suggestions are welcome in the <a href="https://github.com/home-assistant/frontend/" rel="external nofollow">frontend repository</a>
+</li>
+<li>For help with dashboards, join the <code>#frontend</code> channel on <a href="/join-chat/">our chat</a> or <a href="https://community.home-assistant.io/c/34">our forums</a>
+</li>
+</ul>
+
+
+  
+
+<div class="text related-topics">
+  <h2>Related topics<a class="title-link" href="#related-topics" name="related-topics"></a>
+</h2>
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      <a href="/dashboards/dashboards/#creating-a-new-dashboard" class="topic">
+        Creating a new dashboard
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    <li>
+      <a href="/dashboards/cards/" class="topic">
+        About cards
+      </a>
+    </li>
+    </ul>
+</div>
+
+
+<div class="text related-links">
+  <h2>Related links<a class="title-link" href="#related-links" name="related-links"></a>
+</h2>
+  <ul>
+    
+    <li><a href="https://demo.home-assistant.io" class="link" target="_blank">Interactive dashboard demo</a></li>
+    
+    <li><a href="https://home-assistant-cards.bessarabov.com/" class="link" target="_blank" rel="external nofollow">Home Assistant cards</a></li>
+    
+    <li><a href="https://github.com/custom-cards" class="link" target="_blank" rel="external nofollow">Community custom cards</a></li>
+    
+  </ul>
+</div>
+
+  
+<div class="material-card text feedback">
+  <h4>
+<iconify-icon inline icon="mdi:feedback" title="Feedback"></iconify-icon> <b> Help us improve our documentation</b><a href="#feedback_section" class="title-link" name="feedback_section"></a>
+</h4>
+  Suggest an edit to this page, or provide/view feedback for this page.
+  <div class="links">
+    <ul aria-label="Page feedback options">
+    <li><a href="https://github.com/home-assistant/home-assistant.io/tree/current/source/dashboards/index.markdown" target="_blank" title="Edit this page" rel="external nofollow"><iconify-icon inline icon="mdi:edit"></iconify-icon> Edit</a></li>
+    
+    <li><a href="https://github.com/home-assistant/home-assistant.io/issues/new?template=feedback.yml&amp;url=https%3A%2F%2Fwww.home-assistant.io%2Fdashboards%2F&amp;version=2026.8.2&amp;labels=current" target="_blank" title="Provide feedback on this page" rel="external nofollow"><iconify-icon inline icon="mdi:comment-edit-outline"></iconify-icon> Provide feedback</a></li>
+    <li><a href="https://github.com/home-assistant/home-assistant.io/issues?utf8=%E2%9C%93&amp;q=%22%2Fdashboards%2F%22&amp;in=body" target="_blank" title="View given feedback for this page" rel="external nofollow"><iconify-icon inline icon="mdi:comment-text-multiple-outline"></iconify-icon> View given feedback</a></li>
+    
+  </ul>
+  </div>
+</div>
+
+
+</article>
+
+            
+          </div>
+
+
+          
+          
+          
+          
+            
+              <aside id="sidebar" class="grid__item one-third desk-wide-one-quarter lap-one-whole palm-one-whole">
+            
+            <div class="grid">
+  
+
+
+
+
+  <section class="vertical-nav aside-module grid__item one-whole lap-one-half">
+  <div class="section">
+    <h2 class="h1 title epsilon"><iconify-icon inline icon='mdi:bookshelf' title='Bookshelf'></iconify-icon> Documentation</h2>
+    <ul class="divided sidebar-menu">
+      <li>
+        <a  href='/docs/'>Overview </a>
+        |
+        <a  href='/faq/'>FAQ </a>
+        |
+        <a  href='/docs/glossary/'>Glossary </a>
+      </li>
+
+      <li>
+  <iconify-icon icon="mdi:robot-happy"></iconify-icon> <a  href='/docs/automation/'>Automations </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:gauge' title='Gauge'></iconify-icon> <a  href='/dashboards'>Dashboards </a>
+  
+  <ul>
+    
+
+    <li>
+      <iconify-icon icon="mdi:about-circle"></iconify-icon> Dashboard basics
+      <ul>
+        <li><a class='active' href='/dashboards/'>Introduction </a></li>
+        <li><a  href='/dashboards/dashboards/'>Dashboard types </a></li>
+        <li><a  href='/dashboards/views/'>Views </a></li>
+        <li><a  href='/dashboards/cards/'>Cards </a></li>
+        <li><a  href='/dashboards/badges/'>Badges </a></li>
+      </ul>
+    </li>
+  
+    <li>
+      <iconify-icon icon="mdi:view-dashboard"></iconify-icon> View types
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/masonry/'>Masonry </a></li>
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/panel/'>Panel </a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/sections/'>Sections (default) </a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/sidebar/'>Sidebar </a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </li>
+  
+    <li>
+      <iconify-icon inline icon='mdi:card-multiple' title='Card multiple'></iconify-icon> Card types
+      <ul>
+        
+          
+            <li><a  href='/dashboards/logbook/'>Activity </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/alarm-panel/'>Alarm panel </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/area/'>Area </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/button/'>Button </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/calendar/'>Calendar </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/clock/'>Clock </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/conditional/'>Conditional </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/distribution/'>Distribution </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/energy/'>Energy cards </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/entities/'>Entities </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/entity/'>Entity </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/entity-filter/'>Entity filter </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/gauge/'>Gauge </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/glance/'>Glance </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/grid/'>Grid </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/heading/'>Heading </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/history-graph/'>History graph </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/horizontal-stack/'>Horizontal stack </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/humidifier/'>Humidifier </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/light/'>Light </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/map/'>Map </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/markdown/'>Markdown </a></li>
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/media-control/'>Media control </a></li>
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/picture/'>Picture </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/picture-elements/'>Picture elements </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/picture-entity/'>Picture entity </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/picture-glance/'>Picture glance </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/plant-status/'>Plant status </a></li>
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/sensor/'>Sensor </a></li>
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/shortcut/'>Shortcut </a></li>
+          
+        
+          
+        
+          
+            <li><a  href='/dashboards/statistic/'>Statistic </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/statistics-graph/'>Statistics graph </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/thermostat/'>Thermostat </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/tile/'>Tile </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/todo-list/'>To-do list </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/vertical-stack/'>Vertical stack </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/weather-forecast/'>Weather forecast </a></li>
+          
+        
+          
+            <li><a  href='/dashboards/iframe/'>Webpage </a></li>
+          
+        
+      </ul>
+    </li>
+  
+    <li>
+      <iconify-icon inline icon='mdi:cog' title='Cog'></iconify-icon> Dashboard configuration
+      <ul>
+        <li><a  href='/dashboards/features/'>Card features </a></li>
+        <li><a  href='/dashboards/header-footer/'>Card headers & footers </a></li>
+        <li><a  href='/dashboards/actions/'>Dashboard actions </a></li>
+        <li><a
+            class="external-link" 
+            href="https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card/"
+            >Developing custom cards
+                     </a></li>
+      </ul>
+    </li>
+
+  </ul>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:microphone' title='Microphone'></iconify-icon> <a  href='/voice_control/'>Voice assistants </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:category' title='Category'></iconify-icon> <a  href='/docs/organizing/'>Organization </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:solar-power-variant' title='Solar power variant'></iconify-icon> <a  href='/docs/energy/'>Home energy management </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:code-braces' title='Code braces'></iconify-icon> <a  href='/docs/templating/'>Templating </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:update' title='Update'></iconify-icon> <a  href='/common-tasks/general/'>Common tasks </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:cogs' title='Cogs'></iconify-icon> <a  href='/docs/configuration/basic'>Configuration </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:account-security' title='Account security'></iconify-icon> <a  href='/docs/authentication/'>Authentication </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:palette' title='Palette'></iconify-icon> <a  href='/docs/tools/'>Tools and helpers </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:cellphone' title='Cellphone'></iconify-icon> <a href="https://companion.home-assistant.io/docs">iOS and Android apps</a>
+</li>
+
+<li>
+  <iconify-icon inline icon='bitcoin-icons:node-hardware-filled' title='Node hardware filled'></iconify-icon> Official hardware
+  <ul>
+    <li><a href="https://support.nabucasa.com/hc/categories/24638797677853">Home Assistant Green</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24734620813469">Home Assistant Connect ZBT-1</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/29400540866973">Home Assistant Connect ZBT-2</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/28669861145885">Home Assistant Connect ZWA-2</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24734575925149">Home Assistant Yellow</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24451727188125">Home Assistant Voice Preview Edition</a></li>
+  </ul>
+</li>
+
+    </ul>
+  </div>
+</section>
+
+
+</div>
+
+          </aside>
+          
+        </div>
+      </div>
+
+      
+
+      <footer>
+        <div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item">
+      <div class="skyline grid">
+        <div class="skyline grid__item one-whole">
+          <div class="footer-skyline">
+          </div>
+        </div>
+      </div>
+      <div class="footer-nav grid">
+        <div class="company grid__item one-quarter lap-one-half palm-one-whole">
+          <div class="title">
+            <img
+              src="/images/footer-logo-text.svg"
+              height="72"
+              alt="Home Assistant"
+            />
+          </div>
+          <p>
+            Home Assistant is a project from the <a href="https://www.openhomefoundation.org/">Open Home Foundation</a>.
+          </p>
+        </div>
+
+        <div class="grid__item one-quarter lap-one-half palm-one-whole">
+          <h3>Join us and contribute!</h3>
+          <ul>
+            <li><a class="external-link" href="https://github.com/home-assistant/">GitHub repo</a></li>
+            <li><a class="external-link" href="https://developers.home-assistant.io">Developers Portal</a></li>
+            <li><a class="external-link" href="https://design.home-assistant.io">Design Portal</a></li>
+            <li><a class="external-link" href="https://data.home-assistant.io">Data Science Portal</a></li>
+            <li><a class="external-link" href="https://community.home-assistant.io">Community Forum</a></li>
+            <li><a class="external-link" href="https://creators.home-assistant.io/">Creator Network</a></li>
+            <li><a class="external-link" href="https://works-with.home-assistant.io/">Works with Home Assistant</a></li>
+            <li><a href="/community">Our community</a></li>
+            <li><a href="/help/reporting_issues/">Reporting issues</a></li>
+          </ul>
+          <h3>System status</h3>
+          <ul>
+            <li>
+              <a class="external-link"  href="https://alerts.home-assistant.io">Integration Alerts</a>
+            </li>
+            <li><a href="/security/">Security Alerts</a></li>
+            <li>
+              <a class="external-link" href="https://status.home-assistant.io">System Status</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__item one-quarter lap-one-half palm-one-whole">
+          <h3>Companion apps</h3>
+          <ul>
+            <li><a class="external-link" href="https://apps.apple.com/app/id1099568401">iOS and Apple devices</a></li>
+            <li><a class="external-link" href="https://play.google.com/store/apps/details?id=io.homeassistant.companion.android">Android and Wear OS</a></li>
+            <li><a class="external-link" href="https://companion.home-assistant.io/">...and more!</a></li>
+          </ul>
+
+          <h3>Support us</h3>
+          <ul>
+            <li><a href="https://store.openhomefoundation.org" target="_blank">Merch store</a></li>
+            <li><a href="/cloud/">Home Assistant Cloud</a></li>
+          </ul>
+
+          <h3>Governance</h3>
+          <ul>
+            <li><a href="/privacy/">Privacy Notices</a></li>
+            <li><a href="/developers/cla/">Contributor License Agreement</a></li>
+            <li><a href="/tos/">Terms of Service</a></li>
+            <li><a href="/code_of_conduct/">Code of Conduct</a></li>
+            <li><a href="/developers/credits/">Credits</a></li>
+            <li><a href="/developers/license/">License</a></li>
+          </ul>
+        </div>
+
+        <div class="socials grid__item one-quarter lap-one-half palm-one-whole">
+
+          <h3>Follow us</h3>
+          <p><a class="external-link" href='https://newsletter.openhomefoundation.org/#/portal'>Sign up for our newsletter</a></p>
+          <ul class="icons">
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://youtube.com/@home_assistant"
+                title="YouTube"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://reddit.com/r/homeassistant"
+                title="Reddit"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:reddit"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://github.com/home-assistant"
+                title="GitHub"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:github"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://fosstodon.org/@homeassistant"
+                title="Mastodon"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:mastodon"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://bsky.app/profile/home-assistant.io"
+                title="Bluesky"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:bluesky"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://x.com/home_assistant"
+                title="X (formerly Twitter)"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:x"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.facebook.com/homeassistantio"
+                title="Facebook"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.instagram.com/homeassistant/"
+                title="Instagram"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.linkedin.com/company/home-assistant"
+                title="LinkedIn"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+            </li>
+            
+          </ul>
+
+          <div class="web-notice">
+            <p>
+              For partnership inquiries please check out <a href="https://works-with.home-assistant.io/">Works with Home Assistant</a>. For media, <a href="/cdn-cgi/l/email-protection#b0ddd5d4d9d1f0dfc0d5ded8dfddd5d6dfc5ded4d1c4d9dfde9edfc2d7">email our team</a>. For other questions, you can <a href="/cdn-cgi/l/email-protection#d0b8b5bcbcbf90b8bfbdb5fdb1a3a3b9a3a4b1bea4feb9bf">contact support</a> (No technical support!)
+            </p>
+            <p>
+              Website powered by <a href="https://jekyllrb.com/">Jekyll</a><br />
+              Originally based on the <a href="https://github.com/coogie/oscailte">Oscailte theme</a>
+            </p>
+            <a href="https://www.netlify.com">
+              <img
+                src="/images/frontpage/netlify.svg"
+                alt="Deploys by Netlify Badge"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </footer>
+
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.3.1/lite-youtube.js" integrity="sha384-7o3d1sg8jSS1LMKzzIEucWtWFI1X4lFCC5gu2ylAgH3KmHcJgjTqp6LWfIvbbmf9" crossorigin="anonymous"></script>
+
+<script src="/javascripts/terminology_tooltip.js?e20ec01246c34f18bd926ceed25bc742" type="text/javascript" defer></script>
+
+<script src="/javascripts/prism.js?5d6619066a1fc5cd819a93c132b539ac" type="text/javascript" defer></script>
+<script src="/javascripts/prism-signature.js?c46f2dc6f8d4fd987db580bda61368b5" type="text/javascript" defer></script>
+<script src="/javascripts/prism-jinja2.js?b7346561200c43c055e61149a77b3187" type="text/javascript" defer></script>
+<script src="/static/doc-data-640212571aa9.js" type="text/javascript" defer></script>
+<script src="/javascripts/prism-template-links.js?7bedbf54ec266241edb843530c111903" type="text/javascript" defer></script>
+<script src="/javascripts/prism-doc-links.js?aecc2ca96596f960444d87dad9394ee3" type="text/javascript" defer></script>
+<script src="/javascripts/docsearch-options.js?e5a07874723ea642e221f06a88902a18" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.min.js" integrity="sha384-f/IEhh8fvOc2ALU79emLlUqAYXyqlA/zYhM+g5GlWMk15QBjTXy05TtmfT1TbtV6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  docsearch({
+    container: '#docsearch',
+    appId: 'FBHBYS3J0U',
+    indexName: 'home-assistant',
+    apiKey: "fcd41bf156f5ee0e390f8b860e3a2489",
+    transformItems(items) {
+      return items.map((item) => ({
+        ...item,
+        url: rewriteDocSearchPreviewUrl(item.url),
+        url_without_anchor: rewriteDocSearchPreviewUrl(item.url_without_anchor),
+      }));
+    },
+  });
+  document.querySelector('.site-title').addEventListener('contextmenu', function (ev) {
+    ev.preventDefault();
+    document.location.assign("https://design.home-assistant.io/#brand/logo")
+  });
+</script>
+
+
+
+
+<script type="text/javascript">
+  {
+    const article = document.querySelector("article.post");
+    if (article) {
+      const iframes = article.querySelectorAll("iframe[data-src]");
+      let loaded = false;
+      if (iframes) {
+        document.addEventListener('mousemove', loadLazyFrames, { passive: true, once: true });
+        document.addEventListener('touchmove', loadLazyFrames, { passive: true, once: true });
+        document.addEventListener('scroll', loadLazyFrames, { passive: true, once: true });
+
+        function loadLazyFrames() {
+          if (loaded) return;
+          loaded = true;
+
+          iframes.forEach((iframe) => {
+            const src = iframe.getAttribute("data-src");
+            if (src) {
+              iframe.setAttribute("src", src);
+              iframe.removeAttribute("data-src");
+            }
+          });
+        }
+      }
+    }
+  }
+</script>
+
+
+
+  </body>
+</html>

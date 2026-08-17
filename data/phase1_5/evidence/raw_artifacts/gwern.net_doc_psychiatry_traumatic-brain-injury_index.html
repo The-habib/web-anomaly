@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SSI: CSS+JS inline for speed -->
+  <!-- INLINED-HEAD-BEGIN -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #aaa;
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popovers-popover-box-shadow-color: #aaa;
+
+    --GW-popovers-popover-title-bar-background-color: #fff;
+    --GW-popovers-popover-title-bar-button-color: #777;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #ccc;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #999;
+
+    --GW-popovers-popover-stack-counter-text-color: #fff;
+    --GW-popovers-popover-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #7c7c7c;
+    --GW-popovers-popover-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popovers-popover-box-shadow-color: #7c7c7c;
+
+    --GW-popovers-popover-title-bar-background-color: #000;
+    --GW-popovers-popover-title-bar-button-color: #a6a6a6;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #5c5c5c;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popovers-popover-stack-counter-text-color: #000;
+    --GW-popovers-popover-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popovers-popover-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+.poem span.caesura-mark {
+	opacity: 0.30;
+}
+@media all and (max-width: 649px) {
+	.poem span.caesura-mark {
+		opacity: 0.35;
+	}
+}
+
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1786427108">
+<script src="/static/js/head.js?v=1786427108"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1785906347" as="image">
+
+  <!-- INLINED-HEAD-END -->
+
+  
+  <!-- Google Webmaster requires this tag, but only on the index/homepage -->
+  <meta name="google-site-verification" content="BOhOQI1uMfsqu_DopVApovk1mJD5ZBLfan0s9go3phk">
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="‘TBI’ directory">
+  <meta name="citation_title" content="‘TBI’ directory">
+  <meta name="og:title" content="‘TBI’ directory">
+  <meta name="twitter:title" content="‘TBI’ directory">
+  <meta name="generator" content="Hakyll">
+  <link rel="repository" href="https://github.com/gwern/gwern.net/">
+  <link rel="bug-tracker" href="https://github.com/gwern/gwern.net/issues">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="Bibliography for directory 𝚙𝚜𝚢𝚌𝚑𝚒𝚊𝚝𝚛𝚢/𝚝𝚛𝚊𝚞𝚖𝚊𝚝𝚒𝚌-𝚋𝚛𝚊𝚒𝚗-𝚒𝚗𝚓𝚞𝚛𝚢, most recent first: 44 annotations &amp; 25 links (parent).">
+  <meta name="og:description" content="Bibliography for directory 𝚙𝚜𝚢𝚌𝚑𝚒𝚊𝚝𝚛𝚢/𝚝𝚛𝚊𝚞𝚖𝚊𝚝𝚒𝚌-𝚋𝚛𝚊𝚒𝚗-𝚒𝚗𝚓𝚞𝚛𝚢, most recent first: 44 annotations &amp; 25 links (parent).">
+  <!-- <meta name="description-raw" content="Bibliography for directory <code>psychiatry/traumatic-brain-injury</code>, most recent first: 44 <a class='icon-not' href='/doc/psychiatry/traumatic-brain-injury/index#links'>annotations</a> &amp; 25 <a class='icon-not' href='/doc/psychiatry/traumatic-brain-injury/index#miscellaneous'>links</a> (<a href='/doc/psychiatry/index' class='link-page link-tag directory-indexes-upwards link-annotated' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to parent directory'>parent</a>)."> -->
+  <meta property="og:image" content="https://gwern.net/doc/psychiatry/traumatic-brain-injury/2023-figure3-microscopepathologyofcteinyoungathletes.png">
+  <meta property="og:image:alt" content="">
+  
+  <meta property="og:image:height" content="2126">
+  <meta property="og:image:width" content="2017">
+  <meta property="gwern:thumbnail:css-classes" content="outline">
+  <meta name="keywords" content="psychiatry/anxiety">
+  <meta name="dc.date.issued" content="2019-01-08">
+  
+  <meta name="citation_publication_date" content="2019-01-08">
+  <meta name="dcterms.modified" content="2025-07-07">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/doc/psychiatry/traumatic-brain-injury/index">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/doc/psychiatry/traumatic-brain-injury/index">
+  <meta name="og:url" content="https://gwern.net/doc/psychiatry/traumatic-brain-injury/index">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/doc/psychiatry/traumatic-brain-injury/index.md" title="Markdown source of ‘‘TBI’ directory’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-doc-psychiatry-traumatic-brain-injury-index dropcaps-not">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>‘TBI’ directory · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+</head>
+
+<body class="page-doc-psychiatry-traumatic-brain-injury-index dropcaps-not">
+  <!-- SSI: Inlined asset links -->
+  <!-- INLINED-ASSET-LINKS-BEGIN-->
+  <link rel="stylesheet" href="/static/css/style.css?v=1786427108">
+<script src="/static/js/script.js?v=1786427108" defer></script>
+
+  <!-- INLINED-ASSET-LINKS-END -->
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <noscript>
+    <style>
+      #navbar { margin-top: 7em; }
+      @media all and (max-width: 649px) { #navbar { margin-top: 10em; } }
+    </style>
+    <div id="noscript-warning-header" class="markdownBody noscript-container">
+      <details open>
+        <summary><wbr></summary>
+        <div class="admonition error colors-invert">
+          <div class="admonition-title">
+            <p><strong>Warning:</strong> JavaScript Disabled!</p>
+          </div>
+          <p>For support of key <a href="/design" title="About: Gwern.net Design: principles, features, links, tricks">website features</a> (link annotation popups/popovers & transclusions, collapsible sections, backlinks, tablesorting, image zooming, <a href="/sidenote">sidenotes</a> etc.), you must enable JavaScript.</p>
+        </div>
+      </details>
+    </div>
+    </noscript>
+
+    <!-- SSI: Navbar -->
+    <!-- NAVBAR-BEGIN-->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="me link-page link-annotated" href="/me" title="Who am I online, what have I done, what am I like? Contact information; sites I use; things I've worked on" rel="author">Me</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/doc/newest/index" title="Most recent link annotations">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+    <!-- NAVBAR-END -->
+
+    <article>
+
+      <header>
+        <h1>‘TBI’ directory</h1>
+      </header>
+
+       
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#see-also" id="toc-see-also">See Also</a></li>
+<li><a href="#links" id="toc-links">Links</a>
+<ul>
+<li><a href="#_0_kiHRDL-section" id="toc-_0_kiHRDL-section">“The Hidden Struggle of John Fetterman”</a></li>
+<li><a href="#_f8vBcp8B-section" id="toc-_f8vBcp8B-section">“House Committee to Examine Secret Navy Effort on Pilot Brain Injuries”</a></li>
+<li><a href="#_yOtOExSk-section" id="toc-_yOtOExSk-section">“Robert Wolff (1953–1954), Social Studies’ Last Founding Father, Remembered As a Public-Spirited Philosopher”</a></li>
+<li><a href="#_r6xdiVzK-section" id="toc-_r6xdiVzK-section">“Martin Karplus, Chemist Who Made Early Computers a Tool, Dies at 94”</a></li>
+<li><a href="#_xMKx0fgW-section" id="toc-_xMKx0fgW-section">“Top-Gun Navy Pilots Fly at the Extremes. Their Brains May Suffer.”</a></li>
+<li><a href="#_DuUBg8tW-section" id="toc-_DuUBg8tW-section">“How Cheerleading Became So Acrobatic, Dangerous and Popular”</a></li>
+<li><a href="#lebeau-et-al-2024-section" id="toc-lebeau-et-al-2024-section">“A Plausible Historical and Forensic Account of the Death of Thomas Aquinas”, LeBeau et al 2024</a></li>
+<li><a href="#ferguson-et-al-2023-section" id="toc-ferguson-et-al-2023-section">“A Neural Network for Religious Fundamentalism Derived from Patients With Brain Lesions”, Ferguson et al 2023</a></li>
+<li><a href="#ly-et-al-2023-section" id="toc-ly-et-al-2023-section">“Association of Vascular Risk Factors and CSF and Imaging Biomarkers With White Matter Hyperintensities in Former American Football Players”, Ly et al 2023</a></li>
+<li><a href="#chanti-ketterl-et-al-2023-section" id="toc-chanti-ketterl-et-al-2023-section">“Associations Between Traumatic Brain Injury and Cognitive Decline Among Older Veteran Men—A Twin Study”, Chanti-Ketterl et al 2023</a></li>
+<li><a href="#mckee-et-al-2023-section" id="toc-mckee-et-al-2023-section">“Neuropathologic and Clinical Findings in Young Contact Sport Athletes Exposed to Repetitive Head Impacts”, McKee et al 2023</a></li>
+<li><a href="#merritt-et-al-2023-section" id="toc-merritt-et-al-2023-section">“Genome-Wide Association Study of Traumatic Brain Injury in US Military Veterans Enrolled in the VA Million Veteran Program”, Merritt et al 2023</a></li>
+<li><a href="#wright-2023-1-section" id="toc-wright-2023-1-section">“The Astonishing Transformation of Austin: My Town, Once Celebrated for Its Laid-Back Weirdness, Is Now a Turbocharged Tech Megalopolis Being Shaped by Exiles from Places like Silicon Valley”, Wright 2023</a></li>
+<li><a href="#seal-2022-section" id="toc-seal-2022-section">“Inventing Ivana Trump: Her Improbable Rise and Tragic Death: Ivana Marie Zelníčková Escaped from behind the Iron Curtain to Storm New York City and Help Create the Twisted Miracle of Donald Trump. From Her ‘Greed Is Good” Heyday to Her Post-Divorce Denouement Cavorting With a Series of “Freaky’ Italian Lovers, It Was Ivana, All Along, Who Gilded the Trump Name”, Seal 2022</a></li>
+<li><a href="#garza-et-al-2022-section" id="toc-garza-et-al-2022-section">“Single-Cell Transcriptomics of Resected Human Traumatic Brain Injury Tissues Reveals Acute Activation of Endogenous Retroviruses in Oligodendrocytes”, Garza et al 2022</a></li>
+<li><a href="#alosco-et-al-2022-2-section" id="toc-alosco-et-al-2022-2-section">“White Matter Hyperintensities in Former American Football Players: Supplementary Materials Appendix”, Alosco et al 2022</a></li>
+<li><a href="#alosco-et-al-2022-1-section" id="toc-alosco-et-al-2022-1-section">“White Matter Hyperintensities in Former American Football Players”, Alosco et al 2022</a></li>
+<li><a href="#segal-hur-2022-section" id="toc-segal-hur-2022-section">“Personality Traits, Mental Abilities and Other Individual Differences: Monozygotic Female Twins Raised Apart in South Korea and the United States”, Segal & Hur 2022</a></li>
+<li><a href="#siedhoff-et-al-2022-section" id="toc-siedhoff-et-al-2022-section">“Long-Term Effects of Low-Intensity Blast Non-Inertial Brain Injury on Anxiety-Like Behaviors in Mice: Home-Cage Monitoring Assessments”, Siedhoff et al 2022</a></li>
+<li><a href="#schwartz-et-al-2021-section" id="toc-schwartz-et-al-2021-section">“Changes in Jail Admissions Before and After Traumatic Brain Injury”, Schwartz et al 2021</a></li>
+<li><a href="#schneider-et-al-2021-section" id="toc-schneider-et-al-2021-section">“Head Injury and 25-Year Risk of Dementia”, Schneider et al 2021</a></li>
+<li><a href="#berkes-2021-section" id="toc-berkes-2021-section">“Remembering Allan McDonald: He Refused To Approve Challenger Launch, Exposed Cover-Up”, Berkes 2021</a></li>
+<li><a href="#bernick-et-al-2020-section" id="toc-bernick-et-al-2020-section">“Concussion Occurrence and Recognition in Professional Boxing and MMA Matches: toward a Concussion Protocol in Combat Sports”, Bernick et al 2020</a></li>
+<li><a href="#lee-et-al-2019-3-section" id="toc-lee-et-al-2019-3-section">“The Relations Among Depression, Cognition, and Brain Volume in Professional Boxers: A Preliminary Examination Using Brief Clinical Measures”, Lee et al 2019</a></li>
+<li><a href="#gwern-doc-psychiatry-traumatic-brain-injury-abstract-section" id="toc-gwern-doc-psychiatry-traumatic-brain-injury-abstract-section">“Falling & Head Injuries”, Gwern 2019</a></li>
+<li><a href="#sariaslan-et-al-2016-section" id="toc-sariaslan-et-al-2016-section">“Long-Term Outcomes Associated With Traumatic Brain Injury in Childhood and Adolescence: A Nationwide Swedish Cohort Study of a Wide Range of Medical and Social Outcomes”, Sariaslan et al 2016</a></li>
+<li><a href="#fralick-et-al-2016-section" id="toc-fralick-et-al-2016-section">“Risk of Suicide After a Concussion”, Fralick et al 2016</a></li>
+<li><a href="#carlson-et-al-2015-section" id="toc-carlson-et-al-2015-section">“Bankruptcy Rates among NFL Players With Short-Lived Income Spikes”, Carlson et al 2015</a></li>
+<li><a href="#topolovec-vranic-et-al-2014-section" id="toc-topolovec-vranic-et-al-2014-section">“Traumatic Brain Injury among Men in an Urban Homeless Shelter: Observational Study of Rates and Mechanisms of Injury”, Topolovec-Vranic et al 2014</a></li>
+<li><a href="#frost-et-al-2012-section" id="toc-frost-et-al-2012-section">“Prevalence of Traumatic Brain Injury in the General Adult Population: A Meta-Analysis”, Frost et al 2012</a></li>
+<li><a href="#kool-et-al-2012-section" id="toc-kool-et-al-2012-section">“Association between Prescription Medications and Falls at Home among Young and Middle-Aged Adults”, Kool et al 2012</a></li>
+<li><a href="#flicker-et-al-2005-section" id="toc-flicker-et-al-2005-section">“Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial”, Flicker et al 2005</a></li>
+<li><a href="#ferri-et-al-2005-section" id="toc-ferri-et-al-2005-section">“Global Prevalence of Dementia: a Delphi Consensus Study”, Ferri et al 2005</a></li>
+<li><a href="#morris-et-al-2003-section" id="toc-morris-et-al-2003-section">“Adjunctive Virtual Reality Pain Relief After Traumatic Injury: a Proof-Of-Concept Within-Person Randomized Trial”, Morris et al 2003</a></li>
+<li><a href="#grafman-et-al-1996-section" id="toc-grafman-et-al-1996-section">“Frontal Lobe Injuries, Violence, and Aggression: A Report of the Vietnam Head Injury Study”, Grafman et al 1996</a></li>
+<li><a href="#_y7-s2YvL-section" id="toc-_y7-s2YvL-section">“Motor Vehicle Crash Injury Rates by Mode of Travel, United States: Using Exposure-Based Methods to Quantify Differences”</a></li>
+<li><a href="#_OQMoC-zq-section" id="toc-_OQMoC-zq-section">“Circumstances of Fall-Related Injuries by Age and Gender among Community-Dwelling Adults in the United States”</a></li>
+<li><a href="#_hok2We-g-section" id="toc-_hok2We-g-section">“Tua Tagovailoa and the End of the NFL’s Concussion Crisis”</a></li>
+<li><a href="#_7VsT-TLM-section" id="toc-_7VsT-TLM-section">“Disability in Young People and Adults One Year After Head Injury: Prospective Cohort Study”</a></li>
+<li><a href="#_CsGiM_qc-section" id="toc-_CsGiM_qc-section">“Gary Busey on Motorcycle Accident, Trump and Playing God in New Musical”</a></li>
+<li><a href="#_bsVfqwN9-section" id="toc-_bsVfqwN9-section">“Falls and Fall-Related Injuries among Community-Dwelling Adults in the United States”</a></li>
+<li><a href="#_lQVGRDlB-section" id="toc-_lQVGRDlB-section">“Spalding Gray’s Catastrophe”</a></li>
+<li><a href="#_kULYaBhu-section" id="toc-_kULYaBhu-section">“How a Rare Disorder Prosopometamorphopsia Makes People See Monsters”</a></li>
+<li><a href="#_yZnV2RiV-section" id="toc-_yZnV2RiV-section">“Pattern of Brain Damage Is Pervasive in Navy SEALs Who Died by Suicide”</a></li>
+<li><a href="#sort-by-magic" id="toc-sort-by-magic">Sort By Magic</a>
+<ul>
+<li><a href="#forensic-history" id="toc-forensic-history"><code>forensic-history</code></a></li>
+<li><a href="#brain-diseases" id="toc-brain-diseases"><code>brain-diseases</code></a></li>
+<li><a href="#anxiety-relief" id="toc-anxiety-relief"><code>anxiety-relief</code></a></li>
+<li><a href="#injury-prevalence" id="toc-injury-prevalence"><code>injury-prevalence</code></a></li>
+</ul></li>
+<li><a href="#titled-links-wikipedia" id="toc-titled-links-wikipedia">Wikipedia (14)</a></li>
+</ul></li>
+<li><a href="#miscellaneous" id="toc-miscellaneous">Miscellaneous</a></li>
+<li><a href="#link-bibliography-section" id="toc-link-bibliography-section">Bibliography</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div id="manual-annotation" class="abstract-small abstract-tag-directory">
+<p><a href="/doc/psychiatry/traumatic-brain-injury/abstract" id="gwern-doc-psychiatry-traumatic-brain-injury-abstract" class="prefetch-not link-annotated-partial include-content-core include-strict link-page" title="Transclude link for doc/psychiatry/traumatic-brain-injury/ tag-abstract page.">[page summary]</a></p>
+</div>
+<section id="see-also" class="level1">
+<h1><a href="#see-also" title="Link to section: § &#39;See Also&#39;">See Also</a></h1>
+<div id="see-alsos" class="directory-indexes columns">
+<ul>
+<li><p><a href="/doc/psychiatry/index" id="_IdYP_Z4V" class="prefetch-not link-page link-annotated link-tag directory-indexes-upwards" data-link-icon="arrow-up-left" data-link-icon-type="svg" rel="tag" title="Link to parent directory &#39;doc/psychiatry/&#39; (ascending)">Parent (‘<em>psychiatry</em>’ tag)</a></p></li>
+</ul>
+</div>
+</section>
+<section id="links" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#links" title="Link to section: § &#39;Links&#39;">Links</a></h1>
+<section id="_0_kiHRDL-section" class="level2">
+<h2><a href="#_0_kiHRDL-section" title="Link to section: § &#39;“The Hidden Struggle of John Fetterman”&#39;">“The Hidden Struggle of John Fetterman”</a></h2>
+<p><strong><a href="https://nymag.com/intelligencer/article/john-fetterman-struggle-mental-health-clinical-depression.html" class="link-live link-annotated-partial id-not include-annotation" data-link-icon="𝒩𝒴" data-link-icon-type="text" title="The Hidden Struggle of John Fetterman">The Hidden Struggle of John Fetterman</a></strong></p>
+</section>
+<section id="_f8vBcp8B-section" class="level2">
+<h2><a href="#_f8vBcp8B-section" title="Link to section: § &#39;“House Committee to Examine Secret Navy Effort on Pilot Brain Injuries”&#39;">“House Committee to Examine Secret Navy Effort on Pilot Brain Injuries”</a></h2>
+<p><strong><a href="https://www.nytimes.com/2025/02/06/us/topgun-navy-pilot-brain-injury.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg" title="House Committee to Examine Secret Navy Effort on Pilot Brain Injuries">House Committee to Examine Secret Navy Effort on Pilot Brain Injuries</a></strong></p>
+</section>
+<section id="_yOtOExSk-section" class="level2">
+<h2><a href="#_yOtOExSk-section" title="Link to section: § &#39;“Robert Wolff (1953–1954), Social Studies’ Last Founding Father, Remembered As a Public-Spirited Philosopher”&#39;">“Robert Wolff (1953–1954), Social Studies’ Last Founding Father, Remembered As a Public-Spirited Philosopher”</a></h2>
+<p><strong><a href="https://www.thecrimson.com/article/2025/1/21/robert-paul-wolff-obituary/" class="id-not include-annotation" title="Robert Wolff (1953–1954), Social Studies’ Last Founding Father, Remembered as a Public-Spirited Philosopher">Robert Wolff (1953–1954), Social Studies’ Last Founding Father, Remembered as a Public-Spirited Philosopher</a></strong></p>
+</section>
+<section id="_r6xdiVzK-section" class="level2">
+<h2><a href="#_r6xdiVzK-section" title="Link to section: § &#39;“Martin Karplus, Chemist Who Made Early Computers a Tool, Dies at 94”&#39;">“Martin Karplus, Chemist Who Made Early Computers a Tool, Dies at 94”</a></h2>
+<p><strong><a href="https://www.nytimes.com/2025/01/13/science/martin-karplus-dead.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg" title="Martin Karplus, Chemist Who Made Early Computers a Tool, Dies at 94">Martin Karplus, Chemist Who Made Early Computers a Tool, Dies at 94</a></strong></p>
+</section>
+<section id="_xMKx0fgW-section" class="level2">
+<h2><a href="#_xMKx0fgW-section" title="Link to section: § &#39;“Top-Gun Navy Pilots Fly at the Extremes. Their Brains May Suffer.”&#39;">“Top-Gun Navy Pilots Fly at the Extremes. Their Brains May Suffer.”</a></h2>
+<p><strong><a href="https://www.nytimes.com/2024/12/08/us/navy-pilot-brain-injury-topgun.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg" title="Top-Gun Navy Pilots Fly at the Extremes. Their Brains May Suffer.">Top-Gun Navy Pilots Fly at the Extremes. Their Brains May Suffer.</a></strong></p>
+</section>
+<section id="_DuUBg8tW-section" class="level2">
+<h2><a href="#_DuUBg8tW-section" title="Link to section: § &#39;“How Cheerleading Became So Acrobatic, Dangerous and Popular”&#39;">“How Cheerleading Became So Acrobatic, Dangerous and Popular”</a></h2>
+<p><strong><a href="https://www.nytimes.com/2024/10/22/magazine/cheerleading-jeff-webb.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg" title="How Cheerleading Became So Acrobatic, Dangerous and Popular">How Cheerleading Became So Acrobatic, Dangerous and Popular</a></strong></p>
+</section>
+<section id="lebeau-et-al-2024-section" class="level2">
+<h2><a href="#lebeau-et-al-2024-section" title="Link to section: § &#39;“A Plausible Historical and Forensic Account of the Death of Thomas Aquinas”, LeBeau et al 2024&#39;">“A Plausible Historical and Forensic Account of the Death of Thomas Aquinas”, LeBeau et al 2024</a></h2>
+<p><strong><a href="https://www.sciencedirect.com/science/article/pii/S1878875023016042" class="link-annotated id-not include-annotation" data-link-icon="E" data-link-icon-color="#eb6500" data-link-icon-type="text" title="&#39;A Plausible Historical and Forensic Account of the Death of Thomas Aquinas&#39;, LeBeau et al 2024">A Plausible Historical and Forensic Account of the Death of Thomas Aquinas</a></strong></p>
+</section>
+<section id="ferguson-et-al-2023-section" class="level2">
+<h2><a href="#ferguson-et-al-2023-section" title="Link to section: § &#39;“A Neural Network for Religious Fundamentalism Derived from Patients With Brain Lesions”, Ferguson et al 2023&#39;">“A Neural Network for Religious Fundamentalism Derived from Patients With Brain Lesions”, Ferguson et al 2023</a></h2>
+<p><strong><a href="https://www.biorxiv.org/content/10.1101/2023.12.22.572527.full" class="link-annotated id-not include-annotation" data-link-icon="chi-dna" data-link-icon-color="#bd2736" data-link-icon-type="svg" title="&#39;A neural network for religious fundamentalism derived from patients with brain lesions&#39;, Ferguson et al 2023">A neural network for religious fundamentalism derived from patients with brain lesions</a></strong></p>
+</section>
+<section id="ly-et-al-2023-section" class="level2">
+<h2><a href="#ly-et-al-2023-section" title="Link to section: § &#39;“Association of Vascular Risk Factors and CSF and Imaging Biomarkers With White Matter Hyperintensities in Former American Football Players”, Ly et al 2023&#39;">“Association of Vascular Risk Factors and CSF and Imaging Biomarkers With White Matter Hyperintensities in Former American Football Players”, Ly et al 2023</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-ly.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Association of Vascular Risk Factors and CSF and Imaging Biomarkers With White Matter Hyperintensities in Former American Football Players&#39;, Ly et al 2023">Association of Vascular Risk Factors and CSF and Imaging Biomarkers With White Matter Hyperintensities in Former American Football Players</a></strong></p>
+</section>
+<section id="chanti-ketterl-et-al-2023-section" class="level2">
+<h2><a href="#chanti-ketterl-et-al-2023-section" title="Link to section: § &#39;“Associations Between Traumatic Brain Injury and Cognitive Decline Among Older Veteran Men—A Twin Study”, Chanti-Ketterl et al 2023&#39;">“Associations Between Traumatic Brain Injury and Cognitive Decline Among Older Veteran Men—A Twin Study”, Chanti-Ketterl et al 2023</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-chantiketterl.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Associations Between Traumatic Brain Injury and Cognitive Decline Among Older Veteran Men—A Twin Study&#39;, Chanti-Ketterl et al 2023">Associations Between Traumatic Brain Injury and Cognitive Decline Among Older Veteran Men—A Twin Study</a></strong></p>
+</section>
+<section id="mckee-et-al-2023-section" class="level2">
+<h2><a href="#mckee-et-al-2023-section" title="Link to section: § &#39;“Neuropathologic and Clinical Findings in Young Contact Sport Athletes Exposed to Repetitive Head Impacts”, McKee et al 2023&#39;">“Neuropathologic and Clinical Findings in Young Contact Sport Athletes Exposed to Repetitive Head Impacts”, McKee et al 2023</a></h2>
+<p><strong><a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2808952" class="link-annotated id-not include-annotation" data-link-icon="JAMA" data-link-icon-color="#d71635" data-link-icon-type="text,sans,quad" title="&#39;Neuropathologic and Clinical Findings in Young Contact Sport Athletes Exposed to Repetitive Head Impacts&#39;, McKee et al 2023">Neuropathologic and Clinical Findings in Young Contact Sport Athletes Exposed to Repetitive Head Impacts</a></strong></p>
+</section>
+<section id="merritt-et-al-2023-section" class="level2">
+<h2><a href="#merritt-et-al-2023-section" title="Link to section: § &#39;“Genome-Wide Association Study of Traumatic Brain Injury in US Military Veterans Enrolled in the VA Million Veteran Program”, Merritt et al 2023&#39;">“Genome-Wide Association Study of Traumatic Brain Injury in US Military Veterans Enrolled in the VA Million Veteran Program”, Merritt et al 2023</a></h2>
+<p><strong><a href="https://www.medrxiv.org/content/10.1101/2023.02.16.23286045.full" class="link-annotated id-not include-annotation" data-link-icon="chi-dna" data-link-icon-color="#bd2736" data-link-icon-type="svg" title="&#39;Genome-wide Association Study of Traumatic Brain Injury in US Military Veterans Enrolled in the VA Million Veteran Program&#39;, Merritt et al 2023">Genome-wide Association Study of Traumatic Brain Injury in US Military Veterans Enrolled in the VA Million Veteran Program</a></strong></p>
+</section>
+<section id="wright-2023-1-section" class="level2">
+<h2><a href="#wright-2023-1-section" title="Link to section: § &#39;“The Astonishing Transformation of Austin: My Town, Once Celebrated for Its Laid-Back Weirdness, Is Now a Turbocharged Tech Megalopolis Being Shaped by Exiles from Places like Silicon Valley”, Wright 2023&#39;">“The Astonishing Transformation of Austin: My Town, Once Celebrated for Its Laid-Back Weirdness, Is Now a Turbocharged Tech Megalopolis Being Shaped by Exiles from Places like Silicon Valley”, Wright 2023</a></h2>
+<p><strong><a href="https://www.newyorker.com/magazine/2023/02/13/the-astonishing-transformation-of-austin" class="link-annotated id-not include-annotation" data-link-icon="the-new-yorker" data-link-icon-type="svg" title="&#39;The Astonishing Transformation of Austin: My town, once celebrated for its laid-back weirdness, is now a turbocharged tech megalopolis being shaped by exiles from places like Silicon Valley&#39;, Wright 2023">The Astonishing Transformation of Austin: My town, once celebrated for its laid-back weirdness, is now a turbocharged tech megalopolis being shaped by exiles from places like Silicon Valley</a></strong></p>
+</section>
+<section id="seal-2022-section" class="level2">
+<h2><a href="#seal-2022-section" title="Link to section: § &#39;“Inventing Ivana Trump: Her Improbable Rise and Tragic Death: Ivana Marie Zelníčková Escaped from behind the Iron Curtain to Storm New York City and Help Create the Twisted Miracle of Donald Trump. From Her ‘Greed Is Good” Heyday to Her Post-Divorce Denouement Cavorting With a Series of “Freaky’ Italian Lovers, It Was Ivana, All Along, Who Gilded the Trump Name”, Seal 2022&#39;">“Inventing Ivana Trump: Her Improbable Rise and Tragic Death: Ivana Marie Zelníčková Escaped from behind the Iron Curtain to Storm New York City and Help Create the Twisted Miracle of Donald Trump. From Her ‘Greed Is Good” Heyday to Her Post-Divorce Denouement Cavorting With a Series of “Freaky’ Italian Lovers, It Was Ivana, All Along, Who Gilded the Trump Name”, Seal 2022</a></h2>
+<p><strong><a href="https://www.vanityfair.com/style/2022/11/inventing-ivana-trump-her-improbable-rise-and-tragic-death" class="link-live id-not include-annotation" data-link-icon="VF" data-link-icon-color="#e7131a" data-link-icon-type="text" title="&#39;Inventing Ivana Trump: Her Improbable Rise and Tragic Death: Ivana Marie Zelníčková escaped from behind the Iron Curtain to storm New York City and help create the twisted miracle of Donald Trump. From her ‘greed is good” heyday to her post-divorce denouement cavorting with a series of “freaky’ Italian lovers, it was Ivana, all along, who gilded the Trump name&#39;, Seal 2022">Inventing Ivana Trump: Her Improbable Rise and Tragic Death: Ivana Marie Zelníčková escaped from behind the Iron Curtain to storm New York City and help create the twisted miracle of Donald Trump. From her ‘greed is good” heyday to her post-divorce denouement cavorting with a series of “freaky’ Italian lovers, it was Ivana, all along, who gilded the Trump name</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://www.vanityfair.com/style/2022/11/inventing-ivana-trump-her-improbable-rise-and-tragic-death" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="VF" data-link-icon-color="#e7131a" data-link-icon-type="text"><code>https://www.vanityfair.com/style/2022/11/inventing-ivana-trump-her-improbable-rise-and-tragic-death</code></a></p>
+</div>
+</div>
+</section>
+<section id="garza-et-al-2022-section" class="level2">
+<h2><a href="#garza-et-al-2022-section" title="Link to section: § &#39;“Single-Cell Transcriptomics of Resected Human Traumatic Brain Injury Tissues Reveals Acute Activation of Endogenous Retroviruses in Oligodendrocytes”, Garza et al 2022&#39;">“Single-Cell Transcriptomics of Resected Human Traumatic Brain Injury Tissues Reveals Acute Activation of Endogenous Retroviruses in Oligodendrocytes”, Garza et al 2022</a></h2>
+<p><strong><a href="https://www.biorxiv.org/content/10.1101/2022.09.07.506982.full" class="link-annotated id-not include-annotation" data-link-icon="chi-dna" data-link-icon-color="#bd2736" data-link-icon-type="svg" title="&#39;Single-cell transcriptomics of resected human traumatic brain injury tissues reveals acute activation of endogenous retroviruses in oligodendrocytes&#39;, Garza et al 2022">Single-cell transcriptomics of resected human traumatic brain injury tissues reveals acute activation of endogenous retroviruses in oligodendrocytes</a></strong></p>
+</section>
+<section id="alosco-et-al-2022-2-section" class="level2">
+<h2><a href="#alosco-et-al-2022-2-section" title="Link to section: § &#39;“White Matter Hyperintensities in Former American Football Players: Supplementary Materials Appendix”, Alosco et al 2022&#39;">“White Matter Hyperintensities in Former American Football Players: Supplementary Materials Appendix”, Alosco et al 2022</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-alosco-alz12779-sup-0002-suppmat.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;White matter hyperintensities in former American football players: Supplementary Materials Appendix&#39;, Alosco et al 2022">White matter hyperintensities in former American football players: Supplementary Materials Appendix</a></strong></p>
+</section>
+<section id="alosco-et-al-2022-1-section" class="level2">
+<h2><a href="#alosco-et-al-2022-1-section" title="Link to section: § &#39;“White Matter Hyperintensities in Former American Football Players”, Alosco et al 2022&#39;">“White Matter Hyperintensities in Former American Football Players”, Alosco et al 2022</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-alosco.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;White matter hyperintensities in former American football players&#39;, Alosco et al 2022">White matter hyperintensities in former American football players</a></strong></p>
+</section>
+<section id="segal-hur-2022-section" class="level2">
+<h2><a href="#segal-hur-2022-section" title="Link to section: § &#39;“Personality Traits, Mental Abilities and Other Individual Differences: Monozygotic Female Twins Raised Apart in South Korea and the United States”, Segal &amp; Hur 2022&#39;">“Personality Traits, Mental Abilities and Other Individual Differences: Monozygotic Female Twins Raised Apart in South Korea and the United States”, Segal & Hur 2022</a></h2>
+<p><strong><a href="/doc/genetics/heritable/adoption/2022-segal.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Personality traits, mental abilities and other individual differences: Monozygotic female twins raised apart in South Korea and the United States&#39;, Segal &amp; Hur 2022">Personality traits, mental abilities and other individual differences: Monozygotic female twins raised apart in South Korea and the United States</a></strong></p>
+</section>
+<section id="siedhoff-et-al-2022-section" class="level2">
+<h2><a href="#siedhoff-et-al-2022-section" title="Link to section: § &#39;“Long-Term Effects of Low-Intensity Blast Non-Inertial Brain Injury on Anxiety-Like Behaviors in Mice: Home-Cage Monitoring Assessments”, Siedhoff et al 2022&#39;">“Long-Term Effects of Low-Intensity Blast Non-Inertial Brain Injury on Anxiety-Like Behaviors in Mice: Home-Cage Monitoring Assessments”, Siedhoff et al 2022</a></h2>
+<p><strong><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8820222/" class="link-annotated id-not include-annotation" data-link-icon="nlm-ncbi" data-link-icon-color="#20558a" data-link-icon-type="svg" title="&#39;Long-Term Effects of Low-Intensity Blast Non-Inertial Brain Injury on Anxiety-Like Behaviors in Mice: Home-Cage Monitoring Assessments&#39;, Siedhoff et al 2022">Long-Term Effects of Low-Intensity Blast Non-Inertial Brain Injury on Anxiety-Like Behaviors in Mice: Home-Cage Monitoring Assessments</a></strong></p>
+</section>
+<section id="schwartz-et-al-2021-section" class="level2">
+<h2><a href="#schwartz-et-al-2021-section" title="Link to section: § &#39;“Changes in Jail Admissions Before and After Traumatic Brain Injury”, Schwartz et al 2021&#39;">“Changes in Jail Admissions Before and After Traumatic Brain Injury”, Schwartz et al 2021</a></h2>
+<p><strong><a href="/doc/crime/2021-schwartz.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Changes in Jail Admissions Before and After Traumatic Brain Injury&#39;, Schwartz et al 2021">Changes in Jail Admissions Before and After Traumatic Brain Injury</a></strong></p>
+</section>
+<section id="schneider-et-al-2021-section" class="level2">
+<h2><a href="#schneider-et-al-2021-section" title="Link to section: § &#39;“Head Injury and 25-Year Risk of Dementia”, Schneider et al 2021&#39;">“Head Injury and 25-Year Risk of Dementia”, Schneider et al 2021</a></h2>
+<p><strong><a href="/doc/psychology/neuroscience/2021-schneider.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Head injury and 25-year risk of dementia&#39;, Schneider et al 2021">Head injury and 25-year risk of dementia</a></strong></p>
+</section>
+<section id="berkes-2021-section" class="level2">
+<h2><a href="#berkes-2021-section" title="Link to section: § &#39;“Remembering Allan McDonald: He Refused To Approve Challenger Launch, Exposed Cover-Up”, Berkes 2021&#39;">“Remembering Allan McDonald: He Refused To Approve Challenger Launch, Exposed Cover-Up”, Berkes 2021</a></h2>
+<p><strong><a href="https://text.npr.org/974534021" class="link-live link-annotated id-not include-annotation" data-link-icon="npr" data-link-icon-color="#237bbd" data-link-icon-type="text,tri,sans" title="&#39;Remembering Allan McDonald: He Refused To Approve Challenger Launch, Exposed Cover-Up&#39;, Berkes 2021">Remembering Allan McDonald: He Refused To Approve Challenger Launch, Exposed Cover-Up</a></strong></p>
+</section>
+<section id="bernick-et-al-2020-section" class="level2">
+<h2><a href="#bernick-et-al-2020-section" title="Link to section: § &#39;“Concussion Occurrence and Recognition in Professional Boxing and MMA Matches: toward a Concussion Protocol in Combat Sports”, Bernick et al 2020&#39;">“Concussion Occurrence and Recognition in Professional Boxing and MMA Matches: toward a Concussion Protocol in Combat Sports”, Bernick et al 2020</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2020-bernick.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Concussion occurrence and recognition in professional boxing and MMA matches: toward a concussion protocol in combat sports&#39;, Bernick et al 2020">Concussion occurrence and recognition in professional boxing and MMA matches: toward a concussion protocol in combat sports</a></strong></p>
+</section>
+<section id="lee-et-al-2019-3-section" class="level2">
+<h2><a href="#lee-et-al-2019-3-section" title="Link to section: § &#39;“The Relations Among Depression, Cognition, and Brain Volume in Professional Boxers: A Preliminary Examination Using Brief Clinical Measures”, Lee et al 2019&#39;">“The Relations Among Depression, Cognition, and Brain Volume in Professional Boxers: A Preliminary Examination Using Brief Clinical Measures”, Lee et al 2019</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2019-lee.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The Relations Among Depression, Cognition, and Brain Volume in Professional Boxers: A Preliminary Examination Using Brief Clinical Measures&#39;, Lee et al 2019">The Relations Among Depression, Cognition, and Brain Volume in Professional Boxers: A Preliminary Examination Using Brief Clinical Measures</a></strong></p>
+</section>
+<section id="gwern-doc-psychiatry-traumatic-brain-injury-abstract-section" class="level2">
+<h2><a href="#gwern-doc-psychiatry-traumatic-brain-injury-abstract-section" title="Link to section: § &#39;“Falling &amp; Head Injuries”, Gwern 2019&#39;">“Falling & Head Injuries”, Gwern 2019</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/abstract" class="prefetch-not link-page link-annotated-partial id-not include-annotation" title="&#39;Falling &amp; Head Injuries&#39;, Gwern 2019">Falling & Head Injuries</a></strong></p>
+</section>
+<section id="sariaslan-et-al-2016-section" class="level2">
+<h2><a href="#sariaslan-et-al-2016-section" title="Link to section: § &#39;“Long-Term Outcomes Associated With Traumatic Brain Injury in Childhood and Adolescence: A Nationwide Swedish Cohort Study of a Wide Range of Medical and Social Outcomes”, Sariaslan et al 2016&#39;">“Long-Term Outcomes Associated With Traumatic Brain Injury in Childhood and Adolescence: A Nationwide Swedish Cohort Study of a Wide Range of Medical and Social Outcomes”, Sariaslan et al 2016</a></h2>
+<p><strong><a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002103" class="link-annotated id-not include-annotation" data-link-icon="plos" data-link-icon-type="svg" title="&#39;Long-Term Outcomes Associated with Traumatic Brain Injury in Childhood and Adolescence: A Nationwide Swedish Cohort Study of a Wide Range of Medical and Social Outcomes&#39;, Sariaslan et al 2016">Long-Term Outcomes Associated with Traumatic Brain Injury in Childhood and Adolescence: A Nationwide Swedish Cohort Study of a Wide Range of Medical and Social Outcomes</a></strong></p>
+</section>
+<section id="fralick-et-al-2016-section" class="level2">
+<h2><a href="#fralick-et-al-2016-section" title="Link to section: § &#39;“Risk of Suicide After a Concussion”, Fralick et al 2016&#39;">“Risk of Suicide After a Concussion”, Fralick et al 2016</a></h2>
+<p><strong><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4835278/" class="link-annotated id-not include-annotation" data-link-icon="nlm-ncbi" data-link-icon-color="#20558a" data-link-icon-type="svg" title="&#39;Risk of suicide after a concussion&#39;, Fralick et al 2016">Risk of suicide after a concussion</a></strong></p>
+</section>
+<section id="carlson-et-al-2015-section" class="level2">
+<h2><a href="#carlson-et-al-2015-section" title="Link to section: § &#39;“Bankruptcy Rates among NFL Players With Short-Lived Income Spikes”, Carlson et al 2015&#39;">“Bankruptcy Rates among NFL Players With Short-Lived Income Spikes”, Carlson et al 2015</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2015-carlson.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Bankruptcy Rates among NFL Players with Short-Lived Income Spikes&#39;, Carlson et al 2015">Bankruptcy Rates among NFL Players with Short-Lived Income Spikes</a></strong></p>
+</section>
+<section id="topolovec-vranic-et-al-2014-section" class="level2">
+<h2><a href="#topolovec-vranic-et-al-2014-section" title="Link to section: § &#39;“Traumatic Brain Injury among Men in an Urban Homeless Shelter: Observational Study of Rates and Mechanisms of Injury”, Topolovec-Vranic et al 2014&#39;">“Traumatic Brain Injury among Men in an Urban Homeless Shelter: Observational Study of Rates and Mechanisms of Injury”, Topolovec-Vranic et al 2014</a></h2>
+<p><strong><a href="https://www.cmajopen.ca/content/2/2/E69.full" class="link-annotated id-not include-annotation" title="&#39;Traumatic brain injury among men in an urban homeless shelter: observational study of rates and mechanisms of injury&#39;, Topolovec-Vranic et al 2014">Traumatic brain injury among men in an urban homeless shelter: observational study of rates and mechanisms of injury</a></strong></p>
+</section>
+<section id="frost-et-al-2012-section" class="level2">
+<h2><a href="#frost-et-al-2012-section" title="Link to section: § &#39;“Prevalence of Traumatic Brain Injury in the General Adult Population: A Meta-Analysis”, Frost et al 2012&#39;">“Prevalence of Traumatic Brain Injury in the General Adult Population: A Meta-Analysis”, Frost et al 2012</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2012-frost.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Prevalence of Traumatic Brain Injury in the General Adult Population: A Meta-Analysis&#39;, Frost et al 2012">Prevalence of Traumatic Brain Injury in the General Adult Population: A Meta-Analysis</a></strong></p>
+</section>
+<section id="kool-et-al-2012-section" class="level2">
+<h2><a href="#kool-et-al-2012-section" title="Link to section: § &#39;“Association between Prescription Medications and Falls at Home among Young and Middle-Aged Adults”, Kool et al 2012&#39;">“Association between Prescription Medications and Falls at Home among Young and Middle-Aged Adults”, Kool et al 2012</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2012-kool.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Association between prescription medications and falls at home among young and middle-aged adults&#39;, Kool et al 2012">Association between prescription medications and falls at home among young and middle-aged adults</a></strong></p>
+</section>
+<section id="flicker-et-al-2005-section" class="level2">
+<h2><a href="#flicker-et-al-2005-section" title="Link to section: § &#39;“Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial”, Flicker et al 2005&#39;">“Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial”, Flicker et al 2005</a></h2>
+<p><strong><a href="/doc/vitamin-d/2005-flicker.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial&#39;, Flicker et al 2005">Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial</a></strong></p>
+</section>
+<section id="ferri-et-al-2005-section" class="level2">
+<h2><a href="#ferri-et-al-2005-section" title="Link to section: § &#39;“Global Prevalence of Dementia: a Delphi Consensus Study”, Ferri et al 2005&#39;">“Global Prevalence of Dementia: a Delphi Consensus Study”, Ferri et al 2005</a></h2>
+<p><strong><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2850264/" class="link-annotated id-not include-annotation" data-link-icon="nlm-ncbi" data-link-icon-color="#20558a" data-link-icon-type="svg" title="&#39;Global prevalence of dementia: a Delphi consensus study&#39;, Ferri et al 2005">Global prevalence of dementia: a Delphi consensus study</a></strong></p>
+</section>
+<section id="morris-et-al-2003-section" class="level2">
+<h2><a href="#morris-et-al-2003-section" title="Link to section: § &#39;“Adjunctive Virtual Reality Pain Relief After Traumatic Injury: a Proof-Of-Concept Within-Person Randomized Trial”, Morris et al 2003&#39;">“Adjunctive Virtual Reality Pain Relief After Traumatic Injury: a Proof-Of-Concept Within-Person Randomized Trial”, Morris et al 2003</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-morris.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Adjunctive virtual reality pain relief after traumatic injury: a proof-of-concept within-person randomized trial&#39;, Morris et al 2003">Adjunctive virtual reality pain relief after traumatic injury: a proof-of-concept within-person randomized trial</a></strong></p>
+</section>
+<section id="grafman-et-al-1996-section" class="level2">
+<h2><a href="#grafman-et-al-1996-section" title="Link to section: § &#39;“Frontal Lobe Injuries, Violence, and Aggression: A Report of the Vietnam Head Injury Study”, Grafman et al 1996&#39;">“Frontal Lobe Injuries, Violence, and Aggression: A Report of the Vietnam Head Injury Study”, Grafman et al 1996</a></h2>
+<p><strong><a href="/doc/psychiatry/traumatic-brain-injury/1996-grafman.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Frontal lobe injuries, violence, and aggression: A report of the Vietnam Head Injury Study&#39;, Grafman et al 1996">Frontal lobe injuries, violence, and aggression: A report of the Vietnam Head Injury Study</a></strong></p>
+</section>
+<section id="_y7-s2YvL-section" class="level2">
+<h2><a href="#_y7-s2YvL-section" title="Link to section: § &#39;“Motor Vehicle Crash Injury Rates by Mode of Travel, United States: Using Exposure-Based Methods to Quantify Differences”&#39;">“Motor Vehicle Crash Injury Rates by Mode of Travel, United States: Using Exposure-Based Methods to Quantify Differences”</a></h2>
+<p><strong><a href="/doc/www/academic.oup.com/9b2cb10c301d9c9ae83d35645848a34af6e4258c.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/academic.oup.com/9b2cb10c301d9c9ae83d35645848a34af6e4258c.html" data-url-original="https://academic.oup.com/aje/article/166/2/212/98784" data-link-icon="OUP" data-link-icon-color="#011d3f" data-link-icon-type="text,tri" title="Motor Vehicle Crash Injury Rates by Mode of Travel, United States: Using Exposure-Based Methods to Quantify Differences">Motor Vehicle Crash Injury Rates by Mode of Travel, United States: Using Exposure-Based Methods to Quantify Differences</a></strong></p>
+</section>
+<section id="_OQMoC-zq-section" class="level2">
+<h2><a href="#_OQMoC-zq-section" title="Link to section: § &#39;“Circumstances of Fall-Related Injuries by Age and Gender among Community-Dwelling Adults in the United States”&#39;">“Circumstances of Fall-Related Injuries by Age and Gender among Community-Dwelling Adults in the United States”</a></h2>
+<p><strong><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176561" class="id-not include-annotation" data-link-icon="plos" data-link-icon-type="svg" title="Circumstances of fall-related injuries by age and gender among community-dwelling adults in the United States">Circumstances of fall-related injuries by age and gender among community-dwelling adults in the United States</a></strong></p>
+</section>
+<section id="_hok2We-g-section" class="level2">
+<h2><a href="#_hok2We-g-section" title="Link to section: § &#39;“Tua Tagovailoa and the End of the NFL’s Concussion Crisis”&#39;">“Tua Tagovailoa and the End of the NFL’s Concussion Crisis”</a></h2>
+<p><strong><a href="https://nymag.com/intelligencer/article/tua-tagovailoa-and-the-end-of-the-nfls-concussion-crisis.html" class="link-live id-not include-annotation" data-link-icon="𝒩𝒴" data-link-icon-type="text" title="Tua Tagovailoa and the End of the NFL’s Concussion Crisis">Tua Tagovailoa and the End of the NFL’s Concussion Crisis</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View HTML</strong>:</p>
+<p><a href="https://nymag.com/intelligencer/article/tua-tagovailoa-and-the-end-of-the-nfls-concussion-crisis.html" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="𝒩𝒴" data-link-icon-type="text"><code>https://nymag.com/intelligencer/article/tua-tagovailoa-and-the-end-of-the-nfls-concussion-crisis.html</code></a></p>
+</div>
+</div>
+</section>
+<section id="_7VsT-TLM-section" class="level2">
+<h2><a href="#_7VsT-TLM-section" title="Link to section: § &#39;“Disability in Young People and Adults One Year After Head Injury: Prospective Cohort Study”&#39;">“Disability in Young People and Adults One Year After Head Injury: Prospective Cohort Study”</a></h2>
+<p><strong><a href="https://www.bmj.com/content/320/7250/1631" class="id-not include-annotation" data-link-icon="bmj" data-link-icon-color="#2a6ebb" data-link-icon-type="text,tri,sans" title="Disability in young people and adults one year after head injury: prospective cohort study">Disability in young people and adults one year after head injury: prospective cohort study</a></strong></p>
+</section>
+<section id="_CsGiM_qc-section" class="level2">
+<h2><a href="#_CsGiM_qc-section" title="Link to section: § &#39;“Gary Busey on Motorcycle Accident, Trump and Playing God in New Musical”&#39;">“Gary Busey on Motorcycle Accident, Trump and Playing God in New Musical”</a></h2>
+<p><strong><a href="https://www.hollywoodreporter.com/movies/movie-news/gary-busey-accident-trump-playing-god-new-musical-1233086/" class="id-not include-annotation" title="Gary Busey on Motorcycle Accident, Trump and Playing God in New Musical">Gary Busey on Motorcycle Accident, Trump and Playing God in New Musical</a></strong></p>
+</section>
+<section id="_bsVfqwN9-section" class="level2">
+<h2><a href="#_bsVfqwN9-section" title="Link to section: § &#39;“Falls and Fall-Related Injuries among Community-Dwelling Adults in the United States”&#39;">“Falls and Fall-Related Injuries among Community-Dwelling Adults in the United States”</a></h2>
+<p><strong><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792421/" class="id-not include-annotation" data-link-icon="nlm-ncbi" data-link-icon-color="#20558a" data-link-icon-type="svg" title="Falls and Fall-Related Injuries among Community-Dwelling Adults in the United States">Falls and Fall-Related Injuries among Community-Dwelling Adults in the United States</a></strong></p>
+</section>
+<section id="_lQVGRDlB-section" class="level2">
+<h2><a href="#_lQVGRDlB-section" title="Link to section: § &#39;“Spalding Gray’s Catastrophe”&#39;">“Spalding Gray’s Catastrophe”</a></h2>
+<p><strong><a href="https://www.newyorker.com/magazine/2015/04/27/the-catastrophe-oliver-sacks" class="link-annotated-partial id-not include-annotation" data-link-icon="the-new-yorker" data-link-icon-type="svg" title="Spalding Gray’s Catastrophe">Spalding Gray’s Catastrophe</a></strong></p>
+</section>
+<section id="_kULYaBhu-section" class="level2">
+<h2><a href="#_kULYaBhu-section" title="Link to section: § &#39;“How a Rare Disorder Prosopometamorphopsia Makes People See Monsters”&#39;">“How a Rare Disorder Prosopometamorphopsia Makes People See Monsters”</a></h2>
+<p><strong><a href="https://www.newyorker.com/news/annals-of-inquiry/how-a-rare-disorder-makes-people-see-monsters" class="id-not include-annotation" data-link-icon="the-new-yorker" data-link-icon-type="svg" title="How a Rare Disorder Prosopometamorphopsia Makes People See Monsters">How a Rare Disorder Prosopometamorphopsia Makes People See Monsters</a></strong></p>
+</section>
+<section id="_yZnV2RiV-section" class="level2">
+<h2><a href="#_yZnV2RiV-section" title="Link to section: § &#39;“Pattern of Brain Damage Is Pervasive in Navy SEALs Who Died by Suicide”&#39;">“Pattern of Brain Damage Is Pervasive in Navy SEALs Who Died by Suicide”</a></h2>
+<p><strong><a href="https://www.nytimes.com/2024/06/30/us/navy-seals-brain-damage-suicide.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg" title="Pattern of Brain Damage Is Pervasive in Navy SEALs Who Died by Suicide">Pattern of Brain Damage Is Pervasive in Navy SEALs Who Died by Suicide</a></strong></p>
+</section>
+<section id="sort-by-magic" class="level2">
+<h2><a href="#sort-by-magic" title="Link to section: § &#39;Sort By Magic&#39;">Sort By Magic</a></h2>
+<div data-demo-type="sort-by-magic-preface">
+<p>Annotations sorted by machine learning into <a href="/design#future-tag-features" id="gwern-design--future-tag-features" class="prefetch-not link-page link-annotated-partial">inferred 'tags'</a>. This provides an alternative way to browse: instead of by <em>date</em> order, one can browse in <em>topic</em> order. The 'sorted' list has been automatically clustered into multiple sections &amp; auto-labeled for easier browsing.</p>
+<p>Beginning with the newest annotation, it uses the embedding of each annotation to attempt to create a list of nearest-neighbor annotations, creating a progression of topics. For more details, see the link.</p>
+</div>
+<section id="forensic-history" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#forensic-history" title="Link to section: § &#39;forensic-history&#39;"><code>forensic-history</code></a></h3>
+<p><a href="#wright-2023-1-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#lebeau-et-al-2024-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+<section id="brain-diseases" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#brain-diseases" title="Link to section: § &#39;brain-diseases&#39;"><code>brain-diseases</code></a></h3>
+<p><a href="#ferguson-et-al-2023-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#ferri-et-al-2005-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+<section id="anxiety-relief" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#anxiety-relief" title="Link to section: § &#39;anxiety-relief&#39;"><code>anxiety-relief</code></a></h3>
+<p><a href="#gwern-doc-psychiatry-traumatic-brain-injury-abstract-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#kool-et-al-2012-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#flicker-et-al-2005-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#segal-hur-2022-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#carlson-et-al-2015-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#morris-et-al-2003-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#siedhoff-et-al-2022-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#berkes-2021-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+<section id="injury-prevalence" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#injury-prevalence" title="Link to section: § &#39;injury-prevalence&#39;"><code>injury-prevalence</code></a></h3>
+<p><a href="#grafman-et-al-1996-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#schwartz-et-al-2021-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#sariaslan-et-al-2016-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#schneider-et-al-2021-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#fralick-et-al-2016-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#chanti-ketterl-et-al-2023-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#merritt-et-al-2023-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#garza-et-al-2022-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#ly-et-al-2023-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#alosco-et-al-2022-1-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#mckee-et-al-2023-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#lee-et-al-2019-3-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bernick-et-al-2020-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#frost-et-al-2012-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#topolovec-vranic-et-al-2014-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+</section>
+<section id="titled-links-wikipedia" class="level2 collapse">
+<h2 class="collapse"><a href="#titled-links-wikipedia" title="Link to section: § &#39;Wikipedia (14)&#39;">Wikipedia (14)</a></h2>
+<ol type="1">
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Michael_Schumacher#2013_skiing_accident" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Michael_Schumacher#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Michael Schumacher § 2013 skiing accident">Michael Schumacher § 2013 skiing accident</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Michael_Schumacher#2013_skiing_accident" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Michael_Schumacher#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Michael Schumacher § 2013 skiing accident"><code>https://en.wikipedia.org/wiki/Michael_Schumacher#2013_skiing_accident</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/George_S._Patton#Postwar" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/George_S._Patton#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="George S. Patton § Postwar">George S. Patton § Postwar</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/George_S._Patton#Postwar" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/George_S._Patton#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="George S. Patton § Postwar"><code>https://en.wikipedia.org/wiki/George_S._Patton#Postwar</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Cleveland_Elementary_School_shooting_(San_Diego)" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Cleveland_Elementary_School_shooting_(San_Diego)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="1979 Cleveland Elementary School shooting (San Diego)">1979 Cleveland Elementary School shooting (San Diego)</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Cleveland_Elementary_School_shooting_(San_Diego)" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Cleveland_Elementary_School_shooting_(San_Diego)#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="1979 Cleveland Elementary School shooting (San Diego)"><code>https://en.wikipedia.org/wiki/1979_Cleveland_Elementary_School_shooting_(San_Diego)</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Ant%C3%B3nio_de_Oliveira_Salazar#Health_breakdown_and_removal" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Ant%C3%B3nio_de_Oliveira_Salazar#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="António de Oliveira Salazar § Health breakdown and removal">António de Oliveira Salazar § Health breakdown and removal</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Ant%C3%B3nio_de_Oliveira_Salazar#Health_breakdown_and_removal" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ant%C3%B3nio_de_Oliveira_Salazar#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="António de Oliveira Salazar § Health breakdown and removal"><code>https://en.wikipedia.org/wiki/Ant%C3%B3nio_de_Oliveira_Salazar#Health_breakdown_and_removal</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Bicycle_safety#Crashes" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Bicycle_safety#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Bicycle safety § Crashes">Bicycle safety § Crashes</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Bicycle_safety#Crashes" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bicycle_safety#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Bicycle safety § Crashes"><code>https://en.wikipedia.org/wiki/Bicycle_safety#Crashes</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Frontal_lobe_disorder" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Frontal_lobe_disorder#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Frontal lobe disorder">Frontal lobe disorder</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Frontal_lobe_disorder" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Frontal_lobe_disorder#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Frontal lobe disorder"><code>https://en.wikipedia.org/wiki/Frontal_lobe_disorder</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Frontal_lobe_injury" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Frontal_lobe_injury#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Frontal lobe injury">Frontal lobe injury</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Frontal_lobe_injury" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Frontal_lobe_injury#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Frontal lobe injury"><code>https://en.wikipedia.org/wiki/Frontal_lobe_injury</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Ivana_Trump" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Ivana_Trump#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Ivana Trump">Ivana Trump</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Ivana_Trump" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ivana_Trump#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Ivana Trump"><code>https://en.wikipedia.org/wiki/Ivana_Trump</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Prosopometamorphopsia" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Prosopometamorphopsia#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Prosopometamorphopsia">Prosopometamorphopsia</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Prosopometamorphopsia" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Prosopometamorphopsia#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Prosopometamorphopsia"><code>https://en.wikipedia.org/wiki/Prosopometamorphopsia</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Roald_Dahl#Fighter_pilot" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Roald_Dahl#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Roald Dahl § Fighter pilot">Roald Dahl § Fighter pilot</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Roald_Dahl#Fighter_pilot" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Roald_Dahl#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Roald Dahl § Fighter pilot"><code>https://en.wikipedia.org/wiki/Roald_Dahl#Fighter_pilot</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/S._Clay_Wilson#Brain_injury_and_later_life" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/S._Clay_Wilson#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="S. Clay Wilson § Brain injury and later life">S. Clay Wilson § Brain injury and later life</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/S._Clay_Wilson#Brain_injury_and_later_life" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/S._Clay_Wilson#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="S. Clay Wilson § Brain injury and later life"><code>https://en.wikipedia.org/wiki/S._Clay_Wilson#Brain_injury_and_later_life</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Steve_Wozniak#Plane_crash_and_temporary_leave_from_Apple" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Steve_Wozniak#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Steve Wozniak § Plane crash &amp; temporary leave from Apple">Steve Wozniak § Plane crash & temporary leave from Apple</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Steve_Wozniak#Plane_crash_and_temporary_leave_from_Apple" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Steve_Wozniak#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Steve Wozniak § Plane crash &amp; temporary leave from Apple"><code>https://en.wikipedia.org/wiki/Steve_Wozniak#Plane_crash_and_temporary_leave_from_Apple</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Traumatic_brain_injury" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Traumatic_brain_injury#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Traumatic brain injury">Traumatic brain injury</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/W._P._Kinsella" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/W._P._Kinsella#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="W. P. Kinsella">W. P. Kinsella</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/W._P._Kinsella" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/W._P._Kinsella#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="W. P. Kinsella"><code>https://en.wikipedia.org/wiki/W._P._Kinsella</code></a></p>
+</div></li>
+</ol>
+</section>
+</section>
+<section id="miscellaneous" class="level1">
+<h1><a href="#miscellaneous" title="Link to section: § &#39;Miscellaneous&#39;">Miscellaneous</a></h1>
+<ul>
+<li><p><strong><a href="https://x.com/phannie6000/status/1942332305319841954" class="id-not include-annotation" data-href-mobile="https://nitter.net/phannie6000/status/1942332305319841954" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="phannie6000 2025"><code>https://x.com/phannie6000/status/1942332305319841954</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/phannie6000/status/1942332305319841954" class="id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/phannie6000/status/1942332305319841954" title="phannie6000 2025"><code>https://x.com/phannie6000/status/1942332305319841954</code></a></p>
+</div></li>
+<li><p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-alosco-alz12779-sup-0001-suppmat.docx" class="prefetch-not link-annotated-partial id-not include-annotation" data-url-iframe="/doc/psychiatry/traumatic-brain-injury/2023-alosco-alz12779-sup-0001-suppmat.docx.html" data-link-icon="word-doc" data-link-icon-color="#277dd4" data-link-icon-type="svg"><code>/doc/psychiatry/traumatic-brain-injury/2023-alosco-alz12779-sup-0001-suppmat.docx</code></a></strong></p></li>
+<li><p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-figure1-mckee-grossanatomicalbrainproblemsinyoungathleteswithchronictraumaticencephalopathyvshealthyyoungcontrolbrain.jpg" class="link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="1503" data-image-width="1660" data-aspect-ratio="350 / 317"><code>/doc/psychiatry/traumatic-brain-injury/2023-figure1-mckee-grossanatomicalbrainproblemsinyoungathleteswithchronictraumaticencephalopathyvshealthyyoungcontrolbrain.jpg</code></a></strong></p></li>
+<li><p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2023-figure3-microscopepathologyofcteinyoungathletes.png" class="link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="2126" data-image-width="2017" data-aspect-ratio="350 / 369"><code>/doc/psychiatry/traumatic-brain-injury/2023-figure3-microscopepathologyofcteinyoungathletes.png</code></a></strong></p></li>
+<li><p><strong><a href="/doc/psychiatry/traumatic-brain-injury/2021-schneider-figure2-dementiaheadinjurysurvivalcurve.jpg" class="link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="1183" data-image-width="1604" data-aspect-ratio="1400 / 1033"><code>/doc/psychiatry/traumatic-brain-injury/2021-schneider-figure2-dementiaheadinjurysurvivalcurve.jpg</code></a></strong></p></li>
+<li><p><strong><a href="https://magazine.atavist.com/2019/lost-in-summerland-lily-dale-psychics-mediums-spiritualism" class="link-live id-not include-annotation" data-link-icon="Atvt" data-link-icon-type="text,quad"><code>https://magazine.atavist.com/2019/lost-in-summerland-lily-dale-psychics-mediums-spiritualism</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://magazine.atavist.com/2019/lost-in-summerland-lily-dale-psychics-mediums-spiritualism" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="Atvt" data-link-icon-type="text,quad"><code>https://magazine.atavist.com/2019/lost-in-summerland-lily-dale-psychics-mediums-spiritualism</code></a></p>
+</div>
+</div></li>
+<li><p><strong><a href="https://slate.com/technology/2024/03/concussion-symptoms-signs-treatment-advice.html" class="id-not include-annotation" data-link-icon="S" data-link-icon-color="#2c0022" data-link-icon-type="text,sans"><code>https://slate.com/technology/2024/03/concussion-symptoms-signs-treatment-advice.html</code></a></strong></p></li>
+<li><p><strong><a href="https://www.amazon.com/dp/1594392137" class="id-not include-annotation" data-link-icon="amazon" data-link-icon-color="#ffce53" data-link-icon-type="svg"><code>https://www.amazon.com/dp/1594392137</code></a></strong></p></li>
+<li><p><strong><a href="https://www.cambridgeblog.org/2023/05/a-journey-into-the-shaken-baby-syndrome-abusive-head-trauma-controversy/" class="id-not include-annotation"><code>https://www.cambridgeblog.org/2023/05/a-journey-into-the-shaken-baby-syndrome-abusive-head-trauma-controversy/</code></a></strong></p></li>
+<li><p><strong><a href="/doc/www/www.cdc.gov/927bf9c57c99eb75ad91a5df88b1afb5dda5dec0.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.cdc.gov/927bf9c57c99eb75ad91a5df88b1afb5dda5dec0.html" data-url-original="https://www.cdc.gov/traumaticbraininjury/data/index.html" data-link-icon="CDC" data-link-icon-color="#0057b7" data-link-icon-type="text,tri"><code>https://www.cdc.gov/traumaticbraininjury/data/index.html</code></a></strong></p></li>
+<li><p><strong><a href="https://www.cnn.com/2023/02/05/sport/head-injury-suicide-female-athletes-intl-spt-cmd/index.html" class="link-live id-not include-annotation" data-link-icon="CNN" data-link-icon-color="#cc0000" data-link-icon-type="text,tri,sans"><code>https://www.cnn.com/2023/02/05/sport/head-injury-suicide-female-athletes-intl-spt-cmd/index.html</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View HTML</strong>:</p>
+<p><a href="https://www.cnn.com/2023/02/05/sport/head-injury-suicide-female-athletes-intl-spt-cmd/index.html" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="CNN" data-link-icon-color="#cc0000" data-link-icon-type="text,tri,sans"><code>https://www.cnn.com/2023/02/05/sport/head-injury-suicide-female-athletes-intl-spt-cmd/index.html</code></a></p>
+</div>
+</div></li>
+<li><p><strong><a href="https://www.nature.com/articles/s41591-023-02705-w" class="id-not include-annotation" data-link-icon="n" data-link-icon-type="text"><code>https://www.nature.com/articles/s41591-023-02705-w</code></a></strong></p></li>
+<li><p><strong><a href="https://www.newyorker.com/news/annals-of-inquiry/the-forgotten-history-of-head-injuries-in-sports" class="id-not include-annotation" data-link-icon="the-new-yorker" data-link-icon-type="svg"><code>https://www.newyorker.com/news/annals-of-inquiry/the-forgotten-history-of-head-injuries-in-sports</code></a></strong></p></li>
+<li><p><strong><a href="https://www.nytimes.com/2023/11/05/us/us-army-marines-artillery-isis-pentagon.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg"><code>https://www.nytimes.com/2023/11/05/us/us-army-marines-artillery-isis-pentagon.html</code></a></strong></p></li>
+<li><p><strong><a href="https://www.nytimes.com/2023/12/04/health/traumatic-brain-injury-implants.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg"><code>https://www.nytimes.com/2023/12/04/health/traumatic-brain-injury-implants.html</code></a></strong></p></li>
+<li><p><strong><a href="https://www.nytimes.com/2024/01/26/business/media/jon-franklin-dead.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg"><code>https://www.nytimes.com/2024/01/26/business/media/jon-franklin-dead.html</code></a></strong></p></li>
+<li><p><strong><a href="https://www.nytimes.com/2024/03/06/technology/john-walker-dead.html" class="id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg"><code>https://www.nytimes.com/2024/03/06/technology/john-walker-dead.html</code></a></strong></p></li>
+<li><p><strong><a href="https://www.outsideonline.com/outdoor-adventure/climbing/austin-howell-fallen-soloist/" class="link-annotated-partial id-not include-annotation" data-link-icon="𝕆" data-link-icon-color="#ffd204" data-link-icon-type="text"><code>https://www.outsideonline.com/outdoor-adventure/climbing/austin-howell-fallen-soloist/</code></a></strong></p></li>
+<li><p><strong><a href="https://www.outsideonline.com/outdoor-adventure/exploration-survival/body-electric/" class="id-not include-annotation" data-link-icon="𝕆" data-link-icon-color="#ffd204" data-link-icon-type="text"><code>https://www.outsideonline.com/outdoor-adventure/exploration-survival/body-electric/</code></a></strong></p></li>
+<li><p><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0166432818300718" class="id-not include-annotation" data-link-icon="E" data-link-icon-color="#eb6500" data-link-icon-type="text"><code>https://www.sciencedirect.com/science/article/abs/pii/S0166432818300718</code></a></strong></p></li>
+<li><p><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S1474442216300576" class="id-not include-annotation" data-link-icon="E" data-link-icon-color="#eb6500" data-link-icon-type="text"><code>https://www.sciencedirect.com/science/article/abs/pii/S1474442216300576</code></a></strong></p></li>
+<li><p><strong><a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(19)30188-4/fulltext" class="id-not include-annotation" data-link-icon="L" data-link-icon-color="#004582" data-link-icon-type="text"><code>https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(19)30188-4/fulltext</code></a></strong></p></li>
+<li><p><strong><a href="https://www.wired.com/story/the-curious-afterlife-of-a-brain-trauma-survivor/" class="link-live id-not include-annotation" data-link-icon="wired" data-link-icon-type="svg"><code>https://www.wired.com/story/the-curious-afterlife-of-a-brain-trauma-survivor/</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://www.wired.com/story/the-curious-afterlife-of-a-brain-trauma-survivor/" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="wired" data-link-icon-type="svg"><code>https://www.wired.com/story/the-curious-afterlife-of-a-brain-trauma-survivor/</code></a></p>
+</div>
+</div></li>
+<li><p><strong><a href="https://www.youtube.com/watch?v=eaTVo0rlMIg" class="id-not include-annotation" data-link-icon="youtube" data-link-icon-color="#ff0033" data-link-icon-type="svg"><code>https://www.youtube.com/watch?v=eaTVo0rlMIg</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://www.youtube.com/watch?v=eaTVo0rlMIg" class="link-annotated-not include-content width-full" data-link-icon="youtube" data-link-icon-type="svg" data-link-icon-color="#ff0033"><code>https://www.youtube.com/watch?v=eaTVo0rlMIg</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/SwiftOnSecurity/status/1778893315947081813" class="id-not include-annotation" data-href-mobile="https://nitter.net/SwiftOnSecurity/status/1778893315947081813" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="SwiftOnSecurity 2026"><code>https://x.com/SwiftOnSecurity/status/1778893315947081813</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/SwiftOnSecurity/status/1778893315947081813" class="id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/SwiftOnSecurity/status/1778893315947081813" title="SwiftOnSecurity 2026"><code>https://x.com/SwiftOnSecurity/status/1778893315947081813</code></a></p>
+</div></li>
+</ul>
+</section>
+<section id="link-bibliography-section" class="level1">
+<h1><a href="#link-bibliography-section" title="Link to section: § &#39;Bibliography&#39;">Bibliography</a></h1>
+<ol type="1">
+<li><p><code>2022-segal.pdf</code>: <a href="/doc/genetics/heritable/adoption/2022-segal.pdf" id="segal-hur-2022" class="link-annotated" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;Personality traits, mental abilities and other individual differences: Monozygotic female twins raised apart in South Korea and the United States&#39;, Segal &amp; Hur 2022">“Personality Traits, Mental Abilities and Other Individual Differences: Monozygotic Female Twins Raised Apart in South Korea and the United States”</a>, <span class="author"><a href="https://en.wikipedia.org/wiki/Nancy_L._Segal" class="link-live id-not" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Nancy_L._Segal#bodyContent" title="Nancy L. Segal">Nancy L. Segal</a>, Yoon-Mi Hur</span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/%252Fdoc%252Fgenetics%252Fheritable%252Fadoption%252F2022-segal.pdf.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link /doc/genetics/heritable/adoption/2022-segal.pdf">link-bibliography</a></span></p></li>
+<li><p><code>abstract</code>: <a href="/doc/psychiatry/traumatic-brain-injury/abstract" id="gwern-doc-psychiatry-traumatic-brain-injury-abstract-2" class="prefetch-not link-page link-annotated-partial" title="&#39;Falling &amp; Head Injuries&#39;, Gwern 2019">“Falling & Head Injuries”</a>, <span class="author cite-author"><a href="/index#abstract" class="prefetch-not link-page link-annotated-partial id-not" title="&#39;Gwern Bibliography&#39;, Gwern 2010">Gwern</a></span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/%252Fdoc%252Fpsychiatry%252Ftraumatic-brain-injury%252Fabstract.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link /doc/psychiatry/traumatic-brain-injury/abstract">link-bibliography</a></span></p></li>
+<li><p><code>2005-flicker.pdf</code>: <a href="/doc/vitamin-d/2005-flicker.pdf" id="flicker-et-al-2005" class="link-annotated" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial&#39;, Flicker et al 2005">“Should Older People in Residential Care Receive Vitamin D to Prevent Falls? Results of a Randomized Trial”</a>, <span class="author">Leon Flicker, Robert J. MacInnis, Mark S. Stein<span class="collapse">, Sam C. Scherer, Kate E. Mead, Caryl A. Nowson, Jenny Thomas, Chris Lowndes, John L. Hopper, John D. Wark</span></span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/%252Fdoc%252Fvitamin-d%252F2005-flicker.pdf.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link /doc/vitamin-d/2005-flicker.pdf">link-bibliography</a></span></p></li>
+</ol>
+</section>
+
+       
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" rel="nofollow" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

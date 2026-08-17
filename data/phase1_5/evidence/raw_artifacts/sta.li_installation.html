@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head> 
+	<title>Installation | static linux</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"> 
+</head> 
+<body>
+	<div id="menu">
+
+		<a href="//garbe.ca/">home</a>
+
+
+		<a href="//beec.ca/">bees</a>
+
+
+		<a class="thisSite" href="//sta.li/">stali</a>
+
+	</div>
+	<div id="header"><span class="siteTitle">static linux</span></div>
+
+	<div id="content">
+	
+	<div id="nav">
+		<ul>
+			
+			
+	
+	<li><a href="/" class="normal">About</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/build/" class="normal">Build stali from source</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/faq/" class="normal">FAQ</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/filesystem/" class="normal">Filesystem</a>
+	
+		
+	</li>
+
+			
+			
+	
+		
+		<li><a href="/installation/" class="thisPage">Installation</a>
+		
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/technologies/" class="normal">Software stali uses and/or might adopt</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/upgrade/" class="normal">Keep up-to-date with upstream stali</a>
+	
+		
+	</li>
+
+			
+			<li><a href="" class="empty"></a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+	<h1>Installation</h1>
+
+<h2>Raspberry Pi 2+</h2>
+
+<p>Build the stali image using the <a href="http://git.sta.li/stali-pi">stali-pi</a> project and flash your sd
+card for the Pi 2+. It should boot out of the box.</p>
+
+<h2>PC</h2>
+
+<p>Prepare a disk partition for stali, we recommend formatting it with ext4fs</p>
+
+<p>Mount the disk partition</p>
+
+<pre><code>; sudo su
+# mkdir /mnt/rootfs-x86_64
+# mount /dev/sdX /mnt/rootfs-x86_64
+</code></pre>
+
+<p>Clone rootfs-x86_64</p>
+
+<pre><code># cd /mnt
+# git clone http://git.sta.li/rootfs-x86_64
+</code></pre>
+
+<p>Setup the system</p>
+
+<pre><code># cd /mnt/rootfs-x86_64/etc
+# # adjust rc.init/exit, etc.
+</code></pre>
+
+<p>Prepare chroot</p>
+
+<pre><code># mount -t proc proc /mnt/rootfs-x86_64/proc
+# mount --rbind /sys /mnt/rootfs-x86_64/sys
+# mount --rbind /dev /mnt/rootfs-x86_64/dev
+</code></pre>
+
+<p>chroot into stali</p>
+
+<pre><code># chroot /mnt/rootfs-x86_64 /bin/sh
+# # build a custom kernel, setup system/bootloader etc # TODO
+</code></pre>
+
+<p>Finish the installation and boot into stali.</p>
+
+	</div>
+	<div id="footer">
+	<small><a href="https://github.com/garbeam/staw">staw powered</a> &copy; 2025</small>
+	</div>
+	</div>
+</body>
+</html>
+
+
+

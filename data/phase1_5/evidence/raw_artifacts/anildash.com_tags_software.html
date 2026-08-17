@@ -1,0 +1,3873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" type="text/css" href="/public/styles.css" />
+    
+    
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Anil Dash RSS Feed">
+    
+    
+    <title>Software - Anil Dash</title>
+
+<meta name="description" content="A blog about making culture. Since 1999.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Anil Dash">
+
+<link rel="canonical" href="https://anildash.com/tags/software/">
+
+<meta property="og:title" content="Software - Anil Dash">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://anildash.com/tags/software/">
+<meta property="og:description" content="A blog about making culture. Since 1999.">
+<meta property="og:image" content="/images/2025-headshot-square-1600.jpeg">
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:url" content="https://anildash.com/tags/software/">
+<meta name="twitter:title" content="Software - Anil Dash">
+<meta name="twitter:description" content="A blog about making culture. Since 1999.">
+<meta name="twitter:image" content="/images/2025-headshot-square-1600.jpeg">
+
+
+    
+    
+    <meta name="description" content="All posts tagged &quot;software&quot;">
+    <meta name="keywords" content="tech, writing, culture, systems, internet">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#800080">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.svg" sizes="any">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Anil Dash">
+    <link rel="apple-touch-icon" href="/images/icon-192.png">
+
+    
+    <meta name="color-scheme" content="light dark">
+    
+    
+    <link rel="author" href="https://anildash.com/about">
+
+    
+    
+    <link rel="site.standard.publication" href="at://did:plc:sg2e2kqdsdp2q2zl44txadbp/site.standard.publication/3mseydliecm2r">
+    
+    
+    
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://anildash.com/tags/software/"
+      },
+      "headline": "Software",
+      "description": "All posts tagged "software""
+      ,
+      "author": {
+        "@type": "Person",
+        "name": "Anil Dash",
+        "url": "https://anildash.com/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Anil Dash",
+        "image": "/images/headshot-2022-square.jpeg"
+      }
+      
+    }
+    </script>
+    
+    
+    
+      <link rel="next" href="/tags/netscape/" />
+      <link rel="prev" href="/tags/sap/" />
+    
+    
+    
+    <link rel="canonical" href="https://anildash.com/tags/software/">
+    
+    
+    
+    
+    
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="icon" type= "image/x-icon" href="/images/apple-touch-icon.png">
+    
+    
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    <meta name="twitter:creator" content="@anildash"/>
+    
+    <meta name="fediverse:creator" content="@anildash@me.dm" />
+  </head>
+  <body>
+    <!-- Add skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="layout-wrapper">
+      <header class="header" role="banner">
+        <div class="header__content">
+          <h1 class="site-title">
+            <a href=/>
+              Anil Dash
+            </a>
+          </h1>
+          <!-- Add proper aria labeling -->
+          <nav class="nav" aria-label="Main navigation">
+            <!-- Hamburger button for mobile -->
+            <button class="hamburger" id="hamburger-toggle" aria-label="Toggle menu" aria-expanded="false">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav__list" id="nav-list">
+              <li class="nav-item nav-item-social">
+                <a rel="me" href="https://me.dm/@anildash" aria-label="Mastodon profile">mastodon</a>
+              </li>
+              <li class="nav-item nav-item-social">
+                <a href="https://bsky.app/profile/anildash.com" aria-label="Bluesky profile">bluesky</a>
+              </li>
+              <li class="nav-item nav-item-social">
+                <a href="https://www.threads.net/@anildash" aria-label="Threads profile">threads</a>
+              </li>
+              <li class="nav-item nav-item-social">
+                <a href="https://www.linkedin.com/in/anildash" aria-label="LinkedIn profile">linkedin</a>
+              </li>
+              <li class="nav-item nav-item-about">
+                <a href="https://anildash.com/about" class="nav-about-link" >about</a>
+              </li>
+              <!-- Mobile-only search link -->
+              <li class="nav-item nav-item-search-link">
+                <a href="/discover/">discover</a>
+              </li>
+              <li class="nav-item nav-item-search-link">
+                <a href="/press/" >press & media</a>
+              </li>
+              <!-- Mobile-only theme toggle -->
+              <li class="nav-item nav-item-theme-toggle">
+                <button id="mobile-theme-toggle" class="mobile-theme-toggle" aria-label="Toggle dark mode">
+                  <span class="theme-toggle-light" aria-hidden="true">☀️</span>
+                  <span class="theme-toggle-dark" aria-hidden="true">🌙</span>
+                  <span class="mobile-theme-label">light mode</span>
+                </button>
+              </li>
+              <!-- Expandable Search -->
+              <li class="nav-item">
+                <div class="expandable-search" id="expandable-search">
+                  <button 
+                    class="search-toggle" 
+                    id="search-toggle"
+                    aria-label="Open search"
+                    aria-expanded="false"
+                    aria-controls="search-input-container"
+                  >
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                  </button>
+                  <div class="search-input-container" id="search-input-container" role="search">
+                    <input 
+                      type="search" 
+                      placeholder="Search..."
+                      aria-label="Search"
+                      id="header-search-input"
+                    >
+                    <button 
+                      class="search-close" 
+                      id="search-close"
+                      aria-label="Close search"
+                    >×</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+      <!-- Compact Newsletter Signup Banner -->
+      <div class="newsletter-banner" id="newsletter-banner">
+        <div class="newsletter-content">
+          <p class="newsletter-text">Get new posts by email (free, no spam)</p>
+          <form 
+            class="newsletter-form" 
+            action="https://buttondown.email/api/emails/embed-subscribe/anildash"
+            method="post"
+            target="_blank"
+          >
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="your@email.com" 
+              required 
+              aria-label="Email for newsletter"
+            >
+            <input type="hidden" value="1" name="embed" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <button 
+            class="newsletter-dismiss" 
+            onclick="dismissNewsletter()" 
+            aria-label="Dismiss newsletter signup"
+            title="Dismiss"
+          >×</button>
+        </div>
+      </div>
+      
+      
+      <!-- Add breadcrumbs for SEO and navigation -->
+      
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <ol vocab="https://schema.org/" typeof="BreadcrumbList">
+          <li property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="/">
+              <span property="name">Home</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+          
+          <li property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="/tags/">
+              <span property="name">Tags</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+          <li property="itemListElement" typeof="ListItem">
+            <span property="name">software</span>
+            <meta property="position" content="3">
+          </li>
+          
+        </ol>
+      </nav>
+      
+      
+      <!-- Add id for skip link target and role -->
+      <main class="main" id="main-content" role="main">
+        <header class="hero tag-hero">
+  <div class="hero-content">
+    <h1>SOFTWARE</h1>
+  </div>
+</header>
+
+
+
+
+
+
+<section class="tag-recent-posts">
+  <div class="related-posts__grid">
+    
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/06/15/indie-AI-takeover/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/cwxki8JHwM-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-06-15">
+        15 Jun 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/06/15/indie-AI-takeover/" class="related-post__title-link">Maybe it&#39;s time for lots of little indie AIs to take over</a></p><div class="related-post__tags"><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/tech/" class="related-post__tag">tech</a><a href="/tags/software/" class="related-post__tag">software</a></div><p class="related-post__excerpt">“[T]here can be alternatives. What we can imagine is, rather than the ChatGPT killer, a lot of different little AIs from little responsible players.” That’s me,...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/04/28/one-good-ai-is-here/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/xhn_39O9fJ-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-04-28">
+        28 Apr 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/04/28/one-good-ai-is-here/" class="related-post__title-link">(One) Good AI Is Here</a></p><div class="related-post__tags"><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/software/" class="related-post__tag">software</a><a href="/tags/video/" class="related-post__tag">video</a></div><p class="related-post__excerpt">The cultural battles over AI have broken down over predictable lines in the past few years, with critics rightfully calling out the big AI platforms for...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/04/10/y2k-2.0-ai-security/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/skYTS7YfI1-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-04-10">
+        10 Apr 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/04/10/y2k-2.0-ai-security/" class="related-post__title-link">Y2K 2.0: The AI security reckoning</a></p><div class="related-post__tags"><a href="/tags/tech/" class="related-post__tag">tech</a><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/security/" class="related-post__tag">security</a></div><p class="related-post__excerpt">In just the last few weeks, we’ve seen a series of software security vulnerabilities that, until recently, would each have been the biggest exploit of the year...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/03/13/coders-after-ai/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/KB_b6LlCPT-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-03-13">
+        13 Mar 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/03/13/coders-after-ai/" class="related-post__title-link">What do coders do after AI?</a></p><div class="related-post__tags"><a href="/tags/coding/" class="related-post__tag">coding</a><a href="/tags/software/" class="related-post__tag">software</a><a href="/tags/ai/" class="related-post__tag">ai</a></div><p class="related-post__excerpt">For the New York Times Magazine this Sunday, I talked to Clive Thompson about one of the conversations that I'm having most often these days: What happens to...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/02/23/taking-action-ai-harms/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/cfAgw3H46K-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-02-23">
+        23 Feb 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/02/23/taking-action-ai-harms/" class="related-post__title-link">Taking action against AI harms</a></p><div class="related-post__tags"><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/safety/" class="related-post__tag">safety</a><a href="/tags/internet/" class="related-post__tag">internet</a></div><p class="related-post__excerpt">In my last piece, I talked about the harms that AI is visiting on children through the irresponsible choices made by the platforms creating those products....</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/02/18/threatening-kids-with-AI/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/TKsJGerMCY-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-02-18">
+        18 Feb 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/02/18/threatening-kids-with-AI/" class="related-post__title-link">How did we end up threatening our kids’ lives with AI?</a></p><div class="related-post__tags"><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/safety/" class="related-post__tag">safety</a><a href="/tags/internet/" class="related-post__tag">internet</a></div><p class="related-post__excerpt">I have to begin by warning you about the content in this piece; while I won’t be dwelling on any specifics, this will necessarily be a broad discussion about...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/02/11/coding-agents-as-the-new-compilers/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/BbE5kFkMmQ-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-02-11">
+        11 Feb 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/02/11/coding-agents-as-the-new-compilers/" class="related-post__title-link">Coding agents as the new compilers</a></p><div class="related-post__tags"><a href="/tags/coding/" class="related-post__tag">coding</a><a href="/tags/software/" class="related-post__tag">software</a><a href="/tags/ai/" class="related-post__tag">ai</a></div><p class="related-post__excerpt">In each successive generation of code creation thus far, we’ve abstracted away the prior generation over time. Usually, only a small percentage of coders still...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/01/27/codeless-ecosystem/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/Upovbe662U-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-01-27">
+        27 Jan 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/01/27/codeless-ecosystem/" class="related-post__title-link">A Codeless Ecosystem, or hacking beyond vibe coding</a></p><div class="related-post__tags"><a href="/tags/coding/" class="related-post__tag">coding</a><a href="/tags/software/" class="related-post__tag">software</a><a href="/tags/ai/" class="related-post__tag">ai</a></div><p class="related-post__excerpt">There's been a remarkable leap forward in the ability to orchestrate coding bots, making it possible for ordinary creators to command dozens of AI bots to build...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/01/22/codeless/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/mMWpgCm0nx-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-01-22">
+        22 Jan 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/01/22/codeless/" class="related-post__title-link">Codeless: From idea to software</a></p><div class="related-post__tags"><a href="/tags/tech/" class="related-post__tag">tech</a><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/coding/" class="related-post__tag">coding</a></div><p class="related-post__excerpt">Something actually new? There’s finally been a big leap forward in coding tech unlocked by AI — not just “it’s doing some work for me”, but “we couldn’t do this...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2026/01/09/how-markdown-took-over-the-world/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/iFzjc8yxrR-300.webp');">
+      
+      <time class="related-post__date" datetime="2026-01-09">
+        09 Jan 2026
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2026/01/09/how-markdown-took-over-the-world/" class="related-post__title-link">How Markdown took over the world</a></p><div class="related-post__tags"><a href="/tags/tech/" class="related-post__tag">tech</a><a href="/tags/blogs/" class="related-post__tag">blogs</a><a href="/tags/software/" class="related-post__tag">software</a></div><p class="related-post__excerpt">Nearly every bit of the high-tech world, from the most cutting-edge AI systems at the biggest companies, to the casual scraps of code cobbled together by...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2025/12/02/vibe-coding-empowering-and-imprisoning/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/BMvev3l4kz-300.webp');">
+      
+      <time class="related-post__date" datetime="2025-12-02">
+        02 Dec 2025
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2025/12/02/vibe-coding-empowering-and-imprisoning/" class="related-post__title-link">Vibe Coding: Empowering and Imprisoning</a></p><div class="related-post__tags"><a href="/tags/coding/" class="related-post__tag">coding</a><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/software/" class="related-post__tag">software</a></div><p class="related-post__excerpt">In case you haven’t been following the world of software development closely, it’s good to know that vibe coding — using LLM tools to assist with writing code —...</p></div>
+</article>
+
+    
+      
+<article class="related-post">
+  
+  
+  
+  
+  
+
+  
+  <a href="/2025/10/22/atlas-anti-web-browser/" class="related-post__image-link">
+    <div class="related-post__image" style="background-image: url('/img/IEU2NtStoH-300.webp');">
+      
+      <time class="related-post__date" datetime="2025-10-22">
+        22 Oct 2025
+      </time>
+      
+      
+    </div>
+  </a>
+  <div class="related-post__content">
+    <p class="related-post__title"><a href="/2025/10/22/atlas-anti-web-browser/" class="related-post__title-link">ChatGPT&#39;s Atlas: The Browser That&#39;s Anti-Web</a></p><div class="related-post__tags"><a href="/tags/browsers/" class="related-post__tag">browsers</a><a href="/tags/ai/" class="related-post__tag">ai</a><a href="/tags/web/" class="related-post__tag">web</a></div><p class="related-post__excerpt">OpenAI, the company behind ChatGPT, released their own browser called Atlas, and it actually is something new: the first browser that actively fights against...</p></div>
+</article>
+
+    
+  </div>
+</section>
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+  
+
+
+<section class="compact-posts-list">
+  <h2>More posts in Software</h2>
+
+
+  <div class="compact-posts">
+    
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2021</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2021/12/23/tech-im-watching-for-2022/">Tech I&#39;m Watching in 2022</a></h3>
+            <time class="compact-post__date">
+              <a href="/2021/12/23/tech-im-watching-for-2022/" datetime="2021-12-23">23 Dec 2021</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2021/09/30/prying-email/">Burners, Pollution,  Control &amp; Privacy By A Thousand Cuts</a></h3>
+            <time class="compact-post__date">
+              <a href="/2021/09/30/prying-email/" datetime="2021-09-30">30 Sep 2021</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/privacy/" class="compact-post__tag">privacy</a>
+                
+              
+                
+                  
+                  <a href="/tags/advertising/" class="compact-post__tag">advertising</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2021/08/05/the-code-behind-the-code/">The Code Behind The Code</a></h3>
+            <time class="compact-post__date">
+              <a href="/2021/08/05/the-code-behind-the-code/" datetime="2021-08-05">05 Aug 2021</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/nostalgia/" class="compact-post__tag">nostalgia</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2021/01/06/making-things-fast/">Making Things, Fast</a></h3>
+            <time class="compact-post__date">
+              <a href="/2021/01/06/making-things-fast/" datetime="2021-01-06">06 Jan 2021</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/google/" class="compact-post__tag">google</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2021/01/03/keeping-tabs-on-your-abstractions/">Keeping Tabs on your Abstractions</a></h3>
+            <time class="compact-post__date">
+              <a href="/2021/01/03/keeping-tabs-on-your-abstractions/" datetime="2021-01-03">03 Jan 2021</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/unix/" class="compact-post__tag">unix</a>
+                
+              
+                
+                  
+                  <a href="/tags/computer-science/" class="compact-post__tag">computer science</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2020</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2020/12/31/a-personal-digital-reset/">A Personal Digital Reset</a></h3>
+            <time class="compact-post__date">
+              <a href="/2020/12/31/a-personal-digital-reset/" datetime="2020-12-31">31 Dec 2020</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/twitter/" class="compact-post__tag">twitter</a>
+                
+              
+                
+                  
+                  <a href="/tags/most-popular/" class="compact-post__tag">most popular</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2020/08/25/what-windows-95-changed/">What Windows 95 Changed</a></h3>
+            <time class="compact-post__date">
+              <a href="/2020/08/25/what-windows-95-changed/" datetime="2020-08-25">25 Aug 2020</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/windows/" class="compact-post__tag">windows</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2020/05/07/when-everything-crashes/">When Every App Crashes</a></h3>
+            <time class="compact-post__date">
+              <a href="/2020/05/07/when-everything-crashes/" datetime="2020-05-07">07 May 2020</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/iphone/" class="compact-post__tag">iphone</a>
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2019</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2019/05/22/putting-the-soul-in-console/">Putting the Soul in Console</a></h3>
+            <time class="compact-post__date">
+              <a href="/2019/05/22/putting-the-soul-in-console/" datetime="2019-05-22">22 May 2019</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/startups/" class="compact-post__tag">startups</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2017</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2017/05/01/were-just-trying-to-be-non-terrible/">We&#39;re just trying to be non-terrible!</a></h3>
+            <time class="compact-post__date">
+              <a href="/2017/05/01/were-just-trying-to-be-non-terrible/" datetime="2017-05-01">01 May 2017</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/podcast/" class="compact-post__tag">podcast</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2016</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2016/12/06/im-at-fog-creek-and-were-introducing-gomix/">I&#39;m at Fog Creek. And we&#39;re introducing Glitch!</a></h3>
+            <time class="compact-post__date">
+              <a href="/2016/12/06/im-at-fog-creek-and-were-introducing-gomix/" datetime="2016-12-06">06 Dec 2016</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2015</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2015/07/11/the-internet-of-tweets/">The Internet of Tweets</a></h3>
+            <time class="compact-post__date">
+              <a href="/2015/07/11/the-internet-of-tweets/" datetime="2015-07-11">11 Jul 2015</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/twitter/" class="compact-post__tag">twitter</a>
+                
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2015/01/23/how-software-works/">How Software Works</a></h3>
+            <time class="compact-post__date">
+              <a href="/2015/01/23/how-software-works/" datetime="2015-01-23">23 Jan 2015</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/software-development/" class="compact-post__tag">software development</a>
+                
+              
+                
+                  
+                  <a href="/tags/atari/" class="compact-post__tag">atari</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2013</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2013/08/23/what-medium-is/">What Medium Is</a></h3>
+            <time class="compact-post__date">
+              <a href="/2013/08/23/what-medium-is/" datetime="2013-08-23">23 Aug 2013</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/media/" class="compact-post__tag">media</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/medium/" class="compact-post__tag">medium</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2013/04/29/i-like-blogging-software/">I like blogging software.</a></h3>
+            <time class="compact-post__date">
+              <a href="/2013/04/29/i-like-blogging-software/" datetime="2013-04-29">29 Apr 2013</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/wordpress/" class="compact-post__tag">wordpress</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2013/03/19/the-case-for-user-agent-extremism/">The Case for User Agent Extremism</a></h3>
+            <time class="compact-post__date">
+              <a href="/2013/03/19/the-case-for-user-agent-extremism/" datetime="2013-03-19">19 Mar 2013</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/open-source/" class="compact-post__tag">open source</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2013/01/09/how-to-redesign-your-app-without-pissing-everybody-off/">How to Redesign Your App Without Pissing Everybody Off</a></h3>
+            <time class="compact-post__date">
+              <a href="/2013/01/09/how-to-redesign-your-app-without-pissing-everybody-off/" datetime="2013-01-09">09 Jan 2013</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/user-experience/" class="compact-post__tag">user experience</a>
+                
+              
+                
+                  
+                  <a href="/tags/design/" class="compact-post__tag">design</a>
+                
+              
+                
+                  
+                  <a href="/tags/social-media/" class="compact-post__tag">social media</a>
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2012</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2012/12/20/making-a-mullet-platform-multiplatform-app/">Making a Mullet-platform Multiplatform App</a></h3>
+            <time class="compact-post__date">
+              <a href="/2012/12/20/making-a-mullet-platform-multiplatform-app/" datetime="2012-12-20">20 Dec 2012</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/apps/" class="compact-post__tag">apps</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2012/11/12/i-do-love-writing-software/">I Do Love Writing Software</a></h3>
+            <time class="compact-post__date">
+              <a href="/2012/11/12/i-do-love-writing-software/" datetime="2012-11-12">12 Nov 2012</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/writing/" class="compact-post__tag">writing</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/bill-gates/" class="compact-post__tag">bill gates</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2012/09/24/what-developers-want/">What Developers Want</a></h3>
+            <time class="compact-post__date">
+              <a href="/2012/09/24/what-developers-want/" datetime="2012-09-24">24 Sep 2012</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2012/05/29/the-decade-long-campaign-to-lock-down-your-computer/">The Decade-Long Campaign to Lock Down Your Computer</a></h3>
+            <time class="compact-post__date">
+              <a href="/2012/05/29/the-decade-long-campaign-to-lock-down-your-computer/" datetime="2012-05-29">29 May 2012</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/security/" class="compact-post__tag">security</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2012/04/01/readability-instapaper-the-network-and-the-price-we-pay/">Readability, Instapaper, the Network and the Price we Pay</a></h3>
+            <time class="compact-post__date">
+              <a href="/2012/04/01/readability-instapaper-the-network-and-the-price-we-pay/" datetime="2012-04-01">01 Apr 2012</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2012/03/26/expert-labs-ends-and-thinkup-begins/">Expert Labs Ends and ThinkUp Begins</a></h3>
+            <time class="compact-post__date">
+              <a href="/2012/03/26/expert-labs-ends-and-thinkup-begins/" datetime="2012-03-26">26 Mar 2012</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/twitter/" class="compact-post__tag">twitter</a>
+                
+              
+                
+                  
+                  <a href="/tags/innovation/" class="compact-post__tag">innovation</a>
+                
+              
+                
+                  
+                  <a href="/tags/government/" class="compact-post__tag">government</a>
+                
+              
+                
+                  
+                  <a href="/tags/policy/" class="compact-post__tag">policy</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2011</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2011/12/15/bootstrap-rising/">Bootstrap Rising</a></h3>
+            <time class="compact-post__date">
+              <a href="/2011/12/15/bootstrap-rising/" datetime="2011-12-15">15 Dec 2011</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/twitter/" class="compact-post__tag">twitter</a>
+                
+              
+                
+                  
+                  <a href="/tags/css/" class="compact-post__tag">css</a>
+                
+              
+                
+                  
+                  <a href="/tags/design/" class="compact-post__tag">design</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2011/11/17/readability-and-intention/">Readability And Intention</a></h3>
+            <time class="compact-post__date">
+              <a href="/2011/11/17/readability-and-intention/" datetime="2011-11-17">17 Nov 2011</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/api/" class="compact-post__tag">api</a>
+                
+              
+                
+                  
+                  <a href="/tags/iphone/" class="compact-post__tag">iphone</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2011/11/15/thinkup-1-0/">ThinkUp 1.0 and Software With Purpose</a></h3>
+            <time class="compact-post__date">
+              <a href="/2011/11/15/thinkup-1-0/" datetime="2011-11-16">16 Nov 2011</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/twitter/" class="compact-post__tag">twitter</a>
+                
+              
+                
+                  
+                  <a href="/tags/facebook/" class="compact-post__tag">facebook</a>
+                
+              
+                
+                  
+                  <a href="/tags/php/" class="compact-post__tag">php</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2010</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2010/12/20/delivery-as-a-service/">Delivery As A Service</a></h3>
+            <time class="compact-post__date">
+              <a href="/2010/12/20/delivery-as-a-service/" datetime="2010-12-20">20 Dec 2010</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2010/11/24/freedom-trust-and-other-boring-software-features/">Freedom, Trust, and Other Boring Software Features</a></h3>
+            <time class="compact-post__date">
+              <a href="/2010/11/24/freedom-trust-and-other-boring-software-features/" datetime="2010-11-24">24 Nov 2010</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2010/10/04/one-line-bios/">Your Whole Life In One Tweet</a></h3>
+            <time class="compact-post__date">
+              <a href="/2010/10/04/one-line-bios/" datetime="2010-10-04">04 Oct 2010</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/media/" class="compact-post__tag">media</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/twitter/" class="compact-post__tag">twitter</a>
+                
+              
+                
+                  
+                  <a href="/tags/facebook/" class="compact-post__tag">facebook</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2010/09/14/cloudtop-applications/">Cloudtop Applications</a></h3>
+            <time class="compact-post__date">
+              <a href="/2010/09/14/cloudtop-applications/" datetime="2010-09-14">14 Sep 2010</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+                
+                  
+                  <a href="/tags/smartphones/" class="compact-post__tag">smartphones</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2008</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2008/01/25/green-bay/">Green Bay</a></h3>
+            <time class="compact-post__date">
+              <a href="/2008/01/25/green-bay/" datetime="2008-01-25">25 Jan 2008</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/ebay/" class="compact-post__tag">ebay</a>
+                
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2007</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2007/11/09/a-different-software-license/">A Different Software License</a></h3>
+            <time class="compact-post__date">
+              <a href="/2007/11/09/a-different-software-license/" datetime="2007-11-09">09 Nov 2007</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/climate-change/" class="compact-post__tag">climate change</a>
+                
+              
+                
+                  
+                  <a href="/tags/windows/" class="compact-post__tag">windows</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2007/09/24/but-is-it-safe/">But Is It *Safe*?</a></h3>
+            <time class="compact-post__date">
+              <a href="/2007/09/24/but-is-it-safe/" datetime="2007-09-24">24 Sep 2007</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/accessibility/" class="compact-post__tag">accessibility</a>
+                
+              
+                
+                  
+                  <a href="/tags/activex/" class="compact-post__tag">activex</a>
+                
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2007/08/21/groupware-still-sucks/">Groupware Still Sucks</a></h3>
+            <time class="compact-post__date">
+              <a href="/2007/08/21/groupware-still-sucks/" datetime="2007-08-21">21 Aug 2007</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/groupware/" class="compact-post__tag">groupware</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2007/04/26/is-pidgin-the-f/">Is Pidgin the Firefox of IM?</a></h3>
+            <time class="compact-post__date">
+              <a href="/2007/04/26/is-pidgin-the-f/" datetime="2007-04-26">26 Apr 2007</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/open-source/" class="compact-post__tag">open source</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/instant-messaging/" class="compact-post__tag">instant messaging</a>
+                
+              
+                
+                  
+                  <a href="/tags/firefox/" class="compact-post__tag">firefox</a>
+                
+              
+                
+                  
+                  <a href="/tags/aol/" class="compact-post__tag">aol</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2006</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2006/08/17/the-windows-app/">The Windows Apps You Never Need To Install</a></h3>
+            <time class="compact-post__date">
+              <a href="/2006/08/17/the-windows-app/" datetime="2006-08-17">17 Aug 2006</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/browsers/" class="compact-post__tag">browsers</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/windows/" class="compact-post__tag">windows</a>
+                
+              
+                
+                  
+                  <a href="/tags/user-experience/" class="compact-post__tag">user experience</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2006/06/19/office-2007s-ri/">Office 2007 is the Bravest Upgrade Ever</a></h3>
+            <time class="compact-post__date">
+              <a href="/2006/06/19/office-2007s-ri/" datetime="2006-06-19">19 Jun 2006</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/business/" class="compact-post__tag">business</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2005</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2005/08/25/movable-type-32-is-out/">Movable Type 3.2 is out!</a></h3>
+            <time class="compact-post__date">
+              <a href="/2005/08/25/movable-type-32-is-out/" datetime="2005-08-25">25 Aug 2005</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2005/03/30/the-man-who-sav/">The Man Who Saved The World</a></h3>
+            <time class="compact-post__date">
+              <a href="/2005/03/30/the-man-who-sav/" datetime="2005-03-31">31 Mar 2005</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/history/" class="compact-post__tag">history</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2005/01/19/the-social-impa/">The Social Impacts of Software Choices</a></h3>
+            <time class="compact-post__date">
+              <a href="/2005/01/19/the-social-impa/" datetime="2005-01-19">19 Jan 2005</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/google/" class="compact-post__tag">google</a>
+                
+              
+                
+                  
+                  <a href="/tags/web/" class="compact-post__tag">web</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2004</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2004/12/22/the-graphing-ca/">The Graphing Calculator story</a></h3>
+            <time class="compact-post__date">
+              <a href="/2004/12/22/the-graphing-ca/" datetime="2004-12-22">22 Dec 2004</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2004/11/11/the-story-of-au/">The story of Audion</a></h3>
+            <time class="compact-post__date">
+              <a href="/2004/11/11/the-story-of-au/" datetime="2004-11-11">11 Nov 2004</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2004/11/05/software-that-e/">Software that encourages flaming</a></h3>
+            <time class="compact-post__date">
+              <a href="/2004/11/05/software-that-e/" datetime="2004-11-05">05 Nov 2004</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/social-software/" class="compact-post__tag">social software</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/culture/" class="compact-post__tag">culture</a>
+                
+              
+                
+                  
+                  <a href="/tags/community/" class="compact-post__tag">community</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2004/06/02/bundling-is-not/">Bundling is not enough</a></h3>
+            <time class="compact-post__date">
+              <a href="/2004/06/02/bundling-is-not/" datetime="2004-06-02">02 Jun 2004</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/nyc/" class="compact-post__tag">nyc</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/industry/" class="compact-post__tag">industry</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2003</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2003/11/25/tools-affect-co/">Tools Affect Content</a></h3>
+            <time class="compact-post__date">
+              <a href="/2003/11/25/tools-affect-co/" datetime="2003-11-25">25 Nov 2003</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/content/" class="compact-post__tag">content</a>
+                
+              
+                
+                  
+                  <a href="/tags/tools/" class="compact-post__tag">tools</a>
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2003/01/07/lack-of-ambitio/">lack of ambition</a></h3>
+            <time class="compact-post__date">
+              <a href="/2003/01/07/lack-of-ambitio/" datetime="2003-01-07">07 Jan 2003</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/innovation/" class="compact-post__tag">innovation</a>
+                
+              
+                
+                  
+                  <a href="/tags/keynote/" class="compact-post__tag">keynote</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2002</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/12/18/hersheys-back-o/">hershey&#39;s back on track</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/12/18/hersheys-back-o/" datetime="2002-12-18">18 Dec 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/sap/" class="compact-post__tag">sap</a>
+                
+              
+                
+                  
+                  <a href="/tags/halloween/" class="compact-post__tag">halloween</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/human-factors/" class="compact-post__tag">human factors</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/10/31/magazine-micros/">magazine: Microsoft&#39;s Weblog Software</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/10/31/magazine-micros/" datetime="2002-11-01">01 Nov 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/tech/" class="compact-post__tag">tech</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/halloween/" class="compact-post__tag">halloween</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/08/30/apples-missed-h-2/">Apple&#39;s Missed Hardware Opportunities</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/08/30/apples-missed-h-2/" datetime="2002-08-30">30 Aug 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/hardware/" class="compact-post__tag">hardware</a>
+                
+              
+                
+                  
+                  <a href="/tags/apple/" class="compact-post__tag">apple</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/accessibility/" class="compact-post__tag">accessibility</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/08/12/traction-enterp/">Traction: Enterprise blogging</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/08/12/traction-enterp/" datetime="2002-08-12">12 Aug 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/blogs/" class="compact-post__tag">blogs</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/content-management/" class="compact-post__tag">content management</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/05/29/the-netscan-pro/">The Netscan Project FAQ</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/05/29/the-netscan-pro/" datetime="2002-05-29">29 May 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/sociology/" class="compact-post__tag">sociology</a>
+                
+              
+                
+                  
+                  <a href="/tags/internet/" class="compact-post__tag">internet</a>
+                
+              
+                
+                  
+                  <a href="/tags/research/" class="compact-post__tag">research</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/04/14/turbotax/">turbotax</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/04/14/turbotax/" datetime="2002-04-14">14 Apr 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/04/08/cnet-spam-tools/">cnet spam tools</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/04/08/cnet-spam-tools/" datetime="2002-04-08">08 Apr 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/cnet/" class="compact-post__tag">cnet</a>
+                
+              
+                
+                  
+                  <a href="/tags/spam/" class="compact-post__tag">spam</a>
+                
+              
+                
+                  
+                  <a href="/tags/tools/" class="compact-post__tag">tools</a>
+                
+              
+                
+                  
+                  <a href="/tags/email/" class="compact-post__tag">email</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/02/26/vic-stone-on-jo/">vic stone on joel on software</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/02/26/vic-stone-on-jo/" datetime="2002-02-26">26 Feb 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2002/01/29/joel-on-softwar/">Joel on Software - Fire And Motion</a></h3>
+            <time class="compact-post__date">
+              <a href="/2002/01/29/joel-on-softwar/" datetime="2002-01-30">30 Jan 2002</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/api/" class="compact-post__tag">api</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2001</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2001/01/09/and-the-cruel-i/">&quot;...and the cruel irony was,</a></h3>
+            <time class="compact-post__date">
+              <a href="/2001/01/09/and-the-cruel-i/" datetime="2001-01-09">09 Jan 2001</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/pyra/" class="compact-post__tag">pyra</a>
+                
+              
+                
+                  
+                  <a href="/tags/management/" class="compact-post__tag">management</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/tools/" class="compact-post__tag">tools</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">2000</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2000/09/05/microsoft-turne/">Microsoft turned 25 yesterday. I</a></h3>
+            <time class="compact-post__date">
+              <a href="/2000/09/05/microsoft-turne/" datetime="2000-09-05">05 Sep 2000</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/windows/" class="compact-post__tag">windows</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/business/" class="compact-post__tag">business</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2000/06/12/now-this-is-som/">Now this is some scary</a></h3>
+            <time class="compact-post__date">
+              <a href="/2000/06/12/now-this-is-som/" datetime="2000-06-12">12 Jun 2000</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/2000/03/27/courtesy-of-lak/">Courtesy of Lake Effect (from</a></h3>
+            <time class="compact-post__date">
+              <a href="/2000/03/27/courtesy-of-lak/" datetime="2000-03-27">27 Mar 2000</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/india/" class="compact-post__tag">india</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/development/" class="compact-post__tag">development</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+        
+        <div class="compact-post-year-divider">
+          <h3 class="compact-post-year-divider__label">1999</h3>
+        </div>
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/1999/12/22/from-zdnet-micr/">From ZDNet: Microsoft to include</a></h3>
+            <time class="compact-post__date">
+              <a href="/1999/12/22/from-zdnet-micr/" datetime="1999-12-22">22 Dec 1999</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/windows/" class="compact-post__tag">windows</a>
+                
+              
+                
+                  
+                  <a href="/tags/microsoft/" class="compact-post__tag">microsoft</a>
+                
+              
+                
+                  
+                  <a href="/tags/hindi/" class="compact-post__tag">hindi</a>
+                
+              
+                
+                  
+                  <a href="/tags/india/" class="compact-post__tag">india</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+      
+      
+
+      
+      
+
+      <article class="compact-post">
+        <div class="compact-post__link">
+          <div class="compact-post__main">
+            <h3 class="compact-post__title"><a href="/1999/10/04/hershey-makes-c/">hershey makes chocolate and i am chocolate</a></h3>
+            <time class="compact-post__date">
+              <a href="/1999/10/04/hershey-makes-c/" datetime="1999-10-04">04 Oct 1999</a>
+            </time>
+          </div>
+          
+            <div class="compact-post__tags">
+              
+              
+                
+                  
+                  <a href="/tags/sap/" class="compact-post__tag">sap</a>
+                
+              
+                
+                  
+                  <a href="/tags/software/" class="compact-post__tag">software</a>
+                
+              
+                
+                  
+                  <a href="/tags/usability/" class="compact-post__tag">usability</a>
+                
+              
+            </div>
+          
+        </div>
+      </article>
+    
+  </div>
+
+
+</section>
+
+
+
+      </main>
+      <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+          <!-- Footer newsletter form (shown when top banner is dismissed) -->
+          <div class="footer-newsletter" id="footer-newsletter" style="display: none;">
+            <p class="footer-newsletter-text">Get new posts by email (free, no spam)</p>
+            <form
+              class="footer-newsletter-form"
+              action="https://buttondown.email/api/emails/embed-subscribe/anildash"
+              method="post"
+              target="_blank"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                aria-label="Email for newsletter"
+              >
+              <input type="hidden" value="1" name="embed" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+
+          <!-- Add proper aria labeling -->
+          <nav aria-label="Footer navigation">
+            <ul class="hero__social-links">
+                <li>
+                  <a href="/discover/" >Discover</a>
+                </li>
+                <li>
+                  <a href="/press/" >Press & Media</a>
+                </li>
+                <li>
+                  <a href="/canon/" >Canon</a>
+                </li>
+                <li>
+                  <a href="/posts/" >All Posts</a>
+                </li>
+                <!-- Theme toggle button -->
+                <li class="theme-toggle-container">
+                  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-toggle-light" aria-hidden="true">☀️</span>
+                    <span class="theme-toggle-dark" aria-hidden="true">🌙</span>
+                  </button>
+                </li>
+                <li>
+                  <a href="/feed.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS Feed">
+                    <img src="/images/rss.svg" alt="RSS Feed" width="16" height="16" id="rss-icon" />
+                  </a>
+                </li>
+            </ul>
+          </nav>
+
+          <!-- Add copyright info -->
+          <div class="copyright">
+            <p>&copy; 1999–2026 Anil Dash. Virtually no rights reserved. Just ask nicely.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Add dark mode toggle script -->
+    <script>
+      // Theme toggle functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+
+        // Update the mobile toggle label to reflect current theme
+        const updateMobileLabel = (theme) => {
+          const label = document.querySelector('.mobile-theme-label');
+          if (label) {
+            label.textContent = theme === 'dark' ? 'light mode' : 'dark mode';
+          }
+        };
+
+        // Function to set theme
+        const setTheme = (theme) => {
+          html.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+          updateMobileLabel(theme);
+        };
+
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+          setTheme(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          setTheme('dark');
+        } else {
+          setTheme('light');
+        }
+
+        // Toggle theme when footer button is clicked
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = html.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          setTheme(newTheme);
+        });
+
+        // Toggle theme when mobile nav button is clicked
+        if (mobileThemeToggle) {
+          mobileThemeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+          });
+        }
+
+        // Listen for system preference changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'dark' : 'light');
+          }
+        });
+      });
+      
+      // Add keyboard shortcut (Ctrl+K or Cmd+K) to focus search
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          const searchInput = document.getElementById('search-input') || document.getElementById('header-search-input');
+          if (searchInput) {
+            searchInput.focus();
+          } else {
+            window.location.href = '/discover/';
+          }
+        }
+      });
+
+      // Handle focus management for keyboard users
+      document.addEventListener('DOMContentLoaded', function() {
+        const skipLink = document.querySelector('.skip-link');
+        if (skipLink) {
+          skipLink.addEventListener('focus', function() {
+            this.style.transform = 'translateY(0)';
+          });
+          skipLink.addEventListener('blur', function() {
+            this.style.transform = 'translateY(-100%)';
+          });
+        }
+      });
+
+      // search functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const expandableSearch = document.getElementById('expandable-search');
+        const searchToggle = document.getElementById('search-toggle');
+        const searchClose = document.getElementById('search-close');
+        const searchInput = document.getElementById('header-search-input');
+        
+        if (!expandableSearch || !searchToggle || !searchInput) return;
+        
+        function openSearch() {
+          expandableSearch.classList.add('expanded');
+          searchToggle.setAttribute('aria-expanded', 'true');
+          searchToggle.setAttribute('aria-label', 'Close search');
+          // Focus the input after animation completes
+          setTimeout(() => searchInput.focus(), 300);
+        }
+        
+        function closeSearch() {
+          expandableSearch.classList.remove('expanded');
+          searchToggle.setAttribute('aria-expanded', 'false');
+          searchToggle.setAttribute('aria-label', 'Open search');
+          searchInput.value = '';
+        }
+        
+        // Toggle search on button click
+        searchToggle.addEventListener('click', function() {
+          if (expandableSearch.classList.contains('expanded')) {
+            closeSearch();
+          } else {
+            openSearch();
+          }
+        });
+        
+        // Close search when close button is clicked
+        if (searchClose) {
+          searchClose.addEventListener('click', closeSearch);
+        }
+        
+        // Close search on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && expandableSearch.classList.contains('expanded')) {
+            closeSearch();
+            searchToggle.focus(); // Return focus to toggle button
+          }
+        });
+        
+        // Handle search submission
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' && this.value.trim()) {
+            e.preventDefault();
+            // Redirect to discover page with query
+            const searchQuery = encodeURIComponent(this.value.trim());
+            window.location.href = `/discover/?q=${searchQuery}`;
+          }
+        });
+        
+        // Close search when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!expandableSearch.contains(e.target) && expandableSearch.classList.contains('expanded')) {
+            closeSearch();
+          }
+        });
+        
+        // Prevent search container clicks from closing
+        searchInput.parentElement.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      });
+
+      // Newsletter dismiss functionality
+      function dismissNewsletter() {
+        const banner = document.getElementById('newsletter-banner');
+        const footerNewsletter = document.getElementById('footer-newsletter');
+        const main = document.querySelector('.main, .hero');
+        if (banner) {
+          banner.style.display = 'none';
+          localStorage.setItem('newsletter-dismissed', 'true');
+          // Show footer newsletter when top banner is dismissed
+          if (footerNewsletter) {
+            footerNewsletter.style.display = 'block';
+          }
+          // Add margin to maintain spacing when banner is dismissed
+          if (main) {
+            main.style.marginTop = '3.2rem';
+          }
+        }
+      }
+
+      // Check if newsletter was previously dismissed
+      document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('newsletter-banner');
+        const footerNewsletter = document.getElementById('footer-newsletter');
+        const main = document.querySelector('.main, .hero');
+        if (banner && localStorage.getItem('newsletter-dismissed') === 'true') {
+          banner.style.display = 'none';
+          // Show footer newsletter if top banner was previously dismissed
+          if (footerNewsletter) {
+            footerNewsletter.style.display = 'block';
+          }
+          // Add margin to maintain spacing when banner was previously dismissed
+          if (main) {
+            main.style.marginTop = '3.2rem';
+          }
+        }
+      });
+
+      // Hamburger menu functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger-toggle');
+        const navList = document.getElementById('nav-list');
+
+        if (hamburger && navList) {
+          hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+          });
+
+          // Close menu when clicking a link
+          navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              hamburger.classList.remove('active');
+              navList.classList.remove('active');
+              hamburger.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+      });
+
+    </script>
+  
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="3b652b0f-f634-4225-acb5-9e7890a032ba" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiM2I2NTJiMGYtZjYzNC00MjI1LWFjYjUtOWU3ODkwYTAzMmJhIiwiYWNjb3VudF9pZCI6IjViYmNjZWZiNjc2MTBjNTVjZWNhZDdhYyIsImRlcGxveV9pZCI6IjZhNzQxZTEyODg4MmJiMDAwOGY5MjcwZCIsImlzc3VlciI6Im5mc2VydmVyIn0.caZITxT-QeIdsu_UbyZuUhrZG3RE9D-0xGOW0BvTSyg"></script>
+</body>
+</html>

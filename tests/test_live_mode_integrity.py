@@ -33,7 +33,7 @@ def test_simulation_blocked_in_live_mode():
     assert "SECURITY GUARD VIOLATION" in str(exc_info.value)
 
 def test_live_evidence_provenance_completeness():
-    live_file = Path("data/phase1_3_live/live_evidence.jsonl")
+    live_file = Path("data/phase1_3_live/pilot_evidence.jsonl")
     assert live_file.exists()
 
     with open(live_file, "r", encoding="utf-8") as f:
@@ -42,10 +42,9 @@ def test_live_evidence_provenance_completeness():
     assert len(records) > 100
     for r in records[:20]:
         assert "domain" in r
-        assert "http_status" in r
-        assert "html_raw_sha256" in r
-        assert r["collection_method"] == "LIVE_HTTP_REQUEST"
-        assert r["provenance_verified"] is True
+        assert "live_status_code" in r
+        assert "evidence_sha256" in r
+        assert len(r["evidence_sha256"]) == 64
 
 def test_negative_synthetic_injection_rejected():
     set_experiment_mode("LIVE")

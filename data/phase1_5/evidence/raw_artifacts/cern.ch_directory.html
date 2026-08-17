@@ -1,0 +1,761 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  xmlns:content="//purl.org/rss/1.0/modules/content/"
+  xmlns:dc="//purl.org/dc/terms/"
+  xmlns:foaf="//xmlns.com/foaf/0.1/"
+  xmlns:og="//ogp.me/ns#"
+  xmlns:rdfs="//www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="//rdfs.org/sioc/ns#"
+  xmlns:sioct="//rdfs.org/sioc/types#"
+  xmlns:skos="//www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="//www.w3.org/2001/XMLSchema#"
+>
+  <head profile="//www.w3.org/1999/xhtml/vocab">
+    <title>Directory | CERN</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortlink" href="https://directory.web.cern.ch/" />
+    <meta name="copyright" content="//cern.ch/copyright" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <link href="https://framework.web.cern.ch/framework/2.0/fonts/PTSansWeb/PTSansWeb.css" rel="stylesheet" type="text/css"/>
+    <link href="cern_toolbar/css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="cern_toolbar/css/toolbar.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.min.css" />
+    <script type="text/javascript" src="./jquery-ui/external/jquery/jquery.js"></script>
+    <script type="text/javascript" src="./jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="./jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/directory.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  </head>
+
+  <script>
+    /**
+     * Custom JS function to generate telephone links based on whether they are loaded on a desktop or a mobile device
+     *
+     * @returns {string}
+     */
+    function generateLinksForTel() {
+      if (isMobileDevice()) {
+        return '<li><a class="urgent" href="tel:+41227674444">Emergencies <span>00 41 22 76 <strong>74444</strong></span></a></li> \
+                <li><a href="tel:+41227670500">Computer security <span>00 41 22 76 <strong>70500</strong></span></a></li> \
+                <li><a href="tel:+41227676666">Security Service <span>00 41 22 76 <strong>76666</strong></span></a></li> \
+                <li><a href="tel:+41227677777">CERN service portal <span>00 41 22 76 <strong>77777</strong></span></a></li> \
+                <li><a href="tel:+41227679999">Switchboard <span>00 41 22 76 <strong>79999</strong></span></a></li> \
+                <li><</li> \
+                <li></li> \
+            ';
+      } else {
+        return '<li><a class="urgent" href="https://hse.cern/services-support/fire-rescue-service">Emergencies <span>00 41 22 76 <strong>74444</strong></span></a></li> \
+                <li><a href="https://cern.ch/security">Computer security <span>00 41 22 76 <strong>70500</strong></span></a></li> \
+                <li><a href="https://campus.web.cern.ch"> Security Service <span>00 41 22 76 <strong>76666</strong></span></a></li> \
+                <li><a href="https://cern.service-now.com/service-portal/">CERN service portal <span>00 41 22 76 <strong>77777</strong></span></a></li> \
+                <li><a href="tel:+41227676111">Switchboard <span>00 41 22 76 <strong>79999</strong></span></a></li> \
+                <li></li> \
+                <li></li> \
+            ';
+      }
+    }
+
+    function isMobileDevice() {
+      return !!(
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)
+      );
+    }
+  </script>
+
+  <body>
+    <div class="region region-page-top">
+      <div id="cern-toolbar">
+        <h1>
+          <a href="https://home.cern" title="CERN"
+            >CERN <span>Accelerating science</span></a
+          >
+        </h1>
+        <ul>
+          <li class="active">
+            <a
+              class="cern-directory"
+              href="https://cern.ch/directory"
+              title="Search CERN resources and browse the directory"
+              >Directory</a
+            ></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Heatwave BANNER -->
+    <!-- <div id="alert" class="alertheader">  
+        <p>Heatwave Action Plan in force. See: <a href="https://hse.cern/hwap">hse.cern/hwap</a> / Plan canicule en vigueur. Voir : <a href="https://hse.cern/fr/hwap">hse.cern/fr/hwap</a> </p>
+    </div> -->
+    <div id="dir-header" class="clearfix">
+      <div id="dir-search">
+        <header class="clearfix">
+          <h1>The CERN Directory</h1>
+
+          <p>
+            Search for what you need, or browse CERN websites. Looking for the
+            <a href="https://cern.ch/scientists">Scientists</a> or
+            <a href="https://cern.ch/cern-people">CERN Community</a> sections, or just curious
+            <a href="https://home.web.cern.ch/about">about CERN</a>?
+          </p>
+        </header>
+
+        <div class="nav-tabs-custom">
+          <div class="flex-nav-wrapper">
+            <div class="nav-container">
+              <ul class="nav nav-tabs">
+                <li class="active">
+                  <a
+                    href="#phonebook-tab"
+                    data-toggle="tab"
+                    aria-expanded="true"
+                  >
+                    Phonebook</a
+                  ></li>
+                <li><a href="#cds-tab" data-toggle="tab" aria-expanded="false"> CDS (docs, etc.)</a></li>
+                <li><a href="#service-tab" data-toggle="tab" aria-expanded="false"> CERN Service Portal</a></li>
+                <li><a href="#indico-tab" data-toggle="tab" aria-expanded="false"> Indico (events)</a></li>
+                <li><a href="#map-tab" data-toggle="tab" aria-expanded="false"> CERN Map</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane active" id="phonebook-tab">
+              <form
+                class="cern-searchform"
+                id="cern-searchform"
+                action="https://phonebook.cern.ch/search"
+              >
+                <input
+                  id="phone-search"
+                  type="search"
+                  placeholder="Phonebook search"
+                  name="q"
+                />
+
+                <button class="btn" type="submit">Search</button>
+              </form>
+            </div>
+            <div class="tab-pane" id="cds-tab">
+              <form
+                class="cern-searchform"
+                id="cern-searchform"
+                action="https://cds.cern.ch/search"
+              >
+                <input
+                  id="cds-search"
+                  type="search"
+                  placeholder="CDS search (docs, publications and media)"
+                  name="p"
+                />
+                <input
+                  id="cds-language"
+                  type="text"
+                  hidden
+                  name="ln"
+                  value="en"
+                />
+                <button class="btn" type="submit">Search</button>
+              </form>
+            </div>
+            <div class="tab-pane" id="service-tab">
+              <form
+                class="cern-searchform"
+                id="cern-searchform"
+                accept-charset="utf-8"
+                action="https://cern.service-now.com/service-portal/"
+                method="get"
+                enctype="text/plain"
+              >
+                <input
+                  id="service-search"
+                  type="search"
+                  name="q"
+                  placeholder="CERN Service Portal search"
+                />
+
+                <button class="btn" type="submit">Search</button>
+              </form>
+            </div>
+            <div class="tab-pane" id="indico-tab">
+              <form
+                class="cern-searchform"
+                id="cern-searchform"
+                action="https://indico.cern.ch/search"
+              >
+                <input
+                  id="indico-search"
+                  type="search"
+                  placeholder="Indico search"
+                  name="q"
+                />
+
+                <button class="btn" type="submit">Search</button>
+              </form>
+            </div>
+            <div class="tab-pane" id="map-tab">
+              <form
+                class="cern-searchform"
+                id="cern-searchform"
+                action="https://maps.cern.ch/mapsearch/mapsearch.htm"
+              >
+                <input
+                  id="map-search"
+                  type="search"
+                  placeholder="Search for buildings (510), rooms (510/R-026), roads or points of interest"
+                  name="n"
+                />
+
+                <button class="btn" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <section id="help">
+        <h3>Useful contacts</h3>
+        <ul>
+          <script>
+            document.write(generateLinksForTel());
+          </script>
+        </ul>
+      </section>
+    </div>
+
+    <div id="main">
+      <div id="directory" role="main">
+        <a id="main-content"></a>
+        <section id="news" class="sect-horiz">
+          <header>
+            <h1>News and events</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>News and events from CERN and the HEP community</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://home.cern/news?type=45">Official communications</a></li>
+            <li><a class="d-item" href="https://home.cern/news?type=36">CERN updates</a></li>
+            <li><a class="d-item" href="https://home.cern/news?type=36&audience=19">News for scientists</a></li>
+            <li><a class="d-item" href="https://home.cern/events?field_audience_events_target_id=19">Events for scientists</a></li>
+            <li><a class="d-item" href="https://home.web.cern.ch/cern-people/got-story-cern-website">Submit a story for the CERN website</a></li>
+            <li><a class="d-item" href="https://indico.cern.ch">Indico</a></li>
+          </ul>
+        </section>
+
+        <section id="departments" class="sect-horiz">
+          <header>
+            <h1>Sectors, Departments and Units</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>CERN's structure</p>
+          </header>
+          <div class="sector-wrapper">
+            <div class="sector-nolist">
+              <a href="https://home.cern/about/who-we-are/our-governance">CERN's governance</a>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a class="d-item" href="">Director-General (DG)</a>
+              </div>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a class="d-item" href="https://cio.web.cern.ch/ ">Chief Information Officer (CIO)</a>
+              </div>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a href="https://ats.web.cern.ch/">Accelerators and Technology (ATS)</a>
+              </div>
+              <ul class="nav-list clearfix">
+                <li><h3> <a class="d-item" href="https://beams.cern/">Beams (BE)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://en.web.cern.ch/">Engineering (EN)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://sy-dep.web.cern.ch/">Accelerator Systems (SY)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://te-dep.web.cern.ch/">Technology (TE)</a></h3></li>
+              </ul>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a href="https://fhr.web.cern.ch/">Finance and Human Resources (FHR)</a>
+              </div>
+              <ul class="nav-list clearfix">
+                <li><h3> <a class="d-item" href="https://fap-dep.web.cern.ch/">Finance and Administrative Processes (FAP)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://hr.web.cern.ch/">Human Resources (HR)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://ipt-dep.web.cern.ch/">Industry, Procurement and Knowledge Transfer (IPT)</a></h3></li>
+              </ul>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a href="https://rcs.web.cern.ch/">Research and Computing (RCS)</a>
+              </div>
+              <ul class="nav-list clearfix">
+                <li><h3> <a class="d-item" href="https://ep-dep.web.cern.ch/">Experimental Physics (EP)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://information-technology.web.cern.ch/">Information Technology (IT)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://theory.cern/">Theoretical Physics (TH)</a></h3></li>
+              </ul>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a href="https://stakeholder-relations.web.cern.ch/">Stakeholder Relations (SR)</a>
+              </div>
+              <ul class="nav-list clearfix">
+                <li><h3> <a class="d-item" href="https://stakeholder-relations.web.cern.ch/stakeholder-relations">Stakeholder Engagement (SR-SE)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://stakeholder-relations.web.cern.ch/eco">Education, Communications and Outreach (SR-ECO)</a></h3></li>
+              </ul>
+            </div>
+            <div class="sector">
+              <div class="sector-header">
+                <a href="https://site-ops.web.cern.ch/">Site Operations (SO)</a>
+              </div>
+              <ul class="nav-list clearfix">
+                <li><h3> <a class="d-item" href="https://hse.web.cern.ch/">Health, Safety and Environment (HSE)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://audit-investigation-services.web.cern.ch/">Internal Audit and Investigation Services (AIS)</a></h3></li>
+                <li><h3> <a class="d-item" href="">Internal Justice (IJS)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://legal-service.web.cern.ch/">Legal Service (LS)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://osi-dep.web.cern.ch/">Organisational Support and Improvement (OSI)</a></h3></li>
+                <li><h3> <a class="d-item" href="https://sce-dep.web.cern.ch/">Site and Civil Engineering (SCE)</a></h3></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="experiments" class="sect-horiz">
+          <header>
+            <h1>Experiments and projects</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Experiment, project and collaboration websites</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://greybook.cern.ch/">CERN experiments (Grey Book)</a></li>
+            <li><a class="d-item" href="https://aegis.web.cern.ch/aegis/home.html">AEgIS</a></li>
+            <li><a class="d-item" href="https://alice-collaboration.web.cern.ch/">ALICE</a></li>
+            <li><a class="d-item" href="https://alpha.web.cern.ch/">ALPHA</a></li>
+            <li><a class="d-item" href="https://asacusa.web.cern.ch/">ASACUSA</a></li>
+            <li><a class="d-item" href="https://atlas.cern/">ATLAS</a></li>
+            <li><a class="d-item" href="https://awake.web.cern.ch/">AWAKE</a></li>
+            <li><a class="d-item" href="https://base.web.cern.ch/">BASE</a></li>
+            <li><a class="d-item" href="https://cast.web.cern.ch/CAST/">CAST</a></li>
+            <li><a class="d-item" href="https://home.cern/science/experiments/cern-neutrino-platform">CERN Neutrino Platform</a></li>
+            <li><a class="d-item" href="https://clic.cern">CLIC</a></li>
+            <li><a class="d-item" href="https://cloud.web.cern.ch/">CLOUD</a></li>
+            <li><a class="d-item" href="https://cms.cern/">CMS</a></li>
+            <li><a class="d-item" href="https://wwwcompass.cern.ch/">COMPASS</a></li>
+            <li><a class="d-item" href="https://dirac.web.cern.ch/DIRAC/">DIRAC</a></li>
+            <li><a class="d-item" href="https://twiki.cern.ch/twiki/bin/view/FASER">FASER</a></li>
+            <li><a class="d-item" href="https://fcc.web.cern.ch/">FCC</a></li>
+            <li><a class="d-item" href="https://gbar.web.cern.ch/GBAR/">GBAR</a></li>
+            <li><a class="d-item" href="https://hiecn3.web.cern.ch">HI-ECN3</a></li>
+            <li><a class="d-item" href="https://hilumilhc.web.cern.ch/">HL-LHC</a></li>
+            <li><a class="d-item" href="https://irradiation-facilities.web.cern.ch/index.php#cern_facilities">Irradiation Facilities</a></li>
+            <li><a class="d-item" href="https://isolde.web.cern.ch/">ISOLDE</a></li>
+            <li><a class="d-item" href="https://lhcb.web.cern.ch/">LHCb</a></li>
+            <li><a class="d-item" href="http://www.stelab.nagoya-u.ac.jp/LHCf/LHCf/index.html">LHCf</a></li>
+            <li><a class="d-item" href="https://moedal.web.cern.ch/">MoEDAL</a></li>
+            <li><a class="d-item" href="https://muoncollider.web.cern.ch/">Muon Collider</a></li>
+            <li><a class="d-item" href="https://na62.web.cern.ch/na62/">NA62</a></li>
+            <li><a class="d-item" href="https://na64.web.cern.ch/">NA64</a></li>
+            <li><a class="d-item" href="https://amber.web.cern.ch/">NA66/AMBER</a></li>
+            <li><a class="d-item" href="https://shine.web.cern.ch/">NA61/SHINE</a></li>
+            <li><a class="d-item" href="https://ntof-exp.web.cern.ch/ntof-exp/">n_TOF</a></li>
+            <li><a class="d-item" href="https://osqar.web.cern.ch/osqar/">OSQAR</a></li>
+            <li><a class="d-item" href="https://pbc.web.cern.ch/">PBC</a></li>
+            <li><a class="d-item" href="https://ship.web.cern.ch/">SHiP</a></li>
+            <li><a class="d-item" href="https://snd-lhc.web.cern.ch/">SND@LHC</a></li>
+            <li><a class="d-item" href="https://test-beam-facilities.web.cern.ch/cernFacilities.php">Test Beam Facilities</a></li>
+            <li><a class="d-item" href="https://totem.web.cern.ch/Totem/">TOTEM</a></li>
+            <li><a class="d-item" href="https://ua9.web.cern.ch">UA9</a></li>
+            <li><a class="d-item" href="https://wlcg.web.cern.ch">WLCG</a></li>
+          </ul>
+        </section>
+
+        <section id="applications" class="sect-horiz">
+          <header>
+            <h1>Applications</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Commonly-used applications</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://www.cern.ch/adams">ADaMS</a></li>
+            <li><a class="d-item" href="https://aisroles.cern.ch/">AIS Roles</a></li>
+            <li><a class="d-item" href="https://indico.cern.ch/rooms/book">Book a room</a></li>
+            <li><a class="d-item" href="https://cds.cern.ch">CDS</a></li>
+            <li><a class="d-item" href="https://cernbox.cern.ch/">CERNBox</a></li>
+            <li><a class="d-item" href="https://cet.cern.ch/">CET</a></li>
+            <li><a class="d-item" href="https://edh.cern.ch/Desktop/">EDH</a></li>
+            <li><a class="d-item" href="https://edms.cern.ch/">EDMS</a></li>
+            <li><a class="d-item" href="https://e-groups.cern.ch/">E-groups</a></li>
+            <li><a class="d-item" href="https://hrt.cern.ch/">HRT</a></li>
+            <li><a class="d-item" href="https://impact-ng.cern.ch/">IMPACT</a></li>
+            <li><a class="d-item" href="https://indico.cern.ch">Indico</a></li>
+            <li><a class="d-item" href="https://lms.cern.ch">Learning Hub</a></li>
+            <li><a class="d-item" href="https://catalogue.library.cern/">Library Catalogue</a></li>
+            <li><a class="d-item" href="https://oraclehr.cern.ch/">OracleHR</a></li>
+            <li><a class="d-item" href="https://phonebook.cern.ch/">Phonebook</a></li>
+            <li><a class="d-item" href="https://xrp.cern.ch/">Qualiac</a></li>
+            <li><a class="d-item" href="https://cern.service-now.com/service-portal/">Service-Now (SNOW)</a></li>
+          </ul>
+        </section>
+
+        <section id="admin" class="sect-horiz">
+          <header>
+            <h1>Admin and procedures</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Administrative procedures at CERN</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://admin-eguide.web.cern.ch/">Admin e-guide</a></li>
+            <li><a class="d-item" href="https://account.cern.ch/account/">Computing accounts</a></li>
+            <li><a class="d-item" href="https://usersoffice.web.cern.ch/">Users Office</a></li>
+            <li><a class="d-item" href="https://design-guidelines.web.cern.ch/">CERN design guidelines</a></li>
+            <li><a class="d-item" href="https://mice-procurement.web.cern.ch/">MICE</a></li>
+          </ul>
+        </section>
+
+        <section id="maps" class="sect-horiz">
+          <header>
+            <h1>Maps and access</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Finding a building, getting around</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://campus.web.cern.ch/campus-life/access-parking/">CERN entrance opening hours</a></li>
+            <li><a class="d-item" href="https://home.web.cern.ch/directions">How to get to CERN</a></li>
+            <li><a class="d-item" href="https://maps.cern.ch">Maps</a></li>
+            <li><a class="d-item" href="https://campus.web.cern.ch/campus-life/cern-maps/">MapCERN mobile App</a></li>
+            <li><a class="d-item" href="https://sce-dep.web.cern.ch/knowledge-centre/geographic-information-system-gis/">Professional Maps</a></li>
+            <li><a class="d-item" href="https://campus.web.cern.ch/campus-life/cern-community-support-centre/">Registration service</a></li>
+            <li><a class="d-item" href="https://campus.web.cern.ch/campus-life/mobility/shuttles/">Shuttle timetables</a></li>
+            <li><a class="d-item" href="https://vehicles.cern.ch/vehicles">Vehicle registration</a></li>
+          </ul>
+        </section>
+
+        <section id="accelerators" class="sect-horiz">
+          <header>
+            <h1>Accelerators and physics</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Resources and links related to accelerators and physics</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://ats.web.cern.ch/">Accelerators and technology sector</a></li>
+            <li><a class="d-item" href="https://naming.cern.ch/">Accelerators Naming Portal</a></li>
+            <li><a class="d-item" href="https://quality.web.cern.ch/quality/">Accelerators Quality Service</a></li>
+            <li><a class="d-item" href="https://be-dep-op.web.cern.ch/">Beams department operations group page</a></li>
+            <li><a class="d-item" href="https://ep-dep.web.cern.ch/">EP department</a></li>
+            <li><a class="d-item" href="https://lpcc.web.cern.ch/">LHC physics centre at CERN (LPCC)</a></li>
+            <li><a class="d-item" href="https://ls1ls2.web.cern.ch/">Shutdown planning</a></li>
+          </ul>
+        </section>
+
+        <section id="documents" class="sect-horiz">
+          <header>
+            <h1>Documents, reports and publications</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Key publications</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://home.cern/cern-community">Bulletin</a></li>
+            <li><a class="d-item" href="https://library.cern/annual-reports">CERN Annual Report</a></li>
+            <li><a class="d-item" href="https://cerncourier.com/">CERN Courier</a></li>
+            <li><a class="d-item" href="https://cds.cern.ch">CERN document server (CDS)</a></li>
+            <li><a class="d-item" href="https://cdsweb.cern.ch/collection/CERN%20Yellow%20Reports?ln=en">CERN Yellow Reports</a></li>
+            <li><a class="d-item" href="https://cern.ch/edms">Engineering and equipment data management service (EDMS)</a></li>
+            <li><a class="d-item" href="https://catalogue.library.cern/">Library Catalogue</a></li>
+            <li><a class="d-item" href="https://scientific-info.cern/">Scientific Information Service</a></li>
+            <li><a class="d-item" href="https://cdsweb.cern.ch/journal/CERNBulletin///Staff%20Association">Staff Association Echo</a></li>
+          </ul>
+        </section>
+
+        <section id="committees" class="sect-horiz">
+          <header>
+            <h1>Committees and council</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Committees, CERN Council</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://accu.web.cern.ch/">Advisory committee of CERN users (ACCU)</a></li>
+            <li><a class="d-item" href="https://council.web.cern.ch/">CERN Council</a></li>
+            <li><a class="d-item" href="https://indico.cern.ch/categoryDisplay.py?categId=59">Committees in Indico</a></li>
+            <li><a class="d-item" href="https://eps-hepp.web.cern.ch/eps-hepp/">EPS High-energy particle physics board</a></li>
+            <li><a class="d-item" href="https://committees.web.cern.ch/">Scientific committees</a></li>
+          </ul>
+        </section>
+
+        <section id="working-at-cern" class="sect-horiz">
+          <header>
+            <h1>Working at CERN</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Resources for those working at CERN</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://alumni.cern">CERN Alumni</a></li>
+            <li><a class="d-item" href="https://sce-dep.web.cern.ch/campus-app">CERN Campus App<a></li>
+            <li><a class="d-item" href="https://chis.cern">CERN health insurance scheme (CHIS)</a></li>
+            <li><a class="d-item" href="https://careers.cern/">CERN jobs</a></li>
+            <li><a class="d-item" href="https://cern.ch/go/cern-official-holidays">CERN official holidays</a></li>
+            <li><a class="d-item" href="https://ombuds.web.cern.ch/">CERN ombud</a></li>
+            <li><a class="d-item" href="https://hr.web.cern.ch/cerns-values-and-code-conduct">Code of Conduct</a></li>
+            <li><a class="d-item" href="https://security.web.cern.ch/rules/en/index.shtml">Computing Rules: the Use of CERN Computing Facilities</a></li>
+            <li><a class="d-item" href="https://privacy.web.cern.ch/">Data Protection at CERN</a></li>
+            <li><a class="d-item" href="https://diversity-and-inclusion.web.cern.ch/">Diversity at CERN</a></li>
+            <li><a class="d-item" href="https://duty-travel-coordination.web.cern.ch/">Duty Travel Coordination</a></li>
+            <li><a class="d-item" href="https://hr.web.cern.ch/ethics">Ethics at CERN</a></li>
+            <li><a class="d-item" href="https://kt.cern/who-are-you/cern-personnel-collaborating-knowledge-transfer-group">Knowledge transfer</a></li>
+            <li><a class="d-item" href="https://hse.cern/services-support/occupational-health-service">Medical service</a></li>
+            <li><a class="d-item" href="https://myfiles.cern.ch/financial-and-social-benefits/salary-slip/">Pay statements</a></li>
+            <li><a class="d-item" href="https://pensionfund.cern.ch/en">Pension fund</a></li>
+            <li><a class="d-item" href="https://hse.cern/content/safety-rules">Safety Rules</a></li>
+            <li><a class="d-item" href="https://usersoffice.web.cern.ch/life-cern">Services available to Users</a></li>
+            <li><a class="d-item" href="https://staff-association.web.cern.ch">Staff Association</a></li>
+            <li><a class="d-item" href="https://hr.web.cern.ch/wwfw">Work Well Feel Well</a></li>
+            <li><a class="d-item" href="https://cern.service-now.com/service-portal?id=kb_article&n=KB0010287">CERN Community Support Centre (CCSC)</a></li>
+          </ul>
+        </section>
+
+        <section id="life" class="sect-horiz">
+          <header>
+            <h1>Life at CERN</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Resources for life at CERN</p>
+          </header>
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://campus.web.cern.ch/">CERN Campus</a></li>
+            <li><a class="d-item" href="https://www.mynovae.ch/en/restaurant/391-click-collect-cern/salespoints/">Click & Collect service</a></li>
+            <li><a class="d-item" href="https://marketplace.web.cern.ch/">CERN market</a></li>
+            <li><a class="d-item" href="https://guides.web.cern.ch/">CERN guides</a></li>
+            <li><a class="d-item" href="https://campus.web.cern.ch/campus-life/housing/">Housing</a></li>
+            <li><a class="d-item" href="https://usersoffice.web.cern.ch/">Newcomers' guide</a></li>
+            <li><a class="d-item" href="https://www.mynovae.ch/en/ets/22-cern-restaurant-n1/?code=CER103">Restaurant 1 - Menu & information</a></li>
+            <li><a class="d-item" href="https://www.mynovae.ch/en/ets/103-cern-restaurant-n2/?code=CER103">Restaurant 2 - Menu & information</a></li>
+            <li><a class="d-item" href="https://www.mynovae.ch/en/ets/108-cern-restaurant-n3/?code=CER103&code=CER119">Restaurant 3 - Menu & information</a></li>
+            <li><a class="d-item" href="https://campus.web.cern.ch/campus-life/catering/">Restaurants, cafeterias and vending machines</a></li>
+            <li><a class="d-item" href="https://staff-association.web.cern.ch/clubs"> Staff Association Clubs</a></li>
+            <li><a class="d-item" href="https://nurseryschool.web.cern.ch/"> Staff Association Nursery School</a></li>
+          </ul>
+        </section>
+
+        <section id="training" class="sect-horiz">
+          <header>
+            <h1>Training and development</h1>
+            <p class="sort-actions">
+              Change order: <a class="sort-up" href="#">Move up</a> |
+              <a class="sort-down" href="#">Move down</a> |
+              <a class="sort-remove" href="#">Remove</a>
+            </p>
+            <p>Schools, training and development</p>
+          </header>
+
+          <ul class="nav-list clearfix">
+            <li><a class="d-item" href="https://indico.cern.ch/categoryDisplay.py?categId=72">Academic training lectures: Regular programme</a></li>
+            <li><a class="d-item" href="https://indico.cern.ch/categoryDisplay.py?categId=108">Academic training lectures for postgraduate students</a></li>
+            <li><a class="d-item" href="https://cdsweb.cern.ch/collection/Academic%20Training%20Lectures?ln=en">Academic training lecture videos</a></li>
+            <li><a class="d-item" href="https://cas.web.cern.ch/cas/">CERN accelerator school (CAS)</a></li>
+            <li><a class="d-item" href="https://csc.web.cern.ch/CSC/">CERN school of computing (CSC)</a></li>
+            <li><a class="d-item" href="https://hcpss.web.cern.ch/">CERN-Fermilab Hadron Collider Physics Summer School</a></li>
+            <li><a class="d-item" href="https://physicsschool.web.cern.ch/eshep">European schools of high-energy physics</a></li>
+            <li><a class="d-item" href="https://hr.web.cern.ch/learning-and-development">HR learning and development</a></li>
+            <li><a class="d-item" href="https://physicsschool.web.cern.ch/clashep">Latin-American schools of high-energy physics</a></li>
+            <li><a class="d-item" href="https://hse.cern/services-support/safety-training">Safety Training</a></li>
+            <li><a class="d-item" href="https://careers.cern/summer">Summer students programme</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <aside id="sidebar">
+        <section id="dir-nav">
+          <h2>Quick links</h2>
+          <ul class="nav-list clearfix">
+            <li><a href="https://edh.cern.ch/">EDH</a></li>
+            <li><a href="https://campus.web.cern.ch/">CERN Campus</a></li>
+            <li><a href="https://sce-dep.web.cern.ch/campus-app">CERN Campus App</a></li>
+            <li><a href="https://myfiles.cern.ch/financial-and-social-benefits/salary-slip/">Pay statements</a></li>
+            <li><a href="https://cern.ch/go/cern-official-holidays">Official holidays</a></li>
+            <li><a href="https://home.cern/">home.cern</a></li>
+          </ul>
+          <h2>Jump to section</h2>
+          <ul class="nav-list clearfix">
+            <li><a href="#news">News and events</a></li>
+            <li><a href="#departments">Sectors, departments and units</a></li>
+            <li><a href="#experiments">Experiments and projects</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="#admin">Admin and procedures</a></li>
+            <li><a href="#maps">Maps and access</a></li>
+            <li><a href="#accelerators">Accelerators and physics</a></li>
+            <li><a href="#documents">Documents, reports and publications</a></li>
+            <li><a href="#committees">Committees and council</a></li>
+            <li><a href="#working-at-cern">Working at CERN</a></li>
+            <li><a href="#life">Life at CERN</a></li>
+            <li><a href="#training">Training and development</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="columns-container">
+        <div class="column">
+          <h3>Follow us</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/cern"
+              target="_blank"
+              onmouseover="this.children[0].src='assets/icons/facebook_hover.svg'"
+              onmouseout="this.children[0].src='assets/icons/facebook.svg'"
+              ><img
+                src="assets/icons/facebook.svg"
+                class="social-icon"
+                alt="Facebook"
+            /></a>
+            <a
+              href="https://www.instagram.com/cern"
+              target="_blank"
+              onmouseover="this.children[0].src='assets/icons/instagram_hover.svg'"
+              onmouseout="this.children[0].src='assets/icons/instagram.svg'"
+              ><img
+                src="assets/icons/instagram.svg"
+                class="social-icon"
+                alt="Instagram"
+            /></a>
+            <a
+              href="https://www.twitter.com/CERN"
+              target="_blank"
+              onmouseover="this.children[0].src='assets/icons/twitter_hover.svg'"
+              onmouseout="this.children[0].src='assets/icons/twitter.svg'"
+              ><img
+                src="assets/icons/twitter.svg"
+                class="social-icon"
+                alt="Twitter"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/cern"
+              target="_blank"
+              onmouseover="this.children[0].src='assets/icons/linkedin_hover.svg'"
+              onmouseout="this.children[0].src='assets/icons/linkedin.svg'"
+              ><img
+                src="assets/icons/linkedin.svg"
+                class="social-icon"
+                alt="LinkedIn"
+            /></a>
+            <a
+              href="https://www.youtube.com/user/cerntv"
+              target="_blank"
+              onmouseover="this.children[0].src='assets/icons/youtube_hover.svg'"
+              onmouseout="this.children[0].src='assets/icons/youtube.svg'"
+              ><img
+                src="assets/icons/youtube.svg"
+                class="social-icon"
+                alt="YouTube"
+            /></a>
+          </div>
+        </div>
+        <div class="column">
+          <h3>Contact us</h3>
+          <p>CERN, Esplanade des Particules 1</p>
+          <p>P.O. Box, 1211 Geneva 23</p>
+          <p>Switzerland</p>
+        </div>
+        <div class="column"></div>
+        <div class="column">
+          <a href="https://home.cern/" target="_blank">
+            <img src="assets/logo.svg" alt="CERN" width="100" height="100" />
+          </a>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="commit-id-container">Generated by the CERN Web Team (serving commit <span class="commit-id">784d78e01</span>, 05 Aug 2026)</div>
+        <a href="https://copyright.web.cern.ch/" target="_blank">
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          CERN
+          <br />
+        </a>
+      </div>
+    </footer>
+
+
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://webanalytics.web.cern.ch/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "151"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+  </body>
+</html>

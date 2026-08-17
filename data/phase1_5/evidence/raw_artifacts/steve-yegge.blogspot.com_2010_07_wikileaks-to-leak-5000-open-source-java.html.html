@@ -1,0 +1,1371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Stevey's Blog Rants: Wikileaks To Leak 5000 Open Source Java Projects With All That Private/Final Bullshit Removed</title>
+
+  <script type="text/javascript">(function() { (function(){function b(g){this.t={};this.tick=function(h,m,f){var n=f!=void 0?f:(new Date).getTime();this.t[h]=[n,m];if(f==void 0)try{window.console.timeStamp("CSI/"+h)}catch(q){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var e=(a=window.performance.timing)&&a.responseStart;var p=e>0?new b(e):new b;window.jstiming={Timer:b,load:p};if(a){var c=a.navigationStart;c>0&&e>=c&&(window.jstiming.srt=e-c)}if(a){var d=window.jstiming.load;
+c>0&&e>=c&&(d.tick("_wtsrt",void 0,c),d.tick("wtsrt_","_wtsrt",e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&c>0&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",c))),a==null&&window.gtbExternal&&(a=window.gtbExternal.pageT()),a==null&&window.external&&(a=window.external.pageT,d&&c>0&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();window.tickAboveFold=function(b){var a=0;if(b.offsetParent){do a+=b.offsetTop;while(b=b.offsetParent)}b=a;b<=750&&window.jstiming.load.tick("aft")};var k=!1;function l(){k||(k=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",l,!1):window.attachEvent("onscroll",l);
+ })();</script><script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return c[1].search("(^|&)m=")>=0?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(d.indexOf("Mobile")!=-1&&d.indexOf("WebKit")!=-1&&d.indexOf("iPad")==-1||d.indexOf("Opera Mini")!=-1||d.indexOf("IEMobile")!=-1){var e=a();e&&window.location.replace(e)};
+</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Stevey&#39;s Blog Rants - RSS" href="https://steve-yegge.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://www.blogger.com/feeds/13674163/posts/default" />
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/3339886637389033856/comments/default" />
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/static/v1/v-css/1601750677-blog_controls.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=13674163&zx=e1765c07-d2d0-4d69-bd1c-c9e888df1350"/>
+
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#fff;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Georgia,Serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+a:link {
+  color:#58a;
+  text-decoration:none;
+  }
+a:visited {
+  color:#969;
+  text-decoration:none;
+  }
+a:hover {
+  color:#c60;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Header
+----------------------------------------------- */
+@media all {
+  #header {
+    width:660px;
+    margin:0 auto 10px;
+    border:1px solid #ccc;
+    }
+  }
+@media handheld {
+  #header {
+    width:90%;
+    }
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #eee;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #eee;
+  border-width:0 1px 1px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:760px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:510px;
+    float:left;
+    }
+  #sidebar {
+    width:220px;
+    float:right;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font: "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  /*color:#999;*/
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#c60;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+/* styles I added for code examples, etc. */
+re {color: #4169E1;}
+code {color: #2E8B57;}
+unix {color: #9370DB;}
+span.question {color: #B22222; font-style: italic;}
+
+/* emacs font-lock faces */
+.blue-violet { color: #8a2be2; }
+.constant { color: #696969; }
+.firebrick { color: #b22222; }
+.function-name { color: #b22222; }
+.keyword { color: #0000cd; }
+.string { color: #4169e1; }
+.type { color: #4682b4; }
+.variable-name { color: #2e8b57; }
+
+/* from htmlize.el */
+.comment {
+  /* font-lock-comment-face */
+  color: #006400;
+}
+.comment-delimiter {
+}
+.function-name {
+  /* font-lock-function-name-face */
+  color: #cd2626;
+}
+.keyword {
+  /* font-lock-keyword-face */
+  color: #0000cd;
+}
+.string {
+  /* font-lock-string-face */
+  color: #4169e1;
+}
+.variable-name {
+  /* font-lock-variable-name-face */
+  color: #2e8b57;
+}
+
+</style>
+
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<!-- data-ad-client=ca-pub-1448465482748307 -->
+<!-- --><style type="text/css">@import url(//www.blogger.com/static/v1/v-css/navbar/3334278262-classic.css);
+div.b-mobile {display:none;}
+</style>
+
+</head>
+
+<body><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar/13674163?origin\x3dhttps://steve-yegge.blogspot.com',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+
+<div id="header">
+
+  <h1 id="blog-title">
+    <a href="http://steve-yegge.blogspot.com/">
+	Stevey's Blog Rants
+	</a>
+  </h1>
+  <p id="description">Random whining and stuff.</p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+<div class='adsense' style='text-align:center; padding: 0px 3px 0.5em 3px;'>
+<script type="text/javascript"><!--
+google_ad_client="ca-pub-1448465482748307";
+google_ad_host = "pub-1556223355139109";
+google_ad_width=468;
+google_ad_height=60;
+google_ad_format="468x60_as";
+google_ad_type="text";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="CC6600";
+google_color_url="CC6600";
+google_color_text="999999";
+//--></script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+
+    
+  <h2 class="date-header">Wednesday, July 28, 2010</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="3339886637389033856"></a>
+         
+    <h3 class="post-title">
+	 
+	 Wikileaks To Leak 5000 Open Source Java Projects With All That Private/Final Bullshit Removed
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <div style="clear:both;"></div>EYJAFJÖLL, ICELAND &mdash; Java programmers around the globe are in a panic today over a Wikileaks press release issued at 8:15am GMT.  Wikileaks announced that they will re-release the source code for thousands of Open Source Java projects, making all access modifiers 'public' and all classes and members non-'final'.<br /><br />Agile Java Developer Johnnie Garza of Irvine, CA condemns the move.  "They have no right to do this.  Open Source does <em>not</em> mean the source is somehow 'open'.  That's my code, not theirs.  If I make something private, it means that no matter how desperately you need to call it, I should be able to prevent you from doing so, even long after I've gone to the grave."<br /><br />According to the Wikileaks press release, millions of Java source files have been run through a Perl script that removes all 'final' keywords except those required for hacking around the 15-year-old Java language's "fucking embarrassing lack of closures."<br /><br />Moreover, the Perl script gives every Java class at least one public constructor, and turns all fields without getters/setters into public fields.  "The script yanks out all that @deprecated shit, too," claims the controversial announcement.<br /><br />Longtime Java programmer Ronnie Lloyd of Austin, TX is offended by the thought of people instantiating his private classes.  "It's just common sense," said Lloyd, who is 37.  "If I buy you a house and put the title in your name, but I mark some of the doors 'Employees Only', then you're not allowed to open those doors, even though it's your house.  Because it's really my house, even though I gave it to you to live in."<br /><br />Pacing and frowning thoughtfully, Lloyd continued: "Even if I go away forever and you live there for 20 years and you know <em>exactly</em> what's behind the doors &mdash; heck, even if it's a matter of life and death &mdash; plain old common sense still dictates that you're never, <em>ever</em> allowed to open them for any reason."<br /><br />"It's for your own protection," Lloyd added.<br /><br />Wesley Doyle, a Java web developer in Toronto, Canada is merely puzzled by the news.  "Why do they think they need to do this?  Why can't users of my Open Source Java library simply shake their fists and curse my family name with their dying breaths?  That approach has been working well for all the rest of us.  Who cares if I have a private helper function they need?  What, is their copy/paste function broken?"<br /><br />Wikileaks founder Julian Assange, who coined the term "Opened Source" to describe the jailbroken open-source Java code, fears he may be arrested by campus security at Oracle or possibly IBM.  The Wikileaks founder said: "Today the Eclipse Foundation put out a private briefing calling me a 'non-thread-safe AbstractKeywordRemovalInitiatorFactory'.  What the fuck does that even mean?  I fear for my safety around these nutjobs."<br /><br />The removal of '@deprecated' annotations is an especially sore issue for many hardworking Java developers.  "I worked hard to deprecate that code that I worked hard to create so I could deprecate some other code that I also worked hard on," said Kelly Bolton, the spokesperson for the League Of Java Programmers For Deprecating The Living Shit Out Of Everything.<br /><br />"If people could keep using the older, more convenient APIs I made for them, then why the fuck would they use my newer, ridiculously complicated ones?  It boggles the imagination," Bolton added.<br /><br />The Eclipse CDT team was especially hard-hit by the removal of deprecation tags.  Morris Baldwin, a part-time developer for the CDT's C++ parsing libraries says: "We have a policy of releasing entire Java packages in which every single class, interface and method is deprecated right out of the box, starting at version 1.0."<br /><br />"We also take careful steps to ensure that it's impossible to use our pre-deprecated code without running our gigantic fugly framework," the 22-year-old Baldwin added.  "Adding public constructors and making stuff non-final would be a serious blow to both non-usability <em>and</em> non-reusability."<br /><br />The Agile Java community has denounced the Wikileaks move as a form of terrorism. "It was probably instigated by those Aspect-Oriented Programming extremists," speculates Agile Java designer Claudia Hewitt, age 29.  "I always knew they wanted to use my code in ways I couldn't predict in advance," she added.<br /><br />Many Java developers have vowed to fight back against the unwelcome opening of their open source.  League of Agile Methodology Experts (LAME) spokesperson Billy Blackburn says that work has begun on a new, even more complicated Java build system that will refuse to link in Opened Source Java code.  The new build system will be released as soon as several third-party Java library vendors can refactor their code to make certain classes more reusable.  Blackburn declined to describe these refactorings, claiming it was "none of y'all's business."<br /><br />Guy Faulkner, a 51-year-old Python developer in Seattle, was amused by the Wikileaks announcement.  "When Python developers release Open Source code, they are saying: Here, I worked hard on this.  I hope you like it.  Use it however you think best.  Some stuff is documented as being subject to change in the future, but we're all adults here so use your best judgment."<br /><br />Faulkner shook his head sadly. "Whereas Java developers who release Open Source are code are saying: Here, I worked hard on this.  I hope you like it.  But use it exactly how I tell you to use it, because fuck you, it's my code.  I'll decide who's the goddamn grown-up around here."<br /><br />"But why didn't they write that Perl script in Python?" Faulkner asked.<br /><br /><hr><br /><br /><small><b>MORE NEWS</b></small><br /><br />Previous article: <b>San Francisco Airport Announces That All Restrooms Near You Are Now Deprecated</b><br />The SFO port authority announced today that all airport restrooms located anywhere near you are now deprecated due to "inelegance".  The newer, more elegantly designed restrooms are located a short 0.8 mile (1.29 km) walk from the International Terminal.  <a href="http://www.flysfo.com/web/page/atsfo/passenger-serv/fam-serv/">Read more</a><br /><br />Next article: <b>Eclipse Sits On Man's Couch, Breaks It</b><br />New Hampshire programmer Freddie Cardenas, 17, describes the incident: "We invited Eclipse over for dinner and drinks.  Eclipse sat down on our new couch and there was this loud crack and it broke in half.  Those timbers had snapped like fuckin' matchsticks.  Then my mom started crying, and Eclipse started crying, and I ran and hid in my bedroom."  <a href="http://www.eclipse.org/community/news/eclipsenews.php">Read more</a><div style="clear:both; padding-bottom:0.25em"></div>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Steve Yegge at <a href="http://steve-yegge.blogspot.com/2010/07/wikileaks-to-leak-5000-open-source-java.html" title="permanent link">1:40 PM</a></em>
+        <span class="item-control blog-admin pid-1139049968"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=13674163&postID=3339886637389033856&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://resources.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+  <div id="comments">
+
+	<a name="comments"></a>
+        <h4>71 Comments:</h4>
+        <dl id="comments-block">
+      
+      <dt class="comment-poster" id="c144145668007478805"><a name="c144145668007478805"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06990620942734499385" rel="nofollow">1 Chat a Day</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Awesome, onion quality, made me cry ;)<br /><br />T.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#144145668007478805" title="comment permalink">2:15 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-971891676"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/144145668007478805" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8635689699313951332"><a name="c8635689699313951332"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04131852440039642551" rel="nofollow">Pierre-Henri Trivier</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Java&#39;s not even *fun* enough to laugh at. I expect after your sabbatical you would be trolling at Scala or Haskell or Go !<br /><br />What&#39;s next ? Jokes about making GUIs in VB ? Pshh.<br /><br />Seriously though, I can get the attack on privateness and finality. From someone with a strong dynamic tropism, that makes sense. But that good old @deprecated tag ? The ability to publically acknowledge your disgust at something *you* wrote, so that people get a chance to stop using it because, well, you know, it doesn&#39;t work (or the method is called getFoo, but what it actually does is setting bar and blowing up the nuclear plant, but we don&#39;t want to break your precious client code) ? <br /><br />Sure, we would all like to write perfect code now and then (well, we might even like writing decent, or hell, somehow working code from times to times), but can you really blame those people with an imposter syndrom that just want to apologize to the face of the world ?<br /><br />Anyway, this post doesn&#39;t have the necessary amount of parentheses to qualify as a programming post on this blog. I&#39;ll wait till the real fn begins.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8635689699313951332" title="comment permalink">2:23 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1518437694"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8635689699313951332" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8279271221221242108"><a name="c8279271221221242108"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17727893902496568826" rel="nofollow">Görkem PAÇACI</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Excellent work :)... &#39;Onion&#39; quality, as put by Tom.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8279271221221242108" title="comment permalink">2:24 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1205844393"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8279271221221242108" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c983989203598076477"><a name="c983989203598076477"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/02147260973569070400" rel="nofollow">Drew @ Cook Like Your Grandmother</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Wait, you mean they&#39;re <em>not</em> really doing it? Damn, got my hopes up for nuthin.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#983989203598076477" title="comment permalink">2:48 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1480285400"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/983989203598076477" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7828749043578276559"><a name="c7828749043578276559"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07169183059029232510" rel="nofollow">Andrew Shebanow</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I laughed so hard I almost lost a lung!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7828749043578276559" title="comment permalink">2:50 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-202022040"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7828749043578276559" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1173680953281521339"><a name="c1173680953281521339"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/03446934754693784860" rel="nofollow">Ryan</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is a pretty good post.<br /><br />One thing though, final is a really good hint to help the compiler optimize. Static finals that will never change can be optimized out at run time, which is really awesome. I&#39;ve seen it in action, it really works!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1173680953281521339" title="comment permalink">2:52 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-752028472"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1173680953281521339" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c774916791182676835"><a name="c774916791182676835"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/03732557930836637657" rel="nofollow">Gordon J Milne</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I loved this sarcastic take on the joys of using other people&#39;s Java code. I just wished that C++ had managed to cop some of the flak because it deserves a lot more of it. Many days I see C++ as write-only.<br /><br />As you may suspect, I have moved from a mostly Java environment to a mostly C++ one and that C++ feesl fugly.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#774916791182676835" title="comment permalink">3:03 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1633789735"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/774916791182676835" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8486038848169117981"><a name="c8486038848169117981"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12199609007558588370" rel="nofollow">Jimmy</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p><i> Here, I worked hard on this. I hope you like it. </i><br /><br />No, what the python programmer actually said was <br /><br />Here, I worked hard on self<br />I hope you like self.__it__()</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8486038848169117981" title="comment permalink">3:08 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1542126482"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8486038848169117981" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1711013740498928400"><a name="c1711013740498928400"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07408170618420648277" rel="nofollow">malkia</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>In a global header long time ago, a friend of mine (and big &quot;C&quot; lover) did this to his best buddy once (a C++ and especially boost lover):<br /><br />#define class struct<br /><br />#define private public<br /><br />#define protected public</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1711013740498928400" title="comment permalink">3:11 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1076667076"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1711013740498928400" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c176566740454839557"><a name="c176566740454839557"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05767259722272808668" rel="nofollow">Olie</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Java w/...bullshit removed.<br /><br />  :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#176566740454839557" title="comment permalink">3:16 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-602392084"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/176566740454839557" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7805096878338477468"><a name="c7805096878338477468"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06344260472537858426" rel="nofollow">Sam</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is so absolutely spot-on.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7805096878338477468" title="comment permalink">3:37 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-633045256"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7805096878338477468" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8732948673656311733"><a name="c8732948673656311733"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05467932258451173216" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>#define private public<br /><br />That is genius, probably the most useful thing I&#39;ve read in a blog comment in years :-)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8732948673656311733" title="comment permalink">4:11 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-937277800"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8732948673656311733" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7545968322848157255"><a name="c7545968322848157255"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11523132404727383627" rel="nofollow">Samuel A. Falvo II</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Thank goodness you&#39;re back!  And with a vengence too!  CLASSIC!  We really need more articles like this!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7545968322848157255" title="comment permalink">4:27 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-923994895"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7545968322848157255" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4125998179542494649"><a name="c4125998179542494649"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/08057528812732998703" rel="nofollow">Fred Blasdel</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>malkia: note that Java&#39;s designers made sure that you can use the c preprocessor without any trouble.<br /><br />It was popular in JavaME development since Write Once Run Anywhere was such a crock.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4125998179542494649" title="comment permalink">4:28 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1747937822"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4125998179542494649" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8515121529360542462"><a name="c8515121529360542462"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01112938507872001464" rel="nofollow">Rohan</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hilarious! I eagerly await your first novel.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8515121529360542462" title="comment permalink">4:49 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-2012393852"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8515121529360542462" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6190759802044985280"><a name="c6190759802044985280"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06452125195868922617" rel="nofollow">Garth</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is brilliant, made my day.  A toast to the open/closed principal.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6190759802044985280" title="comment permalink">6:22 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-1534054085"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6190759802044985280" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1146179414108652443"><a name="c1146179414108652443"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11428073477494287233" rel="nofollow">sahglie</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Shit, that is funy!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1146179414108652443" title="comment permalink">7:37 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-817763043"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1146179414108652443" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6632141070390173218"><a name="c6632141070390173218"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07124698414324231625" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Welcome back!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6632141070390173218" title="comment permalink">7:49 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-289652276"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6632141070390173218" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1322750101752569820"><a name="c1322750101752569820"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10211968461963371558" rel="nofollow">nash</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Genious! You&#39;ve been missed mate.:)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1322750101752569820" title="comment permalink">11:12 PM, July 28, 2010</a>
+	  <span class="item-control blog-admin pid-520659928"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1322750101752569820" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6414573889210400091"><a name="c6414573889210400091"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16173188589736612418" rel="nofollow">Daren Thomas</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Thank you Stevey. Glad you are back. You&#39;re the King of the Knights Who Bust Those Who Use Nouns!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6414573889210400091" title="comment permalink">12:16 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1504101351"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6414573889210400091" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5365140078831612160"><a name="c5365140078831612160"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07654931341335136008" rel="nofollow">SteveL</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>if you look at the hadoop codebase, you can see that it has custom attributes to indicate stable/unstable and internal/external. these are hints for people downstream, markers to say &quot;don&#39;t complain&quot; if you worked with something that was internal and unstable and then it broke. but people can use them if they want to, they just need to know the risks -and get on the dev mailing lists if they want to help stabilise things.<br />Social rules, not runtime ones.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5365140078831612160" title="comment permalink">12:37 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1109311510"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5365140078831612160" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c856824478022082033"><a name="c856824478022082033"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16881154916454107186" rel="nofollow">JamesB</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Very good :) As a CDT developer (and chief @Deprecated criminal) We take pride in deprecating API before it&#39;s final -- it&#39;s all part of a fun days work!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#856824478022082033" title="comment permalink">1:21 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1198587059"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/856824478022082033" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5039361640350730280"><a name="c5039361640350730280"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04769773711143508150" rel="nofollow">Jérôme Radix</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p><i>&quot;But why didn&#39;t they write that Perl script in Python?&quot; Faulkner asked.</i><br /><br />...because Perl really hates object orientation, deprecation, finalization and privation.<br /><br />The question to ask is &quot;But why didn&#39;t they translate automagically all &#39;open source&#39; java code into Perl one-liners ?&quot;</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5039361640350730280" title="comment permalink">1:36 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1983613901"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5039361640350730280" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8011819358699688748"><a name="c8011819358699688748"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15501002401077659274" rel="nofollow">Wim</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Heh, I agree nearly 100% though not quite on @deprecated. Mostly because the only place I&#39;ve seen it is in the java API&#39;s where it actually seems to point to better solutions most of the time.<br /><br />Let&#39;s not talk about the Date API. That whole thing should&#39;ve been deprecated the minute they wrote it.<br /><br />Then again, I&#39;ve only had the displeasure of using eclipse (with the m2eclipse plugins, cause I like to watch my pc fall over trying to *initialise* the framework).</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8011819358699688748" title="comment permalink">1:41 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-652736273"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8011819358699688748" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4315688126020534085"><a name="c4315688126020534085"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10430235452297873953" rel="nofollow">Andrei Vajna II</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p><i>removes all &#39;final&#39; keywords except those required for hacking around the 15-year-old Java language&#39;s &quot;fucking embarrassing lack of closures.&quot;</i><br /><br />That&#39;s what I was afraid of when I first saw the news, but I&#39;m glad they covered this part, because that makes the script actually useful for our project at work. Good thing I can manually change the modifiers when needed.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4315688126020534085" title="comment permalink">2:15 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1939693764"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4315688126020534085" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c222854188863271429"><a name="c222854188863271429"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15900841850889743147" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I once wrote a class called Hack with a method get(Object o, String fieldName) which allowed me to get (via reflection) the value of a private field. <br /><br />I wrote as I trying to make BCEL (Bytecode Engineering Library) do some things it was not intended to do. It practically had all these capabilities in the first place, but in order to get to them I had to reach out and touch some private fields. <br /><br />So, I had two choices: (a) modify the source code; (b) creatively use reselection;<br /><br />I chose option (b). True, my code will not run in some environments where security policy is set to &quot;panic&quot; but at least I don&#39;t have to manually edit the BCEL source code every time a new bug-fix release is coming out.<br />code</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#222854188863271429" title="comment permalink">2:38 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-550128314"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/222854188863271429" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4323919884709761138"><a name="c4323919884709761138"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07903160310705592867" rel="nofollow">martani</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Awesomeeee :D</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4323919884709761138" title="comment permalink">3:42 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1952046625"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4323919884709761138" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7583653114859563782"><a name="c7583653114859563782"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16080487755357856524" rel="nofollow">Paul Lasek</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I&#39;ll say that I agree with changing <b>private</b> to <b>public</b> (Because, frankly speaking, it&#39;s all bullshit in the end), however not about final/static - Remove that and Java becomes much slower (and suddenly might not be as fast as C because every call will have to do argument type assertions :/)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7583653114859563782" title="comment permalink">3:44 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-494832644"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7583653114859563782" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c9038652441294669228"><a name="c9038652441294669228"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15900841850889743147" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@Paul Lasek: not necessarily. The JIT can do wonders.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#9038652441294669228" title="comment permalink">3:50 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-550128314"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/9038652441294669228" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1322068462865579801"><a name="c1322068462865579801"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13436436994311245922" rel="nofollow">Chris Bird</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>My favorite trick in the old days of character mode devices was to remap the letter &quot;e&quot; to  and the letter &quot;o&quot; to null. It then became impossible to edit the script to remove the line, and it was impossible to logoff!<br /><br />Oh and for those who wonder it was 1974 and the interactive system was IBM&#39;s TSO (Time Sharing Option). Of course that isn&#39;t possible any more!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1322068462865579801" title="comment permalink">5:50 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-874707316"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1322068462865579801" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6088392273224476120"><a name="c6088392273224476120"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00647481962859573471" rel="nofollow">Jason Craft</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>We need the world to know of the evils of Java!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6088392273224476120" title="comment permalink">7:41 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1506873849"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6088392273224476120" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6251119173855633710"><a name="c6251119173855633710"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17935063827932240235" rel="nofollow">Matt Williamson</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Yes, very onion-y. Love it</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6251119173855633710" title="comment permalink">8:30 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-2047747735"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6251119173855633710" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6444060940905535161"><a name="c6444060940905535161"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07723053186645165541" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Wikileaks also to release version of python without whitespace snobbery, and the ability to do things the language designers haven&#39;t officially approved.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6444060940905535161" title="comment permalink">8:53 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-569162215"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6444060940905535161" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4721510805972099773"><a name="c4721510805972099773"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15213283306298286949" rel="nofollow">Michael Haren</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is incredible.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4721510805972099773" title="comment permalink">10:36 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1794840716"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4721510805972099773" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4324487550412007847"><a name="c4324487550412007847"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17211501021299556583" rel="nofollow">akuhn</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@ryan this is a common myth, but in fact final fields are not final at all. You can change them at runtime. And ininling of final static fields in the bytecode is generally considered a design flaw these days. It introduces dependencies between class files whereas the JIT could get that inlining job done even better at runtime. All of Java&#39;s speed comes from runtime optimizing in the VM, the compiler does zero optimization.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4324487550412007847" title="comment permalink">10:38 AM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-648525842"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4324487550412007847" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8501094067391901288"><a name="c8501094067391901288"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15976519439979651010" rel="nofollow">Erik van Oosten</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Does the perl script also remove the checks of eclipse classes that prevent subclassing?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8501094067391901288" title="comment permalink">12:17 PM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-88167052"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8501094067391901288" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7692302693040258955"><a name="c7692302693040258955"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04131852440039642551" rel="nofollow">Pierre-Henri Trivier</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Steve, you&#39;re preparing yourself for the mother of all follow-up-explaining-why-I-was-just-kidding-with-a-dash-of-seriousness post, according to what I could read in the interwebs ...<br /><br />http://enfranchisedmind.com/blog/posts/steve-yegge-is-an-idiot/<br /><br />Or maybe that&#39;s just a way to demonstrate your &quot;you can&#39;t please everyone&quot; theory ?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7692302693040258955" title="comment permalink">1:44 PM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-1518437694"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7692302693040258955" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8222623246701902017"><a name="c8222623246701902017"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00562096259491139231" rel="nofollow">♫gaurav♫</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I actually opened a tab to checkout Wikileaks. Sigh.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8222623246701902017" title="comment permalink">10:31 PM, July 29, 2010</a>
+	  <span class="item-control blog-admin pid-798457052"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8222623246701902017" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4071312786655637592"><a name="c4071312786655637592"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10953767385585248513" rel="nofollow">Stela James</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>open source project is a working good because it is accessed by each and every person and makes changes...<br /><a href="http://www.czarnovel.com/" rel="nofollow">home jobs</a></p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4071312786655637592" title="comment permalink">2:36 AM, July 30, 2010</a>
+	  <span class="item-control blog-admin pid-709245458"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4071312786655637592" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8389919070510790942"><a name="c8389919070510790942"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11782508603268183191" rel="nofollow">Denton Gentry</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I think this post is eliciting another round of &quot;StabbityStabbityStabbity&quot; responses. Fun.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8389919070510790942" title="comment permalink">7:03 AM, July 30, 2010</a>
+	  <span class="item-control blog-admin pid-110584352"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8389919070510790942" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2147271941550989266"><a name="c2147271941550989266"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/02378840654970582964" rel="nofollow">Anshul</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Brilliant! And timely, as I was just working on some Hadoop code which apparently has come under the wings of the League of Java Programmers for Deprecating the Living Shit out of Everything.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2147271941550989266" title="comment permalink">4:20 PM, July 30, 2010</a>
+	  <span class="item-control blog-admin pid-1386715750"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2147271941550989266" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7901962505184012828"><a name="c7901962505184012828"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01035913042337349368" rel="nofollow">kul908</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>haha, that was brilliant!! I laughed so much!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7901962505184012828" title="comment permalink">5:56 AM, August 01, 2010</a>
+	  <span class="item-control blog-admin pid-1054520106"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7901962505184012828" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7332921145227991344"><a name="c7332921145227991344"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10189644296277309313" rel="nofollow">ankur</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>That was hilarious man.  Most of your writing is too smart for me, but this one was just about matched my brainwave cycle.  Nice post, as someone said, Onion quality</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7332921145227991344" title="comment permalink">11:36 AM, August 01, 2010</a>
+	  <span class="item-control blog-admin pid-1847572837"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7332921145227991344" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7668865438735835647"><a name="c7668865438735835647"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05880331945937433656" rel="nofollow">Adam</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>You weren&#39;t kidding when you said you were &quot;overwhelmed with onions&quot; in your last post.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7668865438735835647" title="comment permalink">10:34 AM, August 02, 2010</a>
+	  <span class="item-control blog-admin pid-556404998"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7668865438735835647" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6924441783950215317"><a name="c6924441783950215317"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07556328154287535801" rel="nofollow">米国人</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is good stuff. I&#39;d give this post a <b>solid 67% approval rating</b>. :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6924441783950215317" title="comment permalink">10:45 AM, August 02, 2010</a>
+	  <span class="item-control blog-admin pid-1180368012"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6924441783950215317" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5965446105347512223"><a name="c5965446105347512223"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01358907470452656695" rel="nofollow">Paul Nathan</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>In related news, some monkeys were sighted at a Seattle airport, carrying Starbucks and some carefully folded patches. When interviewed about their purpose in Seattle, they responded, &quot;We&#39;re bringing our well-known patching abilities to Java programming&quot;</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5965446105347512223" title="comment permalink">12:33 PM, August 02, 2010</a>
+	  <span class="item-control blog-admin pid-1023903548"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5965446105347512223" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4443801180419601759"><a name="c4443801180419601759"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07868811586654591249" rel="nofollow">Dan Weinreb</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Re &quot;enfranchisedmind.com&quot;: As I said in http://danweinreb.org/blog/advice-about-sending-email, whenever you use sarcasm, at least one person will actually take you literally.  In this case, there appears to be a severe lack of a sense of humor.  Anyway, I totally cracked up!  Excellent!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4443801180419601759" title="comment permalink">8:32 PM, August 03, 2010</a>
+	  <span class="item-control blog-admin pid-1127647188"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4443801180419601759" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7415570801302802709"><a name="c7415570801302802709"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07189902545218820162" rel="nofollow">Arancaytar</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I was just grinning until I got to &quot;non-thread-safe AbstractKeywordRemovalInitiatorFactory&quot;, which sent me rolling on the floor!<br /><br />(In related news, explaining the joke to someone who has never coded in Java is next to impossible.)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7415570801302802709" title="comment permalink">11:24 AM, August 04, 2010</a>
+	  <span class="item-control blog-admin pid-449656969"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7415570801302802709" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4367278154634999741"><a name="c4367278154634999741"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is the BEST damn laugh I&#39;ve had in a long time.  Awesome shit!  <br /><br />p.s. Disregard everything I just wrote and read my new comment</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4367278154634999741" title="comment permalink">11:42 AM, August 04, 2010</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4367278154634999741" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6015634951176459091"><a name="c6015634951176459091"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15730908818418301836" rel="nofollow">Jocelyn</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Epic! LOL in my office right now!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6015634951176459091" title="comment permalink">2:42 PM, August 06, 2010</a>
+	  <span class="item-control blog-admin pid-1252350772"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6015634951176459091" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6026201516403999889"><a name="c6026201516403999889"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/08321182577216243192" rel="nofollow">polypus74</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>uh oh, you do realize this is going to completely break clojure&#39;s persistent data structures :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6026201516403999889" title="comment permalink">8:49 PM, August 07, 2010</a>
+	  <span class="item-control blog-admin pid-333768168"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6026201516403999889" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8786922903218396988"><a name="c8786922903218396988"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10025555896996100599" rel="nofollow">MCAndre</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hip hip hooray!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8786922903218396988" title="comment permalink">12:36 PM, August 11, 2010</a>
+	  <span class="item-control blog-admin pid-1980942736"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8786922903218396988" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1615008935310806036"><a name="c1615008935310806036"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05317957113838069734" rel="nofollow">RoutineMachine</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Every time a you make fun of Java, Oracle files another patent lawsuit.  Happy now?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1615008935310806036" title="comment permalink">5:59 AM, August 16, 2010</a>
+	  <span class="item-control blog-admin pid-452516092"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1615008935310806036" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6348864079277135911"><a name="c6348864079277135911"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11896508961236679878" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>read this few days ago.  was wondering why there&#39;s no reference link to the original annoucement, the oddity of this piece, and was about to lookup. Then, i realized. Scrolling thru the comments confirmed. lol. Nice one.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6348864079277135911" title="comment permalink">5:27 PM, August 18, 2010</a>
+	  <span class="item-control blog-admin pid-355028773"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6348864079277135911" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3203285874657382210"><a name="c3203285874657382210"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/18186131586300323933" rel="nofollow">nomike</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Stop all that nonsense. Wikileaks decided to publish modifications of open source code. Go on with it. The ability to take somone elses code, modify it and re-publish it is the nature of open source. This is why open source exists.<br />If you don&#39;t want your code being modified like that, then don&#39;t make it closed source!<br /><br /><br />Besides that, if I could decide it I would throw the &quot;protected&quot; and &quot;private&quot; out of the java language. I&#39;m a Java programmer and it bothers me all the time that I have to write dozens of boilerplate code for doing simple stuff. E.g. Getters and setters. Who needs them? Totally senseless. And making things private so no one could use them?<br />If you flag something as &quot;mayChangeInFuture&quot; or &quot;isNotPartOfTheOfficialAPI&quot;. Everyone could still use the methods and variables, but if things break on an update it is his own problem (&quot;You have been warned!&quot;).</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3203285874657382210" title="comment permalink">12:43 AM, August 20, 2010</a>
+	  <span class="item-control blog-admin pid-1549428018"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3203285874657382210" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8780583536857772399"><a name="c8780583536857772399"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/18186131586300323933" rel="nofollow">nomike</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>PS: I know this is a hoax, but this is for all the people who don&#39;t get it and think it&#39;s real.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8780583536857772399" title="comment permalink">12:45 AM, August 20, 2010</a>
+	  <span class="item-control blog-admin pid-1549428018"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8780583536857772399" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8177991238009261193"><a name="c8177991238009261193"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12791195620221627166" rel="nofollow">Radosław Maruszewski</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Joshua Bloch, &quot;Effective Java&quot; (2nd edition) http://www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683/<br />Please read chapters 13 (&quot;Minimize the accessibility of classes and members&quot;), 14 (&quot;In public classes, use accessor methods, not public fields&quot;) and 15 (&quot;Minimize mutability&quot;).<br />And please stop writing &quot;onion quality&quot; code, guys... I want to spend weekends with my wife and children, not fixing your &quot;code for real men&quot;. ;-)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8177991238009261193" title="comment permalink">5:07 AM, August 20, 2010</a>
+	  <span class="item-control blog-admin pid-931683466"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8177991238009261193" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8944033009007836339"><a name="c8944033009007836339"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11387597266251593207" rel="nofollow">大平原礼門</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>hello nice to meet you <br />I read your entry adout Japanese animation.<br /><br />I know the best animation .<br />It&#39;s name is [garei zero] .<br />it&#39;s very good animation.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8944033009007836339" title="comment permalink">7:09 AM, August 21, 2010</a>
+	  <span class="item-control blog-admin pid-957655288"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8944033009007836339" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7858397639237750307"><a name="c7858397639237750307"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05744335459445157950" rel="nofollow">Amey</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hey, yet another satisfied Java programmer!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7858397639237750307" title="comment permalink">6:59 AM, August 24, 2010</a>
+	  <span class="item-control blog-admin pid-102217919"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7858397639237750307" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c473707703238263165"><a name="c473707703238263165"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/03594213744885906990" rel="nofollow">dzex</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>It reminds me ... well actually very many things,- things that seems to be what they are not, never were and never will be.<br /><br />Please post the link to the source of this so called &quot;Press Release&quot;, until I see the link I honestly cannot judge if your article has any ground under. <br /><br />Sorry, I&#39;ve being lied too many times in the past...</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#473707703238263165" title="comment permalink">8:52 AM, August 28, 2010</a>
+	  <span class="item-control blog-admin pid-1535263579"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/473707703238263165" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4895409142410464368"><a name="c4895409142410464368"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17500770674291830024" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I thought this WAS something from The Onion!!  Hilarious!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4895409142410464368" title="comment permalink">10:51 AM, September 11, 2010</a>
+	  <span class="item-control blog-admin pid-63014154"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4895409142410464368" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2783911054261831935"><a name="c2783911054261831935"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/08057878161147004231" rel="nofollow">Adam McCullough</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Your posts are, as always, deeply awesome and thought-provoking. I&#39;m still learning the developer game -- still an intern, with a long way to go -- but your writing always feels like a stimulating conversation with an old friend. They&#39;re much appreciated.<br /><br />Hoping there&#39;s more coming,<br /><br />Adam</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2783911054261831935" title="comment permalink">1:10 AM, September 23, 2010</a>
+	  <span class="item-control blog-admin pid-1751754400"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2783911054261831935" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2894589878544503452"><a name="c2894589878544503452"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16392190068112911050" rel="nofollow">Mordachai</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Freaking Awesome!  Nerd heaven!  Thanks!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2894589878544503452" title="comment permalink">1:27 PM, September 23, 2010</a>
+	  <span class="item-control blog-admin pid-1471651117"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2894589878544503452" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c556410671294055691"><a name="c556410671294055691"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/08031231577375477819" rel="nofollow">Njan</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&quot;But why didn&#39;t they write that Perl script in Python?&quot; Faulkner asked.   - LOL!!! - blew my hat! :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#556410671294055691" title="comment permalink">7:16 AM, October 25, 2010</a>
+	  <span class="item-control blog-admin pid-1754361477"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/556410671294055691" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1500787839816706228"><a name="c1500787839816706228"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05046634289331638728" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Come on, Stevey - it&#39;s been three and a half months since you wrote &quot;Wikileaks...&quot; <br /><br />In &quot;Blogger Finger&quot; you already speculated &quot;that everyone&#39;s completely forgotten who I am&quot;, but that&#39;s not true! I&#39;m sure there are hundreds, if not thousands of people like me out there eagerly checking your blog for updates every hour! (through their feed readers anyway) Because we all read the last paragraph of that post with a sparkle in our eyes where you wrote: &quot;I believe I&#39;m ready to start tech blogging again... in moderation, anyway.&quot;<br /><br />Feed us (and our readers), Stevey! Please! Come on, man, I know you can do it! Oh, oh... unless you can&#39;t, of course, because old claw hand came back to you? Ouch, I really hope not.<br /><br />But I do hope that you&#39;ll read this little comment and that maybe it&#39;ll fall on fertile grounds.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1500787839816706228" title="comment permalink">10:21 AM, November 09, 2010</a>
+	  <span class="item-control blog-admin pid-1937871241"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1500787839816706228" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6607652174770323390"><a name="c6607652174770323390"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/02557263677495010412" rel="nofollow">bloggingisstupid</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&gt; Mitch said...<br />&gt; Haskell (or something haskell-ish) is definitely the future, <br />&gt; though--cheap abstraction (which in haskell is enabled by the <br />&gt; type system, and by purity) is just too big of a win.<br /><br />Most probably it is not a future nor will be future. It is the same story as it was with a lot &quot;theoretically&quot; perfect languages we&#39;ve seen over the years that had carisma of becoming future badass languages but except few smaller projects, nobody ever really did anything production-usefull with them. The list is long - Smalltalk, OCaml, ML, LISP, Haskell... They were always in state of waiting for something to happen and that would be the trigger to give them high visibility out there. Just take a look in forums about rants of LISP community - it&#39;s always waiting for some new &quot;version&quot; or implementation of LISP that would make it everyones choice. <br /><br />Don&#39;t get me wrong - I even like Scheme (well, I don&#39;t LIKE it, but I respect it). Scheme was a breaktrough for me to really get a grasp on recursion. (endless LittleSchemer practices).<br /><br />Use of &quot;educational&quot; languages is to introduce new paradigms - and then the best parts of them are usually integrated in everyday languages we all use like C++,Java or or JavaScript or even Perl.  The only exception I can think of (at least from languages I personally programmed in) is Erlang but Erlang has a bit different background. It was never a language that was buitlt for research - it was built because Ericsson needed such language to build complex telecom systems like their famous ATM switch. But except few Erlang popular projects (CouchDB, some Amazon cloud services, Facebook chat, Yahoo flicker parts, Ericsson stuff) this language lacks productive quality toolchain. If you ever tried to use a profiler in Erlang you would be instantly aware what I&#39;m talking about. Somebody used to Visual Studio or even Eclipse will just run away from Erlang not looking back because of toolchain itself - I won&#39;t even mentioned weird (for someone used to C-like) syntax.<br /><br />In 5-10 years we will still use Java and C++ but most likely they will adopt some of the good features from functional programming which is already happening in both mentioned mainstream languages. New languages and paradigms will appear on horizon - but mainstream will stay the same.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6607652174770323390" title="comment permalink">7:31 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-308363154"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6607652174770323390" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3460016842379468821"><a name="c3460016842379468821"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09350055705252093886" rel="nofollow">Peter Williams</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This post is still here. Maybe the rumour about Google removing WikiLeaks-related blogs from Blogger is not true. <br /><br />Or maybe Google are using something more sophisticated than plain keyword search.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3460016842379468821" title="comment permalink">2:27 PM, December 04, 2010</a>
+	  <span class="item-control blog-admin pid-10358678"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3460016842379468821" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c699087356381970357"><a name="c699087356381970357"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12701842164390769228" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is my first comment in my life &amp; it is for you Steve... I miss your blogs.Mainly work in C,C++(strictly code in C way. Only additions are &quot;is a,has a and friend&quot;) and LUA. Did Java long back..It is an insanely great blog</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#699087356381970357" title="comment permalink">2:56 AM, December 10, 2010</a>
+	  <span class="item-control blog-admin pid-1971058530"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/699087356381970357" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4027046997274303993"><a name="c4027046997274303993"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/14032506731847867155" rel="nofollow">Jhon Davis</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>thats great wikileaks need to leak Mirosoft windows too.<br /><br /><br />- John Devis<br /><a href="http://free-magentoextensions.com/magento-themes.html" title="Magento Theme" rel="nofollow">Magento Theme</a></p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4027046997274303993" title="comment permalink">3:16 PM, December 27, 2010</a>
+	  <span class="item-control blog-admin pid-1375211737"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4027046997274303993" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4246775383025741809"><a name="c4246775383025741809"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06834658366590041451" rel="nofollow">chandra garre</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>haha ! i was really really scared !!!! :)))</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4246775383025741809" title="comment permalink">8:01 PM, April 16, 2011</a>
+	  <span class="item-control blog-admin pid-1753283078"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4246775383025741809" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3221323227571152145"><a name="c3221323227571152145"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15028902221295732276" rel="nofollow">javin paul</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is just simple publicity stunt but they have no right to temper code like this.<br /><br />Javin<br /><a href="http://javarevisited.blogspot.com/2011/07/why-multiple-inheritances-are-not.html" rel="nofollow">Why multiple inheritance is not supported in Java </a></p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3221323227571152145" title="comment permalink">8:16 AM, July 20, 2011</a>
+	  <span class="item-control blog-admin pid-1292980543"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3221323227571152145" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+    </dl>
+		<p class="comment-timestamp">
+
+    <a class="comment-link" href="https://www.blogger.com/comment/fullpage/post/13674163/3339886637389033856">Post a Comment</a>
+    </p>
+    	    
+    
+
+
+		<p class="comment-timestamp">
+	<a href="http://steve-yegge.blogspot.com/">&lt;&lt; Home</a>
+    </p>
+    </div>
+
+
+
+  <!-- End #comments -->
+
+
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
+<dl class="profile-datablock"><dt class="profile-img"><a href="https://www.blogger.com/profile/14812997485690838920"><img src="//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8lMplUBvgDts4l0lod1nWJ71okMnRPkuOiZXzCG3lFp7UqiY4MymxpbZIyAtcosW8amfQNznW4wye0IIOOdBe0egaGFj0jnAopXvqmJVikZPc6QPO9WiBG1rVHYOy2t8/s220/stevey-6-21-07.jpg" width="80" height="59" alt="My Photo"></a></dt>
+<dd class="profile-data"><strong>Name:</strong> <a rel="author" href="https://www.blogger.com/profile/14812997485690838920"> Steve Yegge </a></dd>
+<dd class="profile-data"><strong>Location:</strong>  Kirkland, Washington, United States </dd></dl>
+
+<p class="profile-link"><a rel="author" href="https://www.blogger.com/profile/14812997485690838920">View my complete profile</a></p></div>
+   
+  <!-- End #profile -->
+    
+  
+
+  
+  <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/blogger-finger.html">Blogger Finger</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/05/programmers-view-of-universe-part-3.html">A programmer&#39;s view of the Universe, part 3:  The ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/04/have-you-ever-legalized-marijuana.html">Have you ever legalized marijuana?</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/03/story-time.html">Story Time</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/12/programmers-view-of-universe-part-2.html">A programmer&#39;s view of the Universe, part 2:  Mari...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/12/fable-ii-arguably-better-than-getting.html">Fable II:  Arguably Better than Getting Your Head ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/11/ejacs-javascript-interpreter-for-emacs.html">Ejacs:  a JavaScript interpreter for Emacs</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/10/programmers-view-of-universe-part-1.html">A programmer&#39;s view of the Universe, part 1:  The ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/10/universal-design-pattern.html">The Universal Design Pattern</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/09/bellic-school-of-management-training.html">The Bellic School of Management Training</a></li>
+     
+  </ul>
+    
+
+      <p id="powered-by"><a href="//www.blogger.com"><img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tkSp8-68tdzh-Lglx-c9GxvAepqHW8gobeBSOvQ0LscFvJ1tLuFNaYEJVCB-dwkHcf5I8oA9bwdWsJirbc8BmkiYqa9VJgv2Ny_Qm87U3o=s0-d" alt="Powered by Blogger"></a></p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+</div>
+<!-- End #footer -->
+
+
+<script src="//www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-238999-1";
+urchinTracker();
+</script>
+</body>
+</html>

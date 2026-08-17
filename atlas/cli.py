@@ -381,6 +381,47 @@ def cmd_research(args):
         if not passed:
             sys.exit(1)
 
+def cmd_phase1_5(args):
+    print_banner()
+    from atlas.deep.config import DeepExperimentConfig
+    from atlas.deep.sampler import sample_study_cohort
+    from atlas.deep.runner import run_phase1_5_experiment
+    from atlas.deep.evaluator import evaluate_phase1_5_results
+    from atlas.deep.review import generate_paired_blind_dossiers, record_paired_human_reviews
+
+    config = DeepExperimentConfig()
+
+    if args.p15_action == "sample":
+        print("[*] Sampling 300-Domain Study Cohort from Corpus v2 (Seed=42)...")
+        records, csv_p, csv_sha = sample_study_cohort(config)
+        print(f"[+] Successfully sampled {len(records)} study domains to {csv_p} (SHA-256: {csv_sha[:16]}...)")
+    elif args.p15_action in ("run", "resume"):
+        print(f"[*] Executing Paired Phase 1.5 Experiment (Mode={args.mode}, Limit={args.limit})...")
+        res = run_phase1_5_experiment(config=config, resume=(args.p15_action == "resume"), mode=args.mode, limit=args.limit)
+        print(f"[+] Phase 1.5 Paired Execution Complete:")
+        print(f"    Total Domains Processed: {len(res['paired_results'])}")
+        print(f"    Runtime: {res['cost_metrics'].total_runtime_seconds}s")
+        print(f"    Raw Artifacts Frozen in: data/phase1_5/evidence/raw_artifacts/")
+    elif args.p15_action == "review":
+        print("[*] Generating Blind Paired Review Dossiers & Recording Human Verdicts...")
+        dossiers = generate_paired_blind_dossiers()
+        reviews = record_paired_human_reviews()
+        print(f"[+] Generated {len(dossiers)} blind dossiers in data/phase1_5/blind_paired_dossiers.jsonl")
+        print(f"[+] Recorded {len(reviews)} paired human reviews in data/phase1_5/human_reviews.jsonl")
+    elif args.p15_action == "compare":
+        print("[*] Calculating Root-vs-Deep Statistical Metrics & Generating Discovery Dossiers...")
+        metrics = evaluate_phase1_5_results()
+        print("\nROOT-VS-DEEP COMPARISON SUMMARY:")
+        print("-" * 55)
+        print(f"Study Domains Total:       {metrics['study_domains_total']}")
+        print(f"Root Arm Candidates:       {metrics['root_arm']['candidate_count']}")
+        print(f"Deep Arm Candidates:       {metrics['deep_arm']['candidate_count']}")
+        print(f"Incremental Candidates:    {metrics['incremental_gain']['new_candidates']}")
+        print(f"Validated Discoveries:     {metrics['incremental_gain']['new_validated_discoveries']}")
+        print(f"Incremental False Pos:     {metrics['incremental_gain']['incremental_false_positives']}")
+        print(f"Reference Relics Recovered:{metrics['deep_arm']['reference_recovery']}")
+        print("-" * 55)
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -437,6 +478,12 @@ def main():
     research_parser = subparsers.add_parser("research", help="Scientific Release Gate & Research Validation")
     research_parser.add_argument("research_action", choices=["release-check"], help="Research action")
 
+    # phase1_5 (Phase 1.5)
+    p15_parser = subparsers.add_parser("phase1_5", help="Phase 1.5 Deep Web Archaeology Subsystem")
+    p15_parser.add_argument("p15_action", choices=["sample", "run", "resume", "review", "compare", "report"], help="Phase 1.5 action")
+    p15_parser.add_argument("--mode", choices=["LIVE", "SIMULATION", "REPLAY"], default="LIVE", help="Execution mode")
+    p15_parser.add_argument("--limit", type=int, help="Limit domains for test runs", default=None)
+
     args = parser.parse_args()
 
     if args.command == "scan":
@@ -470,6 +517,8 @@ def main():
         cmd_benchmark(args)
     elif args.command == "research":
         cmd_research(args)
+    elif args.command == "phase1_5":
+        cmd_phase1_5(args)
     else:
         print_banner()
         parser.print_help()

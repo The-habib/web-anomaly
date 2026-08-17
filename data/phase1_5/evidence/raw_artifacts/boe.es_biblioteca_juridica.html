@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="Description" content="Biblioteca Jur&amp;iacute;dica Digital" />
+    <title>BOE.es - Biblioteca Jur&iacute;dica Digital</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <base target="_top" />
+    <link type="text/css" href="/estilos/boe.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/estilos/contenido-estatico.css" type="text/css">
+    <link rel="stylesheet" href="/estilos/buscador.css" type="text/css">
+    <link rel="stylesheet" href="/estilos/biblioteca.css" type="text/css">
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" href="/estilos/boe_ie9.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/estilos/boe_ie8.css" />
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="fuera">Agencia Estatal Bolet&iacute;n Oficial del Estado</h1>
+      <ul class="fuera">
+        <li><a accesskey="c" href="#contenedor" tabindex="-1">Ir a contenido</a></li>
+        <li><a accesskey="5" href="/diario_boe/" tabindex="-1">Consultar el diario oficial BOE</a></li>
+      </ul>
+      <div id="logosInicio">
+        <span id="logoPresidenciaMovil"><a href="https://www.mpr.gob.es/" title="Ir al Ministerio de la Presidencia"><img src="/imagenes/logoMPRmovil.png" srcset="/imagenes/logoMPRmovil.svg" alt="Ministerio de la Presidencia"></a></span>
+        <span id="logoPresidencia"><a href="https://www.mpr.gob.es/" title="Ir al Ministerio de la Presidencia"><img src="/imagenes/logoMPR.png" srcset="/imagenes/logoMPR.svg" alt="Ministerio de la Presidencia"></a></span>
+
+        <span id="logoAgencia"><a accesskey="1" href="/" title="Ir a la p&aacute;gina de inicio"><img src="/imagenes/logoBOE.gif" srcset="/imagenes/logoBOE.svg" alt="Agencia Estatal Bolet&iacute;n Oficial del Estado"></a></span>
+        
+      </div> <!-- #logosInicio -->
+    </div> <!-- #header -->
+    <div id="top" class="banda-menu">
+    <div class="menu-wrapper">
+      <div id="logo-movil-boe-container">
+        <a href="/" title="Ir a la p&aacute;gina de inicio"><img alt="Agencia Estatal Bolet&iacute;n Oficial del Estado" src="/imagenes/logoBlanco128.png"></a>
+      </div>
+      <ul class="menu">
+        <li class="menu-item menu-idiomas">
+          <div id="selector-idioma">
+            <span class="fuera">Idioma actual:</span>
+            <input id="activar-idiomas" type="checkbox" class="fuera">
+            <label class="idioma-actual" for="activar-idiomas" title="Idiomas: Haga clic o utilice barra espaciadora para abrir o cerrar opciones"><span class="descripcion-idioma pc tablet">Castellano</span><span class="fuera"> / </span><span class="descripcion-idioma movil">es</span><span class="triangulo"><span></span></span></label>
+            <p class="fuera">Puede seleccionar otro idioma:</p>
+            <ul id="lista-idiomas">
+              <li><a href="index.php?lang=es&amp;tipo=L&amp;modo=2" lang="es" hreflang="es"><span aria-hidden="true" class="idioma"><abbr title="espa&ntilde;ol/castellano">es</abbr><span class="fuera"> / </span><em>Castellano</em></span></a></li>
+              <li><a href="index.php?lang=ca&amp;tipo=L&amp;modo=2" lang="ca" hreflang="ca"><span aria-hidden="true" class="idioma"><abbr title="catal&agrave;">ca</abbr><span class="fuera"> / </span><em>Catal&agrave;</em></span></a></li>
+              <li><a href="index.php?lang=gl&amp;tipo=L&amp;modo=2" lang="gl" hreflang="gl"><span aria-hidden="true" class="idioma"><abbr title="galego">gl</abbr><span class="fuera"> / </span><em>Galego</em></span></a></li>
+              <li><a href="index.php?lang=eu&amp;tipo=L&amp;modo=2" lang="eu" hreflang="eu"><span aria-hidden="true" class="idioma"><abbr title="euskara">eu</abbr><span class="fuera"> / </span><em>Euskara</em></span></a></li>
+              <li><a href="index.php?lang=va&amp;tipo=L&amp;modo=2" lang="ca-valencia" hreflang="ca-valencia"><span aria-hidden="true" class="idioma"><abbr title="valenci&agrave;">va</abbr><span class="fuera"> / </span><em>Valenci&agrave;</em></span></a></li>
+              <li><a href="index.php?lang=en&amp;tipo=L&amp;modo=2" lang="en" hreflang="en"><span aria-hidden="true" class="idioma"><abbr title="english">en</abbr><span class="fuera"> / </span><em>English</em></span></a></li>
+              <li><a href="index.php?lang=fr&amp;tipo=L&amp;modo=2" lang="fr" hreflang="fr"><span aria-hidden="true" class="idioma"><abbr title="fran&ccedil;ais">fr</abbr><span class="fuera"> / </span><em>Fran&ccedil;ais</em></span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu-item resto">
+          <a accesskey="4" href="/buscar/"><span class="botonBuscar">Buscar</span></a>
+        </li>
+        <li class="menu-item resto">
+          <a href="/mi_boe/">
+            <span class="botonMiBOE">Mi BOE <span class="luz">Desconectado.<br/>Pulse para acceder al servicio 'Mi BOE'</span></span>
+          </a>
+        </li>
+        <li class="menu-item movil buscar">
+          <a href="/buscar/">
+            <img alt="Buscar" src="/imagenes/logoBuscar.png" srcset="/imagenes/logoBuscar.svg">
+          </a>
+        </li>
+        <li class="menu-item movil">
+          <a href="/mi_boe/">
+            <img alt="Mi BOE" src="/imagenes/logoMiBOE.png" srcset="/imagenes/logoMiBOE.svg">
+          </a>
+        </li>
+        <li class="menu-item menu-menu"><!--  -->
+          <input id="activar-menu" name="activar" type="checkbox" title="Desplegar men&uacute;" class="fuera">
+          <label class="click-desplegar resto" for="activar-menu" title="Men&uacute;: Haga clic o utilice barra espaciadora para abrir o cerrar opciones">Men&uacute;
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <input id="activar-menu-movil" name="activar" type="checkbox" title="Desplegar men&uacute;">
+          <label class="click-desplegar movil" for="activar-menu-movil"><em>Men&uacute;</em>
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <div class="menu-container">
+            <ul class="menu-item-list">
+              <li class="menu-item first">
+                <p><a href="/index.php#diarios" class="inline">Diarios Oficiales</a></p>
+                <ul class="sub-menu">
+                  <li><a href="/diario_boe">BOE</a></li>
+                  <li><a href="/diario_borme">BORME</a></li>
+                  <li><a href="/legislacion/otros_diarios_oficiales.php">Otros diarios oficiales</a></li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <p><a href="/index.php#juridico">Informaci&oacute;n Jur&iacute;dica</a></p>
+                <ul class="sub-menu">
+                  <li><a href="/legislacion/">Todo el Derecho</a></li>
+                  <li><a href="/biblioteca_juridica/">Biblioteca Jur&iacute;dica Digital</a></li>
+                </ul>
+              </li>
+              <li class="menu-item last">
+                <p><a href="/index.php#servicios-adicionales">Otros servicios</a></p>
+                <ul class="sub-menu">
+                  <li><a href="/notificaciones">Notificaciones</a></li>
+                  <li><a href="/edictos_judiciales">Edictos judiciales</a></li>
+                  <li><a href="https://subastas.boe.es">Portal de subastas</a></li>
+                  <li><a href="/anuncios">Anunciantes</a></li>
+                  <li><a href="/datosabiertos/api/api.php">Datos abiertos</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div> <!-- .menu-container -->
+        </li><!--  -->
+      </ul>
+    </div> <!-- .menu-wrapper -->
+    </div> <!-- .banda-menu -->
+    <div id="franjaMigas">
+      <div class="contMigas">
+        <span class="fraseMigas">Est&aacute; <abbr title="usted">Vd.</abbr> en</span>
+        <ul class="migas">
+        <li><a href="/">Inicio</a></li>
+        <li class="destino">Biblioteca Jur&iacute;dica Digital</li>        </ul>
+        <div id="solapa">
+        </div><!-- solapa -->
+      </div><!-- contMigas -->
+    </div> <!-- #franjaMigas -->
+    <div id="contenedor">
+      <div id="contenido" class="poolLegis"><h2>Biblioteca Jur&iacute;dica Digital</h2>
+<div class="tabsDesplegable pretexto">
+  <input type="checkbox" class="desplegable fuera" id="dropDownFiltroBibliotecaLegislativa" value="" name="dropDownFiltro" title="Haga clic o utilice barra espaciadora para abrir o cerrar opciones">
+  <label class="selected" for="dropDownFiltroBibliotecaLegislativa" data-toggle="dropdown">
+              Libros
+  </label>
+  <ul class="navlist">
+    <li>
+      <a href="./index.php?tipo=E&amp;modo=2" >Editorial</a>
+    </li>
+    <li>
+      <a href="./index.php?tipo=L&amp;modo=2" class="current">Libros</a>
+    </li>
+    <li>
+      <a href="./index.php?tipo=C&amp;modo=2" >C&oacute;digos</a>
+    </li>
+    <li>
+      <a href="./index.php?tipo=U&amp;modo=2" ><abbr title="C&oacute;digos">C&oacute;d.</abbr> Universitarios</a>
+    </li>
+    <li>
+      <a href="./index.php?tipo=O&amp;modo=2" ><span class="pc movil">Material de oposiciones</span><span class="tablet">Oposiciones</span></a>
+    </li>
+    <li>
+      <a href="./index.php?tipo=R&amp;modo=2" >Anuarios<span class="pc movil"> y revistas</span></a>
+    </li>
+  </ul>
+</div>
+<div class="botonera">
+  <a href="index.php?modo=1&amp;tipo=L" title="Cambiar a la vista de Estanter&iacute;a">
+    <img class="lista botonIzda" src="../../imagenes/codigos/gifTransparente.gif" alt="vista estanter&iacute;a">
+  </a><div>
+    <img class="lista botonDcha" src="../../imagenes/codigos/gifTransparente.gif" alt="vista lista">
+  </div>
+</div>
+<a href="https://youtu.be/7bLtYcCG1IA" target="_blank" title="Abre nueva ventana">
+  	<img class="tutorial" src="/imagenes/video_tutorial.png" alt="V&iacute;deo: Biblioteca Jur&iacute;dica Digital" title="Abre una nueva ventana al v&iacute;deo: Biblioteca Jur&iacute;dica Digital"/>
+  	</a><div class="listado">
+<div class="lista_bloque">
+<h3>HISTORIA Y DERECHO HISTÓRICO</h3>
+<div class="espacio"></div>
+<h4>Hispania romana</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-10&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023826.jpg" alt=""><span>ESPAÑA, SIGLO V</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-11&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023895.jpg" alt=""><span>CATÁLOGO DE FOTOGRAFÍAS DE ANTIGÜEDADES Y MONUMENTOS DE LA REAL ACADEMIA DE LA HISTORIA</span></a></li>
+</ul>
+<h4>España Medieval</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2018-58&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024854.jpg" alt=""><span>DE COVADONGA (CONTRIBUCIÓN AL XII CENTENARIO)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-113&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025707.jpg" alt=""><span>HISTORIA DEL REINADO DE SANCHO IV DE CASTILLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-231&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027527.jpg" alt=""><span>LA CASA DEL REY DE CASTILLA Y LEÓN EN LA EDAD MEDIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-233&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027817.jpg" alt=""><span>LAS DINASTÍAS REALES DE ESPAÑA EN LA EDAD MEDIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-267&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028524.jpg" alt=""><span>LA MONARQUÍA DE ESPAÑA. LOS ORÍGENES (SIGLO VIII)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-304&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029514.jpg" alt=""><span>LAS GLOSAS EMILIANENSES Y SILENSES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-313&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029590.jpg" alt=""><span>CRÓNICA DE LOS SEÑORES REYES CATÓLICOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-338&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029743.jpg" alt=""><span>ENRIQUE IV Y LA EXCELENTE SEÑORA (1425-1530)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-342&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030060.jpg" alt=""><span>EL PODER DEL LINAJE: LA ALTA NOBLEZA DE CASTILLA Y LEÓN EN LA EDAD MEDIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2026-401&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031272.jpg" alt=""><span>EN LOS ALBORES DEL DERECHO MILITAR</span></a></li>
+</ul>
+<h4>Organización político administrativa en el Antiguo Régimen (1500-1833)</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-12&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022669.jpg" alt=""><span>LA GOBERNACIÓN DE LA MONARQUÍA DE ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-13&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023161.jpg" alt=""><span>ORGANIZACIÓN HACENDÍSTICA DE LOS AUSTRIAS A LOS BORBONES: CONSEJOS, JUNTAS Y SUPERINTENDENCIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2015-14&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022546.jpg" alt=""><span>LA NOBLEZA EN ESPAÑA: IDEAS, ESTRUCTURA E HISTORIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-15&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023949.jpg" alt=""><span>LOS JURAMENTOS FORALES Y CONSTITUCIONALES DE FELIPE V EN LOS REINOS DE ESPAÑA (1700-1702)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2020-172&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026896.jpg" alt=""><span>PRÁCTICA DEL CONSEJO REAL, DE PEDRO ESCOLANO DE ARRIETA, ESTUDIO DE JOSÉ MARÍA VALLEJO GARCÍA-HEVIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2020-164&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026445.jpg" alt=""><span>HISTORIA DE LA INQUISICIÓN ESPAÑOLA</span></a></li>
+</ul>
+<h4>España y su Imperio americano</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-16&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023376.jpg" alt=""><span>LA SEGUNDA CAROLINA. EL NUEVO CÓDIGO DE LEYES DE LAS INDIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-17&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024113.jpg" alt=""><span>LA ADMINISTRACIÓN DE CUBA EN LOS SIGLOS XVIII Y XIX</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2015-79&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021730.jpg" alt=""><span>ESTUDIOS DE INSTITUCIONES HISPANO-INDIANAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-174&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026711.jpg" alt=""><span>EL SUPUESTO MEMORIAL DEL CONDE DE ARANDA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-324&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029781.jpg" alt=""><span>EL ÚLTIMO PLEITO DEL REY. ESPAÑA EN LA CUESTIÓN DE LÍMITES ENTRE ECUADOR Y PERÚ (1887-1910)</span></a></li>
+</ul>
+<h4>España en África</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2014-18&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021068.jpg" alt=""><span>LA ADMINISTRACIÓN DEL PROTECTORADO ESPAÑOL EN MARRUECOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2018-96&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024670.jpg" alt=""><span>MISIÓN EN ÁFRICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-186&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027046.jpg" alt=""><span>EL EXPEDIENTE PICASSO: EDICIÓN DE SU RESUMEN PUBLICADO EN 1931</span></a></li>
+</ul>
+<h4>La Casa de Austria</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2015-19&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022058.jpg" alt=""><span>EL EMBAJADOR IMPERIAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-20&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023215.jpg" alt=""><span>ANTONIO DE HERRERA Y SU HISTORIA GENERAL DEL MUNDO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-21&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024281.jpg" alt=""><span>DERECHO Y CULTURA POLÍTICA EN EL SIGLO XVI</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-22&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023338.jpg" alt=""><span>LA JORNADA REAL DE FELIPE III A PORTUGAL EN 1619</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2012-23&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434020405.jpg" alt=""><span>DIARIO DEL SEÑOR D. CRISTÓVAL CRESPÍ DESDE EL DÍA EN QUE FUE NOMBRADO PRESIDENTE DEL CONSEJO DE ARAGÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2018-103&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024748.jpg" alt=""><span>CARLOS II Y SU CORTE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-158&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026001.jpg" alt=""><span>FELIPE II, EL REY EN EL DESPACHO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-221&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027701.jpg" alt=""><span>CATÓLICO YUGO. LA IDEA DE OBEDIENCIA EN LA ESPAÑA DE LOS AUSTRIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2026-408&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434000000.jpg" alt=""><span>ANNUS MIRABILIS.SALVADOR DE BAHÍA 1625.EL CRÉDITO DE ESPAÑA</span></a></li>
+</ul>
+<h4>La Casa de Borbón</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-24&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023727.jpg" alt=""><span>ELOGIOS A CARLOS III</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2014-25&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021518.jpg" alt=""><span>LA VISITA DE CARLOS IV A LA CIUDAD DE BARCELONA (1802)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-107&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025479.jpg" alt=""><span>MARÍA ISABEL DE BRAGANZA: LA REINA DEL PRADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-272&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028678.jpg" alt=""><span>COLECCIÓN DE LOS TRATADOS DE PAZ, ALIANZA, COMERCIO, ETC.</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-291&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029330.jpg" alt=""><span>SIETE MESES DE REINADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-300&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029255.jpg" alt=""><span>LOS ORÍGENES DEL CONSEJO DE MINISTROS EN ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-310&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029415.jpg" alt=""><span>LOS ORÍGENES DE LA POLICÍA ESPAÑOLA</span></a></li>
+</ul>
+<h4>La España liberal (1833-1923)</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2015-26&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022447.jpg" alt=""><span>LAS ELECCIONES MUNICIPALES EN EL TRIENIO LIBERAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2015-27&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022553.jpg" alt=""><span>ESPAÑA EN GALDÓS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2014-28&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021303.jpg" alt=""><span>MEMORIAS DE LA CONDESA DE ESPOZ Y MINA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-146&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025653.jpg" alt=""><span>ESPAÑA Y LA REGENCIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-157&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026254.jpg" alt=""><span>1870. EL AÑO DE "LA ESPAÑA TRÁGICA" DE GALDÓS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-159&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025950.jpg" alt=""><span>LA EXPOSICIÓN IBEROAMERICANA DE SEVILLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-173&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027053.jpg" alt=""><span>EL SIGNIFICADO DE EDUARDO DATO CIEN AÑOS DESPUÉS DEL MAGNICIDIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2020-185&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026667.jpg" alt=""><span>CONCEPCIÓN ARENAL. PASADO Y PRESENTE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-191&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027008.jpg" alt=""><span>CORRESPONDENCIA SOBRE LOS MATRIMONIOS ESPAÑOLES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-222&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027657.jpg" alt=""><span>EDUARDO DATO, MUÑIDOR DE CONSENSOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-229&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027749.jpg" alt=""><span>CARTAS DE LA REINA WITINIA A SU HERMANA LA PRINCESA FERNANDINA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-230&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027381.jpg" alt=""><span>REPRESENTACIÓN HECHA A S.M.C. EL SEÑOR FERNANDO VII EN DEFENSA DE LAS CORTES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-254&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028098.jpg" alt=""><span>APUNTES HISTÓRICO-CRÍTICOS PARA ESCRIBIR LA HISTORIA DE LA REVOLUCIÓN DE ESPAÑA DESDE EL AÑO 1820 HASTA 1823</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-260&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028562.jpg" alt=""><span>FRANCISCO DE ASÍS Y DE BORBÓN: REY CONSORTE, MECENAS DE LAS ARTES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-263&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028241.jpg" alt=""><span>EL CONSEJO REAL DE ESPAÑA E INDIAS EN LA CONSTRUCCIÓN DEL ESTADO ADMINISTRATIVO (1834-1836)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-264&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028517.jpg" alt=""><span>CÁNOVAS DEL CASTILLO. JUICIO QUE MERECIÓ A SUS CONTEMPORÁNEOS ESPAÑOLES Y EXTRANJEROS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-273&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029040.jpg" alt=""><span>LA REGENCIA DE D. BALDOMERO ESPARTERO Y SUCESOS QUE LA PREPARARON</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-276&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028050.jpg" alt=""><span>EL PROYECTO DE REFORMA DE 1852 Y APUNTES PARA LA HISTORIA DE LA UNIÓN LIBERAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-280&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029002.jpg" alt=""><span>EL DESASTRE DE 1898 VISTO POR LAS FIGURAS POLÍTICAS DE LA RESTAURACIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-282&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029033.jpg" alt=""><span>JOSEFINA DE COMERFORD O EL FANATISMO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-287&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029187.jpg" alt=""><span>LA MUERTE DE FERNANDO VII Y EL INICIO DE LA REVOLUCIÓN LIBERAL (1833-1834)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-294&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029439.jpg" alt=""><span>JOSÉ CANALEJAS: SEMBLANZA DE UN ESTADISTA (1854-1912)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-299&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029477.jpg" alt=""><span>LA REVOLUCIÓN DE JULIO EN 1854</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-321&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029613.jpg" alt=""><span>EMILIO CASTELAR (1832-1899) EL TRIBUNO OLVIDADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-322&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029644.jpg" alt=""><span>EL ORIGEN DE LAS DIPUTACIONES PROVINCIALES EN EL SIGLO XIX</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-334&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029835.jpg" alt=""><span>SEBASTIÁN GABRIEL DE BORBÓN, INFANTE DE ESPAÑA: UNA VIDA ENTRE LA POLÍTICA Y EL ARTE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-345&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030077.jpg" alt=""><span>EXILIO Y MUERTE DE ISABEL II</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-365&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030688.jpg" alt=""><span>DOS VISITAS REALES A BARCELONA: ISABEL II Y MARÍA CRISTINA DE AUSTRIA (1860 Y 1888)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-370&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030855.jpg" alt=""><span>1885: EL ÚLTIMO AÑO DE ALFONSO XII</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2026-400&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031241.jpg" alt=""><span>UN MATRIMONIO REAL, ALFONSO XIII Y VICTORIA EUGENIA.120 AÑOS DE LA BODA DE 1906</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2026-403&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031418.jpg" alt=""><span>LOS PROYECTOS DE REFORMA DE LAS ORDENANZAS MILITARES EN LA ESPAÑA DECIMONÓNICA</span></a></li>
+</ul>
+<h4>Segunda República y Guerra Civil</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-29&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023031.jpg" alt=""><span>GOBIERNO Y ADMINISTRACIÓN MILITAR EN LA II REPÚBLICA ESPAÑOLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-30&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022676.jpg" alt=""><span>CIENCIA Y POLÍTICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-253&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028005.jpg" alt=""><span>CLARA CAMPOAMOR: SU VIDA, SU ÉPOCA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-255&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028135.jpg" alt=""><span>ACCIÓN EN EL DESTIERRO. DIEGO MARTÍNEZ BARRIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-292&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029408.jpg" alt=""><span>LA ADMINISTRACIÓN REPUBLICANA Y LOS SERVICIOS PÚBLICOS</span></a></li>
+</ul>
+<h4>Órdenes y Derecho Premial</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-32&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023345.jpg" alt=""><span>LA REAL Y DISTINGUIDA ORDEN ESPAÑOLA DE CARLOS III</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2015-33&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022652.jpg" alt=""><span>LA REAL Y AMERICANA ORDEN DE ISABEL LA CATÓLICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2018-95&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024915.jpg" alt=""><span>HISTORIA DE LA INSIGNE ORDEN DEL TOISÓN DE ORO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-149&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025059.jpg" alt=""><span>LA ORDEN CONSTANTINIANA DE SAN JORGE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-364&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030114.jpg" alt=""><span>LAS ÓRDENES Y CONDECORACIONES MILITARES DEL REINO DE ESPAÑA</span></a></li>
+</ul>
+<h4>Literatura cervantina</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-31&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023260.jpg" alt=""><span>EL LICENCIADO VIDRIERA VISTO POR AZORÍN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2005-78&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434016163.jpg" alt=""><span>LAS CONSTITUCIONES DEL GRAN GOBERNADOR SANCHO PANZA</span></a></li>
+</ul>
+<h4>Ciencias Sociales</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2016-35&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022713.jpg" alt=""><span>ESTUDIOS DE HISTORIA DEL DERECHO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2017-36&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023789.jpg" alt=""><span>OTRA HISTORIA DE LA TAUROMAQUIA: TOROS, DERECHO Y SOCIEDAD (1235-1854)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2014-37&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021020.jpg" alt=""><span>LOS PROCESOS CÉLEBRES SEGUIDOS ANTE EL TRIBUNAL SUPREMO EN SUS DOSCIENTOS AÑOS DE HISTORIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2014-80&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021426.jpg" alt=""><span>DEFINICIONES Y ELEMENTOS DE TODAS LAS CIENCIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2018-87&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024687.jpg" alt=""><span>LOS SELLOS EN NUESTRA HISTORIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2018-99&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025011.jpg" alt=""><span>LA CONSTITUCIÓN PINTADA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2019-114&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025615.jpg" alt=""><span>LA FUNCIÓN PÚBLICA EN ESPAÑA (1827-2007)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2020-184&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026674.jpg" alt=""><span>ENCICLOPEDIA DE LAS CIENCIAS MORALES Y POLÍTICAS PARA EL SIGLO XXI</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2020-188&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026940.jpg" alt=""><span>LA MUJER. DISPOSICIONES JURÍDICAS EN LA HISTORIA DE LA CORONA DE CASTILLA Y EN LA LEGISLACIÓN CODIFICADA ESPAÑOLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-206&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=977157584200520210.jpg" alt=""><span>DERECHO Y POLÍTICA ANTE LA PANDEMIA: REACCIONES Y TRANSFORMACIONES (TOMO I)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-207&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=977157584200520211.jpg" alt=""><span>DERECHO Y POLÍTICA ANTE LA PANDEMIA: REACCIONES Y TRANSFORMACIONES (TOMO II)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-256&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=977157584200520212.jpg" alt=""><span>LECCIONES INTERNACIONALES, REGIONALES, NACIONALES Y LOCALES DE LA PANDEMIA COVID-19</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-215&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027374.jpg" alt=""><span>VISIONES DEL SIGLO XIX SOBRE LA CATEDRAL DE BURGOS (1842-1916)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-219&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027398.jpg" alt=""><span>ESPAÑA EN MAPAS ANTIGUOS. CATÁLOGO DE LA COLECCIÓN RODRÍGUEZ TORRES-AYUSO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2021-236&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027312.jpg" alt=""><span>CONCORDATOS ESPAÑOLES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-243&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028043.jpg" alt=""><span>EL PALACETE DE LA MONCLOA. SU PASADO Y SU PRESENTE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2004-245&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434015142.jpg" alt=""><span>LA MIRADA DEL PODER</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-248&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788492983322.jpg" alt=""><span>ESPAÑA Y PORTUGAL EN LA GLOBALIZACIÓN (EDICIÓN BILINGÜE, ESPAÑOL-PORTUGUÉS)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2022-279&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028142.jpg" alt=""><span>CONSTITUCIÓN Y RECONSTITUCIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-281&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029019.jpg" alt=""><span>MILICIA Y DERECHO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-383&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030961.jpg" alt=""><span>LA ACOMODACIÓN DE LA RELIGIÓN O LAS CREENCIAS EN LA ESFERA PÚBLICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-390&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030954.jpg" alt=""><span>BOLETÍN OFICIAL DE LA GUARDIA CIVIL. 175 AÑOS DE HISTORIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-391&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031135.jpg" alt=""><span>GUARDIA CIVIL: 50 AÑOS SIRVIENDO EN DEMOCRACIA</span></a></li>
+</ul>
+<h4> Los consejos de la monarquía </h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-295&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100002.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. I</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-296&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100003.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. II</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2023-297&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100004.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. III</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-309&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100005.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. IV</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-328&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100007.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. V</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-354&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100009.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. VI</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2025-384&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100010.jpg" alt=""><span>LOS CONSEJEROS DEL REY (1500-1836) VOL. VII</span></a></li>
+</ul>
+<h4>Diccionarios jurídicos históricos</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-DH-2024-336&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100008.jpg" alt=""><span>ENCICLOPEDIA ESPAÑOLA DE DERECHO Y ADMINISTRACIÓN</span></a></li></ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>LEYES HISTÓRICAS DE LA MONARQUÍA HISPÁNICA</h3>
+<div class="espacio"></div>
+<h4>El reino visigodo</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2014-1&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021334.jpg" alt=""><span>EL CÓDIGO DE EURICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2015-2&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021891.jpg" alt=""><span>LIBER IUDICIORUM</span></a></li>
+</ul>
+<h4>El régimen foral</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2017-3&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024076.jpg" alt=""><span>LOS FUEROS DEL REINO DE TOLEDO Y CASTILLA LA NUEVA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2017-4&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024144.jpg" alt=""><span>LOS FUEROS DE LOS REINOS DE ANDALUCÍA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2019-106&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025424.jpg" alt=""><span>EL FUERO DE MADRID</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2020-165&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026612.jpg" alt=""><span>FUEROS LOCALES DE LA VIEJA CASTILLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2021-211&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027688.jpg" alt=""><span>FUEROS Y ORDENANZAS DE ASTURIAS SIGLOS XI-XV</span></a></li>
+</ul>
+<h4>La consolidación del poder real en Castilla</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2015-5&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022362.jpg" alt=""><span>FUERO JUZGO POR LA REAL ACADEMIA ESPAÑOLA 1815</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2015-6&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022393.jpg" alt=""><span>FUERO JUZGO DE JUAN DE LA REGUERA VALDELOMAR 1798</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2004-98&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434015128.jpg" alt=""><span>LOS FUEROS DE CASTILLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2025-385&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031005.jpg" alt=""><span>LOS DISCURSOS DE LA CORONA EN LAS CORTES DE CASTILLA Y LEÓN (1379-1518)</span></a></li>
+</ul>
+<h4>La obra de Alfonso X El Sabio</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2018-7&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022508.jpg" alt=""><span>FUERO REAL DE ALFONSO X EL SABIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2011-60&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400224100002.jpg" alt=""><span>LAS SIETE PARTIDAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2018-92&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024977.jpg" alt=""><span>OPÚSCULOS DEL REY SABIO.EL ESPÉCULO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2021-208&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027510.jpg" alt=""><span>LAPIDARIO DEL REY D.ALFONSO X.CÓDICE ORIGINAL.</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2021-217&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027565.jpg" alt=""><span>LAS SIETE PARTIDAS, EDICIÓN 1807 DE LA IMPRENTA REAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2022-258&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027978.jpg" alt=""><span>PRIMERA CRÓNICA GENERAL. ESTORIA DE ESPAÑA DE ALFONSO X</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2022-261&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028234.jpg" alt=""><span>LAS LEYES DEL ESTILO. EDICIÓN Y ESTUDIO DE GONZALO OLIVA MANSO</span></a></li>
+</ul>
+<h4>El reino de León</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2018-61&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024571.jpg" alt=""><span>FUEROS LOCALES DEL REINO DE LEÓN (910-1230)</span></a></li></ul>
+<h4>La corona de Aragón</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2016-8&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023451.jpg" alt=""><span>LEGISLACIÓN FORAL ARAGONESA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2018-85&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024649.jpg" alt=""><span>LEGISLACIÓN HISTÓRICA MALLORQUINA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2018-93&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024793.jpg" alt=""><span>TEXTOS JURÍDICOS MARÍTIMOS MEDIEVALES</span></a></li>
+</ul>
+<h4>La corona de Navarra</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2016-9&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022850.jpg" alt=""><span>LOS FUEROS DE NAVARRA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2019-153&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025899.jpg" alt=""><span>NOVÍSSIMA RECOPILACIÓN DE LAS LEYES DEL REINO DE NAVARRA (1735)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2020-166&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026520.jpg" alt=""><span>FUEROS DE NAVARRA</span></a></li>
+</ul>
+<h4>Álava, Guipúzcoa y Bizkaia</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2019-151&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025646.jpg" alt=""><span>EL PRIMER DERECHO FORAL ESCRITO DE ÁLAVA Y GUIPÚZCOA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2021-205&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027633.jpg" alt=""><span>FUENTES DEL DERECHO HISTÓRICO DE BIZKAIA</span></a></li>
+</ul>
+<h4>Derecho Indiano</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2018-56&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024700.jpg" alt=""><span>CEDULARIO INDIANO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-1998-62&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434010376.jpg" alt=""><span>RECOPILACIÓN DE LEYES DE LOS REYNOS DE LAS INDIAS</span></a></li>
+</ul>
+<h4>Grandes Recopilaciones de la época moderna</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-1996-57&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434008724.jpg" alt=""><span>EL LIBRO DE LAS LEYES DEL SIGLO XVIII</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2022-271&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028609.jpg" alt=""><span>NUEVA RECOPILACIÓN DE LAS LEYES DE CASTILLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-LH-1993-63&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434005099.jpg" alt=""><span>NOVÍSIMA RECOPILACIÓN DE LAS LEYES DE ESPAÑA</span></a></li>
+</ul>
+<h4>Cataluña</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2024-314&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029606.jpg" alt=""><span>LEYES HISTÓRICAS DE CATALUÑA</span></a></li></ul>
+<h4>Derecho procesal</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-LH-2025-367&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030671.jpg" alt=""><span>JUICIOS CIVILES Y RECURSOS DE FUERZA</span></a></li></ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>CLÁSICOS DEL PENSAMIENTO ECONÓMICO ESPAÑOL</h3>
+<div class="espacio"></div>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-CP-2025-387&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030312.jpg" alt=""><span>PRINCIPIOS DE TEORÍA ECONÓMICA Y OTROS ESCRITOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-CP-2024-348&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030008.jpg" alt=""><span>PABLO PEBRER. COLECCIÓN DE MEMORIAS Y DOCUMENTOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-CP-2024-349&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030152.jpg" alt=""><span>ENRIQUE FUENTES QUINTANA. HISTORIA DEL PENSAMIENTO ECONÓMICO Y FINANCIERO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-CP-2025-381&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030206.jpg" alt=""><span>FRANCESC CAMBÓ. ESCRITOS ECONÓMICOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-CP-2026-405&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031395.jpg" alt=""><span>ESCRITOS DE FRANCISCO CABARRUS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-CP-2026-412&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031463.jpg" alt=""><span>SEIS ENSAYOS SOBRE HISTORIA DEL PENSAMIENTO ECONÓMICO </span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO PÚBLICO</h3>
+<div class="espacio"></div>
+<h4>Constitucional</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-34&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026698.jpg" alt=""><span>XXI ENSAYOS DE DERECHO CONSTITUCIONAL COMPARADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2016-51&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023390.jpg" alt=""><span>REPENSAR LA CONSTITUCIÓN. IDEAS PARA UNA REFORMA DE LA CONSTITUCIÓN DE 1978: REFORMA Y COMUNICACIÓN DIALÓGICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2018-82&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024717.jpg" alt=""><span>REPENSAR LA CONSTITUCIÓN. IDEAS PARA UNA REFORMA DE LA CONSTITUCIÓN DE 1978: REFORMA Y COMUNICACIÓN DIALÓGICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2018-91&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024946.jpg" alt=""><span>NACIÓN Y NACIONALISMOS EN LA ESPAÑA DE LAS AUTONOMÍAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2018-94&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025035.jpg" alt=""><span>COMENTARIOS A LA CONSTITUCIÓN ESPAÑOLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-242&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026575.jpg" alt=""><span>COMENTARIOS A LA LEY ORGÁNICA DEL TRIBUNAL CONSTITUCIONAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-108&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026025.jpg" alt=""><span>SETENTA AÑOS DE CONSTITUCIÓN ITALIANA Y CUARENTA AÑOS DE CONSTITUCIÓN ESPAÑOLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-116&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434019881.jpg" alt=""><span>CONSTITUCIÓN ESPAÑOLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-386&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031050.jpg" alt=""><span>CONSTITUCIÓN ESPAÑOLA Y ESTATUTOS DE AUTONOMÍA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-1979-119&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025721.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DEL PAÍS VASCO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-120&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025738.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE CATALUÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-121&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025745.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE GALICIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2023-122&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025752.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE ANDALUCÍA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2010-138&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025769.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DEL PRINCIPADO DE ASTURIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-123&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025776.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE CANTABRIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2010-124&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025783.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE LA RIOJA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-125&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025790.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE LA REGIÓN DE MURCIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-127&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025813.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE LA COMUNIDAD DE VALENCIANA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-128&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025806.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE ARAGÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2014-129&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025820.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE CASTILLA-LA MANCHA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-130&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025837.jpg" alt=""><span>ESTATUTO DE AUTONOMíA DE CANARIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-131&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025844.jpg" alt=""><span>LEY ORGÁNICA 13/1982, DE 10 DE AGOSTO, DE REINTEGRACIÓN Y AMEJORAMIENTO DEL RÉGIMEN FORAL DE NAVARRA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2011-132&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025851.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE EXTREMADURA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-133&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025868.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE LAS ISLAS BALEARES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2010-134&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025875.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE LA COMUNIDAD DE MADRID</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2011-135&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025882.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE CASTILLA Y LEÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-1995-136&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025981.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE CEUTA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-1995-137&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025998.jpg" alt=""><span>ESTATUTO DE AUTONOMÍA DE MELILLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-141&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025578.jpg" alt=""><span>LEY PARA LA IGUALDAD EFECTIVA DE MUJERES Y HOMBRES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-143&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025141.jpg" alt=""><span>PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-144&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025554.jpg" alt=""><span>RÉGIMEN ELECTORAL GENERAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-150&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026209.jpg" alt=""><span>LEY ORGÁNICA DEL PODER JUDICIAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-204&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027350.jpg" alt=""><span>LEY ORGÁNICA DE EDUCACIÓN Y LEY ORGÁNICA REGULADORA DEL DERECHO A LA EDUCACIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-169&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026476.jpg" alt=""><span>JOSÉ PEDRO PÉREZ LLORCA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-181&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026582.jpg" alt=""><span>COMENTARIOS AL ESTATUTO DE AUTONOMÍA DE CANARIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-223&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027541.jpg" alt=""><span>LA VERTEBRACIÓN TERRITORIAL DE ESPAÑA EN LA DOCTRINA DEL CONSEJO DE ESTADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-224&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027664.jpg" alt=""><span>LAS RAZONES DEL  AFORAMIENTO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-234&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027831.jpg" alt=""><span>LA CONSTRUCCIÓN JURÍDICA DEL AUTOGOBIERNO EN CANARIAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-237&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027763.jpg" alt=""><span>JURISDICCIÓN CONSTITUCIONAL, DERECHO PROCESAL CONSTITUCIONAL Y PLURALISMO EN ALEMANIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-252&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028128.jpg" alt=""><span>INTERPRETACIÓN DE LA CONSTITUCIÓN Y ORDENAMIENTO JURÍDICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2023-285&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029309.jpg" alt=""><span>CULTURA, IDENTIDAD, RELIGIÓN Y DERECHO: UNA PERSPECTIVA INTERDISCIPLINAR</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2023-286&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029385.jpg" alt=""><span>DIGNIDAD HUMANA, DERECHO Y DIVERSIDAD RELIGIOSA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-329&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029774.jpg" alt=""><span>INSTITUCIONES DEL ESTADO DEMOCRÁTICO DE DERECHO, CONVERSACIONES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-363&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030213.jpg" alt=""><span>CONSTITUCIONALISMO: DIÁLOGOS INTERGENERACIONALES ENTRE ESPAÑA E ITALIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-375&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030916.jpg" alt=""><span>ESTUDIOS SOBRE JURISDICCIÓN CONSTITUCIONAL, DERECHOS FUNDAMENTALES E IGUALDAD. LIBER AMICORUM MARÍA LUISA BALAGUER CALLEJÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-380&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030947.jpg" alt=""><span>ANÁLISIS COMPARADO DE CONSEJOS DE ESTADO EUROPEOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-394&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031173.jpg" alt=""><span>DERECHO FUNDAMENTAL A UNA BUENA ADMINISTRACIÓN Y CONTROL JURISDICCIONAL DE LA ACTUACIÓN ADMINISTRATIVA TRIBUTARIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-409&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031470.jpg" alt=""><span>FUNDAMENTOS DE TÉCNICA LEGISLATIVA</span></a></li>
+</ul>
+<h4>Unión Europea</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-52&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434021938.jpg" alt=""><span>PRIMACÍA DEL DERECHO EUROPEO Y SALVAGUARDA DE LAS IDENTIDADES CONSTITUCIONALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2016-53&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023055.jpg" alt=""><span>ANÁLISIS JURÍDICO-POLÍTICO DE LA INICIATIVA CIUDADANA EUROPEA EN EL CONTEXTO DE UN EQUILIBRIO INSTITUCIONAL COMPLEJO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2017-54&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024182.jpg" alt=""><span>EL CONSEJO EUROPEO ENTRE EL DERECHO Y LA REALIDAD</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-176&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026599.jpg" alt=""><span>GARANTÍAS DEL PROCESO DEBIDO Y UNIÓN EUROPEA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-213&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027145.jpg" alt=""><span>LAS SENTENCIAS BÁSICAS DEL CONSEJO CONSTITUCIONAL FRANCÉS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-277&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028173.jpg" alt=""><span>LA INICIATIVA CIUDADANA EUROPEA: APROXIMACIÓN HISTÓRICA Y CONCEPTUAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-350&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030138.jpg" alt=""><span>DERECHO COMUNITARIO BÁSICO DE LA UNIÓN EUROPEA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-355&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030237.jpg" alt=""><span>ESTUDIOS SOBRE DERECHO CONSTITUCIONAL ESPAÑOL, COMPARADO Y EUROPEO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-362&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030596.jpg" alt=""><span>LA CONSTITUCIÓN ECONÓMICA DE LA UNIÓN EUROPEA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-406&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031432.jpg" alt=""><span>LAS SENTENCIAS BÁSICAS DEL TRIBUNAL CONSTITUCIONAL ITALIANO. ESTUDIO DE UNA JURISDICCIÓN DE LA LIBERTAD</span></a></li>
+</ul>
+<h4>Función Pública</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-55&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022102.jpg" alt=""><span>UNA RECONSTRUCCIÓN DE LOS PRINCIPIOS DE MÉRITO Y CAPACIDAD EN EL ACCESO AL EMPLEO PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-193&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026490.jpg" alt=""><span>ESTATUTO BÁSICO DEL EMPLEADO PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-250&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028074.jpg" alt=""><span>LA EJECUCIÓN DE SENTENCIAS CONTENCIOSO-ADMINISTRATIVAS EN MATERIA DE EMPLEO PÚBLICO</span></a></li>
+</ul>
+<h4>Derecho administrativo</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-64&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022164.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo I</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-65&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022171.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo II</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-66&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022188.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo III</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-67&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022195.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo IV</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-68&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022201.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo V</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-69&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022218.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo VI</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-70&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022225.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo VII</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-71&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022232.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo VIII</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-72&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022249.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo IX</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-73&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024427.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo X</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-74&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022263.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo XI</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-75&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024434.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo XII</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2018-76&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024960.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo XIII</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2015-77&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022294.jpg" alt=""><span>TRATADO DE DERECHO ADMINISTRATIVO Y DERECHO PÚBLICO GENERAL. Tomo XIV</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2018-86&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023956.jpg" alt=""><span>JURISPRUDENCIA ADMINISTRATIVA DEL CONSEJO DE ESTADO FRANCÉS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2018-100&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024847.jpg" alt=""><span>COMENTARIOS A LA LEY 9/2017 DE CONTRATOS DEL SECTOR PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-259&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028616.jpg" alt=""><span>ACLARACIONES A LA LEY 9/2017 DE CONTRATOS DEL SECTOR PÚBLICO: ENFOQUE CIENTÍFICO-PRÁCTICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-101&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024502.jpg" alt=""><span>CONTRATOS DEL SECTOR PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2019-105&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025431.jpg" alt=""><span>GLOSARIO DE TÉRMINOS DE FISCALIZACIÓN Y DE ENJUICIAMIENTO CONTABLE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-140&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022591.jpg" alt=""><span>LEY 39/2015 DE 1 DE OCTUBRE, DEL PROC. ADMINISTRATIVO COMÚN DE LAS AA. PP. LEY 40/2015 DE1 DE OCTUBRE, DE RÉGIMEN JURÍDICO DEL SECTOR PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2019-156&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026049.jpg" alt=""><span>RIESGO OPERACIONAL Y SERVICIO PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2019-163&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026056.jpg" alt=""><span>LA MODIFICACIÓN DE LOS CONTRATOS DEL SECTOR PÚBLICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2020-189&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026926.jpg" alt=""><span>LA OBLIGACIÓN DE LOS ESTADOS MIEMBROS DE INDEMNIZAR POR SU INCUMPLIMIENTO DEL DERECHO DE LA UNIÓN EUROPEA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-192&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026377.jpg" alt=""><span>LEY REGULADORA DE LA JURISDICCIÓN CONTENCIOSO-ADMINISTRATIVA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-194&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027343.jpg" alt=""><span>LEY BASES DEL RÉGIMEN LOCAL Y DISPOSICIONES VIGENTES EN LA MATERIA </span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-201&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026629.jpg" alt=""><span>LEY REGULADORA DE LAS HACIENDAS LOCALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2023-202&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026452.jpg" alt=""><span>LEY DE AGUAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-209&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027756.jpg" alt=""><span>TRÁFICO, CIRCULACIÓN DE VEHÍCULOS A MOTOR Y SEGURIDAD VIAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-210&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027602.jpg" alt=""><span>CAZAR PARA CONSERVAR. LA GESTIÓN CINEGÉTICA SOSTENIBLE PRESERVA LOS ECOSISTEMAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-214&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027138.jpg" alt=""><span>EL MECANISMO ÚNICO DE SUPERVISIÓN: OPORTUNIDAD, CONFIGURACIÓN Y PROBLEMAS PLANTEADOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-220&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027626.jpg" alt=""><span>MANUAL PRÁCTICO DEL RÉGIMEN DISCIPLINARIO DE LA GUARDIA CIVIL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-226&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027695.jpg" alt=""><span>DERECHO AGROALIMENTARIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-232&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028029.jpg" alt=""><span>CÓDIGOS ÉTICOS, DE CONDUCTA, BUEN GOBIERNO Y TRANSPARENCIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2022-249&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027985.jpg" alt=""><span>A LA RESPONSABILIDAD SOCIAL POR LA CONTRATACIÓN PÚBLICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-307&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029583.jpg" alt=""><span>DERECHO ADMINISTRATIVO ELECTRÓNICO. PROCEDIMIENTOS ADMINISTRATIVO COMÚN Y DE ADJUDICACIÓN CONTRACTUAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-351&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029972.jpg" alt=""><span>LEY DE PROTECCIÓN DE LOS DERECHOS Y EL BIENESTAR DE LOS ANIMALES.</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-358&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030282.jpg" alt=""><span>LA OBLIGACIÓN. CONCEPTO Y RÉGIMEN JURÍDICO DE LOS DEBERES PÚBLICOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-359&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030299.jpg" alt=""><span>REGIMEN JURÍDICO DE LAS SUBVENCIONES PÚBLICAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-410&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031142.jpg" alt=""><span>DOCTRINA LEGAL DEL CONSEJO DE ESTADO (2023)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2026-411&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031197.jpg" alt=""><span>DOCTRINA LEGAL DEL CONSEJO DE ESTADO (2024)</span></a></li>
+</ul>
+<h4>Legislación Tributaria</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-203&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027015.jpg" alt=""><span>LEY GENERAL TRIBUTARIA</span></a></li></ul>
+<h4>Auditoría y Contabilidad</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2024-227&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028104.jpg" alt=""><span>PLAN GENERAL DE CONTABILIDAD</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2021-228&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028111.jpg" alt=""><span>PLAN GENERAL DE CONTABILIDAD DE PEQUEÑAS Y MEDIANAS EMPRESAS</span></a></li>
+</ul>
+<h4>Vivienda</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-PB-2025-382&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030909.jpg" alt=""><span>TRATADO DE DERECHO DE LA VIVIENDA</span></a></li></ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO ROMANO</h3>
+<div class="espacio"></div>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DR-2020-155&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788417445768.jpg" alt=""><span> FUNDAMENTOS ROMANÍSTICOS DEL DERECHO EUROPEO E IBEROAMERICANO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DR-2022-262&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028579.jpg" alt=""><span>DERECHO PRIVADO ROMANO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DR-2022-266&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434000001.jpg" alt=""><span>FUENTES DEL DERECHO ROMANO ONLINE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DR-2023-319&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=978843400000100006.jpg" alt=""><span>LA PROYECCIÓN DEL DERECHO ROMANO EN LOS TEXTOS Y EN LA CIENCIA JURÍDICA UNIVERSAL</span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO PRIVADO</h3>
+<div class="espacio"></div>
+<h4>Obligaciones y contratos</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2015-38&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022454.jpg" alt=""><span>PRINCIPIOS, DEFINICIONES Y REGLAS DE UN DERECHO CIVIL EUROPEO: EL MARCO COMÚN DE REFERENCIA (DCFR)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2015-39&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022379.jpg" alt=""><span>RESPONSABILIDAD EXTRACONTRACTUAL OBJETIVA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2015-40&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022621.jpg" alt=""><span>CLÁUSULA RESOLUTORIA Y CONTROL DEL INCUMPLIMIENTO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2016-41&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023024.jpg" alt=""><span>LA INDEMNIZACIÓN DE DAÑOS Y PERJUICIOS POR INCUMPLIMIENTO DEL CONTRATO EN LOS PRINCIPIOS DEL DERECHO CONTRACTUAL EUROPEO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2017-42&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023871.jpg" alt=""><span>LA LIQUIDACIÓN ANTICIPADA DEL DAÑO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2017-43&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024403.jpg" alt=""><span>TEXTOS INTERNACIONALES SOBRE GARANTÍAS MOBILIARIAS: REFLEXIÓN Y ANÁLISIS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2017-44&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024519.jpg" alt=""><span>LOS PRINCIPIOS LATINOAMERICANOS DE DERECHO DE LOS CONTRATOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2018-45&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024588.jpg" alt=""><span>ADQUISICIÓN DE VIVIENDA Y CLÁUSULAS ABUSIVAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2017-81&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023819.jpg" alt=""><span>CLÁUSULAS ABUSIVAS Y EMPRESARIO ADHERENTE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2018-83&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024786.jpg" alt=""><span>EL CONSENTIMIENTO INFORMADO Y LA RESPONSABILIDAD MÉDICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2023-115&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022041.jpg" alt=""><span>ARRENDAMIENTOS URBANOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2026-142&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022010.jpg" alt=""><span>PROPIEDAD HORIZONTAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2021-183&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027329.jpg" alt=""><span>DERECHO DE OBLIGACIONES. PARTE GENERAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2026-196&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027640.jpg" alt=""><span>LEY DE ARRENDAMIENTOS RÚSTICOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2022-257&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028159.jpg" alt=""><span>ESTUDIOS DE DERECHO DE CONTRATOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2023-289&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029248.jpg" alt=""><span>INTERÉS EN EL CUMPLIMIENTO DEL CONTRATO Y OPERACIóN DE REEMPLAZO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2023-301&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029422.jpg" alt=""><span>LA ESTRUCTURA DE LA RESTITUCIÓN CONTRACTUAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2023-308&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029545.jpg" alt=""><span>DOLO, VENTAJA INJUSTA Y RESCISIÓN POR LESIÓN EN LOS CONTRATOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2024-323&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029569.jpg" alt=""><span>RIESGO EN LA COMPRAVENTA, CUMPLIMIENTO E INCUMPLIMIENTO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2024-340&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030046.jpg" alt=""><span>ANÁLISIS Y SÍNTESIS DE LA JURISPRUDENCIA DE TJUE INTERPRETADORA DE LA DIRECTIVA 93/13 SOBRE CLÁUSULAS ABUSIVAS, CON PROPUESTAS DE LEGE FERENDA A FIN DE ELEVAR LA PROTECCIÓN DEL CONSUMIDOR</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-379&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031029.jpg" alt=""><span>TRES CUESTIONES EN LAS PROPUESTAS DE MODERNIZACIÓN DEL CÓDIGO CIVIL SOBRE OBLIGACIONES Y CONTRATOS DE 2009 Y 2023: REQUISITOS DE EXISTENCIA DEL CONTRATO, DOLO, VENTAJA INJUSTA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-388&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031111.jpg" alt=""><span>EL NUEVO DERECHO DE CONSUMO EUROPEO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2026-392&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031043.jpg" alt=""><span>TRATADO DE DERECHO CONTRACTUAL LATINOAMERICANO. VOLUMEN I. FORMACIÓN DEL CONTRATO</span></a></li>
+</ul>
+<h4>Familia y Sucesiones</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2016-46&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023048.jpg" alt=""><span>LA SUCESIÓN INTESTADA: REVISIÓN DE LA INSTITUCIÓN Y PROPUESTA DE REFORMA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2019-148&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025622.jpg" alt=""><span>LA LIQUIDACIÓN DE LA HERENCIA EN EL CÓDIGO CIVIL ESPAÑOL</span></a></li>
+</ul>
+<h4>Mercantil</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2016-47&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434022751.jpg" alt=""><span>DACIÓN EN PAGO E INSOLVENCIA EMPRESARIAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2016-48&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434023185.jpg" alt=""><span>LA RESPONSABILIDAD SOCIAL CORPORATIVA Y EL DERECHO DE SOCIEDADES DE CAPITAL: ENTRE LA REGULACIÓN LEGISLATIVA Y EL SOFT LAW</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2017-49&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024267.jpg" alt=""><span>ENTIDADES DE PROPÓSITO (O COMETIDO) ESPECIAL Y OTRAS ENTIDADES VEHICULARES O PUENTE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2019-147&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025660.jpg" alt=""><span>PRÁCTICAS AGRESIVAS Y TUTELA DEL CONSUMIDOR</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2019-154&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026032.jpg" alt=""><span>ACTIVIDAD ECONÓMICA EN EL MERCADO E INTERÉS GENERAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2020-161&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026216.jpg" alt=""><span>GEOBLOQUEO Y COMERCIO ELECTRÓNICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2023-195&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027404.jpg" alt=""><span>CÓDIGO DE COMERCIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-198&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026414.jpg" alt=""><span>TEXTO REFUNDIDO DE LA LEY CONCURSAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2021-244&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027671.jpg" alt=""><span>EL CONSORCIO CONTRACTUAL DE I+D+I</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2024-330&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029958.jpg" alt=""><span>ASPECTOS JURÍDICOS DEL DISEÑO DE LAS INTERFACES DIGITALES. EN ESPECIAL, LOS PATRONES OSCUROS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-376&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030879.jpg" alt=""><span>¿QUÉ ES UN SECRETO EMPRESARIAL? UN ESTUDIO DE SU CONCEPTO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2026-404&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031210.jpg" alt=""><span>APROXIMACIÓN A LOS DATOS DESDE EL DERECHO PRIVADO</span></a></li>
+</ul>
+<h4>Registral</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2017-50&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024151.jpg" alt=""><span>REPRESENTACIÓN GRÁFICA DE FINCAS EN EL REGISTRO DE LA PROPIEDAD</span></a></li></ul>
+<h4>Legislación General</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-117&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024878.jpg" alt=""><span>CÓDIGO CIVIL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-126&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024885.jpg" alt=""><span>LEY DE ENJUICIAMIENTO CIVIL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2025-247&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028494.jpg" alt=""><span>LEY Y REGLAMENTO HIPOTECARIOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2026-353&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029965.jpg" alt=""><span>LEY POR EL DERECHO A LA VIVIENDA</span></a></li>
+</ul>
+<h4> Personas</h4>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-PR-2020-168&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026469.jpg" alt=""><span>LA CAPACIDAD JURÍDICA  A LA LUZ DEL ARTÍCULO 12 DE LA CONVENCIÓN DE NACIONES UNIDAS SOBRE LOS DERECHOS DE LAS PERSONAS CON DISCAPACIDAD</span></a></li></ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO PENAL Y PROCESAL PENAL</h3>
+<div class="espacio"></div>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2019-109&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025547.jpg" alt=""><span>LA PRISIÓN PERMANENTE REVISABLE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2019-110&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025912.jpg" alt=""><span>MANUAL DE INTRODUCCIÓN AL DERECHO PENAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-118&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024892.jpg" alt=""><span>CÓDIGO PENAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-145&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024908.jpg" alt=""><span>LEY DE ENJUICIAMIENTO CRIMINAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2019-152&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025974.jpg" alt=""><span>EL SISTEMA PENITENCIARIO EN LA ENCRUCIJADA: UNA LECTURA PENITENCIARIA DE LAS ÚLTIMAS REFORMAS PENALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2020-162&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026292.jpg" alt=""><span>EL DELITO DE CORRUPCIÓN EN LOS NEGOCIOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2020-167&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026544.jpg" alt=""><span>PRINCIPIOS GENERALES DEL DERECHO PENAL EN LA UNIÓN EUROPEA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2020-171&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026933.jpg" alt=""><span>LA NUEVA CONFIGURACIÓN DE LOS DELITOS DE TERRORISMO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2020-180&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026537.jpg" alt=""><span>HITOS DE LA HISTORIA PENITENCIARIA ESPAÑOLA: DEL SIGLO DE ORO A LA LEY GENERAL PENITENCIARIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2020-182&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026650.jpg" alt=""><span>LA SIMPLIFICACIÓN DE LA JUSTICIA PENAL Y CIVIL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2021-199&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027428.jpg" alt=""><span>REFORMAS PENALES EN LA PENÍNSULA IBÉRICA: " A  JANGADA DE  PEDRA?"</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2021-200&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027084.jpg" alt=""><span>LA PROTECCIÓN PENAL FRENTE A LOS PROCESOS EXTORSIVOS DEL CRIMEN ORGANIZADO EN ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2021-216&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027770.jpg" alt=""><span>LIBRO HOMENAJE AL PROFESOR LUIS ARROYO ZAPATERO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2021-235&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027848.jpg" alt=""><span>DELITOS DE GÉNERO Y DE VIOLENCIA FAMILIAR</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2021-240&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027787.jpg" alt=""><span>EL PAPEL DE LA VÍCTIMA EN EL DERECHO PENAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2022-246&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028487.jpg" alt=""><span>UN MODELO INTEGRAL DE DERECHO PENAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2022-268&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028548.jpg" alt=""><span>CONCURRENCIA DELICTIVA: LA NECESIDAD DE UNA REGULACIÓN RACIONAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2022-269&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028593.jpg" alt=""><span>ESTUDIOS SOBRE EL CÓDIGO PENAL DE 1822 EN SU BICENTENARIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2022-270&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028623.jpg" alt=""><span>CÓDIGOS PENALES ESPAÑOLES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2022-275&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028999.jpg" alt=""><span>MINERÍA DE ADN EN LA INVESTIGACIÓN CRIMINAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2023-288&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029279.jpg" alt=""><span>RESPONSABILIDAD PENAL Y NEGOCIOS ESTÁNDAR. LOS CASOS DEL ASESOR FISCAL Y DEL ABOGADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2023-293&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029392.jpg" alt=""><span>TRATAMIENTO JURÍDICO-PENAL DEL ACOSO EN ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2024-311&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029675.jpg" alt=""><span>EL PRINCIPIO DE RESPONSABILIDAD PENAL POR EL HECHO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2024-312&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029705.jpg" alt=""><span>EL DERECHO PENAL ESTUDIADO EN PRINCIPIOS Y EN LEGISLACIÓN VIGENTE EN ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2024-331&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029989.jpg" alt=""><span>LA PENA Y SU RENUNCIA EN LA JUSTICIA TRANSICIONAL. ¿PUEDE TRASLADARSE EL FUNDAMENTO PREMIAL A LA VIOLENCIA TERRORISTA?</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2024-333&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029996.jpg" alt=""><span>LIBRO HOMENAJE AL PROFESOR JAVIER DE VICENTE REMESAL POR SU 70.º ANIVERSARIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2024-337&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030015.jpg" alt=""><span>UNA PROPUESTA DE REFORMA PARA LA REGULACIÓN RACIONAL DE LA CONCURRENCIA DELICTIVA EN EL CÓDIGO PENAL ESPAÑOL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2025-360&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030305.jpg" alt=""><span>LÍMITES DE LA PROTECCIÓN DEL DERECHO PENAL AL INICIO Y FIN DE LA VIDA HUMANA EN LA SOCIEDAD MODERNA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2025-361&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030589.jpg" alt=""><span>CIBERCRIMEN: TENDENCIAS Y DESAFÍOS ACTUALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2025-368&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030787.jpg" alt=""><span>VERDES Y JUSTAS: RESPONSABILIDAD PENAL Y DILIGENCIA DEBIDA EN LAS ORGANIZACIONES MULTINACIONALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2025-371&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030817.jpg" alt=""><span>EL DELITO DE TRATO DEGRADANTE DISCRIMINATORIO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2025-373&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030886.jpg" alt=""><span>IDEOLOGÍA Y PROCESO DE LOS ANTEPROYECTOS DE LEY DE ENJUICIAMIENTO DE FALANGE (1938)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2025-378&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030985.jpg" alt=""><span>LAS AGRESIONES SEXUALES CUALIFICADAS A PERSONAS EN EDAD LEGAL DE CONSENTIMIENTO SEXUAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-393&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031098.jpg" alt=""><span>FRAUDE CARRUSEL, RESPONSABILIDAD PENAL DE LAS PERSONAS JURÍDICAS Y COMPLIANCE </span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-399&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031227.jpg" alt=""><span>LA ARQUITECTURA DEL CONCURSO DE DELITOS. PROBLEMAS PRÁCTICOS Y FUNDAMENTOS DOGMÁTICOS DE SU REGULACIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-407&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031449.jpg" alt=""><span> LA DESINFORMACIÓN EN LA SOCIEDAD DIGITAL. ASPECTOS CRIMINOLÓGICOS, DOGMÁTICOS Y DE POLÍTICA CRIMINAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-414&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031456.jpg" alt=""><span>LIBRO HOMENAJE AL PROFESOR ENRIQUE PEÑARANDA RAMOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-415&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031517.jpg" alt=""><span>EL SISTEMA DE CONSECUENCIAS JURIDICAS DEL DELITO A EXAMEN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DP-2026-416&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031494.jpg" alt=""><span>EL DERECHO PENAL ANTE LA INTELIGENCIA ARTIFICIAL. PROBLEMAS DE IMPUTACIÓN Y PROPUESTA DE SOLUCIÓN</span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO DEL TRABAJO Y SEGURIDAD SOCIAL</h3>
+<div class="espacio"></div>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-88&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027152.jpg" alt=""><span>LA PROTECCIÓN SOCIAL DE LA CARRERA JUDICIAL-SEGUNDA EDICIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2018-90&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024762.jpg" alt=""><span>JURISPRUDENCIA CONSTITUCIONAL EN MATERIA SOCIOLABORAL (2006-2017)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2018-104&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025080.jpg" alt=""><span>UN DECENIO DE JURISPRUDENCIA LABORAL SOBRE LA LEY DE IGUALDAD ENTRE MUJERES Y HOMBRES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2025-139&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025714.jpg" alt=""><span>ESTATUTO DE LOS TRABAJADORES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2020-170&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026483.jpg" alt=""><span>UNA MIRADA LABORALISTA A LA PINTURA DEL PRADO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2020-175&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026636.jpg" alt=""><span>LAS FRONTERAS DEL CONTRATO DE TRABAJO EN LA JURISPRUDENCIA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2020-179&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026643.jpg" alt=""><span>EL RECURSO DE CASACIÓN PARA UNIFICACIÓN DE DOCTRINA EN EL ORDEN SOCIAL DE LA JURISDICCIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-190&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027107.jpg" alt=""><span>LA GARANTÍA DE INDEMNIDAD</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-197&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027299.jpg" alt=""><span>ORÍGENES DE LA MAGISTRATURA DEL TRABAJO EN ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-218&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027794.jpg" alt=""><span>LA OBRA JURÍDICA DE AURELIO DESDENTADO BONETE</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-238&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027411.jpg" alt=""><span>EMPRESA CONCURSADA: REGULACIÓN DE EMPLEO Y SUCESIÓN EN LA VENTA DE UNIDADES PRODUCTIVAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-239&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434026995.jpg" alt=""><span>ESPECIFICIDADES DE LOS REGIMENES JURIDICOS DE LOS DEPORTISTAS PROFESIONALES EN PORTUGAL Y ESPAÑA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2021-241&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434027480.jpg" alt=""><span>EL INGRESO MÍNIMO VITAL</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2022-265&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028500.jpg" alt=""><span>LA PREVISIÓN SOCIAL MILITAR:GÉNESIS Y EVOLUCIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2022-274&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434028715.jpg" alt=""><span>LA REORDENACIÓN DEL TIEMPO DE TRABAJO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-278&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029057.jpg" alt=""><span>ANUARIO DE JURISPRUDENCIA LABORAL 2022</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-283&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029095.jpg" alt=""><span>LA CUANTIFICACIÓN DE LA INDEMNIZACIÓN POR DAÑO MORAL POR TRANSGRESIÓN DE DERECHOS FUNDAMENTALES EN LOS DESPIDOS NULOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-284&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029194.jpg" alt=""><span>DERECHO SOCIAL DE LA UNIÓN EUROPEA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-298&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029453.jpg" alt=""><span>LA NUEVA REGULACIÓN DEL ESTATUTO DEL ARTISTA. UNA VISIÓN COMPARADA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-302&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029484.jpg" alt=""><span>LA EXTINCIÓN DEL CONTRATO DE TRABAJO DOMÉSTICO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-303&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029170.jpg" alt=""><span>LA DISCRIMINACIÓN POR MOTIVOS DE SALUD ANTE LA CONTRATACIÓN LABORAL Y EL DESPIDO. ESTADO DE LA CUESTIÓN TRAS LA LEY 15/2022</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-305&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029552.jpg" alt=""><span>LA COMPATIBILIDAD ENTRE JUBILACIÓN Y TRABAJO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-306&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029576.jpg" alt=""><span>LA INFLUENCIA DE LOS CONVENIOS Y RECOMENDACIONES DE LA OIT EN LA LEGISLACION SOCIAL ESPAÑOLA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-320&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029736.jpg" alt=""><span>LA NUEVA COTIZACIÓN AL RÉGIMEN ESPECIAL DE TRABAJADORES AUTÓNOMOS Y SU CONTRASTE CON LAS MUTUALIDADES ALTERNATIVAS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-325&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029798.jpg" alt=""><span>EL PERMISO DE FORMACIÓN PARA EL EMPLEO (ANÁLISIS DEL ARTÍCULO 23 DEL ESTATUTO DE LOS TRABAJADORES)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-326&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029804.jpg" alt=""><span>RECOLOCACIÓN Y COLOCACIÓN: POLÍTICAS PÚBLICAS Y ACTORES PÚBLICOS Y PRIVADOS</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-327&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029811.jpg" alt=""><span>LA SEGURIDAD JURÍDICA EN EL DERECHO DEL TRABAJO Y DE LA SEGURIDAD SOCIAL ¿UN PRINCIPIO EN DECADENCIA?</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-335&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029941.jpg" alt=""><span>EL ESTATUTO LABORAL DEL DEPORTISTA. UN ESTUDIO DE DERECHO COMPARADO: ESPAÑA Y CHINA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-341&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030039.jpg" alt=""><span>LOS PLANES DE PENSIONES DE EMPLEO. EL PRINCIPIO DE NO DISCRIMINACIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-343&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030091.jpg" alt=""><span>LA DIMENSIÓN TEMPORAL DEL CONVENIO COLECTIVO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-344&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030107.jpg" alt=""><span>LOS DELITOS LABORALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-346&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030084.jpg" alt=""><span>LA EDAD COMO FACTOR DE VULNERABILIDAD EN LAS RELACIONES LABORALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-347&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030145.jpg" alt=""><span>LIBERTAD SINDICAL, NEGOCIACIÓN COLECTIVA Y HUELGA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2024-352&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030183.jpg" alt=""><span>LA SOLUCIÓN DEL CONFLICTO COLECTIVO JURÍDICO EN EL MARCO DE LA AUTONOMÍA COLECTIVA.</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2025-356&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030220.jpg" alt=""><span>UNA MIRADA LABORALISTA A LA FOTOGRAFÍA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2023-332&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029620.jpg" alt=""><span>ANUARIO DE JURISPRUDENCIA LABORAL 2023-ESTUDIO DE 100 CASOS RELEVANTES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2025-357&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030244.jpg" alt=""><span>ANUARIO DE JURISPRUDENCIA LABORAL 2024-ESTUDIO DE 100 CASOS RELEVANTES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2025-366&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030664.jpg" alt=""><span>LA RESOLUCIÓN DEL CONTRATO DE TRABAJO POR VOLUNTAD DEL TRABAJADOR. EL ARTÍCULO 50 DEL ESTATUTO DE LOS TRABAJADORES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2025-372&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030862.jpg" alt=""><span>PROBLEMAS Y RETOS PENDIENTES EN EL EJERCICIO DE LOS DERECHOS DE CONCILIACIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2026-389&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031036.jpg" alt=""><span>EU LABOUR AND EMPLOYMENT LAW. INTERPRETATION BY THE COURT OF JUSTICE (ECJ)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2026-396&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031180.jpg" alt=""><span>LA FORMA DEL DESPIDO OBJETIVO</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2026-398&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031166.jpg" alt=""><span>ANUARIO 2025 DE JURISPRUDENCIA LABORAL (ESTUDIO DE 100 CASOS RELEVANTES)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DT-2026-413&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031487.jpg" alt=""><span>LA RETRIBUCIÓN DEL TRABAJO. LÍMITES LEGALES Y ESPONTANEÍSMO SOCIAL</span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>FILOSOFÍA POLÍTICA, SOCIAL Y JURÍDICA</h3>
+<div class="espacio"></div>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-FD-2018-89&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024823.jpg" alt=""><span>CARTAS DE CATÓN (TRENCHARD &amp; GORDON, 1720-1723)</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-FD-2018-102&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024816.jpg" alt=""><span>CIENCIA DE LA LEGISLACIÓN</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-FD-2019-160&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434025936.jpg" alt=""><span>COMENTARIO A LA CIENCIA DE LA LEGISLACIÓN DE BENJAMÍN CONSTANT</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-FD-2024-318&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434029750.jpg" alt=""><span>AUTONOMÍA Y CIUDADANÍA. CLAVES DE LEGITIMACIÓN DEMOCRÁTICA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-FD-2026-395&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031203.jpg" alt=""><span>LUTERO, MAQUIAVELO Y ERASMO. VISIONES DE LA POLÍTICA, EL ESTADO Y LA GUERRA</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-FD-2026-397&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031234.jpg" alt=""><span>RAFAEL ALTAMIRA, ACADÉMICO DE CIENCIAS MORALES Y POLÍTICAS</span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO AMBIENTAL</h3>
+<div class="espacio"></div>
+<h4>Derecho económico ambiental</h4>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DA-2018-84&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024601.jpg" alt=""><span>RESPONSABILIDAD Y ASEGURAMIENTO POR DAÑOS AMBIENTALES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DA-2025-369&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030794.jpg" alt=""><span>ANALISIS SISTÉMICO DE LA NORMATIVA DE LA UNIÓN EUROPEA SOBRE RESPONSABILIDAD AMBIENTAL Y EL DERECHO COMPARADO. ESTUDIO DEL CASO CHEVRON-TEXACO</span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>NUEVAS TECNOLOGÍAS</h3>
+<div class="espacio"></div>
+<ul><li class="etiqueta"><a href="publicacion.php?id=PUB-NT-2018-97&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434024830.jpg" alt=""><span>SOCIEDAD DIGITAL Y DERECHO</span></a></li></ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+<div class="lista_bloque">
+<h3>DERECHO FINANCIERO Y TRIBUTARIO</h3>
+<div class="espacio"></div>
+<ul>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DF-2025-374&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434030923.jpg" alt=""><span>LA COMPENSACIÓN DE BASES IMPONIBLES NEGATIVAS EN EL IMPUESTO DE SOCIEDADES</span></a></li>
+<li class="etiqueta"><a href="publicacion.php?id=PUB-DF-2026-402&amp;tipo=L&amp;modo=2"><img class="portada" src="portada.php?imagen=9788434031265.jpg" alt=""><span>CONSTITUCIÓN ESPAÑOLA Y DERECHO FINANCIERO. ESTUDIOS EN MEMORIA DE ÁNGEL AGUALLO AVILÉS</span></a></li>
+</ul>
+</div>
+<p class="linkSubir"><a href="#top">subir</a></p>
+</div>
+      </div> <!-- .pool -->
+    </div> <!-- #contenedor -->
+    <div id="pie">
+      <div id="menuPie">
+        <div class="otros-enlaces">
+          <div class="grupo-otros-enlaces">
+          	<div class="lista-pie">
+          	<ul>
+            <li><div class="enlace"><a href="/contactar/" accesskey="3">Contactar</a></div></li>
+            <li><div class="enlace"><a href="/informacion/index.php">Sobre la sede electr&oacute;nica</a></div></li>
+            <li><div class="enlace"><a href="/informacion/mapa_web/" accesskey="2">Mapa</a></div></li>
+            <li><div class="enlace"><a href="/informacion/aviso_legal/index.php">Aviso legal</a></div></li>
+            <li><div class="enlace"><a href="/informacion/accesibilidad/" accesskey="0">Accesibilidad</a></div></li>
+            <li><div class="enlace"><a href="/informacion/index.php#proteccion-de-datos">Protecci&oacute;n de datos</a></div></li>
+            <li><div class="enlace"><a href="/informacion/sistema_interno_informacion.php">Sistema Interno de Informaci&oacute;n</a></div></li>
+            <li><div class="enlace"><a href="/informacion/tutoriales/">Tutoriales</a></div></li>
+            <li><div class="enlace"><a href="/transparencia/empleo/">Empleo en la AEBOE</a></div></li>
+            </ul>
+            </div>
+          </div>
+          <div class="espacio"></div>
+          <div class="grupo-otros-enlaces">
+          	<div class="lista-pie">
+          	<ul>
+            <li><div class="enlace icono"><a href="/rss/" lang="es" title="RSS"><img src="/imagenes/home/rss_32.png" srcset="/imagenes/home/rss_32.svg" alt="RSS"></a></div></li>
+            <li><div class="enlace icono"><a href="/redes_sociales?pag=tw" lang="es" title="boegob, el BOE en X"><img src="/imagenes/home/twitter_32.png" srcset="/imagenes/home/twitter_32.svg"  alt="X"></a></div></li>
+            <li><div class="enlace icono"><a href="/redes_sociales?pag=fb" lang="es" title="El BOE en Facebook"><img src="/imagenes/home/facebook_32.png" srcset="/imagenes/home/facebook_32.svg" alt="Facebook"></a></div></li>
+            <li><div class="enlace icono"><a href="/redes_sociales?pag=ln" lang="es" title="El BOE en LinkedIn"><img src="/imagenes/home/linkedin_32.png" srcset="/imagenes/home/linkedin_32.svg" alt="LinkedIn"></a></div></li>
+            <li><div class="enlace icono"><a href="/redes_sociales?pag=yt" lang="es" title="El BOE en YouTube"><img src="/imagenes/home/youtube_32.png" srcset="/imagenes/home/youtube_32.svg" alt="YouTube"></a></div></li>
+            </ul>
+            </div>
+          </div>
+        </div> <!-- .franjaMenu -->
+      </div> <!-- #menuPie -->
+      <div class="franja-pie">
+        <p class="nombre-organismo">Agencia Estatal Bolet&iacute;n Oficial del Estado</p>
+        <p class="direccion-organismo"><abbr title="Avenida">Avda.</abbr> de Manoteras, 54 - 28050 Madrid</p>
+      </div>
+    </div> <!-- #pie -->
+    <script src="/js/desplegable.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="codeberg-auto">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Codeberg-Infrastructure/forgejo: The code deployed to Codeberg. If you want to deploy Forgejo yourself or work on the code, check out: - Codeberg.org</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="author" content="Codeberg-Infrastructure">
+	<meta name="description" content="forgejo - The code deployed to Codeberg. If you want to deploy Forgejo yourself or work on the code, check out:">
+	<meta name="keywords" content="git,non-profit,foss,oss,free,software,open,source,code,hosting">
+	<meta name="referrer" content="same-origin">
+
+
+	<link rel="alternate" type="application/atom+xml" title="" href="/Codeberg-Infrastructure/forgejo.atom">
+	<link rel="alternate" type="application/rss+xml" title="" href="/Codeberg-Infrastructure/forgejo.rss">
+
+	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="/assets/img/favicon.png" type="image/png">
+
+	
+<script>
+	
+	window.addEventListener('error', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.addEventListener('unhandledrejection', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.config = {
+		appUrl: 'https:\/\/codeberg.org\/',
+		appSubUrl: '',
+		assetVersionEncoded: encodeURIComponent('16.0.0-dev-694-33ae492b~gitea-1.22.0'), 
+		assetUrlPrefix: '\/assets',
+		runModeIsProd:  true ,
+		customEmojis: new Set(["git","gitea","codeberg","gitlab","github","gogs","forgejo"]),
+		pageData: {"DATETIMESTRINGS":{"FUTURE":"in future","NOW":"now","relativetime.1day":"yesterday","relativetime.1month":"last month","relativetime.1week":"last week","relativetime.1year":"last year"},"PLURALSTRINGS_FALLBACK":{},"PLURALSTRINGS_LANG":{"relativetime.days":["%d day ago","%d days ago"],"relativetime.duration.days":["%d day","%d days"],"relativetime.duration.hours":["%d hour","%d hours"],"relativetime.duration.mins":["%d minute","%d minutes"],"relativetime.duration.months":["%d month","%d months"],"relativetime.duration.secs":["%d second","%d seconds"],"relativetime.duration.weeks":["%d week","%d weeks"],"relativetime.duration.years":["%d year","%d years"],"relativetime.hours":["%d hour ago","%d hours ago"],"relativetime.mins":["%d minute ago","%d minutes ago"],"relativetime.months":["%d month ago","%d months ago"],"relativetime.weeks":["%d week ago","%d weeks ago"],"relativetime.years":["%d year ago","%d years ago"]},"PLURAL_RULE_FALLBACK":0,"PLURAL_RULE_LANG":0},
+		notificationSettings: {"EventSourceUpdateTime":10000,"MaxTimeout":60000,"MinTimeout":10000,"TimeoutStep":10000}, 
+		enableTimeTracking:  true ,
+		
+		mermaidMaxSourceCharacters:  50000 ,
+		
+		i18n: {
+			copy_success: "Copied!",
+			copy_error: "Copy failed",
+			error_occurred: "An error occurred",
+			network_error: "Network error",
+			remove_label_str: "Remove item \"%s\"",
+			modal_confirm: "Confirm",
+			modal_cancel: "Cancel",
+			more_items: "More items",
+			incorrect_root_url: "This Forgejo instance is configured to be served on \"https://codeberg.org/\". You are currently viewing Forgejo through a different URL, which may cause parts of the application to break. The canonical URL is controlled by Forgejo admins via the ROOT_URL setting in the app.ini.",
+		},
+	};
+	
+	window.config.pageData = window.config.pageData || {};
+</script>
+<script src="/assets/js/webcomponents.js?v=16.0.0-dev-694-33ae492b~gitea-1.22.0"></script>
+
+	
+
+	
+	<meta property="og:title" content="forgejo">
+
+	<meta property="og:description" content="The code deployed to Codeberg. If you want to deploy Forgejo yourself or work on the code, check out:">
+
+
+	<meta property="og:url" content="https://codeberg.org/Codeberg-Infrastructure/forgejo">
+
+
+	<meta property="og:type" content="object">
+
+
+	<meta property="og:image" content="https://codeberg.org/Codeberg-Infrastructure/forgejo/-/summary-card">
+	
+		<meta property="og:image:width" content="1200">
+	
+	
+		<meta property="og:image:height" content="600">
+	
+	
+		<meta property="og:image:alt" content="Summary card of repository Codeberg-Infrastructure/forgejo, described as: The code deployed to Codeberg. If you want to deploy Forgejo yourself or work on the code, check out:">
+	
+
+<meta property="og:site_name" content="Codeberg.org">
+
+	<link rel="stylesheet" href="/assets/css/index.css?v=16.0.0-dev-694-33ae492b~gitea-1.22.0">
+<link rel="stylesheet" href="/assets/css/theme-codeberg-auto.css?v=16.0.0-dev-694-33ae492b~gitea-1.22.0">
+
+	
+</head>
+<body class="no-js" hx-swap="outerHTML" hx-ext="morph" hx-push-url="false">
+	
+	<noscript>
+		<style>
+			#tou-announcement { display: flex !important; justify-content: center; }
+			#tou-announcement > :first-child, #tou-announcement > :last-child { display: none; }
+		</style>
+	</noscript>
+	<div id="tou-announcement" class="tw-hidden">
+		<div style="width: 108.3px"></div>
+		<div>
+		<span>Codeberg has changed its Terms of Use. <a href="https://codeberg.org/Codeberg/org/compare/17bdb39b0c1ecd0e423f3ba592650ce57fcdfbf5..71149c7fc95ccfeae36109b5cddca339e4aa1473?files=TermsOfUse.md#diff-d760d688bb9b929b62db808bfc76abe4493d095a">View complete changes</a>.</span>
+		<ol>
+			<li>LLM-generated content is being restricted. <a href="https://codeberg.org/Codeberg/org/commit/71149c7fc95ccfeae36109b5cddca339e4aa1473">View change</a> or <a href="https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html">read the blog post</a></li>
+			<li>Cryptocurrency projects are no longer allowed. <a href="https://codeberg.org/Codeberg/org/commit/f383b648fd733ab88083dc390b91e77cd7589980">View change</a></li>
+		</ol>
+		</div>
+		<button class="ui secondary button small"><svg viewBox="0 0 16 16" class="svg octicon-x" aria-hidden="true" width="16" height="16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-3.22 3.22a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06"/></svg> Dismiss</button>
+	</div>
+	<div class="full height">
+		<noscript>
+			<div class="tw-ml-2 tw-mr-2 tw-text-center tw-text-text-light-2">This website requires JavaScript.</div>
+		</noscript>
+
+		
+
+		
+			
+
+
+<nav id="navbar" aria-label="Navigation bar">
+	<div class="navbar-left ui secondary menu">
+		
+		<a class="item" id="navbar-logo" href="/" aria-label="Home">
+			<div class="branding" aria-hidden="true">
+				<img width="30" height="30" loading="lazy" class="light-logo" src="/assets/img/svg/cb-logo.svg" alt="Logo">
+				<img width="30" height="30" loading="lazy" class="dark-logo" src="/assets/img/svg/cb-logo-mono.svg" alt="Logo">
+			</div>
+		</a>
+
+		
+		<div class="ui secondary menu item navbar-mobile-right only-mobile">
+			
+			<button class="item tw-w-auto ui icon mini button tw-p-2 tw-m-0" id="navbar-expand-toggle" aria-label="Toggle menu"><svg viewBox="0 0 16 16" class="svg octicon-three-bars" aria-hidden="true" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75M1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5"/></svg></button>
+		</div>
+
+		
+		
+			<a class="item" href="/explore/repos">Explore</a>
+		
+
+		
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F">About</a>
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/faq/">FAQ</a>
+			<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.codeberg.org">Help</a>
+		
+
+		<a class="item donation-pretty" href="https://donate.codeberg.org">Donate</a>
+
+	</div>
+
+	
+	<div class="navbar-right ui secondary menu">
+		
+			
+				<a class="item" href="/user/sign_up">
+					<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-person" aria-hidden="true" width="16" height="16"><path d="M10.561 8.073a6 6 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6 6 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0M10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0"/></svg>
+					<span>Register</span>
+				</a>
+			
+			<a class="item" rel="nofollow" href="/user/login?redirect_to=%2fCodeberg-Infrastructure%2fforgejo">
+				<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-sign-in" aria-hidden="true" width="16" height="16"><path d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 0 1 0 1.5h-2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 0 1.5h-2.5A1.75 1.75 0 0 1 2 13.25Zm6.56 4.5h5.69a.75.75 0 0 1 0 1.5H8.56l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734Z"/></svg>
+				<span>Sign in</span>
+			</a>
+		
+	</div>
+</nav>
+
+		
+
+
+
+<div role="main" aria-label="Codeberg-Infrastructure/forgejo: The code deployed to Codeberg. If you want to deploy Forgejo yourself or work on the code, check out:" class="page-content repository file list ">
+	<div class="secondary-nav">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="flex-item tw-items-center">
+				<div class="flex-item-leading">
+					
+
+	<svg viewBox="0 0 16 16" class="svg octicon-repo" aria-hidden="true" width="24" height="24"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.5 2.5 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.5 2.5 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+
+
+				</div>
+				<div class="flex-item-main">
+					<div class="flex-item-title tw-font-normal">
+						<a class="muted" href="/Codeberg-Infrastructure">Codeberg-Infrastructure</a>/<a class="muted tw-font-semibold" href="/Codeberg-Infrastructure/forgejo">forgejo</a>
+					</div>
+				</div>
+				<div class="flex-item-trailing">
+					
+					
+						
+					
+					
+					
+				</div>
+			</div>
+			
+				<div class="repo-buttons button-row">
+					
+					
+					
+					
+					<a class="ui compact small basic button" href="/Codeberg-Infrastructure/forgejo.rss" data-tooltip-content="RSS feed">
+						<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="16" height="16"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+					</a>
+					
+					
+	
+	<div class="ui disabled labeled button" data-tooltip-content="Sign in to watch this repository.">
+		<div class="ui compact small basic button">
+			<svg viewBox="0 0 16 16" class="svg octicon-eye" aria-hidden="true" width="16" height="16"><path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14s-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2M1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5s2.825-.742 3.955-1.715c1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5s-2.825.742-3.955 1.715c-1.124.967-1.954 2.096-2.366 2.717M8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10"/></svg><span class="text not-mobile">Watch</span>
+		</div>
+		<a class="ui basic label" href="/Codeberg-Infrastructure/forgejo/watchers"
+			aria-label="29 watchers"
+			>
+			29
+		</a>
+	</div>
+
+
+					
+					<form hx-target="this" hx-post="/Codeberg-Infrastructure/forgejo/action/star" hx-on::after-settle="this.querySelector('button').focus()" method="post" action="/Codeberg-Infrastructure/forgejo/action/star">
+	<div class="ui labeled button" data-tooltip-content="Sign in to star this repository.">
+		<button type="submit" class="ui compact small basic button" disabled aria-label="Star">
+			
+				<svg viewBox="0 0 16 16" class="svg octicon-star" aria-hidden="true" width="16" height="16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg><span class="text not-mobile">Star</span>
+			
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/Codeberg-Infrastructure/forgejo/stars"
+			aria-label="211 stars"
+			>
+			211
+		</a>
+	</div>
+</form>
+
+					
+					
+					
+
+
+	<div class="ui labeled button
+		
+			disabled
+		"
+		
+			data-tooltip-content="Sign in to fork this repository."
+		
+	>
+		<a class="ui compact small basic button"
+			
+				
+			
+		>
+			<svg viewBox="0 0 16 16" class="svg octicon-repo-forked" aria-hidden="true" width="16" height="16"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0"/></svg><span class="text not-mobile">Fork</span>
+		</a>
+		<dialog id="fork-repo-modal">
+			<article>
+				<header>You've already forked forgejo</header>
+				<div class="content tw-text-left">
+					<div class="ui list">
+						
+					</div>
+					
+				</div>
+			</article>
+		</dialog>
+		<a class="ui basic label" href="/Codeberg-Infrastructure/forgejo/forks"
+			aria-label="42 forks"
+			>
+			42
+		</a>
+	</div>
+
+
+
+
+					
+					
+				</div>
+			
+		</div>
+		
+		
+		
+	</div>
+
+	<overflow-menu class="ui container secondary pointing tabular top attached borderless menu tw-pt-0 tw-my-0">
+		
+			<div class="overflow-menu-items">
+				
+					<a class="active item" href="/Codeberg-Infrastructure/forgejo">
+						<svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="16" height="16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg> Code
+					</a>
+				
+
+				
+
+				
+					<a class="item" href="https://codeberg.org/Codeberg/Community/issues" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 16 16" class="svg octicon-link-external" aria-hidden="true" width="16" height="16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg> Issues
+					</a>
+				
+
+				
+					<a class="item" href="/Codeberg-Infrastructure/forgejo/pulls">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg> Pull requests
+						
+							<span class="ui small label">2</span>
+						
+					</a>
+				
+
+				
+
+				
+					<a class="item" href="/Codeberg-Infrastructure/forgejo/releases">
+						<svg viewBox="0 0 16 16" class="svg octicon-tag" aria-hidden="true" width="16" height="16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg> Releases
+						
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+					<a class="item" href="/Codeberg-Infrastructure/forgejo/activity">
+						<svg viewBox="0 0 16 16" class="svg octicon-pulse" aria-hidden="true" width="16" height="16"><path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.75.75 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.75.75 0 0 1 6 2"/></svg> Activity
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+			</div>
+		
+	</overflow-menu>
+	<div class="ui tabs divider"></div>
+</div>
+
+	<div class="ui container ">
+		
+
+
+
+
+	<div id="flash-message" hx-swap-oob="true"></div>
+
+
+		
+		<div class="repo-description">
+			<div id="repo-desc" class="tw-break-anywhere tw-text-16">
+				
+				<span class="description">The code deployed to Codeberg. If you want to deploy Forgejo yourself or work on the code, check out:</span>
+				<a class="link" href="https://codeberg.org/forgejo/forgejo">https://codeberg.org/forgejo/forgejo</a>
+			</div>
+		</div>
+		<div class="repo-topics tw-my-2" id="repo-topics">
+			
+			
+		</div>
+		
+		
+
+		
+			
+			
+		
+		
+
+
+
+
+
+
+
+
+
+
+		
+		
+<div class="ui segments repository-summary tw-mt-1 tw-mb-0">
+	<div class="ui segment repository-menu">
+		
+			<a class="item muted " href="/Codeberg-Infrastructure/forgejo/commits/branch/codeberg-16">
+				<svg viewBox="0 0 16 16" class="svg octicon-history" aria-hidden="true" width="16" height="16"><path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177M7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.75.75 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4"/></svg> <b>25,435</b> commits
+			</a>
+			<a class="item muted " href="/Codeberg-Infrastructure/forgejo/branches">
+				<svg viewBox="0 0 16 16" class="svg octicon-git-branch" aria-hidden="true" width="16" height="16"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.5 2.5 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25m-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0m8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5M4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"/></svg> <b>19</b> branches
+			</a>
+			
+				<a class="item muted " href="/Codeberg-Infrastructure/forgejo/tags">
+					<svg viewBox="0 0 16 16" class="svg octicon-tag" aria-hidden="true" width="16" height="16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg> <b>287</b> tags
+				</a>
+			
+			<span class="item" data-tooltip-content="git: 287 MiB, lfs: 0 B">
+				
+				<svg viewBox="0 0 16 16" class="svg octicon-database" aria-hidden="true" width="16" height="16"><path d="M1 3.5c0-.626.292-1.165.7-1.59.406-.422.956-.767 1.579-1.041C4.525.32 6.195 0 8 0s3.475.32 4.722.869c.622.274 1.172.62 1.578 1.04.408.426.7.965.7 1.591v9c0 .626-.292 1.165-.7 1.59-.406.422-.956.767-1.579 1.041C11.476 15.68 9.806 16 8 16c-1.805 0-3.475-.32-4.721-.869-.623-.274-1.173-.62-1.579-1.04-.408-.426-.7-.965-.7-1.591Zm1.5 0c0 .133.058.318.282.551.227.237.591.483 1.101.707C4.898 5.205 6.353 5.5 8 5.5s3.101-.295 4.118-.742c.508-.224.873-.471 1.1-.708.224-.232.282-.417.282-.55s-.058-.318-.282-.551c-.227-.237-.591-.483-1.101-.707C11.102 1.795 9.647 1.5 8 1.5s-3.101.295-4.118.742c-.508.224-.873.471-1.1.708-.224.232-.282.417-.282.55m0 4.5c0 .133.058.318.282.551.227.237.591.483 1.101.707C4.898 9.705 6.353 10 8 10s3.101-.295 4.118-.742c.508-.224.873-.471 1.1-.708.224-.232.282-.417.282-.55V5.724c-.241.15-.503.286-.778.407C11.475 6.68 9.805 7 8 7s-3.475-.32-4.721-.869a6 6 0 0 1-.779-.407Zm0 2.225V12.5c0 .133.058.318.282.55.227.237.592.484 1.1.708 1.016.447 2.471.742 4.118.742s3.102-.295 4.117-.742c.51-.224.874-.47 1.101-.707.224-.233.282-.418.282-.551v-2.275c-.241.15-.503.285-.778.406-1.247.549-2.917.869-4.722.869s-3.475-.32-4.721-.869a6 6 0 0 1-.779-.406"/></svg> <b>287</b> MiB
+			</span>
+		
+	</div>
+	
+		<details class="stats" id="language-stats">
+			<summary>
+				<stats-bar>
+					
+						<div class="slice" style="width: 81.3%; background-color: #00ADD8" data-tooltip-placement="top" data-tooltip-content=Go data-tooltip-follow-cursor="horizontal"></div>
+					
+						<div class="slice" style="width: 10.7%; background-color: #cccccc" data-tooltip-placement="top" data-tooltip-content=go-html-template data-tooltip-follow-cursor="horizontal"></div>
+					
+						<div class="slice" style="width: 2.7%; background-color: #f1e05a" data-tooltip-placement="top" data-tooltip-content=JavaScript data-tooltip-follow-cursor="horizontal"></div>
+					
+						<div class="slice" style="width: 2%; background-color: #663399" data-tooltip-placement="top" data-tooltip-content=CSS data-tooltip-follow-cursor="horizontal"></div>
+					
+						<div class="slice" style="width: 1.8%; background-color: #3178c6" data-tooltip-placement="top" data-tooltip-content=TypeScript data-tooltip-follow-cursor="horizontal"></div>
+					
+						<div class="slice" style="width: 1.3%; background-color: #cccccc" data-tooltip-placement="top" data-tooltip-content=other data-tooltip-follow-cursor="horizontal"></div>
+					
+				</stats-bar>
+			</summary>
+			<ul>
+				
+					<li>
+						<i class="color-icon" style="background-color: #00ADD8"></i>
+						<span>
+							
+								Go
+							
+						</span>
+						81.3%
+					</li>
+				
+					<li>
+						<i class="color-icon" style="background-color: #cccccc"></i>
+						<span>
+							
+								go-html-template
+							
+						</span>
+						10.7%
+					</li>
+				
+					<li>
+						<i class="color-icon" style="background-color: #f1e05a"></i>
+						<span>
+							
+								JavaScript
+							
+						</span>
+						2.7%
+					</li>
+				
+					<li>
+						<i class="color-icon" style="background-color: #663399"></i>
+						<span>
+							
+								CSS
+							
+						</span>
+						2%
+					</li>
+				
+					<li>
+						<i class="color-icon" style="background-color: #3178c6"></i>
+						<span>
+							
+								TypeScript
+							
+						</span>
+						1.8%
+					</li>
+				
+					<li>
+						<i class="color-icon" style="background-color: #cccccc"></i>
+						<span>
+							
+								Other
+							
+						</span>
+						1.3%
+					</li>
+				
+			</ul>
+		</details>
+	
+</div>
+
+
+		
+		
+		
+		<div class="repo-button-row">
+			<div class="button-sequence tw-gap-y-2">
+				
+
+
+
+
+
+
+	
+
+
+
+
+<script type="module">
+	const data = {
+		'textReleaseCompare': "Compare",
+		'textCreateTag': "Create tag %s",
+		'textCreateBranch': "Create branch %s",
+		'textCreateBranchFrom': "from \"%s\"",
+		'textBranches': "Branches",
+		'textTags': "Tags",
+		'textDefaultBranchLabel': "default",
+
+		'mode': 'branches',
+		'showBranchesInDropdown':  true ,
+		'searchFieldPlaceholder': 'Filter branch or tag...',
+		'branchForm':  null ,
+		'disableCreateBranch':  true ,
+		'setAction':  null ,
+		'submitForm':  null ,
+		'viewType': "branch",
+		'refName': "codeberg-16",
+		'commitIdShort': "33ae492b2d",
+		'tagName': "",
+		'branchName': "codeberg-16",
+		'noTag':  null ,
+		'defaultSelectedRefName': "codeberg-16",
+		'repoDefaultBranch': "codeberg-16",
+		'enableFeed':  true ,
+		'rssURLPrefix': '\/Codeberg-Infrastructure\/forgejo/rss/branch/',
+		'branchURLPrefix': '\/Codeberg-Infrastructure\/forgejo/src/branch/',
+		'branchURLSuffix': '',
+		'tagURLPrefix': '\/Codeberg-Infrastructure\/forgejo/src/tag/',
+		'tagURLSuffix': '',
+		'repoLink': "/Codeberg-Infrastructure/forgejo",
+		'treePath': "",
+		'branchNameSubURL': "branch/codeberg-16",
+		'noResults': "No results found.",
+	};
+	
+	window.config.pageData.branchDropdownDataList = window.config.pageData.branchDropdownDataList || [];
+	window.config.pageData.branchDropdownDataList.push(data);
+</script>
+
+<div class="js-branch-tag-selector ">
+	
+	<div class="ui dropdown custom">
+		<button class="branch-dropdown-button gt-ellipsis ui basic small compact button tw-flex tw-m-0">
+			<span class="text tw-flex tw-items-center tw-mr-1 gt-ellipsis">
+				
+					
+						<svg viewBox="0 0 16 16" class="svg octicon-git-branch" aria-hidden="true" width="16" height="16"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.5 2.5 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25m-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0m8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5M4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"/></svg>
+					
+					<strong ref="dropdownRefName" class="tw-ml-2 tw-inline-block gt-ellipsis">codeberg-16</strong>
+				
+			</span>
+			<svg viewBox="0 0 16 16" class="dropdown icon svg octicon-triangle-down" aria-hidden="true" width="14" height="14"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427"/></svg>
+		</button>
+	</div>
+</div>
+
+				
+					
+					
+					
+					
+					<a id="new-pull-request" role="button" class="ui compact basic button" href="/Codeberg-Infrastructure/forgejo/compare/codeberg-16...codeberg-16"
+						data-tooltip-content="Compare">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg>
+					</a>
+				
+				
+				
+					<a href="/Codeberg-Infrastructure/forgejo/find/branch/codeberg-16" class="ui compact basic button">Find a file</a>
+				
+
+				
+
+				
+				
+
+
+
+
+			</div>
+			<div class="tw-flex tw-items-center max-[390px]:tw-w-full">
+				
+				
+					<div class="clone-panel ui action tiny input max-[390px]:tw-w-full">
+						
+
+	<button class="ui small button" id="repo-clone-https" data-link="https://codeberg.org/Codeberg-Infrastructure/forgejo.git">
+		HTTPS
+	</button>
+
+
+<input id="repo-clone-url" size="20" class="js-clone-url" value="https://codeberg.org/Codeberg-Infrastructure/forgejo.git" readonly>
+<button class="ui small icon button" id="clipboard-btn" data-tooltip-content="Copy URL" data-clipboard-target="#repo-clone-url" aria-label="Copy URL">
+	<svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+</button>
+
+						<button class="ui small jump dropdown icon button" data-tooltip-content="More operations">
+							<svg viewBox="0 0 16 16" class="svg octicon-kebab-horizontal" aria-hidden="true" width="16" height="16"><path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/></svg>
+							<div class="menu">
+								
+									<a class="item archive-link" href="/Codeberg-Infrastructure/forgejo/archive/codeberg-16.zip" rel="nofollow"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-zip" aria-hidden="true" width="16" height="16"><path d="M3.5 1.75v11.5c0 .09.048.173.126.217a.75.75 0 0 1-.752 1.298A1.75 1.75 0 0 1 2 13.25V1.75C2 .784 2.784 0 3.75 0h5.586c.464 0 .909.185 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 12.25 15h-.5a.75.75 0 0 1 0-1.5h.5a.25.25 0 0 0 .25-.25V4.664a.25.25 0 0 0-.073-.177L9.513 1.573a.25.25 0 0 0-.177-.073H7.25a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5h-3a.25.25 0 0 0-.25.25m3.75 8.75h.5c.966 0 1.75.784 1.75 1.75v3a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1-.75-.75v-3c0-.966.784-1.75 1.75-1.75M6 5.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 5.25m.75 2.25h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5M8 6.75A.75.75 0 0 1 8.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 6.75M8.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5M8 9.75A.75.75 0 0 1 8.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 9.75m-1 2.5v2.25h1v-2.25a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25"/></svg>Download ZIP</a>
+									<a class="item archive-link" href="/Codeberg-Infrastructure/forgejo/archive/codeberg-16.tar.gz" rel="nofollow"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-zip" aria-hidden="true" width="16" height="16"><path d="M3.5 1.75v11.5c0 .09.048.173.126.217a.75.75 0 0 1-.752 1.298A1.75 1.75 0 0 1 2 13.25V1.75C2 .784 2.784 0 3.75 0h5.586c.464 0 .909.185 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 12.25 15h-.5a.75.75 0 0 1 0-1.5h.5a.25.25 0 0 0 .25-.25V4.664a.25.25 0 0 0-.073-.177L9.513 1.573a.25.25 0 0 0-.177-.073H7.25a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5h-3a.25.25 0 0 0-.25.25m3.75 8.75h.5c.966 0 1.75.784 1.75 1.75v3a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1-.75-.75v-3c0-.966.784-1.75 1.75-1.75M6 5.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 5.25m.75 2.25h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5M8 6.75A.75.75 0 0 1 8.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 6.75M8.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5M8 9.75A.75.75 0 0 1 8.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 9.75m-1 2.5v2.25h1v-2.25a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25"/></svg>Download TAR.GZ</a>
+									<a class="item archive-link" href="/Codeberg-Infrastructure/forgejo/archive/codeberg-16.bundle" rel="nofollow"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-package" aria-hidden="true" width="16" height="16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg>Download BUNDLE</a>
+								
+								
+								
+									<a class="item js-clone-url-editor" data-href-template="vscode://vscode.git/clone?url={url}"><svg viewBox="-1 -1 34 34" class="tw-mr-2 svg gitea-open-with-vscode" aria-hidden="true" width="16" height="16"><path d="M30.9 3.4 24.3.3a2 2 0 0 0-2.3.4L9.4 12.2 3.9 8c-.5-.4-1.2-.4-1.7 0L.4 9.8c-.5.5-.5 1.4 0 2L5.2 16 .4 20.3c-.5.6-.5 1.5 0 2L2.2 24c.5.5 1.2.5 1.7 0l5.5-4L22 31.2a2 2 0 0 0 2.3.4l6.6-3.2a2 2 0 0 0 1.1-1.8V5.2a2 2 0 0 0-1.1-1.8M24 23.3 14.4 16 24 8.7z"/></svg>Open with VS Code</a>
+								
+									<a class="item js-clone-url-editor" data-href-template="vscodium://vscode.git/clone?url={url}"><svg xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 16 16" class="tw-mr-2 svg gitea-open-with-vscodium" aria-hidden="true" width="16" height="16"><path fill-rule="nonzero" d="m10.2.2.5-.3c.3 0 .5.2.7.4l.2.8-.2 1-.8 2.4c-.3 1-.4 2 0 2.9l.8-2c.2 0 .4.1.4.3l-.3 1L9.2 13l3.1-2.9c.3-.2.7-.5.8-1a2 2 0 0 0-.3-1c-.2-.5-.5-.9-.6-1.4l.1-.7c.1-.1.3-.2.5-.1.2 0 .3.2.4.4.3.5.4 1.2.5 1.8l.6-1.2c0-.2.2-.4.4-.6l.4-.2c.2 0 .4.3.4.4v.6l-.8 1.6-1.4 1.8 1-.4c.2 0 .6.2.7.5 0 .2 0 .4-.2.5-.3.2-.6.2-1 .2-1 0-2.2.6-2.9 1.4L9.6 15c-.4.4-.9 1-1.4.8-.8-.1-.8-1.3-1-1.8 0-.3-.2-.6-.4-.7-.3-.2-.5-.3-.8-.3-.6-.1-1.2 0-1.8-.2l-.8-.4-.4-.7c-.3-.6-.3-1.2-.5-1.8A4 4 0 0 0 1 8l-.4-.4v-.4c.2-.2.5-.2.7 0 .5.2.5.8 1 1.1V6.2s.3-.1.4 0l.2.5L3 9c.4-.4.6-1 .5-1.5L3.4 7l.3-.2c.2 0 .3.2.4.3v.7c0 .6-.3 1.1-.4 1.7-.2.4-.3 1-.1 1.4.1.5.5.9.9 1 .5.3 1.1.4 1.7.4-.4-.6-.7-1.2-.7-2 0-.7.4-1.3.6-2C6.3 7 5.7 5.8 4.8 5l-1.5-.7c-.4-.2-.7-.7-.7-1.2.3-.1.7 0 1 .1L5 4.5l.6.1c.2-.3 0-.6-.2-.8-.3-.5-1-.6-1.3-1a.9.9 0 0 1-.2-.8c0-.2.3-.4.5-.4.4 0 .7.3.9.5.8.8 1.2 1.8 1.4 3s0 2.5-.2 3.7c0 .3-.2.5-.1.8l.2.2c.2 0 .4 0 .5-.2.4-.3.8-.8.9-1.3l.1-1.2.1-.6.4-.2.3.3v.6c-.1.5-.2 1-.5 1.6a2 2 0 0 1-.6 1l-1 1c-.1.2-.2.6-.1.9 0 .2.2.4.4.5.4.2.8.2 1 0 .3-.1.5-.4.7-.6l.5-1.4.4-2.5C9.7 7 9.6 6 9 5.2c-.2-.4-.5-.7-1-1l-1-.8c-.2-.3-.4-.7-.3-1.2h.6c.4.1.7.4.9.8s.4.8.9 1l-1-2c-.1-.3-.3-.5-.2-.8 0-.2.2-.4.4-.4s.4.1.5.3l.2.5 1 3.1a4 4 0 0 0 .4-2.3L10 1V.2Z"/></svg>Open with VSCodium</a>
+								
+									<a class="item js-clone-url-editor" data-href-template="jetbrains://idea/checkout/git?idea.required.plugins.id=Git4Idea&amp;checkout.repo={url}"><svg xml:space="preserve" viewBox="0 0 70 70" class="tw-mr-2 svg gitea-open-with-jetbrains" aria-hidden="true" width="16" height="16"><linearGradient id="gitea-open-with-jetbrains__a" x1=".79" x2="33.317" y1="40.089" y2="40.089" gradientUnits="userSpaceOnUse"><stop offset=".258" style="stop-color:#f97a12"/><stop offset=".459" style="stop-color:#b07b58"/><stop offset=".724" style="stop-color:#577bae"/><stop offset=".91" style="stop-color:#1e7ce5"/><stop offset="1" style="stop-color:#087cfa"/></linearGradient><path d="M17.7 54.6.8 41.2l8.4-15.6L33.3 35z" style="fill:url(#gitea-open-with-jetbrains__a)"/><linearGradient id="gitea-open-with-jetbrains__b" x1="25.767" x2="79.424" y1="24.88" y2="54.57" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#f97a12"/><stop offset=".072" style="stop-color:#cb7a3e"/><stop offset=".154" style="stop-color:#9e7b6a"/><stop offset=".242" style="stop-color:#757b91"/><stop offset=".334" style="stop-color:#537bb1"/><stop offset=".432" style="stop-color:#387ccc"/><stop offset=".538" style="stop-color:#237ce0"/><stop offset=".655" style="stop-color:#147cef"/><stop offset=".792" style="stop-color:#0b7cf7"/><stop offset="1" style="stop-color:#087cfa"/></linearGradient><path d="m70 18.7-1.3 40.5L41.8 70 25.6 59.6 49.3 35 38.9 12.3l9.3-11.2z" style="fill:url(#gitea-open-with-jetbrains__b)"/><linearGradient id="gitea-open-with-jetbrains__c" x1="63.228" x2="48.29" y1="42.915" y2="-1.719" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#fe315d"/><stop offset=".078" style="stop-color:#cb417e"/><stop offset=".16" style="stop-color:#9e4e9b"/><stop offset=".247" style="stop-color:#755bb4"/><stop offset=".339" style="stop-color:#5365ca"/><stop offset=".436" style="stop-color:#386ddb"/><stop offset=".541" style="stop-color:#2374e9"/><stop offset=".658" style="stop-color:#1478f3"/><stop offset=".794" style="stop-color:#0b7bf8"/><stop offset="1" style="stop-color:#087cfa"/></linearGradient><path d="M70 18.7 48.7 43.9l-9.8-31.6 9.3-11.2z" style="fill:url(#gitea-open-with-jetbrains__c)"/><linearGradient id="gitea-open-with-jetbrains__d" x1="10.72" x2="55.524" y1="16.473" y2="90.58" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#fe315d"/><stop offset=".04" style="stop-color:#f63462"/><stop offset=".104" style="stop-color:#df3a71"/><stop offset=".167" style="stop-color:#c24383"/><stop offset=".291" style="stop-color:#ad4a91"/><stop offset=".55" style="stop-color:#755bb4"/><stop offset=".917" style="stop-color:#1d76ed"/><stop offset="1" style="stop-color:#087cfa"/></linearGradient><path d="M33.7 58.1 5.6 68.3l4.5-15.8L16 33.1 0 27.7 10.1 0l22 2.7 21.6 24.7z" style="fill:url(#gitea-open-with-jetbrains__d)"/><path d="M13.7 13.5h43.2v43.2H13.7z" style="fill:#000"/><path d="M17.7 48.6h16.2v2.7H17.7zM29.4 22.4v-3.3h-9v3.3H23v11.3h-2.6V37h9v-3.3h-2.5V22.4zM38 37.3c-1.4 0-2.6-.3-3.5-.8s-1.7-1.2-2.3-1.9l2.5-2.8c.5.6 1 1 1.5 1.3s1.1.5 1.7.5c.7 0 1.3-.2 1.8-.7.4-.5.6-1.2.6-2.3V19.1h4v11.7c0 1.1-.1 2-.4 2.8s-.7 1.4-1.3 2c-.5.5-1.2 1-2 1.2-.8.3-1.6.5-2.6.5" style="fill:#fff"/></svg>Open with Intellij IDEA</a>
+								
+							</div>
+						</button>
+						<script>
+	
+	
+	
+	
+	
+	
+	(window.updateCloneStates = function() {
+		const httpsBtn = document.getElementById('repo-clone-https');
+		const sshBtn = document.getElementById('repo-clone-ssh');
+		const value = localStorage.getItem('repo-clone-protocol') || 'https';
+		const isSSH = value === 'ssh' && sshBtn || value !== 'ssh' && !httpsBtn;
+
+		if (httpsBtn) {
+			httpsBtn.textContent = window.origin.split(':')[0].toUpperCase();
+			httpsBtn.classList.toggle('primary', !isSSH);
+			httpsBtn.classList.toggle('basic', isSSH);
+		}
+		if (sshBtn) {
+			sshBtn.classList.toggle('primary', isSSH);
+			sshBtn.classList.toggle('basic', !isSSH);
+		}
+
+		const btn = isSSH ? sshBtn : httpsBtn;
+		if (!btn) return;
+
+		
+		function toOriginUrl(urlStr) {
+			try {
+				if (urlStr.startsWith('http://') || urlStr.startsWith('https://') || urlStr.startsWith('/')) {
+					const {origin, protocol, hostname, port} = window.location;
+					const url = new URL(urlStr, origin);
+					url.protocol = protocol;
+					url.hostname = hostname;
+					url.port = port || (protocol === 'https:' ? '443' : '80');
+					return url.toString();
+				}
+			} catch {}
+			return urlStr;
+		}
+		const link = toOriginUrl(btn.getAttribute('data-link'));
+
+		for (const el of document.getElementsByClassName('js-clone-url')) {
+			el[el.nodeName === 'INPUT' ? 'value' : 'textContent'] = link;
+		}
+		for (const el of document.getElementsByClassName('js-clone-url-editor')) {
+			el.href = el.getAttribute('data-href-template').replace('{url}', encodeURIComponent(link));
+		}
+	})();
+</script>
+
+					</div>
+				
+				
+			</div>
+		</div>
+
+		
+			
+
+			
+
+		
+
+		
+			
+			
+			
+			
+			
+			<table id="repo-files-table" class="ui single line table tw-mt-0" >
+	<caption class="tw-sr-only">
+		Repository files (latest commit first)
+	</caption>
+	<thead class="tw-sr-only">
+		<th>Filename</th>
+		<th>Latest commit message</th>
+		<th>Latest commit date</th>
+	</thead>
+	<tbody>
+		<tr class="commit-list">
+			<td class="tw-overflow-hidden repo-files-table-latest-commit-cell repo-files-table-latest-commit-left" colspan="2">
+				<div class="tw-flex">
+					<div class="latest-commit">
+						
+	
+		<img loading="lazy" alt="" class="ui avatar tw-align-middle tw-mr-2" src="/avatars/561ee781e72bbbfd2865db7b4ba4fbf50f64da3d3cb0f4e1897b6da25224a2a7?size=64" title="Mathieu Fenniak" width="24" height="24"/>
+		
+			<a class="muted author-wrapper" title="Mathieu Fenniak" href="/mfenniak"><strong>Mathieu Fenniak</strong></a>
+		
+	
+	
+
+	
+	
+		
+			
+		
+	
+
+<a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" rel="nofollow" class="sha label isSigned isVerified">
+	<span class="shortsha">33ae492b2d</span><div class="signature">
+	
+		<span class="signature-author" title="famfo-cb / SHA256:V/ZZCQiJ6lWwIoST/kWP/xA/BVtsJ/&#43;XtkKTFlUbhGY">
+			
+				<svg viewBox="0 0 14 16" class="svg gitea-lock" aria-hidden="true" width="16" height="16"><path d="M12.5 7h-.75V4.75A4.756 4.756 0 0 0 7 0a4.756 4.756 0 0 0-4.75 4.75V7H1.5A1.5 1.5 0 0 0 0 8.5v6A1.5 1.5 0 0 0 1.5 16h11a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 12.5 7M9.25 7h-4.5V4.75C4.75 3.51 5.76 2.5 7 2.5s2.25 1.01 2.25 2.25z"/></svg>
+				<img loading="lazy" alt="" class="ui avatar tw-align-middle" src="/avatars/e7ebcefa6a9b60bf0c20bbaf0da14408f96a511b26d015736bcf0b3292d47d91?size=64" title="famfo-cb" width="28" height="28"/>
+			
+		</span>
+	
+</div>
+</a>
+
+	
+
+	
+	<span class="grey commit-summary" title="CB/bp: fix: panic when Actions jobs with reusable workflows &gt;4k in size are scheduled (#13823)"><span class="message-wrapper"><a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" class="default-link muted">CB/bp: fix: panic when Actions jobs with reusable workflows &gt;4k in size are scheduled (</a><a href="" class="ref-issue ref-external-issue">#13823</a><a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" class="default-link muted">)</a></span>
+		
+			<button class="ui button js-toggle-commit-body ellipsis-button" aria-expanded="false">...</button>
+			<pre class="commit-body tw-hidden">`expandLocalReusableWorkflows` opened a reader to get repository contents that was never closed.  For small files this would cause no issue as a git blob optimization reads those into memory and closes the reader immediately, but larger files being present as a reusable workflow would leave this reader unclosed.  <a href="" class="ref-issue ref-external-issue">#13756</a> formalized a requirement that `git cat-file` readers must be closed before the repository&#39;s `Close` is invoked, and added a panic when that isn&#39;t followed, which would cause a panic.
+
+Reviewed-on: <a href="https://codeberg.org/forgejo/forgejo/pulls/13823" class="ref-issue">forgejo/forgejo#13823</a>
+Reviewed-by: Gusted &lt;gusted@noreply.codeberg.org&gt;</pre>
+		
+	</span>
+
+
+					</div>
+				</div>
+			</td>
+			<td class="text grey right age repo-files-table-latest-commit-cell tw-py-0"><relative-time prefix="" tense="past" datetime="2026-08-11T12:27:37+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:27:37 +02:00</relative-time></td>
+		</tr>
+		
+		
+			
+			
+			<tr data-entryname=".devcontainer" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.devcontainer" title=".devcontainer">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>.devcontainer
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/3e74c5224f6cec8cc8ef456509341254f41e458e" class="default-link muted">chore: rename devcontainer name (</a><a href="" class="ref-issue ref-external-issue">#12356</a><a href="/Codeberg-Infrastructure/forgejo/commit/3e74c5224f6cec8cc8ef456509341254f41e458e" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-01T00:20:15+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-01 00:20:15 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".forgejo" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.forgejo" title=".forgejo">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>.forgejo
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/e6bf743c0418b12dbe75f91f9801b04bc5a63259" class="default-link muted">Update actions/setup-forgejo to v3.2.3 (forgejo) (</a><a href="" class="ref-issue ref-external-issue">#13154</a><a href="/Codeberg-Infrastructure/forgejo/commit/e6bf743c0418b12dbe75f91f9801b04bc5a63259" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-21T03:42:54+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-21 03:42:54 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".semgrep" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.semgrep" title=".semgrep">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>.semgrep
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a5a2cae7eeab18675df14a0fdada059a50cb624b" class="default-link muted">[v16.0/forgejo] chore(refactor): add getter/setter to APIContext data members (</a><a href="" class="ref-issue ref-external-issue">#13213</a><a href="/Codeberg-Infrastructure/forgejo/commit/a5a2cae7eeab18675df14a0fdada059a50cb624b" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-27T18:27:57+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-27 18:27:57 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="assets" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/assets" title="assets">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>assets
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/bd4201ed25c060986669941de6df47ab107fa143" class="default-link muted">chore: remove EXIF stripping capability due to usage of AGPL licensed exif-terminator library (</a><a href="" class="ref-issue ref-external-issue">#13105</a><a href="/Codeberg-Infrastructure/forgejo/commit/bd4201ed25c060986669941de6df47ab107fa143" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-17T16:16:35+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-17 16:16:35 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="build" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/build" title="build">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>build
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/7b5d62373738fc59b2e92ab7741d436b78955670" class="default-link muted">fix: introduce lint-single-response to prevent control flow continuing past a <code class="inline-code-block">ctx.Error(...)</code>-style method (</a><a href="" class="ref-issue ref-external-issue">#13087</a><a href="/Codeberg-Infrastructure/forgejo/commit/7b5d62373738fc59b2e92ab7741d436b78955670" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-14T17:06:03+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-14 17:06:03 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="cmd" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/cmd" title="cmd">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>cmd
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/75227ebbf6f30f927835d64b715e8b155bb73ec8" class="default-link muted">feat: search authorized key via fingerprint</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-27T18:40:41+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-27 18:40:41 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="contrib" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/contrib" title="contrib">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>contrib
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/61d41b9d8fb7f6065021cb856afe3301758e47fb" class="default-link muted">CB/contrib: Change default label set</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-16T12:05:53+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-16 12:05:53 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="custom" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/custom/conf" title="custom/conf">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg><span class="text light-2">custom</span>/conf
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/1702af0af221eb3b688937d4f03a7cb59743ab12" class="default-link muted">[v16.0/forgejo] chore: document SSH_ALLOW_UNEXPECTED_AUTHORIZED_KEYS (</a><a href="" class="ref-issue ref-external-issue">#13569</a><a href="/Codeberg-Infrastructure/forgejo/commit/1702af0af221eb3b688937d4f03a7cb59743ab12" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-22T07:14:46+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-22 07:14:46 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="docker" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/docker" title="docker">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>docker
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/81a5b0d8403d1bbb01421bb75b70bbfeb59d0c73" class="default-link muted">fix: remove default &#39;REVERSE_PROXY_TRUSTED_PROXIES = *&#39; from docker config (</a><a href="" class="ref-issue ref-external-issue">#12782</a><a href="/Codeberg-Infrastructure/forgejo/commit/81a5b0d8403d1bbb01421bb75b70bbfeb59d0c73" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-28T13:52:03+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-28 13:52:03 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="models" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/models" title="models">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>models
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a7c7e0d79ab265a05fd27f519d93a2dde490c35c" class="default-link muted">Merge branch &#39;v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:26:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:26:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="modules" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/modules" title="modules">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>modules
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" class="default-link muted">CB/bp: fix: panic when Actions jobs with reusable workflows &gt;4k in size are scheduled (</a><a href="" class="ref-issue ref-external-issue">#13823</a><a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:27:37+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:27:37 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="options" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/options" title="options">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>options
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/f9251daa3b0260007538c71bdd9c31155a6ce361" class="default-link muted">feat(admin): add menu to edit user quota groups</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-27T18:37:52+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-27 18:37:52 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="public" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/public" title="public">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>public
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/1bf79860b0863da38a02e7a1a500e7bdad0f9a52" class="default-link muted">CB/perf: serve logo from Forgejo assets</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-16T13:16:18+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-16 13:16:18 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="release-notes" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/release-notes" title="release-notes">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>release-notes
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/6c0468d64f3fd02f4b617f8de3c164df468d4953" class="default-link muted">[v16.0/forgejo] feat: render OSC 8 sequences safely (</a><a href="" class="ref-issue ref-external-issue">#13324</a><a href="/Codeberg-Infrastructure/forgejo/commit/6c0468d64f3fd02f4b617f8de3c164df468d4953" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-06T15:42:02+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-06 15:42:02 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="release-notes-published" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/release-notes-published" title="release-notes-published">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>release-notes-published
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/6f8c3427831a663a2a328ff81f09c8e829fcf4d9" class="default-link muted">chore(release-notes): Forgejo v15.0.3 (</a><a href="" class="ref-issue ref-external-issue">#13033</a><a href="/Codeberg-Infrastructure/forgejo/commit/6f8c3427831a663a2a328ff81f09c8e829fcf4d9" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-10T07:53:28+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-10 07:53:28 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="releases" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/releases/images" title="releases/images">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg><span class="text light-2">releases</span>/images
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/bbdf3613931880eddec713875d7a8af64a3c6e96" class="default-link muted">[DOCS] RELEASE-NOTES.md</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-02-05T14:44:32+01:00" data-tooltip-content data-tooltip-interactive="true">2024-02-05 14:44:32 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="routers" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/routers" title="routers">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>routers
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a7c7e0d79ab265a05fd27f519d93a2dde490c35c" class="default-link muted">Merge branch &#39;v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:26:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:26:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="services" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/services" title="services">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>services
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" class="default-link muted">CB/bp: fix: panic when Actions jobs with reusable workflows &gt;4k in size are scheduled (</a><a href="" class="ref-issue ref-external-issue">#13823</a><a href="/Codeberg-Infrastructure/forgejo/commit/33ae492b2d08d88800a57a5f91ae81c78791b731" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:27:37+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:27:37 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="templates" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/templates" title="templates">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>templates
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a7c7e0d79ab265a05fd27f519d93a2dde490c35c" class="default-link muted">Merge branch &#39;v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:26:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:26:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="tests" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/tests" title="tests">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>tests
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a7c7e0d79ab265a05fd27f519d93a2dde490c35c" class="default-link muted">Merge branch &#39;v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:26:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:26:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="tools" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/tools" title="tools">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>tools
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a81fc2a29048dad1930bd0e6a70ded82724772b0" class="default-link muted">chore: move backend-checks CI checks to Makefile: <code class="inline-code-block">make pr-go</code> (</a><a href="" class="ref-issue ref-external-issue">#11053</a><a href="/Codeberg-Infrastructure/forgejo/commit/a81fc2a29048dad1930bd0e6a70ded82724772b0" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-02-17T02:41:40+01:00" data-tooltip-content data-tooltip-interactive="true">2026-02-17 02:41:40 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="web_src" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/web_src" title="web_src">
+									
+									
+									<svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file-directory-fill" aria-hidden="true" width="16" height="16"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1z"/></svg>web_src
+									
+								</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a7c7e0d79ab265a05fd27f519d93a2dde490c35c" class="default-link muted">Merge branch &#39;v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:26:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:26:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".air.toml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.air.toml" title=".air.toml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.air.toml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a0be0f22fc34a20e90797dada527c19cd2e1eaf1" class="default-link muted">chore: rename &#39;migrations&#39; to &#39;gitea_migrations&#39;</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2025-10-14T14:40:49-06:00" data-tooltip-content data-tooltip-interactive="true">2025-10-14 14:40:49 -06:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".deadcode-out" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.deadcode-out" title=".deadcode-out"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.deadcode-out</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/fb0ab1e5fa4e1f500c077b2da92d41fd960b815d" class="default-link muted">[v16.0/forgejo] chore(refactor): remove GetX redundant accessors and use X in services/context/api.go (</a><a href="" class="ref-issue ref-external-issue">#13217</a><a href="/Codeberg-Infrastructure/forgejo/commit/fb0ab1e5fa4e1f500c077b2da92d41fd960b815d" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-27T22:44:01+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-27 22:44:01 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".dockerignore" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.dockerignore" title=".dockerignore"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.dockerignore</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/fd2f9e684223cf44137e44a0f13b24ccfcbdf2ec" class="default-link muted">fix: Dockerfile should re-use bindata files when possible</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2025-06-13T14:00:57+02:00" data-tooltip-content data-tooltip-interactive="true">2025-06-13 14:00:57 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".editorconfig" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.editorconfig" title=".editorconfig"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.editorconfig</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/89544a72e92d07552e03c46dd394990996ab8e4b" class="default-link muted">chore: rename codeberg themes to codeberg-legacy</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-16T13:19:49+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-16 13:19:49 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".envrc.example" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.envrc.example" title=".envrc.example"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.envrc.example</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/ffcf80c3a5f429420c94db1b7bd71589d5811c2d" class="default-link muted">Make direnv optional to let developers use their own direnv configuration</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-11-06T20:34:49+01:00" data-tooltip-content data-tooltip-interactive="true">2024-11-06 20:34:49 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".gitattributes" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.gitattributes" title=".gitattributes"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.gitattributes</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/bf933f5ca4ae928fdc840649c59641dc18585169" class="default-link muted">Add <code class="inline-code-block">interface{}</code> to <code class="inline-code-block">any</code> replacement to <code class="inline-code-block">make fmt</code>, exclude <code class="inline-code-block">*.pb.go</code> (</a><a href="" class="ref-issue ref-external-issue">#30461</a><a href="/Codeberg-Infrastructure/forgejo/commit/bf933f5ca4ae928fdc840649c59641dc18585169" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-04-15T20:01:36+02:00" data-tooltip-content data-tooltip-interactive="true">2024-04-15 20:01:36 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".gitignore" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.gitignore" title=".gitignore"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.gitignore</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/c956dae73d54004ef572081b61df0a09a5ee3d78" class="default-link muted">feat: adds option to force overwrite new branch for /contents route (</a><a href="" class="ref-issue ref-external-issue">#12663</a><a href="/Codeberg-Infrastructure/forgejo/commit/c956dae73d54004ef572081b61df0a09a5ee3d78" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-06T16:45:57+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-06 16:45:57 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".gitmodules" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.gitmodules" title=".gitmodules"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.gitmodules</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/69c614162f63a17a00ff34295742dcd04812c864" class="default-link muted">cleanup(tests): remove manual testing submodule</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-04-21T10:13:51+02:00" data-tooltip-content data-tooltip-interactive="true">2024-04-21 10:13:51 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".gitpod.yml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.gitpod.yml" title=".gitpod.yml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.gitpod.yml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/3befabead064aefe1352265edd14d9ec4cd819f4" class="default-link muted">Remove sqlite-viewer and using database client (</a><a href="" class="ref-issue ref-external-issue">#31223</a><a href="/Codeberg-Infrastructure/forgejo/commit/3befabead064aefe1352265edd14d9ec4cd819f4" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-06-09T11:13:39+02:00" data-tooltip-content data-tooltip-interactive="true">2024-06-09 11:13:39 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".golangci.yml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.golangci.yml" title=".golangci.yml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.golangci.yml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/65e35d2ba0596f0ee9d98246acbf890ac8e00bca" class="default-link muted">chore(refactor): run routers/api/v1/permissions/tests from tests/integration (</a><a href="" class="ref-issue ref-external-issue">#13157</a><a href="/Codeberg-Infrastructure/forgejo/commit/65e35d2ba0596f0ee9d98246acbf890ac8e00bca" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-21T21:43:57+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-21 21:43:57 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".ignore" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.ignore" title=".ignore"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.ignore</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/f3e97bc27cb725cc89ceb0d5e0f0dc6831752b1f" class="default-link muted">Add <code class="inline-code-block">/options/license</code> and <code class="inline-code-block">/options/gitignore</code> to <code class="inline-code-block">.ignore</code> (</a><a href="" class="ref-issue ref-external-issue">#30219</a><a href="/Codeberg-Infrastructure/forgejo/commit/f3e97bc27cb725cc89ceb0d5e0f0dc6831752b1f" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-04-07T15:40:31+02:00" data-tooltip-content data-tooltip-interactive="true">2024-04-07 15:40:31 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".mailmap" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.mailmap" title=".mailmap"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.mailmap</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/82fcc6768a310caeefcea2d8295944c6515a98fa" class="default-link muted">Add .mailmap with aliases for Unknwon (github.com/Unknwon)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-08-14T08:26:16-04:00" data-tooltip-content data-tooltip-interactive="true">2024-08-14 08:26:16 -04:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".markdownlint.yaml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.markdownlint.yaml" title=".markdownlint.yaml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.markdownlint.yaml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/ce55a74374aa1fe07cfb79ceeb8554aa7a2abce2" class="default-link muted">Update JS dependencies (</a><a href="" class="ref-issue ref-external-issue">#28537</a><a href="/Codeberg-Infrastructure/forgejo/commit/ce55a74374aa1fe07cfb79ceeb8554aa7a2abce2" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2023-12-30T05:29:03Z" data-tooltip-content data-tooltip-interactive="true">2023-12-30 05:29:03 +00:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".mockery.yml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.mockery.yml" title=".mockery.yml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.mockery.yml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/6b3359f016f2ab12cb5dca96a639b66f8e925162" class="default-link muted">feat: evaluate action job&#39;s <code class="inline-code-block">if</code> on the server-side when possible (</a><a href="" class="ref-issue ref-external-issue">#13030</a><a href="/Codeberg-Infrastructure/forgejo/commit/6b3359f016f2ab12cb5dca96a639b66f8e925162" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-16T00:02:57+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-16 00:02:57 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".node-version" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.node-version" title=".node-version"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.node-version</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/5bd855709be72375b42fc0c15fc7f5b130778184" class="default-link muted">Update nodejs to v24.17.0 (forgejo) (</a><a href="" class="ref-issue ref-external-issue">#13144</a><a href="/Codeberg-Infrastructure/forgejo/commit/5bd855709be72375b42fc0c15fc7f5b130778184" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-20T02:23:03+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-20 02:23:03 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".npmrc" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.npmrc" title=".npmrc"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.npmrc</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/7eede7f8de299a8e657937d237f9d62e44bdd79b" class="default-link muted">Upgrade to npm lockfile v3 and explicitely set it (</a><a href="" class="ref-issue ref-external-issue">#23561</a><a href="/Codeberg-Infrastructure/forgejo/commit/7eede7f8de299a8e657937d237f9d62e44bdd79b" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2023-03-18T19:38:10+01:00" data-tooltip-content data-tooltip-interactive="true">2023-03-18 19:38:10 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".release-notes-assistant.yaml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.release-notes-assistant.yaml" title=".release-notes-assistant.yaml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.release-notes-assistant.yaml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/abcfb4669199e811cb74dd7a30b21ba5bb914f5e" class="default-link muted">chore: fix rna config (</a><a href="" class="ref-issue ref-external-issue">#12304</a><a href="/Codeberg-Infrastructure/forgejo/commit/abcfb4669199e811cb74dd7a30b21ba5bb914f5e" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-04-28T18:56:52+02:00" data-tooltip-content data-tooltip-interactive="true">2026-04-28 18:56:52 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".spectral.yaml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.spectral.yaml" title=".spectral.yaml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.spectral.yaml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/c8e0fd0bccb37898c1eb111256397c9c2e039598" class="default-link muted">Add spectral linter for Swagger (</a><a href="" class="ref-issue ref-external-issue">#20321</a><a href="/Codeberg-Infrastructure/forgejo/commit/c8e0fd0bccb37898c1eb111256397c9c2e039598" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2022-07-11T18:07:16-05:00" data-tooltip-content data-tooltip-interactive="true">2022-07-11 18:07:16 -05:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname=".yamllint.yaml" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/.yamllint.yaml" title=".yamllint.yaml"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>.yamllint.yaml</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/dc7cf7a984f9490fb65a137a73bfbda4b58979bb" class="default-link muted">fully replace drone with actions (</a><a href="" class="ref-issue ref-external-issue">#27556</a><a href="/Codeberg-Infrastructure/forgejo/commit/dc7cf7a984f9490fb65a137a73bfbda4b58979bb" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2023-10-11T06:39:32Z" data-tooltip-content data-tooltip-interactive="true">2023-10-11 06:39:32 +00:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="BSDmakefile" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/BSDmakefile" title="BSDmakefile"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>BSDmakefile</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/9289e293fd466ab1aba63ba1c2123d4eb4cadd59" class="default-link muted">feat: Makefile &amp; BSDmakefile changes (</a><a href="" class="ref-issue ref-external-issue">#7455</a><a href="/Codeberg-Infrastructure/forgejo/commit/9289e293fd466ab1aba63ba1c2123d4eb4cadd59" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2025-04-27T10:04:32Z" data-tooltip-content data-tooltip-interactive="true">2025-04-27 10:04:32 +00:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="CODEOWNERS" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/CODEOWNERS" title="CODEOWNERS"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>CODEOWNERS</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/5f9745978af961ae6bf6fff98cee8b484efdfae6" class="default-link muted">chore: update codeowners (</a><a href="" class="ref-issue ref-external-issue">#12844</a><a href="/Codeberg-Infrastructure/forgejo/commit/5f9745978af961ae6bf6fff98cee8b484efdfae6" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-31T14:42:17+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-31 14:42:17 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="CONTRIBUTING.md" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/CONTRIBUTING.md" title="CONTRIBUTING.md"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>CONTRIBUTING.md</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/f102bc2b51b99b7487d1e8d9869b04d3b1a00872" class="default-link muted">chore: mention CoC and highlight AI agreement in CONTRIBUTING.md (</a><a href="" class="ref-issue ref-external-issue">#12867</a><a href="/Codeberg-Infrastructure/forgejo/commit/f102bc2b51b99b7487d1e8d9869b04d3b1a00872" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-01T16:17:35+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-01 16:17:35 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="DCO" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/DCO" title="DCO"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>DCO</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/b91bc680922a9f379ae026dea19c47e132d723af" class="default-link muted">Remove address from DCO (</a><a href="" class="ref-issue ref-external-issue">#22595</a><a href="/Codeberg-Infrastructure/forgejo/commit/b91bc680922a9f379ae026dea19c47e132d723af" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2023-01-24T18:52:38Z" data-tooltip-content data-tooltip-interactive="true">2023-01-24 18:52:38 +00:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="Dockerfile" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/Dockerfile" title="Dockerfile"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>Dockerfile</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/68702415c394743ecd5be93a03f48c196b0f7ced" class="default-link muted">Update data.forgejo.org/oci/golang Docker tag to v1.26 (forgejo) (</a><a href="" class="ref-issue ref-external-issue">#11662</a><a href="/Codeberg-Infrastructure/forgejo/commit/68702415c394743ecd5be93a03f48c196b0f7ced" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-03-13T08:17:21+01:00" data-tooltip-content data-tooltip-interactive="true">2026-03-13 08:17:21 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="Dockerfile.rootless" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/Dockerfile.rootless" title="Dockerfile.rootless"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>Dockerfile.rootless</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/68702415c394743ecd5be93a03f48c196b0f7ced" class="default-link muted">Update data.forgejo.org/oci/golang Docker tag to v1.26 (forgejo) (</a><a href="" class="ref-issue ref-external-issue">#11662</a><a href="/Codeberg-Infrastructure/forgejo/commit/68702415c394743ecd5be93a03f48c196b0f7ced" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-03-13T08:17:21+01:00" data-tooltip-content data-tooltip-interactive="true">2026-03-13 08:17:21 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="eslint.config.mjs" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/eslint.config.mjs" title="eslint.config.mjs"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>eslint.config.mjs</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/62c32f00e4de2232faf64da6117786c0b6fe0574" class="default-link muted">Update linters (forgejo) (</a><a href="" class="ref-issue ref-external-issue">#11627</a><a href="/Codeberg-Infrastructure/forgejo/commit/62c32f00e4de2232faf64da6117786c0b6fe0574" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-03-12T18:27:43+01:00" data-tooltip-content data-tooltip-interactive="true">2026-03-12 18:27:43 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="flake.lock" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/flake.lock" title="flake.lock"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>flake.lock</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/9a5d9397a47ef231b3c5af815e40645503c29d42" class="default-link muted">chore: update flake.lock; add gnupg as dependency (</a><a href="" class="ref-issue ref-external-issue">#12497</a><a href="/Codeberg-Infrastructure/forgejo/commit/9a5d9397a47ef231b3c5af815e40645503c29d42" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-09T23:53:35+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-09 23:53:35 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="flake.nix" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/flake.nix" title="flake.nix"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>flake.nix</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/3d13a1ccb833bcd001fc8b103a77c35ce24e87c9" class="default-link muted">refactor: Simplify flake.nix (</a><a href="" class="ref-issue ref-external-issue">#9805</a><a href="/Codeberg-Infrastructure/forgejo/commit/3d13a1ccb833bcd001fc8b103a77c35ce24e87c9" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2025-10-22T19:09:11+02:00" data-tooltip-content data-tooltip-interactive="true">2025-10-22 19:09:11 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="go.mod" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/go.mod" title="go.mod"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>go.mod</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/a7c7e0d79ab265a05fd27f519d93a2dde490c35c" class="default-link muted">Merge branch &#39;v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-11T12:26:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-11 12:26:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="go.sum" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/go.sum" title="go.sum"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>go.sum</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/8f7c2f1aa2267aac79999df38005605359443444" class="default-link muted">Merge remote-tracking branch &#39;forgejo/v16.0/forgejo&#39; into codeberg-16</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-30T05:58:57+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-30 05:58:57 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="LICENSE" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/LICENSE" title="LICENSE"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>LICENSE</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/94631ccef67eb385f416feb9017214f3da99ab3a" class="default-link muted">Forgejo v9.0 is GPLv3+</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2024-08-22T09:09:29+02:00" data-tooltip-content data-tooltip-interactive="true">2024-08-22 09:09:29 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="main.go" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/main.go" title="main.go"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>main.go</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/e2cf8520bcdcba410f95e080cff476d36364bb60" class="default-link muted">fix: do not mix urfave v2 with urfave v3 (</a><a href="" class="ref-issue ref-external-issue">#8168</a><a href="/Codeberg-Infrastructure/forgejo/commit/e2cf8520bcdcba410f95e080cff476d36364bb60" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2025-06-12T15:38:03+02:00" data-tooltip-content data-tooltip-interactive="true">2025-06-12 15:38:03 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="Makefile" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/Makefile" title="Makefile"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>Makefile</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/0565914ad614f91969ee9544ff6829fb15eab338" class="default-link muted">CB/fix: Drop forgejo Makefile dependency</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-16T13:15:40+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-16 13:15:40 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="manifest.scm" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/manifest.scm" title="manifest.scm"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>manifest.scm</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/8dd01fa86119e1af27d5a3ffd709feebd239f32a" class="default-link muted">chore: add delve Go debugger to Guix manifest (</a><a href="" class="ref-issue ref-external-issue">#12662</a><a href="/Codeberg-Infrastructure/forgejo/commit/8dd01fa86119e1af27d5a3ffd709feebd239f32a" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-22T11:09:11+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-22 11:09:11 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="package-lock.json" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/package-lock.json" title="package-lock.json"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>package-lock.json</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/19b2f7669725cdb2959cee7c4bc2880d568c7c11" class="default-link muted">Update dependency mermaid to v11.16.1 [SECURITY] (v16.0/forgejo) (</a><a href="" class="ref-issue ref-external-issue">#13809</a><a href="/Codeberg-Infrastructure/forgejo/commit/19b2f7669725cdb2959cee7c4bc2880d568c7c11" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-07T14:50:15+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-07 14:50:15 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="package.json" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/package.json" title="package.json"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>package.json</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/19b2f7669725cdb2959cee7c4bc2880d568c7c11" class="default-link muted">Update dependency mermaid to v11.16.1 [SECURITY] (v16.0/forgejo) (</a><a href="" class="ref-issue ref-external-issue">#13809</a><a href="/Codeberg-Infrastructure/forgejo/commit/19b2f7669725cdb2959cee7c4bc2880d568c7c11" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-08-07T14:50:15+02:00" data-tooltip-content data-tooltip-interactive="true">2026-08-07 14:50:15 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="playwright.config.ts" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/playwright.config.ts" title="playwright.config.ts"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>playwright.config.ts</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/eb76582261fde94b744cd4f5390ca11416bb394b" class="default-link muted">chore(e2e): refactor &#34;Toggle visibility&#34; org-members test (</a><a href="" class="ref-issue ref-external-issue">#12871</a><a href="/Codeberg-Infrastructure/forgejo/commit/eb76582261fde94b744cd4f5390ca11416bb394b" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-06-02T14:52:01+02:00" data-tooltip-content data-tooltip-interactive="true">2026-06-02 14:52:01 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="README.md" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/README.md" title="README.md"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>README.md</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/5d3fd605850a66f4f882be2f99e6e5f3129c35e4" class="default-link muted">CB/meta: Add custom README for Codeberg&#39;s fork (</a><a href="/Codeberg-Infrastructure/forgejo/pulls/82" class="ref-issue">!82</a><a href="/Codeberg-Infrastructure/forgejo/commit/5d3fd605850a66f4f882be2f99e6e5f3129c35e4" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-16T13:15:19+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-16 13:15:19 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="release-notes-assistant.sh" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/release-notes-assistant.sh" title="release-notes-assistant.sh"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>release-notes-assistant.sh</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/766c9c64f5a9f6c84b906ebd7cfad1aee87a203a" class="default-link muted">fix(rna): prioritize breaking changes without a feature or bug label over non-breaking changes (</a><a href="" class="ref-issue ref-external-issue">#12124</a><a href="/Codeberg-Infrastructure/forgejo/commit/766c9c64f5a9f6c84b906ebd7cfad1aee87a203a" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-04-17T15:24:58+02:00" data-tooltip-content data-tooltip-interactive="true">2026-04-17 15:24:58 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="RELEASE-NOTES.md" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/RELEASE-NOTES.md" title="RELEASE-NOTES.md"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>RELEASE-NOTES.md</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/1e113fd8dc3419875c996f9bb23040d41aefd2b0" class="default-link muted">chore(release-notes): fix release notes of chroma update in v8.0.0</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2025-10-05T17:10:38+05:00" data-tooltip-content data-tooltip-interactive="true">2025-10-05 17:10:38 +05:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="shell.nix" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/shell.nix" title="shell.nix"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>shell.nix</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/9a5d9397a47ef231b3c5af815e40645503c29d42" class="default-link muted">chore: update flake.lock; add gnupg as dependency (</a><a href="" class="ref-issue ref-external-issue">#12497</a><a href="/Codeberg-Infrastructure/forgejo/commit/9a5d9397a47ef231b3c5af815e40645503c29d42" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-09T23:53:35+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-09 23:53:35 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="stylelint.config.js" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/stylelint.config.js" title="stylelint.config.js"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>stylelint.config.js</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/6b75654cc2b7161c64c5c0633fe8b00a96b6bc35" class="default-link muted">chore: enforce RTL-friendly logical CSS properties with a linter (</a><a href="" class="ref-issue ref-external-issue">#12491</a><a href="/Codeberg-Infrastructure/forgejo/commit/6b75654cc2b7161c64c5c0633fe8b00a96b6bc35" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-05-11T00:20:45+02:00" data-tooltip-content data-tooltip-interactive="true">2026-05-11 00:20:45 +02:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="tailwind.config.js" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/tailwind.config.js" title="tailwind.config.js"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>tailwind.config.js</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/3cafb7fa6ced503113681eefb75f80bfd1104138" class="default-link muted">chore(ui): change /devtest to /-/demo (</a><a href="" class="ref-issue ref-external-issue">#11019</a><a href="/Codeberg-Infrastructure/forgejo/commit/3cafb7fa6ced503113681eefb75f80bfd1104138" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-01-26T13:12:25+01:00" data-tooltip-content data-tooltip-interactive="true">2026-01-26 13:12:25 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="tsconfig.json" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/tsconfig.json" title="tsconfig.json"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>tsconfig.json</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/28e0af23faf6c8e8f353ba2ae818ee0f83fd3e5c" class="default-link muted">feat(ui): replace Monaco with CodeMirror (</a><a href="" class="ref-issue ref-external-issue">#10559</a><a href="/Codeberg-Infrastructure/forgejo/commit/28e0af23faf6c8e8f353ba2ae818ee0f83fd3e5c" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-01-04T23:52:33+01:00" data-tooltip-content data-tooltip-interactive="true">2026-01-04 23:52:33 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="vitest.config.ts" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/vitest.config.ts" title="vitest.config.ts"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>vitest.config.ts</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/28e0af23faf6c8e8f353ba2ae818ee0f83fd3e5c" class="default-link muted">feat(ui): replace Monaco with CodeMirror (</a><a href="" class="ref-issue ref-external-issue">#10559</a><a href="/Codeberg-Infrastructure/forgejo/commit/28e0af23faf6c8e8f353ba2ae818ee0f83fd3e5c" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-01-04T23:52:33+01:00" data-tooltip-content data-tooltip-interactive="true">2026-01-04 23:52:33 +01:00</relative-time></td>
+			</tr>
+		
+			
+			
+			<tr data-entryname="webpack.config.js" data-ready="true" class="ready entry">
+				<td class="name four wide">
+					<span class="truncate">
+						
+							
+								<a class="muted" href="/Codeberg-Infrastructure/forgejo/src/branch/codeberg-16/webpack.config.js" title="webpack.config.js"><svg viewBox="0 0 16 16" class="tw-mr-2 svg octicon-file" aria-hidden="true" width="16" height="16"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg>webpack.config.js</a>
+							
+						
+					</span>
+				</td>
+				<td class="message nine wide">
+					<span class="truncate">
+						
+							
+							<a href="/Codeberg-Infrastructure/forgejo/commit/6e6136e6f9bf40aaf71928bd9188089c7b594005" class="default-link muted">CB/ui: Landingpage renovation (</a><a href="/Codeberg-Infrastructure/forgejo/pulls/35" class="ref-issue">!35</a><a href="/Codeberg-Infrastructure/forgejo/commit/6e6136e6f9bf40aaf71928bd9188089c7b594005" class="default-link muted">)</a>
+						
+					</span>
+				</td>
+				<td class="text right age three wide"><relative-time prefix="" tense="past" datetime="2026-07-16T12:46:08+02:00" data-tooltip-content data-tooltip-interactive="true">2026-07-16 12:46:08 +02:00</relative-time></td>
+			</tr>
+		
+	</tbody>
+</table>
+
+	<div id="readme" class="tab-size-2 non-diff-file-content">
+
+	
+
+	<h4 class="file-header ui top attached header tw-flex tw-items-center tw-justify-between tw-flex-wrap">
+		<div class="file-header-left tw-flex tw-items-center tw-pr-4 tw-flex-wrap tw-gap-2">
+			
+				<svg viewBox="0 0 16 16" class="svg octicon-book" aria-hidden="true" width="16" height="16"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.74 3.74 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574M8.755 4.75l-.004 7.322a3.75 3.75 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25"/></svg>
+				<strong><a class="default-link muted" href="#readme">README.md</a></strong>
+			
+		</div>
+		<div class="file-header-right file-actions tw-flex tw-items-center tw-flex-wrap">
+			
+			
+			
+		</div>
+	</h4>
+	<div class="ui bottom attached table unstackable segment">
+		
+		<div class="file-view markup markdown">
+			
+				<h1 id="user-content-forgejo-codeberg" dir="auto">Forgejo (Codeberg)</h1>
+<p dir="auto"><a href="https://codeberg.org" rel="nofollow"><strong>Codeberg&#39;s</strong></a> fork of <a href="https://forgejo.org" rel="nofollow">Forgejo</a>,
+a self-hosted lightweight software forge.</p>
+<p dir="auto">Some changes made to <a href="https://codeberg.org/forgejo/forgejo" rel="nofollow">Forgejo&#39;s source code</a> are:</p>
+<ul dir="auto">
+<li>Codeberg-specific themes</li>
+<li><a href="https://codeberg.org/about" rel="nofollow">Codeberg&#39;s custom landing page</a></li>
+<li>Codeberg&#39;s custom footer</li>
+<li>Various optimizations necessary for running a large instance</li>
+<li>Dirty hacks that we needed to deploy as soon as possible</li>
+</ul>
+<p dir="auto">Some of our patches may be helpful if you wish to operate a large Forgejo instance.
+However, this repository as a whole contains a custom version of Forgejo
+that is explicitly <strong>not</strong> intended for private use.</p>
+<p dir="auto"><strong>Codeberg</strong> and <strong>Forgejo</strong> work together, but, as projects, they remain separate.
+For more information about <strong>Forgejo</strong> and <strong>its relationship with Codeberg</strong>,
+take a look at <a href="https://forgejo.org/faq/" rel="nofollow">Forgejo&#39;s FAQ</a>.</p>
+<h2 id="user-content-reporting-issues" dir="auto">Reporting Issues</h2>
+<p dir="auto">If you wish to <strong>report an issue</strong> for the changes that <strong>Codeberg</strong> has made
+or are not sure where you should open an issue for a service hosted by <strong>Codeberg</strong>,
+please create an issue on <a href="https://codeberg.org/Codeberg/Community" rel="nofollow">Codeberg/Community</a>.</p>
+<p dir="auto">Additionally, <a href="https://forgejo.org" rel="nofollow"><strong>Forgejo</strong></a> maintains its own
+<a href="https://codeberg.org/forgejo/forgejo/issues" rel="nofollow">Issue Tracker</a>
+for bug reports and feature requests.</p>
+<h2 id="user-content-hosting" dir="auto">Hosting</h2>
+<p dir="auto">If you wish to host Forgejo on your own, please visit <a href="https://forgejo.org" rel="nofollow">forgejo.org</a>.</p>
+<p dir="auto">You can find some other repositories that help us operate <strong>codeberg.org</strong> in the
+<a href="https://codeberg.org/Codeberg-Infrastructure" rel="nofollow">Codeberg-Infrastructure organisation</a>.</p>
+<p dir="auto">Our instance&#39;s <strong>Forgejo configuration files</strong> can be found here:
+<a href="https://codeberg.org/Codeberg-Infrastructure/build-deploy-forgejo" rel="nofollow">Codeberg-Infrastructure/build-deploy-forgejo</a></p>
+<blockquote class="attention-header attention-tip"><p class="attention-title" dir="auto"><svg viewbox="0 0 16 16" class="attention-icon attention-tip svg octicon-light-bulb" aria-hidden="true" width="16" height="16"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a9 9 0 0 0-.542-.68q-.126-.149-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259q-.142.172-.268.319c-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848q.113-.133.213-.253c.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75M5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5M6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75"></path></svg><strong class="attention-tip">Tip</strong></p>
+<p dir="auto">The configuration files include the settings required to enable the
+Codeberg-specific Forgejo themes, i.e. <code>codeberg-auto</code>, <code>codeberg-light</code>,
+<code>codeberg-dark</code> in your local Forgejo instance.</p>
+</blockquote>
+<h2 id="user-content-contributing" dir="auto">Contributing</h2>
+<p dir="auto">We follow the <a href="https://codeberg.org/forgejo/forgejo" rel="nofollow">upstream Forgejo tree</a>
+and most of the decisions that they make for everyone else.</p>
+<p dir="auto">If you want to send a patch to <a href="https://codeberg.org" rel="nofollow">codeberg.org</a>,
+the best way to do that is probably sending a patch to Forgejo.</p>
+<h3 id="user-content-branding" dir="auto">Branding</h3>
+<p dir="auto">Codeberg has a set of design-related guidelines,
+which can be found <a href="https://codeberg.org/Codeberg/Design" rel="nofollow">here</a>.</p>
+<h2 id="user-content-reporting-vulnerabilities" dir="auto">Reporting Vulnerabilities</h2>
+<p dir="auto">See <a href="https://codeberg.org/.well-known/security.txt" rel="nofollow">security.txt</a></p>
+
+			
+		</div>
+	</div>
+</div>
+
+
+
+		
+	</div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer class="page-footer" role="group" aria-label="Footer">
+	<div class="grid" aria-label="Links">
+		<div class="not-mobile">
+			<div class="branding" aria-hidden="true">
+				<img class="light-logo" loading="lazy" src="/assets/img/svg/cb-logo.svg" alt="Logo">
+				<img class="dark-logo" loading="lazy" src="/assets/img/svg/cb-logo-mono.svg" alt="Logo">
+			</div>
+			<div class="powered-by">
+				<div class="title">Powered by </div>
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org" aria-label="Forgejo">
+					<div class="branding" aria-hidden="true">
+						<img class="light-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark.svg" alt="Forgejo logo">
+						<img class="dark-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark-mono.svg" alt="Forgejo logo">
+					</div>
+				</a>
+				with <a class="tw-mt-0" href="/Codeberg-Infrastructure/forgejo" target="_blank">modifications</a>
+			</div>
+		</div>
+		<div>
+			<b id="codeberg-codeberg">Codeberg</b>
+			<ul>
+				<li><a href="https://blog.codeberg.org" target="_blank">Blog</a></li>
+				<li><a href="https://docs.codeberg.org" target="_blank">Documentation</a></li>
+				<li><a href="/Codeberg/Community/issues">Community issues</a></li>
+				
+				<li><a href="/Codeberg/Contributing">Contributing</a>
+				<li><a href="https://docs.codeberg.org/contact/#abuse" target="_blank">Report abuse</a>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-association">Association</b>
+			<ul>
+				<li><a href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F" target="_blank">Who are we?</a></li>
+				<li><a href="https://codeberg.org/codeberg/org/src/en/bylaws.md" target="_blank">Bylaws / Satzung</a></li>
+				<li><a href="https://docs.codeberg.org/improving-codeberg/donate/" target="_blank">Donate</a></li>
+				<li><a href="https://join.codeberg.org" target="_blank">Join / Support</a></li>
+				<li><a href="https://docs.codeberg.org/contact/" target="_blank">Contact</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-service">Services</b>
+			<ul>
+				<li><a href="https://codeberg.page" target="_blank">Codeberg Pages</a></li>
+				<li><a href="https://translate.codeberg.org" target="_blank">Codeberg Translate</a></li>
+				<li><a href="https://docs.codeberg.org/ci/#using-codeberg's-instance-of-woodpecker-ci" target="_blank">Woodpecker CI</a></li>
+				
+					<li><a href="/api/swagger">Forgejo API</a></li>
+				
+				<li><a href="https://status.codeberg.eu" target="_blank">Status page</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-legal">Legal</b>
+			<ul>
+				<li><a href="https://codeberg.org/codeberg/org/src/Imprint.md" target="_blank">Imprint / Impressum</a></li>
+				<li><a href="/codeberg/org/src/PrivacyPolicy.md" target="_blank">Privacy Policy</a></li>
+				<li><a href="/assets/licenses.txt">Licenses</a></li>
+				<li><a href="/codeberg/org/src/TermsOfUse.md">Terms of Use</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-bottom-grid">
+		<div class="footer-social">
+			<a href="https://social.anoxinon.de/@Codeberg" target="_blank" rel="noopener noreferrer">Mastodon</a> |
+			<a href="matrix:r/codeberg-space:matrix.org?action=join" target="_blank" rel="noopener noreferrer">Matrix Space</a>
+			<a href="https://matrix.to/#/#codeberg-space:matrix.org" target="_blank" rel="noopener noreferrer">(Web link)</a>
+			<button class="btn interact-fg tw-p-2 tw-inline" data-clipboard-text="#codeberg-space:matrix.org" data-tooltip-content="Copy to clipboard"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button>
+			<p class="only-mobile">
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org">Powered by Forgejo</a>
+			</p>
+		</div>
+		<div class="footer-language-switch">
+			<div class="ui language bottom floating slide up dropdown link item button">
+				<svg viewBox="0 0 16 16" class="svg octicon-globe" aria-hidden="true" width="16" height="16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M5.78 8.75a9.64 9.64 0 0 0 1.363 4.177q.383.64.857 1.215c.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a10 10 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.51 6.51 0 0 0 4.666 5.5q-.184-.271-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948m-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948q.18-.295.353-.552a6.51 6.51 0 0 0-4.666 5.5m10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948q-.18.296-.353.552a6.51 6.51 0 0 0 4.666-5.5Zm2.733-1.5a6.51 6.51 0 0 0-4.666-5.5q.184.272.353.552c.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+				<div class="text">English</div>
+				<div class="menu language-menu">
+					
+						<a lang="id-ID" data-url="/?lang=id-ID" class="item ">Bahasa Indonesia</a>
+					
+						<a lang="da" data-url="/?lang=da" class="item ">Dansk</a>
+					
+						<a lang="de-DE" data-url="/?lang=de-DE" class="item ">Deutsch</a>
+					
+						<a lang="en-US" data-url="/?lang=en-US" class="item active selected">English</a>
+					
+						<a lang="es-ES" data-url="/?lang=es-ES" class="item ">Español</a>
+					
+						<a lang="eo" data-url="/?lang=eo" class="item ">Esperanto</a>
+					
+						<a lang="fil" data-url="/?lang=fil" class="item ">Filipino</a>
+					
+						<a lang="fr-FR" data-url="/?lang=fr-FR" class="item ">Français</a>
+					
+						<a lang="it-IT" data-url="/?lang=it-IT" class="item ">Italiano</a>
+					
+						<a lang="lv-LV" data-url="/?lang=lv-LV" class="item ">Latviešu</a>
+					
+						<a lang="hu-HU" data-url="/?lang=hu-HU" class="item ">Magyar nyelv</a>
+					
+						<a lang="nl-NL" data-url="/?lang=nl-NL" class="item ">Nederlands</a>
+					
+						<a lang="nds" data-url="/?lang=nds" class="item ">Plattdüütsch</a>
+					
+						<a lang="pl-PL" data-url="/?lang=pl-PL" class="item ">Polski</a>
+					
+						<a lang="pt-PT" data-url="/?lang=pt-PT" class="item ">Português de Portugal</a>
+					
+						<a lang="pt-BR" data-url="/?lang=pt-BR" class="item ">Português do Brasil</a>
+					
+						<a lang="sl" data-url="/?lang=sl" class="item ">Slovenščina</a>
+					
+						<a lang="fi-FI" data-url="/?lang=fi-FI" class="item ">Suomi</a>
+					
+						<a lang="sv-SE" data-url="/?lang=sv-SE" class="item ">Svenska</a>
+					
+						<a lang="tr-TR" data-url="/?lang=tr-TR" class="item ">Türkçe</a>
+					
+						<a lang="cs-CZ" data-url="/?lang=cs-CZ" class="item ">Čeština</a>
+					
+						<a lang="el-GR" data-url="/?lang=el-GR" class="item ">Ελληνικά</a>
+					
+						<a lang="bg" data-url="/?lang=bg" class="item ">Български</a>
+					
+						<a lang="ru-RU" data-url="/?lang=ru-RU" class="item ">Русский</a>
+					
+						<a lang="uk-UA" data-url="/?lang=uk-UA" class="item ">Українська</a>
+					
+						<a lang="fa-IR" data-url="/?lang=fa-IR" class="item ">فارسی</a>
+					
+						<a lang="ja-JP" data-url="/?lang=ja-JP" class="item ">日本語</a>
+					
+						<a lang="zh-CN" data-url="/?lang=zh-CN" class="item ">简体中文</a>
+					
+						<a lang="zh-TW" data-url="/?lang=zh-TW" class="item ">繁體中文（台灣）</a>
+					
+						<a lang="zh-HK" data-url="/?lang=zh-HK" class="item ">繁體中文（香港）</a>
+					
+						<a lang="ko-KR" data-url="/?lang=ko-KR" class="item ">한국어</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tw-hidden">
+		
+			Page: 361ms<br>
+			Template: 60ms
+		
+	</div>
+  
+	
+		<div class="symbol-of-tolerance" role="img"></div>
+	
+</footer>
+
+
+	<script src="/assets/js/index.js?v=16.0.0-dev-694-33ae492b~gitea-1.22.0" onerror="alert('Failed to load asset files from {path}. Please make sure the asset files can be accessed.'.replace('{path}', this.src))"></script>
+
+	
+</body>
+</html>
+

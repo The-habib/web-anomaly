@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="codeberg-auto">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>org/TermsOfUse.md at main - Codeberg/org - Codeberg.org</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="author" content="Codeberg">
+	<meta name="description" content="org - Official Codeberg Documents and their unofficial translations.">
+	<meta name="keywords" content="git,non-profit,foss,oss,free,software,open,source,code,hosting">
+	<meta name="referrer" content="same-origin">
+
+
+	<link rel="alternate" type="application/atom+xml" title="" href="/Codeberg/org.atom">
+	<link rel="alternate" type="application/rss+xml" title="" href="/Codeberg/org.rss">
+
+	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="/assets/img/favicon.png" type="image/png">
+
+	
+<script>
+	
+	window.addEventListener('error', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.addEventListener('unhandledrejection', function(e) {window._globalHandlerErrors=window._globalHandlerErrors||[]; window._globalHandlerErrors.push(e);});
+	window.config = {
+		appUrl: 'https:\/\/codeberg.org\/',
+		appSubUrl: '',
+		assetVersionEncoded: encodeURIComponent('16.0.0-dev-694-33ae492b~gitea-1.22.0'), 
+		assetUrlPrefix: '\/assets',
+		runModeIsProd:  true ,
+		customEmojis: new Set(["git","gitea","codeberg","gitlab","github","gogs","forgejo"]),
+		pageData: {"DATETIMESTRINGS":{"FUTURE":"in future","NOW":"now","relativetime.1day":"yesterday","relativetime.1month":"last month","relativetime.1week":"last week","relativetime.1year":"last year"},"PLURALSTRINGS_FALLBACK":{},"PLURALSTRINGS_LANG":{"relativetime.days":["%d day ago","%d days ago"],"relativetime.duration.days":["%d day","%d days"],"relativetime.duration.hours":["%d hour","%d hours"],"relativetime.duration.mins":["%d minute","%d minutes"],"relativetime.duration.months":["%d month","%d months"],"relativetime.duration.secs":["%d second","%d seconds"],"relativetime.duration.weeks":["%d week","%d weeks"],"relativetime.duration.years":["%d year","%d years"],"relativetime.hours":["%d hour ago","%d hours ago"],"relativetime.mins":["%d minute ago","%d minutes ago"],"relativetime.months":["%d month ago","%d months ago"],"relativetime.weeks":["%d week ago","%d weeks ago"],"relativetime.years":["%d year ago","%d years ago"]},"PLURAL_RULE_FALLBACK":0,"PLURAL_RULE_LANG":0},
+		notificationSettings: {"EventSourceUpdateTime":10000,"MaxTimeout":60000,"MinTimeout":10000,"TimeoutStep":10000}, 
+		enableTimeTracking:  true ,
+		
+		mermaidMaxSourceCharacters:  50000 ,
+		
+		i18n: {
+			copy_success: "Copied!",
+			copy_error: "Copy failed",
+			error_occurred: "An error occurred",
+			network_error: "Network error",
+			remove_label_str: "Remove item \"%s\"",
+			modal_confirm: "Confirm",
+			modal_cancel: "Cancel",
+			more_items: "More items",
+			incorrect_root_url: "This Forgejo instance is configured to be served on \"https://codeberg.org/\". You are currently viewing Forgejo through a different URL, which may cause parts of the application to break. The canonical URL is controlled by Forgejo admins via the ROOT_URL setting in the app.ini.",
+		},
+	};
+	
+	window.config.pageData = window.config.pageData || {};
+</script>
+<script src="/assets/js/webcomponents.js?v=16.0.0-dev-694-33ae492b~gitea-1.22.0"></script>
+
+	
+
+	
+	<meta property="og:title" content="org/TermsOfUse.md at main">
+
+
+	<meta property="og:url" content="https://codeberg.org//Codeberg/org/src/branch/main/TermsOfUse.md">
+
+
+	<meta property="og:type" content="object">
+
+
+	<meta property="og:image" content="https://codeberg.org/Codeberg/org/-/summary-card">
+	
+		<meta property="og:image:width" content="1200">
+	
+	
+		<meta property="og:image:height" content="600">
+	
+	
+		<meta property="og:image:alt" content="Summary card of repository Codeberg/org, described as: Official Codeberg Documents and their unofficial translations.">
+	
+
+<meta property="og:site_name" content="Codeberg.org">
+
+	<link rel="stylesheet" href="/assets/css/index.css?v=16.0.0-dev-694-33ae492b~gitea-1.22.0">
+<link rel="stylesheet" href="/assets/css/theme-codeberg-auto.css?v=16.0.0-dev-694-33ae492b~gitea-1.22.0">
+
+	
+</head>
+<body class="no-js" hx-swap="outerHTML" hx-ext="morph" hx-push-url="false">
+	
+	<noscript>
+		<style>
+			#tou-announcement { display: flex !important; justify-content: center; }
+			#tou-announcement > :first-child, #tou-announcement > :last-child { display: none; }
+		</style>
+	</noscript>
+	<div id="tou-announcement" class="tw-hidden">
+		<div style="width: 108.3px"></div>
+		<div>
+		<span>Codeberg has changed its Terms of Use. <a href="https://codeberg.org/Codeberg/org/compare/17bdb39b0c1ecd0e423f3ba592650ce57fcdfbf5..71149c7fc95ccfeae36109b5cddca339e4aa1473?files=TermsOfUse.md#diff-d760d688bb9b929b62db808bfc76abe4493d095a">View complete changes</a>.</span>
+		<ol>
+			<li>LLM-generated content is being restricted. <a href="https://codeberg.org/Codeberg/org/commit/71149c7fc95ccfeae36109b5cddca339e4aa1473">View change</a> or <a href="https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html">read the blog post</a></li>
+			<li>Cryptocurrency projects are no longer allowed. <a href="https://codeberg.org/Codeberg/org/commit/f383b648fd733ab88083dc390b91e77cd7589980">View change</a></li>
+		</ol>
+		</div>
+		<button class="ui secondary button small"><svg viewBox="0 0 16 16" class="svg octicon-x" aria-hidden="true" width="16" height="16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-3.22 3.22a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06"/></svg> Dismiss</button>
+	</div>
+	<div class="full height">
+		<noscript>
+			<div class="tw-ml-2 tw-mr-2 tw-text-center tw-text-text-light-2">This website requires JavaScript.</div>
+		</noscript>
+
+		
+
+		
+			
+
+
+<nav id="navbar" aria-label="Navigation bar">
+	<div class="navbar-left ui secondary menu">
+		
+		<a class="item" id="navbar-logo" href="/" aria-label="Home">
+			<div class="branding" aria-hidden="true">
+				<img width="30" height="30" loading="lazy" class="light-logo" src="/assets/img/svg/cb-logo.svg" alt="Logo">
+				<img width="30" height="30" loading="lazy" class="dark-logo" src="/assets/img/svg/cb-logo-mono.svg" alt="Logo">
+			</div>
+		</a>
+
+		
+		<div class="ui secondary menu item navbar-mobile-right only-mobile">
+			
+			<button class="item tw-w-auto ui icon mini button tw-p-2 tw-m-0" id="navbar-expand-toggle" aria-label="Toggle menu"><svg viewBox="0 0 16 16" class="svg octicon-three-bars" aria-hidden="true" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75m0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75M1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5"/></svg></button>
+		</div>
+
+		
+		
+			<a class="item" href="/explore/repos">Explore</a>
+		
+
+		
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F">About</a>
+			<a class="item" target="_blank" href="https://docs.codeberg.org/getting-started/faq/">FAQ</a>
+			<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.codeberg.org">Help</a>
+		
+
+		<a class="item donation-pretty" href="https://donate.codeberg.org">Donate</a>
+
+	</div>
+
+	
+	<div class="navbar-right ui secondary menu">
+		
+			
+				<a class="item" href="/user/sign_up">
+					<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-person" aria-hidden="true" width="16" height="16"><path d="M10.561 8.073a6 6 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6 6 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0M10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0"/></svg>
+					<span>Register</span>
+				</a>
+			
+			<a class="item" rel="nofollow" href="/user/login?redirect_to=%2fCodeberg%2forg%2fsrc%2fbranch%2fmain%2fTermsOfUse.md">
+				<svg viewBox="0 0 16 16" class="tw-mr-1 svg octicon-sign-in" aria-hidden="true" width="16" height="16"><path d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 0 1 0 1.5h-2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 0 1.5h-2.5A1.75 1.75 0 0 1 2 13.25Zm6.56 4.5h5.69a.75.75 0 0 1 0 1.5H8.56l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734Z"/></svg>
+				<span>Sign in</span>
+			</a>
+		
+	</div>
+</nav>
+
+		
+
+
+
+<div role="main" aria-label="org/TermsOfUse.md at main" class="page-content repository file list ">
+	<div class="secondary-nav">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="flex-item tw-items-center">
+				<div class="flex-item-leading">
+					
+
+	<img class="ui avatar tw-align-middle" src="/repo-avatars/279db4cb4e13bbbd50468f16a2fd94c50d528dbdb88c11a4b5098f4eb7123dca" width="24" height="24" alt="Codeberg/org">
+
+
+				</div>
+				<div class="flex-item-main">
+					<div class="flex-item-title tw-font-normal">
+						<a class="muted" href="/Codeberg">Codeberg</a>/<a class="muted tw-font-semibold" href="/Codeberg/org">org</a>
+					</div>
+				</div>
+				<div class="flex-item-trailing">
+					
+					
+						
+					
+					
+					
+				</div>
+			</div>
+			
+				<div class="repo-buttons button-row">
+					
+					
+					
+					
+					<a class="ui compact small basic button" href="/Codeberg/org.rss" data-tooltip-content="RSS feed">
+						<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="16" height="16"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+					</a>
+					
+					
+	
+	<div class="ui disabled labeled button" data-tooltip-content="Sign in to watch this repository.">
+		<div class="ui compact small basic button">
+			<svg viewBox="0 0 16 16" class="svg octicon-eye" aria-hidden="true" width="16" height="16"><path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14s-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2M1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5s2.825-.742 3.955-1.715c1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5s-2.825.742-3.955 1.715c-1.124.967-1.954 2.096-2.366 2.717M8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10"/></svg><span class="text not-mobile">Watch</span>
+		</div>
+		<a class="ui basic label" href="/Codeberg/org/watchers"
+			aria-label="59 watchers"
+			>
+			59
+		</a>
+	</div>
+
+
+					
+					<form hx-target="this" hx-post="/Codeberg/org/action/star" hx-on::after-settle="this.querySelector('button').focus()" method="post" action="/Codeberg/org/action/star">
+	<div class="ui labeled button" data-tooltip-content="Sign in to star this repository.">
+		<button type="submit" class="ui compact small basic button" disabled aria-label="Star">
+			
+				<svg viewBox="0 0 16 16" class="svg octicon-star" aria-hidden="true" width="16" height="16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25m0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41z"/></svg><span class="text not-mobile">Star</span>
+			
+		</button>
+		<a hx-boost="false" class="ui basic label" href="/Codeberg/org/stars"
+			aria-label="178 stars"
+			>
+			178
+		</a>
+	</div>
+</form>
+
+					
+					
+					
+
+
+	<div class="ui labeled button
+		
+			disabled
+		"
+		
+			data-tooltip-content="Sign in to fork this repository."
+		
+	>
+		<a class="ui compact small basic button"
+			
+				
+			
+		>
+			<svg viewBox="0 0 16 16" class="svg octicon-repo-forked" aria-hidden="true" width="16" height="16"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0M5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0m6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0"/></svg><span class="text not-mobile">Fork</span>
+		</a>
+		<dialog id="fork-repo-modal">
+			<article>
+				<header>You've already forked org</header>
+				<div class="content tw-text-left">
+					<div class="ui list">
+						
+					</div>
+					
+				</div>
+			</article>
+		</dialog>
+		<a class="ui basic label" href="/Codeberg/org/forks"
+			aria-label="45 forks"
+			>
+			45
+		</a>
+	</div>
+
+
+
+
+					
+					
+				</div>
+			
+		</div>
+		
+		
+		
+	</div>
+
+	<overflow-menu class="ui container secondary pointing tabular top attached borderless menu tw-pt-0 tw-my-0">
+		
+			<div class="overflow-menu-items">
+				
+					<a class="active item" href="/Codeberg/org">
+						<svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="16" height="16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg> Code
+					</a>
+				
+
+				
+					<a class="item" href="/Codeberg/org/issues">
+						<svg viewBox="0 0 16 16" class="svg octicon-issue-opened" aria-hidden="true" width="16" height="16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0"/></svg> Issues
+						
+							<span class="ui small label">18</span>
+						
+					</a>
+				
+
+				
+
+				
+					<a class="item" href="/Codeberg/org/pulls">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg> Pull requests
+						
+							<span class="ui small label">17</span>
+						
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+					<a class="item" href="/Codeberg/org/activity">
+						<svg viewBox="0 0 16 16" class="svg octicon-pulse" aria-hidden="true" width="16" height="16"><path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.75.75 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.75.75 0 0 1 6 2"/></svg> Activity
+					</a>
+				
+
+				
+
+				
+
+				
+
+				
+			</div>
+		
+	</overflow-menu>
+	<div class="ui tabs divider"></div>
+</div>
+
+	<div class="ui container ">
+		
+
+
+
+
+	<div id="flash-message" hx-swap-oob="true"></div>
+
+
+		
+		
+
+		
+			
+			
+		
+		
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+
+	
+	
+
+
+
+
+
+		
+		
+
+		
+		
+		
+		<div class="repo-button-row">
+			<div class="button-sequence tw-gap-y-2">
+				
+
+
+
+
+
+
+	
+
+
+
+
+<script type="module">
+	const data = {
+		'textReleaseCompare': "Compare",
+		'textCreateTag': "Create tag %s",
+		'textCreateBranch': "Create branch %s",
+		'textCreateBranchFrom': "from \"%s\"",
+		'textBranches': "Branches",
+		'textTags': "Tags",
+		'textDefaultBranchLabel': "default",
+
+		'mode': 'branches',
+		'showBranchesInDropdown':  true ,
+		'searchFieldPlaceholder': 'Filter branch or tag...',
+		'branchForm':  null ,
+		'disableCreateBranch':  true ,
+		'setAction':  null ,
+		'submitForm':  null ,
+		'viewType': "branch",
+		'refName': "main",
+		'commitIdShort': "71149c7fc9",
+		'tagName': "",
+		'branchName': "main",
+		'noTag':  null ,
+		'defaultSelectedRefName': "main",
+		'repoDefaultBranch': "main",
+		'enableFeed':  true ,
+		'rssURLPrefix': '\/Codeberg\/org/rss/branch/',
+		'branchURLPrefix': '\/Codeberg\/org/src/branch/',
+		'branchURLSuffix': '/TermsOfUse.md',
+		'tagURLPrefix': '\/Codeberg\/org/src/tag/',
+		'tagURLSuffix': '/TermsOfUse.md',
+		'repoLink': "/Codeberg/org",
+		'treePath': "TermsOfUse.md",
+		'branchNameSubURL': "branch/main",
+		'noResults': "No results found.",
+	};
+	
+	window.config.pageData.branchDropdownDataList = window.config.pageData.branchDropdownDataList || [];
+	window.config.pageData.branchDropdownDataList.push(data);
+</script>
+
+<div class="js-branch-tag-selector ">
+	
+	<div class="ui dropdown custom">
+		<button class="branch-dropdown-button gt-ellipsis ui basic small compact button tw-flex tw-m-0">
+			<span class="text tw-flex tw-items-center tw-mr-1 gt-ellipsis">
+				
+					
+						<svg viewBox="0 0 16 16" class="svg octicon-git-branch" aria-hidden="true" width="16" height="16"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.5 2.5 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25m-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0m8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5M4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"/></svg>
+					
+					<strong ref="dropdownRefName" class="tw-ml-2 tw-inline-block gt-ellipsis">main</strong>
+				
+			</span>
+			<svg viewBox="0 0 16 16" class="dropdown icon svg octicon-triangle-down" aria-hidden="true" width="14" height="14"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427"/></svg>
+		</button>
+	</div>
+</div>
+
+				
+					
+					
+					
+					
+					<a id="new-pull-request" role="button" class="ui compact basic button" href="/Codeberg/org/compare/main...main"
+						data-tooltip-content="Compare">
+						<svg viewBox="0 0 16 16" class="svg octicon-git-pull-request" aria-hidden="true" width="16" height="16"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25m5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354M3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5m8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0"/></svg>
+					</a>
+				
+				
+				
+
+				
+
+				
+				
+
+
+
+	<span class="breadcrumb repo-path tw-ml-1">
+		<a class="section" href="/Codeberg/org/src/branch/main" title="org">org</a><span class="breadcrumb-divider">/</span><span class="active section" title="TermsOfUse.md">TermsOfUse.md</span>
+				<button class="btn interact-fg tw-p-2" data-clipboard-text="TermsOfUse.md" data-tooltip-content="Copy path"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button></span>
+
+
+			</div>
+			<div class="tw-flex tw-items-center max-[390px]:tw-w-full">
+				
+				
+				
+			</div>
+		</div>
+
+		
+			
+
+			
+
+		
+
+		
+			<div class="tab-size-4 non-diff-file-content">
+
+	
+		<div id="repo-file-commit-box" class="ui segment list-header tw-mb-4 tw-flex tw-justify-between">
+			<div class="latest-commit">
+				
+	
+		<img loading="lazy" alt="" class="ui avatar tw-align-middle tw-mr-2" src="/avatars/751880322b070104c0a5b14bd65075deef243fdf0fa51a86fc837ca0a84ede38?size=64" title="Bastian Greshake Tzovaras" width="24" height="24"/>
+		
+			<a class="muted author-wrapper" title="Bastian Greshake Tzovaras" href="/gedankenstuecke"><strong>Bastian Greshake Tzovaras</strong></a>
+		
+	
+	
+
+	
+	
+		
+			
+		
+	
+
+<a href="/Codeberg/org/commit/cdf6bd2a3a597985b5ae00e99d0c63c4152dc027" rel="nofollow" class="sha label isSigned isVerified">
+	<span class="shortsha">cdf6bd2a3a</span><div class="signature">
+	
+		<span class="signature-author" title="gedankenstuecke / 676D97F53AC10605">
+			
+				<svg viewBox="0 0 14 16" class="svg gitea-lock" aria-hidden="true" width="16" height="16"><path d="M12.5 7h-.75V4.75A4.756 4.756 0 0 0 7 0a4.756 4.756 0 0 0-4.75 4.75V7H1.5A1.5 1.5 0 0 0 0 8.5v6A1.5 1.5 0 0 0 1.5 16h11a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 12.5 7M9.25 7h-4.5V4.75C4.75 3.51 5.76 2.5 7 2.5s2.25 1.01 2.25 2.25z"/></svg>
+				<img loading="lazy" alt="" class="ui avatar tw-align-middle" src="/avatars/751880322b070104c0a5b14bd65075deef243fdf0fa51a86fc837ca0a84ede38?size=64" title="Bastian Greshake Tzovaras" width="28" height="28"/>
+			
+		</span>
+	
+</div>
+</a>
+
+	
+
+	
+	<span class="grey commit-summary" title="merge for crypto edits"><span class="message-wrapper"><a href="/Codeberg/org/commit/cdf6bd2a3a597985b5ae00e99d0c63c4152dc027" class="default-link muted">merge for crypto edits</a></span>
+		
+			<button class="ui button js-toggle-commit-body ellipsis-button" aria-expanded="false">...</button>
+			<pre class="commit-body tw-hidden">Signed-off-by: Bastian Greshake Tzovaras &lt;bgreshake@googlemail.com&gt;</pre>
+		
+	</span>
+
+
+			</div>
+			
+				
+					<div class="text grey age">
+						<relative-time prefix="" tense="past" datetime="2026-07-21T21:26:11-03:00" data-tooltip-content data-tooltip-interactive="true">2026-07-21 21:26:11 -03:00</relative-time>
+					</div>
+				
+			
+		</div>
+	
+
+	<h4 class="file-header ui top attached header tw-flex tw-items-center tw-justify-between tw-flex-wrap">
+		<div class="file-header-left tw-flex tw-items-center tw-pr-4 tw-flex-wrap tw-gap-2">
+			
+				<div class="file-info tw-font-mono">
+	
+	
+	
+	
+		<div class="file-info-entry">
+			13 KiB
+		</div>
+	
+	
+	
+	
+	
+	
+	
+</div>
+
+			
+		</div>
+		<div class="file-header-right file-actions tw-flex tw-items-center tw-flex-wrap">
+			
+				<div class="ui compact icon buttons">
+					<a href="?display=source" class="ui mini basic button " data-tooltip-content="View source"><svg viewBox="0 0 16 16" class="svg octicon-code" aria-hidden="true" width="15" height="15"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg></a>
+					<a href="/Codeberg/org/src/branch/main/TermsOfUse.md" class="ui mini basic button active" data-tooltip-content="View rendered"><svg viewBox="0 0 16 16" class="svg octicon-file" aria-hidden="true" width="15" height="15"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914z"/></svg></a>
+				</div>
+			
+			
+				<div class="ui buttons tw-mr-1">
+					
+					<a class="ui mini basic button" href="/Codeberg/org/raw/branch/main/TermsOfUse.md">Raw</a>
+					
+						<a class="ui mini basic button" href="/Codeberg/org/src/commit/71149c7fc95ccfeae36109b5cddca339e4aa1473/TermsOfUse.md">Permalink</a>
+					
+					
+						<a class="ui mini basic button" href="/Codeberg/org/blame/branch/main/TermsOfUse.md">Blame</a>
+					
+					<a class="ui mini basic button" href="/Codeberg/org/commits/branch/main/TermsOfUse.md">History</a>
+					
+				</div>
+				<a download class="btn-octicon" href="/Codeberg/org/raw/branch/main/TermsOfUse.md" data-tooltip-content="Download file">
+					<svg viewBox="0 0 16 16" class="svg octicon-download" aria-hidden="true" width="16" height="16"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06z"/></svg>
+				</a>
+				<a href="#" id="copy-content" class="btn-octicon " data-link="/Codeberg/org/raw/branch/main/TermsOfUse.md" data-tooltip-content="Copy content">
+					<svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+				</a>
+				
+					
+						<a class="btn-octicon" href="/Codeberg/org/rss/branch/main/TermsOfUse.md" data-tooltip-content="RSS feed">
+							<svg viewBox="0 0 16 16" class="svg octicon-rss" aria-hidden="true" width="14" height="14"><path d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.5 10.5 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7 7 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.5 5.5 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489M2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0"/></svg>
+						</a>
+					
+				
+				
+					
+						<span class="btn-octicon disabled" data-tooltip-content="You must fork this repository to make or propose changes to this file.">
+							<svg viewBox="0 0 16 16" class="svg octicon-pencil" aria-hidden="true" width="16" height="16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.25.25 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></svg>
+						</span>
+					
+					
+						<span class="btn-octicon disabled" data-tooltip-content="You must have write access to make or propose changes to this file.">
+							<svg viewBox="0 0 16 16" class="svg octicon-trash" aria-hidden="true" width="16" height="16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75M4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.75 1.75 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15M6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25"/></svg>
+						</span>
+					
+				
+			
+			
+		</div>
+	</h4>
+	<div class="ui bottom attached table unstackable segment">
+		
+		<div class="file-view markup markdown">
+			
+				<h1 id="user-content-codeberg-s-terms-of-use" dir="auto">Codeberg&#39;s Terms of Use</h1>
+<p dir="auto">Welcome to Codeberg. We would like to invite you to join us in our journey to build and maintain a productive, safe and enduring platform for the collaborative development and maintenance of Open-Source Software and Documentation.</p>
+<p dir="auto">To support our community, we provide the essential infrastructure and organizational framework for the development of Open-Source Projects in decentralized and global communities, and other endeavours which serve this mission. We strive to make and keep educational and informational content from the projects available on the internet free of charge, in perpetuity.</p>
+<p dir="auto">We welcome you (&#34;you&#34; or the &#34;user&#34;) as a contributor, user, editor or reader, and we encourage you to join our community. Before you participate, however, we ask that you please read and agree to the following Terms of Use (&#34;Terms of Use&#34;).</p>
+<h2 id="user-content-1-what-we-provide" dir="auto">§ 1 What we provide</h2>
+<p dir="auto">(1) For Free and Libre Open Source Software (FLOSS) projects, the Codeberg e. V. provides various services like a public repository and version control system, wiki, and issue tracker hosting under certain terms and conditions. These services are referred to as &#34;service&#34;, &#34;hosting&#34; and &#34;platform&#34; in this document.</p>
+<p dir="auto">(2) Our service is open for all projects covered by a licence for free and open source software, free and open source hardware, or free cultural works as defined by § 2 (1) 1.</p>
+<p dir="auto">(3) Codeberg is a non-profit organization funded by member contributions and donations. The service relies on member contributions and donations.</p>
+<p dir="auto">(4) The main objective of Codeberg e. V. (as defined in our bylaws) is to promote the development, collection, distribution, and conservation of free and open content. We aim to support equality of opportunities to access and share knowledge, and to spread awareness about the relevance of FLOSS to society.</p>
+<h2 id="user-content-2-allowed-content-usage" dir="auto">§ 2 Allowed Content &amp; Usage</h2>
+<p dir="auto">(1) By using Codeberg, you agree to adhere to the following rules when posting content (like repository contents, wiki articles, issue comments, etc.):</p>
+<ol dir="auto">
+<li>
+<p dir="auto">Public repository content shall be made available under a copyright licence which gives all natural and legal persons the following rights in the content:</p>
+<ul dir="auto">
+<li>the right to use the content for any purpose, including both commercial and non-commercial purposes;</li>
+<li>the right to make unlimited copies of the content and redistribute those copies to others, with or without charge;</li>
+<li>the right to examine the content and determine how it works and/or how it was made;</li>
+<li>the right to make their own modifications to the content, to use the content with those modifications privately;</li>
+<li>and the right to redistribute copies of the content which include their own modifications, with or without charge.</li>
+</ul>
+<p dir="auto">Copyright licences of this kind are referred to as ‘licences for free and open source software, free and open source hardware, or free cultural works’. Examples of such licences include those created or approved <a href="https://www.gnu.org/licenses/license-list.html" rel="nofollow">for free software projects by the Free Software Foundation</a>, <a href="https://opensource.org/licenses" rel="nofollow">for open source projects by the Open Source Initiative</a>, and <a href="https://creativecommons.org/public-domain/freeworks/" rel="nofollow">for free cultural works by Creative Commons</a>. Note, however, that the Creative Commons licences with Non-Commercial (NC) or No Derivatives (ND) restrictions are not licences for free cultural works and thus do not fulfil the licensing requirement.</p>
+<p dir="auto">As an exception to this requirement, works which primarily describe the personal opinions or experiences of the author, or which embody the unique personal creative spirit of the author, may be included in public repositories under a copyright licence which does not allow modification and/or commercial use, such as a Creative Commons licence with NC or ND restrictions. By including works with licences which do not allow commercial use on Codeberg, you additionally grant Codeberg e. V. a non-exclusive licence to use and distribute copies of the works for the purposes set down in § 2 (<a href="https://codeberg.org/Codeberg/org/src/branch/main/en/bylaws.md#2-purpose-and-tasks" rel="nofollow">Purpose and tasks</a>/<a href="https://codeberg.org/Codeberg/org/src/branch/main/Satzung.md#2-ziele-und-aufgaben" rel="nofollow">Ziele und Aufgaben</a>) of Codeberg e. V.’s bylaws (Satzung).</p>
+<p dir="auto">Public repository content may also be distributed with a declaration which entirely abandons copyright in the work to the public domain. Public repository content may also include works which are no longer covered by any copyright due to expiration. Crediting the original authors of public domain content is encouraged.</p>
+<p dir="auto">Other exceptions may be considered acceptable to a limited extent.</p>
+</li>
+<li>
+<p dir="auto">Private repositories are only allowed for things required for FLOSS projects, like storing secrets, team-internal discussions or hiding projects from the public until they&#39;re ready for usage and/or contribution. They are also allowed for really small &amp; personal stuff like your journal, config files, ideas or notes, but explicitly not as a personal cloud or media storage.</p>
+</li>
+<li>
+<p dir="auto">You must only share content on Codeberg which you have the explicit right under copyright and other laws to share under the legal terms with which the content is made available on Codeberg.</p>
+</li>
+<li>
+<p dir="auto">Forks, migrations and testing repos are considered as inactive when they don&#39;t contain unique contributions and are inactive for more than a month. They shouldn&#39;t be kept for a prolonged amount of time, and thus might be removed after notifying maintainers and providing a 90 days period to ask for preservation.</p>
+</li>
+<li>
+<p dir="auto">Repositories and attachments may not contain harmful code that can be run accidentally during normal development workflow and should use proper disclaimers and protections if applicable. Furthermore, software that is clearly written to do harm to other computers is only allowed in the context of security research or education and must be flagged accordingly.</p>
+</li>
+<li>
+<p dir="auto">You must not share any content that&#39;s expressing hate or encouraging violence towards a person or group for any reason. We also <em>explicitly</em> do not tolerate:</p>
+<ul dir="auto">
+<li>Discriminatory behaviour towards and promoting oppression, especially of marginalized groups on grounds of ethnicity, gender, disability, nationality, education, age, and religion.</li>
+<li>Violent nationalist propaganda, Nazi symbolism or promoting the ideology of National Socialism.</li>
+<li>Mobbing, stalking, doxxing (exposing someone&#39;s personal information), brigading (inciting a group to spam a specific place for any reason), threatening and harassment, as well as encouraging others to do those things.</li>
+<li>Insults, discriminatory jokes, sexualized comments and other unwanted sexual attention.</li>
+<li>Sexually obscene content, including content involving the exploitation or sexualization of minors.</li>
+<li>Content that&#39;s glorifying violence; that includes any violent material without a proper content warning.</li>
+<li>Content that harms the reputation of Codeberg, such as cryptocurrency related projects.</li>
+</ul>
+</li>
+<li>
+<p dir="auto">You must not share projects that mostly consist of code written by &#34;generative AI&#34;-tools (including services such as <em>Claude</em>, <em>OpenAI Codex</em>). Such projects having an unclear copyright status (see requirements § 2 (1) 1 and § 2 (1) 3) and furthermore have little safeguards to ensure that they do not include harmful code (c.f. § 2 (1) 5).</p>
+</li>
+</ol>
+<p dir="auto">(2) Failure to comply with the rules in § 2 (1) leads to immediate removal of the content together with a warning; further violations might result in immediate account suspension. In non-obvious cases, decisions about account suspensions and content removal are made by the presidium, and require a simple majority.</p>
+<p dir="auto">(3) We additionally reserve the right to remove any content or account with a notice providing a reason and possibly conditions for re-uploading the content.</p>
+<p dir="auto">(4) Content that is deemed illegal in Germany (e.g. by violating copyright or privacy laws) will be taken offline and may lead to immediate account suspension.</p>
+<p dir="auto">(5) Actions intended to damage the association, its reputation, service availability or performance may lead to immediate account suspension. In the case of excessive traffic/resource usage, or unreasonable storage requirements, a warning will normally be issued at first, unless the actions are obviously done with malicious intent.</p>
+<p dir="auto">(6) Maintainers of a project can enforce stricter rules, for example by adding an easily discoverable Code of Conduct as a file in the repository root. It&#39;s the maintainers&#39; task to enforce such additional rules.</p>
+<h2 id="user-content-3-responsibilities-copyright-guarantees" dir="auto">§ 3 Responsibilities, Copyright &amp; Guarantees</h2>
+<p dir="auto">(1) You are responsible for your own actions. Please act accordingly and apply appropriate security measures to protect your own data and account access credentials. This means especially that:</p>
+<ul dir="auto">
+<li>You are legally responsible for your edits and contributions on the platform, so for your own protection you should exercise caution and avoid contributing any content that may result in criminal or civil liability under any applicable laws (e.g. copyright and patent infringements, but also things like age-restricted content without age confirmation). Both the German legislation and the legislation in your country of residence may be relevant here.</li>
+<li>You are solely responsible for your use of any third-party websites or resources. Although some projects may contain links to third-party websites and resources, we do not endorse and are not responsible or liable for their availability, accuracy, or the related content, products, or services, nor do we have any obligation to monitor such third-party content.</li>
+<li>You are responsible for safeguarding your account credentials and should never disclose them to any third party.</li>
+<li>You must make sure that we have a way to contact you by keeping the email address of your account up-to-date.</li>
+</ul>
+<p dir="auto">(2) All content on the Version Control System and other facilities provided on the platform are uploaded by community members. Contributors own all rights and ownership for content and contributions they provided. Using the platform does not imply any transfer of ownership or copyright.</p>
+<p dir="auto">(3) We make no guarantees about the availability of the content hosted on our platform. Although we try to preserve all content for the future, you are solely responsible for making regular backups of everything you rely on.</p>
+<p dir="auto">(4) Changes to the Terms of Use are communicated via an announcement banner in your dashboard. If you do not login for longer than three months, it is your own responsibility to recheck for the current Terms of Use. If you disagree to a change, you are responsible for closing your account.</p>
+<h2 id="user-content-4-cancellation-and-termination" dir="auto">§ 4 Cancellation and Termination</h2>
+<p dir="auto">(1) You may close your account at any time. Please be aware that it is your responsibility to remove content and contributions that you no longer wish to persist. All other content previously contributed by you might remain visible to other users of the platform.</p>
+<p dir="auto">(2) Abandoned user accounts or organizations with no (or extremely few) all-time contributions may be deleted after being unused for 365 days. A warning via email is sent 1 month in advance.</p>
+<p dir="auto">(3) Accounts created for the sole purpose of advertisement (excessive promotion of a product, service or company) are removed immediately.</p>
+<p dir="auto">(4) Please be aware that this list is neither exhaustive nor complete (illustrating the spirit of the law, not its letter). Be aware that any account can get suspended at any time if it is used for activities harming Codeberg e.V. or its associated platform and services, directly or indirectly, even if these activities are not explicitly listed in the examples above.</p>
+<h2 id="user-content-5-disclaimer-of-warranties-and-liability" dir="auto">§ 5 Disclaimer of Warranties and Liability</h2>
+<p dir="auto">(1) The materials on our platform are provided on an &#39;as is&#39; basis. Codeberg makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+<p dir="auto">(2) Further, Codeberg does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+<p dir="auto">(3) In no event shall Codeberg or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Codeberg’s platform, even if Codeberg or a Codeberg-authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
+<h2 id="user-content-6-sources-license-of-this-text" dir="auto">§ 6 Sources &amp; License of this text</h2>
+<p dir="auto">The rules (§ 2) were inspired by the <a href="https://chaos.social/about/more#rules" rel="nofollow">chaos.social Terms</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="nofollow">CC BY-SA 4.0</a>, as well as by the <a href="https://confluence.jetbrains.com/display/ALL/JetBrains+Open+Source+and+Community+Code+of+Conduct" rel="nofollow">JetBrains Open Source and Community Code of Conduct</a>, licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="nofollow">CC BY-SA 3.0</a>.</p>
+<p dir="auto">This text is free to be adapted and remixed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="nofollow">CC-BY-SA (Attribution-ShareAlike 4.0 International)</a> license.</p>
+<p dir="auto">Thank you for being an awesome member of the Codeberg Community!</p>
+
+			
+		</div>
+	</div>
+</div>
+
+		
+	</div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer class="page-footer" role="group" aria-label="Footer">
+	<div class="grid" aria-label="Links">
+		<div class="not-mobile">
+			<div class="branding" aria-hidden="true">
+				<img class="light-logo" loading="lazy" src="/assets/img/svg/cb-logo.svg" alt="Logo">
+				<img class="dark-logo" loading="lazy" src="/assets/img/svg/cb-logo-mono.svg" alt="Logo">
+			</div>
+			<div class="powered-by">
+				<div class="title">Powered by </div>
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org" aria-label="Forgejo">
+					<div class="branding" aria-hidden="true">
+						<img class="light-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark.svg" alt="Forgejo logo">
+						<img class="dark-logo" loading="lazy" src="/assets/img/svg/forgejo-wordmark-mono.svg" alt="Forgejo logo">
+					</div>
+				</a>
+				with <a class="tw-mt-0" href="/Codeberg-Infrastructure/forgejo" target="_blank">modifications</a>
+			</div>
+		</div>
+		<div>
+			<b id="codeberg-codeberg">Codeberg</b>
+			<ul>
+				<li><a href="https://blog.codeberg.org" target="_blank">Blog</a></li>
+				<li><a href="https://docs.codeberg.org" target="_blank">Documentation</a></li>
+				<li><a href="/Codeberg/Community/issues">Community issues</a></li>
+				
+				<li><a href="/Codeberg/Contributing">Contributing</a>
+				<li><a href="https://docs.codeberg.org/contact/#abuse" target="_blank">Report abuse</a>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-association">Association</b>
+			<ul>
+				<li><a href="https://docs.codeberg.org/getting-started/what-is-codeberg/#what-is-codeberg-e.v.%3F" target="_blank">Who are we?</a></li>
+				<li><a href="https://codeberg.org/codeberg/org/src/en/bylaws.md" target="_blank">Bylaws / Satzung</a></li>
+				<li><a href="https://docs.codeberg.org/improving-codeberg/donate/" target="_blank">Donate</a></li>
+				<li><a href="https://join.codeberg.org" target="_blank">Join / Support</a></li>
+				<li><a href="https://docs.codeberg.org/contact/" target="_blank">Contact</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-service">Services</b>
+			<ul>
+				<li><a href="https://codeberg.page" target="_blank">Codeberg Pages</a></li>
+				<li><a href="https://translate.codeberg.org" target="_blank">Codeberg Translate</a></li>
+				<li><a href="https://docs.codeberg.org/ci/#using-codeberg's-instance-of-woodpecker-ci" target="_blank">Woodpecker CI</a></li>
+				
+					<li><a href="/api/swagger">Forgejo API</a></li>
+				
+				<li><a href="https://status.codeberg.eu" target="_blank">Status page</a></li>
+			</ul>
+		</div>
+		<div>
+			<b id="codeberg-legal">Legal</b>
+			<ul>
+				<li><a href="https://codeberg.org/codeberg/org/src/Imprint.md" target="_blank">Imprint / Impressum</a></li>
+				<li><a href="/codeberg/org/src/PrivacyPolicy.md" target="_blank">Privacy Policy</a></li>
+				<li><a href="/assets/licenses.txt">Licenses</a></li>
+				<li><a href="/codeberg/org/src/TermsOfUse.md">Terms of Use</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-bottom-grid">
+		<div class="footer-social">
+			<a href="https://social.anoxinon.de/@Codeberg" target="_blank" rel="noopener noreferrer">Mastodon</a> |
+			<a href="matrix:r/codeberg-space:matrix.org?action=join" target="_blank" rel="noopener noreferrer">Matrix Space</a>
+			<a href="https://matrix.to/#/#codeberg-space:matrix.org" target="_blank" rel="noopener noreferrer">(Web link)</a>
+			<button class="btn interact-fg tw-p-2 tw-inline" data-clipboard-text="#codeberg-space:matrix.org" data-tooltip-content="Copy to clipboard"><svg viewBox="0 0 16 16" class="svg octicon-copy" aria-hidden="true" width="14" height="14"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg></button>
+			<p class="only-mobile">
+				<a target="_blank" rel="noopener noreferrer" href="https://forgejo.org">Powered by Forgejo</a>
+			</p>
+		</div>
+		<div class="footer-language-switch">
+			<div class="ui language bottom floating slide up dropdown link item button">
+				<svg viewBox="0 0 16 16" class="svg octicon-globe" aria-hidden="true" width="16" height="16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M5.78 8.75a9.64 9.64 0 0 0 1.363 4.177q.383.64.857 1.215c.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a10 10 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.51 6.51 0 0 0 4.666 5.5q-.184-.271-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948m-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948q.18-.295.353-.552a6.51 6.51 0 0 0-4.666 5.5m10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948q-.18.296-.353.552a6.51 6.51 0 0 0 4.666-5.5Zm2.733-1.5a6.51 6.51 0 0 0-4.666-5.5q.184.272.353.552c.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+				<div class="text">English</div>
+				<div class="menu language-menu">
+					
+						<a lang="id-ID" data-url="/?lang=id-ID" class="item ">Bahasa Indonesia</a>
+					
+						<a lang="da" data-url="/?lang=da" class="item ">Dansk</a>
+					
+						<a lang="de-DE" data-url="/?lang=de-DE" class="item ">Deutsch</a>
+					
+						<a lang="en-US" data-url="/?lang=en-US" class="item active selected">English</a>
+					
+						<a lang="es-ES" data-url="/?lang=es-ES" class="item ">Español</a>
+					
+						<a lang="eo" data-url="/?lang=eo" class="item ">Esperanto</a>
+					
+						<a lang="fil" data-url="/?lang=fil" class="item ">Filipino</a>
+					
+						<a lang="fr-FR" data-url="/?lang=fr-FR" class="item ">Français</a>
+					
+						<a lang="it-IT" data-url="/?lang=it-IT" class="item ">Italiano</a>
+					
+						<a lang="lv-LV" data-url="/?lang=lv-LV" class="item ">Latviešu</a>
+					
+						<a lang="hu-HU" data-url="/?lang=hu-HU" class="item ">Magyar nyelv</a>
+					
+						<a lang="nl-NL" data-url="/?lang=nl-NL" class="item ">Nederlands</a>
+					
+						<a lang="nds" data-url="/?lang=nds" class="item ">Plattdüütsch</a>
+					
+						<a lang="pl-PL" data-url="/?lang=pl-PL" class="item ">Polski</a>
+					
+						<a lang="pt-PT" data-url="/?lang=pt-PT" class="item ">Português de Portugal</a>
+					
+						<a lang="pt-BR" data-url="/?lang=pt-BR" class="item ">Português do Brasil</a>
+					
+						<a lang="sl" data-url="/?lang=sl" class="item ">Slovenščina</a>
+					
+						<a lang="fi-FI" data-url="/?lang=fi-FI" class="item ">Suomi</a>
+					
+						<a lang="sv-SE" data-url="/?lang=sv-SE" class="item ">Svenska</a>
+					
+						<a lang="tr-TR" data-url="/?lang=tr-TR" class="item ">Türkçe</a>
+					
+						<a lang="cs-CZ" data-url="/?lang=cs-CZ" class="item ">Čeština</a>
+					
+						<a lang="el-GR" data-url="/?lang=el-GR" class="item ">Ελληνικά</a>
+					
+						<a lang="bg" data-url="/?lang=bg" class="item ">Български</a>
+					
+						<a lang="ru-RU" data-url="/?lang=ru-RU" class="item ">Русский</a>
+					
+						<a lang="uk-UA" data-url="/?lang=uk-UA" class="item ">Українська</a>
+					
+						<a lang="fa-IR" data-url="/?lang=fa-IR" class="item ">فارسی</a>
+					
+						<a lang="ja-JP" data-url="/?lang=ja-JP" class="item ">日本語</a>
+					
+						<a lang="zh-CN" data-url="/?lang=zh-CN" class="item ">简体中文</a>
+					
+						<a lang="zh-TW" data-url="/?lang=zh-TW" class="item ">繁體中文（台灣）</a>
+					
+						<a lang="zh-HK" data-url="/?lang=zh-HK" class="item ">繁體中文（香港）</a>
+					
+						<a lang="ko-KR" data-url="/?lang=ko-KR" class="item ">한국어</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tw-hidden">
+		
+			Page: 264ms<br>
+			Template: 8ms
+		
+	</div>
+  
+	
+		<div class="symbol-of-tolerance" role="img"></div>
+	
+</footer>
+
+
+	<script src="/assets/js/index.js?v=16.0.0-dev-694-33ae492b~gitea-1.22.0" onerror="alert('Failed to load asset files from {path}. Please make sure the asset files can be accessed.'.replace('{path}', this.src))"></script>
+
+	
+</body>
+</html>
+

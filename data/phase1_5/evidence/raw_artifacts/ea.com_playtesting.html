@@ -1,0 +1,3679 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" wf-loading>
+    <head>
+        
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+
+
+    <script type="text/javascript" src="https://www.ea.com/resources/6e318939c1ffaf213a14e68c9aaa1748061679de37282"  ></script><script>
+        window.newrelicAttributes = {
+            accountId: "1796917",
+            trustKey: "1796917",
+            agentId: "149134891",
+            licenseKey: "f701a6c63c",
+            applicationId: "149134891"
+        };
+    </script>
+    <script src="/newrelic.js"></script>
+
+
+
+<!-- Compliant Google Optimize -->
+<script>
+        (() => {
+            const getPrivacyCookie = () => {
+                const privacyCookie = document.cookie.match('(^|;)\\s*cmapi_cookie_privacy\\s*=\\s*([^;]+)');
+
+                return privacyCookie ? privacyCookie.pop() : null;
+            };
+
+            const getBehaviorCookie = () => {
+                const behaviorCookie = document.cookie.match('(^|;)\\s*notice_behavior\\s*=\\s*([^;]+)');
+
+                return behaviorCookie ? behaviorCookie.pop() : null;
+            };
+
+            const hasOptedIn = () => {
+                const behaviorCookie = getBehaviorCookie();
+                const privacyCookie = getPrivacyCookie();
+
+                return behaviorCookie && behaviorCookie.match(/^none$/) || privacyCookie && privacyCookie.match(/2|3/);
+            }
+
+            const appendOptimize = () => {
+                const head = document.getElementsByTagName('head')[0];
+
+                if (head) {
+                    const script = document.createElement('script');
+
+                    script.src = 'https://www.googleoptimize.com/optimize.js?id=GTM-M6BQF2W';
+                    script.id = "google-optimize"
+                    head.append(script);
+                }
+            };
+
+            const removeOptimize = () => {
+                const head = document.getElementsByTagName('head')[0];
+                const optimizeScript = document.getElementById('google-optimize');
+
+                if (head && optimizeScript) {
+                    head.removeChild(optimizeScript);
+                }
+            }
+
+            /**
+             * Append or remove Google Optimize script to head,
+             * depending on whether user's cookie preferences
+             * have opted in and Google Optimize script already
+             * exists in head.
+             */
+            const handleConsentDecision = () => {
+                const googleOptimizeScript = document.getElementById('google-optimize');
+                if (hasOptedIn() && !googleOptimizeScript) {
+                    appendOptimize();
+                } else if (!hasOptedIn() && googleOptimizeScript) {
+                    removeOptimize();
+                }
+            }
+
+            /**
+             * Callbacks will occur in the form of a PostMessage event. This code listens for the
+             * appropriately formatted PostMessage event, gets the new consent decision, and then sets
+             * the new cookie preferences.
+             */
+            const handlePreferencesUpdated = (e) => {
+                try {
+                    const { capabilities, action } = JSON.parse(e.data).PrivacyManagerAPI || {};
+                    if (capabilities && action === 'getConsentDecision') {
+                        handleConsentDecision();
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+            /**
+             * Registers with the TrustArc Content Manager (CM) API to receive callbacks when
+             * a preference update occurs, and initialized dispatched preferences array to
+             * the user's current preferences. You must wait for the CM API (PrivacyManagerAPI object)
+             * to exist on the page before registering.
+             */
+            const CMICallbackRegister = () => {
+                const interval = setInterval(() => {
+                    if (window.PrivacyManagerAPI && interval) {
+                        const apiObject = {
+                            PrivacyManagerAPI: {
+                                action: 'getConsentDecision',
+                                timestamp: new Date().getTime(),
+                                self: window.location.host
+                            }
+                        };
+                        window.top.postMessage(JSON.stringify(apiObject), '*');
+                        clearInterval(interval);
+                    }
+                }, 50);
+            }
+
+            /**
+             * Listener registers a message callback on the TrustArc Content Manager when
+             * user's cookie preferences are updated and adds an event listener
+             * on the message events that occur when said preference updates occur.
+             */
+            const trustArcScriptLoadListener = () => {
+                if (typeof window.truste === 'object') {
+                    CMICallbackRegister();
+                    window.addEventListener('message', handlePreferencesUpdated);
+                }
+            }
+
+            window.addEventListener('load', trustArcScriptLoadListener);
+            const behaviorCookie = getBehaviorCookie();
+
+            if (behaviorCookie === null) {
+                // wait for TrustArc script to load before checking cookies
+                let numIntervals = 0;
+                const scriptLoadInterval = setInterval( () => {
+                    if(getBehaviorCookie()) {
+                        handleConsentDecision();
+                        clearInterval(scriptLoadInterval);
+                    }
+                    // Stop running interval after 8 times (8x the documented 500ms it
+                    // should take to load the TrustArc script on the BE) to prevent running forever
+                    if (++numIntervals >= 10) {
+                        clearInterval(scriptLoadInterval);
+                    }
+                } , 500);
+            } else {
+                handleConsentDecision();
+            }
+        })();
+</script>
+    <!-- End Compliant Google Optimize -->
+
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w, d, s, l) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l !== 'dataLayer' ? '&l=' + l : '';
+
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TG32RCX' + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer');
+</script>
+<!-- End Google Tag Manager -->
+
+
+
+<style>
+    [unresolved] {
+        visibility: hidden !important;
+    }
+</style>
+
+
+<noscript>
+    <style>
+        [unresolved] {
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+</style>
+
+
+<script>
+    
+    if (!CSS.supports('width', 'calc((var(--test))')) {
+        window.ShadyCSS = {
+            shimcssproperties: true
+        };
+    }
+
+    document.addEventListener('nds.typeKit.active', function() {
+        document.querySelector('html').removeAttribute('wf-loading');
+    });
+</script>
+
+<script src="//unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js"
+    integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy"
+    crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+    crossorigin="anonymous"></script>
+<script src="//w.soundcloud.com/player/api.js"></script>
+
+
+
+
+
+
+<script>
+    window.nds = window.nds || {};
+    window.nds.componentUrlPrefix = '//pl.ea.com/release/4.69.7/elements/ea-elements.min.js'.substring(0, '//pl.ea.com/release/4.69.7/elements/ea-elements.min.js'.lastIndexOf('/') + 1);
+    window.nds.contentfulUrl = 'https://contentful-proxy.juno.ea.com/graphql';
+    window.nds.salUrl = 'https://service-aggregation-layer.juno.ea.com/graphql';
+    window.nds.useApq = true;
+    window.nds.salClientId = 'eacom-fe';
+    window.nds.xGameDistMethod = 'eacom';
+    window.nds.lockboxGameId = 'eacom_quantum';
+    window.nds.lockboxInvoiceSource = 'EACOM-STORE-WEB-%countryCode%';
+    window.nds.lockboxExternalPaymentPath = '/lockbox-external-payment';
+</script>
+
+
+
+<script type="module" src="//pl.ea.com/release/4.69.7/elements/ea-elements.min.js"></script>
+<script nomodule defer src="//pl.ea.com/release/4.69.7/elements/ea-elements.min.js"></script>
+
+
+
+    
+        
+    
+
+<style>
+    @font-face {
+    font-family: 'ElectronicArtsDisplay';
+    src: url(/assets/fonts/display/ElectronicArtsDisplay-Regular.woff2) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ElectronicArtsDisplay';
+    src: url(/assets/fonts/display/ElectronicArtsDisplay-Bold.woff2) format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ElectronicArtsText';
+    src: url(/assets/fonts/text/ElectronicArtsText-Light.woff2) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ElectronicArtsText';
+    src: url(/assets/fonts/text/ElectronicArtsText-LightItalic.woff2) format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'ElectronicArtsText';
+    src: url(/assets/fonts/text/ElectronicArtsText-Regular.woff2) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ElectronicArtsText';
+    src: url(/assets/fonts/text/ElectronicArtsText-Italic.woff2) format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'ElectronicArtsText';
+    src: url(/assets/fonts/text/ElectronicArtsText-Bold.woff2) format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ElectronicArtsText';
+    src: url(/assets/fonts/text/ElectronicArtsText-BoldItalic.woff2) format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+</style>
+
+
+
+
+
+
+    <title>EA Playtesting - Official EA Site</title>
+    
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="EA Playtesting - Official EA Site">
+<meta property="og:description" content="Help us make great games, join our Playtesting program. Electronic Arts is a leading publisher of games on Console, PC and Mobile. ">
+
+    <meta property="og:url" content="https://www.ea.com/playtesting">
+
+<meta property="og:site_name" content="">
+
+    <meta property="og:image" content="https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/10/playtesting-featured-image.jpg.adapt.crop191x100.1200w.jpg">
+
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+
+
+<meta name="description" content="Help us make great games, join our Playtesting program. Electronic Arts is a leading publisher of games on Console, PC and Mobile. ">
+<meta name="author" content="Electronic Arts">
+<meta property="article:modified_time" content="2022-03-02T01:14:05Z">
+<meta property="article:published_time" content="2021-09-20T09:06-07:00">
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ea">
+<meta name="twitter:title" content="EA Playtesting - Official EA Site">
+<meta name="twitter:description" content="Help us make great games, join our Playtesting program. Electronic Arts is a leading publisher of games on Console, PC and Mobile. ">
+
+    <meta name="twitter:image" content="https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/10/playtesting-featured-image.jpg.adapt.crop16x9.1023w.jpg">
+
+<meta name="twitter:creator" content="@ea">
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+     
+"image": {
+    "@type": "ImageObject",
+    "url": "https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/10/playtesting-featured-image.jpg.adapt.crop191x100.1200w.jpg"
+},
+ 
+    "author": {
+      "@type": "Organization",
+      "name": "Electronic Arts",
+      "sameAs": "https://en.wikipedia.org/wiki/Electronic_Arts"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Electronic Arts",
+        "sameAs": "https://en.wikipedia.org/wiki/Electronic_Arts",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://media.contentapi.ea.com/content/dam/ea/EA_logo.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "inLanguage": "en",
+    "description": "Help us make great games, join our Playtesting program. Electronic Arts is a leading publisher of games on Console, PC and Mobile. ",
+    "datePublished": "2021-09-20T09:06-07:00",
+    "dateModified": "2022-03-02T01:14:05Z",
+    "headline": "EA Playtesting - Official EA Site",
+    "url": "https://www.ea.com/playtesting"
+}
+</script>
+
+
+
+    </head>
+    <body unresolved>
+        
+    
+
+
+<custom-style><style include="ea-shared-styles-base-common"></style></custom-style>
+<custom-style><style include="ea-shared-styles-base-headings"></style></custom-style>
+<custom-style><style include="ea-shared-styles-base-lists"></style></custom-style>
+<custom-style><style include="ea-shared-styles-base-links"></style></custom-style>
+<custom-style><style include="ea-shared-styles-base-images"></style></custom-style>
+<custom-style><style include="ea-shared-styles-typography-headings"></style></custom-style>
+<custom-style><style include="ea-shared-styles-typography-paragraphs"></style></custom-style>
+<custom-style><style include="ea-shared-styles-typography-labels"></style></custom-style>
+
+
+    
+        
+            <custom-style>
+                <style>
+                    html {
+                        
+                            --ea-theme-color: #390086;
+                        
+                            --ea-theme-dark-gradient: #001C9D;
+                        
+                            --ea-theme-light-gradient: #872AE6 ;
+                        
+                            --ea-theme-tabs-background-color: #253C7F;
+                        
+                    }
+                </style>
+            </custom-style>
+        
+    
+
+
+
+<ea-elements-loader elements="ea-network-nav, ea-player, ea-type-kit">
+</ea-elements-loader>
+
+
+    <ea-network-nav
+        unresolved
+        userData="/user-data"
+        content="//nds-network-nav.ea.com//en-us/network-nav"
+        login-url="/login"
+        logout-url="/logout"
+            
+                
+                    
+                        
+                    
+                
+            
+    ></ea-network-nav>
+
+
+
+
+
+
+
+    
+        
+            
+                
+<ea-elements-loader elements="ea-local-nav-advanced, ea-link">
+</ea-elements-loader>
+<ea-local-nav-advanced
+    
+        aria-label-text="Site Navigation tool"
+    
+    
+        home-text="Playtesting"
+        home-tooltip=""
+        home-link="/playtesting"
+    
+    
+        logo-image="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+        
+            logo-tooltip="Electronic Arts wordmark"
+        
+    
+    
+        theme="dark"
+    
+    
+        shelf-type="band"
+    
+    
+        open-drawer-text="Open Menu"
+    
+    
+        close-drawer-text="Close Menu"
+    
+    
+        mini
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    unresolved
+>
+    
+
+    
+
+    
+        <a title="" href="/playtesting">
+            Playtesting
+            
+                <img
+                    src="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+                    
+                />
+            
+        </a>
+    
+
+    
+        
+            
+                <ea-link
+                    slot="local-nav-shelf-link"
+                    class="eapl-local-nav__shelf-link"
+                    text-color="light"
+                    link-href="/playtesting/about"
+                    link-title=""
+                    link-text="About"
+                    unresolved
+                >
+                    <a href="/playtesting/about">About</a>
+                </ea-link>
+            
+        
+    
+        
+            
+                <ea-link
+                    slot="local-nav-shelf-link"
+                    class="eapl-local-nav__shelf-link"
+                    text-color="light"
+                    link-href="https://go.ea.com/eapt"
+                    link-title=""
+                    link-text="Become a Playtester"
+                    unresolved
+                >
+                    <a href="https://go.ea.com/eapt">Become a Playtester</a>
+                </ea-link>
+            
+        
+    
+        
+            
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav
+    slot="local-nav-shelf-link"
+    toggle-text="Our Locations"
+    theme="dark"
+    type="narrow"
+    unresolved
+>
+    
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section
+    title-text="On-Site"
+    slot="sub-nav-section"
+    unresolved
+>
+    
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="Burnaby, CA"
+    link-href="/playtesting/our-locations/burnaby"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/burnaby">Burnaby, CA</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="Guildford, UK"
+    link-href="/playtesting/our-locations/guildford"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/guildford">Guildford, UK</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="Montreal, CA"
+    link-href="/playtesting/our-locations/montreal"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/montreal">Montreal, CA</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="Orlando, US"
+    link-href="/playtesting/our-locations/orlando"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/orlando">Orlando, US</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="Redwood City, US"
+    link-href="/playtesting/our-locations/redwood-city"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/redwood-city">Redwood City, US</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="Stockholm, SE"
+    link-href="/playtesting/our-locations/stockholm"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/stockholm">Stockholm, SE</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+</ea-local-nav-shelf-sub-nav-section>
+
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section
+    title-text="Remote"
+    slot="sub-nav-section"
+    unresolved
+>
+    
+<ea-elements-loader elements="ea-local-nav-shelf-sub-nav-section-link">
+</ea-elements-loader>
+<ea-local-nav-shelf-sub-nav-section-link
+    slot="sub-nav-section-link"
+    link-text="At-Home Playtests"
+    link-href="/playtesting/our-locations/at-home"
+    link-target="_self"
+    
+    unresolved
+>
+    <a href="/playtesting/our-locations/at-home">At-Home Playtests</a>
+</ea-local-nav-shelf-sub-nav-section-link>
+
+</ea-local-nav-shelf-sub-nav-section>
+
+</ea-local-nav-shelf-sub-nav>
+
+        
+    
+        
+            
+                <ea-link
+                    slot="local-nav-shelf-link"
+                    class="eapl-local-nav__shelf-link"
+                    text-color="light"
+                    link-href="/playtesting/news"
+                    link-title="News"
+                    link-text="News"
+                    unresolved
+                >
+                    <a href="/playtesting/news">News</a>
+                </ea-link>
+            
+        
+    
+
+    
+        
+            
+
+    <ea-elements-loader elements="ea-link">
+    </ea-elements-loader>
+    <ea-link
+        
+            slot="local-nav-drawer-link"
+        
+        class="eapl-local-nav__drawer-link"
+        link-href="/playtesting/about"
+        link-title=""
+        link-text="About"
+        text-color="light"
+        unresolved
+    >
+        <a href="/playtesting/about">About</a>
+    </ea-link>
+
+
+        
+            
+
+    <ea-elements-loader elements="ea-link">
+    </ea-elements-loader>
+    <ea-link
+        
+            slot="local-nav-drawer-link"
+        
+        class="eapl-local-nav__drawer-link"
+        link-href="https://go.ea.com/eapt"
+        link-title=""
+        link-text="Become a Playtester"
+        text-color="light"
+        unresolved
+    >
+        <a href="https://go.ea.com/eapt">Become a Playtester</a>
+    </ea-link>
+
+
+        
+            
+
+    <ea-elements-loader elements="ea-local-nav-drawer-sub-nav-advanced">
+    </ea-elements-loader>
+    <ea-local-nav-drawer-sub-nav-advanced
+        
+            slot="local-nav-drawer-link"
+        
+        toggle-text="Our Locations"
+        toggle-tooltip=""
+        theme="dark"
+        
+            type="narrow"
+        
+        unresolved
+    >
+        
+        
+            
+
+    <ea-elements-loader elements="ea-local-nav-drawer-sub-nav-section, ea-link">
+    </ea-elements-loader>
+    <ea-local-nav-drawer-sub-nav-section
+        slot="local-nav-drawer-sub-nav-section"
+        title-text="On-Site"
+        unresolved
+    >
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/burnaby"
+            link-title=""
+            link-text="Burnaby, CA"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/burnaby">Burnaby, CA</a>
+        </ea-link>
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/guildford"
+            link-title=""
+            link-text="Guildford, UK"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/guildford">Guildford, UK</a>
+        </ea-link>
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/montreal"
+            link-title=""
+            link-text="Montreal, CA"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/montreal">Montreal, CA</a>
+        </ea-link>
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/orlando"
+            link-title=""
+            link-text="Orlando, US"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/orlando">Orlando, US</a>
+        </ea-link>
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/redwood-city"
+            link-title=""
+            link-text="Redwood City, US"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/redwood-city">Redwood City, US</a>
+        </ea-link>
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/stockholm"
+            link-title=""
+            link-text="Stockholm, SE"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/stockholm">Stockholm, SE</a>
+        </ea-link>
+    
+    </ea-local-nav-drawer-sub-nav-section>
+
+
+        
+            
+
+    <ea-elements-loader elements="ea-local-nav-drawer-sub-nav-section, ea-link">
+    </ea-elements-loader>
+    <ea-local-nav-drawer-sub-nav-section
+        slot="local-nav-drawer-sub-nav-section"
+        title-text="Remote"
+        unresolved
+    >
+    
+        <ea-link
+            slot="local-nav-drawer-sub-nav-section-link"
+            link-href="/playtesting/our-locations/at-home"
+            link-title=""
+            link-text="At-Home Playtests"
+            unresolved
+        >
+            <a href="/playtesting/our-locations/at-home">At-Home Playtests</a>
+        </ea-link>
+    
+    </ea-local-nav-drawer-sub-nav-section>
+
+
+        
+    </ea-local-nav-drawer-sub-nav-advanced>
+
+
+        
+            
+
+    <ea-elements-loader elements="ea-link">
+    </ea-elements-loader>
+    <ea-link
+        
+            slot="local-nav-drawer-link"
+        
+        class="eapl-local-nav__drawer-link"
+        link-href="/playtesting/news"
+        link-title="News"
+        link-text="News"
+        text-color="light"
+        unresolved
+    >
+        <a href="/playtesting/news">News</a>
+    </ea-link>
+
+
+        
+    
+
+    
+        
+
+
+    <ea-elements-loader elements="ea-cta-dropdown, ea-hybrid-modal-invoker">
+    </ea-elements-loader>
+
+    
+        <ea-cta-dropdown
+            slot="cta-dropdown"
+            theme="light"
+            cta-title-text="Log In"
+            cta-link="https://go.ea.com/eapt"
+            border-color="none"
+            fill-color="brand"
+            text-color="light"
+            type=""
+
+            
+            
+            
+            
+            
+            unresolved
+        >
+            
+
+            
+        </ea-cta-dropdown>
+    
+
+
+
+        
+            <ea-elements-loader elements="ea-local-nav-dropdown">
+            </ea-elements-loader>
+            <ea-local-nav-dropdown
+                slot="local-nav-dropdown"
+                theme="light"
+                menu-title=""
+                cta-title-text="Log In"
+                cta-link="https://go.ea.com/eapt"
+                border-color="none"
+                fill-color="brand"
+                text-color="light"
+                type=""
+
+                
+                
+                unresolved
+            >
+            
+            
+            </ea-local-nav-dropdown>
+        
+    
+</ea-local-nav-advanced>
+
+            
+                
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="96px"
+    
+    
+        small="96px"
+    
+    
+        medium="96px"
+    
+    
+        large="96px"
+    
+    
+        largest="100px"
+    
+>
+</ea-spacer>
+
+            
+        
+    
+
+
+
+
+
+<main>
+    
+
+
+
+    
+<ea-elements-loader elements="ea-hero">
+</ea-elements-loader>
+<ea-hero
+    
+        layout="medium"
+    
+    
+        text-position="center"
+    
+    
+        text-align="center"
+    
+    
+        text-color="light"
+    
+    
+    
+    
+    
+        animations-on-mobile
+    
+    
+    
+        background-color="light"
+    
+    
+    
+    
+        title-text="Inspire the Future of Play"
+    
+    
+    
+    
+        image-smallest="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop3x5.320w.png"
+        image-small="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop3x5.767w.png"
+        image-medium="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop2x1.1023w.png"
+        image-large="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop5x2.1455w.png"
+        image-largest="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop7x2.1920w.png"
+        image-tooltip="A textured purple background with 3 shapes - a sphere, a cone, and a cube."
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        spacing-bottom="none"
+    
+    
+        spacing-top="none"
+    
+    
+        scrim-color="none"
+    
+    
+        scrim-opacity="medium"
+    
+    
+    unresolved
+    
+        custom-styles="{}"
+    
+    
+        show-video-on-all-breakpoints=""
+    
+    
+    
+>
+    
+        <h1>Inspire the Future of Play</h1>
+    
+    
+    
+    
+    
+        <img
+            src="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop3x5.320w.png"
+            alt="A textured purple background with 3 shapes - a sphere, a cone, and a cube."
+            srcset="https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop3x5.320w.png 320w, https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop3x5.767w.png 768w, https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop2x1.1023w.png 1024w, https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop5x2.1455w.png 1320w, https://media.contentapi.ea.com/content/dam/eacom/images/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-fallback.png.adapt.crop7x2.1920w.png 1456w"
+        />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<ea-elements-loader elements="ea-html5-video">
+</ea-elements-loader>
+<ea-html5-video
+    slot="html5-video"
+    
+        webm-src-smallest="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-16x9-sm-xs-1.webm"
+    
+
+    
+        mp4-src-smallest="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-16x9-sm-xs.mp4"
+    
+
+    
+        webm-src-small="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-16x9-sm-xs-1.webm"
+    
+
+    
+        mp4-src-small="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-16x9-sm-xs.mp4"
+    
+
+    
+        webm-src-medium="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-2x1-md-1.webm"
+    
+
+    
+        mp4-src-medium="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-2x1-md.mp4"
+    
+
+    
+        webm-src="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-5x2-lg-1.webm"
+    
+
+    
+        mp4-src="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-5x2-lg.mp4"
+    
+
+    
+        webm-src-largest="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl-1.webm"
+    
+
+    
+        mp4-src-largest="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/10/ea-games-hero-md-fy23-sizzle-reel-7x2-xl.mp4"
+    
+
+    
+        autoplay=""
+    
+
+    
+
+    
+
+    
+        loop=""
+    
+
+    
+        muted=""
+    
+
+    
+
+    
+    unresolved
+>
+    
+</ea-html5-video>
+
+    
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="standard"
+    
+    
+    
+        link-url="https://go.ea.com/eapt"
+    
+    
+    
+        link-text="Become a Playtester"
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="light-brand"
+    
+    
+        text-color="brand"
+    
+    
+        stroke-color="none"
+    
+    
+        target="_self"
+    
+    
+    
+    
+        intent="navigation"
+    
+    
+    
+    
+        emphasis="primary"
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="https://go.ea.com/eapt"
+        
+        
+    >
+        
+            Become a Playtester
+        
+    </a>
+</ea-cta>
+
+    
+</ea-hero>
+
+
+
+
+    
+<ea-elements-loader elements="ea-section">
+</ea-elements-loader>
+<ea-section
+    unresolved
+    slot="section"
+    
+    
+        type="railed"
+    
+    
+        layout="100"
+    
+    
+    
+        background-color="none"
+    
+    
+    
+        background-overflow="visible"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="none"
+    
+    
+    
+    
+    
+>
+    
+    
+
+
+<ea-section-column
+    slot="section-column"
+    
+        indent-left="1"
+    
+    
+        indent-right="1"
+    
+    
+        text-align="center"
+    
+    
+    
+        mobile-order="0"
+    
+    
+>
+    
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="64px"
+    
+    
+        small="64px"
+    
+    
+        medium="72px"
+    
+    
+        large="72px"
+    
+    
+        largest="72px"
+    
+>
+</ea-spacer>
+
+<ea-elements-loader elements="ea-subheading">
+</ea-elements-loader>
+<ea-subheading
+    unresolved
+    
+        type="ordered"
+    
+    
+        layout="small"
+    
+    
+        text-align="center"
+    
+    
+        text-color="dark"
+    
+    
+    
+        title-text="What is Electronic Arts Playtesting?"
+    
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="none"
+    
+>
+    
+    
+        <h3>What is Electronic Arts Playtesting?</h3>
+    
+    
+</ea-subheading>
+
+<ea-elements-loader elements="ea-text">
+</ea-elements-loader>
+<ea-text
+    unresolved
+    slot="text"
+    
+        text-color="dark"
+    
+>
+    <p style="text-align: center; margin: 0 auto; width: 85%;">At Electronic Arts Playtesting, we like to think of ourselves as advocates for YOU, the players. We exist so that your voice is heard during all stages of the game development process. Because we make such a wide range of games at EA, we Playtest a huge range too! Every Playtest is unique from single-player run throughs, to group multiplayer sessions. There’s bound to be a Playtest session perfect for you!</p>
+
+    
+</ea-text>
+
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="32px"
+    
+    
+        small="32px"
+    
+    
+        medium="32px"
+    
+    
+        large="32px"
+    
+    
+        largest="32px"
+    
+>
+</ea-spacer>
+
+<ea-elements-loader elements="ea-grid">
+</ea-elements-loader>
+<ea-grid
+    
+
+    type="ordered"
+
+
+    tile-media-shape="rectangle"
+
+
+
+    layout="3up"
+
+
+    tile-type="vertical"
+
+
+    tile-text-align="center"
+
+
+    tile-text-color="dark"
+
+
+    tile-color="none"
+
+
+
+
+    hide-eyebrow
+
+
+
+
+
+    hide-brand-stroke
+
+
+    hide-byline
+
+
+    spacing-top="none"
+
+
+    spacing-bottom="none"
+
+
+    hide-tags
+
+
+
+    
+    
+    
+        tile-scrim-color="none"
+    
+    
+        tile-scrim-opacity="medium"
+    
+    tile-align="center"
+    
+    
+    
+    
+    
+    
+    
+    animate-in-order=""
+    animate-out-order=""
+    
+    unresolved
+>
+    
+    
+<ea-elements-loader elements="ea-tile">
+</ea-elements-loader>
+<ea-container
+    slot="container"
+    
+        filter-key="All"
+    
+    >
+    <ea-tile
+        unresolved
+        slot="tile"
+        style="--ea-animation-index:0"
+        
+        
+        
+        
+            media="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-home-card-signup.jpg.adapt.crop16x9.652w.jpg"
+        
+        
+        
+        
+        
+            title-text="How to Sign Up"
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        tooltip="An icon of a person to represent signup."
+
+        
+
+        
+    >
+        
+            <h3>How to Sign Up</h3>
+        
+        
+        
+        
+        <ea-tile-copy slot="copy">
+        
+            <p>Learn if you're eligible for Electronic Arts Playtesting and view upcoming Playtesting events.</p>
+
+        
+        </ea-tile-copy>
+        
+        
+            
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="text"
+    
+    
+    
+        link-url="https://go.ea.com/eapt"
+    
+    
+    
+        link-text="See More"
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+        stroke-color="none"
+    
+    
+        target="_self"
+    
+    
+    
+    
+        intent="navigation"
+    
+    
+    
+    
+        emphasis="primary"
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="https://go.ea.com/eapt"
+        
+        
+    >
+        
+            See More
+        
+    </a>
+</ea-cta>
+
+        
+        
+        
+    </ea-tile>
+</ea-container>
+
+<ea-elements-loader elements="ea-tile">
+</ea-elements-loader>
+<ea-container
+    slot="container"
+    
+        filter-key="All"
+    
+    >
+    <ea-tile
+        unresolved
+        slot="tile"
+        style="--ea-animation-index:1"
+        
+        
+        
+        
+            media="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-home-card-about.jpg.adapt.crop16x9.652w.jpg"
+        
+        
+        
+        
+        
+            title-text="About Playtesting"
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        tooltip="An icon of a game controller to represent playtesting."
+
+        
+
+        
+    >
+        
+            <h3>About Playtesting</h3>
+        
+        
+        
+        
+        <ea-tile-copy slot="copy">
+        
+            <p>Learn more about Electronic Arts Playtesting</p>
+
+        
+        </ea-tile-copy>
+        
+        
+            
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="text"
+    
+    
+    
+        link-url="/playtesting/about"
+    
+    
+    
+        link-text="See More"
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+        stroke-color="none"
+    
+    
+        target="_self"
+    
+    
+    
+    
+        intent="navigation"
+    
+    
+    
+    
+        emphasis="primary"
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="/playtesting/about"
+        
+        
+    >
+        
+            See More
+        
+    </a>
+</ea-cta>
+
+        
+        
+        
+    </ea-tile>
+</ea-container>
+
+<ea-elements-loader elements="ea-tile">
+</ea-elements-loader>
+<ea-container
+    slot="container"
+    
+        filter-key="All"
+    
+    >
+    <ea-tile
+        unresolved
+        slot="tile"
+        style="--ea-animation-index:2"
+        
+        
+        
+        
+            media="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-home-card-faq.jpg.adapt.crop16x9.652w.jpg"
+        
+        
+        
+        
+        
+            title-text="FAQ"
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        tooltip="An icon of a question mark to represent an FAQ."
+
+        
+
+        
+    >
+        
+            <h3>FAQ</h3>
+        
+        
+        
+        
+        <ea-tile-copy slot="copy">
+        
+            <p>Get answers to everything Electronic Arts Playtesting.</p>
+
+        
+        </ea-tile-copy>
+        
+        
+            
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="text"
+    
+    
+    
+        link-url="/playtesting/faq"
+    
+    
+    
+        link-text="See More"
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+        stroke-color="none"
+    
+    
+        target="_self"
+    
+    
+    
+    
+        intent="navigation"
+    
+    
+    
+    
+        emphasis="primary"
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="/playtesting/faq"
+        
+        
+    >
+        
+            See More
+        
+    </a>
+</ea-cta>
+
+        
+        
+        
+    </ea-tile>
+</ea-container>
+
+    
+
+
+</ea-grid>
+
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="64px"
+    
+    
+        small="64px"
+    
+    
+        medium="72px"
+    
+    
+        large="72px"
+    
+    
+        largest="72px"
+    
+>
+</ea-spacer>
+
+</ea-section-column>
+
+    
+</ea-section>
+
+
+
+
+    
+<ea-elements-loader elements="ea-section">
+</ea-elements-loader>
+<ea-section
+    unresolved
+    slot="section"
+    
+    
+        type="railed"
+    
+    
+        layout="100"
+    
+    
+    
+        background-color="none"
+    
+    
+    
+        background-overflow="visible"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="none"
+    
+    
+    
+    
+    
+>
+    
+    
+
+
+<ea-section-column
+    slot="section-column"
+    
+        indent-left="1"
+    
+    
+        indent-right="1"
+    
+    
+        text-align="center"
+    
+    
+    
+        mobile-order="0"
+    
+    
+>
+    
+<ea-elements-loader elements="ea-subheading">
+</ea-elements-loader>
+<ea-subheading
+    unresolved
+    
+        type="ordered"
+    
+    
+        layout="small"
+    
+    
+        text-align="center"
+    
+    
+        text-color="dark"
+    
+    
+    
+        title-text="Latest News"
+    
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="none"
+    
+>
+    
+    
+        <h3>Latest News</h3>
+    
+    
+</ea-subheading>
+
+<ea-elements-loader elements="ea-grid">
+</ea-elements-loader>
+<ea-grid
+    
+
+    type="ordered"
+
+
+    tile-media-shape="rectangle"
+
+
+
+    layout="3up"
+
+
+    tile-type="vertical"
+
+
+    tile-text-align="left"
+
+
+    tile-text-color="light"
+
+
+    tile-color="dark"
+
+
+
+
+    hide-eyebrow
+
+
+
+
+    hide-ctas
+
+
+
+    hide-byline
+
+
+    spacing-top="medium"
+
+
+    spacing-bottom="medium"
+
+
+
+
+    
+    
+    
+        tile-scrim-color="none"
+    
+    
+        tile-scrim-opacity="medium"
+    
+    tile-align="center"
+    
+    
+    
+    
+    
+    
+        ajax-url="/pagination/2-9P8ITRmhrQOTdDi5GSrjjdV3CW1pwP5qO%2BkWNXy4VTDz%2Bj%2BIVFtLp7UADYe89JRg6%2FhHki2lo6IbObjF7H%2FcKXscrFWgLrCFa83YdxHlNXIGasbasftUt%2BBNSFCejxTDdOEE%2ByZxnscbBZOFByefIpCJsOTmf32%2BPi%2Fh9gvYtNtx1aYCFZ%2BcFIYajdU%3D"
+    
+    
+        total-count="21"
+    
+    animate-in-order=""
+    animate-out-order=""
+    
+    unresolved
+>
+    
+    
+
+    
+<ea-elements-loader elements="ea-tile">
+</ea-elements-loader>
+<ea-container
+    slot="container"
+    
+        filter-key="All"
+    
+    >
+    <ea-tile
+        unresolved
+        slot="tile"
+        style="--ea-animation-index:0"
+        
+        
+        
+        
+            media="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/motivethumbnail.png.adapt.crop16x9.431p.png"
+        
+        
+        
+            eyebrow-text="Playtesting"
+        
+        
+            eyebrow-secondary-text="Apr 26, 2024"
+        
+        
+            title-text="Welcome to Playtesting in Montreal!"
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        tooltip="Welcome to Playtesting in Montreal!"
+
+        
+
+        
+    >
+        
+            <h3>Welcome to Playtesting in Montreal!</h3>
+        
+        
+            <div>Playtesting</div>
+            
+                <div>Apr 26, 2024</div>
+            
+        
+        
+        
+        <ea-tile-copy slot="copy">
+        
+            Take a tour of the Montreal Player Experience Lab.
+        
+        </ea-tile-copy>
+        
+        
+            
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="standard"
+    
+    
+    
+        link-url="/playtesting/news/welcome-to-playtesting-in-montreal"
+    
+    
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="/playtesting/news/welcome-to-playtesting-in-montreal"
+        
+        
+    >
+        
+    </a>
+</ea-cta>
+
+        
+        
+        
+    </ea-tile>
+</ea-container>
+
+<ea-elements-loader elements="ea-tile">
+</ea-elements-loader>
+<ea-container
+    slot="container"
+    
+        filter-key="All"
+    
+    >
+    <ea-tile
+        unresolved
+        slot="tile"
+        style="--ea-animation-index:1"
+        
+        
+        
+        
+            media="https://media.contentapi.ea.com/content/dam/eacom/playtesting/common/ea-playtesting-article-thumbnail.jpg.adapt.crop16x9.431p.jpg"
+        
+        
+        
+            eyebrow-text="Playtesting"
+        
+        
+            eyebrow-secondary-text="Mar 13, 2024"
+        
+        
+            title-text="Top Tips To Get Selected For A Playtest"
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        tooltip="Top Tips To Get Selected For A Playtest"
+
+        
+
+        
+    >
+        
+            <h3>Top Tips To Get Selected For A Playtest</h3>
+        
+        
+            <div>Playtesting</div>
+            
+                <div>Mar 13, 2024</div>
+            
+        
+        
+        
+        <ea-tile-copy slot="copy">
+        
+            Want to boost your chances of being selected for a Playtest? This is the article for you!
+        
+        </ea-tile-copy>
+        
+        
+            
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="standard"
+    
+    
+    
+        link-url="/playtesting/news/top-tips-to-get-selected-for-a-playtest"
+    
+    
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="/playtesting/news/top-tips-to-get-selected-for-a-playtest"
+        
+        
+    >
+        
+    </a>
+</ea-cta>
+
+        
+        
+        
+    </ea-tile>
+</ea-container>
+
+<ea-elements-loader elements="ea-tile">
+</ea-elements-loader>
+<ea-container
+    slot="container"
+    
+        filter-key="All"
+    
+    >
+    <ea-tile
+        unresolved
+        slot="tile"
+        style="--ea-animation-index:2"
+        
+        
+        
+        
+            media="https://media.contentapi.ea.com/content/dam/eacom/common/feature-image-thumbnail-fc24-jan-jpg.png.adapt.crop16x9.431p.png"
+        
+        
+        
+            eyebrow-text="Playtesting"
+        
+        
+            eyebrow-secondary-text="Jan 18, 2024"
+        
+        
+            title-text="Playtesting EA SPORTS FC 24!"
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        tooltip="Playtesting EA SPORTS FC 24!"
+
+        
+
+        
+    >
+        
+            <h3>Playtesting EA SPORTS FC 24!</h3>
+        
+        
+            <div>Playtesting</div>
+            
+                <div>Jan 18, 2024</div>
+            
+        
+        
+        
+        <ea-tile-copy slot="copy">
+        
+            Read about how Playtesting helped the development of EA Sports FC 24!
+        
+        </ea-tile-copy>
+        
+        
+            
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="standard"
+    
+    
+    
+        link-url="/playtesting/news/playtesting-ea-sports-fc24"
+    
+    
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="/playtesting/news/playtesting-ea-sports-fc24"
+        
+        
+    >
+        
+    </a>
+</ea-cta>
+
+        
+        
+        
+    </ea-tile>
+</ea-container>
+
+
+
+    
+
+
+</ea-grid>
+
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="64px"
+    
+    
+        small="64px"
+    
+    
+        medium="72px"
+    
+    
+        large="72px"
+    
+    
+        largest="72px"
+    
+>
+</ea-spacer>
+
+</ea-section-column>
+
+    
+</ea-section>
+
+
+
+
+    
+<ea-elements-loader elements="ea-section">
+</ea-elements-loader>
+<ea-section
+    unresolved
+    slot="section"
+    
+    
+        type="railed"
+    
+    
+        layout="100"
+    
+    
+    
+        background-color="none"
+    
+    
+    
+        background-overflow="hidden"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="none"
+    
+    
+    
+    
+        background-image-smallest="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.320w.png"
+        background-image-small="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.768w.png"
+        background-image-medium="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.1024w.png"
+        background-image-large="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.1456w.png"
+        background-image-largest="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.1920w.png"
+        image-tooltip="A textured pink and blue background."
+    
+    
+>
+    
+        <img
+            src="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.320w.png"
+            alt="A textured pink and blue background."
+            srcset="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.320w.png 320w, https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.768w.png 768w, https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.1024w.png 1024w, https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.1456w.png 1320w, https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/eaplaytesting-signup-section-bg-xl1.png.adapt.1920w.png 1456w"
+        />
+    
+    
+
+
+<ea-section-column
+    slot="section-column"
+    
+    
+    
+        text-align="center"
+    
+    
+    
+        mobile-order="0"
+    
+    
+>
+    
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="64px"
+    
+    
+        small="64px"
+    
+    
+        medium="96px"
+    
+    
+        large="96px"
+    
+    
+        largest="96px"
+    
+>
+</ea-spacer>
+
+<ea-elements-loader elements="ea-subheading">
+</ea-elements-loader>
+<ea-subheading
+    unresolved
+    
+        type="ordered"
+    
+    
+        layout="small"
+    
+    
+        text-align="center"
+    
+    
+        text-color="light"
+    
+    
+    
+        title-text="Interested? Sign up for Playtesting today!"
+    
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="small"
+    
+>
+    
+    
+        <h3>Interested? Sign up for Playtesting today!</h3>
+    
+    
+</ea-subheading>
+
+<ea-elements-loader elements="ea-cta">
+</ea-elements-loader>
+<ea-cta
+    
+        slot="cta"
+    
+    
+        type="standard"
+    
+    
+    
+        link-url="https://go.ea.com/eapt"
+    
+    
+    
+        link-text="Sign Up"
+    
+    
+        icon="none"
+    
+    
+    
+        fill-color="none"
+    
+    
+        text-color="light"
+    
+    
+        stroke-color="light"
+    
+    
+        target="_self"
+    
+    
+    
+    
+        intent="navigation"
+    
+    
+    
+    
+        emphasis="primary"
+    
+    
+    
+    
+    
+    unresolved
+>
+    <a
+        
+            href="https://go.ea.com/eapt"
+        
+        
+    >
+        
+            Sign Up
+        
+    </a>
+</ea-cta>
+
+<ea-elements-loader elements="ea-spacer">
+</ea-elements-loader>
+<ea-spacer
+    unresolved
+    
+        smallest="64px"
+    
+    
+        small="64px"
+    
+    
+        medium="96px"
+    
+    
+        large="96px"
+    
+    
+        largest="96px"
+    
+>
+</ea-spacer>
+
+</ea-section-column>
+
+    
+</ea-section>
+
+
+
+<ea-elements-loader elements="ea-ftue-ga-event-initiator">
+</ea-elements-loader>
+<ea-ftue-ga-event-initiator></ea-ftue-ga-event-initiator>
+
+
+
+
+    
+        
+            
+                
+
+    
+
+    <div>
+        <style>
+.asset-first .eapl-section-column-50:nth-of-type(2),
+.copy-first .eapl-section-column-50:nth-of-type(1),
+.copy-copy .eapl-section-column-50 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    ea-section ea-section-column.eapl-section-column-50 {
+        align-self: center;
+        margin: 0;
+        width: 50%;
+        overflow: hidden;
+    }
+    .copy-copy ea-section ea-section-column.eapl-section-column-50 {
+        align-self: start;
+    }
+
+    .asset-first .eapl-section-column-50:nth-of-type(2),
+    .copy-first .eapl-section-column-50:nth-of-type(1),
+    .copy-copy .eapl-section-column-50  {
+        padding: 0 2rem;
+        margin: 0;
+        width: 50%;
+    }
+    .dx-video-asset ea-media ea-html5-video {
+        margin-bottom: -10px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .asset-first .eapl-section-column-50:nth-of-type(2),
+    .copy-first .eapl-section-column-50:nth-of-type(1),
+    .copy-copy .eapl-section-column-50  {
+        padding: 0 6rem;
+    }
+
+}
+</style>
+    </div>
+
+
+
+
+            
+                
+
+    
+
+    <div>
+        <style>
+ea-section-column.eapl-section-column-100 img,ea-section-column.eapl-section-column-50 img,ea-section-column.eapl-section-column-66 img {
+max-width: 100%;
+}
+</style>
+    </div>
+
+
+
+
+            
+                
+
+    
+
+    <div>
+         <style>
+.dx__anchor-nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dx__anchor-nav__link {
+    display: flex;
+    align-items: center;
+    font-family: var(--ea-theme-secondary-font-family);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 0;
+    border-right: 1px solid var(--dx-anchor-nav-separator-color);
+    white-space: nowrap;
+}
+
+.dx__anchor-nav__link::before {
+    content: "";
+}
+
+.dx__anchor-nav__link:last-child {
+    border: none;
+}
+
+.dx__anchor-nav__link a {
+    text-decoration: none;
+    line-height: 1;
+    transition: linear all 0.25s;
+    webkit-transition: all .25s linear;
+    moz-transition: all .25s linear;
+    ms-transition: all .25s linear;
+    o-transition: all .25s linear;
+    color: var(--dx-anchor-nav-color);
+}
+
+.dx__anchor-nav__link a:hover {
+    transform: translatey(-2px);
+    color: var(--dx-anchor-nav-hover-color);
+}
+
+@media only screen and (max-width: 1158px) {
+    .dx__anchor-nav__link {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .dx__anchor-nav__link {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 846px) {
+    .dx__anchor-nav__link {
+        font-size: 0.8rem;
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .dx__anchor-nav {
+        flex-direction: column;
+    }
+
+    .dx__anchor-nav__link {
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        letter-spacing: 0.05rem;
+        text-align: center;
+        padding: 14px 0;
+        border: none;
+        border-bottom: 1px solid var(--dx-anchor-nav-separator-color);
+    }
+}
+    </style>
+    </div>
+
+
+
+
+            
+                
+
+    
+
+    <div>
+        <style>
+.ea-play-section {
+    background: rgb(13,16,66);
+background: linear-gradient(60deg, rgba(13,16,66,1) 0%, rgba(13,16,66,1) 50%, rgba(255,71,71,1) 100%);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 3rem;
+    width: 98%;
+    margin: 3rem auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+</style>
+    </div>
+
+
+
+
+            
+                
+
+    
+
+
+    
+
+
+
+
+            
+        
+    
+
+
+
+    
+    <div style="display: none;"></div>
+</main>
+<footer role="contentinfo">
+    
+
+    
+        
+            
+                
+<ea-elements-loader elements="ea-local-footer, ea-local-links, ea-local-link, ea-social-links, ea-social-link, ea-hybrid-regional-rating">
+</ea-elements-loader>
+<ea-local-footer
+    theme="dark"
+    sal-game-slug=""
+    rating-lang="en"
+    unresolved
+>
+    <ea-local-links
+        slot="local-links"
+        title-text="Electronic Arts Playtesting"
+        text-color="dark"
+        unresolved
+    >
+    
+        <ea-local-link
+            slot="local-link"
+            link-url="https://go.ea.com/eapt"
+            link-title="Playtesting"
+            link-text="Become a Playtester"
+            text-color="dark"
+            unresolved
+        >
+            <a
+                href="https://go.ea.com/eapt"
+                title="Playtesting"
+            >Become a Playtester</a>
+        </ea-local-link>
+    
+        <ea-local-link
+            slot="local-link"
+            link-url="https://go.ea.com/eapt"
+            link-title=""
+            link-text="Returning Playtesters"
+            text-color="dark"
+            unresolved
+        >
+            <a
+                href="https://go.ea.com/eapt"
+                title=""
+            >Returning Playtesters</a>
+        </ea-local-link>
+    
+    </ea-local-links>
+
+    <ea-social-links
+        slot="social-links"
+        text-color="dark"
+        title-text="Join The Conversation"
+        unresolved
+    >
+    
+        <ea-social-link
+            slot="social-link"
+            link-url=" https://www.facebook.com/EAPlaytesting/"
+            link-title="Facebook"
+            link-target="_blank"
+            text-color="dark"
+            social-network="facebook"
+            unresolved
+        >
+            <a
+                href=" https://www.facebook.com/EAPlaytesting/"
+                title="Facebook"
+            >facebook</a>
+        </ea-social-link>
+    
+        <ea-social-link
+            slot="social-link"
+            link-url="https://twitter.com/EAPlaytesting"
+            link-title="Twitter"
+            link-target="_blank"
+            text-color="dark"
+            social-network="twitter"
+            unresolved
+        >
+            <a
+                href="https://twitter.com/EAPlaytesting"
+                title="Twitter"
+            >twitter</a>
+        </ea-social-link>
+    
+    </ea-social-links>
+
+    
+        
+<ea-elements-loader elements="ea-studio-link">
+</ea-elements-loader>
+<ea-studio-link
+    unresolved
+    slot="studio-link"
+    link-url=""
+    link-title=""
+    
+        image-max-height="40px"
+    
+    
+        image-smallest="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+        image-small="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+        image-medium="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+        image-large="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+        image-largest="https://media.contentapi.ea.com/content/dam/ea/playtestingv2/common/ea-combo-wordmark.svg"
+        image-alt=""
+        
+        
+    
+>
+    <a
+        href=""
+        title=""
+    ></a>
+</ea-studio-link>
+
+    
+
+    
+
+    
+
+    
+</ea-local-footer>
+
+            
+        
+    
+
+
+    
+
+    
+        
+            
+                
+<ea-elements-loader elements="ea-network-footer, ea-network-legal, ea-link, ea-content-loader">
+</ea-elements-loader>
+<ea-network-footer
+    theme="dark"
+    
+    
+        logo-image="https://media.contentapi.ea.com/content/dam/eacom/en-us/common/october-ea-ring.png"
+        logo-tooltip="Electronics Arts Home"
+    
+    
+        logo-link-url="https://www.ea.com"
+        logo-link-text="Electronics Arts Home"
+        logo-link-tooltip="Electronics Arts Home"
+    
+    unresolved
+>
+    
+        <img
+            src="https://media.contentapi.ea.com/content/dam/eacom/en-us/common/october-ea-ring.png"
+            alt=""
+        />
+    
+    
+        
+            <ea-link
+                slot="link"
+                link-href="/games/library"
+                link-title="Game Library"
+                link-text="Game Library"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/games/library"
+                    title="Game Library"
+                >Game Library</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/subscribe"
+                link-title="Subscribe"
+                link-text="Subscribe"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/subscribe"
+                    title="Subscribe"
+                >Subscribe</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/redeem"
+                link-title="Redeem Code"
+                link-text="Redeem Code"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/redeem"
+                    title="Redeem Code"
+                >Redeem Code</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/ea-app"
+                link-title="EA app"
+                link-text="EA app"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/ea-app"
+                    title="EA app"
+                >EA app</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/about"
+                link-title="About"
+                link-text="About"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/about"
+                    title="About"
+                >About</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/able"
+                link-title="Accessibility"
+                link-text="Accessibility"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/able"
+                    title="Accessibility"
+                >Accessibility</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="https://help.ea.com/"
+                link-title="Help"
+                link-text="Help"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="https://help.ea.com/"
+                    title="Help"
+                >Help</a>
+            </ea-link>
+        
+    
+    <ea-elements-loader elements="ea-regional-pricing-selector">
+</ea-elements-loader>
+<ea-regional-pricing-selector
+slot="regional-pricing-selector"
+theme="dark"
+label-text="Regional Pricing"
+
+unresolved
+    >
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="AT"
+    >Austria</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="BE"
+    >Belgium</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="BG"
+    >Bulgaria</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="HR"
+    >Croatia</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="CY"
+    >Cyprus</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="CZ"
+    >Czech Republic</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="DK"
+    >Denmark</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="EE"
+    >Estonia</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="FI"
+    >Finland</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="FR"
+    >France</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="DE"
+    >Germany</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="GR"
+    >Greece</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="HU"
+    >Hungary</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="IS"
+    >Iceland</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="IE"
+    >Ireland</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="IT"
+    >Italy</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="LV"
+    >Latvia</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="LI"
+    >Liechtenstein</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="LT"
+    >Lithuania</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="LU"
+    >Luxembourg</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="MT"
+    >Malta</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="NL"
+    >Netherlands</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="NO"
+    >Norway</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="PL"
+    >Poland</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="PT"
+    >Portugal</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="RO"
+    >Romania</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="SK"
+    >Slovakia</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="SL"
+    >Slovenia</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="ES"
+    >Spain</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="SE"
+    >Sweden</ea-regional-pricing-selector-option>
+
+    <ea-regional-pricing-selector-option
+    slot="regional-pricing-selector-option"
+    value="CH"
+    >Switzerland</ea-regional-pricing-selector-option>
+
+</ea-regional-pricing-selector>
+    
+<ea-elements-loader elements="ea-locale-selector">
+</ea-elements-loader>
+<ea-locale-selector
+    slot="locale-selector"
+    theme="dark"
+    value="en-us"
+    label-text="Language"
+    
+    unresolved
+    >
+    
+        <ea-locale-selector-option
+            slot="locale-selector-option"
+            value="en-us"
+        >United States</ea-locale-selector-option>
+    
+        <ea-locale-selector-option
+            slot="locale-selector-option"
+            value="en-gb"
+        >United Kingdom</ea-locale-selector-option>
+    
+        <ea-locale-selector-option
+            slot="locale-selector-option"
+            value="en-ca"
+        >Canada (En)</ea-locale-selector-option>
+    
+        <ea-locale-selector-option
+            slot="locale-selector-option"
+            value="fr-ca"
+        >Canada (Fr)</ea-locale-selector-option>
+    
+        <ea-locale-selector-option
+            slot="locale-selector-option"
+            value="sv-se"
+        >Sverige</ea-locale-selector-option>
+    
+</ea-locale-selector>
+
+    <ea-network-legal
+        slot="network-legal"
+        copyright-text="© 2026 Electronic Arts Inc. "
+        text-color="dark"
+        unresolved
+    >
+        
+            <ea-link
+                slot="link"
+                link-href="http://www.ea.com/legal"
+                link-title="Legal &amp; Privacy"
+                link-text="Legal &amp; Privacy"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="http://www.ea.com/legal"
+                    title="Legal &amp; Privacy"
+                >Legal &amp; Privacy</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="https://www.ea.com/terms-of-service"
+                link-title="NEW User Agreement"
+                link-text="User Agreement"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="https://www.ea.com/terms-of-service"
+                    title="NEW User Agreement"
+                >User Agreement</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="https://www.ea.com/legal/privacy-and-cookie-policy"
+                link-title="Privacy &amp; Cookie Policy"
+                link-text="Privacy &amp; Cookie Policy"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="https://www.ea.com/legal/privacy-and-cookie-policy"
+                    title="Privacy &amp; Cookie Policy"
+                >Privacy &amp; Cookie Policy</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/service-updates"
+                link-title="Online Service Updates"
+                link-text="Online Service Updates"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/service-updates"
+                    title="Online Service Updates"
+                >Online Service Updates</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="/security"
+                link-title="Security"
+                link-text="Security"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="/security"
+                    title="Security"
+                >Security</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="https://www.youtube.com/t/terms"
+                link-title="YouTube Terms of Service"
+                link-text="YouTube Terms of Service"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="https://www.youtube.com/t/terms"
+                    title="YouTube Terms of Service"
+                >YouTube Terms of Service</a>
+            </ea-link>
+        
+            <ea-link
+                slot="link"
+                link-href="https://policies.google.com/privacy"
+                link-title="Google Privacy Policy"
+                link-text="Google Privacy Policy"
+                text-color="dark"
+                unresolved
+            >
+                <a
+                    href="https://policies.google.com/privacy"
+                    title="Google Privacy Policy"
+                >Google Privacy Policy</a>
+            </ea-link>
+        
+        
+    </ea-network-legal>
+    
+<ea-elements-loader elements="ea-truste">
+</ea-elements-loader>
+
+
+    <script id="ea-trustarc-script" data-domain="ea.com" async>
+        (() => {
+    function createElement(id, hidden) {
+        const element = document.createElement("div");
+
+        element.id = id;
+        element.hidden = hidden;
+
+        return element;
+    }
+
+    function createScriptTag() {
+        const domain = document.querySelector('#ea-trustarc-script').dataset.domain;
+        const script = document.createElement("script");
+        let src = `//consent.trustarc.com/notice?domain=${domain}&c=teconsent&js=nj&noticeType=bb&text=true&gtm=1&pn=1`;
+
+        if (shouldAutoShowCookiePreferences()) {
+            src = src + "&behavior=expressed";
+        }
+
+        script.src = src;
+        script.setAttribute("crossorigin", "");
+
+        return script;
+    }
+
+    function shouldAutoShowCookiePreferences() {
+        const showCookiePreferencesParam = "show=cookiePreferences";
+        const urlSearchParams = window.location.search.slice(1).split("&");
+
+        return urlSearchParams.includes(showCookiePreferencesParam);
+    }
+
+    function isLocalNDS(componentUrlPrefix) {
+        return componentUrlPrefix && componentUrlPrefix.includes('local');
+    }
+
+    function isNDSBranch(componentUrlPrefix) {
+        return componentUrlPrefix && componentUrlPrefix.includes('branch');
+    }
+
+    function isNDSVersionGreaterOrEqual(componentUrlPrefix) {
+        let ndsVersion = componentUrlPrefix && componentUrlPrefix.match('/release\/([^\/]*)/')[1];
+        let isGreaterOrEqual = ndsVersion && ndsVersion.localeCompare("4.40.5", undefined, { numeric: true, sensitivity: 'base' });
+
+        return isGreaterOrEqual >= 0;
+    }
+
+    const componentUrlPrefix = window.nds.componentUrlPrefix;
+
+    /**
+     * Check for backwards compatibility with NDS version greater or equal to when TrustArc was integrated
+     */
+    if (
+        isLocalNDS(componentUrlPrefix) ||
+        isNDSBranch(componentUrlPrefix) ||
+        isNDSVersionGreaterOrEqual(componentUrlPrefix)
+    )
+    {
+        const trustArcScript = createScriptTag();
+        const elements = document.createDocumentFragment();
+
+        elements.appendChild(createElement("consent_blackbar", false));
+        elements.appendChild(createElement("teconsent", true));
+        elements.appendChild(trustArcScript);
+
+        document.body.appendChild(elements);
+    }
+})();
+
+    </script>
+
+
+<ea-truste
+    unresolved
+    slot="truste"
+    
+        domain="ea.com"
+    
+    
+        multimedia-cookie-modal-enabled=""
+        
+            multimedia-cookie-modal-title="Multimedia Player"
+        
+
+        
+            multimedia-cookie-modal-accept-button-text="Accept and Play Video"
+        
+        
+            multimedia-cookie-modal-watch-button-text="Watch on YouTube"
+        
+    
+>
+    <div>
+        
+            <a href="//privacy.truste.com/privacy-seal/validation?rid=f1a11c5d-0232-4077-8498-2e69a38c1335" target="_blank">
+                <img style="border: none" src="//privacy-policy.truste.com/privacy-seal/seal?rid=f1a11c5d-0232-4077-8498-2e69a38c1335" alt="TRUSTe"/>
+            </a>
+        
+    </div>
+    
+        <ea-text slot="multimedia-cookie-modal-text"><p>Optional Cookies, including those that support the Multimedia Player, are currently disabled based on Your Privacy Choices settings.&nbsp;</p>
+<p>Choose&nbsp;<b>Accept and Play Video</b>&nbsp;to enable the Multimedia Player, including its associated Cookies. This may involve the collection and sharing of your viewing information by YouTube for analytics and advertising purposes.</p>
+<p>You can also choose to watch the video on YouTube.</p>
+</ea-text>
+    
+</ea-truste>
+
+</ea-network-footer>
+
+            
+        
+    
+
+
+</footer>
+<ea-player player-endpoint="/user-data"></ea-player>
+
+
+    
+        
+            
+                
+<ea-elements-loader elements="ea-modal">
+</ea-elements-loader>
+<ea-modal
+    modal
+    restore-focus-on-close
+    unresolved
+    
+        id="eacomagegate"
+    
+    
+        theme="dark"
+    
+    
+>
+    
+<ea-elements-loader elements="ea-age-gate">
+</ea-elements-loader>
+<ea-age-gate
+    unresolved
+    slot="age-gate"
+    age-gate-id="eacomagegate"
+    
+        age="18"
+    
+    
+        error="You are not eligible to view this content."
+    
+    
+    
+        message="Please provide your birth date. "
+    
+>
+    
+        
+<ea-elements-loader elements="ea-date-field">
+</ea-elements-loader>
+<ea-date-field
+    
+        slot="date-field"
+    
+    
+        type="date"
+    
+    
+    
+    
+    
+    
+        text-color="light"
+    
+    
+    
+        month-placeholder="MM"
+    
+    
+        day-placeholder="DD"
+    
+    
+        year-placeholder="YYYY"
+    
+    
+    
+        label-text="Enter your birthdate"
+    
+    
+    
+    
+    unresolved
+>
+</ea-date-field>
+
+    
+    
+        
+<ea-elements-loader elements="ea-submit">
+</ea-elements-loader>
+<ea-submit
+    unresolved
+    
+        slot="submit"
+    
+    
+        value-text="Submit"
+    
+    
+        text-color="light"
+    
+    
+    
+    
+    
+    
+></ea-submit>
+
+    
+</ea-age-gate>
+
+</ea-modal>
+
+            
+        
+    
+
+
+
+
+    
+        
+            
+                <script src="//pl.ea.com/release/4.69.7/elements/browser-support.min.js"></script>
+<script>
+    eaBrowserSupport.requiredFeatures = 'picture';
+    eaBrowserSupport.requiredHeading = 'Sorry, this browser is not supported';
+    eaBrowserSupport.requiredText = 'Please download a supported browser to view this webpage.';
+    eaBrowserSupport.recommendedFeatures = 'cssgrid';
+    eaBrowserSupport.recommendedText = 'This browser is not recommended and the webpage may not display properly.';
+    eaBrowserSupport.ctas = [{"text":"Download Chrome","url":"https://www.google.com/chrome/"},{"text":"Download Firefox","url":"https://www.mozilla.org/firefox/new/"},{"text":"Download Edge","url":"https://www.microsoft.com/edge/"}];
+    eaBrowserSupport.dismissText = 'Dismiss';
+    eaBrowserSupport.svgLogo = '';
+    eaBrowserSupport.init();
+</script>
+
+            
+        
+    
+
+
+
+
+    <ea-type-kit kit-url="//use.typekit.net/txn1klh.js"></ea-type-kit>
+
+
+    </body>
+</html>
+

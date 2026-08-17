@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The NetBSD Guide</title>
+<link rel="stylesheet" type="text/css" href="/global.css">
+<meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
+<link rel="home" href="index.html" title="The NetBSD Guide">
+<link rel="next" href="preface.html" title="Purpose of this guide">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">The NetBSD Guide</th></tr>
+<tr>
+<td width="20%" align="left"> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="preface.html">Next</a>
+</td>
+</tr>
+</table>
+<hr>
+</div>
+<div class="book">
+<div class="titlepage">
+<div>
+<div><h1 class="title">
+<a name="book-netbsd-guide"></a>The NetBSD Guide</h1></div>
+<div><div class="authorgroup"><h3 class="corpauthor">
+        The NetBSD Developers
+      </h3></div></div>
+<div><p class="copyright">Copyright © 1999, 2000, 2001, 2002 Federico Lupi</p></div>
+<div><p class="copyright">Copyright © 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 The NetBSD Foundation</p></div>
+<div><div class="legalnotice">
+<a name="trademarks-use"></a><p>All brand and product names used in this guide are or
+	may be trademarks or registered trademarks of their respective
+	owners.</p>
+</div></div>
+<div><div class="legalnotice">
+<a name="trademark-NetBSD"></a><p><span class="trademark">NetBSD</span>® is a
+	registered trademark of The NetBSD Foundation, Inc.</p>
+</div></div>
+<div>
+<p class="pubdate">Published: 2026/01/02 05:00:48</p>
+<p class="pubdate">$NetBSD: index.html,v 1.323 2026/08/03 04:51:37 snj Exp $</p>
+</div>
+</div>
+<hr>
+</div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="preface"><a href="preface.html">Purpose of this guide</a></span></dt>
+<dt><span class="part"><a href="part-about.html">I. About NetBSD</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="chap-intro.html">1. What is NetBSD?</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-intro.html#chap-intro-story">1.1. The story of NetBSD</a></span></dt>
+<dt><span class="sect1"><a href="chap-intro.html#chap-intro-features">1.2. NetBSD features</a></span></dt>
+<dt><span class="sect1"><a href="chap-intro.html#chap-intro-platforms">1.3. Supported platforms</a></span></dt>
+<dt><span class="sect1"><a href="chap-intro.html#chap-intro-target-users">1.4. NetBSD's target users</a></span></dt>
+<dt><span class="sect1"><a href="chap-intro.html#chap-intro-applications">1.5. Applications for NetBSD</a></span></dt>
+<dt><span class="sect1"><a href="chap-intro.html#chap-intro-howto-get">1.6. How to get NetBSD</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="part-install.html">II. System installation and related issues</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="chap-inst.html">2. Installing NetBSD: Preliminary considerations and preparations</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-inst.html#chap-inst-considerations">2.1. Preliminary considerations</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-dualboot">2.1.1. Dual booting</a></span></dt>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-virtual">2.1.2. NetBSD on emulation and virtualization</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-inst.html#chap-Install-preps">2.2. Install preparations</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-installdoc">2.2.1. The INSTALL document</a></span></dt>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-install-partition">2.2.2. Partitions</a></span></dt>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-install-disk-space-requirements">2.2.3. Hard disk space requirements</a></span></dt>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-network-settings">2.2.4. Network settings</a></span></dt>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-backup">2.2.5. Backup your data and operating systems!</a></span></dt>
+<dt><span class="sect2"><a href="chap-inst.html#chap-inst-bootmedia">2.2.6. Preparing the installation media</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-inst.html#chap-inst-checklist">2.3. Checklist</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-exinst.html">3. Example installation</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-intro">3.1. Introduction</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-process">3.2. The installation process</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-kbd">3.3. Keyboard layout</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-starting">3.4. Starting the installation</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-partitions">3.5. MBR partitions</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-disklabel">3.6. Disklabel partitions</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-diskname">3.7. Setting the disk name</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-last-chance">3.8. Last chance!</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-disk-preparation-process">3.9. The disk preparation process</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-type">3.10. Installation type</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-choose-medium">3.11. Choosing the installation medium</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-exinst.html#exinst-from-cdrom">3.11.1. Installing from CD-ROM / DVD / install image media</a></span></dt>
+<dt><span class="sect2"><a href="chap-exinst.html#exinst-from-unmounted-fs">3.11.2. Installing from an unmounted file system</a></span></dt>
+<dt><span class="sect2"><a href="chap-exinst.html#exinst-install-via-ftp">3.11.3. Installing via FTP and Network configuration</a></span></dt>
+<dt><span class="sect2"><a href="chap-exinst.html#exinst-install-via-nfs">3.11.4. Installing via NFS</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-extract-sets">3.12. Extracting sets</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-system-configuration">3.13. System configuration</a></span></dt>
+<dt><span class="sect1"><a href="chap-exinst.html#exinst-finishing">3.14. Finishing the installation</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-upgrading.html">4. Upgrading NetBSD</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-upgrading.html#upgrading-sysinst">4.1. Using sysinst</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-upgrading.html#upgrading-overview">4.1.1. Overview</a></span></dt>
+<dt><span class="sect2"><a href="chap-upgrading.html#upgrading-installdoc">4.1.2. The INSTALL document</a></span></dt>
+<dt><span class="sect2"><a href="chap-upgrading.html#chap-upgrading-example">4.1.3. Performing the upgrade</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-upgrading.html#using-sysupgrade">4.2. Using sysupgrade</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="part-config.html">III. System configuration, administration and tuning</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="chap-boot.html">5. The first steps on NetBSD</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-problems">5.1. Troubleshooting</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-boot.html#chap-boot-problems-booting">5.1.1. Boot problems</a></span></dt>
+<dt><span class="sect2"><a href="chap-boot.html#cha-boot-problems-rc.conf">5.1.2. Misconfiguration of /etc/rc.conf</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-man-command">5.2. The man command</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-editing">5.3. Editing configuration files</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-login">5.4. Login</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-change-root-password">5.5. Changing the <code class="username">root</code> password</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-adding-users">5.6. Adding users</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-shadow-passwords">5.7. Shadow passwords</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-keyboard-layout">5.8. Changing the keyboard layout</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-system-time">5.9. System time</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-ssh">5.10. Secure Shell (ssh(1))</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-rc-conf">5.11. Basic configuration in <code class="filename">/etc/rc.conf</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-networkbasics">5.12. Basic network settings</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-mount-cdrom">5.13. Mounting a CD-ROM</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-mount-floppy">5.14. Mounting a floppy</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-pkgsrc">5.15. Installing additional software</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-security">5.16. Security alerts</a></span></dt>
+<dt><span class="sect1"><a href="chap-boot.html#chap-boot-rebooting">5.17. Stopping and rebooting the system</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-edit.html">6. Editing</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-edit.html#chap-edit-vi-tut">6.1. Introducing vi</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-interface">6.1.1. The <span class="application">vi</span> interface</a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-switch-to-edit-mode">6.1.2. Switching to Edit Mode</a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-saving-to-files">6.1.3. Switching Modes &amp; Saving Buffers to Files</a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-yank">6.1.4. Yanking and Putting</a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-navi-in-buffer">6.1.5. Navigation in the Buffer</a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-search-file">6.1.6. Searching a File, the Alternate Navigational Aid</a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-vi-tut-sample-session">6.1.7. A Sample Session</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-edit.html#chap-edit-configuring-vi">6.2. Configuring vi</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-configuring-vi-exrc">6.2.1. Extensions to <code class="filename">.exrc</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-edit.html#chap-edit-configuring-vi-doc">6.2.2. Documentation</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-edit.html#chap-edit-using-tags">6.3. Using tags with vi</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-rc.html">7. The rc.d System</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-rc.html#chap-rc-configuration">7.1. Basics</a></span></dt>
+<dt><span class="sect1"><a href="chap-rc.html#chap-rc-scripts">7.2. The rc.d Scripts</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-rc.html#chap-rc-scripts-packages">7.2.1. Packages installing rc.d scripts</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="chap-rc.html#chap-rc-rcorder">7.3. The Role of rcorder and rc.d Scripts</a></span></dt>
+<dt><span class="sect1"><a href="chap-rc.html#chap-rc-reading">7.4. Additional Reading</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-cons.html">8. Console drivers</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-cons.html#chap-cons-wscons">8.1. wscons</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cons.html#chap-cons-wscons-wsdisplay">8.1.1. wsdisplay</a></span></dt>
+<dt><span class="sect2"><a href="chap-cons.html#chap-cons-wscons-wskbd">8.1.2. wskbd</a></span></dt>
+<dt><span class="sect2"><a href="chap-cons.html#chap-cons-wscons-wsmouse">8.1.3. wsmouse</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-x.html">9. The X Window System</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-whats-x">9.1. What is X11 / Xorg?</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-configuration">9.2. Configuration</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-keyboard">9.3. The keyboard</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-monitor">9.4. The monitor</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-starting-x">9.5. Starting X</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-customizing">9.6. Customizing X</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-other-window-managers">9.7. Other window managers or desktop environments</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-xdm">9.8. Graphical login with xdm</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-multiple-servers">9.9. Using multiple or remote X servers</a></span></dt>
+<dt><span class="sect1"><a href="chap-x.html#chap-x-further-resources">9.10. Further resources</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-audio.html">10. Audio</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-audio.html#chap-audio-configuring-device">10.1. Configuring the default audio device</a></span></dt>
+<dt><span class="sect1"><a href="chap-audio.html#chap-audio-configuring-mixer">10.2. Configuring the mixer and volume</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-audio.html#chap-audio-configuring-mixer-defaults">10.2.1. Setting default mixer settings on boot</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="chap-audio.html#chap-audio-pad">10.3. Pseudo audio devices</a></span></dt>
+<dt><span class="sect1"><a href="chap-audio.html#chap-audio-iocmds">10.4. Recording and playback commands</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-audio.html#chap-audio-iocmds-audioplay">10.4.1. audioplay(1)</a></span></dt>
+<dt><span class="sect2"><a href="chap-audio.html#chap-audio-iocmds-audiorecord">10.4.2. audiorecord(1)</a></span></dt>
+<dt><span class="sect2"><a href="chap-audio.html#chap-audio-iocmds-audioctl">10.4.3. audioctl(1)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-audio.html#chap-audio-midi">10.5. MIDI support</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-audio.html#chap-audio-midi-cmds-record">10.5.1. midirecord(1)</a></span></dt>
+<dt><span class="sect2"><a href="chap-audio.html#chap-audio-midi-midiplay">10.5.2. midiplay(1)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-audio.html#chap-audio-hdaudio">10.6. Intel HD Audio devices</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-audio.html#chap-audio-hdaudio-dacs-adcs">10.6.1. Built-in and jacks: DACs/ADCs</a></span></dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-power.html">11. Power management</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-power.html#chap-power-basic-commands">11.1. Basic power management commands</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-powering-off">11.1.1. Powering off or rebooting the system</a></span></dt>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-acpi-sleep-states">11.1.2. Using ACPI sleep states (suspend and resume)</a></span></dt>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-suspending-resuming-devices">11.1.3. Suspending and resuming individual devices</a></span></dt>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-adjusting-cpu-freq">11.1.4. Adjusting CPU frequency at runtime</a></span></dt>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-80211-power-saving">11.1.5. Using IEEE 802.11 (Wi-Fi) power saving mode</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-power.html#chap-power-sensors-and-monitoring">11.2. Sensors and monitoring</a></span></dt>
+<dt><span class="sect1"><a href="chap-power.html#chap-power-powerd">11.3. An introduction to powerd</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-ex-powerd-lid_switch">11.3.1. Example: using powerd to suspend on lid close</a></span></dt>
+<dt><span class="sect2"><a href="chap-power.html#chap-power-ex-powerd-acadapter">11.3.2. Example: reducing CPU frequency when unplugged</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-print.html">12. Printing</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-print.html#chap-print-daemon">12.1. Enabling the printer daemon</a></span></dt>
+<dt><span class="sect1"><a href="chap-print.html#chap-print-printcap">12.2. Configuring <code class="filename">/etc/printcap</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-print.html#chap-print-ghostscript">12.3. Configuring Ghostscript</a></span></dt>
+<dt><span class="sect1"><a href="chap-print.html#chap-print-management">12.4. Printer management commands</a></span></dt>
+<dt><span class="sect1"><a href="chap-print.html#chap-print-remote">12.5. Remote printing</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-rmmedia.html">13. Using removable media</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-rmmedia.html#using-usb-flash-drives">13.1. Initializing and using USB flash drives</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#using-floppies">13.2. Initializing and using floppy disks</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#using-zips">13.3. How to use a ZIP disk</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdrom">13.4. Reading data CDs with NetBSD</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#multisession">13.5. Reading multi-session CDs with NetBSD</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdrom-users">13.6. Allowing normal users to access CDs</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#vnconfig">13.7. Mounting an ISO image</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdrom-video">13.8. Using video CDs with NetBSD</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdrom-audio">13.9. Using audio CDs with NetBSD</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#create-mpeg3">13.10. Creating an MP3 (MPEG layer 3) file from an audio CD</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdr">13.11. Using a CD-R writer with data CDs</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdr-audio">13.12. Using a CD-R writer to create audio CDs</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdr-mp3">13.13. Creating an audio CD from MP3s</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#copy-audio-cd">13.14. Copying an audio CD </a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#copy-cd">13.15. Copying a data CD with two drives</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#cdrw">13.16. Using CD-RW rewritables</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#dvd">13.17. DVD support</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#iso-data">13.18. Creating ISO images from a CD</a></span></dt>
+<dt><span class="sect1"><a href="chap-rmmedia.html#iso-info">13.19. Getting volume information from CDs and ISO images</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-cgd.html">14. The cryptographic device driver (CGD)</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-cgd.html#chap-cgd-overview">14.1. Overview</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-overview-why">14.1.1. Why use disk encryption?</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-overview-logicaldriver">14.1.2. Logical Disk Drivers</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-overview-availability">14.1.3. Availability</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-cgd.html#chap-cgd-components">14.2. Components of the Crypto-Graphic Disk system</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-component-kernel">14.2.1. Kernel driver pseudo-device</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-components-ciphers">14.2.2. Ciphers</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-components-obsciphers">14.2.3. Obsolete Ciphers</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-overview-verification">14.2.4. Verification Methods</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-cgd.html#chap-cgd-example">14.3. Example: encrypting your disk</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-example-prepare">14.3.1. Preparing the disk</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-example-scrubbing">14.3.2. Scrubbing the disk</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-example-creating">14.3.3. Creating the <code class="devicename">cgd</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-example-configfiles">14.3.4. Modifying configuration files</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-example-restore">14.3.5. Restoring data</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-cgd.html#cryptocds">14.4. Example: encrypted CDs/DVDs</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cgd.html#cryptocds-create">14.4.1. Creating an encrypted CD/DVD</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#cryptocds-use">14.4.2. Using an encrypted CD/DVD</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-cgd.html#cryptoiscsi">14.5. Example: encrypted iSCSI devices</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cgd.html#cryptoiscsi-create">14.5.1. Creating an encrypted iSCSI device</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#cryptoiscsi-init">14.5.2. Device Initialisation</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#cryptoiscsi-umount">14.5.3. Unmounting the Encrypted Device</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#cryptoiscsi-access">14.5.4. Normal Usage</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-cgd.html#chap-cgd-suggestions">14.6. Suggestions and Warnings</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-swap-encryption">14.6.1. Using a random-key cgd for swap</a></span></dt>
+<dt><span class="sect2"><a href="chap-cgd.html#chap-cgd-suggestions-warnings">14.6.2. Warnings</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-cgd.html#chap-cgd-further">14.7. Further Reading</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-ccd.html">15. Concatenated Disk Device (CCD) configuration</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-install-physical-media">15.1. Install physical media</a></span></dt>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-configuring-kernel">15.2. Configure Kernel Support</a></span></dt>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-disklabel-volume">15.3. Disklabel each volume member of the CCD</a></span></dt>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-configure">15.4. Configure the CCD</a></span></dt>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-initialize-device">15.5. Initialize the CCD device</a></span></dt>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-create-ufs-filesystem">15.6. Create a 4.2BSD/UFS filesystem on the new CCD device</a></span></dt>
+<dt><span class="sect1"><a href="chap-ccd.html#chap-ccd-mount-filesystem">15.7. Mount the filesystem</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-rf.html">16. NetBSD RAIDframe</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-rf.html#chap-rf-intro">16.1. RAIDframe Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-intro-about">16.1.1. About RAIDframe</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-intro-warning">16.1.2. A warning about Data Integrity, Backups, and High
+	Availability </a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-intro-gettingHelp">16.1.3. Getting Help</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-rf.html#chap-rf-initsetup">16.2. Setup RAIDframe Support</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-init-kern">16.2.1. Kernel Support</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-init-powercache">16.2.2. Power Redundancy and Disk Caching</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-rf.html#chap-rf-ex-raid1root">16.3. Example: RAID-1 Root Disk</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-ex-raid1root-PPO">16.3.1. Pseudo-Process Outline </a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-ex-raid1root-hardware">16.3.2. Hardware Review</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-install">16.3.3. Initial Install on Disk0/wd0</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-second-disk">16.3.4. Preparing Disk1/wd1</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-configuring-raid">16.3.5. Initializing the RAID Device</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-setup-filesystems">16.3.6. Setting up Filesystems</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-moving-files">16.3.7. Migrating System to RAID</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-boot-with-raid1">16.3.8. The first boot with RAID</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-adding-first-disk">16.3.9. Adding Disk0/wd0 to RAID</a></span></dt>
+<dt><span class="sect2"><a href="chap-rf.html#chap-rf-adding-test-boot">16.3.10. Testing Boot Blocks</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-lvm.html">17. NetBSD Logical Volume Manager (LVM) configuration</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-anatomy">17.1. Anatomy of NetBSD Logical Volume Manager</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-install-physical-media">17.2. Install physical media</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-configuring-kernel">17.3. Configure Kernel Support</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-disklabel-volume">17.4. Disklabel each physical volume member of the LVM</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-pv-initialize">17.5. Create Physical Volumes</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-vg-initialize">17.6. Create Volume Group</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-lv-initialize">17.7. Create Logical Volume</a></span></dt>
+<dt><span class="sect1"><a href="chap-lvm.html#chap-lvm-ex-rf-raid1">17.8. Example: LVM with Volume groups located on raid1</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-lvm.html#chap-lvm-loading-device-mapper-driver">17.8.1. Loading Device-Mapper driver</a></span></dt>
+<dt><span class="sect2"><a href="chap-lvm.html#chap-lvm-preparing-raid1-installation">17.8.2. Preparing raid1 installation</a></span></dt>
+<dt><span class="sect2"><a href="chap-lvm.html#chap-lvm-creating-pv-vg-on-raid-disk">17.8.3. Creating PV, VG on raid disk</a></span></dt>
+<dt><span class="sect2"><a href="chap-lvm.html#chap-lvm-creating-lvs-from-vg-located-on-raid-disk">17.8.4. Creating LV's from VG located on raid disk</a></span></dt>
+<dt><span class="sect2"><a href="chap-lvm.html#chap-lvm-integration-of-lvs-into-the-system">17.8.5. Integration of LV's in to the system</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-pam.html">18. Pluggable Authentication Modules (PAM)</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-pam.html#pam-about">18.1. About</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-intro">18.2. Introduction</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-terms">18.3. Terms and conventions</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-pam.html#pam-definitions">18.3.1. Definitions</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-usage-examples">18.3.2. Usage examples</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-pam.html#pam-essentials">18.4. PAM Essentials</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-pam.html#pam-facilities-primitives">18.4.1. Facilities and
+	primitives</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-modules">18.4.2. Modules</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-chains-policies">18.4.3. Chains and
+	policies</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-transactions">18.4.4. Transactions</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-pam.html#pam-config">18.5. PAM Configuration</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-pam.html#pam-config-file">18.5.1. PAM policy files</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-config-breakdown">18.5.2. Breakdown of a
+	configuration line</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-policies">18.5.3. Policies</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-pam.html#pam-modules-desc">18.6. PAM modules</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-pam.html#pam-modules-common">18.6.1. Common Modules</a></span></dt>
+<dt><span class="sect2"><a href="chap-pam.html#pam-netbsd-modules">18.6.2. NetBSD-specific PAM Modules</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-pam.html#pam-appl-prog">18.7. PAM Application Programming</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-module-prog">18.8. PAM Module Programming</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-sample-appl">18.9. Sample PAM Application</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-sample-module">18.10. Sample PAM Module</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-sample-conv">18.11. Sample PAM Conversation
+      Function</a></span></dt>
+<dt><span class="sect1"><a href="chap-pam.html#pam-further">18.12. Further Reading</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-tuning.html">19. Tuning NetBSD</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-intro">19.1. Introduction</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-tuning.html#tuning-intro-overview">19.1.1. Overview</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-considerations">19.2. Tuning Considerations</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-considerations-general">19.2.1. General System Configuration</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-considerations-services">19.2.2. System Services</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-considerations-kernel">19.2.3. The NetBSD Kernel</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-vtools">19.3. Visual Monitoring Tools</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-vtools-top">19.3.1. The top Process Monitor</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-vtools-systat">19.3.2. The sysstat utility</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-mtools">19.4. Monitoring Tools</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-mtools-fstat">19.4.1. fstat</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-mtools-iostat">19.4.2. iostat</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-mtools-ps">19.4.3. ps</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-mtools-vmstat">19.4.4. vmstat</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-ntools">19.5. Network Tools</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-ntools-ping">19.5.1. ping</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-ntools-traceroute">19.5.2. traceroute</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-ntools-netstat">19.5.3. netstat</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-ntools-tcpdump">19.5.4. tcpdump</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-acct">19.6. Accounting</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-acct-acct">19.6.1. Enabling Accounting</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-acct-reading">19.6.2. Reading Accounting Information</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-acct-conclusion">19.6.3. How to Put Accounting to Use</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-kprof">19.7. Kernel Profiling</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kprof-starting">19.7.1. Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kprof-intkgmon">19.7.2. Interpretation of kgmon Output</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kprof-use">19.7.3. Putting it to Use</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kprof-summary">19.7.4. Summary</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-system">19.8. System Tuning</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-system-sysctl">19.8.1. Using sysctl</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-system-mfs">19.8.2. tmpfs &amp; mfs</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-system-logging">19.8.3. Journaling</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-system-lfs">19.8.4. LFS</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-tuning.html#tuning-kernel">19.9. Kernel Tuning</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kernel-prepare">19.9.1. Preparing to Recompile a Kernel</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kernel-configure">19.9.2. Configuring the Kernel</a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kernel-building">19.9.3. Building the New Kernel </a></span></dt>
+<dt><span class="sect2"><a href="chap-tuning.html#tuning-kernel-shrinking">19.9.4. Shrinking the NetBSD kernel</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-veriexec.html">20. NetBSD Veriexec subsystem</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-veriexec.html#chap-veriexec-works">20.1. How it works</a></span></dt>
+<dt><span class="sect1"><a href="chap-veriexec.html#chap-veriexec-signature">20.2. Signatures file</a></span></dt>
+<dt><span class="sect1"><a href="chap-veriexec.html#chap-veriexec-gen-fingerprints">20.3. Generating fingerprints</a></span></dt>
+<dt><span class="sect1"><a href="chap-veriexec.html#chap-veriexec-strict">20.4. Strict levels</a></span></dt>
+<dt><span class="sect1"><a href="chap-veriexec.html#chap-veriexec-layerfs">20.5. Veriexec and layered file systems</a></span></dt>
+<dt><span class="sect1"><a href="chap-veriexec.html#chap-veriexec-kernconf">20.6. Kernel configuration</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-bluetooth.html">21. Bluetooth on NetBSD</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-intro">21.1. Introduction</a></span></dt>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-hardware">21.2. Supported Hardware</a></span></dt>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-config">21.3. System Configuration</a></span></dt>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-hid">21.4. Human Interface Devices</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-bluetooth.html#chap-bluetooth-hid-mouse">21.4.1. Mice</a></span></dt>
+<dt><span class="sect2"><a href="chap-bluetooth.html#chap-bluetooth-hid-keyboard">21.4.2. Keyboards</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-networking">21.5. Personal Area Networking</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-bluetooth.html#chap-bluetooth-networking-panu">21.5.1. Personal Area Networking User</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-serial">21.6. Serial Connections</a></span></dt>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-audio">21.7. Audio</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-bluetooth.html#chap-bluetooth-audio-headset">21.7.1. SCO Audio Headsets</a></span></dt>
+<dt><span class="sect2"><a href="chap-bluetooth.html#chap-bluetooth-audio-handsfree">21.7.2. SCO Audio Handsfree</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-obex">21.8. Object Exchange</a></span></dt>
+<dt><span class="sect1"><a href="chap-bluetooth.html#chap-bluetooth-trouble">21.9. Troubleshooting</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-misc.html">22. Miscellaneous operations</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-bootmanager">22.1. Installing the boot manager</a></span></dt>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-delete-disklabel">22.2. Deleting the disklabel</a></span></dt>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-speaker">22.3. Speaker</a></span></dt>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-forgot-root-password">22.4. Forgot root password?</a></span></dt>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-password-file-busy">22.5. Password file is busy?</a></span></dt>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-adding-new-disk">22.6. Adding a new hard disk</a></span></dt>
+<dt><span class="sect1"><a href="chap-misc.html#chap-misc-howto-rebuild-devices">22.7. How to rebuild the devices in /dev</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="part-net.html">IV. Networking and related issues</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="chap-net-intro.html">23. Introduction to TCP/IP Networking</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-net-intro.html#chap-net-intro-audience">23.1. Audience</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-intro.html#chap-net-intro-supported-protocols">23.2. Supported Networking Protocols</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-intro.html#chap-net-intro-supported-media">23.3. Supported Media</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-supported-media-ethernet">23.3.1. Ethernet </a></span></dt>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-supported-media-ieee80211">23.3.2. IEEE 802.11 (Wi-Fi)</a></span></dt>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-supported-media-serial">23.3.3. Serial Line</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-net-intro.html#chap-net-intro-tcpip-address">23.4. TCP/IP Address Format</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-intro.html#chap-net-intro-tcpip-subnet">23.5. Subnetting and Routing</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-intro.html#chap-net-intro-nsconcepts">23.6. Name Service Concepts</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-nsconcepts-hosts">23.6.1. <code class="filename">/etc/hosts</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-nsconcepts-dns">23.6.2. Domain Name Service (DNS)</a></span></dt>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-nsconcepts-nis">23.6.3. Network Information Service (NIS/YP)</a></span></dt>
+<dt><span class="sect2"><a href="chap-net-intro.html#chap-net-intro-nsconcepts-others">23.6.4. Other</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-net-intro.html#ipv6-intro">23.7. IPv6</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-net-intro.html#ipv6-intro-pros">23.7.1.  What good is IPv6? </a></span></dt>
+<dt><span class="sect2"><a href="chap-net-intro.html#ipv6-intro-changes-to-ipv4">23.7.2.  Changes to IPv4 </a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-net-practice.html">24. Setting up TCP/IP on NetBSD in practice</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-network-config">24.1. Overview of the network configuration files </a></span></dt>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-lan-setup">24.2. Connecting to common LAN setups</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-net-practice.html#chap-net-practice-lan-setup-wlan">24.2.1. Connecting using IEEE 802.11 (Wi-Fi)</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-small-net">24.3. Manually creating a small LAN</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-pppoe">24.4. Connecting to a home/office ISP with PPPoE</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-net-practice.html#chap-net-practice-pppoe-vlan">24.4.1. Configuring a VLAN</a></span></dt>
+<dt><span class="sect2"><a href="chap-net-practice.html#chap-net-practice-pppoe-msclamp">24.4.2. Setting up MSS clamping</a></span></dt>
+<dt><span class="sect2"><a href="chap-net-practice.html#chap-net-practice-pppoe-ipv6pd">24.4.3. Obtaining IPv6 addresses via Prefix Delegation</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-npf">24.5. Setting up an Internet gateway with NPF</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-bridge">24.6. Setting up a network bridge device</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-net-practice.html#chap-net-practice-bridge-example">24.6.1. Bridge example</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-order">24.7. Ensuring interfaces are initialized in the correct order</a></span></dt>
+<dt><span class="sect1"><a href="chap-net-practice.html#chap-net-practice-useful-commands">24.8. Some useful commands</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-inetd.html">25. The Internet Super Server inetd</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-overview">25.1. Overview</a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-whats-inetd">25.2. What is inetd?</a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-inetd">25.3. Configuring inetd - <code class="filename">/etc/inetd.conf</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-services">25.4. Services - <code class="filename">/etc/services</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-protocols">25.5. Protocols - <code class="filename">/etc/protocols</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-rpc">25.6. Remote Procedure Calls (RPC) - <code class="filename">/etc/rpc</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-tcpwrap">25.7. Allowing and denying hosts
+      - <code class="filename">/etc/hosts.{allow,deny}</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-adding-service">25.8. Adding a Service</a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-use-or-not-use">25.9. When to use or not to use inetd</a></span></dt>
+<dt><span class="sect1"><a href="chap-inetd.html#chap-inetd-resources">25.10. Other Resources</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-dns.html">26. The Domain Name System</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-dns.html#chap-dns-bg">26.1. DNS Background and Concepts</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-nameservice">26.1.1. Naming Services</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-namespace">26.1.2. The DNS namespace</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-rr">26.1.3. Resource Records</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-delegation">26.1.4. Delegation</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-multidelegation">26.1.5. Delegation to multiple servers</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-soa">26.1.6. Secondaries, Caching, and the SOA record</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-resolution">26.1.7. Name Resolution</a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-bg-reverse">26.1.8. Reverse Resolution</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-dns.html#chap-dns-files">26.2. The DNS Files</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-files-named-conf">26.2.1. <code class="filename">/etc/named.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-files-localhost">26.2.2. <code class="filename">/etc/namedb/localhost</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-files-zone-loopback">26.2.3. <code class="filename">/etc/namedb/zone.127.0.0</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-files-zone-diverge">26.2.4. <code class="filename">/etc/namedb/diverge.org</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-files-zone-reverse">26.2.5. <code class="filename">/etc/namedb/1.168.192</code></a></span></dt>
+<dt><span class="sect2"><a href="chap-dns.html#chap-dns-files-zone-cache">26.2.6. <code class="filename">/etc/namedb/root.cache</code></a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-dns.html#chap-dns-using-dns">26.3. Using DNS</a></span></dt>
+<dt><span class="sect1"><a href="chap-dns.html#chap-dns-dnscache">26.4. Setting up a caching only name server</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="chap-dns.html#chap-dns-dnscache-testing-server">26.4.1. Testing the server</a></span></dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-mail.html">27. Mail and news</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-postfix">27.1. postfix</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-mail.html#chap-mail-postfix-genmap">27.1.1. Configuration of generic mapping</a></span></dt>
+<dt><span class="sect2"><a href="chap-mail.html#chap-mail-posfix-testing-configuration">27.1.2. Testing the configuration</a></span></dt>
+<dt><span class="sect2"><a href="chap-mail.html#chap-mail-postfix-alternative-mta">27.1.3. Using an alternative MTA</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-fetchmail">27.2. fetchmail</a></span></dt>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-mutt">27.3. Reading and writing mail with mutt</a></span></dt>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-receiving">27.4. Strategy for receiving mail</a></span></dt>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-sending">27.5. Strategy for sending mail</a></span></dt>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-advanced">27.6. Advanced mail tools</a></span></dt>
+<dt><span class="sect1"><a href="chap-mail.html#chap-mail-tin">27.7. News with tin</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-carp.html">28. Introduction to the Common Address Redundancy Protocol (CARP)</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-carp.html#chap-carp-oper">28.1. CARP Operation</a></span></dt>
+<dt><span class="sect1"><a href="chap-carp.html#chap-carp-conf">28.2. Configuring CARP</a></span></dt>
+<dt><span class="sect1"><a href="chap-carp.html#chap-carp-carpsupport">28.3. Enabling CARP Support</a></span></dt>
+<dt><span class="sect1"><a href="chap-carp.html#chap-carp-carpexample">28.4. CARP Example</a></span></dt>
+<dt><span class="sect1"><a href="chap-carp.html#chap-carp-adv">28.5. Advanced CARP configuration</a></span></dt>
+<dt><span class="sect1"><a href="chap-carp.html#chap-carp-force">28.6. Forcing Failover of the Master</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-net-services.html">29. Network services</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-net-services.html#chap-net-services-nfs">29.1. The <span class="emphasis"><em>Network File System</em></span> (NFS)</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-net-services.html#chap-net-services-nfs-example">29.1.1. NFS setup example</a></span></dt>
+<dt><span class="sect2"><a href="chap-net-services.html#chap-net-services-nfs-automount">29.1.2. Setting up NFS automounting for <code class="filename">/net</code>
+      with amd(8)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-net-services.html#chap-net-services-ntp">29.2. The <span class="emphasis"><em>Network Time Protocol</em></span> (NTP)</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="part-virt.html">V. Virtualization and emulation</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="chap-virt.html">30. Using virtualization: QEMU and NVMM</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-nvmm">30.1. Enabling the NetBSD Virtual Machine Monitor</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu">30.2. Using QEMU with NVMM</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu-start">30.2.1. Starting QEMU with acceleration</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu-disk">30.2.2. Creating a virtual disk</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu-entropy">30.2.3. Adding entropy to the guest</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu-net">30.2.4. Using networking</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu-audio">30.2.5. Using audio</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-qemu-graphics">30.2.6. Using graphics (or no graphics)</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-net-bridge">30.3. Configuring bridged networking on a NetBSD host</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-guest">30.4. Notes on using NetBSD as a guest</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-guest-shutdown">30.4.1. Unclean VM shutdown, data recovery, and fsck</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-guest-ipv6">30.4.2. NetBSD VMs lacking IPv6</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-virt-guest-audio">30.4.3. Smooth audio playback and latency in VMs</a></span></dt>
+<dt><span class="section"><a href="chap-virt.html#chap-guest-resolution">30.4.4. Changing the console resolution in an x86 VM</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-linux.html">31. Linux emulation</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-linux.html#chap-linux-setup">31.1. Emulation setup</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-linux.html#chap-linux-setup-configure-kernel">31.1.1. Configuring the kernel</a></span></dt>
+<dt><span class="sect2"><a href="chap-linux.html#chap-linux-setup-install-linux-lib">31.1.2. Installing the Linux libraries</a></span></dt>
+<dt><span class="sect2"><a href="chap-linux.html#chap-linux-setup-run-linux-bin">31.1.3. Running Linux programs</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-linux.html#chap-linux-directory-structure">31.2. Directory structure</a></span></dt>
+<dt><span class="sect1"><a href="chap-linux.html#chap-linux-browser-plugins">31.3. Using Linux browser plugins</a></span></dt>
+<dt><span class="sect1"><a href="chap-linux.html#chap-linux-further-reading">31.4. Further reading</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="part-compile.html">VI. Building the system</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="chap-fetch.html">32. Obtaining the sources</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-fetch.html#chap-fetch-dirs">32.1. Preparing directories</a></span></dt>
+<dt><span class="sect1"><a href="chap-fetch.html#chap-fetch-term">32.2. Terminology</a></span></dt>
+<dt><span class="sect1"><a href="chap-fetch.html#chap-fetch-tarball">32.3. Downloading tarballs</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-tarball-netbsd-release">32.3.1. Downloading sources for a NetBSD release</a></span></dt>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-tarball-netbsd-stable">32.3.2. Downloading sources for a NetBSD stable branch</a></span></dt>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-tarball-netbsd-current">32.3.3. Downloading sources for a NetBSD-current development branch</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-fetch.html#chap-fetch-cvs">32.4. Fetching by CVS</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-cvs-netbsd-release">32.4.1. Fetching a NetBSD release</a></span></dt>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-cvs-netbsd-stable">32.4.2. Fetching a NetBSD stable branch</a></span></dt>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-cvs-netbsd-current">32.4.3. Fetching the NetBSD-current development branch</a></span></dt>
+<dt><span class="sect2"><a href="chap-fetch.html#chap-fetch-cvs-cvsrc">32.4.4. Saving some cvs(1) options</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-build.html">33. Crosscompiling NetBSD with <code class="filename">build.sh</code></a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-build.html#chap-build-tools">33.1. Building the toolchain</a></span></dt>
+<dt><span class="sect1"><a href="chap-build.html#chap-boot-cross-config-kernel">33.2. Configuring the kernel manually</a></span></dt>
+<dt><span class="sect1"><a href="chap-build.html#chap-boot-cross-compiling-kernel">33.3. Building the kernel manually</a></span></dt>
+<dt><span class="sect1"><a href="chap-build.html#chap-boot-cross-build-kernel">33.4. Building the kernel with <code class="filename">build.sh</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-build.html#chap-build-release">33.5. Building the userland</a></span></dt>
+<dt><span class="sect1"><a href="chap-build.html#chap-build-xsrc">33.6. Building the X Window System</a></span></dt>
+<dt><span class="sect1"><a href="chap-build.html#chap-build-environment">33.7. Changing build behaviour</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-build.html#chap-build-environment-change-destdir">33.7.1. Changing the Destination Directory</a></span></dt>
+<dt><span class="sect2"><a href="chap-build.html#chap-build-environment-static-build">33.7.2. Static Builds</a></span></dt>
+<dt><span class="sect2"><a href="chap-build.html#chap-build-environment-options">33.7.3. Using <code class="filename">build.sh</code> options</a></span></dt>
+<dt><span class="sect2"><a href="chap-build.html#chap-build-make-variables">33.7.4. make(1) variables used during build</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-kernel.html">34. Compiling the kernel</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-procedure">34.1. Requirements and procedure</a></span></dt>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-installing-kernel-sources">34.2. Installing the kernel sources</a></span></dt>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-creating-kernel-configfile">34.3. Creating the kernel configuration file</a></span></dt>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-building-manually">34.4. Building the kernel manually</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-kernel.html#chap-kernel-configuring-kernel">34.4.1. Configuring the kernel manually</a></span></dt>
+<dt><span class="sect2"><a href="chap-kernel.html#chap-kernel-generating-dependencies-n-recompiling">34.4.2. Generating dependencies and recompiling manually</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-build.sh">34.5. Building the kernel using <code class="filename">build.sh</code></a></span></dt>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-install">34.6. Installing the new kernel</a></span></dt>
+<dt><span class="sect1"><a href="chap-kernel.html#chap-kernel-something-wrong">34.7. If something went wrong</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-updating.html">35. Updating an existing system from sources</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-updating.html#updating-procedure">35.1. Manual build and update procedure</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-updating.html#updating-userland">35.1.1. Building a new userland</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#updating-kernel">35.1.2. Building a new kernel</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#updating-installing">35.1.3. Installing the kernel and userland</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#updating-configfiles">35.1.4. Updating the system configuration files</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#updating-summary">35.1.5. Summary</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-updating.html#updating-sysinst">35.2. Using sysinst</a></span></dt>
+<dt><span class="sect1"><a href="chap-updating.html#updating-sysbuild-sysupgrade">35.3. Using sysbuild and sysupgrade</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-updating.html#building-as-non-root">35.3.1. Tweak: Building as non-root</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#setting-up-nightly-builds">35.3.2. Tweak: Setting up nightly builds</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="chap-updating.html#updating-etcupdate">35.4. More details about the updating of configuration and startup files</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="chap-updating.html#updating-etcupdate-source">35.4.1. Using etcupdate with source files</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#updating-etcupdate-binary">35.4.2. Using etcupdate with binary distribution sets</a></span></dt>
+<dt><span class="sect2"><a href="chap-updating.html#updating-etcmanage">35.4.3. Using <code class="filename">etcmanage</code> instead of <code class="filename">etcupdate</code></a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="chap-inst-media.html">36. Building NetBSD installation media</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="chap-inst-media.html#chap-inst-media-creating-installcd">36.1. Creating standard installation images with build.sh</a></span></dt>
+<dt><span class="sect1"><a href="chap-inst-media.html#chap-inst-media-creating-live-images">36.2. Creating custom live disk images</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="appendix"><a href="appendix.html">A. Information</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="appendix.html#appendix-availability">A.1. Where to get this document</a></span></dt>
+<dt><span class="sect1"><a href="appendix.html#appendix-history">A.2. Guide history</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="ap-contrib.html">B. Contributing to the NetBSD guide</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="ap-contrib.html#ap-contrib-sending-contributions">B.1. Sending contributions</a></span></dt>
+<dt><span class="sect1"><a href="ap-contrib.html#ap-contrib-xmltemplate">B.2. XML/DocBook template</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="ap-xml.html">C. Getting started with XML/DocBook</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="ap-xml.html#ap-xml-whats-xml-docbook">C.1. What is XML/DocBook</a></span></dt>
+<dt><span class="sect1"><a href="ap-xml.html#ap-xml-installing-tools">C.2. Installing the necessary tools</a></span></dt>
+<dt><span class="sect1"><a href="ap-xml.html#ap-xml-using-tools">C.3. Using the tools</a></span></dt>
+<dt><span class="sect1"><a href="ap-xml.html#ap-xml-links">C.4. Links</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="ap-ack.html">D. Acknowledgements</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="ap-ack.html#ap-ack-original">D.1. Original acknowledgements</a></span></dt>
+<dt><span class="sect1"><a href="ap-ack.html#ap-ack-current">D.2. Current acknowledgements</a></span></dt>
+<dt><span class="sect1"><a href="ap-ack.html#ap-ack-licenses">D.3. Licenses</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="ap-ack.html#ap-ack-licenses-flupi">D.3.1. Federico Lupi's original license of this guide</a></span></dt>
+<dt><span class="sect2"><a href="ap-ack.html#ap-ack-licenses-pam">D.3.2. Networks Associates Technology's license on the PAM article</a></span></dt>
+<dt><span class="sect2"><a href="ap-ack.html#ap-ack-licenses-carp">D.3.3. Joel Knight's license on the CARP article</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="appendix"><a href="ap-biblio.html">E. Bibliography</a></span></dt>
+<dd><dl><dt><span class="bibliography"><a href="ap-biblio.html#ap-biblio-bibliography">Bibliography</a></span></dt></dl></dd>
+</dl>
+</div>
+<div class="list-of-figures">
+<p><b>List of Figures</b></p>
+<dl>
+<dt>2.1. <a href="chap-inst.html#fig-part">Partitions</a>
+</dt>
+<dt>3.1. <a href="chap-exinst.html#fig-inst-language">Selecting the language</a>
+</dt>
+<dt>3.2. <a href="chap-exinst.html#fig-inst-keyboard">Selecting a keyboard type</a>
+</dt>
+<dt>3.3. <a href="chap-exinst.html#fig-inst-mainmenu">The sysinst main menu</a>
+</dt>
+<dt>3.4. <a href="chap-exinst.html#fig-inst-confirm">Confirming to install NetBSD</a>
+</dt>
+<dt>3.5. <a href="chap-exinst.html#fig-inst-select-disk">Choosing a hard disk</a>
+</dt>
+<dt>3.6. <a href="chap-exinst.html#fig-inst-disk-geometry">Disk geometry</a>
+</dt>
+<dt>3.7. <a href="chap-exinst.html#fig-inst-mbr">Choosing the partitioning scheme</a>
+</dt>
+<dt>3.8. <a href="chap-exinst.html#fig-inst-fdisk">fdisk</a>
+</dt>
+<dt>3.9. <a href="chap-exinst.html#fig-inst-partition-options">Partition options</a>
+</dt>
+<dt>3.10. <a href="chap-exinst.html#fig-inst-bootselect">Installing the boot selector</a>
+</dt>
+<dt>3.11. <a href="chap-exinst.html#inst-extpart">Edit partitions?</a>
+</dt>
+<dt>3.12. <a href="chap-exinst.html#inst-disklabel-size">Setting partition sizes</a>
+</dt>
+<dt>3.13. <a href="chap-exinst.html#inst-disklabel">The disklabel editor</a>
+</dt>
+<dt>3.14. <a href="chap-exinst.html#inst-disklabel-edit">Disklabel partition editing</a>
+</dt>
+<dt>3.15. <a href="chap-exinst.html#inst-diskname">Naming the NetBSD disk</a>
+</dt>
+<dt>3.16. <a href="chap-exinst.html#inst-reallyformat">Last chance to abort</a>
+</dt>
+<dt>3.17. <a href="chap-exinst.html#inst-bootblocks">Selecting bootblocks</a>
+</dt>
+<dt>3.18. <a href="chap-exinst.html#inst-type">Full or custom installation</a>
+</dt>
+<dt>3.19. <a href="chap-exinst.html#inst-distsets">Selecting distribution sets</a>
+</dt>
+<dt>3.20. <a href="chap-exinst.html#inst-medium">Installation media</a>
+</dt>
+<dt>3.21. <a href="chap-exinst.html#inst-mount">Mounting a file system</a>
+</dt>
+<dt>3.22. <a href="chap-exinst.html#inst-mount-partition">Mounting a partition </a>
+</dt>
+<dt>3.23. <a href="chap-exinst.html#inst-mount-msdos">Accessing a MSDOS file system</a>
+</dt>
+<dt>3.24. <a href="chap-exinst.html#inst-ftp-src">Defining the FTP settings</a>
+</dt>
+<dt>3.25. <a href="chap-exinst.html#inst-ftp-if">Which network interface to configure</a>
+</dt>
+<dt>3.26. <a href="chap-exinst.html#inst-ftp-autoconf">Using autoconfiguration</a>
+</dt>
+<dt>3.27. <a href="chap-exinst.html#inst-ftp-confirm">Confirm autoconfiguration</a>
+</dt>
+<dt>3.28. <a href="chap-exinst.html#netinst-nfs">NFS install screen</a>
+</dt>
+<dt>3.29. <a href="chap-exinst.html#netinst-nfs-example">NFS example</a>
+</dt>
+<dt>3.30. <a href="chap-exinst.html#inst-extract-complete">Extraction of sets completed</a>
+</dt>
+<dt>3.31. <a href="chap-exinst.html#inst-conf-menu">Configuration menu</a>
+</dt>
+<dt>3.32. <a href="chap-exinst.html#inst-tz">Selecting the system's time zone</a>
+</dt>
+<dt>3.33. <a href="chap-exinst.html#inst-rootshell">Choosing a shell</a>
+</dt>
+<dt>3.34. <a href="chap-exinst.html#inst-passwd">Set a root password?</a>
+</dt>
+<dt>3.35. <a href="chap-exinst.html#inst-passwd2">Setting root password</a>
+</dt>
+<dt>3.36. <a href="chap-exinst.html#inst-bin-packages">Enabling installation of binary packages</a>
+</dt>
+<dt>3.37. <a href="chap-exinst.html#inst-bin-packages2">Additional packages</a>
+</dt>
+<dt>3.38. <a href="chap-exinst.html#inst-pkgsrc-source">Fetch and unpack pkgsrc</a>
+</dt>
+<dt>3.39. <a href="chap-exinst.html#inst-complete">Installation completed</a>
+</dt>
+<dt>3.40. <a href="chap-exinst.html#inst-reboot">Reboot to finish installation</a>
+</dt>
+<dt>4.1. <a href="chap-upgrading.html#up-main">Starting the upgrade</a>
+</dt>
+<dt>4.2. <a href="chap-upgrading.html#up-confirm">Continuing the upgrade</a>
+</dt>
+<dt>4.3. <a href="chap-upgrading.html#up-select-disc">Choosing the hard drive</a>
+</dt>
+<dt>4.4. <a href="chap-upgrading.html#up-fsck">File system check</a>
+</dt>
+<dt>4.5. <a href="chap-upgrading.html#up-bootblocks">Choosing bootblocks</a>
+</dt>
+<dt>4.6. <a href="chap-upgrading.html#up-install-type">Choosing the distribution filesets</a>
+</dt>
+<dt>4.7. <a href="chap-upgrading.html#up-medium">Install medium</a>
+</dt>
+<dt>4.8. <a href="chap-upgrading.html#up-complete">Upgrade complete</a>
+</dt>
+<dt>16.1. <a href="chap-rf.html#RL1-DLD">RAID-1 Disk Logical Layout</a>
+</dt>
+<dt>16.2. <a href="chap-rf.html#R1R-PP0-1">Perform generic install onto Disk0/wd0</a>
+</dt>
+<dt>16.3. <a href="chap-rf.html#R1R-PP0-2">Setup RAID Set</a>
+</dt>
+<dt>16.4. <a href="chap-rf.html#R1R-PP0-3">Reboot using Disk1/wd1 of RAID</a>
+</dt>
+<dt>16.5. <a href="chap-rf.html#R1R-PP0-4">Mirror Disk1/wd1 back to Disk0/wd0</a>
+</dt>
+<dt>16.6. <a href="chap-rf.html#Award-BIOS-2">Award BIOS i386 Boot Disk1/wd1</a>
+</dt>
+<dt>16.7. <a href="chap-rf.html#Award-BIOS-1">Award BIOS i386 Boot Disk0/wd0</a>
+</dt>
+<dt>17.1. <a href="chap-lvm.html#chap-lvm-anatomy-of-lvm-figure">Anatomy of Logical Volume Management</a>
+</dt>
+<dt>17.2. <a href="chap-lvm.html#chap-lvm-example-raid1-configuration">Example raid 1 configuration</a>
+</dt>
+<dt>23.1. <a href="chap-net-intro.html#ipv4-en-0bits">IPv4-addresses are divided into more significant network- and
+        less significant hostbits</a>
+</dt>
+<dt>23.2. <a href="chap-net-intro.html#pic1">Our demo-network</a>
+</dt>
+<dt>23.3. <a href="chap-net-intro.html#pic2">Attaching one subnet to another one</a>
+</dt>
+<dt>23.4. <a href="chap-net-intro.html#ipv6-en-0bits">IPv6-addresses are divided into more significant network- and
+            less significant hostbits, too</a>
+</dt>
+<dt>23.5. <a href="chap-net-intro.html#ipv6-en-6adrformats">IPv6-addresses have a similar structure to
+	    class B addresses</a>
+</dt>
+<dt>23.6. <a href="chap-net-intro.html#ipv6-en-4scope">Several interfaces attached to a link result in only one
+            scope ID for the link</a>
+</dt>
+<dt>27.1. <a href="chap-mail.html#fig-mail1">Structure of the mail system</a>
+</dt>
+</dl>
+</div>
+<div class="list-of-tables">
+<p><b>List of Tables</b></p>
+<dl>
+<dt>18.1. <a href="chap-pam.html#tab-pam-chain">PAM chain execution summary</a>
+</dt>
+<dt>20.1. <a href="chap-veriexec.html#tab-veriexec-fingerprints">Veriexec fingerprints tools</a>
+</dt>
+<dt>20.2. <a href="chap-veriexec.html#tab-veriexec-aliases">Veriexec access type aliases</a>
+</dt>
+</dl>
+</div>
+<div class="list-of-examples">
+<p><b>List of Examples</b></p>
+<dl>
+<dt>11.1. <a href="chap-power.html#ex-powerd-lid_switch"><code class="filename">/etc/powerd/scripts/lid_switch</code></a>
+</dt>
+<dt>11.2. <a href="chap-power.html#ex-powerd-acadapter"><code class="filename">/etc/powerd/scripts/acadapter</code></a>
+</dt>
+<dt>12.1. <a href="chap-print.html#ex-printcap1"><code class="filename">/etc/printcap</code></a>
+</dt>
+<dt>12.2. <a href="chap-print.html#ex-lpfilter"><code class="filename">/usr/local/libexec/lpfilter</code></a>
+</dt>
+<dt>12.3. <a href="chap-print.html#ex-printcap2"><code class="filename">/etc/printcap</code></a>
+</dt>
+<dt>12.4. <a href="chap-print.html#ex-lpfilter-ps"><code class="filename">/usr/local/libexec/lpfilter-ps</code></a>
+</dt>
+<dt>24.1. <a href="chap-net-practice.html#ex-wpa-supplicant"><code class="filename">/etc/wpa_supplicant.conf</code></a>
+</dt>
+<dt>24.2. <a href="chap-net-practice.html#ex-hosts"><code class="filename">/etc/hosts</code></a>
+</dt>
+<dt>24.3. <a href="chap-net-practice.html#ex-ifconfig-pppoe0"><code class="filename">/etc/ifconfig.pppoe0</code></a>
+</dt>
+<dt>24.4. <a href="chap-net-practice.html#ex-ppp-ip-up"><code class="filename">/etc/ppp/ip-up</code></a>
+</dt>
+<dt>24.5. <a href="chap-net-practice.html#ex-ppp-ip-down"><code class="filename">/etc/ppp/ip-down</code></a>
+</dt>
+<dt>24.6. <a href="chap-net-practice.html#ex-ifconfig-vlan0"><code class="filename">/etc/ifconfig.vlan0</code></a>
+</dt>
+<dt>24.7. <a href="chap-net-practice.html#ex-dhcpcd-ipv6rs"><code class="filename">/etc/dhcpcd.conf</code></a>
+</dt>
+<dt>24.8. <a href="chap-net-practice.html#ex-npf-nat"><code class="filename">/etc/npf.conf</code></a>
+</dt>
+<dt>24.9. <a href="chap-net-practice.html#ex-dhcpd"><code class="filename">/etc/dhcpd.conf</code></a>
+</dt>
+<dt>24.10. <a href="chap-net-practice.html#ex-ifconfig-tap0"><code class="filename">/etc/ifconfig.tap0</code></a>
+</dt>
+<dt>26.1. <a href="chap-dns.html#chap-dns-files-hosts-example">strider's <code class="filename">/etc/hosts</code> file</a>
+</dt>
+<dt>26.2. <a href="chap-dns.html#chap-dns-files-localhost-example"><code class="filename">localhost</code></a>
+</dt>
+<dt>32.1. <a href="chap-fetch.html#chap-fetch-cvs-cvsrc-example"><code class="filename">.cvsrc</code></a>
+</dt>
+</dl>
+</div>
+</div>
+<div class="navfooter">
+<hr>
+<table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left"> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="preface.html">Next</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top"> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right" valign="top"> Purpose of this guide</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

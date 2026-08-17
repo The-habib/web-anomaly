@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Crystal Releases</title>
+  <subtitle>A language for humans and computers</subtitle>
+  <link href="https://crystal-lang.org/" rel="alternate" type="text/html" />
+  <link href="https://crystal-lang.org/releases/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://crystal-lang.org/feed.xml" rel="related" type="application/atom+xml" />
+  <updated>2026-08-14T14:46:02+00:00</updated>
+  <id>https://crystal-lang.org/releases/feed.xml</id>
+    <entry>
+      <title>Crystal 1.21.0 is released!</title>
+      <author>
+        <name>Johannes Müller</name>
+        <uri>https://github.com/straight-shoota/</uri>
+      </author><link href="https://crystal-lang.org/2026/07/16/1.21.0-released/" rel="alternate" type="text/html" title="Crystal 1.21.0 is released!" />
+      <published>2026-07-16T00:00:00+00:00</published>
+      <updated>2026-07-16T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/07/16/1.21.0-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/07/16/1.21.0-released/">&lt;p&gt;We are announcing a new Crystal release 1.21.0 with several new features and bug
+fixes.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.21.0&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.21.0&quot;&gt;161 changes since
+1.20.3&lt;/a&gt;
+by 21 contributors. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Below we list the most remarkable changes in the language, compiler, and stdlib.
+For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/blob/master/doc/changelogs/v1.21.md&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;breaking&quot;&gt;Breaking&lt;/h3&gt;
+  &lt;a href=&quot;#breaking&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Breaking&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We expect little disruption from the introduction of execution contexts. But
+it can break code with specific expectations about concurrent behaviour,
+especially about the fact that a fiber stays on the same thread.
+Read more about this in the next section.&lt;/p&gt;
+
+&lt;p&gt;Another breaking change is that we disabled the automatic fallback to legacy
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PCRE&lt;/code&gt;, which has been deprecated for many years now. You can still explicitly
+opt-in with compiler flag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Duse_pcre&lt;/code&gt; or environment variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USE_PCRE1=1&lt;/code&gt;
+(&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16924&quot;&gt;#16924&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you notice any unexpected issues, please let us know in the &lt;a href=&quot;https://github.com/crystal-lang/crystal/issues&quot;&gt;issue tracker&lt;/a&gt; or &lt;a href=&quot;https://forum.crystal-lang.org/&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;execution-contexts&quot;&gt;Execution contexts&lt;/h3&gt;
+  &lt;a href=&quot;#execution-contexts&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Execution contexts&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Execution contexts from &lt;a href=&quot;https://github.com/crystal-lang/rfcs/pull/2&quot;&gt;RFC 0002&lt;/a&gt; are enabled by default. We have written
+an entire blog post about it: &lt;a href=&quot;https://crystal-lang.org/2026/07/12/releasing-execution-contexts/&quot;&gt;&lt;em&gt;Releasing Execution Contexts&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The default context has parallelism 1, i.e. it is single-threaded. It can be
+explicitly resized to run multiple fibers in parallel, or you can create
+additional contexts for parallelism.&lt;/p&gt;
+
+&lt;p&gt;As a result, fibers are no longer pinned to one thread. Even with parallelism 1,
+fibers may switch threads. The only guarantee is that no more than one fiber
+runs at any time. Code that relies on thread-local state across fiber yields
+should be reviewed.&lt;/p&gt;
+
+&lt;p&gt;The concrete &lt;strong&gt;breaking changes&lt;/strong&gt; are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fibers in parallel execution contexts can resume in a different thread.&lt;/li&gt;
+  &lt;li&gt;Fibers in concurrent execution contexts can switch threads on a blocking syscall.&lt;/li&gt;
+  &lt;li&gt;Execution contexts don’t support &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/toplevel.html#spawn(*,name:String|Nil=nil,same_thread=false,&amp;amp;block)-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spawn(same_thread:)&lt;/code&gt;&lt;/a&gt;.
+In a parallel execution context, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;same_thread: true&lt;/code&gt; raises at runtime.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://crystal-lang.org/2026/07/12/releasing-execution-contexts/#breaking-changes&quot;&gt;&lt;em&gt;Releasing Execution Contexts: Breaking Changes&lt;/em&gt;&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This effort is part of the &lt;a href=&quot;/2024/02/09/84codes-manas-mt/&quot;&gt;ongoing project to improve multi-threading support&lt;/a&gt;
+with the help of &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;percent-string-array-literal-with-interpolation&quot;&gt;Percent string array literal with interpolation&lt;/h3&gt;
+  &lt;a href=&quot;#percent-string-array-literal-with-interpolation&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Percent string array literal with interpolation&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/rfcs/blob/master/text/0021-percent-array-literal-interpolation.md&quot;&gt;RFC 0021&lt;/a&gt; introduces &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%W&lt;/code&gt;, a string array literal that complements &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%w&lt;/code&gt; with
+escape sequences and interpolation, including splats (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16919&quot;&gt;#16919&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-cr highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;sx&quot;&gt;%W[foo&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;bar baz]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo bar&quot;, &quot;baz&quot;]&lt;/span&gt;
+
+&lt;span class=&quot;sx&quot;&gt;%W[foo &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt; baz]&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;%W[foo &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt; baz]&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo&quot;, &quot;2&quot;, &quot;baz&quot;]&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;%W[foo &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;baz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bab&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt; qux]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo&quot;, &quot;barbazbab&quot;, &quot;qux&quot;]&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;%W[foo _&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;_ baz]&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo&quot;, &quot;_bar_&quot;, &quot;baz&quot;]&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;%W[foo &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bar baz&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt; qux]&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo&quot;, &quot;bar baz&quot;, &quot;qux&quot;]&lt;/span&gt;
+
+&lt;span class=&quot;sx&quot;&gt;%W[foo &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%w[bar baz]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt; qux]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;, &quot;qux&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;macros&quot;&gt;Macros&lt;/h3&gt;
+  &lt;a href=&quot;#macros&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Macros&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Crystal/Macros/TypeNode.html#all_methods%3AArrayLiteral%28Def%29-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TypeNode#all_methods&lt;/code&gt;&lt;/a&gt; complements &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Crystal/Macros/TypeNode.html#methods%3AArrayLiteral%28Def%29-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#methods&lt;/code&gt;&lt;/a&gt; by
+including methods from a type’s ancestors in addition to methods defined
+directly on the type (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16902&quot;&gt;#16902&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/Blacksmoke16&quot;&gt;@Blacksmoke16&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;standard-library&quot;&gt;Standard library&lt;/h3&gt;
+  &lt;a href=&quot;#standard-library&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Standard library&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Channel.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Channel(T)&lt;/code&gt;&lt;/a&gt; implements &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Iterator.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Iterator(T)&lt;/code&gt;&lt;/a&gt;. This allows channels to plug
+directly into iterator-based APIs and chaining patterns (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16916&quot;&gt;#16916&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;div class=&quot;language-cr highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;channel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Channel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Int32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;spawn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;channel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;channel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;channel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [0, 1, 2]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/jgaskins&quot;&gt;@jgaskins&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/HTTP/WebSocket.html#receive%3AString%7CBytes-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::WebSocket#receive&lt;/code&gt;&lt;/a&gt; is a synchronous call that enables a request/response
+style loop with blocking reads (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16689&quot;&gt;#16689&lt;/a&gt;).
+This can be easier to use than the callback-based &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/HTTP/WebSocket.html#run%3ANil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#run&lt;/code&gt;&lt;/a&gt; loop.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/jgaskins&quot;&gt;@jgaskins&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dwithout_main&lt;/code&gt; flag allows building a binary without a main function,
+for example to serve as a dynamic library (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17074&quot;&gt;#17074&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/kojix2&quot;&gt;@kojix2&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/JSON/Field.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON::Field&lt;/code&gt;&lt;/a&gt; now supports nested root properties (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17016&quot;&gt;#17016&lt;/a&gt;),
+making it easier to map deeply nested payloads to flat object properties.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/tcoatswo&quot;&gt;@tcoatswo&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/URI/Params/Field.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;URI::Params::Field&lt;/code&gt;&lt;/a&gt; adds &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ignore:&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ignore_serialize&lt;/code&gt;, and
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ignore_deserialize&lt;/code&gt; options (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17029&quot;&gt;#17029&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/trypsynth&quot;&gt;@trypsynth&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Spec matchers &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Spec/ObjectExtensions.html#should%28expectation%2Cfailure_message%3AString%7CNil%3Dnil%2C%2A%2Cfile%3D__FILE__%2Cline%3D__LINE__%29-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#should&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Spec/ObjectExtensions.html#should_not%28expectation%2Cfailure_message%3AString%7CNil%3Dnil%2C%2A%2Cfile%3D__FILE__%2Cline%3D__LINE__%29-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#should_not&lt;/code&gt;&lt;/a&gt; can be chained to write more
+expressive expectations (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17020&quot;&gt;#17020&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;div class=&quot;language-cr highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;be_a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;should_not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_empty&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Process/Status.html#%5B%5D%28code%3AInt%29-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process::Status.[]&lt;/code&gt;&lt;/a&gt; is a portable and explicit constructor for process
+exit statuses (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17003&quot;&gt;#17003&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/String.html#present%3F%3ABool-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String#present?&lt;/code&gt;&lt;/a&gt; is a convenient predicate for intent-revealing checks in
+guards and validations (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16930&quot;&gt;#16930&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/Sija&quot;&gt;@Sija&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/UUID.html#v6%28%2A%2Cclock_seq%3AUInt16%7CNil%3Dnil%2Cnode_id%3AMAC%7CNil%3Dnil%29%3Aself-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UUID.v6&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/UUID.html#v8%28custom_bytes%3ASlice%28UInt8%29%29%3Aself-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UUID.v8&lt;/code&gt;&lt;/a&gt; generators (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17010&quot;&gt;#17010&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/trypsynth&quot;&gt;@trypsynth&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mmap&lt;/code&gt; to read ELF, Mach-O, and PE files as well as some DWARF sections
+reduces overhead for parsing debug info (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16939&quot;&gt;#16939&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h4 id=&quot;experimental-socketsendfile&quot;&gt;Experimental: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Socket#sendfile&lt;/code&gt;&lt;/h4&gt;
+  &lt;a href=&quot;#experimental-socketsendfile&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Experimental: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Socket#sendfile&lt;/code&gt;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Socket.html#sendfile%28file%3AIO%3A%3AFileDescriptor%2Coffset%3AInt%2Ccount%3AInt%29%3AInt64-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Socket#sendfile&lt;/code&gt;&lt;/a&gt; (and &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Crystal/EventLoop/Socket.html#sendfile%28socket%3A%3A%3ASocket%2Cfd%3ASystem%3A%3AFileDescriptor%3A%3AHandle%2Coffset%3AInt64%2Ccount%3AInt64%2Cflags%3AInt32%29%3AInt64%7CErrno%7CWinError-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Crystal::EventLoop::Socket#sendfile&lt;/code&gt;&lt;/a&gt;) enables
+efficient file-to-socket transfer paths with fewer user-space copies (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16665&quot;&gt;#16665&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-cr highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;foo/bar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sendfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;compiler&quot;&gt;Compiler&lt;/h3&gt;
+  &lt;a href=&quot;#compiler&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Compiler&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Branches in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;case&lt;/code&gt; expressions with multiple type expressions now split into
+separate restrictions for each type (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17072&quot;&gt;#17072&lt;/a&gt;).
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;case x; when Bar, Baz&lt;/code&gt; is now equivalent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if x.is_a?(Bar) elsif x.is_a?(Baz)&lt;/code&gt;.
+Previously, it was equivalent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if x.is_a?(Bar | Baz)&lt;/code&gt;.
+The latter can still be expressed as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;when Bar | Baz&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Improved debug metadata for procs (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16830&quot;&gt;#16830&lt;/a&gt;), constants and class
+vars (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16831&quot;&gt;#16831&lt;/a&gt;), and LLDB collection formatters (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16832&quot;&gt;#16832&lt;/a&gt;) for better
+inspection and clearer debugger output.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/skuznetsov&quot;&gt;@skuznetsov&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ASTNode#inspect&lt;/code&gt; now prints an unambiguous representation of the syntax
+node and its properties, instead of folding into the source representation
+(&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16699&quot;&gt;#16699&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h3&gt;
+  &lt;a href=&quot;#dependencies&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Dependencies&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OpenSSL 4.0 (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16839&quot;&gt;#16839&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;deprecations&quot;&gt;Deprecations&lt;/h3&gt;
+  &lt;a href=&quot;#deprecations&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Deprecations&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Colorize.html#on_tty_only%21%3ABool-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Colorize.on_tty_only!&lt;/code&gt;&lt;/a&gt; is obsolete because its behaviour is the default
+since &lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/15881&quot;&gt;#15881&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16859&quot;&gt;#16859&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/toplevel.html#spawn(*,name:String|Nil=nil,same_thread=false,&amp;amp;block)-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spawn(same_thread:)&lt;/code&gt;&lt;/a&gt; only makes sense for legacy &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dpreview_mt&lt;/code&gt; and is
+pointless for execution contexts (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/17097&quot;&gt;#17097&lt;/a&gt;). See &lt;a href=&quot;#execution-contexts&quot;&gt;&lt;em&gt;Execution
+Contexts&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.21.0/IO/Memory.html#new%28slice%3ABytes%2C%2A%2Cwriteablewritable%29%3Aself-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IO::Memory.new(writeable:)&lt;/code&gt;&lt;/a&gt;: &lt;!-- spellchecker:disable-line --&gt;
+the parameter has been renamed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;writable&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16858&quot;&gt;#16858&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;The platform-specific &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process::Status.new&lt;/code&gt; constructor is hidden to avoid
+accidental misuse (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16997&quot;&gt;#16997&lt;/a&gt;). A portable constructor &lt;a href=&quot;https://crystal-lang.org/api/1.21.0/Process/Status.html#%5B%5D%28code%3AInt%29-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process::Status.[]&lt;/code&gt;&lt;/a&gt; is
+available as replacement.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;manpages&quot;&gt;Manpages&lt;/h3&gt;
+  &lt;a href=&quot;#manpages&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Manpages&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Since 1.16, we’ve split the historic single manpage &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crystal(1)&lt;/code&gt; into individual
+pages for each subcommand. Now we’ve removed the original manpage from the
+repository. Manpage consumers must use the split manpages now.&lt;/p&gt;
+
+&lt;p&gt;We only provide the adoc sources, and package build scripts need to generate the
+roff format themselves (requires &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;asciidoctor&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Package maintainers who ship manpages should update to the new build
+instructions if they haven’t already.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Makefile: Build manpages for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install&lt;/code&gt; target (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16991&quot;&gt;#16991&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations, and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.20.3 is released!</title>
+      <author>
+        <name>Julien Portalier</name>
+        <uri>https://github.com/ysbaddaden/</uri>
+      </author><link href="https://crystal-lang.org/2026/07/02/1.20.3-released/" rel="alternate" type="text/html" title="Crystal 1.20.3 is released!" />
+      <published>2026-07-02T00:00:00+00:00</published>
+      <updated>2026-07-02T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/07/02/1.20.3-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/07/02/1.20.3-released/">&lt;p&gt;We are announcing a new Crystal release 1.20.3 with fixes for two security
+vulnerabilities in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt; parsers. We recommend upgrading as soon as
+possible if your application processes YAML files from unknown origins.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2026/04/16/1.20.0-released/&quot;&gt;the release notes of 1.20.0&lt;/a&gt; for all the
+changes introduced in Crystal 1.20.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.3&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.20.3&quot;&gt;2 security fixes and 1 refactor since
+1.20.2&lt;/a&gt;
+by 1 contributor. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;limit-max-nesting-of-sequences-of-mappings-in-yaml-parsers&quot;&gt;Limit max nesting of sequences of mappings in YAML parsers&lt;/h3&gt;
+  &lt;a href=&quot;#limit-max-nesting-of-sequences-of-mappings-in-yaml-parsers&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Limit max nesting of sequences of mappings in YAML parsers&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt; parsers use recursion to parse sequences and mappings but didn’t
+limit how deep they could be nested. A deeply nested YAML document could lead to
+stack overflows (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/17107&quot;&gt;#17107&lt;/a&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;max_nesting&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML::PullParser&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/17107&quot;&gt;#17107&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;prevent-excessive-expansion-of-aliases-in-yaml-parsers&quot;&gt;Prevent excessive expansion of aliases in YAML parsers&lt;/h3&gt;
+  &lt;a href=&quot;#prevent-excessive-expansion-of-aliases-in-yaml-parsers&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Prevent excessive expansion of aliases in YAML parsers&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt; parsers were vulnerable to the billion laughs attack when expanding
+aliases, growing the document from 100 nodes to over 1 billion nodes for
+example. The parser had no issues parsing the document, but any attempt to walk
+the stack could walk the same nodes over and over, quickly slowing down
+applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add alias vs anchor ratio check to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML::PullParser&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/17109&quot;&gt;#17109&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Memoize anchor name in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML::PullParser&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/17108&quot;&gt;#17108&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.3&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.20.2 is released!</title>
+      <author>
+        <name>Johannes Müller</name>
+        <uri>https://github.com/straight-shoota/</uri>
+      </author><link href="https://crystal-lang.org/2026/05/15/1.20.2-released/" rel="alternate" type="text/html" title="Crystal 1.20.2 is released!" />
+      <published>2026-05-15T00:00:00+00:00</published>
+      <updated>2026-05-15T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/05/15/1.20.2-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/05/15/1.20.2-released/">&lt;p&gt;We are announcing a new Crystal release 1.20.2 with a couple of regressions fixed.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2026/04/16/1.20.0-released/&quot;&gt;the release notes of 1.20.0&lt;/a&gt; for all the
+changes introduced in Crystal 1.20.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.2&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.20.2&quot;&gt;2 bug fixes since
+1.20.1&lt;/a&gt;
+by 1 contributor. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;randomness-in-rangesample&quot;&gt;Randomness in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt;&lt;/h3&gt;
+  &lt;a href=&quot;#randomness-in-rangesample&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Randomness in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This patch release brings the regression fix for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16909&quot;&gt;#16909&lt;/a&gt;) that could
+eventually lose randomness to the 1.20 release branch.
+This was previously released as a backport for 1.19 in Crystal 1.19.2 (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16853&quot;&gt;#16853&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.1&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.20.1 is released!</title>
+      <author>
+        <name>Johannes Müller</name>
+        <uri>https://github.com/straight-shoota/</uri>
+      </author><link href="https://crystal-lang.org/2026/04/29/1.20.1-released/" rel="alternate" type="text/html" title="Crystal 1.20.1 is released!" />
+      <published>2026-04-29T00:00:00+00:00</published>
+      <updated>2026-04-29T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/04/29/1.20.1-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/04/29/1.20.1-released/">&lt;p&gt;We are announcing a new Crystal release 1.20.1 with a couple of regressions fixed.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2026/04/16/1.20.0-released/&quot;&gt;the release notes of 1.20.0&lt;/a&gt; for all the
+changes introduced in Crystal 1.20.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.1&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.20.1&quot;&gt;9 changes since
+1.20.0&lt;/a&gt;
+by 2 contributors. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;kernel-tls&quot;&gt;Kernel TLS&lt;/h3&gt;
+  &lt;a href=&quot;#kernel-tls&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Kernel TLS&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Support for Kernel TLS was introduced in 1.20.0 but it showed issues in production. Some have been fixed (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16888&quot;&gt;#16888&lt;/a&gt;) but there are still some problems so it was disabled by default (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16897&quot;&gt;#16897&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;You can opt-in to Kernel TLS by adding the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENABLE_KTLS&lt;/code&gt; option:&lt;/p&gt;
+
+&lt;div class=&quot;language-cr highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ssl_context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;OpenSSL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SSL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ENABLE_KTLS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;randomness-in-rangesample&quot;&gt;Randomness in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt;&lt;/h3&gt;
+  &lt;a href=&quot;#randomness-in-rangesample&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Randomness in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This patch release fixes a regression in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16853&quot;&gt;#16853&lt;/a&gt;) that could
+eventually lose randomness.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.1&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.19.2 is released!</title>
+      <author>
+        <name>Julien Portalier</name>
+        <uri>https://github.com/ysbaddaden/</uri>
+      </author><link href="https://crystal-lang.org/2026/04/27/1.19.2-released/" rel="alternate" type="text/html" title="Crystal 1.19.2 is released!" />
+      <published>2026-04-27T00:00:00+00:00</published>
+      <updated>2026-04-27T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/04/27/1.19.2-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/04/27/1.19.2-released/">&lt;p&gt;We are announcing a new Crystal release 1.19.2 with two regressions fixed.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2026/01/15/1.19.0-released/&quot;&gt;the release notes of 1.19.0&lt;/a&gt; for all the
+changes introduced in Crystal 1.19.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.19.2&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.19.2&quot;&gt;3 changes since
+1.19.1&lt;/a&gt;
+by 2 contributors. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;
+  &lt;a href=&quot;#security&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Security&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::Server&lt;/code&gt; accepted requests containing both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Length&lt;/code&gt; and
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Transfer-Encoding&lt;/code&gt; headers and prioritized &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Length&lt;/code&gt;. This allowed HTTP
+request smuggling as per &lt;a href=&quot;https://cwe.mitre.org/data/definitions/444.html&quot;&gt;CWE-444&lt;/a&gt; when the server is behind a vulnerable
+frontend. Refer to the
+&lt;a href=&quot;https://github.com/crystal-lang/crystal/security/advisories/GHSA-wqh5-7w63-pm68&quot;&gt;advisory&lt;/a&gt;
+for more details.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::Server&lt;/code&gt; now rejects requests where both headers are present. The HTTP
+parser now ignores &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Length&lt;/code&gt; when the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Transfer-Encoding&lt;/code&gt; header is
+present (commit &lt;a href=&quot;https://github.com/crystal-lang/crystal/commit/c948b31ee6d5414050e771f89955c7dc02883ebc&quot;&gt;c948b31&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;regressions&quot;&gt;Regressions&lt;/h3&gt;
+  &lt;a href=&quot;#regressions&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Regressions&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This patch release fixes a regression in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#sample&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16866&quot;&gt;#16866&lt;/a&gt;) that could
+eventually lose randomness.&lt;/p&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.19.2&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.20.0 is released!</title>
+      <author>
+        <name>Julien Portalier</name>
+        <uri>https://github.com/ysbaddaden/</uri>
+      </author><link href="https://crystal-lang.org/2026/04/16/1.20.0-released/" rel="alternate" type="text/html" title="Crystal 1.20.0 is released!" />
+      <published>2026-04-16T00:00:00+00:00</published>
+      <updated>2026-04-16T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/04/16/1.20.0-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/04/16/1.20.0-released/">&lt;p&gt;We are announcing a new Crystal release 1.20.0 with several new features and bug
+fixes.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.0&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.20.0&quot;&gt;161 changes since 1.19.1&lt;/a&gt;
+by 21 contributors. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Below we list the most remarkable changes in the language, compiler and stdlib.
+For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.20.0&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;breaking&quot;&gt;Breaking&lt;/h3&gt;
+  &lt;a href=&quot;#breaking&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Breaking&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We do not expect any breaking changes in existing code. We expect the few
+bugfixes below to not negatively impact your programs. If you notice any
+unexpected issues, please let us know in the &lt;a href=&quot;https://github.com/crystal-lang/crystal/issues&quot;&gt;issue tracker&lt;/a&gt; or &lt;a href=&quot;https://forum.crystal-lang.org/&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OpenSSL sockets shouldn’t flush on read (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16650&quot;&gt;#16650&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Process.html#wait:Process::Status-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process#wait&lt;/code&gt;&lt;/a&gt; to not close &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@input&lt;/code&gt; before waiting (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16620&quot;&gt;#16620&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16638&quot;&gt;#16638&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Ensure that heredoc lexing allows only valid identifiers (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16548&quot;&gt;#16548&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;, &lt;a href=&quot;https://github.com/Sija&quot;&gt;@Sija&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;
+  &lt;a href=&quot;#security&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Security&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::Server&lt;/code&gt; accepted requests containing both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Length&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Transfer-Encoding&lt;/code&gt;
+headers and prioritized &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Length&lt;/code&gt;. This allowed HTTP request smuggling as per
+&lt;a href=&quot;https://cwe.mitre.org/data/definitions/444.html&quot;&gt;CWE-444&lt;/a&gt; when the server is behind a vulnerable frontend. Refer to the
+&lt;a href=&quot;https://github.com/crystal-lang/crystal/security/advisories/GHSA-wqh5-7w63-pm68&quot;&gt;advisory&lt;/a&gt;
+for more details.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::Server&lt;/code&gt; now rejects requests where both headers are present. The HTTP parser now
+ignores &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Length&lt;/code&gt; when the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Transfer-Encoding&lt;/code&gt; header is present. (commit &lt;a href=&quot;https://github.com/crystal-lang/crystal/commit/c948b31ee6d5414050e771f89955c7dc02883ebc&quot;&gt;c948b31&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;target-features&quot;&gt;Target features&lt;/h3&gt;
+  &lt;a href=&quot;#target-features&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Target features&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/rfcs/pull/20&quot;&gt;RFC 0020&lt;/a&gt; introduces a new &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/TargetFeature.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@[TargetFeature]&lt;/code&gt;&lt;/a&gt; annotation that allows specifying
+CPU features or a CPU model or variant for individual functions. It
+complements the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--mattr&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--mcpu&lt;/code&gt; CLI arguments that target the whole
+program. This allows embedding multiple optimized functions for different CPU
+features into a single executable, for example a portable SIMD
+implementation alongside AVX2 and AVX512 alternatives.&lt;/p&gt;
+
+&lt;p&gt;The program is responsible for detecting which feature is available and calling the
+proper function at runtime. Otherwise, the program might crash with SIGILL, for
+example.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-crystal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:x86_64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@[TargetFeature(&quot;+avx2&quot;)]&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo_avx2&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cpu_supports_avx2?&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo_portable&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:x86_64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo_avx2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cpu_supports_avx2?&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;foo_portable&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;While not strictly required, we still recommend wrapping architecture-specific
+method definitions within macro flag checks.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/TargetFeature.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@[TargetFeature]&lt;/code&gt;&lt;/a&gt; annotation (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16717&quot;&gt;#16717&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/stakach&quot;&gt;@stakach&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;execution-contexts&quot;&gt;Execution contexts&lt;/h3&gt;
+  &lt;a href=&quot;#execution-contexts&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Execution contexts&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Execution contexts from &lt;a href=&quot;https://github.com/crystal-lang/rfcs/pull/2&quot;&gt;RFC 0002&lt;/a&gt; continue as a final preview feature,
+enabled with the compiler flags &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dpreview_mt -Dexecution_context&lt;/code&gt;. We plan to
+enable it by default in Crystal 1.21.&lt;/p&gt;
+
+&lt;p&gt;In addition to fixing bugs, we implemented M:N scheduling that allows threads to
+be attached to and detached from a context. This avoids blocking other
+fibers on certain syscalls, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getaddrinfo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fiber::ExecutionContext::ThreadPool&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/15885&quot;&gt;#15885&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16750&quot;&gt;#16750&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Detach execution context scheduler from running thread during blocking syscall (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/15871&quot;&gt;#15871&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16679&quot;&gt;#16679&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The parallel contexts now automatically start threads to adapt to the actual
+workload and distribute fibers across more cores when needed.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add adaptive scaling to &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Fiber/ExecutionContext/Parallel.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ExecutionContext::Parallel&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16719&quot;&gt;#16719&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;This effort is part of the &lt;a href=&quot;/2024/02/09/84codes-manas-mt/&quot;&gt;ongoing project to improve multi-threading support&lt;/a&gt;
+with the help of &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;process-api&quot;&gt;Process API&lt;/h3&gt;
+  &lt;a href=&quot;#process-api&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Process API&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release brings a new ergonomic, safe, and portable API for spawning sub-processes, as proposed in &lt;a href=&quot;https://github.com/crystal-lang/rfcs/pull/25&quot;&gt;RFC 0025&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A significant change is that the modern API treats the command line as an array of strings.
+The first element is the program to execute, and the remaining elements are its arguments.&lt;/p&gt;
+
+&lt;div class=&quot;language-cr highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# legacy API:&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;crystal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tool&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;format&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# modern API:&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;crystal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;tool&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;format&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The new API also includes convenient methods for capturing process output:
+&lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Process.html#capture%28args%3AEnumerable%28String%29%2C%2A%2Cenv%3AEnv%3Dnil%2Cclear_env%3ABool%3Dfalse%2Cinput%3AStdio%3DRedirect%3A%3AClose%2Cerror%3AStdio%3DRedirect%3A%3APipe%2Cchdir%3APath%7CString%7CNil%3Dnil%29%3AString-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.capture&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Process.html#capture_result%28args%3AEnumerable%28String%29%2C%2A%2Cenv%3AEnv%3Dnil%2Cclear_env%3ABool%3Dfalse%2Cinput%3AStdio%3DRedirect%3A%3AClose%2Coutput%3AStdio%3DRedirect%3A%3APipe%2Cerror%3AStdio%3DRedirect%3A%3APipe%2Cchdir%3APath%7CString%7CNil%3Dnil%29%3AResult-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.capture_result&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The new API does not have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell&lt;/code&gt; parameter. If you need shell behaviour, we recommend running a shell explicitly.&lt;/p&gt;
+
+&lt;p&gt;These are the most significant individual changes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add overloads with combined &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;args&lt;/code&gt; parameter instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command, args&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16681&quot;&gt;#16681&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16739&quot;&gt;#16739&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Process.html#run%3F%28args%3AEnumerable%28String%29%2C%2A%2Cenv%3AEnv%3Dnil%2Cclear_env%3ABool%3Dfalse%2Cinput%3AStdio%3DRedirect%3A%3AClose%2Coutput%3AStdio%3DRedirect%3A%3AClose%2Cerror%3AStdio%3DRedirect%3A%3AClose%2Cchdir%3APath%7CString%7CNil%3Dnil%29%3AProcess%3A%3AStatus%7CNil-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.run?&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16738&quot;&gt;#16738&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Process.html#capture%28args%3AEnumerable%28String%29%2C%2A%2Cenv%3AEnv%3Dnil%2Cclear_env%3ABool%3Dfalse%2Cinput%3AStdio%3DRedirect%3A%3AClose%2Cerror%3AStdio%3DRedirect%3A%3APipe%2Cchdir%3APath%7CString%7CNil%3Dnil%29%3AString-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.capture&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16773&quot;&gt;#16773&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All new methods and overloads are experimental.
+We expect to stabilize the API for the next release.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;io_uring&quot;&gt;io_uring&lt;/h3&gt;
+  &lt;a href=&quot;#io_uring&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled io_uring&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;An io_uring event loop is available for Linux targets and can be selected by
+specifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Devloop=io_uring&lt;/code&gt; when compiling. The event loop is highly
+experimental and its performance benefits will differ for every program. We don’t
+expect it to be faster than epoll, and it may even be slower, except on some
+benchmarks with SQPOLL enabled.&lt;/p&gt;
+
+&lt;p&gt;SQPOLL can be selected by specifying the idle time for the kernel threads with
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dio_uring_sq_thread_idle=200&lt;/code&gt; (for 200ms). It is recommended to keep the idle
+time low (below 2s), otherwise your CPU cores will regularly spin at 100% usage
+when doing nothing.&lt;/p&gt;
+
+&lt;p&gt;An interesting but potentially surprising behavior is that any I/O call that &lt;em&gt;could&lt;/em&gt;
+yield the calling fiber will now &lt;em&gt;always&lt;/em&gt; yield. One benefit is that an always
+ready socket won’t block other fibers from progressing. A downside is that there
+might be lots of context switches.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add io_uring event loop (linux) (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16264&quot;&gt;#16264&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;kernel-tls&quot;&gt;Kernel TLS&lt;/h3&gt;
+  &lt;a href=&quot;#kernel-tls&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Kernel TLS&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;callout callout--note&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Note
+&lt;/div&gt;
+&lt;p&gt;Kernel TLS is opt-in &lt;a href=&quot;/2026/04/29/1.20.1-released/#kernel-tls&quot;&gt;since 1.20.1&lt;/a&gt; due to unresolved issues.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Kernel TLS is now supported by default on Linux and FreeBSD as long as support
+has been compiled into OpenSSL (which should be the default) and enabled on the
+system (likely disabled by default), for example with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;modprobe tls&lt;/code&gt; on Linux.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add Kernel TLS support to custom &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpenSSL::BIO&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16646&quot;&gt;#16646&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;macros&quot;&gt;Macros&lt;/h3&gt;
+  &lt;a href=&quot;#macros&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Macros&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#select&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#reject&lt;/code&gt; to &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Crystal/Macros/HashLiteral.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HashLiteral&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Crystal/Macros/NamedTupleLiteral.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NamedTupleLiteral&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16558&quot;&gt;#16558&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Refine error message for unsupported named arguments in macros (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16576&quot;&gt;#16576&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/Blacksmoke16&quot;&gt;@Blacksmoke16&lt;/a&gt;, &lt;a href=&quot;https://github.com/hahwul&quot;&gt;@hahwul&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;standard-library&quot;&gt;Standard library&lt;/h3&gt;
+  &lt;a href=&quot;#standard-library&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Standard library&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.20.0/OptionParser.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OptionParser&lt;/code&gt;&lt;/a&gt; now supports option bundling and can parse &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-ncfoo&lt;/code&gt;
+as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-n -c foo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add short option bundling for &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/OptionParser.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OptionParser&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16770&quot;&gt;#16770&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/Qard&quot;&gt;@Qard&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/OAuth.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OAuth&lt;/code&gt;&lt;/a&gt; module expected a success response on HTTP OK statuses, but multiple
+OAuth providers send error responses with an HTTP OK status (sic).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Detect &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/OAuth.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OAuth&lt;/code&gt;&lt;/a&gt; error in payload (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16634&quot;&gt;#16634&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/jgaskins&quot;&gt;@jgaskins&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.20.0/HTTP/WebSocket.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::WebSocket&lt;/code&gt;&lt;/a&gt; can now negotiate sub-protocols.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sec-WebSocket-Protocol&lt;/code&gt; checks to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::WebSocket::Protocol&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16600&quot;&gt;#16600&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16671&quot;&gt;#16671&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sec-WebSocket-Protocol&lt;/code&gt; to &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/HTTP/WebSocketHandler.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::WebSocketHandler&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16574&quot;&gt;#16574&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/antondalgren&quot;&gt;@antondalgren&lt;/a&gt;, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringScanner&lt;/code&gt;&lt;/a&gt; saw multiple improvements, ranging from performance to subtle
+niceties for debugging.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html#scan(len:Int):String|Nil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringScanner#scan&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html#check%28len%3AInt%29%3AString%7CNil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#check&lt;/code&gt;&lt;/a&gt;, and &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html#skip(len:Int):Int32|Nil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#skip&lt;/code&gt;&lt;/a&gt; overloads for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16557&quot;&gt;#16557&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html#peek_behind(len):String-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringScanner#peek_behind&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16593&quot;&gt;#16593&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add convenience methods to &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringScanner&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16595&quot;&gt;#16595&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Improve cursor window format in &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/StringScanner.html#inspect%28io%3AIO%29%3ANil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringScanner#inspect&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16594&quot;&gt;#16594&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/jneen&quot;&gt;@jneen&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The memory management model for libxml2 changed in Crystal 1.17 to become manual
+instead of integrating the GC. The change introduced another memory leak that is
+now fixed.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xmlFree&lt;/code&gt; for the string pointer from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xmlNodeGetContent&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16688&quot;&gt;#16688&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/toddsundsted&quot;&gt;@toddsundsted&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Some additional niceties:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/IO.html#read_greedy(slice:Bytes):Int32-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IO#read_greedy&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16535&quot;&gt;#16535&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/FileUtils.html#rm_f(path:Path|String):Nil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileUtils#rm_f&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/12832&quot;&gt;#12832&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Pointer.html#align_up(boundary:UInt64):Pointer(T)-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pointer#align_up&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Pointer.html#align_down(boundary:UInt64):Pointer(T)-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#align_down&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16585&quot;&gt;#16585&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/HTTP/Server/Response.html#content_type:String%7CNil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::Server::Response#content_type&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/HTTP/Server/Response.html#content_length:Int64|Nil-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#content_length&lt;/code&gt;&lt;/a&gt; as convenient accessors (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16712&quot;&gt;#16712&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/BlobCodes&quot;&gt;@BlobCodes&lt;/a&gt;, &lt;a href=&quot;https://github.com/CTC97&quot;&gt;@CTC97&lt;/a&gt;, &lt;a href=&quot;https://github.com/zw963&quot;&gt;@zw963&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;compiler&quot;&gt;Compiler&lt;/h3&gt;
+  &lt;a href=&quot;#compiler&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Compiler&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Prefer modern linker (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mold&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lld&lt;/code&gt;) (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16696&quot;&gt;#16696&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parse &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MacroVar&lt;/code&gt; with empty expressions: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%var{}&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16772&quot;&gt;#16772&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Parse &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProcNotation&lt;/code&gt; with empty arg parenthesis: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;() -&amp;gt;&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16741&quot;&gt;#16741&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--base-path&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crystal docs&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16091&quot;&gt;#16091&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;, &lt;a href=&quot;https://github.com/matiasgarciaisaia&quot;&gt;@matiasgarciaisaia&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h3&gt;
+  &lt;a href=&quot;#dependencies&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Dependencies&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Support for LLVM 22.1 and 23.0 (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16631&quot;&gt;#16631&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/HertzDevil&quot;&gt;@HertzDevil&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;deprecations&quot;&gt;Deprecations&lt;/h3&gt;
+  &lt;a href=&quot;#deprecations&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Deprecations&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There is a single deprecation in this release, and it is a trivial one: rename
+&lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Mutex.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mutex&lt;/code&gt;&lt;/a&gt; to &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Sync/Mutex.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::Mutex&lt;/code&gt;&lt;/a&gt; to use the new algorithm introduced in Crystal 1.19.&lt;/p&gt;
+
+&lt;p&gt;We’re experimenting with a two-step mechanism to deprecate a feature. First, we
+soft deprecate the method in the documentation with a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DEPRECATE:&lt;/code&gt; callout, then
+after a few releases we’ll hard deprecate by adding the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@[Deprecated]&lt;/code&gt;
+annotation.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Soft deprecate &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Mutex.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mutex&lt;/code&gt;&lt;/a&gt; in favor of &lt;a href=&quot;https://crystal-lang.org/api/1.20.0/Sync/Mutex.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::Mutex&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16737&quot;&gt;#16737&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.19.1 is released!</title>
+      <author>
+        <name>Julien Portalier</name>
+        <uri>https://github.com/ysbaddaden/</uri>
+      </author><link href="https://crystal-lang.org/2026/01/20/1.19.1-released/" rel="alternate" type="text/html" title="Crystal 1.19.1 is released!" />
+      <published>2026-01-20T00:00:00+00:00</published>
+      <updated>2026-01-20T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/01/20/1.19.1-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/01/20/1.19.1-released/">&lt;p&gt;We are announcing a new Crystal release 1.19.1 with two regressions fixed.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2026/01/15/1.19.0-released/&quot;&gt;the release notes of 1.19.0&lt;/a&gt; for all the changes introduced in Crystal 1.19.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.19.1&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.19.1&quot;&gt;2 changes since
+1.19.0&lt;/a&gt;
+by 1 contributor. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This patch release fixes regressions in timer conversions from absolute to relative
+time (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16581&quot;&gt;#16581&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16583&quot;&gt;#16583&lt;/a&gt;) that led &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(seconds)&lt;/code&gt; to immediately trigger instead
+of waiting on some platforms (Darwin, BSDs, Windows) — both introduced in 1.19.0.&lt;/p&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.19.1&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.19.0 is released!</title>
+      <author>
+        <name>Julien Portalier</name>
+        <uri>https://github.com/ysbaddaden/</uri>
+      </author><link href="https://crystal-lang.org/2026/01/15/1.19.0-released/" rel="alternate" type="text/html" title="Crystal 1.19.0 is released!" />
+      <published>2026-01-15T00:00:00+00:00</published>
+      <updated>2026-01-15T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2026/01/15/1.19.0-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2026/01/15/1.19.0-released/">&lt;p&gt;We are announcing a new Crystal release 1.19.0 with several new features and bug
+fixes.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.19.0&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.19.0&quot;&gt;237 changes since
+1.18.2&lt;/a&gt;
+by 24 contributors. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Below we list the most remarkable changes in the language, compiler and stdlib.
+For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.19.0&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We do not expect any breaking changes in existing code. If you notice any
+unexpected issues, please let us know in the &lt;a href=&quot;https://github.com/crystal-lang/crystal/issues&quot;&gt;issue tracker&lt;/a&gt; or &lt;a href=&quot;https://forum.crystal-lang.org/&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;breaking&quot;&gt;Breaking&lt;/h3&gt;
+  &lt;a href=&quot;#breaking&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Breaking&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The following changes break prior behavior of the compiler, but we expect them
+to not have much effect in existing code. If you notice any unexpected issues,
+please let us know in the &lt;a href=&quot;https://github.com/crystal-lang/crystal/issues&quot;&gt;issue tracker&lt;/a&gt; or &lt;a href=&quot;https://forum.crystal-lang.org/&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h4 id=&quot;compiler-flags-now-have-values&quot;&gt;Compiler flags now have values&lt;/h4&gt;
+  &lt;a href=&quot;#compiler-flags-now-have-values&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Compiler flags now have values&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flag?&lt;/code&gt; macro is now aware of name-value mappings in the form of
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name=value&lt;/code&gt; where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flag?(:name)&lt;/code&gt; will now return the respective &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;value&lt;/code&gt; as a
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringLiteral&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16310&quot;&gt;#16310&lt;/a&gt;). A key without a value returns &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; as implicit
+value, as before.&lt;/p&gt;
+
+&lt;p&gt;Instead of returning a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BoolLiteral&lt;/code&gt; the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flag?&lt;/code&gt; macro might now return a
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringLiteral&lt;/code&gt; which might be unexpected. The value is still truthy and
+shouldn’t cause issues in practice.&lt;/p&gt;
+
+&lt;p&gt;For example, the value printed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{{ flag?(:name) }}&lt;/code&gt; may now be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;(not defined)&lt;/em&gt; =&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dname&lt;/code&gt; =&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dname=value&lt;/code&gt; =&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;value&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dname=some,other,data&lt;/code&gt; =&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;some,other,data&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h4 id=&quot;adjust-monotonic-clocks&quot;&gt;Adjust monotonic clocks&lt;/h4&gt;
+  &lt;a href=&quot;#adjust-monotonic-clocks&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Adjust monotonic clocks&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The monotonic clock has been adjusted on Linux and macOS to include suspended
+time, when they previously counted the system uptime.&lt;/p&gt;
+
+&lt;p&gt;UNIX targets still use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CLOCK_MONOTONIC&lt;/code&gt; except for Linux that now uses
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CLOCK_BOOTTIME&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16516&quot;&gt;#16516&lt;/a&gt;) and macOS that now uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CLOCK_MONOTONIC_RAW&lt;/code&gt;
+instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mach_absolute_time&lt;/code&gt; that internally used &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CLOCK_UPTIME_RAW&lt;/code&gt;
+(&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16516&quot;&gt;#16516&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16492&quot;&gt;#16492&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The change is affecting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.measure&lt;/code&gt; for example, that should now include
+suspended time across the different targets, rather than sometimes including
+it, and sometimes not.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;execution-contexts&quot;&gt;Execution contexts&lt;/h3&gt;
+  &lt;a href=&quot;#execution-contexts&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Execution contexts&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Execution contexts from &lt;a href=&quot;https://github.com/crystal-lang/rfcs/pull/2&quot;&gt;RFC 0002&lt;/a&gt; continue as a final preview feature with
+opt-in with compiler flags &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-Dpreview_mt -Dexecution_context&lt;/code&gt; and we plan to
+finally enable the feature by default in the 1.20 release!&lt;/p&gt;
+
+&lt;p&gt;There has not been huge developments to the feature, but corrections to fix the
+remaining thread safety issues in the standard library, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add thread safety to default random (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16174&quot;&gt;#16174&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Closing system fd is thread unsafe (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16289&quot;&gt;#16289&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Thread safety of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Exception::Callstack&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16504&quot;&gt;#16504&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We started to merge synchronization primitives from &lt;a href=&quot;https://github.com/ysbaddaden/sync/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ysbaddaden/sync&lt;/code&gt;&lt;/a&gt;
+into the standard library as well:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Sync/Mutex.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::Mutex&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Sync/RWLock.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::RWLock&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16399&quot;&gt;#16399&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Sync/ConditionVariable.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::ConditionVariable&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16440&quot;&gt;#16440&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Sync/Exclusive.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::Exclusive&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Sync/Shared.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sync::Shared&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16487&quot;&gt;#16487&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;This effort is part of the &lt;a href=&quot;/2024/02/09/84codes-manas-mt/&quot;&gt;ongoing project to improve multi-threading support&lt;/a&gt;
+with the help of &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;time&quot;&gt;Time&lt;/h3&gt;
+  &lt;a href=&quot;#time&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Time&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Introduces the &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Time/Instant.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt;&lt;/a&gt; type to represent instants on the monotonic
+timeline as defined in &lt;a href=&quot;https://github.com/crystal-lang/rfcs/blob/master/text/0015-time-monotonic.md&quot;&gt;RFC 0015&lt;/a&gt; instead of overloading the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Span&lt;/code&gt; type
+that represents a duration, not an instant (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16490&quot;&gt;#16490&lt;/a&gt;). We expect a clearer and
+safer API:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt; represents a single point on the monotonic timeline.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Span&lt;/code&gt; continues to represent a duration.&lt;/li&gt;
+  &lt;li&gt;Subtracting two &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt; instances yields a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Span&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Adding/subtracting a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Span&lt;/code&gt; to/from an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt; yields a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also adjusted the monotonic clock (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16516&quot;&gt;#16516&lt;/a&gt;), applied the changes (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16498&quot;&gt;#16498&lt;/a&gt;)
+and deprecated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.monotonic&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16545&quot;&gt;#16545&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-crystal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;code_section&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;seconds&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instant&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;elapsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# do something&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In order to migrate existing code to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt;, replace calls to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.monotonic&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.instant&lt;/code&gt;. If the instant time reading is stored in an explicitly typed variable (e.g. an instance variable), change the type from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Span&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Instant&lt;/code&gt;. The APIs of these types are very similar so most use cases should not need any further adaptions.&lt;/p&gt;
+
+&lt;p&gt;Finally, we made some further adjustments:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Treat GMT as a legacy alias of UTC (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16292&quot;&gt;#16292&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/zoneinfo&lt;/code&gt; to zoneinfo lookup paths (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16463&quot;&gt;#16463&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$TZDIR&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16466&quot;&gt;#16466&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;process&quot;&gt;Process&lt;/h3&gt;
+  &lt;a href=&quot;#process&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Process&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A long refactor of spawning sub-processes has started. It encompasses a tedious
+cleanup and safety fixes related to finding the command as well as building the
+arguments and environment variables, to eventually move on from the classic
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fork&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exec&lt;/code&gt; to the more modern &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;posix_spawn&lt;/code&gt; on UNIX targets.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.run&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.exec&lt;/code&gt; now look up the target executable in the
+environment of the parent process (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENV[&quot;PATH&quot;]&lt;/code&gt;) instead of in the environment of the
+child process (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env[&quot;PATH&quot;]&lt;/code&gt;) on all platforms (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16340&quot;&gt;#16340&lt;/a&gt;).
+This is usually the expected and specified behaviour for spawning a new process,
+but it only worked correctly on Windows until now.
+Consider using a full path (possibly resolved via &lt;a href=&quot;https://crystal-lang.org/api/1.19.1/Process.html#find_executable%28name%3APath%7CString%2Cpath%3AString%7CNil%3DENV%5B%22PATH%22%5D%3F%2Cpwd%3APath%7CString%3DDir.current%29%3AString%7CNil-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.find_executable&lt;/code&gt;&lt;/a&gt;)
+if you want to look up the executable in a different path.
+With &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell: true&lt;/code&gt;, the target executable is also looked up in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env[&quot;PATH&quot;]&lt;/code&gt;
+because the shell process sits in between.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fork&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16286&quot;&gt;#16286&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16321&quot;&gt;#16321&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make_envp&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fork&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16351&quot;&gt;#16351&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;execvpe&lt;/code&gt; when available (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16294&quot;&gt;#16294&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16311&quot;&gt;#16311&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dir.cd&lt;/code&gt; with a non-raising alternative in pre-exec (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16352&quot;&gt;#16352&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16369&quot;&gt;#16369&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix reset directory if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.exec&lt;/code&gt; fails (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16383&quot;&gt;#16383&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Disable process cancellation during &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fork&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16446&quot;&gt;#16446&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;standard-library&quot;&gt;Standard library&lt;/h3&gt;
+  &lt;a href=&quot;#standard-library&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Standard library&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;New methods:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/NamedTuple.html#reverse_merge(other:NamedTuple)-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NamedTuple#reverse_merge&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16229&quot;&gt;#16229&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Set.html#map!(&amp;amp;:T-%3ET):self-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set#map!&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16271&quot;&gt;#16271&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Hash.html#transform_keys!(&amp;amp;:K,V-%3EK):self-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash#transform_keys!&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16280&quot;&gt;#16280&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/OpenSSL/SSL/Context/Server.html#on_server_name(&amp;amp;block:String-%3EOpenSSL::SSL::Context::Server|Nil)-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpenSSL::SSL::Context::Server#on_server_name&lt;/code&gt;&lt;/a&gt; for SNI (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16452&quot;&gt;#16452&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16525&quot;&gt;#16525&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/IPSocket.html#ipv6_only?:Bool-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IPSocket#ipv6_only&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16347&quot;&gt;#16347&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Int32.html#from_digits(digits:Enumerable(Int),base:Int=10):self-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int.from_digits&lt;/code&gt;&lt;/a&gt; as inverse of &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Int.html#digits(base=10):Array(Int32)-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int#digits&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16237&quot;&gt;#16237&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/BigInt.html#from_digits(digits:Enumerable(Int),base:Int=10):self-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BigInt.from_digits&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16259&quot;&gt;#16259&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Int.html#tdivmod(other:Int)-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int#tdivmod&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16258&quot;&gt;#16258&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Random.html#next_bool%3ABool-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Random.next_bool&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Random.html#next_int%3AInt32-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Random.next_int&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16297&quot;&gt;#16297&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Random.html#split%3Aself-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Random#split&lt;/code&gt;&lt;/a&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Random.split&lt;/code&gt; for splittable PRNGs (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16342&quot;&gt;#16342&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16495&quot;&gt;#16495&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Pointer.html#fill(count:Int,value:T):self-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pointer#fill&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16338&quot;&gt;#16338&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Process.html#debugger_present?:Bool-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Process.debugger_present?&lt;/code&gt;&lt;/a&gt; for Windows and Linux (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16248&quot;&gt;#16248&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Path.html#relative?:Bool-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Path#relative?&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16473&quot;&gt;#16473&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/YAML/Nodes.html#parse_all(string_or_io:String%7CIO):Array(Document)-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML::Nodes.parse_all&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16247&quot;&gt;#16247&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;a href=&quot;https://crystal-lang.org/api/1.19.0/toplevel.html#exit(status:Int32|Process::Status=0):NoReturn-class-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::exit(Process::Status)&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16436&quot;&gt;#16436&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Support large JSON files (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16211&quot;&gt;#16211&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Support deserialization of YAML anchors of value types (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16186&quot;&gt;#16186&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add end locations to scalars and aliases in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML::Nodes.parse&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16187&quot;&gt;#16187&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON::SerializableError#attribute&lt;/code&gt; when appropriate (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16158&quot;&gt;#16158&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remove_empty&lt;/code&gt; parameter to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String#each_line&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16232&quot;&gt;#16232&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weeks&lt;/code&gt; parameter to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time::Span.new&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16208&quot;&gt;#16208&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Support 0X, 0O, 0B prefixes in string to integer conversion (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16226&quot;&gt;#16226&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/andrykonchin&quot;&gt;@andrykonchin&lt;/a&gt;, &lt;a href=&quot;https://github.com/carlhoerberg&quot;&gt;@carlhoerberg&lt;/a&gt;, &lt;a href=&quot;https://github.com/HertzDevil&quot;&gt;@HertzDevil&lt;/a&gt;, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;, &lt;a href=&quot;https://github.com/RX14&quot;&gt;@RX14&lt;/a&gt;, &lt;a href=&quot;https://github.com/Sija&quot;&gt;@Sija&lt;/a&gt;, &lt;a href=&quot;https://github.com/spuun&quot;&gt;@spuun&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The memory management model for libxml2 changed in Crystal 1.17 to become manual
+instead of integrating the GC. The change introduced some memory leaks that have
+now been fixed.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Memory leak in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML.parse&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML.parse_html&lt;/code&gt; methods (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16414&quot;&gt;#16414&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Memory leak in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML::Document#finalize&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16418&quot;&gt;#16418&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Memory leak in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML::Node#content=&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16419&quot;&gt;#16419&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix use after unlink in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML::Node&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16432&quot;&gt;#16432&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/toddsundsted&quot;&gt;@toddsundsted&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;macros&quot;&gt;Macros&lt;/h3&gt;
+  &lt;a href=&quot;#macros&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Macros&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;New methods:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Crystal/Macros/StringLiteral.html#gsub%28regex%3ARegexLiteral%2C%26%3AStringLiteral%2CArrayLiteral%28StringLiteral%7CNilLiteral%29-%3E_%29%3AStringLiteral-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringLiteral#gsub(&amp;amp;)&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16376&quot;&gt;#16376&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Crystal/Macros/StringLiteral.html#split%28node%3ARegexLiteral%29%3AArrayLiteral%28StringLiteral%29-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringLiteral#split(RegexLiteral)&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16378&quot;&gt;#16378&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crystal-lang.org/api/1.19.0/Crystal/Macros/StringLiteral.html#match%28regex%3ARegexLiteral%29%3AHashLiteral%28NumberLiteral%7CStringLiteral%2CStringLiteral%7CNilLiteral%29-instance-method&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringLiteral#match&lt;/code&gt;&lt;/a&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16464&quot;&gt;#16464&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/Blacksmoke16&quot;&gt;@Blacksmoke16&lt;/a&gt;, &lt;a href=&quot;https://github.com/HertzDevil&quot;&gt;@HertzDevil&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All overloads of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ArrayLiteral#[]&lt;/code&gt; return &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nil&lt;/code&gt; on out of bounds (&lt;a href=&quot;https://github.com/crystal-lang/crystal/issues/16453&quot;&gt;#16453&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks, &lt;a href=&quot;https://github.com/HertzDevil&quot;&gt;@HertzDevil&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;compiler&quot;&gt;Compiler&lt;/h3&gt;
+  &lt;a href=&quot;#compiler&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Compiler&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The compiler is now always built with execution contexts, and the LLVM codegen
+is now always multithreaded for every target, including Windows. We can finally
+wave goodbye to fork, and Windows should see a performance boost.&lt;/p&gt;
+
+&lt;p&gt;Tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add optional sanitizer to docs generator (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/14646&quot;&gt;#14646&lt;/a&gt;, &lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16251&quot;&gt;#16251&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks [@nobodywasishere], &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;infra&quot;&gt;Infra&lt;/h3&gt;
+  &lt;a href=&quot;#infra&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Infra&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We finally build Linux ARM64 binaries of Crystal releases and nightlies.
+Tarballs are ready to download from &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.18.2&quot;&gt;GitHub releases&lt;/a&gt;, &lt;a href=&quot;https://hub.docker.com/r/crystallang/crystal&quot;&gt;docker images&lt;/a&gt;,
+&lt;a href=&quot;https://snapcraft.io/crystal&quot;&gt;snapcraft&lt;/a&gt; or the &lt;a href=&quot;https://github.com/crystal-lang/install-crystal&quot;&gt;install-crystal&lt;/a&gt; GitHub action.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Build linux aarch64 tarballs (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16330&quot;&gt;#16330&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Build snap arm64 target (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16491&quot;&gt;#16491&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Enable multiarch docker builds (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16493&quot;&gt;#16493&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Encourage +1 reactions on issues and PRs for prioritization (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16241&quot;&gt;#16241&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;, &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h3&gt;
+  &lt;a href=&quot;#dependencies&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Dependencies&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The OpenSSL bindings now require OpenSSL 1.1.1+ or LibreSSL 3+. We expect the
+change to not have any effect since these versions are no longer distributed by
+any supported operating system.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/ysbaddaden&quot;&gt;@ysbaddaden&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h3 id=&quot;deprecations&quot;&gt;Deprecations&lt;/h3&gt;
+  &lt;a href=&quot;#deprecations&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Deprecations&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deprecate single-letter macro fresh variables with indices (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16267&quot;&gt;#16267&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Deprecate macro fresh variables with constant names (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16293&quot;&gt;#16293&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Deprecate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringLiteral#split(ASTNode)&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16439&quot;&gt;#16439&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Deprecate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.monotonic&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16545&quot;&gt;#16545&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Deprecate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time#inspect(io, *, with_nanoseconds)&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16416&quot;&gt;#16416&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks &lt;a href=&quot;https://github.com/HertzDevil&quot;&gt;@HertzDevil&lt;/a&gt;, &lt;a href=&quot;https://github.com/straight-shoota&quot;&gt;@straight-shoota&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.18.2 is released!</title>
+      <author>
+        <name>Johannes Müller</name>
+        <uri>https://github.com/straight-shoota/</uri>
+      </author><link href="https://crystal-lang.org/2025/10/21/1.18.2-released/" rel="alternate" type="text/html" title="Crystal 1.18.2 is released!" />
+      <published>2025-10-21T00:00:00+00:00</published>
+      <updated>2025-10-21T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2025/10/21/1.18.2-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2025/10/21/1.18.2-released/">&lt;p&gt;We are announcing a new Crystal release 1.18.2 with two regressions fixed.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2025/10/14/1.18.0-released/&quot;&gt;the release notes of 1.18.0&lt;/a&gt; for all the changes introduced in Crystal 1.18.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.18.2&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.18.2&quot;&gt;3 changes since
+1.18.1&lt;/a&gt;
+by 3 contributors. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This patch release fixes a regression in the type restrictions of
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IO#read_bytes&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16231&quot;&gt;#16231&lt;/a&gt;), and a bug in
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fiber::ExecutionContext.default_workers_count&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16227&quot;&gt;#16227&lt;/a&gt;) - both errors were
+introduced in 1.18.0.&lt;/p&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.18.2&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+    <entry>
+      <title>Crystal 1.18.1 is released!</title>
+      <author>
+        <name>Matias Garcia Isaia</name>
+        <uri>https://github.com/mgarcia/</uri>
+      </author><link href="https://crystal-lang.org/2025/10/17/1.18.1-released/" rel="alternate" type="text/html" title="Crystal 1.18.1 is released!" />
+      <published>2025-10-17T00:00:00+00:00</published>
+      <updated>2025-10-17T00:00:00+00:00</updated>
+      <id>https://crystal-lang.org/2025/10/17/1.18.1-released</id>
+      <content type="html" xml:base="https://crystal-lang.org/2025/10/17/1.18.1-released/">&lt;p&gt;We are announcing a new Crystal release 1.18.1 with two regressions fixed.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/2025/10/14/1.18.0-released/&quot;&gt;the release notes of 1.18.0&lt;/a&gt; for all the changes introduced in Crystal 1.18.&lt;/p&gt;
+
+&lt;p&gt;Pre-built packages are available on &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.18.1&quot;&gt;GitHub
+Releases&lt;/a&gt; and our
+official distribution channels. See
+&lt;a href=&quot;https://crystal-lang.org/install/&quot;&gt;crystal-lang.org/install&lt;/a&gt; for installation
+instructions.&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;stats&quot;&gt;Stats&lt;/h2&gt;
+  &lt;a href=&quot;#stats&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Stats&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release includes &lt;a href=&quot;https://github.com/crystal-lang/crystal/pulls?q=is%3Apr+milestone%3A1.18.1&quot;&gt;2 changes since
+1.18.0&lt;/a&gt;
+by 1 contributor. We thank all the contributors for all the effort put into
+improving the language! ❤️&lt;/p&gt;
+
+&lt;div class=&quot;header-wrapper&quot;&gt;
+  &lt;h2 id=&quot;changes&quot;&gt;Changes&lt;/h2&gt;
+  &lt;a href=&quot;#changes&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&lt;svg height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot; fill=&quot;currentcolor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Section titled Changes&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This patch release fixes a regression in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enum&lt;/code&gt; def parsing (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16217&quot;&gt;#16217&lt;/a&gt;), and
+overly strict type restrictions in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP::WebSocket&lt;/code&gt; (&lt;a href=&quot;https://github.com/crystal-lang/crystal/pull/16218&quot;&gt;#16218&lt;/a&gt;) - both introduced
+in 1.18.0.&lt;/p&gt;
+
+&lt;p&gt;For more details, visit the &lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/1.18.1&quot;&gt;full
+changelog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;callout callout--thanks&quot;&gt;
+  &lt;div class=&quot;callout-title&quot;&gt;Thanks
+&lt;/div&gt;
+&lt;p&gt;We have been able to do all of this thanks to the continued support of
+ &lt;a href=&quot;https://www.84codes.com/&quot;&gt;84codes&lt;/a&gt; and every other &lt;a href=&quot;/sponsors/&quot;&gt;sponsor&lt;/a&gt;. To
+ maintain and increase the development pace, donations and sponsorships are
+ essential. &lt;a href=&quot;https://opencollective.com/crystal-lang&quot;&gt;OpenCollective&lt;/a&gt; is
+ available for that.&lt;/p&gt;
+
+&lt;p&gt;Reach out to &lt;a href=&quot;mailto:crystal@manas.tech&quot;&gt;crystal@manas.tech&lt;/a&gt; if you’d like to
+ become a direct sponsor or find other ways to support Crystal. We thank you in
+ advance!&lt;/p&gt;
+
+
+  &lt;a class=&quot;hex&quot; href=&quot;/sponsors#contribute&quot;&gt;Contribute&lt;/a&gt;
+&lt;/div&gt;</content>
+    </entry>
+</feed>

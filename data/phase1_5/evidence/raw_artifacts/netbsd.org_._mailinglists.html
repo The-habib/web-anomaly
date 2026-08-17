@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Website XSL Stylesheet V2.6.0">
+<link rel="home" href="../." title="Welcome to The NetBSD Project: Of course it runs NetBSD.">
+<link rel="up" href="../." title="Welcome to The NetBSD Project: Of course it runs NetBSD.">
+<link rel="previous" href="../gallery/." title="NetBSD Gallery">
+<link rel="next" href="../mirrors/." title="NetBSD mirrors">
+<link rel="first" href="../about/." title="About NetBSD">
+<link rel="last" href="../support/." title="NetBSD support">
+<link rel="stylesheet" href="../global.css" type="text/css">
+<link rel="stylesheet" href="../donations/thermo/fundraiser.css" type="text/css">
+
+
+<title>NetBSD mailing lists</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+</head>
+<body class="website"><div class="webpage" id="mailinglists-index">
+<div id="top"><a href="#mainContent" id="skiplink" tabindex="1">Skip to main content.</a></div>
+<input id="hamburger" type="checkbox"><label class="menuicon" for="hamburger"><span></span><span></span><span></span></label><div id="navBar" role="navigation">
+<div id="centralHeader"><div id="logo">
+<a href="../"><img id="projectLogo" alt="" height="120" src="../images/NetBSD-smaller-tb.png"></a><a href="/"><div id="fundraiser">
+<br><div id="fundraiser-amount"><div id="fundraiser-raised"></div></div>
+</div></a>
+</div></div>
+<span class="doNotDisplay">
+	  Navigation:
+	</span><ul>
+<li>
+<a href="../">
+	  Home</a><ul>
+<li><a href="../changes/">
+	    Recent changes</a></li>
+<li><a href="//blog.NetBSD.org/">
+	    NetBSD blog</a></li>
+<li><a href="../gallery/presentations/">
+	    Presentations</a></li>
+</ul>
+</li>
+<li>
+<a href="../about/">
+	  About</a><ul>
+<li><a href="../people/developers.html">
+	    Developers</a></li>
+<li><a href="../gallery/">
+	    Gallery</a></li>
+<li><a href="//wiki.NetBSD.org/ports/">
+	    Ports</a></li>
+<li><a href="//www.pkgsrc.org/">
+	    Packages</a></li>
+</ul>
+</li>
+<li>
+<a href="../docs/">
+	  Documentation</a><ul>
+<li><a href="../docs/misc/index.html">
+	    FAQ &amp; HOWTOs</a></li>
+<li><a href="../docs/guide/en/">
+	    The Guide</a></li>
+<li><a href="//man.NetBSD.org/">
+	    Manual pages</a></li>
+<li><a href="//wiki.NetBSD.org/">
+	    Wiki</a></li>
+</ul>
+</li>
+<li>
+<a href="../support/">
+	  Support</a><ul>
+<li><a href="/community/">
+	    Community</a></li>
+<li><a href="/mailinglists/">
+	    Mailing lists</a></li>
+<li><a href="../support/send-pr.html">
+	    Bug reports</a></li>
+<li><a href="../support/security/">
+	    Security</a></li>
+</ul>
+</li>
+<li>
+<a href="../developers/">
+	  Developers</a><ul>
+<li><a href="//cvsweb.NetBSD.org/">
+	    CVSWeb</a></li>
+<li><a href="//anonhg.NetBSD.org/">
+	    Mercurial</a></li>
+<li><a href="//nxr.NetBSD.org/">
+	    Cross-reference</a></li>
+<li><a href="//releng.NetBSD.org/">
+	    Release engineering</a></li>
+<li><a href="//wiki.NetBSD.org/projects/">
+	    Projects list</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="content"><div id="mainContent" class="fullWidth"><div class="rowOfBoxes">
+<h1>NetBSD mailing lists</h1>
+<div class="sect1" id="introduction">
+<div class="titlepage"><h2 class="titlepage">Introduction</h2></div>
+
+
+<p>
+The NetBSD Project provides a variety of public mailing lists to
+facilitate communication between the users and developers of NetBSD.
+All of the mailing lists are served by the
+<span class="application">Majordomo</span> mailing list management package,
+and you can find out more about how to use the NetBSD Project's
+<span class="application">Majordomo</span> by mailing
+<code class="email">&lt;<a class="email" href="mailto:majordomo@NetBSD.org">majordomo@NetBSD.org</a>&gt;</code> with an empty message body.
+</p>
+
+<p>
+Please note that to reduce spam and improve accessibility,
+NetBSD mailing lists only accept plain text email, which many email
+clients don't send by default.  The
+<a class="ulink" href="https://useplaintext.email/" target="_top">Use Plaintext Email</a>
+website has advice on configuring various email clients to use
+plain text.
+</p>
+
+<p>
+We ask that you avoid posting LLM/AI-generated material to the mailing
+lists.
+If you use LLMs or generative AI to help with translating from your
+native language, that's fine; just make sure to note that you did this
+in your message, to help provide context if there's misunderstanding.
+But please don't, for example, answer someone's questions by forwarding
+them to an AI and then copying and pasting the AI's answer—if
+someone wanted an answer from an AI instead of the human NetBSD
+community, they wouldn't have gone to the mailing list.
+If you're posting to our lists, what you're saying should come from
+you, not from a machine.
+</p>
+
+<p>
+To unsubscribe from a mailing list send an email message to
+<code class="email">&lt;<a class="email" href="mailto:majordomo@NetBSD.org">majordomo@NetBSD.org</a>&gt;</code> containing
+only the message <strong class="userinput"><code>unsubscribe <span class="emphasis"><em>listname</em></span></code></strong>.
+</p>
+
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>Any and all posts to our mailing lists are archived across the
+  internet <span class="emphasis"><em>virtually forever</em></span> and are impossible for us
+  to remove.
+  Please consider any content, including the email address used
+  to post to the list, as public information.  You may also wish to
+  consider this when engaging in personal conversations with other members
+  on the public mailing lists.</p>
+</div>
+</div>
+<div id="list-of-mailing-lists">
+<h2 class="title" id="">List descriptions</h2>
+<table>
+<colgroup span="3" valign="top"></colgroup>
+<tr valign="top">
+<th>General lists</th>
+<th>Port specific lists</th>
+<th>Obsolete lists (archive only)</th>
+</tr>
+<tr valign="top">
+<td><ul>
+<li><a href="
+	      #coverity-updates">coverity-updates</a></li>
+<li><a href="
+	      #current-users">current-users</a></li>
+<li><a href="
+	      #netbsd-advocacy">netbsd-advocacy</a></li>
+<li><a href="
+	      #netbsd-announce">netbsd-announce</a></li>
+<li><a href="
+	      #netbsd-bugs">netbsd-bugs</a></li>
+<li><a href="
+	      #netbsd-ci">netbsd-ci</a></li>
+<li><a href="
+	      #netbsd-docs">netbsd-docs</a></li>
+<li><a href="
+	      #netbsd-ports">netbsd-ports</a></li>
+<li><a href="
+	      #netbsd-syzbot">netbsd-syzbot</a></li>
+<li><a href="
+	      #netbsd-users">netbsd-users</a></li>
+<li><a href="
+	      #pkgsrc-bugs">pkgsrc-bugs</a></li>
+<li><a href="
+	      #pkgsrc-bulk">pkgsrc-bulk</a></li>
+<li><a href="
+	      #pkgsrc-changes">pkgsrc-changes</a></li>
+<li><a href="
+	      #pkgsrc-users">pkgsrc-users</a></li>
+<li><a href="
+	      #pkgsrc-wip-changes">pkgsrc-wip-changes</a></li>
+<li><a href="
+	      #regional-au">regional-au</a></li>
+<li><a href="
+	      #regional-boston">regional-boston</a></li>
+<li><a href="
+	      #regional-ca">regional-ca</a></li>
+<li><a href="
+	      #regional-cs">regional-cs</a></li>
+<li><a href="
+	      #regional-de">regional-de</a></li>
+<li><a href="
+	      #regional-fr">regional-fr</a></li>
+<li><a href="
+	      #regional-it">regional-it</a></li>
+<li><a href="
+	      #regional-jp">regional-jp</a></li>
+<li><a href="
+	      #regional-london">regional-london</a></li>
+<li><a href="
+	      #regional-nyc">regional-nyc</a></li>
+<li><a href="
+	      #regional-pl">regional-pl</a></li>
+<li><a href="
+	      #regional-sfba">regional-sfba</a></li>
+<li><a href="
+	      #security-announce">security-announce</a></li>
+<li><a href="
+	      #source-changes">source-changes</a></li>
+<li><a href="
+	      #source-changes-full">source-changes-full</a></li>
+<li><a href="
+	      #source-changes-d">source-changes-d</a></li>
+<li><a href="
+	      #tech-crypto">tech-crypto</a></li>
+<li><a href="
+	      #tech-embed">tech-embed</a></li>
+<li><a href="
+	      #tech-install">tech-install</a></li>
+<li><a href="
+	      #tech-kern">tech-kern</a></li>
+<li><a href="
+	      #tech-misc">tech-misc</a></li>
+<li><a href="
+	      #tech-net">tech-net</a></li>
+<li><a href="
+	      #tech-pkg">tech-pkg</a></li>
+<li><a href="
+	      #tech-ports">tech-ports</a></li>
+<li><a href="
+	      #tech-repository">tech-repository</a></li>
+<li><a href="
+	      #tech-security">tech-security</a></li>
+<li><a href="
+	      #tech-toolchain">tech-toolchain</a></li>
+<li><a href="
+	      #tech-userlevel">tech-userlevel</a></li>
+<li><a href="
+	      #tech-x11">tech-x11</a></li>
+<li><a href="
+	      #www-changes">www-changes</a></li>
+</ul></td>
+<td><ul>
+<li><a href="
+	      #port-acorn32">port-acorn32</a></li>
+<li><a href="
+	      #port-alpha">port-alpha</a></li>
+<li><a href="
+	      #port-amd64">port-amd64</a></li>
+<li><a href="
+	      #port-amiga">port-amiga</a></li>
+<li><a href="
+	      #port-arm">port-arm</a></li>
+<li><a href="
+	      #port-atari">port-atari</a></li>
+<li><a href="
+	      #port-bebox">port-bebox</a></li>
+<li><a href="
+	      #port-cats">port-cats</a></li>
+<li><a href="
+	      #port-dreamcast">port-dreamcast</a></li>
+<li><a href="
+	      #port-hp300">port-hp300</a></li>
+<li><a href="
+	      #port-hpcarm">port-hpcarm</a></li>
+<li><a href="
+	      #port-hpcsh">port-hpcsh</a></li>
+<li><a href="
+	      #port-hppa">port-hppa</a></li>
+<li><a href="
+	      #port-i386">port-i386</a></li>
+<li><a href="
+	      #port-ia64">port-ia64</a></li>
+<li><a href="
+	      #port-ibmnws">port-ibmnws</a></li>
+<li><a href="
+	      #port-iyonix">port-iyonix</a></li>
+<li><a href="
+	      #port-luna68k">port-luna68k</a></li>
+<li><a href="
+	      #port-m68k">port-m68k</a></li>
+<li><a href="
+	      #port-mac68k">port-mac68k</a></li>
+<li><a href="
+	      #port-macppc">port-macppc</a></li>
+<li><a href="
+	      #port-mips">port-mips</a></li>
+<li><a href="
+	      #port-mvme68k">port-mvme68k</a></li>
+<li><a href="
+	      #port-mvmeppc">port-mvmeppc</a></li>
+<li><a href="
+	      #port-news68k">port-news68k</a></li>
+<li><a href="
+	      #port-next68k">port-next68k</a></li>
+<li><a href="
+	      #port-ofppc">port-ofppc</a></li>
+<li><a href="
+	      #port-pc532">port-pc532</a></li>
+<li><a href="
+	      #port-pdp10">port-pdp10</a></li>
+<li><a href="
+	      #port-powerpc">port-powerpc</a></li>
+<li><a href="
+	      #port-prep">port-prep</a></li>
+<li><a href="
+	      #port-riscv">port-riscv</a></li>
+<li><a href="
+	      #port-s390">port-s390</a></li>
+<li><a href="
+	      #port-sandpoint">port-sandpoint</a></li>
+<li><a href="
+	      #port-sh3">port-sh3</a></li>
+<li><a href="
+	      #port-sparc">port-sparc</a></li>
+<li><a href="
+	      #port-sparc64">port-sparc64</a></li>
+<li><a href="
+	      #port-sun2">port-sun2</a></li>
+<li><a href="
+	      #port-sun3">port-sun3</a></li>
+<li><a href="
+	      #port-vax">port-vax</a></li>
+<li><a href="
+	      #port-x68k">port-x68k</a></li>
+<li><a href="
+	      #port-xen">port-xen</a></li>
+<li><a href="
+	      #port-zaurus">port-zaurus</a></li>
+</ul></td>
+<td><ul>
+<li><a href="
+	      #amiga">amiga</a></li>
+<li><a href="
+	      #amiga-dev">amiga-dev</a></li>
+<li><a href="
+	      #amiga-x">amiga-x</a></li>
+<li><a href="
+	      #m68k">m68k</a></li>
+<li><a href="
+	      #macbsd-development">macbsd-development</a></li>
+<li><a href="
+	      #macbsd-general">macbsd-general</a></li>
+<li><a href="
+	      #netbsd-desktop">netbsd-desktop</a></li>
+<li><a href="
+	      #netbsd-help">netbsd-help</a></li>
+<li><a href="
+	      #netbsd-java">netbsd-java</a></li>
+<li><a href="
+	      #netbsd-jobs">netbsd-jobs</a></li>
+<li><a href="
+	      #netbsd-news">netbsd-news</a></li>
+<li><a href="
+	      #port-hp700">port-hp700</a></li>
+<li><a href="
+	      #tech-multimedia">tech-multimedia</a></li>
+<li><a href="
+	      #atf-devel">atf-devel</a></li>
+<li><a href="
+	      #regional-ch">regional-ch</a></li>
+<li><a href="
+	      #regional-helsinki">regional-helsinki</a></li>
+<li><a href="
+	      #regional-nordic">regional-nordic</a></li>
+<li><a href="
+	      #tech-cluster">tech-cluster</a></li>
+<li><a href="
+	      #tech-smp">tech-smp</a></li>
+<li><a href="
+	      #tech-perform">tech-perform</a></li>
+<li><a href="
+	      #port-acorn26">port-acorn26</a></li>
+<li><a href="
+	      #port-algor">port-algor</a></li>
+<li><a href="
+	      #port-arc">port-arc</a></li>
+<li><a href="
+	      #port-cobalt">port-cobalt</a></li>
+<li><a href="
+	      #port-evbmips">port-evbmips</a></li>
+<li><a href="
+	      #port-ews4800mips">port-ews4800mips</a></li>
+<li><a href="
+	      #port-hpcmips">port-hpcmips</a></li>
+<li><a href="
+	      #port-mipsco">port-mipsco</a></li>
+<li><a href="
+	      #port-newsmips">port-newsmips</a></li>
+<li><a href="
+	      #port-sbmips">port-sbmips</a></li>
+<li><a href="
+	      #port-sgimips">port-sgimips</a></li>
+<li><a href="
+	      #port-pmax">port-pmax</a></li>
+<li><a href="
+	      #port-playstation2">port-playstation2</a></li>
+<li><a href="
+	      #port-avr32">port-avr32</a></li>
+</ul></td>
+</tr>
+</table>
+</div>
+<h2 class="title" id="">List descriptions</h2>
+
+<h3 class="title">General lists</h3>
+<table>
+<colgroup span="4" valign="top"></colgroup>
+<tr valign="top">
+<td>
+  <div id="coverity-updates"><strong>coverity-updates:</strong></div>
+  This mailing list gets fed with new issues found by Coverity.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=coverity-updates">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/coverity-updates/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="current-users"><strong>current-users:</strong></div>
+  This is a forum for all people using an up-to-date
+  version of the NetBSD-current source tree.  It is a
+  good forum for talking about `gotchas' in the tree.
+  Since the NetBSD-current tree is a quickly moving target,
+  please confirm any problems with the latest tree
+  before posting.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=current-users">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/current-users/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.current">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-advocacy"><strong>netbsd-advocacy:</strong></div>
+  This mailing list is for open discussion on how to promote the
+  project.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-advocacy">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-advocacy/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.advocacy">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-announce"><strong>netbsd-announce:</strong></div>
+  This mailing list is for announcements about NetBSD.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-announce">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-announce/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.announce">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-bugs"><strong>netbsd-bugs:</strong></div>
+  This mailing list is where you can discuss bugs in NetBSD.
+  All NetBSD bug reports sent with <a href="//man.NetBSD.org/NetBSD-11.0/send-pr.1">send-pr(1)</a> appear here.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-bugs">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-bugs/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.bugs">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-ci"><strong>netbsd-ci:</strong></div>
+  This mailing list is receives reports from the NetBSD
+  Continuous Integration (CI) infrastructure and discussion about it.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-ci">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-ci/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-docs"><strong>netbsd-docs:</strong></div>
+  This mailing list is for discussing NetBSD documentation.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-docs">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-docs/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.documentation">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-ports"><strong>netbsd-ports:</strong></div>
+  This list is for people working on or generally interested
+  in ports of NetBSD to various types of computers.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-ports">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-ports/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-syzbot"><strong>netbsd-syzbot:</strong></div>
+  This mailing list receives bug reports and status updates for
+  bugs found in the NetBSD kernel by Google's syzkaller / syzbot
+  kernel fuzzing tool.  This list is a local copy of mail sent to the
+  <code class="email">&lt;<a class="email" href="mailto:syzkaller-netbsd-bugs@googlegroups.com">syzkaller-netbsd-bugs@googlegroups.com</a>&gt;</code>
+  Google Group. Please do not send mail directly to this NetBSD.org
+  list, because anyone subscribed directly to the Google Group will not
+  receive it.
+  See <a class="ulink" href="https://github.com/google/syzkaller" target="_top">the syzkaller
+  documentation</a> and <a class="ulink" href="https://github.com/google/syzkaller/blob/master/docs/syzbot.md" target="_top">
+  the syzbot documentation</a> for more information about this tool
+  and service.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-syzbot">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-syzbot/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-users"><strong>netbsd-users:</strong></div>
+  This list provides a general help forum where users can discuss
+  using NetBSD, regardless of platform. As a large number of
+  subscribers receive this list, please use your good judgement
+  when posting. Technical discussion related to the development
+  and design of NetBSD itself aren't appropriate on this list and
+  are better voiced in a more narrowly-focused technical list.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=netbsd-users">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-users/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.general">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="pkgsrc-bugs"><strong>pkgsrc-bugs:</strong></div>
+  All bug reports in category <span class="quote">“<span class="quote">pkg</span>”</span> sent with <a href="//man.NetBSD.org/NetBSD-11.0/send-pr.1">send-pr(1)</a>
+  appear here.
+  Please do not report your bugs here.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=pkgsrc-bugs">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/pkgsrc-bugs/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.pkgsrc.bugs">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="pkgsrc-bulk"><strong>pkgsrc-bulk:</strong></div>
+  This mailing list receives reports and build logs of pkgsrc bulk
+  builds.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=pkgsrc-bulk">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/pkgsrc-bulk/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.pkgsrc.bulk">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="pkgsrc-changes"><strong>pkgsrc-changes:</strong></div>
+  This list is for those who are interested in getting a
+  commit message with the diff of the change attached for every change
+  committed to the <a class="ulink" href="../docs/software/packages.html" target="_top">NetBSD
+  Packages Collection</a> (pkgsrc).   It is also available in <a class="ulink" href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=pkgsrc-changes-digest" target="_top">digest
+form</a>,
+  meaning one daily message containing all commit messages for changes
+  to the package source tree in that 24 hour period.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=pkgsrc-changes">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/pkgsrc-changes/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.pkgsrc.cvs">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="pkgsrc-users"><strong>pkgsrc-users:</strong></div>
+  This is a general-purpose list for most issues regarding the <a class="ulink" href="../docs/software/packages.html" target="_top">NetBSD Packages
+  Collection</a> (pkgsrc), regardless of platform, e.g. soliciting
+  user help for pkgsrc configuration, unexpected build failures, using
+  particular packages, upgrading pkgsrc installations, questions regarding
+  the pkgsrc release branches, etc.  General announcements or proposals
+  for changes that impact the pkgsrc user community, e.g. major
+  infrastructure changes, new features, package removals, etc., may also
+  be posted.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=pkgsrc-users">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/pkgsrc-users/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.pkgsrc.user">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="pkgsrc-wip-changes"><strong>pkgsrc-wip-changes:</strong></div>
+  This list is for those who are interested in getting a
+  commit message and diffs for every change committed to the <a class="ulink" href="../docs/software/packages.html" target="_top">NetBSD
+  Packages Collection</a> <a class="ulink" href="http://www.pkgsrc.org/wip/" target="_top">WIP (work-in-progress)</a> packages.
+  This repository is open to all contributors, TNF member or not.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=pkgsrc-wip-changes">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/pkgsrc-wip-changes/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-au"><strong>regional-au:</strong></div>
+  Discussion relevant to users in Australia.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-au">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-au/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-boston"><strong>regional-boston:</strong></div>
+  Discussion relevant to users in Boston, USA.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-boston">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-boston/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-ca"><strong>regional-ca:</strong></div>
+  Discussion relevant to users in Canada.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-ca">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-ca/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-cs"><strong>regional-cs:</strong></div>
+  Discussion relevant to users in Czech Republic &amp; Slovak Republic.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-cs">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-cs/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-de"><strong>regional-de:</strong></div>
+  Discussion relevant to users in Germany and other German speaking countries.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-de">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-de/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.regional.de">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-fr"><strong>regional-fr:</strong></div>
+  Discussion relevant to users in France.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-fr">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-fr/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-it"><strong>regional-it:</strong></div>
+  Discussion relevant to users in Italy.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-it">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-it/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-jp"><strong>regional-jp:</strong></div>
+  Discussion relevant to users in Japan.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-jp">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-jp/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-london"><strong>regional-london:</strong></div>
+  Discussion relevant to users in London, UK.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-london">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-london/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-nyc"><strong>regional-nyc:</strong></div>
+  Discussion relevant to users in New York City, USA.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-nyc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-nyc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.regional.nyc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-pl"><strong>regional-pl:</strong></div>
+  Discussion relevant to users in Poland.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-pl">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-pl/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-sfba"><strong>regional-sfba:</strong></div>
+  Discussion relevant to users in the San Francisco Bay Area, USA.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=regional-sfba">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/regional-sfba/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="security-announce"><strong>security-announce:</strong></div>
+  Announcements from the NetBSD Security Officer group. e.g.
+  Security Advisories and Security Notes.
+  Information on reporting a security issue is available <a class="ulink" href="../support/security/#reporting" target="_top">at the Security and NetBSD
+  webpage</a>.
+  The <a class="ulink" href="#tech-security" target="_top">tech-security</a> mailing
+  list can be used for discussing security issues related to NetBSD.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=security-announce">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/security-announce/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="source-changes"><strong>source-changes:</strong></div>
+  This list is for those who are interested in getting a
+  commit message for every change committed to the NetBSD
+  source tree.  It is also available in <a class="ulink" href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=source-changes-digest" target="_top">digest form</a>,
+  meaning one daily message containing all commit messages for changes
+  to the source tree in that 24 hour period.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=source-changes">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/source-changes/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.cvs">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="source-changes-full"><strong>source-changes-full:</strong></div>
+  This list is for those who are interested in getting a
+  commit message with the diff of the change attached for every change
+  committed to the NetBSD source tree.  It is also available in <a class="ulink" href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=source-changes-full-digest" target="_top">digest form</a>,
+  meaning one daily message containing all commit messages for changes
+  to the source tree in that 24 hour period.
+  Note that this list is not archived on mail-index.NetBSD.org.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=source-changes-full">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/source-changes-full/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="source-changes-d"><strong>source-changes-d:</strong></div>
+  This list receives replies to commit messages on source-changes
+  and source-changes-full.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=source-changes-d">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/source-changes-d/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-crypto"><strong>tech-crypto:</strong></div>
+  Technical discussion regarding cryptography in the NetBSD system.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-crypto">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-crypto/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.crypto">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-embed"><strong>tech-embed:</strong></div>
+  Discussions about using NetBSD in embedded systems.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-embed">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-embed/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.embedded">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-install"><strong>tech-install:</strong></div>
+  Technical discussion of improvements to NetBSD's installation
+  software. <span class="emphasis"><em>NOTE</em></span>: This mailing list is
+  <span class="emphasis"><em>not</em></span> for assistance with installing NetBSD. If you
+  have problems installing NetBSD, see
+  <a class="ulink" href="#netbsd-users" target="_top">netbsd-users</a> instead!
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-install">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-install/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.installation">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-kern"><strong>tech-kern:</strong></div>
+  Discussion of general technical kernel issues.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-kern">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-kern/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.kernel">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-misc"><strong>tech-misc:</strong></div>
+  Discussion of technical issues that aren't really appropriate for any
+  of the other tech-* lists.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-misc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-misc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.general">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-net"><strong>tech-net:</strong></div>
+  Discussion of technical issues relating to NetBSD's networking subsystem.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-net">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-net/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.network">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-pkg"><strong>tech-pkg:</strong></div>
+  Discussion of technical issues related to development of the <a class="ulink" href="../docs/software/packages.html" target="_top">NetBSD Packages
+  Collection</a> (pkgsrc), e.g. soliciting feedback for changes to
+  pkgsrc infrastructure, proposed new features, questions related to
+  porting pkgsrc to a new platform, advice for maintaining a package,
+  patches that affect many packages, help requests moved from <a class="ulink" href="#pkgsrc-users" target="_top">pkgsrc-users@NetBSD.org</a> when an
+  infrastructure bug is found, etc.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-pkg">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-pkg/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.packages">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-ports"><strong>tech-ports:</strong></div>
+  Discussion of technical issues related to porting NetBSD to different
+  hardware.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-ports">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-ports/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.ports">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-repository"><strong>tech-repository:</strong></div>
+  Discussions about the NetBSD source code control system.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-repository">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-repository/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-security"><strong>tech-security:</strong></div>
+  Technical discussion regarding security issues in NetBSD.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-security">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-security/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.security">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-toolchain"><strong>tech-toolchain:</strong></div>
+  Technical discussion of toolchain and build system issues.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-toolchain">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-toolchain/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.toolchain">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-userlevel"><strong>tech-userlevel:</strong></div>
+  Discussion of non-kernel related technical issues, such as POSIX
+  compliance, compilation environment, etc.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-userlevel">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-userlevel/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.userlevel">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-x11"><strong>tech-x11:</strong></div>
+  Discussion of the X11 window system as used with NetBSD.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=tech-x11">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/tech-x11/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.x11">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="www-changes"><strong>www-changes:</strong></div>
+  This list is for those who are interested in getting a commit message
+  for every change committed to the NetBSD WWW server's documents.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=www-changes">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/www-changes/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.www.cvs">NNTP</a></td>
+</tr>
+</table>
+
+<h3 class="title">Port specific lists</h3>
+<table>
+<colgroup span="4" valign="top"></colgroup>
+<tr valign="top">
+<td>
+  <div id="port-acorn32"><strong>port-acorn32:</strong></div>
+  Discussion of issues specific to NetBSD on ARM6 and newer based
+  machines (<a class="ulink" href="../ports/acorn32/" target="_top">NetBSD/acorn32</a>).
+  There is also a <a class="ulink" href="#port-arm" target="_top">port-arm</a> list for
+  questions related to all ARM based ports.
+
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-acorn32">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-acorn32/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.acorn32">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-alpha"><strong>port-alpha:</strong></div>
+  Discussion of issues specific to NetBSD on Digital's Alpha AXP systems
+  (<a class="ulink" href="../ports/alpha/" target="_top">NetBSD/alpha</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-alpha">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-alpha/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.alpha">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-amd64"><strong>port-amd64:</strong></div>
+  Discussion of issues specific to NetBSD on AMD64 based machines
+  (<a class="ulink" href="../ports/amd64/" target="_top">NetBSD/amd64</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-amd64">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-amd64/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.x86-64">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-amiga"><strong>port-amiga:</strong></div>
+  Discussion of issues specific to NetBSD on Commodore's Amiga and
+  MacroSystem's DraCo machines (<a class="ulink" href="../ports/amiga/" target="_top">NetBSD/amiga</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>This list supersedes the <a class="ulink" href="#amiga" target="_top">amiga</a>,
+  <a class="ulink" href="#amiga-dev" target="_top">amiga-dev</a>,
+  and <a class="ulink" href="#amiga-x" target="_top">amiga-x</a> lists.</div>
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-amiga">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-amiga/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.amiga">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-arm"><strong>port-arm:</strong></div>
+  Discussion of issues relevant to all ARM-based NetBSD ports.
+  There are lists for the individual ports and they should be used for
+  port-specific questions and information:
+  <a class="ulink" href="#port-acorn32" target="_top">port-acorn32</a>,
+  <a class="ulink" href="#port-cats" target="_top">port-cats</a>, and
+  <a class="ulink" href="#port-hpcarm" target="_top">port-hpcarm</a>.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-arm">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-arm/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.arm">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-atari"><strong>port-atari:</strong></div>
+  Discussion of issues specific to NetBSD on Atari's TT030, Falcon, and
+  Hades machines (<a class="ulink" href="../ports/atari/" target="_top">NetBSD/atari</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-atari">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-atari/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.atari">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-bebox"><strong>port-bebox:</strong></div>
+  Discussion of issues specific to NetBSD on Be, Inc.'s PowerPC based
+  BeBox computer (<a class="ulink" href="../ports/bebox/" target="_top">NetBSD/bebox</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-bebox">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-bebox/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.bebox">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-cats"><strong>port-cats:</strong></div>
+  Discussion of issues specific to NetBSD on ARM based Chalice
+  Technology CATS machines and EBSA evaluation boards (<a class="ulink" href="../ports/cats/" target="_top">NetBSD/cats</a>).
+  There is also a <a class="ulink" href="#port-arm" target="_top">port-arm</a> list for
+  questions related to all ARM based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-cats">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-cats/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.cats">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-dreamcast"><strong>port-dreamcast:</strong></div>
+  Discussion of issues specific to NetBSD on Sega Dreamcast
+  (<a class="ulink" href="../ports/dreamcast/" target="_top">NetBSD/dreamcast</a>).
+  There is also a <a class="ulink" href="#port-sh3" target="_top">port-sh3</a> list for
+  questions related to all Hitachi Super-H (SH3/4) chips-based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-dreamcast">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-dreamcast/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.dreamcast">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-hp300"><strong>port-hp300:</strong></div>
+  Discussion of issues specific to NetBSD on Hewlett-Packard's 9000/300
+  and 9000/400 series machines (<a class="ulink" href="../ports/hp300/" target="_top">NetBSD/hp300</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-hp300">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-hp300/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.hp300">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-hpcarm"><strong>port-hpcarm:</strong></div>
+  Discussion of issues specific to NetBSD on ARM based Windows CE PDA
+  machines (<a class="ulink" href="../ports/hpcarm/" target="_top">NetBSD/hpcarm</a>).
+  There is also a <a class="ulink" href="#port-arm" target="_top">port-arm</a> list for
+  questions related to all ARM based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-hpcarm">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-hpcarm/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.hpcarm">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-hpcsh"><strong>port-hpcsh:</strong></div>
+  Discussion of issues specific to NetBSD on Hitachi Super-H (SH3/4)
+  family based Windows CE PDA machines (<a class="ulink" href="../ports/hpcsh/" target="_top">NetBSD/hpcsh</a>).
+  There is also a <a class="ulink" href="#port-sh3" target="_top">port-sh3</a> list for
+  questions related to all Hitachi Super-H (SH3/4) based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-hpcsh">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-hpcsh/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.hpcsh">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-hppa"><strong>port-hppa:</strong></div>
+  Discussion of issues specific to NetBSD on Hewlett-Packard's 9000/700
+  HP-PA RISC machines (<a class="ulink" href="../ports/hppa/" target="_top">NetBSD/hppa</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-hppa">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-hppa/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-i386"><strong>port-i386:</strong></div>
+  Discussion of issues specific to NetBSD on IBM PC clones with i386 or
+  better CPUs (<a class="ulink" href="../ports/i386/" target="_top">NetBSD/i386</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-i386">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-i386/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.i386">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-ia64"><strong>port-ia64:</strong></div>
+  Discussion of issues specific to NetBSD on Intel Itanium Processor
+  Family CPUs (<a class="ulink" href="../ports/ia64/" target="_top">NetBSD/ia64</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-ia64">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-ia64/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.ia64">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-ibmnws"><strong>port-ibmnws:</strong></div>
+  Discussion of issues specific to NetBSD on IBM Network Station Series 1000
+  PowerPC-based computers (<a class="ulink" href="../ports/ibmnws/" target="_top">NetBSD/ibmnws</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-ibmnws">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-ibmnws/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-iyonix"><strong>port-iyonix:</strong></div>
+  Discussion of issues specific to NetBSD on the ARM based Iyonix PC
+  (<a class="ulink" href="../ports/iyonix/" target="_top">NetBSD/iyonix</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-iyonix">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-iyonix/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-luna68k"><strong>port-luna68k:</strong></div>
+  Discussion of issues specific to NetBSD on 68k based OMRON LUNA
+  machines (<a class="ulink" href="../ports/luna68k/" target="_top">NetBSD/luna68k</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-luna68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-luna68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.luna68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-m68k"><strong>port-m68k:</strong></div>
+  Discussion of issues relevant to all m68k-based NetBSD ports.
+  There are lists for the individual ports and they should be used for
+  port-specific questions and information:
+  <a class="ulink" href="#port-amiga" target="_top">port-amiga</a>,
+  <a class="ulink" href="#port-atari" target="_top">port-atari</a>,
+  <a class="ulink" href="#port-hp300" target="_top">port-hp300</a>,
+  <a class="ulink" href="#port-luna68k" target="_top">port-luna68k</a>,
+  <a class="ulink" href="#port-mac68k" target="_top">port-mac68k</a>,
+  <a class="ulink" href="#port-mvme68k" target="_top">port-mvme68k</a>,
+  <a class="ulink" href="#port-news68k" target="_top">port-news68k</a>,
+  <a class="ulink" href="#port-next68k" target="_top">port-next68k</a>,
+  <a class="ulink" href="#port-sun2" target="_top">port-sun2</a>,
+  <a class="ulink" href="#port-sun3" target="_top">port-sun3</a>, and
+  <a class="ulink" href="#port-x68k" target="_top">port-x68k</a>.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-m68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-m68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.m68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-mac68k"><strong>port-mac68k:</strong></div>
+  Discussion of issues specific to NetBSD on Apple's m68k based
+  Macintosh machines (<a class="ulink" href="../ports/mac68k/" target="_top">NetBSD/mac68k</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>This list supersedes both the <a class="ulink" href="#macbsd-general" target="_top">macbsd-general</a> and <a class="ulink" href="#macbsd-development" target="_top">macbsd-development</a> lists.</div>
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-mac68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-mac68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.mac68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-macppc"><strong>port-macppc:</strong></div>
+  Discussion of issues specific to NetBSD on Apple's PowerPC based
+  Macintosh machines (<a class="ulink" href="../ports/macppc/" target="_top">NetBSD/macppc</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-macppc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-macppc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.macppc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-mips"><strong>port-mips:</strong></div>
+  Discussion of issues relevant to all MIPS-based NetBSD ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-mips">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-mips/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.mips.devel">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-mvme68k"><strong>port-mvme68k:</strong></div>
+  Discussion of issues specific to NetBSD on Motorola's 68k VME board
+  computers (<a class="ulink" href="../ports/mvme68k/" target="_top">NetBSD/mvme68k</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-mvme68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-mvme68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.mvme68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-mvmeppc"><strong>port-mvmeppc:</strong></div>
+  Discussion of issues specific to NetBSD on Motorola's PowerPC VME
+  board computers (<a class="ulink" href="../ports/mvmeppc/" target="_top">NetBSD/mvmeppc</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-mvmeppc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-mvmeppc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.mvmeppc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-news68k"><strong>port-news68k:</strong></div>
+  Discussion of issues specific to NetBSD on 68k based Sony NEWS systems
+  (<a class="ulink" href="../ports/news68k/" target="_top">NetBSD/news68k</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-news68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-news68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.news68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-next68k"><strong>port-next68k:</strong></div>
+  Discussion of issues specific to NetBSD on 68k based NeXT
+  <span class="quote">“<span class="quote">black hardware</span>”</span>
+  (<a class="ulink" href="../ports/next68k/" target="_top">NetBSD/next68k</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-next68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-next68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.next68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-ofppc"><strong>port-ofppc:</strong></div>
+  Discussion of issues specific to NetBSD on OpenFirmware PowerPC
+  systems (<a class="ulink" href="../ports/ofppc/" target="_top">NetBSD/ofppc</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-ofppc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-ofppc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.ofppc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-pc532"><strong>port-pc532:</strong></div>
+  Discussion of issues specific to NetBSD on the rather rare PC532
+  computer (<a class="ulink" href="../ports/pc532/" target="_top">NetBSD/pc532</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-pc532">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-pc532/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.pc532">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-pdp10"><strong>port-pdp10:</strong></div>
+  Discussion of issues specific to NetBSD on DEC PDP-10 computer
+  (<a class="ulink" href="../ports/pdp10/" target="_top">NetBSD/pdp10</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-pdp10">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-pdp10/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-powerpc"><strong>port-powerpc:</strong></div>
+  Discussion of issues relevant to all PowerPC based NetBSD ports.
+  There are lists for the individual ports and they should be used for
+  port-specific questions and information:
+  <a class="ulink" href="#port-bebox" target="_top">port-bebox</a>,
+  <a class="ulink" href="#port-macppc" target="_top">port-macppc</a>,
+  <a class="ulink" href="#port-mvmeppc" target="_top">port-mvmeppc</a>,
+  <a class="ulink" href="#port-ofppc" target="_top">port-ofppc</a>,
+  <a class="ulink" href="#port-prep" target="_top">port-prep</a>, and
+  <a class="ulink" href="#port-sandpoint" target="_top">port-sandpoint</a>.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-powerpc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-powerpc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.powerpc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-prep"><strong>port-prep:</strong></div>
+  Discussion of issues specific to NetBSD on PReP -- PowerPC Reference
+  Platform (<a class="ulink" href="../ports/prep/" target="_top">NetBSD/prep</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-prep">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-prep/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.prep">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-riscv"><strong>port-riscv:</strong></div>
+  Discussion of issues specific to NetBSD on RISC-V
+  (<a class="ulink" href="../ports/riscv/" target="_top">NetBSD/riscv</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-riscv">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-riscv/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-s390"><strong>port-s390:</strong></div>
+  Discussion of issues specific to NetBSD on IBM S/390 platforms
+  (<a class="ulink" href="../ports/s390/" target="_top">NetBSD/s390</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-s390">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-s390/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.s390">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sandpoint"><strong>port-sandpoint:</strong></div>
+  Discussion of issues specific to NetBSD on Motorola Sandpoint
+  reference
+  platform using the MPC8240 processor module (<a class="ulink" href="../ports/sandpoint/" target="_top">NetBSD/sandpoint</a>).
+  There is also a <a class="ulink" href="#port-powerpc" target="_top">port-powerpc</a> list for
+  questions related to all PowerPC based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-sandpoint">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-sandpoint/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sandpoint">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sh3"><strong>port-sh3:</strong></div>
+  Discussion of issues relevant to all Hitachi Super-H (SH3/4)
+  chips-based NetBSD ports.
+  There are lists for the individual ports and they should be used for
+  port-specific questions and information:
+  <a class="ulink" href="#port-dreamcast" target="_top">port-dreamcast</a>, and
+  <a class="ulink" href="#port-hpcsh" target="_top">port-hpcsh</a>.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-sh3">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-sh3/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sh3">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sparc"><strong>port-sparc:</strong></div>
+  Discussion of issues specific to NetBSD on Sun's 32-bit Sparc based
+  machines (<a class="ulink" href="../ports/sparc/" target="_top">NetBSD/sparc</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-sparc">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-sparc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sparc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sparc64"><strong>port-sparc64:</strong></div>
+  Discussion of issues specific to NetBSD on Sun's 64-bit Ultrasparc
+  based machines (<a class="ulink" href="../ports/sparc64/" target="_top">NetBSD/sparc64</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-sparc64">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-sparc64/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sparc64">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sun2"><strong>port-sun2:</strong></div>
+  Discussion of issues specific to NetBSD on Sun's Motorola 68010 based
+  machines (<a class="ulink" href="../ports/sun2/" target="_top">NetBSD/sun2</a>). Newer Sun
+  machines are covered on
+  <a class="ulink" href="#port-sun3" target="_top">port-sun3</a>,
+  <a class="ulink" href="#port-sparc" target="_top">port-sparc</a> and
+  <a class="ulink" href="#port-sparc64" target="_top">port-sparc64</a>.
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-sun2">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-sun2/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sun2">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sun3"><strong>port-sun3:</strong></div>
+  Discussion of issues specific to NetBSD on Sun's Motorola 68020 (sun3)
+  and 68030 (sun3x) based machines (<a class="ulink" href="../ports/sun3/" target="_top">NetBSD/sun3</a>). Newer Sparc based Sun
+  machines are covered on
+  <a class="ulink" href="#port-sparc" target="_top">port-sparc</a> and
+  <a class="ulink" href="#port-sparc64" target="_top">port-sparc64</a>.
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-sun3">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-sun3/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sun3">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-vax"><strong>port-vax:</strong></div>
+  Discussion of issues specific to NetBSD on Digital's VAX series of
+  machines (<a class="ulink" href="../ports/vax/" target="_top">NetBSD/vax</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-vax">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-vax/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.vax">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-x68k"><strong>port-x68k:</strong></div>
+  Discussion of issues specific to NetBSD on Sharp's Japanese
+  X68000/X68030 machines (<a class="ulink" href="../ports/x68k/" target="_top">NetBSD/x68k</a>).
+  There is also a <a class="ulink" href="#port-m68k" target="_top">port-m68k</a> list for
+  questions related to all Motorola 68k based ports.
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-x68k">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-x68k/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.x68k">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-xen"><strong>port-xen:</strong></div>
+  Discussion of issues specific to NetBSD on the
+  <a class="ulink" href="https://xenproject.org/" target="_top">Xen Virtual Machine Monitor</a>
+  (<a class="ulink" href="../ports/xen/" target="_top">NetBSD/xen</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-xen">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-xen/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.xen">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-zaurus"><strong>port-zaurus:</strong></div>
+  Discussion of issues specific to NetBSD on the Zaurus PDA.
+  (<a class="ulink" href="../ports/zaurus/" target="_top">NetBSD/zaurus</a>).
+  </td>
+<td><a href="//www.NetBSD.org/cgi-bin/subscribe_list.pl?list=port-zaurus">Subscribe</a></td>
+<td><a href="//mail-index.NetBSD.org/port-zaurus/">Browse</a></td>
+<td></td>
+</tr>
+</table>
+
+<h3 class="title">Obsolete lists (archive only)</h3>
+<table>
+<colgroup span="4" valign="top"></colgroup>
+<tr valign="top">
+<td>
+  <div id="amiga"><strong>amiga:</strong></div>
+  This list was for discussing NetBSD/amiga issues.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>It has been obsoleted by <a class="ulink" href="#port-amiga" target="_top">port-amiga</a>.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/amiga/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="amiga-dev"><strong>amiga-dev:</strong></div>
+  This list was for issues related to the further development of
+  NetBSD/amiga.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>It has been obsoleted by <a class="ulink" href="#port-amiga" target="_top">port-amiga</a>.</div>
+
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/amiga-dev/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="amiga-x"><strong>amiga-x:</strong></div>
+  This list was for those running X under NetBSD/amiga.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>It has been obsoleted by <a class="ulink" href="#port-amiga" target="_top">port-amiga</a>.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/amiga-x/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="m68k"><strong>m68k:</strong></div>
+  This list was for those interested in issues relevant to all
+  m68k-family CPU based ports.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>It has been obsoleted by <a class="ulink" href="#port-m68k" target="_top">port-m68k</a>.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/m68k/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="macbsd-development"><strong>macbsd-development:</strong></div>
+  This list was for issues related to the further development of
+  MacBSD.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>It has been obsoleted by <a class="ulink" href="#port-mac68k" target="_top">port-mac68k</a>.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/macbsd-development/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="macbsd-general"><strong>macbsd-general:</strong></div>
+  This list was for discussing MacBSD (NetBSD/mac68k) issues.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>It has been obsoleted by <a class="ulink" href="#port-mac68k" target="_top">port-mac68k</a>.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/macbsd-general/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-desktop"><strong>netbsd-desktop:</strong></div>
+  This mailing list was for discussing the NetBSD desktop effort.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#netbsd-users" target="_top">netbsd-users</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-desktop/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-help"><strong>netbsd-help:</strong></div>
+  This list was a general help forum where users can ask questions.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#netbsd-users" target="_top">netbsd-users</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-help/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.help">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-java"><strong>netbsd-java:</strong></div>
+  This was a forum for discussing issues related to Java on NetBSD.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#netbsd-users" target="_top">netbsd-users</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-java/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-jobs"><strong>netbsd-jobs:</strong></div>
+  This mailing list was for job advertisements relevant to NetBSD users
+  and developers.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Job listings have pretty solidly moved to the web these days.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-jobs/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="netbsd-news"><strong>netbsd-news:</strong></div>
+  This mailing list was for news about NetBSD, including from
+  third parties.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Moved to blog(s), mostly.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/netbsd-news/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.news">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-hp700"><strong>port-hp700:</strong></div>
+  This mailing list was superseded by port-hppa after the port was renamed.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-hp700/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.hp700">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-multimedia"><strong>tech-multimedia:</strong></div>
+  This mailing list was for discussion of technical issues of things
+  multimedial.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#netbsd-users" target="_top">netbsd-users</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/tech-multimedia/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="atf-devel"><strong>atf-devel:</strong></div>
+  This mailing list has been superceded by atf-discuss AT googlegroups.com.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/atf-devel/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-ch"><strong>regional-ch:</strong></div>
+  This mailing list was for discussion relevant to users in Switzerland.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/regional-ch/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-helsinki"><strong>regional-helsinki:</strong></div>
+  This mailing list was for discussion relevant to users in Helsinki.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/regional-helsinki/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="regional-nordic"><strong>regional-nordic:</strong></div>
+  This mailing list was for discussion relevant to users in the
+  Scandinavian countries.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/regional-nordic/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.regional.nordic">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-cluster"><strong>tech-cluster:</strong></div>
+  This mailing list was for technical discussions on building and using
+  clusters of NetBSD hosts.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#tech-kern" target="_top">tech-kern</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/tech-cluster/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.cluster">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-smp"><strong>tech-smp:</strong></div>
+  This mailing list was for discussion of technical issues relating to
+  multi-processor support for NetBSD.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#tech-kern" target="_top">tech-kern</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/tech-smp/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.smp">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="tech-perform"><strong>tech-perform:</strong></div>
+  This mailing list was for discussion of performance issues in NetBSD,
+  especially ways to improve performance.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#tech-kern" target="_top">tech-kern</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/tech-perform/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.devel.performance">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-acorn26"><strong>port-acorn26:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on ARMv2
+  and ARMv2a machines.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-acorn26/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.arm26">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-algor"><strong>port-algor:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  Algorithmics, Ltd. MIPS-based evaluation boards (<a class="ulink" href="../ports/algor/" target="_top">NetBSD/algor</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-algor/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.algor">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-arc"><strong>port-arc:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  MIPS based PCs with ARC firmware
+  (<a class="ulink" href="../ports/arc/" target="_top">NetBSD/arc</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-arc/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.arc">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-cobalt"><strong>port-cobalt:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  Cobalt Networks MIPS based Qube and RaQ computers
+  (<a class="ulink" href="../ports/cobalt/" target="_top">NetBSD/cobalt</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-cobalt/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.cobalt">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-evbmips"><strong>port-evbmips:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  evaluation boards with MIPS-based CPUs.
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-evbmips/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.evbmips">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-ews4800mips"><strong>port-ews4800mips:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  NEC's MIPS based EWS4800 workstations
+  (<a class="ulink" href="../ports/ews4800mips/" target="_top">NetBSD/ews4800mips</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-ews4800mips/">Browse</a></td>
+<td></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-hpcmips"><strong>port-hpcmips:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  MIPS based Windows CE PDA machines
+  (<a class="ulink" href="../ports/hpcmips/" target="_top">NetBSD/hpcmips</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-hpcmips/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.hpcmips">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-mipsco"><strong>port-mipsco:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  products of MIPS Computer Systems, Inc.
+  (<a class="ulink" href="../ports/mipsco/" target="_top">NetBSD/mipsco</a>)
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-mipsco/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.mipsco">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-newsmips"><strong>port-newsmips:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  MIPS based Sony NEWS systems
+  (<a class="ulink" href="../ports/newsmips/" target="_top">NetBSD/newsmips</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-newsmips/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.newsmips">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sbmips"><strong>port-sbmips:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  Broadcom's SiByte Broadband Processor-based platforms (<a class="ulink" href="../ports/sbmips/" target="_top">NetBSD/sbmips</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-sbmips/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sbmips">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-sgimips"><strong>port-sgimips:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  SGI MIPS platforms (<a class="ulink" href="../ports/sgimips/" target="_top">NetBSD/sgimips</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-sgimips/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.sgimips">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-pmax"><strong>port-pmax:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  Digital's MIPS based DECstation and DECsystem machines (<a class="ulink" href="../ports/pmax/" target="_top">NetBSD/pmax</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-pmax/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.pmax">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-playstation2"><strong>port-playstation2:</strong></div>
+  This mailing list was for discussion of issues specific to NetBSD on
+  Sony's Playstation 2 machines
+  (<a class="ulink" href="../ports/playstation2/" target="_top">NetBSD/playstation2</a>).
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>Use the <a class="ulink" href="#port-mips" target="_top">port-mips</a> list
+  instead.</div>
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-playstation2/">Browse</a></td>
+<td><a href="nntp://news.gmane.io/gmane.os.netbsd.ports.playstation2">NNTP</a></td>
+</tr>
+<tr valign="top">
+<td>
+  <div id="port-avr32"><strong>port-avr32:</strong></div>
+  This mailing list was for discussion of the NetBSD port to avr32 based
+  NGW100. This port was never developed.
+  </td>
+<td></td>
+<td><a href="//mail-index.NetBSD.org/port-avr32/">Browse</a></td>
+<td></td>
+</tr>
+</table>
+
+</div></div></div>
+<div class="navfoot"></div>
+<div id="footer"><div id="footerContent">
+<span class="footfeed"><a href="//www.NetBSD.org/cgi-bin/feedback.cgi">
+	  Contact</a> |
+      </span><span class="footcopy"><a href="../about/disclaimer.html">
+      Disclaimer</a> |
+
+      <span class="copyright">Copyright © 1994-2026 The NetBSD Foundation, Inc. </span>ALL RIGHTS RESERVED.<br>NetBSD<sup>®</sup> is a registered trademark of The NetBSD
+	Foundation, Inc.</span>
+</div></div>
+</div></body>
+</html>

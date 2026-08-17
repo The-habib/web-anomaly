@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Download Apache Subversion Sources</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="stylesheet" href="/style/site.css" type="text/css" media="all">
+<meta name="theme-color" content="#98b0d4">
+</head>
+
+<body>
+<div id="site-banner">
+<div style="font-style: italic;" 
+     id="site-banner-apachelogo">
+  <a href="https://www.apache.org/"
+  ><img src="https://apache.org/foundation/press/kit/asf_logo_wide.svg"
+        height="80"
+        alt="Apache Software Foundation" /></a>
+</div>
+<a href="/">
+  <img src="/images/svn-name-banner.svg"
+       width="379" height="80"
+       alt=" Subversion"
+       id="site-banner-svnlogo" /></a>
+</div> <!-- #site-banner -->
+
+<div id="site-nav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+  <nav id="site-nav-menu">
+  <p>About Subversion
+    <ul>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/docs/">Documentation</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/roadmap.html">Roadmap</a></li>
+      <li><a href="/security/">Security</a></li>
+      <li><a href="/quick-start.html">Quick Start</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </p>
+  <p>Getting Subversion
+      <ul>
+      <li><a href="/packages.html">Binary Packages</a></li>
+      <li><a href="/download.cgi">Source Download</a></li>
+      <li><a href="/docs/release-notes/">Release Notes</a></li>
+    </ul>
+  </p>
+  <p>Community
+    <ul>
+      <li><a href="/mailing-lists.html">Mailing Lists</a></li>
+      <li><a href="/reporting-issues.html">Reporting Issues</a></li>
+      <li><a href="https://cwiki.apache.org/confluence/display/SVN/">Wiki</a></li>
+      <li><a href="/contributing.html">Getting Involved</a></li>
+      <li><a href="/source-code.html">Source Code</a></li>
+      <li><a class="linkaway"
+             href="https://apache.org/foundation/policies/conduct.html">Code of Conduct</a></li>
+    </ul>
+  </p>
+  <p>About the <acronym title="Apache Software Foundation">ASF</acronym>
+    <ul>
+      <li><a class="linkaway"
+             href="https://www.apache.org/licenses/">License</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+    </ul>
+  </p>
+
+<p id="site-search">
+  <form action="https://www.google.com/search" method="get"
+        style="margin-top: 10px; margin-bottom: 10px; display: inline;">
+  <div style="display: inline;">
+    <input value="subversion.apache.org" name="sitesearch" type="hidden" />
+    <input name="q" id="query" type="text" placeholder="Search..."
+           style="width: 10em"
+           />
+    <input name="Search" value="Go" type="submit"/>
+  </div>
+  </form>
+</p> <!-- #site-search -->
+
+<p id="site-apachecon-block">
+  <p><a href="https://www.apache.org/events/current-event.html"
+    ><img src="https://www.apache.org/events/current-event-125x125.png"
+          alt="ApacheCon"
+  /></a></p>
+</p> <!-- #site-apachecon-block -->
+
+<p id="site-svnbook-block">
+<p>Read the official Subversion
+   documentation <a href="https://svnbook.red-bean.com/" class="linkaway nopadding">online</a>!</p>
+<p><a href="https://svnbook.red-bean.com/"
+      ><img src="/images/svnbook-cover.jpg"
+            alt="Version Control With Subversion"/></a></p>
+</p> <!-- #site-svnbook-block -->
+
+<p id="copyright">
+<p>Copyright &#169; 2026 <a href="https://www.apache.org/" class="nopadding">The Apache
+   Software Foundation</a>, Licensed under
+   the <a href="https://www.apache.org/licenses/LICENSE-2.0" class="nopadding">Apache
+   License, Version 2.0</a>.  Apache, Apache Subversion, and
+   the Apache logo are trademarks of The Apache Software
+   Foundation.  Subversion and the Apache Subversion logo are
+   registered trademarks of The Apache Software Foundation.</p>
+<p><a href="https://privacy.apache.org/policies/privacy-policy-public.html"
+   class="nopadding">Privacy policy</a></p>
+</p> <!-- #copyright -->
+</nav>
+</div> <!-- #site-nav -->
+
+<div id="site-content">
+<div id="site-notice">
+
+<!-- PUT SITE-WIDE NOTICES HERE AS NECESSARY -->
+
+</div> <!-- #site-notice -->
+
+
+<h1>Download Source Code</h1>
+
+
+
+<div class="bigpoint">
+<p>The latest and recommended LTS (long-term support) release of Apache Subversion
+   is:&nbsp;<a href="#recommended-release">1.14</a></p>
+</div> <!-- .bigpoint -->
+
+<!-- When more releases are in support, enable this section again
+<div class="bigpoint">
+<p>The older still supported release of Apache Subversion
+   is:&nbsp;<a href="#supported-releases">1.10</a></p>
+</div>--> <!-- .bigpoint -->
+
+<p>Use the links below to download Apache Subversion from one of our mirrors.
+   You <strong>must</strong> <a href="#verifying">verify the integrity</a> of
+   the downloaded files using signatures downloaded from our main
+   directory.</p>
+   
+<p>The following are the currently supported versions of Subversion.  Older
+   releases are available from the
+   <a href="https://archive.apache.org/dist/subversion/">archive download
+   site</a>.</p>
+
+<p>The Apache Subversion project only distributes source code, but a number
+   of third parties provide binary packages for a number of platforms.  To
+   find a package for your platform, please visit the <a href="/packages.html">
+   binary packages</a> page.</p>
+
+<div class="h2" id="mirror">
+<h2>Mirror
+  <a class="sectionlink" href="#mirror"
+    title="Link to this section"></a>
+</h2>
+
+<p>The currently selected mirror is <a href="https://dlcdn.apache.org/subversion/"><b>https://dlcdn.apache.org/</b></a>.
+   If you encounter a problem with this mirror, please select another mirror.
+   If all mirrors are failing, there are <i>backup</i> mirrors (at the end of
+   the mirrors list) that should be available.</p>
+
+<form action="/download.cgi" method="get" id="SelectMirror">
+Other mirrors:
+<select name="Preferred" onchange="submit()">
+  <option value="https://dlcdn.apache.org/" selected="selected">https://dlcdn.apache.org/</option><option value="https://dlcdn.apache.org/" selected="selected">https://dlcdn.apache.org/ (backup)</option>
+</select>
+<input type="submit" value="Change" />
+</form>
+
+</div>  <!-- #mirror -->
+
+<div class="h2" id="source-releases">
+<h2>Source Releases
+  <a class="sectionlink" href="#source-releases"
+    title="Link to this section"></a>
+</h2>
+
+<p>We provide source code distributions in a variety of archive types.
+   Generally, speaking, Windows users should download <tt>.zip</tt>
+   files.  Users of all other operating systems should
+   download <tt>.tar.gz</tt> or <tt>.tar.bz2</tt> files.</p>
+
+<div class="h3" id="recommended-release">
+<h3>Recommended Release
+  <a class="sectionlink" href="#recommended-release"
+    title="Link to this section"></a>
+</h3>
+
+<p style="font-size: 150%; text-align: center;">Apache Subversion 1.14.5 LTS</p>
+<table class="centered">
+<tr>
+  <th>File</th>
+  <th>Checksum (SHA512)</th>
+  <th>Signatures</th>
+  <th>PGP Public Keys</th>
+</tr>
+<tr>
+  <td><a href="https://dlcdn.apache.org/subversion/subversion-1.14.5.tar.bz2">subversion-1.14.5.tar.bz2</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.tar.bz2.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.tar.bz2.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.KEYS">PGP keyring</a>]</td>
+</tr><tr>
+  <td><a href="https://dlcdn.apache.org/subversion/subversion-1.14.5.tar.gz">subversion-1.14.5.tar.gz</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.tar.gz.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.tar.gz.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.KEYS">PGP keyring</a>]</td>
+</tr><tr>
+  <td><a href="https://dlcdn.apache.org/subversion/subversion-1.14.5.zip">subversion-1.14.5.zip</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.zip.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.zip.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.14.5.KEYS">PGP keyring</a>]</td>
+</tr>
+</table>
+
+</div> <!-- #recommended-release -->
+
+<!-- When more releases are in support, enable this section again
+
+<div class="h3" id="supported-releases">
+<h3>Older still supported Releases
+  <a class="sectionlink" href="#supported-releases"
+    title="Link to this section"></a>
+</h3>
+
+<p style="font-size: 150%; text-align: center;">Apache Subversion 1.10.8 LTS</p>
+<table class="centered">
+<tr>
+  <th>File</th>
+  <th>Checksum (SHA512)</th>
+  <th>Signatures</th>
+  <th>PGP Public Keys</th>
+</tr>
+<tr>
+  <td><a href="[preferred]subversion/subversion-1.10.8.tar.bz2">subversion-1.10.8.tar.bz2</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.tar.bz2.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.tar.bz2.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.KEYS">PGP keyring</a>]</td>
+</tr><tr>
+  <td><a href="[preferred]subversion/subversion-1.10.8.tar.gz">subversion-1.10.8.tar.gz</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.tar.gz.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.tar.gz.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.KEYS">PGP keyring</a>]</td>
+</tr><tr>
+  <td><a href="[preferred]subversion/subversion-1.10.8.zip">subversion-1.10.8.zip</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.zip.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.zip.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.10.8.KEYS">PGP keyring</a>]</td>
+</tr>
+</table>
+
+</div>-->  <!-- #supported-releases -->
+
+<!-- When in a pre-release phase, uncomment the following, and paste the
+     correct table after the notice. Use 'release.py write-downloads' to
+     generate the table. -->
+<div class="h3" id="pre-releases">
+<h3>Pre-releases
+  <a class="sectionlink" href="#pre-releases"
+    title="Link to this section"></a>
+</h3>
+
+<div class="notice">
+
+<p>The following releases are offered for pre-release testing.
+   The <a href="/prerelease-caveats"
+   >usual caveats</a> apply, including the fact that there are known
+   issues, and no upgrade path is promised for APIs and on-disk files
+   (working copies and repositories) between the pre-releases and the
+   final release.</p>
+
+<p>Please report any issues to <a href="/mailing-lists.html#users-ml"
+   >users@subversion.apache.org</a>.</p>
+
+<p style="font-size: 150%; text-align: center;">Apache Subversion 1.15.0-rc3</p>
+<table class="centered">
+<tr>
+  <th>File</th>
+  <th>Checksum (SHA512)</th>
+  <th>Signatures</th>
+  <th>PGP Public Keys</th>
+</tr>
+<tr>
+  <td><a href="https://dlcdn.apache.org/subversion/subversion-1.15.0-rc3.tar.bz2">subversion-1.15.0-rc3.tar.bz2</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.tar.bz2.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.tar.bz2.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.KEYS">PGP keyring</a>]</td>
+</tr><tr>
+  <td><a href="https://dlcdn.apache.org/subversion/subversion-1.15.0-rc3.tar.gz">subversion-1.15.0-rc3.tar.gz</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.tar.gz.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.tar.gz.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.KEYS">PGP keyring</a>]</td>
+</tr><tr>
+  <td><a href="https://dlcdn.apache.org/subversion/subversion-1.15.0-rc3.zip">subversion-1.15.0-rc3.zip</a></td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.zip.sha512">SHA-512</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.zip.asc">PGP signatures</a>]</td>
+  <td>[<a href="https://www.apache.org/dist/subversion/subversion-1.15.0-rc3.KEYS">PGP keyring</a>]</td>
+</tr>
+</table>
+
+</div> <!-- .notice -->
+</div> <!-- #pre-releases -->
+
+<div class="h3" id="release-archives">
+<h3>Release archives
+  <a class="sectionlink" href="#release-archives"
+    title="Link to this section"></a>
+</h3>
+
+<p>Looking for previous releases of Subversion?  All Subversion
+   releases are available for download from the
+   <a href="https://archive.apache.org/dist/subversion/" >Apache
+   distribution archive</a>.  Except for our currently supported releases,
+   distributions of Subversion found in the archives are not supported
+   by the community.  If you require support for an older version of
+   Subversion, and are not able to upgrade to a newer version,
+   consider contacting a commercial Subversion support vendor.</p>
+
+</div> <!-- #release-archives -->
+
+</div> <!-- #source-releases -->
+
+<div class="h2" id="verifying">
+<h2>Verifying the Integrity of Downloaded Files
+  <a class="sectionlink" href="#verifying"
+    title="Link to this section"></a>
+</h2>
+
+<p>It is essential that you verify the integrity of the downloaded
+   files using the PGP signatures and/or file checksums.  Please read
+   <a href="https://httpd.apache.org/dev/verification.html">Verifying
+   Apache HTTP Server Releases</a> for more information on why you
+   should verify our releases.  (The same rationale applies to
+   Subversion as to HTTP Server.)</p>
+   
+<p>The PGP signatures can be verified using PGP or GPG. First download
+   the keyring (<code>*.KEYS</code>) and detached signatures (<code>*.asc</code>) files for the
+   particular distribution. Make sure you get these files from the
+   <a href="https://www.apache.org/dist/subversion/" >main distribution
+   directory</a>, rather than from a mirror. Then verify the
+   signatures as follows:</p>
+
+<p><code> 
+% pgpk -a subversion.asc<br /> 
+% pgpv subversion-1.14.tar.gz.asc<br /> 
+</code> 
+<em>or</em><br /> 
+<code> 
+% pgp -ka subversion.asc<br /> 
+% pgp subversion-1.14.tar.gz.asc<br /> 
+</code> 
+<em>or</em><br /> 
+<code> 
+% gpg --import subversion.asc<br /> 
+% gpg --verify subversion-1.14.tar.gz.asc subversion-1.14.tar.gz
+</code></p>
+
+<p>If you're unable to verify the PGP signatures, you can instead verify the checksums on the files.
+   However, PGP signatures are superior to checksums, and we recommend to verify using PGP whenever possible.</p>
+
+<p>A unix program called <code>sha512sum</code> is included in many unix distributions.
+   Run <code>sha512sum subversion-1.14.tar.gz</code> to display the hash of the downloaded file.<br />
+   On Windows you can use the following command in a command line window, for
+   instance: <code>certutil -hashfile &lt;filename&gt; SHA512</code>.</p>
+
+</div>  <!-- #verifying -->
+
+<div class="h2" id="installing">
+<h2>Building and Installing Subversion
+  <a class="sectionlink" href="#installing"
+    title="Link to this section"></a>
+</h2>
+
+<p>For information about building and installing your freshly
+   downloaded source code release, see the
+   <a href="/source-code.html">Source Code</a> page.</p>
+
+</div>  <!-- #installing -->
+
+</div> <!-- #site-content -->
+</body>
+</html>

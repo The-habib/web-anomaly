@@ -1,0 +1,632 @@
+
+
+<!doctype html>
+  <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home energy management - Home Assistant</title>
+    <meta name="author" content="Home Assistant">
+    <meta name="description" content="Track and understand how energy is used in your home with Home Assistant. See where your power is going, get the most out of your solar panels, and save mone...">
+    
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="canonical" href="https://www.home-assistant.io/docs/energy/">
+    
+
+    
+
+
+
+
+<meta property="fb:app_id" content="338291289691179">
+<meta property="og:title" content="Home energy management">
+<meta property="og:site_name" content="Home Assistant">
+
+<meta property="og:url" content="https://www.home-assistant.io/docs/energy/">
+
+<meta property="og:type" content="article">
+<meta property="og:description" content="Track and understand how energy is used in your home with Home Assistant. See where your power is going, get the most out of your solar panels, and save money on your bills.">
+<meta property="og:image" content="https://www.home-assistant.io/images/default-social.png">
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@home_assistant">
+
+<meta name="twitter:title" content="Home energy management">
+<meta name="twitter:description" content="Track and understand how energy is used in your home with Home Assistant. See where your power is going, get the most out of your solar panels, and save money on your bills.">
+<meta name="twitter:image" content="https://www.home-assistant.io/images/default-social.png">
+
+
+
+<link rel="me" href="https://fosstodon.org/@homeassistant">
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3/dist/style.min.css" rel="stylesheet" />
+    <link href="/stylesheets/prism.css?1304e8e8c717584921b418a0a8dca04b" rel="stylesheet">
+    <link href="/stylesheets/screen.css?4290b2a2ad5b90daa18b608d9c7479f5" media="screen, projection, print" rel="stylesheet">
+    <link href="/atom.xml" rel="alternate" title="Home Assistant" type="application/atom+xml">
+    <link rel='shortcut icon' href='/images/favicon.ico' />
+    <link rel='icon' type='image/png' href='/images/favicon-192x192.png' sizes='192x192' />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Instrument+Sans:ital,wdth,wght@0,99,400..700;1,99,400..700&amp;" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" integrity="sha384-GPb5RlngihS9H0z1D137JsvzmeZ7tCpWEF4t5YDoTZyMsPP8S7h7vFDh4XhheU83" crossorigin="anonymous"></script>
+  </head>
+
+  <body  class="documentation-page   ">
+    <header class='site-header '>
+      
+
+
+
+<div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
+      <a href="/" class="site-title">
+        <div class="logo"></div>
+      </a>
+      <a class="release-date" href="/blog/2026/08/05/release-20268/" title="Latest version 2026.8.2 released August 14, 2026">
+        2026.8.2
+      </a>
+    </div>
+
+    <div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
+      <nav>
+        <input type="checkbox" id="toggle" />
+        <label
+          for="toggle"
+          class="toggle"
+          data-open="Main Menu"
+          data-close="⨉"
+        ></label>
+        <ul class="menu pull-right">
+          <li><a  href="/installation/">Getting started</a></li>
+          <li>
+            <a class="active" href="/docs/">Documentation <iconify-icon inline icon='mdi:chevron-down' title='Chevron down'></iconify-icon></a>
+            <ul>
+              <li><a href="/installation/"><iconify-icon inline icon='simple-icons:homeassistant' title='Homeassistant'></iconify-icon> Installation</a></li>
+              <li><a href="/docs/automation/"><iconify-icon inline icon='mdi:robot-happy' title='Robot happy'></iconify-icon> Automations</a></li>
+              <li><a href="/dashboards/"><iconify-icon inline icon='mdi:gauge' title='Gauge'></iconify-icon> Dashboards</a></li>
+              <li><a href="/voice_control/"><iconify-icon inline icon='mdi:comment-processing-outline' title='Comment processing outline'></iconify-icon> Voice assistants</a></li>
+              <li><a href="/docs/organizing/"><iconify-icon inline icon='mdi:view-grid' title='View grid'></iconify-icon> Device organization</a></li>
+              <li><a href="/docs/energy/"><iconify-icon inline icon='mdi:solar-power-variant' title='Solar power variant'></iconify-icon> Energy management</a></li>
+              <li><a href="/docs/templating/"><iconify-icon inline icon='mdi:code-braces' title='Code braces'></iconify-icon> Templating</a></li>
+              <li><a href="/docs/configuration/"><iconify-icon inline icon='mdi:cog' title='Cog'></iconify-icon> Configuration using the YAML file</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Our hardware <iconify-icon inline icon='mdi:chevron-down' title='Chevron down'></iconify-icon></a>
+            <ul>
+              <li><a href="/green/">Home Assistant Green</a></li>
+              <li><a href="/connect/zbt-2/">Connect ZBT-2</a></li>
+              <li><a href="/connect/zwa-2/">Connect ZWA-2</a></li>
+              <li><a href="/voice-pe/">Voice Preview Edition</a></li>
+            </ul>
+          </li>
+          <li><a  href="/integrations/">Integrations</a></li>
+          <li><a  href="/blog/">Blog</a></li>
+          <li><a  href="/help/">Need help?</a></li>
+          <li>
+            <div class="docsearch" id="docsearch"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    </header>
+
+    <div class="page-content">
+
+      
+
+      <div class="grid-wrapper">
+        <div class="grid grid-center">
+
+          
+
+          
+          
+
+          
+          <div class="grid__item two-thirds desk-wide-seven-twelfths lap-one-whole palm-one-whole">
+          
+
+            
+              <article class="page">
+  
+  <header>
+    
+    
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        
+          
+            
+            ▸ <a href="/docs/">Documentation</a>
+          
+        
+          
+        
+      </div>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.home-assistant.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Documentation",
+            "item": "https://www.home-assistant.io/docs/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Home energy management",
+            "item": "https://www.home-assistant.io/docs/energy/"
+          }
+        ]
+      }
+      </script>
+    
+    <h1 class="title indent">
+      
+        Home energy management
+      
+    </h1>
+  </header>
+  
+  
+  <p>Home Assistant turns your home into a clear, easy-to-read picture of how energy flows in and out of it. You can see how much electricity you draw from the grid and when, how much your solar panels produced today, how full your home battery is, and which appliances are quietly costing you the most. With that information, you can plan when to run the dishwasher, charge the car when power is cheap or your panels are at their peak, and set automations that quietly save you money in the background.</p>
+<p><a href="https://my.home-assistant.io/redirect/energy" class="my badge" target="_blank"><img src="https://my.home-assistant.io/badges/energy.svg"></a> <a href="https://my.home-assistant.io/redirect/config_energy" class="my badge" target="_blank"><img src="https://my.home-assistant.io/badges/config_energy.svg"></a></p>
+<p>The Energy dashboard works with electricity, gas, and water. For each one, your usage is grouped into three simple types: what you consume, what you produce, and what you store. You can start with a single source, even just your electricity meter, and add more as you go. Every source you add makes the picture more complete.</p>
+<p>Home Assistant is open and works with hardware from many different brands, so you are not locked into one ecosystem. Any energy monitor, smart plug, solar inverter, or utility meter that integrates with Home Assistant can feed data into the Energy dashboard.</p>
+<h2>Setting up the Energy dashboard <a class="title-link" name="setting-up-the-energy-dashboard" href="#setting-up-the-energy-dashboard"></a>
+</h2>
+<p>To add energy data to the dashboard, start with the type of source or device you want to track:</p>
+<ul>
+<li><a href="/docs/energy/electricity-grid/">Integrate your energy use from the electricity grid</a></li>
+<li><a href="/docs/energy/solar-panels/">Integrate your solar panels</a></li>
+<li><a href="/docs/energy/battery/">Integrate your home batteries</a></li>
+<li><a href="/docs/energy/gas/">Integrate your gas consumption</a></li>
+<li><a href="/docs/energy/water/">Integrate your water consumption</a></li>
+<li><a href="/docs/energy/individual-devices/">Integrate individual devices</a></li>
+</ul>
+<p>If you have a sensor that returns instantaneous power readings (W or kW), then to add a sensor that returns energy usage or generation (kWh), refer to the <a href="/integrations/integration/#energy">Riemann sum integral integration</a>.</p>
+<p>You can also configure power sensors alongside energy sensors in the Energy dashboard. Power inputs accept sensors with <code>state_class: measurement</code> and appropriate units (for example <code>W</code> or <code>kW</code>).</p>
+<img src="/images/docs/energy/energy-overview.png" alt="Visual representation of how all different energy forms relate." style="border: 0;box-shadow: none;">
+<h2>Customizing the Energy dashboard <a class="title-link" name="customizing-the-energy-dashboard" href="#customizing-the-energy-dashboard"></a>
+</h2>
+<p>The Energy dashboard is generated from the energy sources and devices you configure. You can show or hide individual cards without changing your energy sources. This lets you keep the dashboard focused on the graphs and summaries you use most.</p>
+<p>Before you customize the dashboard, add at least one energy source or device. If no sources or devices are configured, the <strong>Customize energy</strong> dialog has no cards to show.</p>
+<p>To show or hide cards on the Energy dashboard:</p>
+<ol>
+<li>Go to <a href="https://my.home-assistant.io/redirect/config_energy" class="my" target="_blank"><strong>Settings</strong> &gt; <strong>Dashboards</strong> &gt; <strong>Energy</strong> &gt; <strong>Edit dashboard</strong></a>.</li>
+<li>In the toolbar, select <strong>Customize cards</strong>.</li>
+<li>In the <strong>Customize energy</strong> dialog, expand a section, such as <strong>Overview</strong>, <strong>Electricity</strong>, <strong>Gas</strong>, <strong>Water</strong>, or <strong>Now</strong>.</li>
+<li>Turn the switch for each card on or off.</li>
+<li>Select <strong>Save</strong>.</li>
+</ol>
+<p>Your card selection applies to the Energy dashboard for the whole Home Assistant system, not only to your browser or user account. Cards that you keep visible continue to use the same energy data and date controls as before.</p>
+<h3>Cards that are not available <a class="title-link" name="cards-that-are-not-available" href="#cards-that-are-not-available"></a>
+</h3>
+<p>Some cards in the <strong>Customize energy</strong> dialog might be unavailable. A card is unavailable when the energy source or device it needs is not configured. For example, a solar card needs a solar panel source.</p>
+<p>To make an unavailable card available, add the matching source or device on the energy settings page. The dialog only shows sections that have at least one card available for your current energy configuration.</p>
+<h3>Hidden dashboard tabs <a class="title-link" name="hidden-dashboard-tabs" href="#hidden-dashboard-tabs"></a>
+</h3>
+<p>If you hide every card in an Energy dashboard tab, Home Assistant hides that tab. Home Assistant keeps at least one tab available, so the dashboard does not become empty.</p>
+<p>To show a hidden card or tab again, return to <strong>Customize cards</strong>, turn the card back on, and save your changes.</p>
+
+
+  
+
+
+  
+<div class="material-card text feedback">
+  <h4>
+<iconify-icon inline icon="mdi:feedback" title="Feedback"></iconify-icon> <b> Help us improve our documentation</b><a href="#feedback_section" class="title-link" name="feedback_section"></a>
+</h4>
+  Suggest an edit to this page, or provide/view feedback for this page.
+  <div class="links">
+    <ul aria-label="Page feedback options">
+    <li><a href="https://github.com/home-assistant/home-assistant.io/tree/current/source/_docs/energy.markdown" target="_blank" title="Edit this page" rel="external nofollow"><iconify-icon inline icon="mdi:edit"></iconify-icon> Edit</a></li>
+    
+    <li><a href="https://github.com/home-assistant/home-assistant.io/issues/new?template=feedback.yml&amp;url=https%3A%2F%2Fwww.home-assistant.io%2Fdocs%2Fenergy%2F&amp;version=2026.8.2&amp;labels=current" target="_blank" title="Provide feedback on this page" rel="external nofollow"><iconify-icon inline icon="mdi:comment-edit-outline"></iconify-icon> Provide feedback</a></li>
+    <li><a href="https://github.com/home-assistant/home-assistant.io/issues?utf8=%E2%9C%93&amp;q=%22%2Fdocs%2Fenergy%2F%22&amp;in=body" target="_blank" title="View given feedback for this page" rel="external nofollow"><iconify-icon inline icon="mdi:comment-text-multiple-outline"></iconify-icon> View given feedback</a></li>
+    
+  </ul>
+  </div>
+</div>
+
+
+</article>
+
+            
+          </div>
+
+
+          
+          
+          
+          
+            
+              <aside id="sidebar" class="grid__item one-third desk-wide-one-quarter lap-one-whole palm-one-whole">
+            
+            <div class="grid">
+  
+
+
+
+
+  <section class="vertical-nav aside-module grid__item one-whole lap-one-half">
+  <div class="section">
+    <h2 class="h1 title epsilon"><iconify-icon inline icon='mdi:bookshelf' title='Bookshelf'></iconify-icon> Documentation</h2>
+    <ul class="divided sidebar-menu">
+      <li>
+        <a  href='/docs/'>Overview </a>
+        |
+        <a  href='/faq/'>FAQ </a>
+        |
+        <a  href='/docs/glossary/'>Glossary </a>
+      </li>
+
+      <li>
+  <iconify-icon icon="mdi:robot-happy"></iconify-icon> <a  href='/docs/automation/'>Automations </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:gauge' title='Gauge'></iconify-icon> <a  href='/dashboards'>Dashboards </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:microphone' title='Microphone'></iconify-icon> <a  href='/voice_control/'>Voice assistants </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:category' title='Category'></iconify-icon> <a  href='/docs/organizing/'>Organization </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:solar-power-variant' title='Solar power variant'></iconify-icon> <a class='active' href='/docs/energy/'>Home energy management </a>
+  
+  <ul>
+    <li><a  href='/docs/energy/electricity-grid/'>Electricity grid </a></li>
+    <li><a  href='/docs/energy/solar-panels/'>Solar panels </a></li>
+    <li><a  href='/docs/energy/battery/'>Home batteries </a></li>
+    <li><a  href='/docs/energy/gas/'>Gas usage </a></li>
+    <li><a  href='/docs/energy/water/'>Water usage </a></li>
+    <li><a  href='/docs/energy/individual-devices/'>Individual devices </a></li>
+    <li><a  href='/docs/energy/faq/'>FAQ </a></li>
+  </ul>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:code-braces' title='Code braces'></iconify-icon> <a  href='/docs/templating/'>Templating </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:update' title='Update'></iconify-icon> <a  href='/common-tasks/general/'>Common tasks </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:cogs' title='Cogs'></iconify-icon> <a  href='/docs/configuration/basic'>Configuration </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:account-security' title='Account security'></iconify-icon> <a  href='/docs/authentication/'>Authentication </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:palette' title='Palette'></iconify-icon> <a  href='/docs/tools/'>Tools and helpers </a>
+  
+</li>
+
+<li>
+  <iconify-icon inline icon='mdi:cellphone' title='Cellphone'></iconify-icon> <a href="https://companion.home-assistant.io/docs">iOS and Android apps</a>
+</li>
+
+<li>
+  <iconify-icon inline icon='bitcoin-icons:node-hardware-filled' title='Node hardware filled'></iconify-icon> Official hardware
+  <ul>
+    <li><a href="https://support.nabucasa.com/hc/categories/24638797677853">Home Assistant Green</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24734620813469">Home Assistant Connect ZBT-1</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/29400540866973">Home Assistant Connect ZBT-2</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/28669861145885">Home Assistant Connect ZWA-2</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24734575925149">Home Assistant Yellow</a></li>
+    <li><a href="https://support.nabucasa.com/hc/categories/24451727188125">Home Assistant Voice Preview Edition</a></li>
+  </ul>
+</li>
+
+    </ul>
+  </div>
+</section>
+
+
+</div>
+
+          </aside>
+          
+        </div>
+      </div>
+
+      
+
+      <footer>
+        <div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item">
+      <div class="skyline grid">
+        <div class="skyline grid__item one-whole">
+          <div class="footer-skyline">
+          </div>
+        </div>
+      </div>
+      <div class="footer-nav grid">
+        <div class="company grid__item one-quarter lap-one-half palm-one-whole">
+          <div class="title">
+            <img
+              src="/images/footer-logo-text.svg"
+              height="72"
+              alt="Home Assistant"
+            />
+          </div>
+          <p>
+            Home Assistant is a project from the <a href="https://www.openhomefoundation.org/">Open Home Foundation</a>.
+          </p>
+        </div>
+
+        <div class="grid__item one-quarter lap-one-half palm-one-whole">
+          <h3>Join us and contribute!</h3>
+          <ul>
+            <li><a class="external-link" href="https://github.com/home-assistant/">GitHub repo</a></li>
+            <li><a class="external-link" href="https://developers.home-assistant.io">Developers Portal</a></li>
+            <li><a class="external-link" href="https://design.home-assistant.io">Design Portal</a></li>
+            <li><a class="external-link" href="https://data.home-assistant.io">Data Science Portal</a></li>
+            <li><a class="external-link" href="https://community.home-assistant.io">Community Forum</a></li>
+            <li><a class="external-link" href="https://creators.home-assistant.io/">Creator Network</a></li>
+            <li><a class="external-link" href="https://works-with.home-assistant.io/">Works with Home Assistant</a></li>
+            <li><a href="/community">Our community</a></li>
+            <li><a href="/help/reporting_issues/">Reporting issues</a></li>
+          </ul>
+          <h3>System status</h3>
+          <ul>
+            <li>
+              <a class="external-link"  href="https://alerts.home-assistant.io">Integration Alerts</a>
+            </li>
+            <li><a href="/security/">Security Alerts</a></li>
+            <li>
+              <a class="external-link" href="https://status.home-assistant.io">System Status</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid__item one-quarter lap-one-half palm-one-whole">
+          <h3>Companion apps</h3>
+          <ul>
+            <li><a class="external-link" href="https://apps.apple.com/app/id1099568401">iOS and Apple devices</a></li>
+            <li><a class="external-link" href="https://play.google.com/store/apps/details?id=io.homeassistant.companion.android">Android and Wear OS</a></li>
+            <li><a class="external-link" href="https://companion.home-assistant.io/">...and more!</a></li>
+          </ul>
+
+          <h3>Support us</h3>
+          <ul>
+            <li><a href="https://store.openhomefoundation.org" target="_blank">Merch store</a></li>
+            <li><a href="/cloud/">Home Assistant Cloud</a></li>
+          </ul>
+
+          <h3>Governance</h3>
+          <ul>
+            <li><a href="/privacy/">Privacy Notices</a></li>
+            <li><a href="/developers/cla/">Contributor License Agreement</a></li>
+            <li><a href="/tos/">Terms of Service</a></li>
+            <li><a href="/code_of_conduct/">Code of Conduct</a></li>
+            <li><a href="/developers/credits/">Credits</a></li>
+            <li><a href="/developers/license/">License</a></li>
+          </ul>
+        </div>
+
+        <div class="socials grid__item one-quarter lap-one-half palm-one-whole">
+
+          <h3>Follow us</h3>
+          <p><a class="external-link" href='https://newsletter.openhomefoundation.org/#/portal'>Sign up for our newsletter</a></p>
+          <ul class="icons">
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://youtube.com/@home_assistant"
+                title="YouTube"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:youtube"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://reddit.com/r/homeassistant"
+                title="Reddit"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:reddit"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://github.com/home-assistant"
+                title="GitHub"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:github"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://fosstodon.org/@homeassistant"
+                title="Mastodon"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:mastodon"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://bsky.app/profile/home-assistant.io"
+                title="Bluesky"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:bluesky"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://x.com/home_assistant"
+                title="X (formerly Twitter)"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:x"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.facebook.com/homeassistantio"
+                title="Facebook"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:facebook"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.instagram.com/homeassistant/"
+                title="Instagram"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+            </li>
+            
+            <li>
+              <a
+                rel="me noopener noreferrer"
+                href="https://www.linkedin.com/company/home-assistant"
+                title="LinkedIn"
+                target="_blank"
+              ><iconify-icon icon="simple-icons:linkedin"></iconify-icon></a>
+            </li>
+            
+          </ul>
+
+          <div class="web-notice">
+            <p>
+              For partnership inquiries please check out <a href="https://works-with.home-assistant.io/">Works with Home Assistant</a>. For media, <a href="/cdn-cgi/l/email-protection#620f07060b03220d12070c0a0d0f07040d170c0603160b0d0c4c0d1005">email our team</a>. For other questions, you can <a href="/cdn-cgi/l/email-protection#4129242d2d2e01292e2c246c203232283235202f356f282e">contact support</a> (No technical support!)
+            </p>
+            <p>
+              Website powered by <a href="https://jekyllrb.com/">Jekyll</a><br />
+              Originally based on the <a href="https://github.com/coogie/oscailte">Oscailte theme</a>
+            </p>
+            <a href="https://www.netlify.com">
+              <img
+                src="/images/frontpage/netlify.svg"
+                alt="Deploys by Netlify Badge"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </footer>
+
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.3.1/lite-youtube.js" integrity="sha384-7o3d1sg8jSS1LMKzzIEucWtWFI1X4lFCC5gu2ylAgH3KmHcJgjTqp6LWfIvbbmf9" crossorigin="anonymous"></script>
+
+<script src="/javascripts/terminology_tooltip.js?e20ec01246c34f18bd926ceed25bc742" type="text/javascript" defer></script>
+
+<script src="/javascripts/prism.js?5d6619066a1fc5cd819a93c132b539ac" type="text/javascript" defer></script>
+<script src="/javascripts/prism-signature.js?c46f2dc6f8d4fd987db580bda61368b5" type="text/javascript" defer></script>
+<script src="/javascripts/prism-jinja2.js?b7346561200c43c055e61149a77b3187" type="text/javascript" defer></script>
+<script src="/static/doc-data-640212571aa9.js" type="text/javascript" defer></script>
+<script src="/javascripts/prism-template-links.js?7bedbf54ec266241edb843530c111903" type="text/javascript" defer></script>
+<script src="/javascripts/prism-doc-links.js?aecc2ca96596f960444d87dad9394ee3" type="text/javascript" defer></script>
+<script src="/javascripts/docsearch-options.js?e5a07874723ea642e221f06a88902a18" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.min.js" integrity="sha384-f/IEhh8fvOc2ALU79emLlUqAYXyqlA/zYhM+g5GlWMk15QBjTXy05TtmfT1TbtV6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  docsearch({
+    container: '#docsearch',
+    appId: 'FBHBYS3J0U',
+    indexName: 'home-assistant',
+    apiKey: "fcd41bf156f5ee0e390f8b860e3a2489",
+    transformItems(items) {
+      return items.map((item) => ({
+        ...item,
+        url: rewriteDocSearchPreviewUrl(item.url),
+        url_without_anchor: rewriteDocSearchPreviewUrl(item.url_without_anchor),
+      }));
+    },
+  });
+  document.querySelector('.site-title').addEventListener('contextmenu', function (ev) {
+    ev.preventDefault();
+    document.location.assign("https://design.home-assistant.io/#brand/logo")
+  });
+</script>
+
+
+
+
+<script type="text/javascript">
+  {
+    const article = document.querySelector("article.post");
+    if (article) {
+      const iframes = article.querySelectorAll("iframe[data-src]");
+      let loaded = false;
+      if (iframes) {
+        document.addEventListener('mousemove', loadLazyFrames, { passive: true, once: true });
+        document.addEventListener('touchmove', loadLazyFrames, { passive: true, once: true });
+        document.addEventListener('scroll', loadLazyFrames, { passive: true, once: true });
+
+        function loadLazyFrames() {
+          if (loaded) return;
+          loaded = true;
+
+          iframes.forEach((iframe) => {
+            const src = iframe.getAttribute("data-src");
+            if (src) {
+              iframe.setAttribute("src", src);
+              iframe.removeAttribute("data-src");
+            }
+          });
+        }
+      }
+    }
+  }
+</script>
+
+
+
+  </body>
+</html>

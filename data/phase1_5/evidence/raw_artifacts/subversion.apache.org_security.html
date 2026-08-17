@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Apache Subversion Security</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="stylesheet" href="/style/site.css" type="text/css" media="all">
+<meta name="theme-color" content="#98b0d4">
+</head>
+
+<body>
+<div id="site-banner">
+<div style="font-style: italic;" 
+     id="site-banner-apachelogo">
+  <a href="https://www.apache.org/"
+  ><img src="https://apache.org/foundation/press/kit/asf_logo_wide.svg"
+        height="80"
+        alt="Apache Software Foundation" /></a>
+</div>
+<a href="/">
+  <img src="/images/svn-name-banner.svg"
+       width="379" height="80"
+       alt="[S] Subversion"
+       id="site-banner-svnlogo" /></a>
+</div> <!-- #site-banner -->
+
+<div id="site-nav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+  <nav id="site-nav-menu">
+  <p>About Subversion
+    <ul>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/docs/">Documentation</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/roadmap.html">Roadmap</a></li>
+      <li><a href="/security/">Security</a></li>
+      <li><a href="/quick-start.html">Quick Start</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </p>
+  <p>Getting Subversion
+      <ul>
+      <li><a href="/packages.html">Binary Packages</a></li>
+      <li><a href="/download.cgi">Source Download</a></li>
+      <li><a href="/docs/release-notes/">Release Notes</a></li>
+    </ul>
+  </p>
+  <p>Community
+    <ul>
+      <li><a href="/mailing-lists.html">Mailing Lists</a></li>
+      <li><a href="/reporting-issues.html">Reporting Issues</a></li>
+      <li><a href="https://cwiki.apache.org/confluence/display/SVN/">Wiki</a></li>
+      <li><a href="/contributing.html">Getting Involved</a></li>
+      <li><a href="/source-code.html">Source Code</a></li>
+      <li><a class="linkaway"
+             href="https://apache.org/foundation/policies/conduct.html">Code of Conduct</a></li>
+    </ul>
+  </p>
+  <p>About the <acronym title="Apache Software Foundation">ASF</acronym>
+    <ul>
+      <li><a class="linkaway"
+             href="https://www.apache.org/licenses/">License</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+    </ul>
+  </p>
+
+<p id="site-search">
+  <form action="https://www.google.com/search" method="get"
+        style="margin-top: 10px; margin-bottom: 10px; display: inline;">
+  <div style="display: inline;">
+    <input value="subversion.apache.org" name="sitesearch" type="hidden" />
+    <input name="q" id="query" type="text" placeholder="Search..."
+           style="width: 10em"
+           />
+    <input name="Search" value="Go" type="submit"/>
+  </div>
+  </form>
+</p> <!-- #site-search -->
+
+<p id="site-apachecon-block">
+  <p><a href="https://www.apache.org/events/current-event.html"
+    ><img src="https://www.apache.org/events/current-event-125x125.png"
+          alt="ApacheCon"
+  /></a></p>
+</p> <!-- #site-apachecon-block -->
+
+<p id="site-svnbook-block">
+<p>Read the official Subversion
+   documentation <a href="https://svnbook.red-bean.com/" class="linkaway nopadding">online</a>!</p>
+<p><a href="https://svnbook.red-bean.com/"
+      ><img src="/images/svnbook-cover.jpg"
+            alt="Version Control With Subversion"/></a></p>
+</p> <!-- #site-svnbook-block -->
+
+<p id="copyright">
+<p>Copyright &#169; 2026 <a href="https://www.apache.org/" class="nopadding">The Apache
+   Software Foundation</a>, Licensed under
+   the <a href="https://www.apache.org/licenses/LICENSE-2.0" class="nopadding">Apache
+   License, Version 2.0</a>.  Apache, Apache Subversion, and
+   the Apache logo are trademarks of The Apache Software
+   Foundation.  Subversion and the Apache Subversion logo are
+   registered trademarks of The Apache Software Foundation.</p>
+<p><a href="https://privacy.apache.org/policies/privacy-policy-public.html"
+   class="nopadding">Privacy policy</a></p>
+</p> <!-- #copyright -->
+</nav>
+</div> <!-- #site-nav -->
+
+<div id="site-content">
+<div id="site-notice">
+
+<!-- PUT SITE-WIDE NOTICES HERE AS NECESSARY -->
+
+</div> <!-- #site-notice -->
+
+
+<h1>Apache Subversion Security</h1>
+
+
+<div class="bigpoint">
+
+<p>The Apache Software Foundation provides a framework and team of
+   folks for handling reports of security vulnerabilities.  If you
+   discover a security vulnerability in Apache Subversion, please
+   follow the instructions found here:</p>
+
+<p><a href="https://www.apache.org/security/"
+           >https://www.apache.org/security/</a></p>
+
+</div> <!-- .bigpoint -->
+
+<p>To learn more about how the Subversion development team treats discovered
+and reported security vulnerabilities, please visit the <a href="/docs/community-guide/issues.html#security">Security section</a> of the Community Guide.</p>
+
+<div class="h2" id="advisories">
+<h2 id="advisories">Previous Security Advisories
+  <a class="sectionlink" href="#advisories"
+    title="Link to this section"></a>
+</h2>
+
+<p>The following are a list of past security advisories issued by the
+Subversion project.</p>
+
+<table cellpadding="0" cellspacing="0">
+<thead>
+<tr>
+<th>Document</th>
+<th>Affected Version(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="svn-sscanf-advisory.txt">svn-sscanf-advisory.txt</a></td>
+<td>1.0.0-1.0.2</td>
+<td>Date parser buffer overflow.</td>
+</tr>
+<tr>
+<td><a href="CAN-2004-0413-advisory.txt">CAN-2004-0413-advisory.txt</a></td>
+<td>1.0.0-1.0.4</td>
+<td>Denial of Service and Heap Overflow issue related to string parsing in svnserve</td>
+</tr>
+<tr>
+<td><a href="mod_authz_svn-copy-advisory.txt">mod_authz_svn-copy-advisory.txt</a></td>
+<td>1.0.0-1.0.5</td>
+<td>mod_authz_svn exposure of unreadable paths via deep copy to readable location.</td>
+</tr>
+<tr>
+<td><a href="CAN-2004-0749-advisory.txt">CAN-2004-0749-advisory.txt</a></td>
+<td>1.0.0-1.0.7, 1.1.0-rcX</td>
+<td>Revision metadata leakage in mod_dav_svn.</td>
+</tr>
+<tr>
+<td><a href="CVE-2007-2448-advisory.txt">CVE-2007-2448-advisory.txt</a></td>
+<td>1.0.1-1.4.3</td>
+<td>Revision metadata leakage via 'svn prop*' commands.</td>
+</tr>
+<tr>
+<td><a href="CVE-2007-3846-advisory.txt">CVE-2007-3846-advisory.txt</a></td>
+<td>1.0.0-1.4.4</td>
+<td>Remote file delivery and installation via path mis-handling.</td>
+</tr>
+<tr>
+<td><a href="CVE-2009-2411-advisory.txt">CVE-2009-2411-advisory.txt</a></td>
+<td>1.0.0-1.6.3</td>
+<td>Heap Overflow in binary delta parser.</td>
+</tr>
+<tr>
+<td><a href="CVE-2010-3315-advisory.txt">CVE-2010-3315-advisory.txt</a></td>
+<td>1.5.0-1.5.7, 1.6.0-1.6.12</td>
+<td>mod_dav_svn exposure of unreadable paths when SVNPathAuthz "short_circuit" is employed.</td>
+</tr>
+<tr>
+<td>CVE-2010-4539</td>
+<td>1.0.0-1.5.8, 1.6.0-1.6.13</td>
+<td>mod_dav_svn potential crash when using SVNParentPath</td>
+</tr>
+<tr>
+<td>CVE-2010-4644</td>
+<td>1.5.0-1.5.8, 1.6.0-1.6.13</td>
+<td>Server out-of-memory error caused by 'blame -g'</td>
+</tr>
+<tr>
+<td><a href="CVE-2011-0715-advisory.txt">CVE-2011-0715-advisory.txt</a></td>
+<td>1.2.0-1.5.9, 1.6.0-1.6.15</td>
+<td>Server NULL-pointer dereference</td>
+</tr>
+<tr>
+<td><a href="CVE-2011-1752-advisory.txt">CVE-2011-1752-advisory.txt</a></td>
+<td>1.0.0-1.6.16</td>
+<td>Server NULL-pointer dereference</td>
+</tr>
+<tr>
+<td><a href="CVE-2011-1783-advisory.txt">CVE-2011-1783-advisory.txt</a></td>
+<td>1.5.0-1.6.16</td>
+<td>Server memory exhaustion</td>
+</tr>
+<tr>
+<td><a href="CVE-2011-1921-advisory.txt">CVE-2011-1921-advisory.txt</a></td>
+<td>1.5.0-1.6.16</td>
+<td>mod_dav_svn exposure of unreadable paths</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-1845-advisory.txt">CVE-2013-1845-advisory.txt</a></td>
+<td>1.0.0-1.6.20 and 1.7.0-1.7.8</td>
+<td>mod_dav_svn excessive memory usage from property changes</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-1846-advisory.txt">CVE-2013-1846-advisory.txt</a></td>
+<td>1.0.0-1.6.20 and 1.7.0-1.7.8</td>
+<td>mod_dav_svn crashes on LOCK requests against activity URLs</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-1847-advisory.txt">CVE-2013-1847-advisory.txt</a></td>
+<td>1.6.0-1.6.20 and 1.7.0-1.7.8</td>
+<td>mod_dav_svn crashes on LOCK requests against non-existant URLs</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-1849-advisory.txt">CVE-2013-1849-advisory.txt</a></td>
+<td>1.0.0-1.6.20 and 1.7.0-1.7.8</td>
+<td>mod_dav_svn crashes on PROPFIND requests against activity URLs</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-1884-advisory.txt">CVE-2013-1884-advisory.txt</a></td>
+<td>1.7.0-1.7.8</td>
+<td>mod_dav_svn crashes on out of range limit in log REPORT request</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-1968-advisory.txt">CVE-2013-1968-advisory.txt</a></td>
+<td>1.1.0-1.6.23 and 1.7.0-1.7.9</td>
+<td>fsfs repositories can be corrupted by newline characters in filenames</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-2088-advisory.txt">CVE-2013-2088-advisory.txt</a></td>
+<td>1.2.0-1.6.23 (see advisory)</td>
+<td>contrib hook-scripts can allow arbitrary code execution</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-2112-advisory.txt">CVE-2013-2112-advisory.txt</a></td>
+<td>1.0.0-1.6.21 and 1.7.0-1.7.9</td>
+<td>svnserve remotely triggerable DoS</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-4131-advisory.txt">CVE-2013-4131-advisory.txt</a></td>
+<td>1.6.0-1.7.10 and 1.8.0</td>
+<td>mod_dav_svn assertion from requests against root path</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-4246-advisory.txt">CVE-2013-4246-advisory.txt</a></td>
+<td>1.8.0 - 1.8.1</td>
+<td>fsfs: corruption from editing packed revision properties</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-4262-advisory.txt">CVE-2013-4262-advisory.txt</a></td>
+<td>1.8.0 - 1.8.2</td>
+<td>admin-side tools: symlink attack against pid file</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-4277-advisory.txt">CVE-2013-4277-advisory.txt</a></td>
+<td>1.4.0-1.7.12 and 1.8.0-1.8.2</td>
+<td>svnserve: symlink attack against pid file</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-4505-advisory.txt">CVE-2013-4505-advisory.txt</a></td>
+<td>1.4.0-1.7.13 and 1.8.0-1.8.4</td>
+<td>mod_dontdothat does not restrict requests from serf based clients</td>
+</tr>
+<tr>
+<td><a href="CVE-2013-4558-advisory.txt">CVE-2013-4558-advisory.txt</a></td>
+<td>1.7.11-1.7.13 and 1.8.1-1.8.4</td>
+<td>mod_dav_svn assertion triggered by non-canonical URLs in autoversioning commits</td>
+</tr>
+<tr>
+<td><a href="CVE-2014-0032-advisory.txt">CVE-2014-0032-advisory.txt</a></td>
+<td>1.3.0-1.7.14 and 1.8.0-1.8.5</td>
+<td>mod_dav_svn DoS vulnerability with SVNListParentPath</td>
+</tr>
+<tr>
+<td><a href="CVE-2014-3522-advisory.txt">CVE-2014-3522-advisory.txt</a></td>
+<td>1.4.0-1.7.17 and 1.8.0-1.8.9</td>
+<td>ra_serf improper validation of wildcards in SSL certs</td>
+</tr>
+<tr>
+<td><a href="CVE-2014-3528-advisory.txt">CVE-2014-3528-advisory.txt</a></td>
+<td>1.0.0-1.7.17 and 1.8.0-1.8.9</td>
+<td>credentials cached with svn may be sent to wrong server</td>
+</tr>
+<tr>
+<td><a href="CVE-2014-3580-advisory.txt">CVE-2014-3580-advisory.txt</a></td>
+<td>1.0.0-1.7.18 and 1.8.0-1.8.10</td>
+<td>mod_dav_svn DoS vulnerability with invalid REPORT requests</td>
+</tr>
+<tr>
+<td><a href="CVE-2014-8108-advisory.txt">CVE-2014-8108-advisory.txt</a></td>
+<td>1.7.0-1.7.18 and 1.8.0-1.8.10</td>
+<td>mod_dav_svn DoS vulnerability with invalid virtual transaction names</td>
+</tr>
+<tr>
+<td><a href="CVE-2015-0202-advisory.txt">CVE-2015-0202-advisory.txt</a></td>
+<td>1.8.0-1.8.11</td>
+<td>Subversion HTTP servers with FSFS repositories are vulnerable to a
+remotely triggerable excessive memory use with certain REPORT requests</td>
+</tr>
+<tr>
+<td><a href="CVE-2015-0248-advisory.txt">CVE-2015-0248-advisory.txt</a></td>
+<td>1.6.0-1.7.19 and 1.8.0-1.8.11</td>
+<td>Subversion mod_dav_svn and svnserve are vulnerable to a remotely triggerable
+assertion DoS vulnerability for certain requests with dynamically evaluated
+revision numbers</td>
+</tr>
+<tr>
+<td><a href="CVE-2015-0251-advisory.txt">CVE-2015-0251-advisory.txt</a></td>
+<td>1.5.0-1.7.19 and 1.8.0-1.8.11</td>
+<td>Subversion HTTP servers allow spoofing svn:author property values for new revisions</td>
+</tr>
+<tr>
+<td><a href="CVE-2015-3184-advisory.txt">CVE-2015-3184-advisory.txt</a></td>
+<td>1.7.0-1.7.20 and 1.8.0-1.8.13</td>
+<td>Subversion's mod_authz_svn does not properly restrict anonymous access in
+some mixed anonymous/authenticated environments when using Apache httpd 2.4.</td>
+</tr>
+<tr>
+<td><a href="CVE-2015-3187-advisory.txt">CVE-2015-3187-advisory.txt</a></td>
+<td>1.7.0-1.7.20 and 1.8.0-1.8.13</td>
+<td>Subversion servers, both httpd and svnserve, will reveal some paths that
+should be hidden by path-based authz.</td>
+</tr>
+<tr>
+<td><a href="CVE-2015-5259-advisory.txt">CVE-2015-5259-advisory.txt</a></td>
+<td>1.9.0-1.9.2</td>
+<td>Remotely triggerable heap overflow and out-of-bounds read caused by
+integer overflow in the svn:// protocol parser.</td>
+</tr>
+<tr>
+<td><a href="CVE-2016-2167-advisory.txt">CVE-2016-2167-advisory.txt</a></td>
+<td>1.5.0-1.8.15 and 1.9.0-1.9.3</td>
+<td>svnserve/sasl may authenticate users using the wrong realm.</td>
+</tr>
+<tr>
+<td><a href="CVE-2016-2168-advisory.txt">CVE-2016-2168-advisory.txt</a></td>
+<td>1.0.0-1.8.15 and 1.9.0-1.9.3</td>
+<td>Remotely triggerable DoS vulnerability in mod_authz_svn during COPY/MOVE
+authorization check.</td>
+</tr>
+<tr>
+<td><a href="CVE-2016-8734-advisory.txt">CVE-2016-8734-advisory.txt</a>
+[<a href="CVE-2016-8734-advisory.txt.asc">PGP</a>]</td>
+<td>1.4.0-1.8.16 and 1.9.0-1.9.4</td>
+<td>Unrestricted XML entity expansion in mod_dontdothat and Subversion
+clients using http(s)://</td>
+</tr>
+<tr>
+<td><a href="sha1-advisory.txt">sha1-advisory.txt</a></td>
+<td>1.1.0-1.8.17 and 1.9.0-1.9.5</td>
+<td>Apache Subversion is unable to store SHA1 collisions.</td>
+</tr>
+
+<tr>
+<td><a href="CVE-2017-9800-advisory.txt">CVE-2017-9800-advisory.txt</a>
+[<a href="CVE-2017-9800-advisory.txt.asc">PGP</a>]</td>
+<td>1.0.0-1.8.18 and 1.9.0-1.9.6 and 1.10.0-alpha1-1.10.0-alpha3</td>
+<td>Arbitrary code execution on clients through malicious svn+ssh URLs in
+  svn:externals and svn:sync-from-url</td>
+</tr>
+
+<tr>
+<td><a href="CVE-2018-11803-advisory.txt">CVE-2018-11803-advisory.txt</a>
+[<a href="CVE-2018-11803-advisory.txt.asc">PGP</a>]</td>
+<td>1.10.0-1.10.3 and 1.11.0</td>
+<td>Subversion's mod_dav_svn Apache HTTPD module will crash after dereferencing
+    an uninitialized pointer if the client omits the root path in a recursive
+    directory listing operation.</td>
+</tr>
+
+<tr>
+<td><a href="CVE-2018-11782-advisory.txt">CVE-2018-11782-advisory.txt</a>
+[<a href="CVE-2018-11782-advisory.txt.asc">PGP</a>]</td>
+<td>1.9.0-1.9.10, 1.10.0-1.10.4, 1.11.0-1.11.1, 1.12.0</td>
+<td>Remotely triggerable DoS vulnerability in svnserve 'get-deleted-rev'.</td>
+</tr>
+
+<tr>
+<td><a href="CVE-2019-0203-advisory.txt">CVE-2019-0203-advisory.txt</a>
+[<a href="CVE-2019-0203-advisory.txt.asc">PGP</a>]</td>
+<td>1.9.0-1.9.10, 1.10.0-1.10.4, 1.11.0-1.11.1, 1.12.0</td>
+<td>Remote unauthenticated denial-of-service in Subversion svnserve.</td>
+</tr>
+
+<tr>
+<td><a href="CVE-2020-17525-advisory.txt">CVE-2020-17525-advisory.txt</a>
+[<a href="CVE-2020-17525-advisory.txt.asc">PGP</a>]</td>
+<td>1.9.0-1.9.10, 1.10.0-1.10.6, 1.11.0-1.11.1, 1.12.0-1.12.2, 1.13.0, 1.14.0</td>
+<td>Remote unauthenticated denial-of-service in mod_authz_svn.</td>
+</tr>
+
+<tr>
+  <td><a href="CVE-2021-28544-advisory.txt">CVE-2021-28544-advisory.txt</a>
+  [<a href="CVE-2021-28544-advisory.txt.asc">PGP</a>]</td>
+  <td>1.10.0-1.10.7, 1.14.0-1.14.1</td>
+  <td>SVN authz protected copyfrom paths regression</td>
+</tr>
+
+<tr>
+  <td><a href="CVE-2022-24070-advisory.txt">CVE-2022-24070-advisory.txt</a>
+  [<a href="CVE-2022-24070-advisory.txt.asc">PGP</a>]</td>
+  <td>1.10.0-1.10.7, 1.14.0-1.14.1</td>
+  <td>mod_dav_svn is vulnerable to memory corruption</td>
+</tr>
+
+<tr>
+  <td><a href="CVE-2024-45720-advisory.txt">CVE-2024-45720-advisory.txt</a>
+  [<a href="CVE-2024-45720-advisory.txt.asc">PGP</a>]</td>
+  <td>1.0.0-1.10.8, 1.14.0-1.14.3</td>
+  <td>Subversion command line argument injection on Windows platforms</td>
+</tr>
+  
+<tr>
+  <td><a href="CVE-2024-46901-advisory.txt">CVE-2024-46901-advisory.txt</a>
+  [<a href="CVE-2024-46901-advisory.txt.asc">PGP</a>]</td>
+  <td>1.0.0-1.14.4</td>
+  <td>mod_dav_svn denial-of-service via control characters in paths</td>
+</tr>
+  
+</tbody>
+</table>
+
+</div> <!-- #advisories -->
+
+</div> <!-- #site-content -->
+</body>
+</html>

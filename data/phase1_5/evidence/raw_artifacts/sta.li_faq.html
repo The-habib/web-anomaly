@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head> 
+	<title>FAQ | static linux</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"> 
+</head> 
+<body>
+	<div id="menu">
+
+		<a href="//garbe.ca/">home</a>
+
+
+		<a href="//beec.ca/">bees</a>
+
+
+		<a class="thisSite" href="//sta.li/">stali</a>
+
+	</div>
+	<div id="header"><span class="siteTitle">static linux</span></div>
+
+	<div id="content">
+	
+	<div id="nav">
+		<ul>
+			
+			
+	
+	<li><a href="/" class="normal">About</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/build/" class="normal">Build stali from source</a>
+	
+		
+	</li>
+
+			
+			
+	
+		
+		<li><a href="/faq/" class="thisPage">FAQ</a>
+		
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/filesystem/" class="normal">Filesystem</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/installation/" class="normal">Installation</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/technologies/" class="normal">Software stali uses and/or might adopt</a>
+	
+		
+	</li>
+
+			
+			
+	
+	<li><a href="/upgrade/" class="normal">Keep up-to-date with upstream stali</a>
+	
+		
+	</li>
+
+			
+			<li><a href="" class="empty"></a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+	<h1>FAQ</h1>
+
+<h2>Aren&rsquo;t statically linked executables huge?</h2>
+
+<p>It depends. Linking a stripped hello world program with glibc results in 600kb.
+Linking it with musl in about 7kb. Linking OpenBSD&rsquo;s stripped <a href="https://github.com/bobertlo/openbsd-pdksh">ksh</a>, which
+will be stali&rsquo;s default shell, statically against musl results in a 170kb
+binary &ndash; linking it dynamically against glibc results in 234kb.
+Of course this won&rsquo;t scale with every binary, for example we expect surf
+being about 5-6MB in size, but the normal Unix userland will be rather small,
+compared to most popular linux distros.</p>
+
+<p>See also</p>
+
+<ul>
+<li><a href="http://9fans.net/archive/2008/11/142">http://9fans.net/archive/2008/11/142</a></li>
+</ul>
+
+<h2>Aren&rsquo;t whole libraries linked into a static executable?</h2>
+
+<p>No. Good libraries implement each library function in separate object (.o)
+files, this enables the linker (ld) to only extract and link those
+object files from an archive (.a) that export the symbols that are
+actually used by a program. Additionally, link-time optimization and
+dead code elimination (available in most modern GNU and LLVM based toolchains)
+allows for the extraction of necessary code on a <em>function-by-function</em> basis,
+while eliminating <em>all</em> unused library code, resulting in a smaller, faster,
+and more secure executables.</p>
+
+<p>See also</p>
+
+<ul>
+<li><a href="http://9fans.net/archive/2002/02/21">http://9fans.net/archive/2002/02/21</a></li>
+</ul>
+
+<h2>What&rsquo;s wrong with glibc?</h2>
+
+<p>We think nearly everything is wrong with it. Its enormous complexity,
+its lack of good structure and well separated object files
+(otherwise linking trivial programs wouldn&rsquo;t result in 600kb overhead) and
+even worse than that, its design decision to use dlopen for certain
+&ldquo;separated&rdquo; library features (NSS, locales, IDN, &hellip;), which makes it nearly
+impossible to use glibc for static linking in non-trivial programs.
+Unfortunately, for certain tools we will ship glibc for pragmatic reasons.</p>
+
+<p>Of course <a href="http://people.redhat.com/drepper/no_static_linking.html">Ulrich Drepper thinks that dynamic linking is
+great</a>, but clearly
+that&rsquo;s because of his lack of experience and his delusions of grandeur.</p>
+
+<h2>Aren&rsquo;t statically linked executables less secure?</h2>
+
+<p>Several people argue (with implicitly requiring ABI-stability) that dynamically
+linked executables benefit from security fixes in libraries they depend on.
+While this is true to some extent, statically linked executables aren&rsquo;t
+en-masse affected by vulnerabilities in the dynamic libraries installed on your
+system in the first place.</p>
+
+<p>We know that there is some overhead in re-compiling all affected executables if
+a dependent library is insecure, but we don&rsquo;t see this as a critical
+disadvantage, because we also focus on a small and maintainable userland, where
+only one tool for each task exists.</p>
+
+<p>Another argument often heard is that static functions have predictable
+addresses, whereas dynamic linking provides the ability of address
+randomization. We have two answers to this. The first is: it is
+simple to use position-independent code in static executables and (assuming
+a modern kernel that supports address randomization for executables) fully
+<a href="https://en.wikipedia.org/wiki/Position-independent_code">position-independent
+executables</a>
+are easily created on all modern operating systems. The second is: In reality,
+address randomization is predictable and we usually see the same addresses when
+a dynamic library is loaded or has been pre-loaded again and again. Thus we
+consider this as an issue with low impact and this is not a real focus for us.</p>
+
+<p>If you are really concerned about the security of statically linked executables,
+have a look at what <a href="http://www.catonmat.net/blog/ldd-arbitrary-code-execution/">great ldd exploits</a> exist.</p>
+
+<p>Another security issue with dynamic linking is versioning, see <a href="http://harmful.cat-v.org/software/dynamic-linking/versioned-symbols">this
+excerpt</a>
+for some insight.</p>
+
+<p>Also a security issue with dynamically linked libraries are executables with
+the suid flag. A user can easily run dynamic library code using LD_PRELOAD in
+conjunction with some trivial program like ping. Using a static
+executable with the suid flag eliminates this problem completely.</p>
+
+<p>Apart from that we link against libraries with low footprint (eg musl instead
+of glibc when possible). This leads to an increased likelihood
+of lesser vulnerabilities, simply because lesser code contains fewer bugs from
+a statistical point of view.</p>
+
+<p>See also:
+* <a href="http://benpfaff.org/papers/asrandom.pdf">On the Effectiveness of Address-Space Randomization</a></p>
+
+<h2>Aren&rsquo;t statically linked executables consuming more memory?</h2>
+
+<p>We believe that due to the small size of the base system the opposite will be
+the case. First of all, the kernel will load each static executable&rsquo;s .rodata, .data,
+.text and .comment sections only once for all instances into memory.
+Second, because each static binary has only been linked with the object files
+necessary, it has already been optimized at linkage time for memory
+consumption. When loading it, we don&rsquo;t require the kernel to map all
+dependent dynamic libraries into memory from which our binary might only use 5%
+of the functions they provide. So, in reality, the memory footprint is becoming
+less, and the dead code hold in memory (or paged) reduces overall consumption.
+This is also true for programs, like surf, which don&rsquo;t use all webkit/gtk/glib
+functions.</p>
+
+<h2>Isn&rsquo;t starting statically linked executables slower?</h2>
+
+<p>In nearly all cases the answer is &ldquo;No&rdquo;. In the theoretical case of a huge static
+executable, the payload might be loading the executable into memory; but we
+focus on small, static executables. In experiments, the execution time of a static
+executable was about 4000% faster than its dynamically linked counterpart
+when no dependent libraries (except glibc) were pre-loaded, and 100% faster when
+the dependent libraries were pre-loaded. We believe the overhead for looking up
+all needed symbols in the dynamically loaded libraries seems to be very
+expensive. On modern hardware this is only noticeable with endlessly executing
+the static and dynamic executable in a loop for several minutes and counting
+the number of executions.</p>
+
+<p>A general conclusion is, the more dynamic libraries an executable depends on,
+the slower it&rsquo;ll start, regardless if the libraries are preloaded or not.
+This also means that usually big static executables (which we try to avoid)
+easily outperform dynamic executables with lots of dependencies. If a big
+static executable is already running, executing another one is nearly
+instantaneously, because the payload is already in the memory. In the dynamic
+case the startup is not instantaneously because the dynamic linker has to make
+sure that there were no updates in the dependencies.</p>
+
+<p>So all in all dynamic executables are painfully slow, regardless of what
+inelegant hacks people came up with in the past. There is zero evidence that
+dynamic linking makes executables faster. There is only some evidence that
+preloading dynamic libraries vs not preloading dynamic libraries improves the
+startup of dynamic executables. But the introduction of preloading comes at a
+cost as well, the kernel will have to do much more work when supporting such
+contrivances.</p>
+
+<p>Dynamic linking also greatly increases the complexity of the kernel VM and
+makes it much slower. And kludgy solutions to this make things more
+complicated and add many more points of total failure.</p>
+
+<h2>See also</h2>
+
+<ul>
+<li><a href="https://drewdevault.com/dynlib.html">Dynamic Linking</a></li>
+<li><a href="http://web.archive.org/web/20120509105723/http://teddziuba.com/2008/09/a-web-os-are-you-dense.html">A Web OS? Are You Dense?</a></li>
+<li><a href="http://www.nth-dimension.org.uk/pub/BTL.pdf">Breaking the links: Exploiting the linker</a></li>
+<li><a href="http://benpfaff.org/papers/asrandom.pdf">On the Effectiveness of Address-Space Randomization</a></li>
+</ul>
+
+	</div>
+	<div id="footer">
+	<small><a href="https://github.com/garbeam/staw">staw powered</a> &copy; 2025</small>
+	</div>
+	</div>
+</body>
+</html>
+
+
+

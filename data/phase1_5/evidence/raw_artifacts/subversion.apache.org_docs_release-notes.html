@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Apache Subversion Release Notes</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+  @import url("/style/site.css");
+</style>
+</head>
+
+<body>
+<div id="site-banner">
+<div style="font-style: italic;" 
+     id="site-banner-apachelogo">
+  <a href="https://www.apache.org/"
+  ><img src="https://apache.org/foundation/press/kit/asf_logo_wide.svg"
+        height="80"
+        alt="Apache Software Foundation" /></a>
+</div>
+<a href="/">
+  <img src="/images/svn-name-banner.svg"
+       width="379" height="80"
+       alt="[S] Subversion"
+       id="site-banner-svnlogo" /></a>
+</div> <!-- #site-banner -->
+
+<div id="site-nav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+  <nav id="site-nav-menu">
+  <p>About Subversion
+    <ul>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/docs/">Documentation</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/roadmap.html">Roadmap</a></li>
+      <li><a href="/security/">Security</a></li>
+      <li><a href="/quick-start.html">Quick Start</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </p>
+  <p>Getting Subversion
+      <ul>
+      <li><a href="/packages.html">Binary Packages</a></li>
+      <li><a href="/download.cgi">Source Download</a></li>
+      <li><a href="/docs/release-notes/">Release Notes</a></li>
+    </ul>
+  </p>
+  <p>Community
+    <ul>
+      <li><a href="/mailing-lists.html">Mailing Lists</a></li>
+      <li><a href="/reporting-issues.html">Reporting Issues</a></li>
+      <li><a href="https://cwiki.apache.org/confluence/display/SVN/">Wiki</a></li>
+      <li><a href="/contributing.html">Getting Involved</a></li>
+      <li><a href="/source-code.html">Source Code</a></li>
+      <li><a class="linkaway"
+             href="https://apache.org/foundation/policies/conduct.html">Code of Conduct</a></li>
+    </ul>
+  </p>
+  <p>About the <acronym title="Apache Software Foundation">ASF</acronym>
+    <ul>
+      <li><a class="linkaway"
+             href="https://www.apache.org/licenses/">License</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+    </ul>
+  </p>
+
+<p id="site-search">
+  <form action="https://www.google.com/search" method="get"
+        style="margin-top: 10px; margin-bottom: 10px; display: inline;">
+  <div style="display: inline;">
+    <input value="subversion.apache.org" name="sitesearch" type="hidden" />
+    <input name="q" id="query" type="text" placeholder="Search..."
+           style="width: 10em"
+           />
+    <input name="Search" value="Go" type="submit"/>
+  </div>
+  </form>
+</p> <!-- #site-search -->
+
+<p id="site-apachecon-block">
+  <p><a href="https://www.apache.org/events/current-event.html"
+    ><img src="https://www.apache.org/events/current-event-125x125.png"
+          alt="ApacheCon"
+  /></a></p>
+</p> <!-- #site-apachecon-block -->
+
+<p id="site-svnbook-block">
+<p>Read the official Subversion
+   documentation <a href="https://svnbook.red-bean.com/" class="linkaway nopadding">online</a>!</p>
+<p><a href="https://svnbook.red-bean.com/"
+      ><img src="/images/svnbook-cover.jpg"
+            alt="Version Control With Subversion"/></a></p>
+</p> <!-- #site-svnbook-block -->
+
+<p id="copyright">
+<p>Copyright &#169; 2026 <a href="https://www.apache.org/" class="nopadding">The Apache
+   Software Foundation</a>, Licensed under
+   the <a href="https://www.apache.org/licenses/LICENSE-2.0" class="nopadding">Apache
+   License, Version 2.0</a>.  Apache, Apache Subversion, and
+   the Apache logo are trademarks of The Apache Software
+   Foundation.  Subversion and the Apache Subversion logo are
+   registered trademarks of The Apache Software Foundation.</p>
+<p><a href="https://privacy.apache.org/policies/privacy-policy-public.html"
+   class="nopadding">Privacy policy</a></p>
+</p> <!-- #copyright -->
+</nav>
+</div> <!-- #site-nav -->
+
+<div id="site-content">
+<div id="site-notice">
+
+<!-- PUT SITE-WIDE NOTICES HERE AS NECESSARY -->
+
+</div> <!-- #site-notice -->
+
+<!-- **************** BEGIN CONTENT ***************** -->
+
+<h1>Apache Subversion Releases</h1>
+
+<p>The Apache Subversion project publishes releases with a relatively high
+degree of regularity.  At any given time, we're working towards our
+next major release while continuing to fix bugs in previous releases.
+Subversion's release compatibility promises make adoption of our
+bugfix releases easy &mdash; you'll find very few, if any, surprises
+in those kinds of releases in terms of features and functionality.  As
+such, the release notes issued for a given major release
+(an <em>X.Y.</em>0 release) remain applicable for patch releases to
+that release line (an <em>X.Y.Z</em> release).  You can find links
+to these release notes below.</p>
+
+<p>Over time and as new major releases come out, we drop official
+support for older release lines.  You'll also find below the project's
+official support status for the various release lines available.</p>
+
+<div class="h2" id="release-notes">
+<h2>Release Notes
+  <a class="sectionlink" href="#release-notes"
+    title="Link to this section"></a>
+</h2>
+
+<p>The following are works-in-progress towards future Subversion releases:</p>
+
+<ul id="release-notes-future-list">
+<li><a href="1.15.html">Subversion 1.15</a> – <i>in progress</i></li>
+</ul>
+
+<p>Here are the release notes for the major Subversion releases:</p> 
+
+<ul id="release-notes-list">
+<li><a href="1.14.html">Subversion 1.14</a> – (<i>first released – May 27, 2020</i>)</li>
+<li><a href="1.13.html">Subversion 1.13</a> – (<i>first released – October 30, 2019</i>)</li>
+<li><a href="1.12.html">Subversion 1.12</a> – (<i>first released – April 24, 2019</i>)</li>
+<li><a href="1.11.html">Subversion 1.11</a> – Improved shelving, checkpointing, improved tree conflict resolution (<i>first released – October 30, 2018</i>)</li>
+<li><a href="1.10.html">Subversion 1.10</a> – Improved path-based authz, new interactive conflict resolver, LZ4 compression, FSFS format 8, shelving (<i>first released – April 12, 2018</i>)</li>
+<li><a href="1.9.html">Subversion 1.9</a> – FSFS format 7, FSX (<i>first released – August 5, 2015</i>)</li>
+<li><a href="1.8.html">Subversion 1.8</a> – Automatic merge, client-side rename tracking, inherited properties (<i>first released – June 18, 2013</i>)</li>
+<li><a href="1.7.html">Subversion 1.7</a> – WCNG, v2 protocol, svnrdump (<i>first released – October 11, 2011</i>)</li>
+<li><a href="1.6.html">Subversion 1.6</a>
+   (<a href="1.6.zh.html">&#31616;&#20307;&#20013;&#25991;</a>) – tree conflicts, FSFS packing, file externals (<i>first released – March 20, 2009</i>)</li>
+<li><a href="1.5.html">Subversion 1.5</a> – merge tracking, sparse checkouts (<i>first released – June 19, 2008</i>)</li>
+<li><a href="1.4.html">Subversion 1.4</a> – flat-file working copy library, svnsync (<i>first released – September 10, 2006</i>)</li>
+<li><a href="1.3.html">Subversion 1.3</a> – general performance improvements (<i>first released – December 30, 2005</i>)</li>
+<li><a href="1.2.html">Subversion 1.2</a> – peg revs, DAV autoversioning support (<i>first released – May 21, 2005</i>)</li>
+<li><a href="1.1.html">Subversion 1.1</a> – FSFS backend, symlinks (<i>first released – September 29, 2004</i>)</li>
+<li>Subversion 1.0 (<i>first released – February 23, 2004</i>)</li>
+</ul>
+
+<p>For a more complete (albeit less descriptive) list of changes made
+   in individual releases, see
+   the <a href="https://svn.apache.org/repos/asf/subversion/trunk/CHANGES"
+   >CHANGES</a> file.</p>
+
+<p>For a detailed history of every release, please see
+   <a href="release-history.html">release history</a>.</p>
+
+<div class="h3" id="upcoming-1.14">
+<h3>Coming up in the next release release of Subversion 1.14
+  <a class="sectionlink" href="#upcoming-1.14"
+    title="Link to this section"></a>
+</h3>
+
+<p>The following changes have been merged since the last patch release and will almost certainly be included in the next patch release:</p>
+
+<!-- Automatically generated by ^/subversion/site/tools/generate-upcoming-changes-log.sh -->
+<pre style="border-style: none">
+Changes in ^/subversion/branches/1.14.x:
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1922447">r1922447</a> | svn-role | 2024-12-12 04:00:07 +0000 (Thu, 12 Dec 2024) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1922418">r1922418</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1922418">r1922418</a>
+   Restore swig-rb to be compatible with Ruby 1.9 through 2.2.
+   Justification:
+     Fix incompatible with old versions of Ruby in 1.14.5.
+   Votes:
+     +1: jun66j5, futatuki
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1924122">r1924122</a> | dsahlberg | 2025-03-01 22:56:42 +0000 (Sat, 01 Mar 2025) | 15 lines
+
+Try to get the backport conflict detection GitHub Action working.
+It was suggested in the #asfinfra Slack channel[1] that workflows must exist
+in all branches to work so let&#x27;s try to add them.
+
+Technically merging all revisions affecting the .github/ subtree from
+trunk.
+
+* .github/
+  Add subtree
+
+(This commit technically breaks the backporting requirements, but it won&#x27;t
+even distributed downstream so I&#x27;m bending the rules this time).
+
+[1]: https://the-asf.slack.com/archives/CBX4TSBQ8/p1740835005043529
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1924124">r1924124</a> | dsahlberg | 2025-03-01 23:04:33 +0000 (Sat, 01 Mar 2025) | 4 lines
+
+Followup to <a href="https://svn.apache.org/r1924122">r1924122</a>
+Merge <a href="https://svn.apache.org/r1924123">r1924123</a> from trunk, adding the subversion package on the GHA runner
+
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1924127">r1924127</a> | dsahlberg | 2025-03-01 23:16:17 +0000 (Sat, 01 Mar 2025) | 4 lines
+
+Followup to <a href="https://svn.apache.org/r1924124">r1924124</a> and <a href="https://svn.apache.org/r1924122">r1924122</a>
+Merge <a href="https://svn.apache.org/r1924125">r1924125</a> from trunk, switching to a proper SVN WC
+
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1924794">r1924794</a> | svn-role | 2025-04-05 04:00:06 +0000 (Sat, 05 Apr 2025) | 10 lines
+
+Merge <a href="https://svn.apache.org/r1924100">r1924100</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1924100">r1924100</a>
+   Deprecate and disable the SVN_UNALIGNED_ACCESS_IS_OK macro.
+   Justification:
+     Prevent future problems on newer compilers on higher optimization
+     settings.
+   Votes:
+     +1: dsahlberg, brane, jamessan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1924795">r1924795</a> | svn-role | 2025-04-05 04:00:13 +0000 (Sat, 05 Apr 2025) | 10 lines
+
+Merge <a href="https://svn.apache.org/r1924143">r1924143</a> from trunk:
+
+* <a href="https://svn.apache.org/r1924143">r1924143</a>
+  Remove optimized unaligned-access code paths.
+  Justification:
+    Prevent future problems on newer compilers on higher optimization
+    settings. (Follow-up to <a href="https://svn.apache.org/r1924100">r1924100</a>)
+  Votes:
+    +1: dsahlberg, brane, jamessan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1924796">r1924796</a> | svn-role | 2025-04-05 04:00:20 +0000 (Sat, 05 Apr 2025) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1924773">r1924773</a> from trunk:
+
+* <a href="https://svn.apache.org/r1924773">r1924773</a>
+  swig-rb: Support ruby x64-mswin64 and building with GCC 15.
+  Justification:
+    Allow swig-rb with x64-mswin64 and gcc 15
+  Votes:
+    +1: jun66j5, jamessan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1927163">r1927163</a> | svn-role | 2025-07-13 04:00:06 +0000 (Sun, 13 Jul 2025) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1892118">r1892118</a> from trunk:
+
+* <a href="https://svn.apache.org/r1892118">r1892118</a>
+  Fix a NULL pointer dereference in the conflict resolver.
+  Justification:
+    1.14.5 users are running into this crash.
+  Votes:
+   +1: stsp, rinrab
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1927212">r1927212</a> | svn-role | 2025-07-14 04:00:05 +0000 (Mon, 14 Jul 2025) | 10 lines
+
+Merge <a href="https://svn.apache.org/r1886358">r1886358</a> from trunk:
+
+* <a href="https://svn.apache.org/r1886358">r1886358</a>
+  Python 3 compatibility: Update a raise statement probably missed in
+  revision 873411 changes.
+  Justification:
+    Fix Python 3 compatibility
+  Votes:
+    +1: jamessan, dsahlberg
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1929147">r1929147</a> | svn-role | 2025-10-15 04:00:06 +0000 (Wed, 15 Oct 2025) | 9 lines
+
+Merge the <a href="https://svn.apache.org/r1926575">r1926575</a> group from trunk:
+
+ * <a href="https://svn.apache.org/r1926575">r1926575</a>, <a href="https://svn.apache.org/r1927715">r1927715</a>
+   Fix SWIG test cases for Python 3.14.
+   Justification:
+     Preparing Python 3.14 release
+   Votes:
+     +1: futatuki, jamessan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1929906">r1929906</a> | svn-role | 2025-11-22 04:00:10 +0000 (Sat, 22 Nov 2025) | 13 lines
+
+Merge the 1.14.x-<a href="https://svn.apache.org/r1928521">r1928521</a> branch:
+
+ * <a href="https://svn.apache.org/r1928521">r1928521</a>, <a href="https://svn.apache.org/r1928524">r1928524</a>
+   swig-py: follow up to <a href="https://svn.apache.org/r1912500">r1912500</a>: Fix NameError on using old SWIG
+   Justification:
+     Fix a regression for old SWIG versions and make clear minimal supported
+     version of SWIG for swig-py
+   Branch:
+     1.14.x-<a href="https://svn.apache.org/r1928521">r1928521</a>
+   Votes:
+     +0: hartmannathan (review from swig-py experts requested!)
+     +1: jun66j5, jamessan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1930038">r1930038</a> | svn-role | 2025-11-28 04:00:05 +0000 (Fri, 28 Nov 2025) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1929560">r1929560</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1929560">r1929560</a>
+   Adapt swig-py to SWIG 4.4.0.
+   Justification:
+     Fix build with SWIG 4.4
+   Votes:
+     +1: jamessan, jun66j5
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1930411">r1930411</a> | svn-role | 2025-12-10 04:00:05 +0000 (Wed, 10 Dec 2025) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1930381">r1930381</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1930381">r1930381</a>
+   Fix wrong line numbers displayed in syntax errors from config file parser.
+   Justification:
+     Cosmetic issue which can confuse users in case of syntax errors.
+   Votes:
+     +1: stsp, brane, dsahlberg
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1930853">r1930853</a> | svn-role | 2025-12-26 04:00:05 +0000 (Fri, 26 Dec 2025) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1929564">r1929564</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1929564">r1929564</a>
+   Adapt gen_win_dependencies.py to expat 2.7.2+.
+   Justification:
+     Fix build on Windows with expat 2.7.2+.
+   Votes:
+     +1: jun66j5, dsahlberg
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1933566">r1933566</a> | svn-role | 2026-04-30 04:00:10 +0000 (Thu, 30 Apr 2026) | 9 lines
+
+Merge <a href="https://svn.apache.org/r1933475">r1933475</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1933475">r1933475</a>
+   Avoid DNS reverse name lookups during test configuration.
+   Justification:
+     Reverse lookups can cause long delays or even block.
+   Votes:
+     +1: brane, dsahlberg
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1935896">r1935896</a> | svn-role | 2026-07-05 04:00:12 +0000 (Sun, 05 Jul 2026) | 10 lines
+
+Merge the <a href="https://svn.apache.org/r1932863">r1932863</a> group from trunk:
+
+ * <a href="https://svn.apache.org/r1932863">r1932863</a>, <a href="https://svn.apache.org/r1933181">r1933181</a>
+   Update some readme files
+   Justification:
+     Release should be as accurate as possible, ivan is full committer by
+     the time of release. IRC is no longer an official channel.
+   Votes:
+     +1: dsahlberg, ivan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1935921">r1935921</a> | svn-role | 2026-07-06 04:00:10 +0000 (Mon, 06 Jul 2026) | 15 lines
+
+Merge <a href="https://svn.apache.org/r1927953">r1927953</a> from trunk:
+
+ * <a href="https://svn.apache.org/r1927953">r1927953</a>
+   On Windows, use the WC_NO_BEST_FIT_CHARS flag when converting individual
+   command-line arguments to the ANSI code page
+   Justification:
+     Fixes a bug with incorrect interpretation of some individual Unicode
+     command-line arguments.
+   Notes:
+     This is an interim fix. A long-term solution is to convert arguments
+     to UTF-8 and work with UTF-8 directly, but until then failing fast
+     should be better than changing the user input.
+   Votes:
+     +1: kotkov, rinrab, ivan
+
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1935956">r1935956</a> | ivan | 2026-07-06 14:39:05 +0000 (Mon, 06 Jul 2026) | 7 lines
+
+On 1.14.x: Merge <a href="https://svn.apache.org/r1935797">r1935797</a> from trunk:
+  GHA: Do not trigger build for changes in non-code files.
+  Justification:
+    Keep GitHub Actions configuration in sync with trunk.
+  Votes:
+    +1: ivan (only affects GHA)
+------------------------------------------------------------------------
+<a href="https://svn.apache.org/r1935957">r1935957</a> | ivan | 2026-07-06 14:53:45 +0000 (Mon, 06 Jul 2026) | 8 lines
+
+On 1.14.x: Merge <a href="https://svn.apache.org/r1924628">r1924628</a>, <a href="https://svn.apache.org/r1934091">r1934091</a>, <a href="https://svn.apache.org/r1934092">r1934092</a>, <a href="https://svn.apache.org/r1934095">r1934095</a>, <a href="https://svn.apache.org/r1934096">r1934096</a>, <a href="https://svn.apache.org/r1934116">r1934116</a>
+from trunk:
+  GHA: Catch up merge changes for detect-backport-conflicts.yml from trunk.
+  Justification:
+    Keep GitHub Actions configuration in sync with trunk.
+  Votes:
+    +1: ivan (only affects GHA)
+------------------------------------------------------------------------
+</pre>
+
+<p>Further changes currently under consideration are listed in each release line's 
+<a href="https://svn.apache.org/repos/asf/subversion/branches/1.14.x/STATUS">STATUS</a> file.</p>
+
+
+<p>See also <a href="https://svn.apache.org/repos/asf/subversion/trunk/CHANGES">trunk/CHANGES</a>, where all significant-enough changes will summarized for each version by the time it is released.</p>
+
+<p>The list above is generated daily by <a href="https://svn.apache.org/repos/asf/subversion/site/tools/upcoming.py">^/subversion/site/tools/upcoming.py</a>. You could find the changes queued for another release line by running that script in a working copy of, for example, the 1.10.x branch.</p>
+
+</div> <!-- #upcoming-patch-release -->
+
+</div> <!-- #release-notes -->
+
+<div class="h2" id="supported-versions">
+<h2>Supported Versions
+  <a class="sectionlink" href="#supported-versions"
+    title="Link to this section"></a>
+</h2>
+
+<p>See <a href="/roadmap.html#release-planning">How We Plan Releases</a>
+   for details of the release schedule and support levels.</p>
+
+<table cellpadding="0" cellspacing="0">
+<thead>
+<tr>
+<th>Version</th>
+<th>Type of Release</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.14.x</td>
+<td>Long-Term Support</td>
+</tr>
+<tr>
+<tr>
+<td>1.13.x and earlier</td>
+<td>No longer supported</td>
+</tr>
+</tbody>
+</table>
+
+</div> <!-- #supported-versions -->
+
+<!-- ***************** END CONTENT ****************** -->
+</div> <!-- #site-content -->
+</body>
+</html>

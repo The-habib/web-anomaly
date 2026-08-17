@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SSI: CSS+JS inline for speed -->
+  <!-- INLINED-HEAD-BEGIN -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #aaa;
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popovers-popover-box-shadow-color: #aaa;
+
+    --GW-popovers-popover-title-bar-background-color: #fff;
+    --GW-popovers-popover-title-bar-button-color: #777;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #ccc;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #999;
+
+    --GW-popovers-popover-stack-counter-text-color: #fff;
+    --GW-popovers-popover-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #7c7c7c;
+    --GW-popovers-popover-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popovers-popover-box-shadow-color: #7c7c7c;
+
+    --GW-popovers-popover-title-bar-background-color: #000;
+    --GW-popovers-popover-title-bar-button-color: #a6a6a6;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #5c5c5c;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popovers-popover-stack-counter-text-color: #000;
+    --GW-popovers-popover-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popovers-popover-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+.poem span.caesura-mark {
+	opacity: 0.30;
+}
+@media all and (max-width: 649px) {
+	.poem span.caesura-mark {
+		opacity: 0.35;
+	}
+}
+
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1786427108">
+<script src="/static/js/head.js?v=1786427108"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1785906347" as="image">
+
+  <!-- INLINED-HEAD-END -->
+
+  
+  <!-- Google Webmaster requires this tag, but only on the index/homepage -->
+  <meta name="google-site-verification" content="BOhOQI1uMfsqu_DopVApovk1mJD5ZBLfan0s9go3phk">
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="‘Fermi problems’ directory">
+  <meta name="citation_title" content="‘Fermi problems’ directory">
+  <meta name="og:title" content="‘Fermi problems’ directory">
+  <meta name="twitter:title" content="‘Fermi problems’ directory">
+  <meta name="generator" content="Hakyll">
+  <link rel="repository" href="https://github.com/gwern/gwern.net/">
+  <link rel="bug-tracker" href="https://github.com/gwern/gwern.net/issues">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="Bibliography for directory 𝚜𝚌𝚒𝚎𝚗𝚌𝚎/𝚏𝚎𝚛𝚖𝚒-𝚙𝚛𝚘𝚋𝚕𝚎𝚖, most recent first: 1 related tag, 24 annotations, &amp; 9 links (parent).">
+  <meta name="og:description" content="Bibliography for directory 𝚜𝚌𝚒𝚎𝚗𝚌𝚎/𝚏𝚎𝚛𝚖𝚒-𝚙𝚛𝚘𝚋𝚕𝚎𝚖, most recent first: 1 related tag, 24 annotations, &amp; 9 links (parent).">
+  <!-- <meta name="description-raw" content="Bibliography for directory <code>science/fermi-problem</code>, most recent first: 1 <a class='icon-not' href='/doc/science/fermi-problem/index#see-alsos'>related tag</a>, 24 <a class='icon-not' href='/doc/science/fermi-problem/index#links'>annotations</a>, &amp; 9 <a class='icon-not' href='/doc/science/fermi-problem/index#miscellaneous'>links</a> (<a href='/doc/science/index' class='link-page link-tag directory-indexes-upwards link-annotated' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to parent directory'>parent</a>)."> -->
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="science/fermi-problem">
+  <meta name="dc.date.issued" content="2019-03-29">
+  
+  <meta name="citation_publication_date" content="2019-03-29">
+  <meta name="dcterms.modified" content="2026-02-21">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/doc/science/fermi-problem/index">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/doc/science/fermi-problem/index">
+  <meta name="og:url" content="https://gwern.net/doc/science/fermi-problem/index">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/doc/science/fermi-problem/index.md" title="Markdown source of ‘‘Fermi problems’ directory’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-doc-science-fermi-problem-index dropcaps-not">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>‘Fermi problems’ directory · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+</head>
+
+<body class="page-doc-science-fermi-problem-index dropcaps-not">
+  <!-- SSI: Inlined asset links -->
+  <!-- INLINED-ASSET-LINKS-BEGIN-->
+  <link rel="stylesheet" href="/static/css/style.css?v=1786427108">
+<script src="/static/js/script.js?v=1786427108" defer></script>
+
+  <!-- INLINED-ASSET-LINKS-END -->
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <noscript>
+    <style>
+      #navbar { margin-top: 7em; }
+      @media all and (max-width: 649px) { #navbar { margin-top: 10em; } }
+    </style>
+    <div id="noscript-warning-header" class="markdownBody noscript-container">
+      <details open>
+        <summary><wbr></summary>
+        <div class="admonition error colors-invert">
+          <div class="admonition-title">
+            <p><strong>Warning:</strong> JavaScript Disabled!</p>
+          </div>
+          <p>For support of key <a href="/design" title="About: Gwern.net Design: principles, features, links, tricks">website features</a> (link annotation popups/popovers & transclusions, collapsible sections, backlinks, tablesorting, image zooming, <a href="/sidenote">sidenotes</a> etc.), you must enable JavaScript.</p>
+        </div>
+      </details>
+    </div>
+    </noscript>
+
+    <!-- SSI: Navbar -->
+    <!-- NAVBAR-BEGIN-->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="me link-page link-annotated" href="/me" title="Who am I online, what have I done, what am I like? Contact information; sites I use; things I've worked on" rel="author">Me</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/doc/newest/index" title="Most recent link annotations">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+    <!-- NAVBAR-END -->
+
+    <article>
+
+      <header>
+        <h1>‘Fermi problems’ directory</h1>
+      </header>
+
+       
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#see-also" id="toc-see-also">See Also</a></li>
+<li><a href="#gwern" id="toc-gwern">Gwern</a>
+<ul>
+<li><a href="#gwern-et-al-2026-section" id="toc-gwern-et-al-2026-section">“How Long Would ‘Weird Al’ Survive In An Ice Cream Freezer?”, Gwern et al 2026</a></li>
+<li><a href="#gwern-pro-2023-section" id="toc-gwern-pro-2023-section">“How Many Shower Controls Are There?”, Gwern & Pro 2023</a></li>
+<li><a href="#gwern-2025-conference-size-section" id="toc-gwern-2025-conference-size-section">“Conference Fermi Problems”, Gwern 2025</a></li>
+<li><a href="#gwern-note-note-section" id="toc-gwern-note-note-section">“Miscellaneous”, Gwern 2009</a></li>
+<li><a href="#gwern-creative-benchmark-section" id="toc-gwern-creative-benchmark-section">“Towards Benchmarking LLM Diversity & Creativity”, Gwern 2024</a></li>
+<li><a href="#gwern-startup-idea-section" id="toc-gwern-startup-idea-section">“Startup Ideas”, Gwern 2017</a></li>
+<li><a href="#gwern-2013-section" id="toc-gwern-2013-section">“CrossFit Rhabdo Rates”, Gwern 2013</a></li>
+<li><a href="#gwern-2013-kirino-section" id="toc-gwern-2013-kirino-section">“Plausibility of <em>Oreimo</em>’s Kirino”, Gwern 2013</a></li>
+<li><a href="#gwern-2013-bird-poop-section" id="toc-gwern-2013-bird-poop-section">“How Many Numbers Does One See per Minute?”, Gwern 2013</a></li>
+<li><a href="#gwern-2014-reading-every-book-section" id="toc-gwern-2014-reading-every-book-section">“How Long Would It Take to Read Every Book Ever Written If Every Human Started Reading Now?”, Gwern 2014</a></li>
+<li><a href="#gwern-2014-nuke-replacement-section" id="toc-gwern-2014-nuke-replacement-section">“It Would Cost &gt;$100b to Replace All the Warheads in the US Nuclear Arsenal”, Gwern 2014</a></li>
+<li><a href="#gwern-2016-section" id="toc-gwern-2016-section">“The Warm Equation of the Lifetime Odds of Being Pooped on by a Bird”, Gwern 2016</a></li>
+<li><a href="#gwern-prediction-market-section" id="toc-gwern-prediction-market-section">“Prediction Markets”, Gwern 2009</a></li>
+<li><a href="#gwern-silk-road-section" id="toc-gwern-silk-road-section">“Silk Road 1: Theory & Practice”, Gwern 2011</a></li>
+<li><a href="#gwern-modafinil-section" id="toc-gwern-modafinil-section">“Modafinil”, Gwern 2009</a></li>
+<li><a href="#gwern-girl-scouts-section" id="toc-gwern-girl-scouts-section">“Girl Scouts & Good Corporate Governance”, Gwern 2011</a></li>
+</ul></li>
+<li><a href="#links" id="toc-links">Links</a>
+<ul>
+<li><a href="#cryptozo-2025-section" id="toc-cryptozo-2025-section">“You Can Use Any Phone With a Barometer to Make a Scale. All IPhones Since the 6…”, cryptozo 2025</a></li>
+<li><a href="#sabino-2025-section" id="toc-sabino-2025-section">“Caesar’s Last Breath”, Sabino 2025</a></li>
+<li><a href="#_9lfbjHuz-section" id="toc-_9lfbjHuz-section">“Show HN: Wordle-Style Game for Fermi Questions”</a></li>
+<li><a href="#_yCS-BGjy-section" id="toc-_yCS-BGjy-section">“Introduction to Fermi Estimates”</a></li>
+<li><a href="#rao-2022-section" id="toc-rao-2022-section">“Fermi Estimates and Dyson Designs”, Rao 2022</a></li>
+<li><a href="#gwern-doc-science-fermi-problem-abstract-section" id="toc-gwern-doc-science-fermi-problem-abstract-section">“Fermi Calculation Examples”, Gwern 2019</a></li>
+<li><a href="#asorey-dávalos-2011-section" id="toc-asorey-dávalos-2011-section">“Fermi Problem: Power Developed at the Eruption of the Puyehue-Cordón Caulle Volcanic System in June 2011”, Asorey & Dávalos 2011</a></li>
+<li><a href="#colman-et-al-2009-section" id="toc-colman-et-al-2009-section">“Caloric Restriction Delays Disease Onset and Mortality in Rhesus Monkeys”, Colman et al 2009</a></li>
+<li><a href="#shiga-2002-section" id="toc-shiga-2002-section">“<em>FLEEP</em>: The Collected Comic”, Shiga 2002</a></li>
+<li><a href="#hofstadter-1982b-section" id="toc-hofstadter-1982b-section">“On Number Numbness”, Hofstadter 1982b</a></li>
+<li><a href="#press-1980-section" id="toc-press-1980-section">“Man’s Size in Terms of Fundamental Constants”, Press 1980</a></li>
+<li><a href="#_6fYjhi1f-section" id="toc-_6fYjhi1f-section">“Estimation—Part I: How to Do It?”</a></li>
+<li><a href="#_ENHtuDrr-section" id="toc-_ENHtuDrr-section">“Risk Management and Sounding Crazy”</a></li>
+<li><a href="#_Sy7eLQZD-section" id="toc-_Sy7eLQZD-section">“Quantified Intuitions: An Epistemics Training Website including a New EA-Themed Calibration App”</a></li>
+<li><a href="#_VmNxDQoO-section" id="toc-_VmNxDQoO-section">“The Estimation Game: a Monthly Fermi Estimation Web App”</a></li>
+<li><a href="#_gJe1xD_5-section" id="toc-_gJe1xD_5-section">“Some Key Numbers That Every Effective Altruist Should Know”, benthamite 2026</a></li>
+<li><a href="#_lZHNLl8I-section" id="toc-_lZHNLl8I-section">“Napkin-Math: Techniques and Numbers for Estimating System’s Performance from First-Principles”, sirupsen 2026</a></li>
+<li><a href="#_XCquyazc-section" id="toc-_XCquyazc-section">“How Should Mathematics Be Taught to Non-Mathematicians?”, Gowers 2026</a></li>
+<li><a href="#_Qc3YcIFW-section" id="toc-_Qc3YcIFW-section">“Neurotechnology Numbers Worth Knowing”, Cvitkovic 2026</a></li>
+<li><a href="#_6Stbr2bL-section" id="toc-_6Stbr2bL-section">“Reactionary Philosophy In An Enormous, Planet-Sized Nutshell”</a></li>
+<li><a href="#_r0a8WoZG-section" id="toc-_r0a8WoZG-section">“What If?”, Munroe 2026</a></li>
+<li><a href="#_lUCIbu1E-section" id="toc-_lUCIbu1E-section">“Fermi Estimates”</a></li>
+<li><a href="#_fFxwBmuJ-section" id="toc-_fFxwBmuJ-section">“Fermi Estimates”</a></li>
+<li><a href="#_FI4nZ1li-section" id="toc-_FI4nZ1li-section">“/r/estimation”</a></li>
+<li><a href="#titled-links-wikipedia" id="toc-titled-links-wikipedia">Wikipedia (14)</a></li>
+</ul></li>
+<li><a href="#miscellaneous" id="toc-miscellaneous">Miscellaneous</a></li>
+<li><a href="#link-bibliography-section" id="toc-link-bibliography-section">Bibliography</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div id="manual-annotation" class="abstract-small abstract-tag-directory">
+<p><a href="/doc/science/fermi-problem/abstract" id="gwern-doc-science-fermi-problem-abstract" class="prefetch-not link-annotated include-content-core include-strict link-page" title="Transclude link for doc/science/fermi-problem/ tag-abstract page.">[page summary]</a></p>
+</div>
+<section id="see-also" class="level1">
+<h1><a href="#see-also" title="Link to section: § &#39;See Also&#39;">See Also</a></h1>
+<div id="see-alsos" class="directory-indexes columns">
+<ul>
+<li><p><a href="/doc/science/index" id="_THdlH69w" class="prefetch-not link-page link-annotated link-tag directory-indexes-upwards" data-link-icon="arrow-up-left" data-link-icon-type="svg" rel="tag" title="Link to parent directory &#39;doc/science/&#39; (ascending)">Parent (‘<em>science</em>’ tag)</a></p></li>
+<li><p><a href="/doc/statistics/prediction/index" id="_KmW2jQgc" class="prefetch-not link-page link-annotated link-tag directory-indexes-sideways" data-link-icon="arrow-right" data-link-icon-type="svg" rel="tag" title="‘forecasting’ directory"><em>forecasting</em></a></p></li>
+</ul>
+</div>
+</section>
+<section id="gwern" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#gwern" title="Link to section: § &#39;Gwern&#39;">Gwern</a></h1>
+<section id="gwern-et-al-2026-section" class="level2">
+<h2><a href="#gwern-et-al-2026-section" title="Link to section: § &#39;“How Long Would ‘Weird Al’ Survive In An Ice Cream Freezer?”, Gwern et al 2026&#39;">“How Long Would ‘Weird Al’ Survive In An Ice Cream Freezer?”, Gwern et al 2026</a></h2>
+<p><strong><a href="/rocky-road" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;How Long Would ‘Weird Al’ Survive In An Ice Cream Freezer?&#39;, Gwern et al 2026">How Long Would ‘Weird Al’ Survive In An Ice Cream Freezer?</a></strong></p>
+</section>
+<section id="gwern-pro-2023-section" class="level2">
+<h2><a href="#gwern-pro-2023-section" title="Link to section: § &#39;“How Many Shower Controls Are There?”, Gwern &amp; Pro 2023&#39;">“How Many Shower Controls Are There?”, Gwern & Pro 2023</a></h2>
+<p><strong><a href="/shower-controls" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;How Many Shower Controls Are There?&#39;, Gwern &amp; Pro 2023">How Many Shower Controls Are There?</a></strong></p>
+</section>
+<section id="gwern-2025-conference-size-section" class="level2">
+<h2><a href="#gwern-2025-conference-size-section" title="Link to section: § &#39;“Conference Fermi Problems”, Gwern 2025&#39;">“Conference Fermi Problems”, Gwern 2025</a></h2>
+<p><strong><a href="/blog/2025/conference-size" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Conference Fermi Problems&#39;, Gwern 2025">Conference Fermi Problems</a></strong></p>
+</section>
+<section id="gwern-note-note-section" class="level2">
+<h2><a href="#gwern-note-note-section" title="Link to section: § &#39;“Miscellaneous”, Gwern 2009&#39;">“Miscellaneous”, Gwern 2009</a></h2>
+<p><strong><a href="/note/note" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Miscellaneous&#39;, Gwern 2009">Miscellaneous</a></strong></p>
+</section>
+<section id="gwern-creative-benchmark-section" class="level2">
+<h2><a href="#gwern-creative-benchmark-section" title="Link to section: § &#39;“Towards Benchmarking LLM Diversity &amp; Creativity”, Gwern 2024&#39;">“Towards Benchmarking LLM Diversity & Creativity”, Gwern 2024</a></h2>
+<p><strong><a href="/creative-benchmark" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Towards Benchmarking LLM Diversity &amp; Creativity&#39;, Gwern 2024">Towards Benchmarking LLM Diversity & Creativity</a></strong></p>
+</section>
+<section id="gwern-startup-idea-section" class="level2">
+<h2><a href="#gwern-startup-idea-section" title="Link to section: § &#39;“Startup Ideas”, Gwern 2017&#39;">“Startup Ideas”, Gwern 2017</a></h2>
+<p><strong><a href="/startup-idea" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Startup Ideas&#39;, Gwern 2017">Startup Ideas</a></strong></p>
+</section>
+<section id="gwern-2013-section" class="level2">
+<h2><a href="#gwern-2013-section" title="Link to section: § &#39;“CrossFit Rhabdo Rates”, Gwern 2013&#39;">“CrossFit Rhabdo Rates”, Gwern 2013</a></h2>
+<p><strong><a href="https://www.lesswrong.com/posts/aARGW967NexuSrCwW/rationality-competitiveness-and-akrasia?commentId=ggmadikyQcspwpfA3" class="link-live id-not include-annotation" data-url-iframe="https://www.greaterwrong.com/posts/aARGW967NexuSrCwW/rationality-competitiveness-and-akrasia/comment/ggmadikyQcspwpfA3?format=preview&amp;theme=classic" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text" title="&#39;CrossFit rhabdo rates&#39;, Gwern 2013">CrossFit rhabdo rates</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://www.lesswrong.com/posts/aARGW967NexuSrCwW/rationality-competitiveness-and-akrasia?commentId=ggmadikyQcspwpfA3" class="link-live id-not link-annotated-not include-content include-lazy" data-url-iframe="https://www.greaterwrong.com/posts/aARGW967NexuSrCwW/rationality-competitiveness-and-akrasia/comment/ggmadikyQcspwpfA3?format=preview&amp;theme=classic" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text"><code>https://www.lesswrong.com/posts/aARGW967NexuSrCwW/rationality-competitiveness-and-akrasia?commentId=ggmadikyQcspwpfA3</code></a></p>
+</div>
+</div>
+</section>
+<section id="gwern-2013-kirino-section" class="level2">
+<h2><a href="#gwern-2013-kirino-section" title="Link to section: § &#39;“Plausibility of Oreimo’s Kirino”, Gwern 2013&#39;">“Plausibility of <em>Oreimo</em>’s Kirino”, Gwern 2013</a></h2>
+<p><strong><a href="https://www.reddit.com/r/anime/comments/1cqtae/in_honor_of_kuronekos_birthday_my_favorite_scene/c9ja9a5/" class="id-not include-annotation" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg" title="&#39;Plausibility of &lt;em&gt;Oreimo&lt;/em&gt;’s Kirino&#39;, Gwern 2013">Plausibility of <em>Oreimo</em>’s Kirino</a></strong></p>
+</section>
+<section id="gwern-2013-bird-poop-section" class="level2">
+<h2><a href="#gwern-2013-bird-poop-section" title="Link to section: § &#39;“How Many Numbers Does One See per Minute?”, Gwern 2013&#39;">“How Many Numbers Does One See per Minute?”, Gwern 2013</a></h2>
+<p><strong><a href="/doc/www/old.reddit.com/1b2574f28d591fc09d0b3c35a207f4ddf2652402.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/old.reddit.com/1b2574f28d591fc09d0b3c35a207f4ddf2652402.html" data-url-original="https://www.reddit.com/r/estimation/comments/1f765d/request_in_an_average_lifetime_how_many_of_the/ca85zcl" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg" title="&#39;How many numbers does one see per minute?&#39;, Gwern 2013">How many numbers does one see per minute?</a></strong></p>
+</section>
+<section id="gwern-2014-reading-every-book-section" class="level2">
+<h2><a href="#gwern-2014-reading-every-book-section" title="Link to section: § &#39;“How Long Would It Take to Read Every Book Ever Written If Every Human Started Reading Now?”, Gwern 2014&#39;">“How Long Would It Take to Read Every Book Ever Written If Every Human Started Reading Now?”, Gwern 2014</a></h2>
+<p><strong><a href="https://www.reddit.com/r/estimation/comments/27i4wq/request_how_long_would_it_take_to_read_every_book/ci1jfno/" class="id-not include-annotation" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg" title="&#39;How long would it take to read every book ever written if every human started reading now?&#39;, Gwern 2014">How long would it take to read every book ever written if every human started reading now?</a></strong></p>
+</section>
+<section id="gwern-2014-nuke-replacement-section" class="level2">
+<h2><a href="#gwern-2014-nuke-replacement-section" title="Link to section: § &#39;“It Would Cost &amp;gt;$100b to Replace All the Warheads in the US Nuclear Arsenal”, Gwern 2014&#39;">“It Would Cost &gt;$100b to Replace All the Warheads in the US Nuclear Arsenal”, Gwern 2014</a></h2>
+<p><strong><a href="https://www.reddit.com/r/estimation/comments/2chtft/if_all_the_uss_atomic_bombs_disappeared_assuming/cjfyses/" class="id-not include-annotation" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg" title="&#39;It would cost &gt;$100b to replace all the warheads in the US nuclear arsenal&#39;, Gwern 2014">It would cost &gt;$100b to replace all the warheads in the US nuclear arsenal</a></strong></p>
+</section>
+<section id="gwern-2016-section" class="level2">
+<h2><a href="#gwern-2016-section" title="Link to section: § &#39;“The Warm Equation of the Lifetime Odds of Being Pooped on by a Bird”, Gwern 2016&#39;">“The Warm Equation of the Lifetime Odds of Being Pooped on by a Bird”, Gwern 2016</a></h2>
+<p><strong><a href="/doc/www/old.reddit.com/9a109ad2fd917edb72e126269ff6494726fb79ef.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/old.reddit.com/9a109ad2fd917edb72e126269ff6494726fb79ef.html" data-url-original="https://www.reddit.com/r/estimation/comments/4f9bxl/what_are_the_lifetime_odds_of_being_pooped_on_by/" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg" title="&#39;The Warm Equation of the lifetime odds of being pooped on by a bird&#39;, Gwern 2016">The Warm Equation of the lifetime odds of being pooped on by a bird</a></strong></p>
+</section>
+<section id="gwern-prediction-market-section" class="level2">
+<h2><a href="#gwern-prediction-market-section" title="Link to section: § &#39;“Prediction Markets”, Gwern 2009&#39;">“Prediction Markets”, Gwern 2009</a></h2>
+<p><strong><a href="/prediction-market" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Prediction Markets&#39;, Gwern 2009">Prediction Markets</a></strong></p>
+</section>
+<section id="gwern-silk-road-section" class="level2">
+<h2><a href="#gwern-silk-road-section" title="Link to section: § &#39;“Silk Road 1: Theory &amp; Practice”, Gwern 2011&#39;">“Silk Road 1: Theory & Practice”, Gwern 2011</a></h2>
+<p><strong><a href="/silk-road" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Silk Road 1: Theory &amp; Practice&#39;, Gwern 2011">Silk Road 1: Theory & Practice</a></strong></p>
+</section>
+<section id="gwern-modafinil-section" class="level2">
+<h2><a href="#gwern-modafinil-section" title="Link to section: § &#39;“Modafinil”, Gwern 2009&#39;">“Modafinil”, Gwern 2009</a></h2>
+<p><strong><a href="/modafinil" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Modafinil&#39;, Gwern 2009">Modafinil</a></strong></p>
+</section>
+<section id="gwern-girl-scouts-section" class="level2">
+<h2><a href="#gwern-girl-scouts-section" title="Link to section: § &#39;“Girl Scouts &amp; Good Corporate Governance”, Gwern 2011&#39;">“Girl Scouts & Good Corporate Governance”, Gwern 2011</a></h2>
+<p><strong><a href="/girl-scouts" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Girl Scouts &amp; Good Corporate Governance&#39;, Gwern 2011">Girl Scouts & Good Corporate Governance</a></strong></p>
+</section>
+</section>
+<section id="links" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#links" title="Link to section: § &#39;Links&#39;">Links</a></h1>
+<section id="cryptozo-2025-section" class="level2">
+<h2><a href="#cryptozo-2025-section" title="Link to section: § &#39;“You Can Use Any Phone With a Barometer to Make a Scale. All IPhones Since the 6…”, cryptozo 2025&#39;">“You Can Use Any Phone With a Barometer to Make a Scale. All IPhones Since the 6…”, cryptozo 2025</a></h2>
+<p><strong><a href="/doc/www/news.ycombinator.com/cc44c900e8b361fce65e9b9ceb85586b44bf11d2.html" class="link-live link-annotated id-not include-annotation" data-url-archive="/doc/www/news.ycombinator.com/cc44c900e8b361fce65e9b9ceb85586b44bf11d2.html" data-url-original="https://news.ycombinator.com/item?id=44638246" data-link-icon="hacker-news" data-link-icon-color="#f26522" data-link-icon-type="svg" title="&#39;You can use any phone with a barometer to make a scale. All iPhones since the 6…&#39;, cryptozo 2025">You can use any phone with a barometer to make a scale. All iPhones since the 6…</a></strong></p>
+</section>
+<section id="sabino-2025-section" class="level2">
+<h2><a href="#sabino-2025-section" title="Link to section: § &#39;“Caesar’s Last Breath”, Sabino 2025&#39;">“Caesar’s Last Breath”, Sabino 2025</a></h2>
+<p><strong><a href="https://charliesabino.com/caesars-last-breath/" class="id-not include-annotation" title="&#39;Caesar’s Last Breath&#39;, Sabino 2025">Caesar’s Last Breath</a></strong></p>
+</section>
+<section id="_9lfbjHuz-section" class="level2">
+<h2><a href="#_9lfbjHuz-section" title="Link to section: § &#39;“Show HN: Wordle-Style Game for Fermi Questions”&#39;">“Show HN: Wordle-Style Game for Fermi Questions”</a></h2>
+<p><strong><a href="/doc/www/news.ycombinator.com/7beacb97d3b40ed5167d0e632e479837941d16ee.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/news.ycombinator.com/7beacb97d3b40ed5167d0e632e479837941d16ee.html" data-url-original="https://news.ycombinator.com/item?id=44769338" data-link-icon="hacker-news" data-link-icon-color="#f26522" data-link-icon-type="svg" title="Show HN: Wordle-style game for Fermi questions">Show HN: Wordle-style game for Fermi questions</a></strong></p>
+</section>
+<section id="_yCS-BGjy-section" class="level2">
+<h2><a href="#_yCS-BGjy-section" title="Link to section: § &#39;“Introduction to Fermi Estimates”&#39;">“Introduction to Fermi Estimates”</a></h2>
+<p><strong><a href="/doc/www/nunosempere.com/578265fde44dbd5d9441dec00fe657c3444769cb.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/nunosempere.com/578265fde44dbd5d9441dec00fe657c3444769cb.html" data-url-original="https://nunosempere.com/blog/2022/08/20/fermi-introduction/" data-link-icon="nuno" data-link-icon-type="text,quad,mono" title="Introduction to Fermi estimates">Introduction to Fermi estimates</a></strong></p>
+</section>
+<section id="rao-2022-section" class="level2">
+<h2><a href="#rao-2022-section" title="Link to section: § &#39;“Fermi Estimates and Dyson Designs”, Rao 2022&#39;">“Fermi Estimates and Dyson Designs”, Rao 2022</a></h2>
+<p><strong><a href="/doc/www/www.ribbonfarm.com/9058a7d4e222c6b0dbd4d6dabe00605b795945cc.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.ribbonfarm.com/9058a7d4e222c6b0dbd4d6dabe00605b795945cc.html" data-url-original="https://www.ribbonfarm.com/2022/03/30/fermi-estimates-and-dyson-designs/" data-link-icon="ℝ𝔽" data-link-icon-type="text,sans" title="&#39;Fermi Estimates and Dyson Designs&#39;, Rao 2022">Fermi Estimates and Dyson Designs</a></strong></p>
+</section>
+<section id="gwern-doc-science-fermi-problem-abstract-section" class="level2">
+<h2><a href="#gwern-doc-science-fermi-problem-abstract-section" title="Link to section: § &#39;“Fermi Calculation Examples”, Gwern 2019&#39;">“Fermi Calculation Examples”, Gwern 2019</a></h2>
+<p><strong><a href="/doc/science/fermi-problem/abstract" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Fermi Calculation Examples&#39;, Gwern 2019">Fermi Calculation Examples</a></strong></p>
+</section>
+<section id="asorey-dávalos-2011-section" class="level2">
+<h2><a href="#asorey-dávalos-2011-section" title="Link to section: § &#39;“Fermi Problem: Power Developed at the Eruption of the Puyehue-Cordón Caulle Volcanic System in June 2011”, Asorey &amp; Dávalos 2011&#39;">“Fermi Problem: Power Developed at the Eruption of the Puyehue-Cordón Caulle Volcanic System in June 2011”, Asorey & Dávalos 2011</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/91de71bdeb496681384310f37516c3744d05d706.pdf" class="link-live link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/1109.1165?fallback=original" data-url-archive="/doc/www/arxiv.org/91de71bdeb496681384310f37516c3744d05d706.pdf" data-url-original="https://arxiv.org/abs/1109.1165" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Fermi Problem: Power developed at the eruption of the Puyehue-Cordón Caulle volcanic system in June 2011&#39;, Asorey &amp; Dávalos 2011">Fermi Problem: Power developed at the eruption of the Puyehue-Cordón Caulle volcanic system in June 2011</a></strong></p>
+</section>
+<section id="colman-et-al-2009-section" class="level2">
+<h2><a href="#colman-et-al-2009-section" title="Link to section: § &#39;“Caloric Restriction Delays Disease Onset and Mortality in Rhesus Monkeys”, Colman et al 2009&#39;">“Caloric Restriction Delays Disease Onset and Mortality in Rhesus Monkeys”, Colman et al 2009</a></h2>
+<p><strong><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812811/" class="link-annotated id-not include-annotation" data-link-icon="nlm-ncbi" data-link-icon-color="#20558a" data-link-icon-type="svg" title="&#39;Caloric restriction delays disease onset and mortality in rhesus monkeys&#39;, Colman et al 2009">Caloric restriction delays disease onset and mortality in rhesus monkeys</a></strong></p>
+</section>
+<section id="shiga-2002-section" class="level2">
+<h2><a href="#shiga-2002-section" title="Link to section: § &#39;“FLEEP: The Collected Comic”, Shiga 2002&#39;">“<em>FLEEP</em>: The Collected Comic”, Shiga 2002</a></h2>
+<p><strong><a href="/doc/www/www.aaronsw.com/4112dc232e9aa2d3075ac79dead37587e0aa5344.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.aaronsw.com/4112dc232e9aa2d3075ac79dead37587e0aa5344.html" data-url-original="http://www.aaronsw.com/2002/fleep/" title="&#39;&lt;em&gt;FLEEP&lt;/em&gt;: The Collected Comic&#39;, Shiga 2002"><em>FLEEP</em>: The Collected Comic</a></strong></p>
+</section>
+<section id="hofstadter-1982b-section" class="level2">
+<h2><a href="#hofstadter-1982b-section" title="Link to section: § &#39;“On Number Numbness”, Hofstadter 1982b&#39;">“On Number Numbness”, Hofstadter 1982b</a></h2>
+<p><strong><a href="/doc/math/1982-hofstadter-2.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;On Number Numbness&#39;, Hofstadter 1982b">On Number Numbness</a></strong></p>
+</section>
+<section id="press-1980-section" class="level2">
+<h2><a href="#press-1980-section" title="Link to section: § &#39;“Man’s Size in Terms of Fundamental Constants”, Press 1980&#39;">“Man’s Size in Terms of Fundamental Constants”, Press 1980</a></h2>
+<p><strong><a href="/doc/science/physics/astronomy/1980-press.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Man’s size in terms of fundamental constants&#39;, Press 1980">Man’s size in terms of fundamental constants</a></strong></p>
+</section>
+<section id="_6fYjhi1f-section" class="level2">
+<h2><a href="#_6fYjhi1f-section" title="Link to section: § &#39;“Estimation—Part I: How to Do It?”&#39;">“Estimation—Part I: How to Do It?”</a></h2>
+<p><strong><a href="/doc/www/80000hours.org/900a303229f586207804c83124778b8b8ab18945.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/80000hours.org/900a303229f586207804c83124778b8b8ab18945.html" data-url-original="https://80000hours.org/2013/05/estimation-part-i-how-to-do-it/" data-link-icon="80k" data-link-icon-color="#2ebdd1" data-link-icon-type="text,tri,sans" title="Estimation—Part I: How to do it?">Estimation—Part I: How to do it?</a></strong></p>
+</section>
+<section id="_ENHtuDrr-section" class="level2">
+<h2><a href="#_ENHtuDrr-section" title="Link to section: § &#39;“Risk Management and Sounding Crazy”&#39;">“Risk Management and Sounding Crazy”</a></h2>
+<p><strong><a href="https://brontecapital.blogspot.com/2011/09/risk-management-and-sounding-crazy.html" class="link-live id-not include-annotation" title="Risk management and sounding crazy">Risk management and sounding crazy</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View HTML</strong>:</p>
+<p><a href="https://brontecapital.blogspot.com/2011/09/risk-management-and-sounding-crazy.html" class="link-live id-not link-annotated-not include-content include-lazy"><code>https://brontecapital.blogspot.com/2011/09/risk-management-and-sounding-crazy.html</code></a></p>
+</div>
+</div>
+</section>
+<section id="_Sy7eLQZD-section" class="level2">
+<h2><a href="#_Sy7eLQZD-section" title="Link to section: § &#39;“Quantified Intuitions: An Epistemics Training Website including a New EA-Themed Calibration App”&#39;">“Quantified Intuitions: An Epistemics Training Website including a New EA-Themed Calibration App”</a></h2>
+<p><strong><a href="https://forum.effectivealtruism.org/posts/W6gGKCm6yEXRW5nJu/quantified-intuitions-an-epistemics-training-website" class="link-live id-not include-annotation" data-url-iframe="https://ea.greaterwrong.com/posts/W6gGKCm6yEXRW5nJu/quantified-intuitions-an-epistemics-training-website?format=preview&amp;theme=classic" data-link-icon="EA" data-link-icon-color="#06819a" data-link-icon-type="text" title="Quantified Intuitions: An epistemics training website including a new EA-themed calibration app">Quantified Intuitions: An epistemics training website including a new EA-themed calibration app</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://forum.effectivealtruism.org/posts/W6gGKCm6yEXRW5nJu/quantified-intuitions-an-epistemics-training-website" class="link-live id-not link-annotated-not include-content include-lazy" data-url-iframe="https://ea.greaterwrong.com/posts/W6gGKCm6yEXRW5nJu/quantified-intuitions-an-epistemics-training-website?format=preview&amp;theme=classic" data-link-icon="EA" data-link-icon-color="#06819a" data-link-icon-type="text"><code>https://forum.effectivealtruism.org/posts/W6gGKCm6yEXRW5nJu/quantified-intuitions-an-epistemics-training-website</code></a></p>
+</div>
+</div>
+</section>
+<section id="_VmNxDQoO-section" class="level2">
+<h2><a href="#_VmNxDQoO-section" title="Link to section: § &#39;“The Estimation Game: a Monthly Fermi Estimation Web App”&#39;">“The Estimation Game: a Monthly Fermi Estimation Web App”</a></h2>
+<p><strong><a href="https://forum.effectivealtruism.org/posts/XDwnGK7x4EjkaHbje/the-estimation-game-a-monthly-fermi-estimation-web-app" class="link-live id-not include-annotation" data-url-iframe="https://ea.greaterwrong.com/posts/XDwnGK7x4EjkaHbje/the-estimation-game-a-monthly-fermi-estimation-web-app?format=preview&amp;theme=classic" data-link-icon="EA" data-link-icon-color="#06819a" data-link-icon-type="text" title="The Estimation Game: a monthly Fermi estimation web app">The Estimation Game: a monthly Fermi estimation web app</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://forum.effectivealtruism.org/posts/XDwnGK7x4EjkaHbje/the-estimation-game-a-monthly-fermi-estimation-web-app" class="link-live id-not link-annotated-not include-content include-lazy" data-url-iframe="https://ea.greaterwrong.com/posts/XDwnGK7x4EjkaHbje/the-estimation-game-a-monthly-fermi-estimation-web-app?format=preview&amp;theme=classic" data-link-icon="EA" data-link-icon-color="#06819a" data-link-icon-type="text"><code>https://forum.effectivealtruism.org/posts/XDwnGK7x4EjkaHbje/the-estimation-game-a-monthly-fermi-estimation-web-app</code></a></p>
+</div>
+</div>
+</section>
+<section id="_gJe1xD_5-section" class="level2">
+<h2><a href="#_gJe1xD_5-section" title="Link to section: § &#39;“Some Key Numbers That Every Effective Altruist Should Know”, benthamite 2026&#39;">“Some Key Numbers That Every Effective Altruist Should Know”, benthamite 2026</a></h2>
+<p><strong><a href="/doc/www/github.com/9ed11971939ac1089cc0b8154a8faa0e667aa5b0.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/github.com/9ed11971939ac1089cc0b8154a8faa0e667aa5b0.html" data-url-original="https://github.com/benthamite/EA-numbers" data-link-icon="github" data-link-icon-type="svg" title="&#39;Some key numbers that every Effective Altruist should know&#39;, benthamite 2026">Some key numbers that every Effective Altruist should know</a></strong></p>
+</section>
+<section id="_lZHNLl8I-section" class="level2">
+<h2><a href="#_lZHNLl8I-section" title="Link to section: § &#39;“Napkin-Math: Techniques and Numbers for Estimating System’s Performance from First-Principles”, sirupsen 2026&#39;">“Napkin-Math: Techniques and Numbers for Estimating System’s Performance from First-Principles”, sirupsen 2026</a></h2>
+<p><strong><a href="https://github.com/sirupsen/napkin-math" class="id-not include-annotation" data-link-icon="github" data-link-icon-type="svg" title="&#39;napkin-math: Techniques and numbers for estimating system’s performance from first-principles&#39;, sirupsen 2026">napkin-math: Techniques and numbers for estimating system’s performance from first-principles</a></strong></p>
+</section>
+<section id="_XCquyazc-section" class="level2">
+<h2><a href="#_XCquyazc-section" title="Link to section: § &#39;“How Should Mathematics Be Taught to Non-Mathematicians?”, Gowers 2026&#39;">“How Should Mathematics Be Taught to Non-Mathematicians?”, Gowers 2026</a></h2>
+<p><strong><a href="/doc/www/gowers.wordpress.com/393f0df1d9a3d8a1800ccd5ccff8415fcc2184e2.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/gowers.wordpress.com/393f0df1d9a3d8a1800ccd5ccff8415fcc2184e2.html" data-url-original="https://gowers.wordpress.com/2012/06/08/how-should-mathematics-be-taught-to-non-mathematicians/" title="&#39;How should mathematics be taught to non-mathematicians?&#39;, Gowers 2026">How should mathematics be taught to non-mathematicians?</a></strong></p>
+</section>
+<section id="_Qc3YcIFW-section" class="level2">
+<h2><a href="#_Qc3YcIFW-section" title="Link to section: § &#39;“Neurotechnology Numbers Worth Knowing”, Cvitkovic 2026&#39;">“Neurotechnology Numbers Worth Knowing”, Cvitkovic 2026</a></h2>
+<p><strong><a href="/doc/www/milan.cvitkovic.net/f2b5d0ac2f6644e29c9839602b8fdfbe834c452f.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/milan.cvitkovic.net/f2b5d0ac2f6644e29c9839602b8fdfbe834c452f.html" data-url-original="https://milan.cvitkovic.net/writing/neurotechnology_numbers_worth_knowing/" title="&#39;Neurotechnology Numbers Worth Knowing&#39;, Cvitkovic 2026">Neurotechnology Numbers Worth Knowing</a></strong></p>
+</section>
+<section id="_6Stbr2bL-section" class="level2">
+<h2><a href="#_6Stbr2bL-section" title="Link to section: § &#39;“Reactionary Philosophy In An Enormous, Planet-Sized Nutshell”&#39;">“Reactionary Philosophy In An Enormous, Planet-Sized Nutshell”</a></h2>
+<p><strong><a href="https://slatestarcodex.com/2013/03/03/reactionary-philosophy-in-an-enormous-planet-sized-nutshell/#comment-544" class="link-live id-not include-annotation" data-link-icon="SSC" data-link-icon-color="#5175c2" data-link-icon-type="text,tri" title="Reactionary Philosophy In An Enormous, Planet-Sized Nutshell">Reactionary Philosophy In An Enormous, Planet-Sized Nutshell</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://slatestarcodex.com/2013/03/03/reactionary-philosophy-in-an-enormous-planet-sized-nutshell/#comment-544" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="SSC" data-link-icon-color="#5175c2" data-link-icon-type="text,tri"><code>https://slatestarcodex.com/2013/03/03/reactionary-philosophy-in-an-enormous-planet-sized-nutshell/#comment-544</code></a></p>
+</div>
+</div>
+</section>
+<section id="_r0a8WoZG-section" class="level2">
+<h2><a href="#_r0a8WoZG-section" title="Link to section: § &#39;“What If?”, Munroe 2026&#39;">“What If?”, Munroe 2026</a></h2>
+<p><strong><a href="https://what-if.xkcd.com/" class="link-live id-not include-annotation" data-link-icon="XKCD" data-link-icon-type="text,quad,sans" title="&#39;What If?&#39;, Munroe 2026">What If?</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://what-if.xkcd.com/" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="XKCD" data-link-icon-type="text,quad,sans"><code>https://what-if.xkcd.com/</code></a></p>
+</div>
+</div>
+</section>
+<section id="_lUCIbu1E-section" class="level2">
+<h2><a href="#_lUCIbu1E-section" title="Link to section: § &#39;“Fermi Estimates”&#39;">“Fermi Estimates”</a></h2>
+<p><strong><a href="https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates" class="link-live id-not include-annotation" data-url-iframe="https://www.greaterwrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates?format=preview&amp;theme=classic" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text" title="Fermi Estimates">Fermi Estimates</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates" class="link-live id-not link-annotated-not include-content include-lazy" data-url-iframe="https://www.greaterwrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates?format=preview&amp;theme=classic" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text"><code>https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates</code></a></p>
+</div>
+</div>
+</section>
+<section id="_fFxwBmuJ-section" class="level2">
+<h2><a href="#_fFxwBmuJ-section" title="Link to section: § &#39;“Fermi Estimates”&#39;">“Fermi Estimates”</a></h2>
+<p><strong><a href="https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates8pts" class="link-live id-not include-annotation" data-url-iframe="https://www.greaterwrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates8pts?format=preview&amp;theme=classic" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text" title="Fermi Estimates">Fermi Estimates</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View External Link</strong>:</p>
+<p><a href="https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates8pts" class="link-live id-not link-annotated-not include-content include-lazy" data-url-iframe="https://www.greaterwrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates8pts?format=preview&amp;theme=classic" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text"><code>https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates8pts</code></a></p>
+</div>
+</div>
+</section>
+<section id="_FI4nZ1li-section" class="level2">
+<h2><a href="#_FI4nZ1li-section" title="Link to section: § &#39;“/r/estimation”&#39;">“/r/estimation”</a></h2>
+<p><strong><a href="/doc/www/old.reddit.com/bb4325f5c31e7a9b02469da85e10d4ec378643f2.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/old.reddit.com/bb4325f5c31e7a9b02469da85e10d4ec378643f2.html" data-url-original="https://www.reddit.com/r/estimation/" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg" title="/r/estimation">/r/estimation</a></strong></p>
+</section>
+<section id="titled-links-wikipedia" class="level2 collapse">
+<h2 class="collapse"><a href="#titled-links-wikipedia" title="Link to section: § &#39;Wikipedia (14)&#39;">Wikipedia (14)</a></h2>
+<ol type="1">
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Benford%27s_law" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Benford%27s_law#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Benford’s law">Benford’s law</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Dimensional_analysis" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Dimensional_analysis#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Dimensional analysis">Dimensional analysis</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Dimensional_analysis" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Dimensional_analysis#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Dimensional analysis"><code>https://en.wikipedia.org/wiki/Dimensional_analysis</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Douglas_Hofstadter" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Douglas_Hofstadter#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Douglas Hofstadter">Douglas Hofstadter</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Drake_equation" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Drake_equation#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Drake equation">Drake equation</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Fermi_problem" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Fermi_problem#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Fermi problem">Fermi problem</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Log-normal_distribution" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Log-normal_distribution#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Log-normal distribution">Log-normal distribution</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Median_lethal_dose#Examples" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Median_lethal_dose#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Median lethal dose § Examples">Median lethal dose § Examples</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Median_lethal_dose#Examples" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Median_lethal_dose#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Median lethal dose § Examples"><code>https://en.wikipedia.org/wiki/Median_lethal_dose#Examples</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(data)" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Orders_of_magnitude_(data)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Orders of magnitude: data">Orders of magnitude: data</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(data)" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Orders_of_magnitude_(data)#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Orders of magnitude: data"><code>https://en.wikipedia.org/wiki/Orders_of_magnitude_(data)</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(energy)" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Orders_of_magnitude_(energy)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Orders of magnitude: energy">Orders of magnitude: energy</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(energy)" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Orders_of_magnitude_(energy)#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Orders of magnitude: energy"><code>https://en.wikipedia.org/wiki/Orders_of_magnitude_(energy)</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(power)" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Orders_of_magnitude_(power)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Orders of magnitude: power">Orders of magnitude: power</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Orders_of_magnitude_(power)" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Orders_of_magnitude_(power)#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Orders of magnitude: power"><code>https://en.wikipedia.org/wiki/Orders_of_magnitude_(power)</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Sino-Forest_Corporation#Fraud_allegations" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Sino-Forest_Corporation#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Sino-Forest Corporation § Fraud allegations">Sino-Forest Corporation § Fraud allegations</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Sino-Forest_Corporation#Fraud_allegations" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Sino-Forest_Corporation#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Sino-Forest Corporation § Fraud allegations"><code>https://en.wikipedia.org/wiki/Sino-Forest_Corporation#Fraud_allegations</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Timothy_Gowers" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Timothy_Gowers#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Timothy Gowers">Timothy Gowers</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Type_system#Type_checking" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Type_system#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Type system § Type checking">Type system § Type checking</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Type_system#Type_checking" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Type_system#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Type system § Type checking"><code>https://en.wikipedia.org/wiki/Type_system#Type_checking</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/What_If%3F_(book)" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/What_If%3F_(book)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="&#39;&lt;em&gt;What If?&lt;/em&gt; (book)&#39;, Munroe 2026"><em>What If?</em> (book)</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/What_If%3F_(book)" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/What_If%3F_(book)#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="&#39;&lt;em&gt;What If?&lt;/em&gt; (book)&#39;, Munroe 2026"><code>https://en.wikipedia.org/wiki/What_If%3F_(book)</code></a></p>
+</div></li>
+</ol>
+</section>
+</section>
+<section id="miscellaneous" class="level1">
+<h1><a href="#miscellaneous" title="Link to section: § &#39;Miscellaneous&#39;">Miscellaneous</a></h1>
+<ul>
+<li><p><strong><a href="/doc/www/book.bionumbers.org/a4d9a6b444bc1c9bfa9f817800791f1f5f9b785e.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/book.bionumbers.org/a4d9a6b444bc1c9bfa9f817800791f1f5f9b785e.html" data-url-original="https://book.bionumbers.org/"><code>https://book.bionumbers.org/</code></a></strong></p></li>
+<li><p><strong><a href="https://frinklang.org/" class="id-not include-annotation"><code>https://frinklang.org/</code></a></strong></p></li>
+<li><p><strong><a href="/doc/www/nabeelqu.co/b029d9f6366538a722ee97816e86228fa0385eb7.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/nabeelqu.co/b029d9f6366538a722ee97816e86228fa0385eb7.html" data-url-original="https://nabeelqu.co/advice" title="Qureshi 2026"><code>https://nabeelqu.co/advice</code></a></strong></p></li>
+<li><p><strong><a href="/doc/www/news.ycombinator.com/c8a6cff53a989444d691e1ee35428f4d46456f1c.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/news.ycombinator.com/c8a6cff53a989444d691e1ee35428f4d46456f1c.html" data-url-original="https://news.ycombinator.com/item?id=3389084" data-link-icon="hacker-news" data-link-icon-color="#f26522" data-link-icon-type="svg"><code>https://news.ycombinator.com/item?id=3389084</code></a></strong></p></li>
+<li><p><strong><a href="https://www.amazon.com/How-Measure-Anything-Intangibles-Business/dp/1118539273/" class="id-not include-annotation" data-link-icon="amazon" data-link-icon-color="#ffce53" data-link-icon-type="svg"><code>https://www.amazon.com/How-Measure-Anything-Intangibles-Business/dp/1118539273/</code></a></strong></p></li>
+<li><p><strong><a href="https://www.amazon.com/Street-Fighting-Mathematics-Educated-Guessing-Opportunistic/dp/026251429X" class="id-not include-annotation" data-link-icon="amazon" data-link-icon-color="#ffce53" data-link-icon-type="svg"><code>https://www.amazon.com/Street-Fighting-Mathematics-Educated-Guessing-Opportunistic/dp/026251429X</code></a></strong></p></li>
+<li><p><strong><a href="https://www.reddit.com/r/WTF/comments/188zui/this_is_beyond_saddening_tigers_starved_to_make/c8cql4x/" class="id-not include-annotation" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg"><code>https://www.reddit.com/r/WTF/comments/188zui/this_is_beyond_saddening_tigers_starved_to_make/c8cql4x/</code></a></strong></p></li>
+<li><p><strong><a href="/doc/www/old.reddit.com/01a0c03f7385f5f929d065414ea1274cfa6b5126.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/old.reddit.com/01a0c03f7385f5f929d065414ea1274cfa6b5126.html" data-url-original="https://www.reddit.com/r/estimation/comments/105okb/request_how_many_times_has_mario_died/" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg"><code>https://www.reddit.com/r/estimation/comments/105okb/request_how_many_times_has_mario_died/</code></a></strong></p></li>
+<li><p><strong><a href="https://www.sigbovik.org/2023/proceedings.pdf#page=94" class="id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg"><code>https://www.sigbovik.org/2023/proceedings.pdf#page=94</code></a></strong></p></li>
+</ul>
+</section>
+<section id="link-bibliography-section" class="level1">
+<h1><a href="#link-bibliography-section" title="Link to section: § &#39;Bibliography&#39;">Bibliography</a></h1>
+<ol type="1">
+<li><p><code>abstract</code>: <a href="/doc/science/fermi-problem/abstract" id="gwern-doc-science-fermi-problem-abstract-2" class="prefetch-not link-page link-annotated" title="&#39;Fermi Calculation Examples&#39;, Gwern 2019">“Fermi Calculation Examples”</a>, <span class="author cite-author"><a href="/index#abstract" class="prefetch-not link-page link-annotated-partial id-not" title="&#39;Gwern Bibliography&#39;, Gwern 2010">Gwern</a></span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/%252Fdoc%252Fscience%252Ffermi-problem%252Fabstract.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link /doc/science/fermi-problem/abstract">link-bibliography</a></span></p></li>
+</ol>
+</section>
+
+       
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" rel="nofollow" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

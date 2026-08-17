@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<html class="font-sans " lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>World Map</title>
+<meta name="description" content="">
+<meta name="date" content="n/a">
+<link rel="icon" type="image/png" sizes="32x32" href="/.resources/gc/webresources/img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/.resources/gc/webresources/img/fav/favicon-16x16.png">
+<link rel="stylesheet" href="/.resources/gc/webresources/css/gc~2026-08-14-10-28-44-000~cache.css" media="screen, print" />
+<link rel="alternate" hreflang="x-default" href="https://www.glencore.com/world-map"/>
+<link rel="canonical" href="https://www.glencore.com/world-map" />
+<meta property="og:locale" content="en">
+<meta property="og:type" content="website">
+<meta property="og:title" content="World Map">
+<meta property="og:url" content="https://www.glencore.com/world-map">
+<link as="font" href="/.resources/gc/webresources/fonts/Montserrat-Regular.woff2" crossorigin="anonymous">
+<link as="font" href="/.resources/gc/webresources/fonts/Montserrat-SemiBold.woff2" crossorigin="anonymous">
+<script type="application/javascript">
+window.contextPath = '';
+window.resourcePath = '/.resources/gc/webresources/';
+window.siteName = 'glencore-new';
+window.lang = 'en';
+window.newNav = false;
+window.prototype = false;
+window.globalLabels = {
+'search': 'Search',
+'previous': 'Previous',
+'next': 'NEXT',
+'close': 'Close',
+'open': 'Open',
+'play': 'Play',
+'pause': 'Pause',
+'scrollTo': 'Scroll to',
+'jobInfo': 'Go to job information'
+}
+</script>
+<script type="application/javascript">
+window.decimalFormat=".";
+window.groupingSeparator=",";
+</script>
+</head>
+<body data-gtm-id="GTM-K6F9BXS"
+data-gmaps-api-key="AIzaSyBiXTvnumaa0GN3EiWur-n9PGA74LIvtbs"
+>
+<article id="app">
+<gc-header :edit-mode="false">
+<meta-navigation v-cloak
+:transparent="false"
+:edit-mode="false"
+:show-locale-hints="true"
+:show-language-banner="false"
+:available-locales="['en']"
+:language-switcher-shown="false"
+:no-content-texts="{'de':'Der Inhalt ist leider nicht verfügbar in deiner gewählten Sprache. Du wurdest zur Standardsprache der Seite weitergeleitet.','no':'Innholdet er ikke tilgjengelig på det valgte språket. Du har blitt omdirigert til nettstedets standardspråk.','ru':'Это содержание недоступно на выбранном вами языке. Вы были перенаправлены на язык сайта по умолчанию.','pt':'O conteúdo não está disponível na língua selecionada. Foi redireccionado para a língua predefinida do sítio.','en':'The content is not available in your selected language. You have been redirected to the site\u0027s default language.','it':'Il contenuto non è disponibile nella lingua selezionata. Siete stati reindirizzati alla lingua predefinita del sito.','fr':'Le contenu n\u0027est pas disponible dans la langue sélectionnée. Vous avez été redirigé vers la langue par défaut du site.','es':'El contenido no está disponible en el idioma seleccionado. Ha sido redirigido al idioma por defecto del sitio.','zh':'该内容无法提供所选语言版本。您已被重定向至站点的默认语言页面。'}"
+hint="This content is available in multiple languages"
+v-slot="{
+navigationOpened,
+globalNavOpened,
+searchOpened,
+overlayOpened,
+showBackground,
+showBlackLogo,
+toggleNavigation,
+toggleGlobalNav,
+toggleSearch,
+closeOverlays,
+showLanguageBanner
+}"
+>
+<div class="flex-grow md:order-2 pt-1.5 mx-4 md:mx-8">
+<a href="/" title="Glencore" class="focus-primary inline-block">
+<img v-if="showBlackLogo" class="header-logo max-h-nav-m md:max-h-nav max-w-logo-m md:max-w-none" src="/.resources/gc/webresources/img/Glencore_logo.svg" alt="Glencore home">
+<img v-else class="header-logo max-h-nav-m md:max-h-nav max-w-logo-m md:max-w-none" src="/.resources/gc/webresources/img/Glencore_logo-white.svg" alt="Glencore home">
+</a>
+</div>
+<div class="mx-4 md:mx-8 md:order-3 relative print:hidden">
+<a href="#stage" class="focus-primary inline-block overflow-hidden absolute md:relative -top-40 focus:top-10 md:focus:top-0">
+SKIP NAVIGATION
+</a>
+</div>
+<ul class="hidden xl:flex items-center h-full uppercase md:order-4">
+<li class="border-b border-transparent mx-4 last:mr-8"
+:class="{'hover:text-black-200': !showBackground, 'hover:text-black-900 hover:border-primary-500': showBackground}"
+>
+<a href="/careers"
+class="focus-primary flex items-center h-full font-normal"
+title="Careers"
+aria-label="Careers"
+target='_self'
+>
+Careers
+</a>
+</li>
+<li class="border-b border-transparent mx-4 last:mr-8"
+:class="{'hover:text-black-200': !showBackground, 'hover:text-black-900 hover:border-primary-500': showBackground}"
+>
+<a href="/publications"
+class="focus-primary flex items-center h-full font-normal"
+title="Publications"
+aria-label="Publications"
+target='_self'
+>
+Publications
+</a>
+</li>
+<li class="border-b border-transparent mx-4 last:mr-8"
+:class="{'hover:text-black-200': !showBackground, 'hover:text-black-900 hover:border-primary-500': showBackground}"
+>
+<a href="/world-map"
+class="focus-primary flex items-center h-full font-normal"
+title="World map"
+aria-label="World map"
+target='_self'
+>
+World map
+</a>
+</li>
+<li class="border-b border-transparent mx-4 last:mr-8"
+:class="{'hover:text-black-200': !showBackground, 'hover:text-black-900 hover:border-primary-500': showBackground}"
+>
+<button type="button"
+class="focus-primary font-normal uppercase"
+:class="{'text-primary-500': globalNavOpened}"
+aria-label="Our websites"
+@click="toggleGlobalNav"
+>
+Our websites
+</button>
+</li>
+<li class="border-b border-transparent mx-4 last:mr-8"
+:class="{'hover:text-black-200': !showBackground, 'hover:text-black-900 hover:border-primary-500': showBackground}"
+>
+<a href="/contact-us"
+class="focus-primary flex items-center h-full font-normal"
+title="Contact us"
+aria-label="Contact us"
+target='_self'
+>
+Contact us
+</a>
+</li>
+</ul>
+<button v-show="!searchOpened"
+class="focus-primary justify-center items-center w-14 h-14 md:w-20 md:h-20
+text-white md:order-5 transition-colors bg-black-900 hover:bg-primary-600
+focus:bg-primary-600 focus:outline-none"
+:class="{'hidden md:flex': navigationOpened, 'flex': !navigationOpened}"
+aria-label="Search"
+@click="toggleSearch"
+>
+<svg class="icon w-4 h-4 stroke-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#search"></use>
+</svg>
+</button>
+<button v-show="searchOpened"
+class="flex justify-center items-center w-14 h-14 md:w-20 md:h-20 text-white md:order-6 bg-primary-700"
+aria-label="Close"
+@click="closeOverlays"
+>
+<svg class="icon w-4 h-4 stroke-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#close"></use>
+</svg>
+</button>
+<button class="focus-black md:flex justify-center items-center w-14 h-14 md:w-20 md:h-20
+text-white md:order-1 transition-colors hover:bg-primary-600 focus:bg-primary-600"
+:class="{'bg-primary-400': !navigationOpened, 'bg-primary-600': navigationOpened, 'hidden': overlayOpened, 'flex': !overlayOpened}"
+aria-label="Toggle Navigation"
+@click="toggleNavigation"
+>
+<template v-if="!navigationOpened">
+<svg class="icon w-4 h-4 stroke-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#burger-menu"></use>
+</svg>
+</template>
+<template v-else>
+<svg class="icon w-4 h-4 stroke-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#close"></use>
+</svg>
+</template>
+</button>
+<transition name="fade">
+<global-navigation :opened="globalNavOpened"
+:tabs=" {
+'global': 'Global',
+'africa': 'Africa',
+'asia': 'Asia',
+'australia': 'Australia',
+'europe': 'Europe',
+'north-america': 'North America',
+'south-america': 'South America'
+}
+"
+region=""
+v-slot="{ currentTab, componentUid }"
+logo-path="/.resources/gc/webresources/img/Glencore_logo.svg"
+logo-alt="Glencore"
+@hide="closeOverlays"
+v-show="globalNavOpened"
+>
+<div v-show="currentTab == 0" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-0`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.com"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Group</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.xps.ca/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">XPS</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencoretechnology.com"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Technology</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.aquariusenergy.com/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Aquarius Energy</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div v-show="currentTab == 1" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-1`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="/south-africa"
+class="flex items-center group"
+target='_self'
+>
+<span class="flex-grow">Glencore in South Africa</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.cd/en"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore in the DRC</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.mutandamining.com/en/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Mutanda Mining</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.kamotocoppercompany.com/en/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Kamoto Copper Company</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.astronenergy.co.za/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Astron Energy</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div v-show="currentTab == 2" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-2`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.kazzinc.com/eng"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Kazzinc</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div v-show="currentTab == 3" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-3`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Australia</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.bulgacoal.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Bulga Coal</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.liddellcoal.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Liddell Coal</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.mangoolamine.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Mangoola</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.mcarthurrivermine.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">McArthur River Mine</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.mtowencomplex.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Mt Owen Complex</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.com.au/operations-and-projects/coal/current-operations/ravensworth-operations"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Ravensworth Operations</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.ulancoal.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Ulan Coal</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.unitedproject.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">United Wambo Joint Venture Open Cut</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.wandoanproject.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Wandoan Coal</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.westwallsendmine.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">West Wallsend</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.minara.com.au"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Murrin Murrin</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.mountisamines.com.au "
+class="flex items-center group"
+target='_self'
+>
+<span class="flex-grow">Mount Isa Mines</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div v-show="currentTab == 4" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-4`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.azsa.es"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Asturiana de Zinc</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ch"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Schweiz</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.nikkelverk.no"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Nikkelverk</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.portovesme.it"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Portovesme SRL</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore-nordenham.de/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Nordenham</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div v-show="currentTab == 5" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-5`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Canada</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca/en/ccr/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Affinerie CCR</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca/brenda"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Brenda Mines</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca/cezinc"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">CEZinc</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.fonderiehorne.ca"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Fonderie Horne</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.generalsmelting.ca"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">General Smelting</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.minematagami.ca"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Mine Matagami</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca/sudburyino"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Sudbury INO</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca/raglan"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Raglan Mine</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.norfalco.com"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">NorFalco</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.ca/en/evr/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">EVR - Elk Valley Resources</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div v-show="currentTab == 6" class="container w-full h-full overflow-y-auto focus:outline-none" :id="`item-` + componentUid + `-6`" role="tabpanel" tabindex="0">
+<div class="xl:w-1/2 mx-auto mt-6 md:mt-12 mb-4 md:mb-16">
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 xl:gap-y-6 md:gap-x-4 xl:gap-x-8 text-para-s text-black-900">
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencore.cl/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Chile</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.glencoreperu.pe"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Glencore Peru</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.antamina.com/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Antamina</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.cerrejon.com"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Cerrejón</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="https://www.elpachon.com.ar"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">El Pachón</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+<li class="border-b border-black-900 pb-2">
+<a href="http://www.collahuasi.cl/en/"
+class="flex items-center group"
+target='_blank'
+rel="noopener norefferer"
+>
+<span class="flex-grow">Collahuasi</span>
+<arrow-button direction="external" class="shrink-0 ml-4 w-10 h-10"></arrow-button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</global-navigation>
+</transition>
+<transition name="fade">
+<search v-show="searchOpened"
+:top-terms="[]"
+:quick-links="[]"
+:labels="{
+placeholder: 'Enter search term',
+all: 'All',
+top: 'Top results',
+results: 'Found &lt;span class=&quot;font-semibold&quot;&gt;{0} search results&lt;/span&gt; for &lt;span class=&quot;font-semibold&quot;&gt;&quot;{1}&quot;&lt;/span&gt;',
+sortBy: 'Sort by',
+topTerms: 'Top Search Terms',
+quickLinks: 'Quick Links',
+noResultsTitle: 'No results found for &quot;{0}&quot;',
+noResultsText: 'Sorry, but unfortunately we couldn\'t find any results. Please try a different search term.',
+noResultsOther: 'What others been searching for',
+noSuggestionsTitle: 'No results found',
+moreResults: 'Show more results',
+categories: {
+website: 'Pages',
+documents: 'Documents',
+members: 'Board Members',
+offices: 'Offices',
+locations: 'Locations',
+events: 'Events'
+}
+}"
+></search>
+</transition>
+</meta-navigation>
+<main-navigation v-cloak v-slot="{ toggleGlobalNav, hasOpenSubmenu }">
+<div class="h-full pt-14 md:pt-20">
+<div class="flex flex-col h-full px-4 md:px-10 xl:pl-28 xl:pr-12 pt-4 md:pt-24 pb-4 md:pb-15 overflow-y-auto">
+<ul class="text-para-s w-full">
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Who we are"
+@click="toggle">
+<span class="flex-grow">Who we are</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Main Menu</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Who we are"
+aria-label="Who we are"
+target='_self'
+>
+Who we are
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/at-a-glance"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/at-a-glance"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="At a glance"
+aria-label="At a glance"
+target='_self'
+>
+At a glance
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="https://www.glencore.com/en/at-the-core/"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="https://www.glencore.com/en/at-the-core/"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="At The Core"
+aria-label="At The Core"
+target='_self'
+>
+At The Core
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/purpose-and-values"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/purpose-and-values"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Our Purpose and Values"
+aria-label="Our Purpose and Values"
+target='_self'
+>
+Our Purpose and Values
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/our-code"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/our-code"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Our Code of Conduct"
+aria-label="Our Code of Conduct"
+target='_self'
+>
+Our Code of Conduct
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/policies"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/policies"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Our Policies"
+aria-label="Our Policies"
+target='_self'
+>
+Our Policies
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/our-business-model-and-strategy"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/our-business-model-and-strategy"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Our business model and strategy"
+aria-label="Our business model and strategy"
+target='_self'
+>
+Our business model and strategy
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/our-history"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/our-history"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Our history"
+aria-label="Our history"
+target='_self'
+>
+Our history
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/our-leadership"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/our-leadership"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Leadership"
+aria-label="Leadership"
+target='_self'
+>
+Leadership
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/governance"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/governance"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Governance"
+aria-label="Governance"
+target='_self'
+>
+Governance
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/who-we-are/transparency"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/who-we-are/transparency"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Transparency"
+aria-label="Transparency"
+target='_self'
+>
+Transparency
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="What we do"
+@click="toggle">
+<span class="flex-grow">What we do</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Main Menu</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="What we do"
+aria-label="What we do"
+target='_self'
+>
+What we do
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Metals & minerals"
+@click="toggle">
+<span class="flex-grow">Metals & minerals</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>What we do</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Metals & minerals"
+aria-label="Metals & minerals"
+target='_self'
+>
+Metals & minerals
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals/copper"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals/copper"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Copper"
+aria-label="Copper"
+target='_self'
+>
+Copper
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals/cobalt"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals/cobalt"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Cobalt"
+aria-label="Cobalt"
+target='_self'
+>
+Cobalt
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals/nickel"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals/nickel"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Nickel"
+aria-label="Nickel"
+target='_self'
+>
+Nickel
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals/zinc-and-lead"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals/zinc-and-lead"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Zinc & Lead"
+aria-label="Zinc & Lead"
+target='_self'
+>
+Zinc & Lead
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals/ferroalloys"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals/ferroalloys"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Ferroalloys"
+aria-label="Ferroalloys"
+target='_self'
+>
+Ferroalloys
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/metals-and-minerals/other-metals-and-minerals"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/metals-and-minerals/other-metals-and-minerals"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Other metals & minerals"
+aria-label="Other metals & minerals"
+target='_self'
+>
+Other metals & minerals
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/energy"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Energy"
+@click="toggle">
+<span class="flex-grow">Energy</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>What we do</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/energy"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Energy"
+aria-label="Energy"
+target='_self'
+>
+Energy
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/energy/coal"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/energy/coal"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Coal"
+aria-label="Coal"
+target='_self'
+>
+Coal
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/energy/oil"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Oil"
+@click="toggle">
+<span class="flex-grow">Oil</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Energy</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/energy/oil"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Oil"
+aria-label="Oil"
+target='_self'
+>
+Oil
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/energy/oil/trakk"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/energy/oil/trakk"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Trakk"
+aria-label="Trakk"
+target='_self'
+>
+Trakk
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/marketing"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/marketing"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Marketing"
+aria-label="Marketing"
+target='_self'
+>
+Marketing
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/what-we-do/recycling"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/what-we-do/recycling"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Recycling"
+aria-label="Recycling"
+target='_self'
+>
+Recycling
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Sustainability"
+@click="toggle">
+<span class="flex-grow">Sustainability</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Main Menu</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Sustainability"
+aria-label="Sustainability"
+target='_self'
+>
+Sustainability
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/esg-a-z/our-approach"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/esg-a-z/our-approach"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Our approach"
+aria-label="Our approach"
+target='_self'
+>
+Our approach
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/esg-a-z"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/esg-a-z"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="ESG A-Z"
+aria-label="ESG A-Z"
+target='_self'
+>
+ESG A-Z
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/ethics-and-compliance"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Ethics and compliance"
+@click="toggle">
+<span class="flex-grow">Ethics and compliance</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Sustainability</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/ethics-and-compliance"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Ethics and compliance"
+aria-label="Ethics and compliance"
+target='_self'
+>
+Ethics and compliance
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/ethics-and-compliance/programme"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/ethics-and-compliance/programme"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Programme"
+aria-label="Programme"
+target='_self'
+>
+Programme
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/ethics-and-compliance/board-oversight"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/ethics-and-compliance/board-oversight"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Board oversight and governance"
+aria-label="Board oversight and governance"
+target='_self'
+>
+Board oversight and governance
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/ethics-and-compliance/key-risks"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/ethics-and-compliance/key-risks"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Key risks"
+aria-label="Key risks"
+target='_self'
+>
+Key risks
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/ethics-and-compliance/training-awareness"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/ethics-and-compliance/training-awareness"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Training and awareness"
+aria-label="Training and awareness"
+target='_self'
+>
+Training and awareness
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/ethics-and-compliance/speaking-openly"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/ethics-and-compliance/speaking-openly"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Speaking Openly and Raising Concerns"
+aria-label="Speaking Openly and Raising Concerns"
+target='_self'
+>
+Speaking Openly and Raising Concerns
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/responsible-sourcing"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/responsible-sourcing"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Responsible Sourcing"
+aria-label="Responsible Sourcing"
+target='_self'
+>
+Responsible Sourcing
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/esg-a-z/Tailings"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/esg-a-z/Tailings"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Tailings Storage Facilities (TSFs)"
+aria-label="Tailings Storage Facilities (TSFs)"
+target='_self'
+>
+Tailings Storage Facilities (TSFs)
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/sustainability/esg-a-z/water-management"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/sustainability/esg-a-z/water-management"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Water"
+aria-label="Water"
+target='_self'
+>
+Water
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/publications"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/publications"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Publications"
+aria-label="Publications"
+target='_self'
+>
+Publications
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/investors"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Investors"
+@click="toggle">
+<span class="flex-grow">Investors</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Main Menu</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Investors"
+aria-label="Investors"
+target='_self'
+>
+Investors
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/publications"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/publications"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Publications"
+aria-label="Publications"
+target='_self'
+>
+Publications
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Shareholder centre"
+@click="toggle">
+<span class="flex-grow">Shareholder centre</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Investors</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Shareholder centre"
+aria-label="Shareholder centre"
+target='_self'
+>
+Shareholder centre
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/corporate-calendar"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/corporate-calendar"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Corporate calendar"
+aria-label="Corporate calendar"
+target='_self'
+>
+Corporate calendar
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/shareprice-tools"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/shareprice-tools"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Share price tools"
+aria-label="Share price tools"
+target='_self'
+>
+Share price tools
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/agm"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/agm"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="AGM"
+aria-label="AGM"
+target='_self'
+>
+AGM
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/general-meeting-2025"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/general-meeting-2025"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="General Meeting 2025"
+aria-label="General Meeting 2025"
+target='_self'
+>
+General Meeting 2025
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/distribution-information"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/distribution-information"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Distribution information"
+aria-label="Distribution information"
+target='_self'
+>
+Distribution information
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/analyst-coverage"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/analyst-coverage"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Analyst coverage"
+aria-label="Analyst coverage"
+target='_self'
+>
+Analyst coverage
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/shareholder-faqs"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/shareholder-faqs"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Shareholders FAQs"
+aria-label="Shareholders FAQs"
+target='_self'
+>
+Shareholders FAQs
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/shareholder-centre/Share-buy-backs"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/shareholder-centre/Share-buy-backs"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Share buy-back"
+aria-label="Share buy-back"
+target='_self'
+>
+Share buy-back
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/regulatory-announcements"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/regulatory-announcements"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Regulatory announcements"
+aria-label="Regulatory announcements"
+target='_self'
+>
+Regulatory announcements
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/debt-investors"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Debt investors"
+@click="toggle">
+<span class="flex-grow">Debt investors</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Investors</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/debt-investors"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Debt investors"
+aria-label="Debt investors"
+target='_self'
+>
+Debt investors
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/debt-investors/emtn-programme"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/debt-investors/emtn-programme"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="EMTN Programme"
+aria-label="EMTN Programme"
+target='_self'
+>
+EMTN Programme
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/debt-investors/144a-issuances"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/debt-investors/144a-issuances"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="144A Issuances"
+aria-label="144A Issuances"
+target='_self'
+>
+144A Issuances
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/investor-contacts"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Investor contacts"
+@click="toggle">
+<span class="flex-grow">Investor contacts</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Investors</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/investor-contacts"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Investor contacts"
+aria-label="Investor contacts"
+target='_self'
+>
+Investor contacts
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/investor-contacts/subscribe"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/investor-contacts/subscribe"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Subscribe"
+aria-label="Subscribe"
+target='_self'
+>
+Subscribe
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/investors/2026-half-year-results"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/investors/2026-half-year-results"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="2026 Half-Year Results"
+aria-label="2026 Half-Year Results"
+target='_self'
+>
+2026 Half-Year Results
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Media"
+@click="toggle">
+<span class="flex-grow">Media</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Main Menu</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Media"
+aria-label="Media"
+target='_self'
+>
+Media
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights/news"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="News"
+@click="toggle">
+<span class="flex-grow">News</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Media</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights/news"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="News"
+aria-label="News"
+target='_self'
+>
+News
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights/subscribe"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights/subscribe"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Subscribe"
+aria-label="Subscribe"
+target='_self'
+>
+Subscribe
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights/insights"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights/insights"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Insights & stories"
+aria-label="Insights & stories"
+target='_self'
+>
+Insights & stories
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights/social-media"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights/social-media"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Social media"
+aria-label="Social media"
+target='_self'
+>
+Social media
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights/media-contacts"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights/media-contacts"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Media contacts"
+aria-label="Media contacts"
+target='_self'
+>
+Media contacts
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/media-and-insights/image-and-video-library"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/media-and-insights/image-and-video-library"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Image & video library"
+aria-label="Image & video library"
+target='_self'
+>
+Image & video library
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri=""
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/careers"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Careers"
+@click="toggle">
+<span class="flex-grow">Careers</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Main Menu</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Careers"
+aria-label="Careers"
+target='_self'
+>
+Careers
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/jobs"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/jobs"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Jobs"
+aria-label="Jobs"
+target='_self'
+>
+Jobs
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/life-at-glencore"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/life-at-glencore"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Life at Glencore"
+aria-label="Life at Glencore"
+target='_self'
+>
+Life at Glencore
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/career-areas"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/career-areas"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Career areas"
+aria-label="Career areas"
+target='_self'
+>
+Career areas
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/how-we-hire"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/how-we-hire"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="How we hire"
+aria-label="How we hire"
+target='_self'
+>
+How we hire
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers"
+v-slot="{ opened, toggle }"
+>
+<button class="flex items-center w-full text-left hover:text-primary-600 px-1 focus-primary focus:outline-none"
+:class="{'invisible': hasOpenSubmenu}"
+aria-label="Early careers"
+@click="toggle">
+<span class="flex-grow">Early careers</span>
+<svg class="icon w-2 h-2 stroke-current ml-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-right"></use>
+</svg>
+</button>
+<main-navigation-sub-menu :is-opened="opened" v-slot="{ hasOpenSubmenu }">
+<button class="flex items-center hover:text-primary-600 text-black-700 cursor-pointer mt-5 mb-10 px-1 focus-primary"
+:class="{'invisible': hasOpenSubmenu}"
+@click="toggle">
+<svg class="icon w-2 h-2 stroke-current mr-4"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#chevron-left"></use>
+</svg>
+<span>Careers</span>
+</button>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers"
+class="inline-block hover:text-primary-600 font-semibold mb-2.5 px-1 focus-primary"
+title="Early careers"
+aria-label="Early careers"
+target='_self'
+>
+Early careers
+</a>
+</div>
+<ul>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/baar"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/baar"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Baar, Switzerland - Headquarters"
+aria-label="Baar, Switzerland - Headquarters"
+target='_self'
+>
+Baar, Switzerland - Headquarters
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/london"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/london"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="London, UK"
+aria-label="London, UK"
+target='_self'
+>
+London, UK
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/usa"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/usa"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="USA"
+aria-label="USA"
+target='_self'
+>
+USA
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/singapore"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/singapore"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Singapore"
+aria-label="Singapore"
+target='_self'
+>
+Singapore
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/china"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/china"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="China"
+aria-label="China"
+target='_self'
+>
+China
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/africa-copper"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/africa-copper"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Africa copper"
+aria-label="Africa copper"
+target='_self'
+>
+Africa copper
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/south-africa"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/south-africa"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="South Africa"
+aria-label="South Africa"
+target='_self'
+>
+South Africa
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/base-metals-north-america"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/base-metals-north-america"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Base metals north America"
+aria-label="Base metals north America"
+target='_self'
+>
+Base metals north America
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers/kazakhstan"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers/kazakhstan"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Kazakhstan"
+aria-label="Kazakhstan"
+target='_self'
+>
+Kazakhstan
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-1.5">
+<navigation-item current-uri="/world-map"
+target-uri="/careers/early-careers#australia-and-oceania"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers/early-careers#australia-and-oceania"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Australia"
+aria-label="Australia"
+target='_self'
+>
+Australia
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+</ul>
+</main-navigation-sub-menu>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item current-uri="/world-map"
+target-uri="/suppliers"
+v-slot="{ opened, toggle }"
+>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/suppliers"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Suppliers"
+aria-label="Suppliers"
+target='_self'
+>
+Suppliers
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+<ul class="xl:hidden text-black-700 text-para-xs uppercase w-full">
+<li class="py-2">
+<navigation-item>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/careers"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Careers"
+aria-label="Careers"
+target='_self'
+>
+Careers
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/publications"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Publications"
+aria-label="Publications"
+target='_self'
+>
+Publications
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/world-map"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="World map"
+aria-label="World map"
+target='_self'
+>
+World map
+</a>
+</div>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item>
+<button type="button"
+class="font-normal uppercase focus:outline-none"
+aria-label="Our websites"
+@click="toggleGlobalNav"
+>
+Our websites
+</button>
+</navigation-item>
+</li>
+<li class="py-2">
+<navigation-item>
+<div :class="{'invisible': hasOpenSubmenu}">
+<a href="/contact-us"
+class="inline-block hover:text-primary-600 mr-6 px-1 focus-primary"
+title="Contact us"
+aria-label="Contact us"
+target='_self'
+>
+Contact us
+</a>
+</div>
+</navigation-item>
+</li>
+</ul>
+</div>
+</div>
+</main-navigation>
+</gc-header>
+<section id="stage">
+<stage-section-teaser :urls="{}"
+image-alt=""
+video=""
+poster=""
+title="World Map"
+sub-title=""
+description=""
+:edit-mode="false"
+:show-gradient="true"
+:show-language-switcher="false"
+language-switcher-prefix=""
+language-switcher-suffix=""
+language="en"
+:locales="{
+en: 'English'
+}"
+></stage-section-teaser>
+</section>
+<main id="main">
+<section class="section ">
+<div class="container">
+<div class="gc-grid prose md:prose-md xl:prose-xl prose-tr:bg-white " >
+<div class="md:col-span-8 pb-8 xl:col-span-10">
+<sticky-when-tall class="block" :min-height-ratio="0.5">
+</sticky-when-tall>
+</div>
+<table-container class="md:col-span-8 xl:col-span-10">
+<p class="text-para-xl">We operate in more than 30+&nbsp;countries around the world. Explore our global presence here.</p>
+</table-container>
+</div>
+</div>
+</section>
+<section class="section xl:container">
+<consent-wrapper cookie-consent-type="advanced"
+consent-name="functional"
+:title="`Privacy policy and cookies`"
+:cookie-policy-page-link="``"
+:labels="{
+settings: 'Cookie settings',
+accept: 'Accept all cookies',
+}"
+>
+<world-map v-cloak
+:points="[{'uuid':'60c6f6f4-58d2-4b7a-849a-50a0bf2732e8','position':{'lat':-22.72767654,'lng':147.6226378},'url':'https://www.glencore.com.au/en/who-we-are/energy-products/clermont/Pages/default.aspx ','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Clermont','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'58d54c34-f82a-48d8-b308-0b73ee08deb4','position':{'lat':-20.5705685084,'lng':147.783230319},'url':'https://www.glencore.com.au/operations-and-projects/coal/current-operations/collinsville-open-cut','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Collinsville','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'b6e6fd83-64fb-4af4-9062-39923ebec6da','position':{'lat':-21.496,'lng':148.374},'url':'https://www.glencore.com.au/operations-and-projects/coal/current-operations/hail-creek-open-cut','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Hail Creek','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e0f77696-138e-422c-a146-4c317d92877b','position':{'lat':-32.465594,'lng':150.982333},'url':'http://www.hvo.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'Hunter Valley Operations (HVO) is an established large-scale open cut operation, using\n dragline and truck \u0026 shovel mining methods.\n ','label':'Hunter Valley Coal Operations (JV)','country':'Australasia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'f66b64ec-49e0-422a-b046-1596d6c9831d','position':{'lat':-32.465,'lng':151.131},'url':'http://www.glencore.com.au/en/who-we-are/energy-products/integra/Pages/default.aspx','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Integra ','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'19c5b569-9550-4cc6-8507-fc337dfa938b','position':{'lat':-32.2940321411,'lng':150.696517626},'url':'http://www.mangoolamine.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Mangoola','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'496dd3b4-bd52-4db4-8116-866f9909d027','position':{'lat':-16.4325,'lng':136.0897222222},'url':'http://www.mcarthurrivermine.com.au/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'McArthur River Mine','country':'Australia','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'7b55b2fe-f88c-4a73-9269-55a18b69cbd8','position':{'lat':-32.39,'lng':151.1},'url':'http://www.mtowencomplex.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Mt Owen ','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ebee3af8-fc8a-4b06-a87d-5dc723ae3029','position':{'lat':-28.768111,'lng':121.893225},'url':'http://www.minara.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Murrin Murrin','country':'Australia','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'28506269-f77c-48e9-9b8a-df02d72a35a4','name':'nickel','label':'Nickel','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Ni'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e2448249-4b9e-4d02-b9c1-6888e6d921d3','position':{'lat':-23.0876693414,'lng':148.5110905},'url':'https://www.glencore.com.au/operations-and-projects/coal/current-operations/oaky-creek-coal','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Oaky Creek ','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'02803865-031d-439e-92ce-fbb7c179eb7d','position':{'lat':-20.7311111111,'lng':139.4838888889},'url':'http://www.mountisamines.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Queensland Metals','country':'Australia','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'d8bc79cc-145f-4845-9faa-994daaaa4585','position':{'lat':-32.4699343651,'lng':151.030113625},'url':'http://www.ravensworthoperations.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Ravensworth ','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'6d012c60-1ec6-4089-8122-3029b41cc5a1','position':{'lat':-24.4686052059,'lng':148.411857117},'url':'https://www.glencore.com.au/operations-and-projects/coal/current-operations/rolleston-open-cut','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Rolleston','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'a8031f93-61fc-4944-bba2-fd728a10358b','position':{'lat':-32.92640289,'lng':151.7647318},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Industrial office','label':'Newcastle','country':'Australia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e3e3b66c-aa63-4818-a9f4-e2c6767477d9','position':{'lat':-31.955972,'lng':115.856879},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Industrial office','label':'Perth','country':'Australia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'d5821800-eeeb-4212-b7be-34680df123bb','position':{'lat':-32.23910556,'lng':149.74704722222222},'url':'http://www.ulancoal.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Ulan ','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'4a430a41-e509-4426-855a-a596c29b66b6','position':{'lat':-32.58378611,'lng':150.9973611111111},'url':'https://www.glencore.com.au/operations-and-projects/coal/current-operations/united-wambo-open-cut ','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'United Wambo','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'100dbaf3-529e-4569-8bbc-50cfb224f602','position':{'lat':-33.8620291,'lng':151.2095063},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Corporate Office','label':'Sydney','country':'Australia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'471697c1-8b53-4f0a-a817-0591c4701f1a','position':{'lat':4.215955,'lng':8.837803},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Bolongo (JV)','country':'Cameroon','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'3d0b6686-2bd9-4e04-a5bc-cce861018c64','position':{'lat':3.5103,'lng':9.157562},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Block I \u0026 O (JV) ','country':'Equatrorial Guinea','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'d63733c7-acfe-4b98-a88e-fa227e75d2f6','position':{'lat':4.019586111,'lng':9.700630556},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Douala','country':'Cameroon','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'98672ae4-1d9b-49c1-a885-0394651cd124','position':{'lat':-25.9666667,'lng':32.5833333},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Maputo','country':'Mozambique','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'f641b938-d4cf-4a76-ba81-2bc9d875efd3','position':{'lat':-33.89392815,'lng':18.50512011},'url':'https://www.astronenergy.co.za/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Astron South Africa','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'59ea1470-4d8a-4166-af27-5a2059149626','position':{'lat':-24.65534148,'lng':25.90530183},'url':'https://www.astronenergy.co.za/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Astron Botswana','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'729d22c0-c778-4749-8402-a1f6d30b5b50','position':{'lat':-25.014209166666667,'lng':29.002694444444444},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Carbon Group','country':'South Africa','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'1d90f8d0-2f91-4131-a1e8-e1cba3732536','name':'ferroalloys','label':'Ferroalloys','icon':'/dam/jcr:507692e6-a4ad-434c-a21b-e89dc9f609d1/fe.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'a8e5cad3-500b-4d53-b2a3-93d591e9eee8','position':{'lat':-25.50949075,'lng':27.127325333333335},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Chrome PSV','country':'South Africa','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'1d90f8d0-2f91-4131-a1e8-e1cba3732536','name':'ferroalloys','label':'Ferroalloys','icon':'/dam/jcr:507692e6-a4ad-434c-a21b-e89dc9f609d1/fe.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'3af9a7cf-63a1-4329-ad98-ac92421dbbf3','position':{'lat':-26.09828889,'lng':29.07401389},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Goedgevonden (GGV)','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e9b98665-f406-4f0c-b104-2f1b8b5890a3','position':{'lat':-26.108925,'lng':29.23085278},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'iMpunzi ','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'8a89f42a-4521-4f10-b7ce-f6229ed6fe3c','position':{'lat':-26.2041028,'lng':28.0473051},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'Corporate Office','label':'Johannesburg','country':'South Africa','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'450bf4fe-d670-48f2-a7c0-0948925a556f','position':{'lat':-27.18430556,'lng':22.90040833},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Mokala Manganese (JV)','country':'South Africa','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'1d90f8d0-2f91-4131-a1e8-e1cba3732536','name':'ferroalloys','label':'Ferroalloys','icon':'/dam/jcr:507692e6-a4ad-434c-a21b-e89dc9f609d1/fe.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'cb26505b-3764-4f46-a883-8e3f8edd555d','position':{'lat':-25.6898527777777,'lng':27.26890278},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Industrial Office','label':'Rustenburg','country':'South Africa','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'c39517cd-f3f7-441a-b6ff-375929591f63','position':{'lat':-26.01081667,'lng':29.12430556},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Tweefontein ','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'5a2a7b79-ab54-4d16-83dc-f44953e94f87','position':{'lat':-25.84984167,'lng':29.86776667},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Umcebo','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ba812b27-da77-4366-8961-5cf8e658e85b','position':{'lat':-25.6433333333,'lng':27.7972222222},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Vanadium PSV','country':'South Africa','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'1d90f8d0-2f91-4131-a1e8-e1cba3732536','name':'ferroalloys','label':'Ferroalloys','icon':'/dam/jcr:507692e6-a4ad-434c-a21b-e89dc9f609d1/fe.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'3de6f644-1da3-445f-873b-8eeefa230ccc','position':{'lat':-25.85383056,'lng':28.18476667},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Industrial office','label':'Witbank','country':'South Africa','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ef34421e-b39b-45b7-9cb6-8f3f2999b794','position':{'lat':-25.70418611111111,'lng':29.749372222222224},'url':'https://www.glencore.com/south-africa','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Zonnebloem','country':'South Africa','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'cf5be6f1-7844-4f01-8fd0-f1584cc28876','position':{'lat':51.51391115,'lng':-0.14475021},'url':'https://www.aquariusenergy.com/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Aquarius Energy ','country':'UK','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'497bdc48-376c-4d12-939e-d265b37f3624','position':{'lat':43.585,'lng':-5.9316666667},'url':'http://www.azsa.es','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Asturiana de Zinc','country':'Spain','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'f7800b61-77a3-475c-9fe2-04339cf8a08a','position':{'lat':47.1807631,'lng':8.5259726},'url':'https://www.glencore.com/','linkLabel':'','target':'_self','image':'/dam/jcr:a49e33c4-cb63-4fef-97cb-1c7bffef3d02/who-we-are-our-leadership.jpg','images':[{'sourceSet':'/.imaging/focalpoint/640x355/dam/jcr:a49e33c4-cb63-4fef-97cb-1c7bffef3d02/who-we-are-our-leadership.webp 290w, /.imaging/focalpoint/1024x568/dam/jcr:a49e33c4-cb63-4fef-97cb-1c7bffef3d02/who-we-are-our-leadership.webp 700w, /.imaging/focalpoint/1280x711/dam/jcr:a49e33c4-cb63-4fef-97cb-1c7bffef3d02/who-we-are-our-leadership.webp 970w','source':'/dam/jcr:a49e33c4-cb63-4fef-97cb-1c7bffef3d02/who-we-are-our-leadership.jpg','sizes':'(max-width: 640px) 290px, (max-width: 1024px) 700px, 970px','title':''}],'description':'Headquarters','label':'Baar','country':'Europe','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'b8a94bab-1576-4b8e-8246-4bea63a1ab00','name':'Headquarters','label':'Headquarters','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e8f61ea5-02e9-4d3d-8a47-2dbee3aa0572','position':{'lat':51.4586111111,'lng':0.3186111111},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'BRM','country':'UK','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ad9cc062-095e-42fa-a8a1-a4518a64e72a','position':{'lat':45.472038,'lng':9.197041},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'','label':'Milan','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'07fd56eb-e0c5-4f8a-8c42-3277c18a2f1e','position':{'lat':36.737119,'lng':-4.553823},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'','label':'Malaga','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'de659608-50aa-4f6f-b41a-691fdb053611','position':{'lat':58.1394444444,'lng':7.9694444444},'url':'http://www.nikkelverk.no','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Nikkelverk','country':'Norway','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'28506269-f77c-48e9-9b8a-df02d72a35a4','name':'nickel','label':'Nickel','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Ni'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'638acfad-a012-450e-988a-17fd4c646e7f','position':{'lat':53.50790804715529,'lng':8.510100525006882},'url':'https://www.glencore-nordenham.de/en/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Nordenham Zinc/Lead','country':'Germany','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'20a14d3b-2c54-4538-9d24-57e8b833f283','position':{'lat':39.204275,'lng':8.3922868},'url':'http://www.portovesme.it','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Portovesme','country':'Italy','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'5a400d9c-933c-494b-aef6-8b431205d424','position':{'lat':55.757858,'lng':37.582599},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Moscow','country':'Russia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'0dbae5db-98c0-4207-8a72-9326dbfaa789','position':{'lat':52.07943611,'lng':4.335402778},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'The Hague','country':'The Netherlands','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ca6d03c0-cfd0-43e0-a523-727c6df3c7dc','position':{'lat':45.6272861111,'lng':-73.5047083333},'url':'http://www.affinerieccr.ca','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'CCR','country':'Canada','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'661f5373-a440-459c-98d2-b6004799a30e','position':{'lat':45.230517,'lng':-74.097984},'url':'http://www.cezinc.com','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'CEZinc','country':'Canada','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'816650a2-d8a2-4140-ad0f-8f35fcbea1f0','position':{'lat':41.88036944444445,'lng':-87.63647777777778},'url':'https://centuryaluminum.com/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Century Aluminum','country':'USA','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'05852b99-da4a-46f9-9783-f57f72e7c933','name':'aluminium','label':'Alumina/Aluminium','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Al'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e513edcb-3081-42b5-b39f-29d0dea4e6c5','position':{'lat':36.516425,'lng':-87.40719444},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Clarksville, TN','country':'USA','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'4cc33315-af71-4f58-8e9f-8dde7a5ff3d4','position':{'lat':49.757,'lng':-114.82},'url':'https://www.evr.com/','linkLabel':'EVR','target':'_blank','image':'','images':[],'description':'Elk Valley Resources (EVR) operates four steelmaking coal mines that employ over 5,000 people in the Elk Valley of British Columbia.','label':'EVR - Elk Valley Resource','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'167c58d1-e6d9-47b8-86ce-bc47e05cc1bb','position':{'lat':45.4480555556,'lng':-73.6752777778},'url':'http://www.generalsmelting.ca','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'General Smelting','country':'Canada','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'29cf4945-5916-48c7-88c0-c4ccf273b4f1','position':{'lat':48.2523611111,'lng':-79.01},'url':'http://www.fonderiehorne.ca','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Horne ','country':'Canada','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'931c287d-f73a-466b-b43c-eec8d7095117','position':{'lat':29.760801,'lng':-95.369797},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Houston','country':'USA','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'c1758981-5115-44c2-84f0-2b0c31efbd0c','position':{'lat':45.48291111,'lng':-73.78449167},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Industrial office','label':'Montreal (Dorval)','country':'Canada','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'6bce5f29-ee99-49cb-b1b9-8f4a62d9c6f7','position':{'lat':40.754022,'lng':-73.978644},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'New York','country':'USA','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'78ee9cea-1f9d-4ad9-a4eb-c1f1bcd80a26','position':{'lat':35.20105,'lng':-91.83183333333334},'url':'http://www.glencorerecycling.com','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Osceola Recycling','country':'USA','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'f2e45ac9-57a9-4753-9f87-97c5c3f57841','name':'recycling','label':'Recycling','icon':'/dam/jcr:7e3705fd-0a75-4d1f-9465-ab9921a74d2c/WhatWeDo-recycling.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'d9a7e864-4dec-444b-a01e-83a3002daf04','position':{'lat':40.4213337,'lng':-80.0623724},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Pittsburgh','country':'USA','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'53ecb9cb-c51e-4ac5-a7ab-8ae31664c601','position':{'lat':61.689408,'lng':-73.672497},'url':'http://www.mineraglan.ca','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Raglan','country':'Canada','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'28506269-f77c-48e9-9b8a-df02d72a35a4','name':'nickel','label':'Nickel','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Ni'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'4753ec8f-54e7-4630-94fb-9e914568ef01','position':{'lat':41.819799,'lng':-71.347253},'url':'http://www.glencorerecycling.com','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Rhode Island Recycling','country':'USA','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'f2e45ac9-57a9-4753-9f87-97c5c3f57841','name':'recycling','label':'Recycling','icon':'/dam/jcr:7e3705fd-0a75-4d1f-9465-ab9921a74d2c/WhatWeDo-recycling.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'7311fab3-4fed-4399-a6f4-419bf707df05','position':{'lat':37.31154,'lng':-121.868935},'url':'http://www.glencorerecycling.com','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'San Jose Recycling','country':'USA','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'f2e45ac9-57a9-4753-9f87-97c5c3f57841','name':'recycling','label':'Recycling','icon':'/dam/jcr:7e3705fd-0a75-4d1f-9465-ab9921a74d2c/WhatWeDo-recycling.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'99547143-744d-4b41-a9bb-11ac047793d2','position':{'lat':46.578625,'lng':-80.807276},'url':'http://www.sudburyino.ca','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Sudbury','country':'Canada','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'28506269-f77c-48e9-9b8a-df02d72a35a4','name':'nickel','label':'Nickel','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Ni'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'9c43d2b2-c6e3-4a84-bf0f-2e530aa124b4','position':{'lat':43.653226,'lng':-79.3831843},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Corporate Office','label':'Toronto','country':'Canada','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'44e668a1-b31a-438c-8e47-625788cded1e','position':{'lat':45.564725,'lng':-73.736607},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Industrial office','label':'Laval','country':'Canada','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'63d57091-a24b-4d8d-8037-23e317674f74','position':{'lat':48.212545,'lng':-78.82795},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Industrial office','label':'Rouyn-Noranda','country':'Canada','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'34b05590-fb23-4b45-8610-af68de683d4f','position':{'lat':-5.83045,'lng':-35.23231},'url':'https://www2.ale.com.br/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Alesat','country':'Brazil','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'83e888a7-a22b-4ae6-88f7-a5ef42e2b52b','position':{'lat':-23.8160574167,'lng':-70.3177185278},'url':'https://www.glencore.cl/operaciones-y-empresas-conjuntas/complejo-metalurgico-altonorte','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Altonorte','country':'Chile','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'a860f1c0-14a6-4140-828e-d7c5db1b2aa6','position':{'lat':-27.65103,'lng':-67.0287},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'','label':'Alumbrera','country':'Chile','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'518097e3-9431-477c-a64f-10a06acaf76b','position':{'lat':-1.586403,'lng':-48.732978},'url':'https://www.hydro.com/en/about-hydro/hydro-worldwide/americas/brazil/barcarena/alunorte/','linkLabel':'','target':'_blank','image':'','images':[],'description':'','label':'Alumina do Norte do Brasil S.A.','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'05852b99-da4a-46f9-9783-f57f72e7c933','name':'aluminium','label':'Alumina/Aluminium','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Al'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'27f5560c-5af5-4c16-8563-9048ddc25f6f','position':{'lat':-9.775,'lng':-77.105},'url':'http://www.antamina.com/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Antamina (JV)','country':'Peru','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ee4cd8b1-dd2a-4142-b974-5506d083377b','position':{'lat':-14.920917,'lng':-71.326345},'url':'http://www.glencoreperu.pe','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Antapaccay','country':'Peru','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'ef0fae18-5ea1-43a6-a526-da0ab3e7a94a','position':{'lat':4.68357,'lng':-74.04743},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Bogota','country':'Colombia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'de449bb2-5661-476b-98ce-352e1b63b222','position':{'lat':-34.4959679,'lng':-58.5460091},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Buenos Aires','country':'Argentina','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'32f522b7-71f4-4c68-84fa-b79ea3514205','position':{'lat':11.0333638889,'lng':-72.6499527778},'url':'http://www.cerrejon.com','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Cerrejon','country':'Colombia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'6d88e59b-ce7d-4aa6-89b3-4afa7aaba16b','position':{'lat':-20.9665139444,'lng':-68.7017986944},'url':'http://www.collahuasi.cl/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Collahuasi (JV)','country':'Chile','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'5b572b03-a6e8-4c04-bce9-02c0f646ef93','position':{'lat':14.598066666666,'lng':-90.51365833333},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Guatemala City','country':'Guatemala','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'dafbe251-38be-4172-859f-74fd04afb98c','position':{'lat':-16.507275,'lng':-68.12623333},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'La Paz','country':'Bolivia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'181ce909-833f-4736-a9c1-c7e6f682b1bd','position':{'lat':-11.973,'lng':-77.1},'url':'https://www.glencoreperu.pe/','linkLabel':'','target':'_self','image':'','images':[],'description':'Corporate office','label':'Lima','country':'Peru','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'438c19e3-99f7-414a-93fc-51cb884333f0','position':{'lat':-23.42955625,'lng':-69.5124336667},'url':'https://www.glencore.cl/operaciones-y-empresas-conjuntas/compania-minera-lomas-bayas','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Lomas Bayas','country':'Chile','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'539a1b2d-d7db-4751-a2dc-1de8d690a815','position':{'lat':19.3975205,'lng':-99.1777272},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Mexico City','country':'Mexico','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'c44b96ab-f15e-49f4-a960-3fed3fbc7273','position':{'lat':-10.690134,'lng':-48.410184},'url':'https://mrn.com.br/index.php/en/','linkLabel':'','target':'_blank','image':'','images':[],'description':'','label':'Mineração Rio do Norte S.A.','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'05852b99-da4a-46f9-9783-f57f72e7c933','name':'aluminium','label':'Alumina/Aluminium','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Al'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'69ea696a-ad71-4179-8d5b-5d854d5c96cf','position':{'lat':-12.0511194444,'lng':-77.1391583333},'url':'https://www.glencoreperu.pe/operaciones/unidad-logistica/perubar','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Perubar','country':'Peru','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'209ed9ae-c064-498a-a86b-02efc08accd0','position':{'lat':11.01079,'lng':-74.25162},'url':'https://www.grupoprodeco.com.co/en','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Prodeco','country':'Colombia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'263dbd37-13d3-48a4-8032-f77b7ad76b34','position':{'lat':-0.169283333333,'lng':-78.476375},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Quito','country':'Ecuador','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'5584d063-7f48-4c41-8909-1b2e48d7b039','position':{'lat':-22.9555406,'lng':-43.1754408},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Rio de Janeiro','country':'Brazil','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'4f2d6a9a-f904-465c-9cda-c3fa390c29fb','position':{'lat':-33.4142416,'lng':-70.5989816},'url':'https://www.glencore.cl/','linkLabel':'','target':'_self','image':'','images':[],'description':'Corporate office','label':'Santiago','country':'Chile','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'a6732cb9-bd61-4dc1-b778-a4e4af5dd271','position':{'lat':49.985407,'lng':82.614929},'url':'http://www.kazzinc.com/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Kazzinc','country':'Kazakhstan','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'5e1da268-e2d2-4637-adcf-05c7fd98226a','position':{'lat':43.287717,'lng':76.965887},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'','label':'Almaty','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'367b3066-3b50-49b9-add2-376950c6a2c8','position':{'lat':51.126318,'lng':71.417516},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'','label':'Astana','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'bb7e8490-e8f2-49e3-8238-7bbb361852d7','position':{'lat':40.0807871,'lng':116.3555725},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Beijing','country':'China','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'8b5cd933-bdb7-42b2-8979-c414f4fd3204','position':{'lat':22.28562222,'lng':114.1528861},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Hong Kong','country':'China','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'1dc146df-aa64-4f96-91da-e71afbbc7842','position':{'lat':37.566535,'lng':126.9779692},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Seoul','country':'South Korea','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'cffd2610-4a64-473a-98f2-6ca01d1caa8f','position':{'lat':31.230393,'lng':121.473704},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Shanghai','country':'China','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'92c8b747-c736-49d5-82ff-1f339145ff61','position':{'lat':25.0688889,'lng':121.5330556},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Taipei','country':'Taiwan','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'928032e5-6734-49ef-a29b-7e74868ee9ae','position':{'lat':35.6894875,'lng':139.6917064},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Tokyo','country':'Japan','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'2dd62f12-287b-46ea-88a7-d40386da5d7c','position':{'lat':12.97745833,'lng':80.25175556},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Chennai','country':'India','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'c8339c6d-4c32-493f-a055-502c68724fdc','position':{'lat':19.0166667,'lng':72.8166667},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Mumbai','country':'India','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'50da87d6-2e31-43b0-ba6e-81dd45d1414b','position':{'lat':28.6014865,'lng':77.1859509},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'New Delhi','country':'India','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'24af3da6-7d56-4986-9f05-09af7625acfd','position':{'lat':5.431797222,'lng':100.3100583},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'George Town','country':'Malaysia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'52cd9940-8c43-44c0-a342-026a34569c96','position':{'lat':-6.227569444444445,'lng':106.80049166666666},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'PT Cita Mineral Investindo Tbk (JV)','country':'Indonesia','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'05852b99-da4a-46f9-9783-f57f72e7c933','name':'aluminium','label':'Alumina/Aluminium','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Al'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'51d30652-40ae-4715-8527-7e590007248e','position':{'lat':1.352083,'lng':103.819836},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing Office','label':'Singapore','country':'Singapore','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'cb4ab2aa-4dee-41a7-8729-baf0cd5c91bb','position':{'lat':25.22999722222222,'lng':55.28337222222222},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Dubai','country':'UAE','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'1e9cd527-1400-4da1-9e05-d5b55366c547','position':{'lat':-20.9860333333,'lng':164.8055777778},'url':'http://www.koniambonickel.nc','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Koniambo','country':'New Caledonia','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'28506269-f77c-48e9-9b8a-df02d72a35a4','name':'nickel','label':'Nickel','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Ni'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'59abdf51-81a9-4162-aedc-86f8bfbda085','position':{'lat':-21.66460556,'lng':165.652325},'url':'','linkLabel':'','target':'_self','image':'','images':[],'description':'Marketing office','label':'Noumea','country':'New Caledonia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'650feafa-8283-4340-b00a-6e4312a6cd03','position':{'lat':-32.680725,'lng':151.1254666667},'url':'http://www.bulgacoal.com.au','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Bulga','country':'Australia','category':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'22474138-7b39-45ee-9754-db052220303f','position':{'lat':-10.68068,'lng':25.39531},'url':'https://www.kamotocoppercompany.com/','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Katanga','country':'Democratic Republic of Congo','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'95ceac78-fb14-4bed-96aa-c0110991f0ca','position':{'lat':51.514,'lng':-0.145},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Corporate Office','label':'London','country':'UK','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'eca7d8e9-33aa-42bb-8c8a-591a41555ca5','position':{'lat':21.028,'lng':105.834},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing Office','label':'Hanoi','country':'Vietnam','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'be33ab9d-4845-456f-971f-bbd02d5dc3c3','position':{'lat':37.896,'lng':-122.058},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing office','label':'San Francisco','country':'USA','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'3c6039db-4362-4948-988d-718830e7b8d5','position':{'lat':51.047,'lng':-117.08},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing Office','label':'Calgary','country':'Canada','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'6242b84e-32bd-4980-9ec8-de91239b6654','position':{'lat':-20.009,'lng':57.582},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing office','label':'Grand Baie','country':'Mauritius','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'62f4448a-08dc-4d9e-93c1-215633e456db','position':{'lat':41.005,'lng':28.977},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing Office','label':'Istanbul','country':'Turkey','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'a599f015-06e6-4027-93a8-e82851728802','position':{'lat':54.373,'lng':18.601},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing Office','label':'Gdansk','country':'Poland','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'278e82d6-a4e6-4e4a-9c22-4e3d68aacd6e','position':{'lat':-6.212,'lng':106.845},'url':'','linkLabel':'','target':'','image':'','images':[],'description':'Marketing Office','label':'Jakarta','country':'Indonesia','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''}]},'region':[{'position':{},'zoom':0}]},{'uuid':'e873ff1e-c6cb-4c74-940d-b75663e910b8','position':{'lat':-10.78722,'lng':25.81023},'url':'https://www.glencore.cd/en','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Mutanda','country':'DRC','category':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'}]},'region':[{'position':{},'zoom':0}]},{'uuid':'10cd1d02-7207-4287-a28b-521699b299cd','position':{'lat':-4.307,'lng':15.293},'url':'https://www.glencore.cd/en','linkLabel':'','target':'_self','image':'','images':[],'description':'','label':'Kinshasa','country':'Democratic Republic of Congo','category':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''}]},'region':[{'position':{},'zoom':0}]}]"
+:hide-categories="false"
+:categories="{'minerals':{'uuid':'9b7c5aea-6b60-4984-9ac8-538932b01caa','name':'minerals','label':'Metals \u0026 Minerals','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','image':'/dam/jcr:d25473fe-bade-401f-b2fb-5bf20a1c4133/icon-minerals.png','color':'#ee7330','subCategories':[{'uuid':'68f57708-14a4-457f-979f-de4e10062331','name':'copper','label':'Copper','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Cu'},{'uuid':'28506269-f77c-48e9-9b8a-df02d72a35a4','name':'nickel','label':'Nickel','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Ni'},{'uuid':'05852b99-da4a-46f9-9783-f57f72e7c933','name':'aluminium','label':'Alumina/Aluminium','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Al'},{'uuid':'1d90f8d0-2f91-4131-a1e8-e1cba3732536','name':'ferroalloys','label':'Ferroalloys','icon':'/dam/jcr:507692e6-a4ad-434c-a21b-e89dc9f609d1/fe.png'},{'uuid':'beb4b08f-4258-4fd3-9873-670a7223b2d7','name':'zinc','label':'Zinc','icon':'/dam/jcr:7ceff3ec-c24a-4aa0-aecd-f3131541ce99/minerals.png','slug':'Zn'},{'uuid':'f2e45ac9-57a9-4753-9f87-97c5c3f57841','name':'recycling','label':'Recycling','icon':'/dam/jcr:7e3705fd-0a75-4d1f-9465-ab9921a74d2c/WhatWeDo-recycling.png'}]},'energy':{'uuid':'0d8b40c6-f30c-4144-8dd0-381006d3b41e','name':'energy','label':'Energy','icon':'/dam/jcr:e0b65d24-885a-4045-89be-6f14030a2daa/energy.png','image':'/dam/jcr:cf700bca-149c-49c6-a672-a22ce6617991/icon-energy.png','color':'#7d91a5','subCategories':[{'uuid':'be560146-14fe-4b16-823c-3bcf02778965','name':'oil','label':'Oil','icon':'/dam/jcr:163e30ae-c857-47ab-906c-0c1db4f60b39/oil.png'},{'uuid':'b323bc48-cf23-4782-9973-5ff6969f6550','name':'coal','label':'Coal','icon':'/dam/jcr:63fd33e5-8285-4256-bc71-af71b25ab2c9/coal.png'}]},'offices':{'uuid':'ae620da6-8993-4a1c-9b45-aea17eedaa11','name':'offices','label':'Offices','icon':'/dam/jcr:949b19e7-94bb-46b3-9bbc-f1de18e06bcc/offices.png','image':'/dam/jcr:f3735b19-b136-4a17-8e2b-d89d15803576/icon-offices.png','color':'#00afaa','subCategories':[{'uuid':'cbf139ca-c079-4ceb-b3ee-ee70337f6f63','name':'marketing','label':'Marketing office','icon':''},{'uuid':'276a9eac-0d8b-4fa7-8ab8-15e344a9e367','name':'industrial','label':'Industrial office','icon':''},{'uuid':'c67142da-0158-412a-80da-5b425433dece','name':'corporate','label':'Corporate office','icon':''},{'uuid':'b8a94bab-1576-4b8e-8246-4bea63a1ab00','name':'Headquarters','label':'Headquarters','icon':''}]}}"
+:region="[]"
+:is-office-map="false"
+label-visit-website="Visit Website"
+label-show-all="Show All"
+label-select-office="Select Office"
+label-phone="Phone"
+label-mobile="Mobile"
+label-fax="Fax"
+label-search="Search"
+label-back="Back"
+>
+</world-map>
+</consent-wrapper>
+</section>
+</main>
+<footer class="print:hidden container flex flex-col px-4 pt-12 pb-12 w-full md:items-center md:px-10 md:pt-25 md:pb-16 xl:px-20 xl:pb-48">
+<div class="order-4 md:order-3 md:mb-12 xl:mb-16">
+<ul class="flex flex-row items-center">
+<li class="before:content-[''] first:before:content-none before:inline-block
+before:border-s before:border-black-900
+before:h-6 md:before:h-8 before:mx-1.25 md:before:mx-3">
+<a href="http://www.twitter.com/glencore"
+class="focus-primary inline-block p-1 text-black-900 hover:text-primary-500 focus:text-primary-500"
+title="X"
+aria-label="X"
+target='_blank'
+rel="noopener norefferer"
+>
+<svg class="icon w-4 h-4 md:w-6 md:h-6 fill-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#twit"></use>
+</svg>
+</a>
+</li>
+<li class="before:content-[''] first:before:content-none before:inline-block
+before:border-s before:border-black-900
+before:h-6 md:before:h-8 before:mx-1.25 md:before:mx-3">
+<a href="http://www.linkedin.com/company/8518"
+class="focus-primary inline-block p-1 text-black-900 hover:text-primary-500 focus:text-primary-500"
+title="LinkedIn"
+aria-label="LinkedIn"
+target='_blank'
+rel="noopener norefferer"
+>
+<svg class="icon w-4 h-4 md:w-6 md:h-6 fill-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#link"></use>
+</svg>
+</a>
+</li>
+<li class="before:content-[''] first:before:content-none before:inline-block
+before:border-s before:border-black-900
+before:h-6 md:before:h-8 before:mx-1.25 md:before:mx-3">
+<a href="http://www.facebook.com/glencore"
+class="focus-primary inline-block p-1 text-black-900 hover:text-primary-500 focus:text-primary-500"
+title="Facebook"
+aria-label="Facebook"
+target='_blank'
+rel="noopener norefferer"
+>
+<svg class="icon w-4 h-4 md:w-6 md:h-6 fill-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#face"></use>
+</svg>
+</a>
+</li>
+<li class="before:content-[''] first:before:content-none before:inline-block
+before:border-s before:border-black-900
+before:h-6 md:before:h-8 before:mx-1.25 md:before:mx-3">
+<a href="http://www.instagram.com/glencoreplc"
+class="focus-primary inline-block p-1 text-black-900 hover:text-primary-500 focus:text-primary-500"
+title="Instagram"
+aria-label="Instagram"
+target='_blank'
+rel="noopener norefferer"
+>
+<svg class="icon w-4 h-4 md:w-6 md:h-6 fill-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#instagram"></use>
+</svg>
+</a>
+</li>
+<li class="before:content-[''] first:before:content-none before:inline-block
+before:border-s before:border-black-900
+before:h-6 md:before:h-8 before:mx-1.25 md:before:mx-3">
+<a href="http://www.youtube.com/user/glencorevideos"
+class="focus-primary inline-block p-1 text-black-900 hover:text-primary-500 focus:text-primary-500"
+title="YouTube"
+aria-label="YouTube"
+target='_blank'
+rel="noopener norefferer"
+>
+<svg class="icon w-4 h-4 md:w-6 md:h-6 fill-current"
+>
+<use xlink:href="/.resources/gc/webresources/img/sprite.svg#youtube"></use>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+<div class="order-3 mb:order-4 mb-10 md:mb-0 tracking-widest xl:tracking-normal text-black-600 text-para-xs w-full">
+<ul class="flex flex-col md:flex-row md:justify-center flex-wrap whitespace-nowrap">
+<li class=" md:flex-1/3 xl:flex-none leading-6 md:text-center md:px-3">
+<a href="/terms/terms-of-use"
+class="focus-primary border-b-2 border-b-transparent hover:text-black-900 hover:border-b-black-300 focus:text-black-900"
+title="Terms of use"
+aria-label="Terms of use"
+target='_self'
+>
+Terms of use
+</a>
+</li>
+<li class=" md:flex-1/3 xl:flex-none leading-6 md:text-center md:px-3">
+<a href="/terms/privacy-notice"
+class="focus-primary border-b-2 border-b-transparent hover:text-black-900 hover:border-b-black-300 focus:text-black-900"
+title="Privacy notice"
+aria-label="Privacy notice"
+target='_self'
+>
+Privacy notice
+</a>
+</li>
+<li class=" md:flex-1/3 xl:flex-none leading-6 md:text-center md:px-3">
+<a href="/terms/cookies-notice"
+class="focus-primary border-b-2 border-b-transparent hover:text-black-900 hover:border-b-black-300 focus:text-black-900"
+title="Cookies policy"
+aria-label="Cookies policy"
+target='_self'
+>
+Cookies policy
+</a>
+</li>
+<li class=" md:flex-1/3 xl:flex-none leading-6 md:text-center md:px-3">
+<a href="/terms/accessibility"
+class="focus-primary border-b-2 border-b-transparent hover:text-black-900 hover:border-b-black-300 focus:text-black-900"
+title="Accessibility"
+aria-label="Accessibility"
+target='_self'
+>
+Accessibility
+</a>
+</li>
+<li class=" md:flex-1/3 xl:flex-none leading-6 md:text-center md:px-3">
+<a href="/sustainability/ethics-and-compliance/speaking-openly"
+class="focus-primary border-b-2 border-b-transparent hover:text-black-900 hover:border-b-black-300 focus:text-black-900"
+title="Speaking Openly/Raising Concerns"
+aria-label="Speaking Openly/Raising Concerns"
+target='_self'
+>
+Speaking Openly/Raising Concerns
+</a>
+</li>
+<li class=" md:flex-1/3 xl:flex-none leading-6 md:text-center md:px-3">
+<a href="/.rest/api/v1/documents/static/c212884a-9152-4454-8556-347644e01349/2025+Modern+Slavery+Statement.pdf"
+class="focus-primary border-b-2 border-b-transparent hover:text-black-900 hover:border-b-black-300 focus:text-black-900"
+title="Modern Slavery Statement"
+aria-label="Modern Slavery Statement"
+target='_blank'
+rel="noopener norefferer"
+>
+Modern Slavery Statement
+</a>
+</li>
+</ul>
+</div>
+<div class="order-5 font-semibold tracking-widest md:tracking-normal uppercase md:normal-case text-para-xxs md:text-para-xs mt-10 md:mt-8 xl:mt-4">
+&copy; Glencore 2026
+</div>
+<cookie-policy type="advanced"
+title="Privacy policy and cookies"
+text="This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies."
+adv-text=""
+:labels="{
+settings: 'Cookie settings',
+reject: 'Reject all cookies',
+accept: 'Accept all cookies',
+rejectAll: 'Reject all cookies',
+confirm: 'Confirm'
+}"
+:options="[
+{
+type: 'necessary',
+label: 'Necessary cookies',
+text: 'Necessary cookies ensure the basic functionality of a website, enabling essential features like navigation and access to secure areas.',
+checkbox: false
+},
+{
+type: 'analytics',
+label: 'Analytical cookies',
+text: 'Performance or analytical cookies collect data on how visitors interact with a website, helping to improve its performance and user experience.',
+checkbox: true
+},
+{
+type: 'functional',
+label: 'Functional cookies',
+text: 'Functional cookies allow a website to remember user preferences and settings to provide enhanced functionality and personalization.',
+checkbox: true
+},
+{
+type: 'targeting',
+label: 'Advertising cookies',
+text: 'Advertising cookies track user behavior across websites to deliver targeted advertisements and measure the effectiveness of ad campaigns.',
+checkbox: true
+}
+]"
+:link="{
+url: '',
+label: 'Read more',
+ariaLabel: 'Read more'
+}"
+></cookie-policy>
+</footer>
+<navigation-blur></navigation-blur>
+</article>
+<script type="text/javascript">
+if (typeof(Storage) !== "undefined") {
+localStorage.setItem("glencore-language", "en");
+localStorage.setItem("glencore-context-path", "");
+} else {
+console.log("Failed to set glencore-context-path and glencore-language. Storage was undefined.")
+}
+</script>
+<script src="/.resources/gc/webresources/js/chunk-vendors~2026-08-14-10-28-44-000~cache.js"></script>
+<script src="/.resources/gc/webresources/js/main~2026-08-14-10-28-44-000~cache.js"></script>
+</body>
+</html>

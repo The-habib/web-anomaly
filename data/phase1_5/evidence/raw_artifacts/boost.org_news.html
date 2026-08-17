@@ -1,0 +1,1750 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    
+      <script defer
+            data-domain="boost.org"
+            src="https://plausible.io/js/script.manual.js"></script>
+   
+    <title>News</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Boost C++ Libraries">
+    <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" sizes="any">
+    <link rel="icon" href="/static/img/favicon.png" type="image/png" sizes="48x48">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+    <link rel="manifest" href="/static/img/site.webmanifest">
+
+    <meta class="meta-theme" name="theme-color" content="#FAFAFA" data-dark="#18181B" data-light="#FAFAFA">
+    <meta class="meta-theme" name="color-scheme" content="light" data-dark="dark" data-light="light">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@ryangjchandler/alpine-clipboard@2.x.x/dist/alpine-clipboard.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <!-- TODO bring this local if we like it -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/static/js/theme_handling.js"></script>
+    <script src="/static/js/scroll-to-link.js" defer></script>
+    <script src="/static/js/utils.js"></script>
+    
+    <script src="/static/js/boost-gecko/main.D1bdgn0u.js" defer></script>
+    
+    
+      <link href="/static/css/styles.css" rel="stylesheet">
+      <link href="/static/css/components.css" rel="stylesheet">
+      
+      <link href="/static/css/boostlook.css" rel="stylesheet">
+      
+    
+
+    
+    <style>
+    
+    :root {
+    --site-light-bg-color: rgb(229, 231, 235);
+    --site-dark-bg-color: rgb(5, 26, 38);
+    --site-light-card-color: #fff;
+    --site-dark-card-color: rgb(23, 42, 52);
+    --site-light-border-color: #d1d1d1;
+    --site-dark-border-color: #07405f;
+    --site-light-text-color: rgb(49, 74, 87);
+    --site-dark-text-color: #ccc;
+    --site-dark-heading-text-color: #fff;
+    --site-light-heading-text-color: rgb(49, 74, 87);
+    --site-primary-orange: rgb(255, 159, 0);
+    --site-light-secondary-blue: rgb(2, 132, 199);
+    --site-dark-secondary-blue: rgb(125, 211, 252);
+    --site-light-teritary-green: rgb(14, 174, 96);
+    --site-dark-teritary-green: rgb(90, 213, 153);
+    --site-light-shadow-color: rgba(0,0,0,0.3);
+    --site-dark-shadow-color: transparent;
+    /* specific use colors */
+     /* header height var for docs positioning */
+    --header-height: 2.5rem;
+}
+html {
+    --bg-color: var(--site-light-bg-color);
+    --card-color: var(--site-light-card-color);
+    --border-color: var(--site-light-border-color);
+    --text-color: var(--site-light-text-color);
+    --header-color: var(--site-light-heading-text-color);
+    --primary-color: var(--site-primary-orange);
+    --secondary-color: var(--site-light-secondary-blue);
+    --teritary-color: var(--site-light-teritary-green);
+    --shadow-color: var(--site-light-shadow-color);
+    /* specific use colors */
+}
+html.dark {
+    --bg-color: var(--site-dark-bg-color);
+    --card-color: var(--site-dark-card-color);
+    --border-color: var(--site-dark-border-color);
+    --text-color: var(--site-dark-text-color);
+    --header-color: var(--site-dark-heading-text-color);
+    --primary-color: var(--site-primary-orange);
+    --secondary-color: var(--site-dark-secondary-blue);
+    --teritary-color: var(--site-dark-teritary-green);
+    --shadow-color: var(--site-dark-shadow-color);
+    /* specific use colors */
+}
+
+    .header-menu-bar {
+        padding: 0 1rem;
+        height: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 1px 0px #d1d1d1;
+        border-bottom: 1px solid #f6f6f6;
+        max-width: 80rem;
+        margin: 0 auto;
+        color: var(--text-color);
+        font-family: "Noto Sans" !important;
+    }
+    .DEBUG .header-menu-bar {
+        font-family: "Noto Sans", serif !important;
+    }
+    .dark .header-menu-bar {
+        border-bottom: 1px solid #07405f;
+        box-shadow: 0 1px 0 #000;
+    }
+    .header-menu-bar .left-menubar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-grow: 1;
+    }
+    .header-menu-bar .right-menubar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 9rem;
+    }
+    .header-menu-bar .logo-link {
+        width: 31px;
+        height: 31px;
+    }
+    .header-menu-bar .menu-link {
+        text-transform: capitalize;
+        text-decoration: none;
+        margin-left: 1rem;
+        font-weight: 500;
+        color: var(--text-color);
+        font-size: 18px;
+    }
+    .header-menu-bar .menu-link-right {
+        text-transform: capitalize;
+        margin-right: 1rem;
+        font-weight: 500;
+        color: var(--text-color);
+        font-size: 18px;
+        white-space: nowrap;
+    }
+    .icon-link {
+        display:block;
+        margin-left: 1rem;
+        cursor: pointer
+    }
+    .dark .icon-link {
+        opacity: 0.5;
+    }
+    .icon-link:hover,
+    .menu-link:hover,
+    .active-link,
+    .mobile-menu-item a:hover {
+        color: var(--primary-color) !important;
+        opacity: 1;
+    }
+    .boost-drop-shadow {
+      box-shadow: 2px 2px 5px 1px var(--shadow-color);
+    }
+    .guide-modal {
+        position: absolute;
+        right:0;
+        z-index: 10;
+        padding: .25rem .5rem;
+        margin-top: .5rem;
+        width: 10rem;
+        text-align:left;
+        background-color: var(--card-color);
+        border-radius: 0.375rem;
+        border: 1px solid var(--border-color);
+        box-shadow: 3px 3px 7px 1px var(--shadow-color);
+    }
+    .guide-modal a {
+        margin-left: .5rem;
+        display: block;
+        padding: .5rem 0;
+        font-size: .8rem;
+        cursor: pointer;
+        color: var(--text-color);
+        border-bottom: var(--border-color) 1px solid;
+    }
+    .guide-modal a:last-child {
+        border-bottom: none;
+    }
+    .guide-modal a:hover {
+        color: var(--primary-color);
+    }
+    #pageselector {
+        text-transform: capitalize;
+        margin-left: 1rem;
+        font-weight: 500;
+        display:flex;
+        position: absolute;
+        top: 2.25rem;
+        left: 1.75rem;
+        flex-direction: column;
+        z-index: 10;
+        color: var(--text-color);
+        background-color: var(--card-color);
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+    .hide {
+        display: none !important;
+    }
+    .mobile-menu-item {
+          min-width: 10rem;
+          padding: .5rem 1rem;
+          border-bottom: var(--border-color) 1px solid;
+          text-transform: capitalize;
+        }
+    .mobile-menu-item:last-child {
+      border-bottom: none;
+    }
+    #avatar svg {
+        width: 1rem;
+        height: 1rem;
+        color: var(--text-color);
+        fill: var(--primary-color);
+    }
+    #mobileNav {
+        display: flex;
+        align-items: center;
+    }
+    #selectedpage {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    #pageName {
+      text-transform: capitalize;
+    }
+    #desktopNav {
+            display: none;
+        }
+    @media screen and (min-width: 768px) {
+        #mobileNav {
+            display: none;
+        }
+        #desktopNav {
+            display: flex;
+        }
+    }
+    /* specific to docs */
+    body.article {
+      max-width: 100% !important;
+      margin: 0;
+      padding: 0px .75rem !important;
+    }
+    body .body {
+      margin: 0px 1rem;
+      padding: 1.5rem 0rem 0;
+      max-width: 80rem;
+    }
+    body.article  #headblock {
+      padding: 0.25rem 1rem !important;
+    }
+    article.card {
+      border-radius: .5rem;
+      padding-top: .5rem !important;
+    }
+    @media (min-width: 769px) {
+      body.article {
+        max-width: 80rem !important;
+        margin: auto;
+        padding: 0px 2.25rem;
+        border-radius: .5rem;
+     }
+    }
+    @media (max-width: 768px) {
+      body.article {
+        padding: 0px !important;
+        border-radius: 0rem !important;
+        margin: 0 !important;
+     }
+    body.article  #headblock {
+      padding: 0.25rem 0.5rem !important;
+     }
+     .body {
+      margin: 0 !important;
+      padding: 0 !important;
+     }
+     .article .card {
+      border-radius: 0 !important;
+     }
+    }
+
+    /* asciidoc layout base */
+
+    .main-footer {
+      max-width: 80rem !important;
+    }
+
+    .link-icons {
+      width: 4rem;
+    }
+
+    .links {
+      padding: 0 0.5rem;
+    }
+
+    .source-docs-antora .doc {
+        padding-top: 0 !important;
+    }
+
+    @media screen and (max-width: 940px) {
+      .links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+    @media screen and (max-width: 769px) {
+
+      .source-docs-asciidoc #header  #toc.toc2 {
+         position: relative !important;
+         height: auto;
+      }
+
+        .main-footer {
+          margin-left: 0 !important;
+          margin: auto !important
+        }
+    }
+
+    .hidenav {
+      display: none !important;
+    }
+      .toast-text {
+        display: flex;
+        font-size: .9rem;
+        font-weight: 600;
+        align-items: center;
+        justify-content: center;
+      }
+      .red-delete {
+        display: inline;
+        padding: .1rem .5rem;
+        margin: 0 1rem;
+        border: 2px solid #fff;
+        border-radius: .3rem;
+        color: #fff;
+        font-size: .8rem;
+      }
+      .red-delete:hover {
+        background-color: #fff;
+        color: #f00;
+      }
+      .red-cancel {
+        display:inline;
+        padding: .1rem .5rem;
+        margin-left: 2rem;
+        border: 2px solid #fff;
+        border-radius: .3rem;
+        background-color: #fff;
+        color: var(--text-color);
+        font-size: .8rem;
+      }
+      .red-cancel:hover {
+        color: #f00;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wdth,wght@62.5..100,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body x-init="() => {const m = localStorage.getItem('colorMode');
+            if (m !== 'dark' && m !== 'light') return;
+            mode = m;
+            document.head.querySelectorAll('.meta-theme').forEach((el) => {
+              el.setAttribute('content', el.getAttribute('data-' + m));
+            });
+        }"
+        class="h-screen bg-gray-200 dark:bg-black" >
+         <div class="modal-overlay" id="modalOverlay"><div class="modal-content"><iframe id="modalFrame" class="w-full h-full rounded-xl m-0 p-0"></iframe><div class="modal-close" id="modalClose" onclick="closeModal()"><i class="fa-solid fa-xmark fa-lg"></i></div></div></div>
+      
+      
+      
+        
+          <div class="max-w-7xl md:px-3 mx-auto transition-all">
+        
+      
+      
+        
+          
+
+<div class="header-menu-bar topnavbar">
+    <!-- mobile navbar -->
+    <div id="mobileNav" >
+      <a href="/" title="Boost Home" class="logo-link"><img src="/static/img/Boost_Symbol_Transparent.svg" alt="Boost"></a>
+      <div id="selectedpage" onclick="openNav()" class="">
+        <div id="pageName">News</div>
+        <div class="material-symbols-outlined">arrow_drop_down</div>
+      </div>
+      <div id="pageselector" onmouseleave="closeNav()" class="hide boost-drop-shadow"  >
+          <div class="mobile-menu-item"><a href="/news/" title="News">News</a></div>
+          <div class="mobile-menu-item"><a href="/docs/" title="Learn">Learn</a></div>
+          <div class="mobile-menu-item"><a href="/community/" title="Community">Community</a></div>
+          <div class="mobile-menu-item"><a href="/libraries/" title="Libraries">Libraries</a></div>
+          <div class="mobile-menu-item"><a href="/releases/" title="Releases">Releases</a></div>
+      </div>
+    </div>
+    <!-- desktop navbar -->
+    <div id="desktopNav" class="left-menubar">
+        <a href="/" title="Boost Home" class="logo-link"><img src="/static/img/Boost_Symbol_Transparent.svg" alt="Boost"></a>
+        <a href="/news/" id="news" class="menu-link active-link">news</a>
+        <a href="/docs/" id="learn" class="menu-link ">learn</a>
+        <a href="/community/" id="community" class="menu-link ">community</a>
+        <a href="/libraries/" id="libraries" class="menu-link ">libraries</a>
+        <a href="/releases/" id="releases" class="menu-link ">releases</a>
+    </div>
+    <div class="right-menubar" x-data="{ 'searchOpen': false }">
+        <span style="position: relative;" x-ref="desktopSearchArea">
+         <i id="gecko-search-button" data-current-boost-version="1_92_0" data-theme-mode="light" data-font-family="sans-serif" class="fas fa-search icon-link"></i>
+        </span>
+        <span x-data="{ 'guideOpen': false }" style="position:relative;">
+            <i class="icon-link fas fa-question-circle" @click="guideOpen = !guideOpen"></i>
+                <span x-show="guideOpen" x-cloak @click.away="guideOpen = false" id="guideMenu" class="guide-modal boost-drop-shadow hidden">
+                    <a href="/doc/user-guide/index.html">User Guide</a>
+                    <a href="/doc/contributor-guide/index.html">Contributor Guide</a>
+                    <a href="/review/">Formal Reviews</a>
+                </span>
+            </span>
+        
+        <i id="light-dark" class="fas fa-sun icon-link " onclick="changeTheme()"></i>
+        
+        <span x-data="{ 'userOpen': false }" class="menu-link w-8 relative">
+            
+            <span hx-get="/users/avatar/"
+                 hx-trigger="load"
+                 hx-target="#avatar"
+                 hx-indicator="#avatar">
+            </span>
+            <span id="avatar"></span>
+        </span>
+    </div>
+</div>
+    <script>
+
+    if (window.parent !== window) {
+      var nav = document.getElementsByClassName('topnavbar');
+      console.log(nav);
+      nav[0].classList.add('hidenav');
+    }
+
+      // ************ Mobile Navigation **************
+      let containingElement = document.getElementById("pageselector");
+      document.body.addEventListener('click', function( event ){
+        if(!containingElement.contains( event.target ) ){
+          closeNav();
+        }
+      });
+      function openNav() {
+        ps = document.getElementById("pageselector");
+        ps.classList.remove('hide');
+      }
+      function closeNav() {
+         ps = document.getElementById("pageselector");
+        setTimeout(function() {
+          if (!ps.matches(':hover')) {
+            ps.classList.add('hide');
+          }
+        }, 2000);
+      }
+      function removejscssfile(filename, filetype){
+        var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
+        var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
+        var allsuspects=document.getElementsByTagName(targetelement)
+          for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
+          if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+              allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
+          }
+      }
+      document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+          removejscssfile("boostbook.css", "css")
+          var guide = document.getElementById("guideMenu")
+          guide.classList.remove("hidden");
+        }
+      }
+    </script>
+
+        
+      
+
+      <div class="w-full">
+        <div id="messages" class="w-full text-center transition-opacity" x-data="{show: true}">
+  
+</div>
+
+      </div>
+      
+      
+      
+
+      <div class="md:px-0 min-vh-110">
+      
+        
+        
+  <div class="py-0 px-0 md:px-4 mt-4 mb-0 w-full md:mb-2">
+    <div class="md:w-full">
+      <h1 class="text-3xl px-3 md:px-0">
+        Latest Stories
+        <a href="/feed/news.rss" title="RSS feed" class="whitespace-nowrap ml-3 text-base text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange"><i class="fa-solid fa-rss"></i></a>
+      </h1>
+
+      <div class="md:flex md:space-x-16 px-3 md:px-0">
+        <div class="md:w-1/2 w-full">
+          <p class="mt-0 text-justify">
+            Stay up to date with Boost and the C++ ecosystem with the latest news, videos, resources, polls, and user-created content.
+            
+            Signed-in users may submit items to include in the feed (posts are reviewed before publication).
+            
+          </p>
+        </div>
+
+        <!-- General filters, by news type -->
+        <div class="md:w-1/2 w-full pt-2 md:pt-6">
+          <div class="grid grid-cols-3 justify-center place-items-center space-y-1 space-x-1 sm:grid-cols-5 sm:space-y-0">
+
+            
+            <a href="/news/" class="w-20 p-1 text-center rounded-lg cursor-pointer hover:bg-gray-100 group dark:hover:bg-slate text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange bg-gray-100 dark:bg-slate text-orange dark:text-orange">
+              <h6 class="pb-1 text-base">All</h6>
+              <i class="fa fa-globe"></i>
+            </a>
+
+            
+            <a href="/news/news/" class="w-20 p-1 text-center rounded-lg cursor-pointer hover:bg-gray-100 group dark:hover:bg-slate text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">
+              <h6 class="pb-1 text-base">News</h6>
+              <i class="fa fa-newspaper"></i>
+            </a>
+
+            
+            <a href="/news/blogpost/" class="w-20 p-1 text-center rounded-lg cursor-pointer hover:bg-gray-100 group dark:hover:bg-slate text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">
+              <h6 class="pb-1 text-base">Blogs</h6>
+              <i class="fa fa-comment"></i>
+            </a>
+
+            
+            <a href="/news/link/" class="w-20 p-1 text-center rounded-lg cursor-pointer hover:bg-gray-100 group dark:hover:bg-slate text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">
+              <h6 class="pb-1 text-base">Links</h6>
+              <i class="fas fa-link"></i>
+            </a>
+
+            
+
+            
+            <a href="/news/video/" class="w-20 p-1 text-center rounded-lg cursor-pointer hover:bg-gray-100 group dark:hover:bg-slate text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">
+              <h6 class="pb-1 text-base">Videos</h6>
+              <i class="fa fa-video"></i>
+            </a>
+
+            
+          </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+      <div class="mx-auto w-full">
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/hub-is-here/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Jul 2nd, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a >
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Joaquín M López Muñoz">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/joaquin/556ea6c3848ac41d4c50a3304d848e8b.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=241981fac2d178edbf59752241c1b5dd109f2c8d1db9636d11a2eb2fec334351"
+            alt="Joaquín M López Muñoz"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Joaquín M López Muñoz</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/joaquin/2026/07/01/Joaquins2026Q2Update.html">
+                  Hub is here
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Joaquín M López Muñoz<br />
+                <span class="text-xs">Jul 2nd, 2026</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">During Q2 2026 Boost work is summarized: boost::container::hub accepted for Boost 1.92; Boost.Unordered added C++20 range support; Boost.MultiIndex got iterator pointers; Boost.ICL fixed for libc++ v22; Boost.Bloom, Boost.Graph and activities noted.</div>
+                
+                  
+                    <a href="https://cppalliance.org/joaquin/2026/07/01/Joaquins2026Q2Update.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Joaquín M López Muñoz<br />
+                Jul 2nd, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/joaquin.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8c136f9b541581a5f5344a52fb1dc44845b939eb7e055448c899920f5d24f541" alt="Joaquín M López Muñoz" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/manipulating-urls-with-boost-url/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">May 14th, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/video/" title="Video" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fa fa-video"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/grafikrobot">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="René Ferdinand Rivera Morell">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-59/5bd419211ce793005df71c294eb6b809.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=79f794d90b60a48b538986095e772e6f7439b29b8e5b1ee911908f494fb502aa"
+            alt="René Ferdinand Rivera Morell"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">René Ferdinand Rivera Morell</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header"  href="/news/entry/manipulating-urls-with-boost-url/">
+                  Manipulating URLs with Boost URL
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                René Ferdinand Rivera Morell<br />
+                <span class="text-xs">May 14th, 2026</span>
+              </div>
+            </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                René Ferdinand Rivera Morell<br />
+                May 14th, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/video/" title="Video" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fa fa-video"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-59.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f533be1a706eb59e19a95f0a0f2fe4f85bc37614bedb88a2d06bd5733ababbcb" alt="René Ferdinand Rivera Morell" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/mrdocs-bootstrap-one-script-to-build-them-all/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Apr 24th, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/alandefreitas">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Alan de Freitas">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-106/45f248cdfaedfe79af7c992100a628c6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2b5de854321f99bb5e9a1210c4aa3ba6251c7501783819cf8f993b8687abb8d5"
+            alt="Alan de Freitas"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Alan de Freitas</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/alan/2026/04/15/Alan.html">
+                  MrDocs Bootstrap: One Script to Build Them All
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Alan de Freitas<br />
+                <span class="text-xs">Apr 24th, 2026</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">Complex C++ dependency management is explained with version conflicts, ABI issues, and platform toolchain differences. Limitations of package managers are described, and a bootstrap script is presented that automates builds, configuration, and IDE setup across platforms, supporting sanitizers.</div>
+                
+                  
+                    <a href="https://cppalliance.org/alan/2026/04/15/Alan.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Alan de Freitas<br />
+                Apr 24th, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-106.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=abccde3897d1622b8e55295f0d749b97578ebd44dd7c3cd6ed924e03ea1489fe" alt="Alan de Freitas" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/speed-and-safety/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Apr 8th, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/mborland">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Matt Borland">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-7/674ed0747242fe7bbbdf93ce16d77279.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=579962e9e08335b1b8025b1d88676c6461391ac50c25bba0ea36ee1de4978e35"
+            alt="Matt Borland"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Matt Borland</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/matt/2026/04/06/Matts2026Q1Update.html">
+                  Speed and Safety
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Matt Borland<br />
+                <span class="text-xs">Apr 8th, 2026</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">CUDA support is added to Boost int128 for host and device use. Device from_chars/to_chars are provided by Boost.Charconv, and Boost.Decimal will gain CUDA later. Verification is used by Boost.Safe_Numbers for safety and error check with CUDA reporting.</div>
+                
+                  
+                    <a href="https://cppalliance.org/matt/2026/04/06/Matts2026Q1Update.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Matt Borland<br />
+                Apr 8th, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-7.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=17e598bb7b122cdc6bbb8142e6cbd92c52193131f8f22a8b9d32fbabc7ad2585" alt="Matt Borland" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/hubs-intervals-and-math/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Apr 3rd, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a >
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Joaquín M López Muñoz">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/joaquin/556ea6c3848ac41d4c50a3304d848e8b.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=241981fac2d178edbf59752241c1b5dd109f2c8d1db9636d11a2eb2fec334351"
+            alt="Joaquín M López Muñoz"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Joaquín M López Muñoz</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/joaquin/2026/04/02/Joaquins2026Q1Update.html">
+                  Hubs, intervals and math
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Joaquín M López Muñoz<br />
+                <span class="text-xs">Apr 3rd, 2026</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">Development of boost::container::hub as a lightweight alternative to std::hive, a conference talk on C++ mathematics, maintenance merges for Boost.Unordered and Boost.Bimap, a fix proposal for Boost.ICL, and community support activities.</div>
+                
+                  
+                    <a href="https://cppalliance.org/joaquin/2026/04/02/Joaquins2026Q1Update.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Joaquín M López Muñoz<br />
+                Apr 3rd, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/joaquin.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8c136f9b541581a5f5344a52fb1dc44845b939eb7e055448c899920f5d24f541" alt="Joaquín M López Muñoz" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/powering-cognitive-communications-engine-for-nasa-with-boost/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Mar 27th, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/news/" title="News" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fa fa-newspaper"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a >
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Mark Cooper">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-808/01f217e6cb854c172e038a25e515d7ee.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bcdd7d9a5106a074d83080fbda30538a856ec9642f2824918e750e5748680073"
+            alt="Mark Cooper"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Mark Cooper</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header"  href="/news/entry/powering-cognitive-communications-engine-for-nasa-with-boost/">
+                  Powering Cognitive Communications Engine for NASA with Boost
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Mark Cooper<br />
+                <span class="text-xs">Mar 27th, 2026</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">Boost libraries were employed to provide permissive‑licensed, reliable networking and serialization for a C++11 reinforcement‑learning cognitive engine that autonomously optimizes ISS radio communications. Boost.Asio was used to handle concurrent UDP/Ethernet I/O, and Boost.Serialization was used to enable state persistence across orbital passes, facilitating successful on‑orbit testing.</div>
+                
+                  
+                    <a href="/news/entry/powering-cognitive-communications-engine-for-nasa-with-boost/" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Mark Cooper<br />
+                Mar 27th, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/news/" title="News" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fa fa-newspaper"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-808.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=405e6774ad3a9197461ecc30860eb267209042b1ddc166706f4ba6fb271e4089" alt="Mark Cooper" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/a-postgres-library-for-boost/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Jan 30th, 2026&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/anarthal">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Rubén Pérez">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-107/7f1d4c2b56e714e7da3ed3fb0fef1198.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=75695c5d7c8b2fad9782b99a6d5832a35a12fd5da111805171be29f7a8bed7de"
+            alt="Rubén Pérez"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Rubén Pérez</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/ruben/2026/01/23/Ruben2025Q4Update.html">
+                  A postgres library for Boost
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Rubén Pérez<br />
+                <span class="text-xs">Jan 30th, 2026</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">A Boost-native PostgreSQL library, NativePG, is being developed to provide low‑level message serialization, type parsing, pipelined request composition, flexible response handlers, Asio‑based connections, auto‑batching, connection pooling, and safe SQL formatting, extending beyond libPQ.</div>
+                
+                  
+                    <a href="https://cppalliance.org/ruben/2026/01/23/Ruben2025Q4Update.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Rubén Pérez<br />
+                Jan 30th, 2026
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-107.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=593c20f8fa178e29697a6b5f12165d01cec8d1f08df312533d700536da8cfb78" alt="Rubén Pérez" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/from-prototype-to-product-mrdocs-in-2025/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Oct 29th, 2025&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/alandefreitas">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Alan de Freitas">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-106/45f248cdfaedfe79af7c992100a628c6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2b5de854321f99bb5e9a1210c4aa3ba6251c7501783819cf8f993b8687abb8d5"
+            alt="Alan de Freitas"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Alan de Freitas</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/alan/2025/10/28/Alan.html">
+                  From Prototype to Product: MrDocs in 2025
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Alan de Freitas<br />
+                <span class="text-xs">Oct 29th, 2025</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">The evolution of MrDocs from an unstable 2024 prototype to a stabilized 2025 MVP is described, highlighting unified configuration, consistent generators, enhanced CI, metadata improvements, and plans for reflection, plugins, and priority management.</div>
+                
+                  
+                    <a href="https://cppalliance.org/alan/2025/10/28/Alan.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Alan de Freitas<br />
+                Oct 29th, 2025
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-106.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=abccde3897d1622b8e55295f0d749b97578ebd44dd7c3cd6ed924e03ea1489fe" alt="Alan de Freitas" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/conan-packages-for-boost/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Oct 16th, 2025&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/grisumbras">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Dmitry Arkhipov">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-153/60a0f52e5add16f0f68d696d38de3561.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=66b950f249eb05944e858b23724532e8e9a24e93c0a24043696185a7c5b2608a"
+            alt="Dmitry Arkhipov"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Dmitry Arkhipov</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/dmitry/2025/10/16/dmitrys-q3-update.html">
+                  Conan Packages for Boost
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Dmitry Arkhipov<br />
+                <span class="text-xs">Oct 16th, 2025</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">Nightly Boost packages for Conan are indexed via a local-recipes-index that creates modular library recipes from Boost git refs. Custom versioning and b2 generators are added; the prototype builds on platforms, with library and dependency support planned.</div>
+                
+                  
+                    <a href="https://cppalliance.org/dmitry/2025/10/16/dmitrys-q3-update.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Dmitry Arkhipov<br />
+                Oct 16th, 2025
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-153.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2deb1988dc8df1d8c8727a80588c5cae52def0788b6c19677435d038c74aceb1" alt="Dmitry Arkhipov" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+        <div class="md:flex md:space-x-3">
+          <div class="hidden mt-6 text-sm text-left capitalize md:block min-w-[120px] whitespace-nowrap">
+            <a href="/news/entry/dynamicbitset-reimagined-a-quarter-of-flexibility-cleanup-and-modern-c/" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Oct 15th, 2025&nbsp;&nbsp;</a>
+          </div>
+          <div class="hidden pt-6 border-l-2 border-white md:block min-w-[50px] dark:border-slate">
+            
+              
+              <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                <i class="fas fa-link"></i>
+              </a>
+            
+          </div>
+          <div class="hidden pt-2 mt-4 text-xs text-left md:block min-w-[70px] relative group">
+            
+
+
+  <div class="flex gap-x-2 items-center hover:bg-gray-100 dark:hover:bg-black rounded-lg">
+    <a href="https://github.com/gennaroprota">
+      <div class="w-min text-center flex flex-col justify-center items-center">
+        <div
+          class="w-9 h-9 bg-gray-300 dark:bg-slate flex items-center justify-center relative rounded-lg"
+          title="Gennaro Prota">
+        
+          <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/CACHE/images/profile-images/profile-923/32d785203b8347bad7ab54b2aefb8723.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=fd996f03bd47d3d19297a63b16b85b8cff5ce52951c007c3d499ad22046a901d"
+            alt="Gennaro Prota"
+            class="
+              rounded-lg h-full w-full object-cover mx-auto
+              "
+            />
+        
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+
+
+            <span class="group-hover:opacity-100 transition-opacity bg-slate px-1 text-xs text-gray-100 rounded-sm absolute top-5 left-1/2 -translate-x-1/2 translate-y-full opacity-0 m-0 mx-auto w-auto">Gennaro Prota</span>
+          </div>
+          <div class="block p-6 mb-3 md:mb-10 w-full bg-white md:rounded-lg md:shadow-lg md:ml-6 dark:bg-charcoal overflow-hidden">
+            
+            
+            <div class="flex">
+              <div class="flex-grow-1">
+              <h2 class="py-0 my-0 text-xl font-semibold mr-4">
+                <a class="link-header" target="_blank" href="https://cppalliance.org/gennaro/2025/10/14/Gennaros2025Q3Update.html">
+                  DynamicBitset Reimagined: A Quarter of Flexibility, Cleanup, and Modern C++
+                </a>
+              </h2>
+            </div>
+              <div class="md:block text-xs hidden ml-auto text-right w-[150px]">
+                Gennaro Prota<br />
+                <span class="text-xs">Oct 15th, 2025</span>
+              </div>
+            </div>
+            
+              <div>
+                <div class="text-base text-gray-500 dark:text-white/70">Boost.DynamicBitset was modernized: configurable container, C++20 iterators, legacy code removed, constexpr functions added, tests expanded, and new ops like push_front, pop_front, find_first_off introduced, making it leaner and more maintainable.</div>
+                
+                  
+                    <a href="https://cppalliance.org/gennaro/2025/10/14/Gennaros2025Q3Update.html" class="inline-block text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange mt-2">Read more&#8230;</a>
+                  
+                
+              </div>
+            
+
+            <!-- footer of cards only for mobile devices -->
+            <div class="flex border-t mt-4 border-gray-300 md:hidden">
+              <div class="mt-6 w-1/3 text-xs text-left capitalize">
+                Gennaro Prota<br />
+                Oct 15th, 2025
+              </div>
+              <div class="pt-6 w-1/3 text-center md:border-l-2 border-white dark:border-slate">
+                
+                  
+                  <a href="/news/link/" title="Link" class="px-2 -ml-4 bg-white rounded-full dark:text-gray-300 w-[30px] h-[30px] dark:bg-slate">
+                    <i class="fas fa-link"></i>
+                  </a>
+                
+              </div>
+              <div class="pt-2 mt-4 w-1/3 text-xs text-right">
+                
+                  <span class="inline-block h-[36px] w-[36px] overflow-hidden rounded-lg  ">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/boost.org.media/profile-images/profile-923.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATWXBQYFTD4OW4QFM%2F20260817%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20260817T222316Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=5d915688a1e7adcbe4d12ecd606a7f943bff8d6ddfef22c8cdbd796100a3ae85" alt="Gennaro Prota" class="h-full w-full object-cover">
+                  </span>
+                
+              </div>
+            </div>
+            <!-- end footer -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </div>
+
+      
+      </div>
+
+      
+
+      
+        
+          
+<style>
+  .main-footer {
+    padding: .5rem 1rem;
+    margin: auto;
+  }
+
+  .footer-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    text-align: center;
+    max-width:60rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: .75rem;
+    width: 100%;
+    padding: 0 5rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .links a {
+    display: block;
+    margin: .5rem 0;
+    color: var(--text-color);
+  }
+
+  .links a:hover, .link-icons a:hover {
+    color: var(--primary-color);
+  }
+
+  .link-icons {
+    display:flex;
+    width: 14rem;
+    align-items:center;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .small-text {
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
+
+  div:has(.small-text){
+       margin-bottom: 0.75rem;
+  }
+
+  .xsmall-text {
+    font-style: italic;
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-bottom: 2.75rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    padding: 0rem 2.25rem 0 2.25rem;
+    margin-top: 0;
+  }
+
+  .link-icons {
+    width: 14rem;
+  }
+}
+</style>
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="links">
+      <a href="https://lists.boost.org/mailman3/lists/boost-users.lists.boost.org/">Contact</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/terms-of-use/">Terms of Use</a>
+      <a href="/doc/user-guide/reporting-issues.html">Report Bug</a>
+      <div class="link-icons">
+        <a href="https://x.com/boost_libraries" target="_blank" rel="noopener noreferrer" title="X" aria-label="Follow us on X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+<a href="https://bsky.app/profile/boost.org" target="_blank" rel="noopener noreferrer" title="Bluesky" aria-label="Follow us on Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
+<a href="https://mastodon.social/@boostlibs" target="_blank" rel="noopener noreferrer" title="Mastodon" aria-label="Follow us on Mastodon"><i class="fa-brands fa-mastodon" aria-hidden="true"></i></a>
+<a href="https://www.reddit.com/user/boostlibs/" target="_blank" rel="noopener noreferrer" title="Reddit" aria-label="Follow us on Reddit"><i class="fa-brands fa-reddit" aria-hidden="true"></i></a>
+<a href="https://github.com/boostorg" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Follow us on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/company/cppalliance/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+
+      </div>
+    </div>
+    <div><span class="small-text">Website supported by grants from <a href="https://cppalliance.org/" target="_blank" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">The C++ Alliance</a>.</span></div>
+    <div><span class="xsmall-text">Distributed under the <a href="/LICENSE_1_0.txt" class="text-sky-600 dark:text-sky-300 hover:text-orange dark:hover:text-orange">Boost Software License, Version 1.0</a>.</span></div>
+    
+  </div>
+</footer>
+
+        
+      
+    </div>
+
+    
+
+    
+
+     <script>
+      var r = document.querySelector(':root');
+      const messageVisibilitySeconds = 6;
+      const opacityTransitionTime = 0.15; // matches the tailwind transition-opacity time
+      const delay = ms => new Promise(res => setTimeout(res, ms));
+
+      function modalSize(h,w) {
+        var rs = getComputedStyle(r);
+        r.style.setProperty('--modalWidth', w);
+        r.style.setProperty('--modalHeight', h);
+      }
+
+      /********* Function to open modal ***********/
+      function displayModal(height,width,src) {
+        event.preventDefault()
+        let modal = document.getElementById('modalOverlay');
+        modal.classList.add('show-modal');
+        modalSize(height,width);
+        let modalframe = document.getElementById('modalFrame');
+        modalframe.setAttribute("src", src);
+      }
+
+      function closeModal() {
+        let modal = document.getElementById('modalOverlay');
+        modal.classList.remove('show-modal');
+      }
+
+      const hideMessage = async () => {
+        const message = document.getElementById('messages');
+        message.classList.add('opacity-0');
+        await delay(opacityTransitionTime * 1000);
+        const messageButton = message.querySelector('button');
+        if (messageButton) {
+          messageButton.click();
+        }
+      }
+
+      const providerMatchesLastLogin = async (provider) => {
+        const lastLoginProvider = localStorage.getItem('boostLoginMethod') || null;
+        return provider === lastLoginProvider;
+      }
+
+      const trackLoginUpdateCheck = async () => {
+        const footer = document.querySelector('footer');
+        if (!footer) {
+          return;
+        }
+        const indicator = footer.dataset.trackLoginMethod; // intentionally not cast to boolean
+        const loginMethod = footer.dataset.loginMethod;
+        if (indicator) {
+          if (indicator === 'True') {
+            localStorage.setItem('boostLoginMethod', loginMethod);
+          } else {
+            localStorage.removeItem('boostLoginMethod');
+          }
+        }
+      }
+
+      const changeVersionAndCategory = (event) => {
+        const urlPatterns = {
+          libraries: {
+            regex: /^(https?:\/\/[\S:]+\/libraries\/)([^\/]+)(\/?[a-z]*)(\/?\S*)?\/?$/,
+            substitution: (event) => {
+              switch (event.target.id) {
+                case 'id_category':
+                  return `$1$2$3${event.target.value ? `/${event.target.value}` : ''}/`;
+                case 'id_version':
+                  return `$1${event.target.value}$3$4`;
+                default:
+                  return null;
+              }
+            }
+          },
+          library: {
+            regex: /^(https?:\/\/[\S:]+\/library\/)([^\/]+)\/([^\/]+)\/?$/,
+            substitution: (event) => `$1${event.target.value}/$3/`
+          },
+          releases: {
+            regex: /^(https?:\/\/[\S:]+\/releases\/)([^\/]+)?\/?$/,
+            substitution: (event) => `$1${event.target.value}/`
+          }
+        };
+
+        const currentUrl = window.location.href;
+        for (const key in urlPatterns) {
+          const pattern = urlPatterns[key];
+          if (pattern.regex.test(currentUrl)) {
+            const substitutionString = pattern.substitution(event);
+            if (substitutionString) {
+              window.location.href = currentUrl.replace(pattern.regex, substitutionString);
+            }
+            break;
+          }
+        }
+      }
+
+      const manualPlausibleTrigger = async () => {
+        window.plausible = window.plausible || function() {
+          (window.plausible.q = window.plausible.q || []).push(arguments)
+        }
+        let loc = window.parent.location.href || window.location.href;
+        plausible("pageview", { u: loc + window.location.search });
+      };
+
+      window.addEventListener('DOMContentLoaded', () => {
+        // resets the form on back button press
+        document.getElementById("id_category")?.closest('form').reset();
+        document.getElementById("id_version")?.closest('form').reset();
+        document.getElementById("id_category")?.addEventListener("change", changeVersionAndCategory);
+        document.getElementById("id_version")?.addEventListener("change", changeVersionAndCategory);
+        manualPlausibleTrigger();
+      });
+      (async () => {
+        await trackLoginUpdateCheck();
+        await delay(messageVisibilitySeconds * 1000);
+        await hideMessage();
+      })();
+   </script>
+
+  </body>
+
+</html>

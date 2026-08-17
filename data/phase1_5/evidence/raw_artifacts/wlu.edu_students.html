@@ -1,0 +1,2034 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    
+            <link rel="shortcut icon" href="/Global/favicon.ico" />
+        <title>Students</title>
+        <meta name="xid" content="x4743" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta class="swiftype" data-type="string" name="description" content="Dashboard with helpful information for students of Washington and Lee University.">
+        <meta class="swiftype" data-type="string" name="keywords" content="" />
+        <meta name="robots" content="" />
+        <meta property="og:title" content="Students" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Dashboard with helpful information for students of Washington and Lee University." />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Students" />
+        <meta name="twitter:description" content="Dashboard with helpful information for students of Washington and Lee University." />
+        <meta name="twitter:creator" content="" />
+
+        <base href="https://www.wlu.edu/" />
+    
+    <script>const traffic_type = "external";</script>
+
+    
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-NZJPVXN');</script>
+    
+
+        <script src="//cdn.bc0a.com/autopilot/f00000000320922/autopilot_sdk.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
+    <link rel="stylesheet" href="/Content/assets/css/main.css?v=8.07" />
+    <link rel="stylesheet" href="/Content/assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qiu5nfe.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="admin/jquery.easytable.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script>
+        $(window).on('load resize', function () {
+            $('table.easytable').each(function () {
+                if ($(this).width() > $(this).parent().width()) {
+                    var uuid = $(this).attr("id") || Math.random().toString(36).replace(/[0-9]/g, "").substring(2, 7);
+                    $(this).attr("id", uuid).easyTable({ view: $(window).width() + 'px' });
+                }
+            });
+        });
+    </script>
+    <style>
+        .tray-name {
+            background: black;
+            color: white;
+            font-size: 2.0rem;
+            font-weight: 700;
+            line-height: 3.0rem;
+            padding: 10px 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .wlu-icon-title {
+            position: absolute;
+            left: -999999px;
+        }
+    </style>
+
+
+<style>.tray-layer-top{ display:none; } #anniversaries li,#promotions li{ font-size:1.5rem; margin:0; }</style>
+<script>
+$(document).ready(function(){
+  $.getJSON( "//mga1.wlu.edu/utilities/milestones/milestones.php" , function( data ){
+    var a = "" , p = "";
+    $.each( data.anniversaries , function( i , person ){ a += "<li>" + person + "</li>"; } );
+    $.each( data.promotions , function( i , person ){ p += "<li>" + person + "</li>"; } );
+    $( '#anniversaries .modal-body' ).html( "<ul class='column-2 column-xs-1'>" + a + "</ul>" );
+    $( '#promotions .modal-body' ).html( "<ul class='column-1'>" + p + "</ul>" );
+  } );
+} );
+</script>    
+<style>
+.stat-bar .h1{ text-align:center; }
+</style></head>
+    <body>
+
+        
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZJPVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+
+        
+        <div class="banner_alert">
+            <script type="text/javascript" src="admin/rave.js"></script>
+        </div>
+        
+
+        <div id="page">
+            
+
+
+
+    <header>
+        <div class="container">
+            <a class="skip-to-content" href="#content">Skip to Content</a>
+            <div class="header-content">
+                    <div class="logo">
+                        <a href="">
+                            <img alt="WLU Logo" class="" src="/Global/logo.svg" />
+                        </a>
+                    </div>
+
+                <div class="nav">
+                        <ul>
+                                        <li><a href="/about-w-l" title="About W&amp;L">About W&L</a></li>
+                                        <li><a href="/academics" title="Academics">Academics</a></li>
+                                        <li><a href="/admissions" title="Admissions &amp; Aid">Admissions & Aid</a></li>
+                                        <li><a href="/campus-life" title="Campus Life">Campus Life</a></li>
+                                        <li><a href="/outcomes" title="Outcomes">Outcomes</a></li>
+
+                                <li>
+                                    <a href="/search" title="Search"><span class="wlu-icon"><svg role="img" aria-label="Search"><use xlink:href="/Content/assets/icons/icon-defs.svg#icon-search"></use></svg></span></a>
+                                </li>
+                        </ul>
+
+
+                        <ul>
+                                    <li><a href="/alumni" title="Alumni">Alumni</a></li>
+                                    <li><a href="https://dashboards.wlu.edu/students/" title="Current Students">Current Students</a></li>
+                                    <li><a href="https://dashboards.wlu.edu/employees" title="Faculty &amp; Staff">Faculty & Staff</a></li>
+                                    <li><a href="/families" title="Families">Families</a></li>
+                                    <li><a href="/visitors" title="Visitors">Visitors</a></li>
+                                                            <li><span class="pipe">|</span></li>
+                                    <li><a href="https://columns.wlu.edu" title="News">News</a></li>
+                                    <li><a href="https://columns.wlu.edu/campus-events/" title="Events">Events</a></li>
+                                    <li><a href="/arts" title="Arts">Arts</a></li>
+                                    <li><a href="/athletics" title="Athletics">Athletics</a></li>
+                                    <li><a href="/giving" title="Giving">Giving</a></li>
+                        </ul>
+                </div>
+
+                <div class="open-menu">
+                    <a href="#" id="open-menu-link" title="Open menu" role="button" aria-label="Open Menu">
+                        <span class="wlu-icon"><svg role="img" aria-labelledby="open-menu-link"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-bars"></use></svg></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main id="content">
+
+        <div>
+
+    <div>
+
+    <section class="tray tray-top lapis white-text ">
+            <div class="bg-img opacity-20 filter-grayscale">
+                
+    <img src="/assets/Hero%20Images/about-w-l.jpg"  alt="" />
+
+            </div>
+        
+        <div class="container header">
+            <div class="body-copy margin-auto text-align-center ">
+                <div class="spacer-60 d-none d-md-block"></div>
+                    <h1 class="" >Student Dashboard</h1>
+                                            </div>
+            
+            
+        </div>
+
+        
+    </section>
+
+    </div>
+
+
+    <div>
+
+
+
+    </div>
+
+
+    <div>
+
+
+
+    </div>
+
+
+        </div>
+
+
+            <section class="tray tray-layer-top">
+                <div class="container">
+
+                    <div class="crumbs d-none d-md-block" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="/Content/assets/icons/icon-defs.svg#icon-home"></use></svg></span>
+<a href="" title="Home">Washington and Lee University</a>            <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="/Content/assets/icons/icon-defs.svg#icon-angle-right"></use></svg></span>
+            <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="active" href="/students" itemprop="item" title="Students"><span style='top:inherit;' itemprop='name'>Students</span></a>
+                <meta itemprop="position" content="1" />
+            </span>
+</div>
+
+                    
+
+
+
+
+                </div>
+            </section>
+
+
+        <div >
+
+    <div >
+
+    <section class="tray tray-icongrid tray-no-padding">
+                    <div class="row align-items-stretch">
+                    <div class="col-4 col-lg-2 col-md-3 col-sm-4 no-spacing">
+                        <div class="smoke">
+                            <a href="@academic-resources">
+                                <i class="fa fa-fw fa-3x fa-globe slate-text" aria-hidden="true"></i>
+                                <p class="text slate white-text">Academic Resources</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 col-sm-4 no-spacing">
+                        <div class="smoke">
+                            <a href="@campus-life">
+                                <i class="fa fa-fw fa-3x fa-building-columns slate-text" aria-hidden="true"></i>
+                                <p class="text slate white-text">Campus Life</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 col-sm-4 no-spacing">
+                        <div class="smoke">
+                            <a href="@administrative-offices">
+                                <i class="fa fa-fw fa-3x fa-building slate-text" aria-hidden="true"></i>
+                                <p class="text slate white-text">Administrative Offices</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 col-sm-4 no-spacing">
+                        <div class="smoke">
+                            <a href="@self-service">
+                                <i class="fa fa-fw fa-3x fa-tools slate-text" aria-hidden="true"></i>
+                                <p class="text slate white-text">Self-Service Tools</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 col-sm-4 no-spacing">
+                        <div class="smoke">
+                            <a href="@venue-hours">
+                                <i class="fa fa-fw fa-3x fa-clock slate-text" aria-hidden="true"></i>
+                                <p class="text slate white-text">Venue Hours</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 col-sm-4 no-spacing">
+                        <div class="smoke">
+                            <a href="@get-help">
+                                <i class="fa fa-fw fa-3x fa-triangle-exclamation slate-text" aria-hidden="true"></i>
+                                <p class="text slate white-text">Get Help</p>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+    </section>
+    </div>
+
+
+    <div >
+    <section class="tray tray-ctas charcoal white-text" >
+        <div class="container">
+
+            <div class="text-align-center">
+                
+                <div class="vr-wrap bottom-top">
+                    <hr class="vr cornflower" data-aos="vr-grow">
+                </div>
+                
+                    <h2 >Today&rsquo;s Dining Menus</h2>
+
+                    <p class="buttons-wrap" >
+                            <a class="button button-icon white-text" href="@menu" >
+                                View the Menus
+                            </a>
+                    </p>
+
+                <div class="vr-wrap top-bottom">
+                    <hr class="vr cornflower" data-aos="vr-grow">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-xl fade" id="academic-resources" role="dialog" aria-labelledby="academic-resources-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="academic-resources-title">Academic Resources</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            <ul class="column-1 column-md-2 column-lg-3">
+<li class="h6"><a href="https://my.wlu.edu/student-handbook">Student Handbook</a></li>
+<li class="h6"><a href="https://my.wlu.edu/university-registrar">Registrar</a></li>
+<li class="h6"><a href="https://my.wlu.edu/university-registrar/catalogs">Course Catalogs</a></li>
+<li class="h6"><a href="https://web.penjiapp.com/">Academic Coaching/Tutoring</a></li>
+<li class="h6"><a href="https://hartectl.wlu.edu/student-resources/writing-center/">Writing Center</a></li>
+<li class="h6"><a href="https://web.penjiapp.com/">Peer Tutoring</a></li>
+<li class="h6"><a href="https://my.wlu.edu/center-for-international-education/center-for-international-education-new/study-abroad">Study Abroad</a></li>
+<li class="h6"><a href="https://fellowships.academic.wlu.edu/">Fellowships</a></li>
+<li class="h6"><a href="https://library.wlu.edu/">Leyburn Library</a></li>
+<li class="h6"><a href="https://law.wlu.edu/library">Law Library</a></li>
+<li class="h6"><a href="https://my.wlu.edu/university-registrar/calendars">Academic Calendars</a></li>
+<li class="h6"><a href="https://my.wlu.edu/its/how-to/canvas-faq">Canvas</a></li>
+<li class="h6"><a href="https://www.wlu.edu/harte-center">Harte Center</a></li>
+</ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-xl fade" id="campus-life" role="dialog" aria-labelledby="campus-life-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="campus-life-title">Campus Life</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            <ul class="column-1 column-md-2 column-lg-3">
+<li class="h6"><a href="https://my.wlu.edu/student-handbook">Student Handbook</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/staff-directory">Student Affairs</a></li>
+<li class="h6"><a href="https://my.wlu.edu/student-life/student-services-and-support/class-deans">Class Deans</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-engagement-and-leadership">Student Engagement and Leadership</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/housing-and-residence-life/housing-services">Housing Services</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-engagement-and-leadership/leadership-development">Leadership Development</a></li>
+<li class="h6"><a href="https://generalssports.com/">Athletics</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-engagement-and-leadership/student-activities-and-programs">Student Activities and Programs</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-engagement-and-leadership/student-activities-and-programs/fraternity-and-sorority-life">Fraternity and Sorority Life</a></li>
+<li class="h6"><a href="https://my.wlu.edu/campusrec">Campus Recreation</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-engagement-and-leadership/religious-and-spiritual-life">Religious and Spiritual Life</a></li>
+<li class="h6"><a href="https://store.wlu.edu/home.aspx">Bookstore</a></li>
+<li class="h6"><a href="https://my.wlu.edu/outing-club">Outing Club</a></li>
+<li class="h6"><a href="https://go.wlu.edu/campus-map">Campus Map</a></li>
+<li class="h6"><a href="https://my.wlu.edu/student-life/student-services-and-support/student-services/university-card/faculty-and-staff-university-card">University ID Card (eCard)</a></li>
+<li class="h6"><a href="https://my.wlu.edu/financial-aid/student-employment">Student Employment</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/safety-and-security/traveller">Traveller Safe Ride Program</a></li>
+<li class="h6"><a href="https://my.wlu.edu/disability-accommodations/">Disability Accommodations</a></li>
+<li class="h6"><a href="https://my.wlu.edu/sustainability">Sustainability</a></li>
+</ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-xl fade" id="administrative-offices" role="dialog" aria-labelledby="administrative-offices-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="administrative-offices-title">Administrative Offices</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            <ul class="column-1 column-md-2 column-lg-3">
+<li class="h6"><a href="https://my.wlu.edu/career-and-professional-development">Career and Professional Development</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/health-and-wellness">Lindley Center for Student Wellness</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/health-and-wellness/lindley-counseling">Lindley Counseling</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/housing-and-residence-life">Housing and Residence Life</a></li>
+<li class="h6"><a href="https://my.wlu.edu/financial-aid">Financial Aid</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-engagement-and-leadership">Student Engagement and Leadership</a></li>
+<li class="h6"><a href="https://my.wlu.edu/office-of-community-based-learning/for-students">Office of Community-Based Learning</a></li>
+<li class="h6"><a href="https://my.wlu.edu/business-office">Business Office</a></li>
+<li class="h6"><a href="https://my.wlu.edu/university-facilities">Facilities</a></li>
+<li class="h6"><a href="https://my.wlu.edu/university-registrar">Registrar&rsquo;s Office</a></li>
+<li class="h6"><a href="https://www.wlu.edu/the-w-l-story/leadership/office-of-the-president/">President&rsquo;s Office</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/safety-and-security">Public Safety</a></li>
+<li class="h6"><a href="https://my.wlu.edu/provost">Provost&rsquo;s Office</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/staff-directory">Student Affairs</a></li>
+<li class="h6"><a href="http://its.wlu.edu/">Information Technology Services</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/student-services-and-support">Student Services and Support</a></li>
+</ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-xl fade" id="self-service" role="dialog" aria-labelledby="self-service-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="self-service-title">Self-Service Tools</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            <ul class="column-1 column-md-2 column-lg-3">
+<li class="h6"><a href="https://mail.wlu.edu/">Webmail</a></li>
+<li class="h6"><a href="https://go.wlu.edu/workday">Workday</a></li>
+<li class="h6"><a href="https://box.wlu.edu/">Box</a></li>
+<li class="h6"><a href="https://wlu.zoom.us/">Zoom</a></li>
+<li class="h6"><a href="https://25live.collegenet.com/wlu/">25 Live</a></li>
+<li class="h6"><a href="https://campusnotices.wlu.edu">Campus Notices</a></li>
+<li class="h6"><a href="https://my.wlu.edu/university-facilities/services/facilities-service-center">Work Order Request</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/safety-and-security/parking-and-vehicle-registration">Parking/Vehicle Registration</a></li>
+<li class="h6"><a href="https://my.wlu.edu/transportation-services">Transportation Services</a></li>
+<li class="h6"><a href="https://www.wlu.edu/campus-life/housing-and-residence-life/housing-services">Housing Services</a></li>
+<li class="h6"><a href="https://my.wlu.edu/copying-services">Copy Services</a></li>
+<li class="h6"><a href="https://my.wlu.edu/mail-services">Mail Services</a></li>
+<li class="h6"><a href="https://my.wlu.edu/student-life/student-services-and-support/student-services/angel-fund">Angel Fund</a></li>
+</ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-xl fade" id="venue-hours" role="dialog" aria-labelledby="venue-hours-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <script>
+$(document).ready(function(){
+  $.getJSON( "//my.wlu.edu/hours" , function( data ){
+    $.getJSON( "//mga1.wlu.edu/campusnotices/feeds/hours.php" , function( adjusted ){
+      var html = "";
+      if( adjusted != null ){ $.each( adjusted , function( xid , newHours ){ if( xid in data.hours ){ data.hours[xid].hours = newHours; } } ); }
+      $.each( data.hours , function( xid , venue ){ html += "<div class='smoke'><h6>" + venue.venue + "</h6><p>" + venue.hours + "</p></div>"; } );
+      $( '#venue-hours .modal-body' ).html( html );
+    } );
+  } );
+} );
+</script>
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="venue-hours-title">Today&rsquo;s Hours</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-xl fade" id="get-help" role="dialog" aria-labelledby="get-help-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <style>#get-help table td ul{ margin:0 0 0 2em; } #get-help table td ul li{ margin:0; }</style>
+<script>$( document ).ready( function(){ $( '.fa-triangle-exclamation' ).toggleClass( "slate-text lava-text" ); } );</script>
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="get-help-title">W&L Emergency Information</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            <table style="border-collapse: collapse; width: 100%;" border="1">
+<thead>
+<tr class="table">
+<th scope="col" class="table">Resource</th>
+<th scope="col" class="table">Phone</th>
+<th scope="col" class="table">Email</th>
+<th scope="col" class="table">Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row" class="table">Public Safety</th>
+<td><a href="tel:540-458-8999">540-458-8999</a></td>
+<td><a href="mailto:publicsafety@wlu.edu">publicsafety@wlu.edu</a></td>
+<td>
+<ul>
+<li><a href="/campus-life/safety-and-security">Public Safety Website</a></li>
+<li><a href="https://my.wlu.edu/student-life/health-and-safety/public-safety/livesafe-app">Download the LiveSafe App</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">Lindley Health</th>
+<td><a href="tel:540-458-8401">540-458-8401</a></td>
+<td><a href="mailto:studenthealth@wlu.edu">studenthealth@wlu.edu</a></td>
+<td>
+<ul>
+<li><a href="/campus-life/health-and-wellness/lindley-health">Lindley Health Website</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">Lindley Counseling</th>
+<td><a href="tel:540-458-8590">540-458-8590</a></td>
+<td><a href="mailto:counseling@wlu.edu">counseling@wlu.edu</a></td>
+<td>
+<ul>
+<li><a href="/campus-life/health-and-wellness/lindley-counseling">Lindley Counseling Website</a></li>
+<li><a href="/campus-life/health-and-wellness/lindley-counseling/telus">Download the TELUS Health App</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">Sexual Misconduct (Title IX)</th>
+<td><a href="tel:540-458-4055">540-458-4055</a></td>
+<td><a href="mailto:kozakl@wlu.edu">kozakl@wlu.edu</a></td>
+<td>
+<ul>
+<li><a href="https://my.wlu.edu/sexual-misconduct-resources">Sexual Misconduct Website</a></li>
+<li><a href="https://cm.maxient.com/reportingform.php?WLUniv&amp;layout_id=3">Report an incident</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">Hazing Prevention</th>
+<td></td>
+<td></td>
+<td>
+<ul>
+<li><a href="https://my.wlu.edu/hazing-prevention">Hazing Prevention Website</a></li>
+<li><a href="https://managementtools3.wlu.edu/WLUForms/Default.aspx?Form=1646">Silent Witness Reporting Form</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">Traveller Safe Ride Program</th>
+<td><a href="tel:540-458-8900">540-458-8900</a></td>
+<td></td>
+<td>
+<ul>
+<li><a href="/campus-life/safety-and-security/traveller">Traveller Website</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZILwvd7VAkb_CiiiFbVPmhHYetZBMauZ0KB98fuAPofoiaA/viewform">Online Request Form</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">Bias/Discrimination Form</th>
+<td></td>
+<td></td>
+<td>
+<ul>
+<li><a href="https://cm.maxient.com/reportingform.php?WLUniv&amp;layout_id=4">Access the form</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="table">ITS Help Desk</th>
+<td><a href="tel:540-458-4357">540-458-4357</a></td>
+<td><a href="mailto:help@wlu.edu">help@wlu.edu</a></td>
+<td></td>
+</tr>
+<tr>
+<th scope="row" class="table">Emergency Weather Hotline</th>
+<td><a href="tel:540-458-5277">540-458-5277</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+        <div class="modal modal-md fade" id="menu" role="dialog" aria-labelledby="menu-title" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <script>
+$(document).ready(function(){
+  $.getJSON( "//mga1.wlu.edu/campusnotices/feeds/menu.php" , function( menu ){
+    var html = "";
+    $.each( menu , function( venue , sections ){
+      html += "<div class='cornflower'><h5>" + venue + "</h5>";
+      $.each( sections , function( section , food ){
+        html += "<div><h6>" + section + "</h6><ul class='column-3 column-xs-2'>";
+        $.each( food , function( i , yum ){ html += "<li>" + yum + "</li>"; } );
+        html += "</ul></div>";
+      } );
+      html += "</div>";
+    } );
+    $( '#menu .modal-body' ).html( html );
+  } );
+} );
+</script>
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="menu-title">Today&rsquo;s Menu</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div  class="body-copy">
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div >
+
+                <section class="tray smoke " >
+                    <div class="container">
+
+                        <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <h2 class="margin-30 charcoal-text" >Student Accomplishments</h2>
+                                </div>
+                                                            <div class="col">
+                                    <hr>
+                                </div>
+                                <div class="col-auto">
+                                    <p><a class="button button-lava" href="https://go.wlu.edu/accolades" title="Submit an Accolade">Submit an Accolade</a></p>
+                                </div>
+
+                        </div>
+                                            <div class="slider-rss">
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/04/SOC04142026_023-300x300.jpg" alt="The new Williams School building">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/two-students-selected-for-the-john-w-warner-public-service-award/">Two Students Selected for the John W. Warner Public Service Award</a></h3>
+                                                                                                            <p>Chloe Kim ’28 and Mackenzie Morante ’27 have both continued their public service in Washington, D.C., this summer.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/two-students-selected-for-the-john-w-warner-public-service-award/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2025/04/SOC04302025_022-300x300.jpg" alt="The Colonnade">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/fellowship-awards-allow-washington-and-lee-recipients-to-forge-new-paths/">Fellowship Awards Allow Washington and Lee Recipients to Forge New Paths</a></h3>
+                                                                                                            <p>Inspired by life-changing study abroad opportunities, many W&L students decide to pursue fellowships that allow them to complete meaningful work on a global stage.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/fellowship-awards-allow-washington-and-lee-recipients-to-forge-new-paths/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/07/sophie-csatlos-300x300.png" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-sophie-csatlos-29-selected-for-vfic-presidential-scholars-program/">W&#038;L’s Sophie Csatlos ’29 Selected for VFIC Presidential Scholars Program</a></h3>
+                                                                                                            <p>In its inaugural year, the statewide program is designed to cultivate the next generation of values-based leaders.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-sophie-csatlos-29-selected-for-vfic-presidential-scholars-program/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/06/Sarah-Zimmerman-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/sarah-zimmerman-26-receives-old-dominion-athletic-conferences-marjorie-berkley-award/">Sarah Zimmerman ’26 Receives Old Dominion Athletic Conference’s Marjorie Berkley Award</a></h3>
+                                                                                                            <p>The soccer and basketball star was honored as the top female scholar-athlete in the conference.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/sarah-zimmerman-26-receives-old-dominion-athletic-conferences-marjorie-berkley-award/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/06/McEwen-300x300.jpg?theia_smart_thumbnails_file_version=2" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/jonathan-mcewen-27-earns-jack-nicklaus-award-as-the-division-iii-golfer-of-the-year-for-the-second-straight-year/">Jonathan McEwen ’27 Earns Jack Nicklaus Award as the Division III Golfer of the Year for the Second Straight Year</a></h3>
+                                                                                                            <p>The rising senior was presented the award at the Memorial Tournament in Dublin, Ohio on June 7.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/jonathan-mcewen-27-earns-jack-nicklaus-award-as-the-division-iii-golfer-of-the-year-for-the-second-straight-year/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/05/Alexander-Kagan-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-alexander-kagan-27-named-a-constitutional-studies-fellow-by-the-hertog-foundation/">W&#038;L’s Alexander Kagan ’27 Named a Constitutional Studies Fellow by the Hertog Foundation</a></h3>
+                                                                                                            <p>Kagan will spend two weeks in an intensive learning experience focused on American constitutional history and development.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-alexander-kagan-27-named-a-constitutional-studies-fellow-by-the-hertog-foundation/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/05/Sarp-Sahin-3-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-sarp-sahin-26-earns-fulbright-cardiff-university-award/">W&#038;L’s Sarp Sahin ’26 Earns Fulbright Cardiff University Award</a></h3>
+                                                                                                            <p>Sahin will continue his research of Parkinson’s disease at Cardiff University in Wales before attending medical school.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-sarp-sahin-26-earns-fulbright-cardiff-university-award/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/06/Elly-Dyer-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-elly-dyer-26-selected-for-teaching-assistant-program-in-france/">W&#038;L’s Elly Dyer ’26 Selected for Teaching Assistant Program in France</a></h3>
+                                                                                                            <p>Dyer is looking forward to gaining classroom experience in France before pursuing a career in education policy.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-elly-dyer-26-selected-for-teaching-assistant-program-in-france/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/05/Chuck-Rutberg-scaled-300x300.jpg?theia_smart_thumbnails_file_version=2" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-chuck-rutberg-26-selected-for-teaching-assistant-program-in-france/">W&#038;L’s Chuck Rutberg ’26 Selected for Teaching Assistant Program in France</a></h3>
+                                                                                                            <p>Rutberg is looking forward to building on his French language skills before pursuing a career in the federal government.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-chuck-rutberg-26-selected-for-teaching-assistant-program-in-france/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/05/boren-26-300x300.png" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/three-wl-students-awarded-boren-scholarships-for-global-language-study/">Three W&#038;L Students Awarded Boren Scholarships for Global Language Study</a></h3>
+                                                                                                            <p>With the scholarship, the graduating seniors will conduct intensive language studies in Indonesia and Japan.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/three-wl-students-awarded-boren-scholarships-for-global-language-study/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/05/Margaret-Schweppe2-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-margaret-schweppe-26-selected-for-u-s-teaching-assistantship-to-austria/">W&#038;L’s Margaret Schweppe ’26 Selected for U.S. Teaching Assistantship to Austria</a></h3>
+                                                                                                            <p>Schweppe is looking forward to developing her German language and teaching skills in an immersive environment before joining PricewaterhouseCoopers as a management consulting analyst.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-margaret-schweppe-26-selected-for-u-s-teaching-assistantship-to-austria/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/05/Basnet-Custodio-1-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wl-students-accepted-for-publication-at-the-gaming-and-technology-conference/">W&amp;L Students Accepted for Publication at the Gaming and Technology Conference</a></h3>
+                                                                                                            <p>Trey Custodio ’26 and Sanjog Basnet ’27 explore gaming preferences and behavior. </p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wl-students-accepted-for-publication-at-the-gaming-and-technology-conference/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                        </div>
+
+                    </div>
+                </section>
+    </div>
+
+
+    <div >
+            <section class="tray " >
+                <div class="container">
+
+                    <div class="row align-items-center">
+                            <div class="col-auto">
+                                <h2 class="margin-30 charcoal-text" >Happening Soon</h2>
+                            </div>
+                                                    <div class="col">
+                                <hr>
+                            </div>
+                            <div class="col-auto">
+                                <p><a class="button button-ocean" href="https://calendar.wlu.edu/" title="University Calendar">University Calendar</a></p>
+                            </div>
+                    </div>
+
+                    <div class="slider-rss">
+                                <div class="slide">
+                                    <div class="card-wrap">
+                                        <div class="card-inner">
+                                            <div class="content">
+
+                                                    <p class="tags margin-5"><span class="tag">Oct 27 - 5:00 pm - 6:00 pm</span></p>
+
+                                                    <h3 class="h4"><a class="black-text" href="https://mga1.wlu.edu/campusnotices/view/cal.php?id=18113&amp;view=web">State Librarian of Virginia Lecture</a></h3>
+                                                                                                    <p>Topic- TBD</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="card-wrap">
+                                        <div class="card-inner">
+                                            <div class="content">
+
+                                                    <p class="tags margin-5"><span class="tag">Nov 09 - 12:30 pm - 1:30 pm</span></p>
+
+                                                    <h3 class="h4"><a class="black-text" href="https://mga1.wlu.edu/campusnotices/view/cal.php?id=18150&amp;view=web">Basse Salon Presents Pooja Thakur-Wernz</a></h3>
+                                                                                                    <p>TBA</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                    </div>
+                </div>
+            </section>
+    </div>
+
+
+    <div >
+
+                <section class="tray smoke " >
+                    <div class="container">
+
+                        <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <h2 class="margin-30 charcoal-text" >Events on Campus</h2>
+                                </div>
+                                                            <div class="col">
+                                    <hr>
+                                </div>
+                                <div class="col-auto">
+                                    <p><a class="button button-lava" href="https://columns.wlu.edu/campus-events/" title="More from the Columns">More from the Columns</a></p>
+                                </div>
+
+                        </div>
+                                            <div class="slider-rss">
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/08/Ian-Bogost-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/ian-bogost-to-keynote-2026-fall-academy/">Ian Bogost to Keynote 2026 Fall Academy</a></h3>
+                                                                                                            <p>The Barbara and David Thomas Distinguished Professor and assistant vice provost at Washington University in St. Louis will deliver a lecture on the impact of artificial intelligence on higher education Wednesday, Aug. 19, in University Chapel.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/ian-bogost-to-keynote-2026-fall-academy/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2020/02/Lenfest-Center-1200x1200-2-300x300.jpg?theia_smart_thumbnails_file_version=2" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-lenfest-center-for-the-arts-presents-35th-anniversary-season/">W&#038;L’s Lenfest Center for the Arts Presents 35th Anniversary Season</a></h3>
+                                                                                                            <p>Tickets for the 2026-2027 season will be available to purchase online beginning Aug. 17.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-lenfest-center-for-the-arts-presents-35th-anniversary-season/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/08/museum-logo-2.png" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/the-art-museum-at-washington-and-lee-fall-2026-programs-and-exhibitions/">The Art Museum at Washington and Lee: Fall 2026 Programs and Exhibitions</a></h3>
+                                                                                                            <p>This academic year’s lineup of exhibits and events will celebrate 150 years of art stewardship at W&L.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/the-art-museum-at-washington-and-lee-fall-2026-programs-and-exhibitions/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/03/george-saunders-thumbnail-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wl-hosts-21st-annual-tom-wolfe-weekend-2/">W&#038;L Hosts 21st Annual Tom Wolfe Weekend</a></h3>
+                                                                                                            <p>The weekend’s seminar will feature award-winning author George Saunders discussing his new novel, “Vigil.”</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wl-hosts-21st-annual-tom-wolfe-weekend-2/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                        </div>
+
+                    </div>
+                </section>
+    </div>
+
+
+    <div >
+
+                <section class="tray white " >
+                    <div class="container">
+
+                        <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <h2 class="margin-30 charcoal-text" >Latest Athletics Information</h2>
+                                </div>
+                                                            <div class="col">
+                                    <hr>
+                                </div>
+                                <div class="col-auto">
+                                    <p><a class="button button-lava" href="https://generalssports.com/" title="More from W&amp;L Athletics">More from W&L Athletics</a></p>
+                                </div>
+
+                        </div>
+                                            <div class="slider-rss">
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/8/11/Howenstein_Preseason_All-American_10334418.png" alt="W&amp;L &lt;title&gt;Howenstein Named D3football.com Second Team Preseason All-American&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Football</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/8/12/football-howenstein-named-d3football-com-second-team-preseason-all-american.aspx">Howenstein Named D3football.com Second Team Preseason All-American</a></h3>
+                                                                                                            <p>LEXINGTON, Va. - Senior Offensive Lineman Wesley Howenstein of the Washington and Lee University Football team was named a D3football.com Second Team Preseason All-American prior to the start of the 2026 season, the organization announced on Wednesday afternoon.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/8/12/football-howenstein-named-d3football-com-second-team-preseason-all-american.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/8/3/MGOLF_Team_Academic.png" alt="W&amp;L &lt;title&gt;Men’s Golf Earns 13th-Straight PLATFORM Golf Team Academic Award, Four Generals Named Cobalt Golf All-America Scholars&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Men&#39;s Golf</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/8/5/mens-golf-mens-golf-earns-13th-straight-platform-golf-team-academic-award-four-generals-named-all-america-scholars.aspx">Men’s Golf Earns 13th-Straight PLATFORM Golf Team Academic Award, Four Generals Named Cobalt Golf All-America Scholars</a></h3>
+                                                                                                            <p>NORMAN, Okla. - The Washington and Lee University men&rsquo;s golf team was honored for the academic success as they team garnered their 13th-straight PLATFORM Golf Team Academic Award while four student-athletes were named Cobalt All-America Scholars, the Golf Coaches Association of America (GCAA) announced ...</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/8/5/mens-golf-mens-golf-earns-13th-straight-platform-golf-team-academic-award-four-generals-named-all-america-scholars.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/8/4/Molly_Web_10302582.png" alt="W&amp;L &lt;title&gt;Generals Hire Molly McLaughlin as Assistant Equestrian Coach&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Equestrian</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/8/4/generals-hire-molly-mclaughlin-as-assistant-equestrian-coach.aspx">Generals Hire Molly McLaughlin as Assistant Equestrian Coach</a></h3>
+                                                                                                            <p>LEXINGTON, Va. — Washington and Lee University has announced the hiring of Molly McLaughlin as an assistant coach for the Generals equestrian program. McLaughlin will begin her duties on Aug. 24.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/8/4/generals-hire-molly-mclaughlin-as-assistant-equestrian-coach.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/30/Clay_Denstorff_10287322.png" alt="W&amp;L &lt;title&gt;Clay Denstorff Added to Generals Football Staff as Defensive Line Coach&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Football</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/31/clay-denstorff-added-to-generals-football-staff-as-defensive-line-coach.aspx">Clay Denstorff Added to Generals Football Staff as Defensive Line Coach</a></h3>
+                                                                                                            <p>LEXINGTON, Va. - Washington and Lee University Head Football Coach Garrett LeRose &rsquo;07 has announced the hiring of Clay Denstorff as an assistant coach for the Generals&rsquo; football program.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/31/clay-denstorff-added-to-generals-football-staff-as-defensive-line-coach.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/15/DSC06486.JPG" alt="W&amp;L &lt;title&gt;Jonathan McEwen Reflects on Arnold Palmer Cup Experience&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Men&#39;s Golf</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/24/mens-golf-mcewen-feature.aspx">Jonathan McEwen Reflects on Arnold Palmer Cup Experience</a></h3>
+                                                                                                            <p>&ldquo;It was the most fun I&rsquo;ve ever had playing golf."
+
+Men&rsquo;s golf rising senior Jonathan McEwen has won national player of the year honors, rewritten Washington and Lee&rsquo;s record book and has established himself as one of the most decorated golfers in NCAA Division III.
+But none of these accomplishments ...</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/24/mens-golf-mcewen-feature.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/23/ABCA_Baseball.png" alt="W&amp;L &lt;title&gt;Baseball Earns Second Consecutive ABCA Team Academic Excellence Award&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Baseball</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/23/baseball-earns-second-consecutive-abca-team-academic-excellence-award.aspx">Baseball Earns Second Consecutive ABCA Team Academic Excellence Award</a></h3>
+                                                                                                            <p>GREENSBORO, N.C. - The Washington and Lee University baseball team was honored for their hard work in the classroom as they earned their second-straight American Baseball Coaches Association (ABCA) Team Academic Excellence Award.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/23/baseball-earns-second-consecutive-abca-team-academic-excellence-award.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/21/2025-26_AVCA_Team_Academic.png" alt="W&amp;L &lt;title&gt;Volleyball Named to AVCA Academic Honor Roll For Fourth-Straight Season&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Volleyball</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/23/volleyball-named-to-avca-academic-honor-roll-for-fourth-straight-season.aspx">Volleyball Named to AVCA Academic Honor Roll For Fourth-Straight Season</a></h3>
+                                                                                                            <p>LEXINGTON, Ky. - The Washington and Lee University women&rsquo;s volleyball team earned their 13th consecutive American Volleyball Coaches Association (AVCA) Team Academic Award while being named to the Honor Roll for the fourth-straight year.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/23/volleyball-named-to-avca-academic-honor-roll-for-fourth-straight-season.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/23/WLAX_Team_Picture_2026.jpg" alt="W&amp;L &lt;title&gt;Women’s Lacrosse Earns IWLCA Academic Honors&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Women&#39;s Lacrosse</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/23/womens-lacrosse-womens-lacrosse-earns-iwlca-academic-honors.aspx">Women’s Lacrosse Earns IWLCA Academic Honors</a></h3>
+                                                                                                            <p>NORTHBOUROUGH, Mass. — The Washington and Lee women&rsquo;s lacrosse team was named a 2025-26 Intercollegiate Women&rsquo;s Lacrosse Coaches Association Academic Honor Squad, while 12 Generals earned spots on the IWLCA Division III Academic Honor Roll.
+
+W&L was one of 357 programs across NCAA Divisions I, ...</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/23/womens-lacrosse-womens-lacrosse-earns-iwlca-academic-honors.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/21/Italy_10127756.png" alt="W&amp;L &lt;title&gt;W&amp;amp;L Men&#39;s Basketball set for touring, three games in Italy&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">Men&#39;s Basketball</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/22/w-l-mens-basketball-set-for-touring-three-games-in-italy.aspx">W&L Men&rsquo;s Basketball set for touring, three games in Italy</a></h3>
+                                                                                                            <p>LEXINGTON, Va. – The Washington and Lee men&rsquo;s basketball team will be embarking to Italy for a 10-day journey that will include three games against Italian clubs and touring various cities.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/22/w-l-mens-basketball-set-for-touring-three-games-in-italy.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://generalssports.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&amp;image_path=/images/2026/7/21/Academic_All-State_10266673.png" alt="W&amp;L &lt;title&gt;Six Generals Named To VaSID Academic All-State Team&lt;/title&gt;">
+                                                            </p>
+
+
+                                                        <p class="h6">General, Men&#39;s Cross Country, Men&#39;s Golf, Men&#39;s Track and Field, Women&#39;s Basketball, Women&#39;s Soccer, Women&#39;s Tennis, Women&#39;s Track and Field, Wrestling</p>
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://generalssports.com/news/2026/7/21/wrestling-six-generals-named-to-vasid-academic-all-state-team.aspx">Six Generals Named To VaSID Academic All-State Team</a></h3>
+                                                                                                            <p>Lexington, Va. - The Virginia Sports Information Directors (VaSID) have released the 2025-2026 Academic All-State Team honorees. Washington and Lee is represented with six selections: Liam Flanagan (Wrestling), Jonathan McEwen (Men&rsquo;s Golf), Keaton Rush (Men&rsquo;s Cross Country and Track & Field), Sarah ...</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://generalssports.com/news/2026/7/21/wrestling-six-generals-named-to-vasid-academic-all-state-team.aspx">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                        </div>
+
+                    </div>
+                </section>
+    </div>
+
+
+    <div >
+    <section class="tray tray-ctas charcoal white-text" >
+        <div class="container">
+
+            <div class="text-align-center">
+                
+                <div class="vr-wrap bottom-top">
+                    <hr class="vr cornflower" data-aos="vr-grow">
+                </div>
+                
+                    <h2 >View the W&L Athletics Composite Schedule</h2>
+
+                    <p class="buttons-wrap" >
+                            <a class="button button-icon white-text" href="https://generalssports.com/calendar" >
+                                View Composite Schedule
+                            </a>
+                    </p>
+
+                <div class="vr-wrap top-bottom">
+                    <hr class="vr cornflower" data-aos="vr-grow">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    </div>
+
+
+    <div >
+
+                <section class="tray white " >
+                    <div class="container">
+
+                        <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <h2 class="margin-30 charcoal-text" >Explore Our Community</h2>
+                                </div>
+                                                            <div class="col">
+                                    <hr>
+                                </div>
+                                <div class="col-auto">
+                                    <p><a class="button button-lava" href="https://columns.wlu.edu" title="More from the Columns">More from the Columns</a></p>
+                                </div>
+
+                        </div>
+                                            <div class="slider-rss">
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/08/LeahBeard19-scaled-300x300.jpg?theia_smart_thumbnails_file_version=2" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/washington-and-lee-receives-educating-character-initiative-capacity-building-grant-from-the-program-for-leadership-and-character-at-wake-forest-university/">Washington and Lee Receives Educating Character Initiative Capacity-Building Grant from the Program for Leadership and Character at Wake Forest University</a></h3>
+                                                                                                            <p>The funds will be used to support W&L’s leadership and character education programming during the 2026-27 academic year.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/washington-and-lee-receives-educating-character-initiative-capacity-building-grant-from-the-program-for-leadership-and-character-at-wake-forest-university/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/08/Early-Fielding-Demo-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/late-summer-2026-update-on-campus-construction-projects/">Late Summer 2026 Update on Campus Construction Projects</a></h3>
+                                                                                                            <p>Construction on a variety of projects continues throughout campus and the Lexington community.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/late-summer-2026-update-on-campus-construction-projects/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2025/11/SOC11122025_0025-300x300.jpg" alt="The Colonnade">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/washington-and-lee-universitys-economic-impact-estimated-at-275-million/">Washington and Lee University’s Economic Impact Estimated at $275 Million</a></h3>
+                                                                                                            <p>W&L plays a consequential role in supporting the region’s economy. </p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/washington-and-lee-universitys-economic-impact-estimated-at-275-million/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/07/sophie-csatlos-300x300.png" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-sophie-csatlos-29-selected-for-vfic-presidential-scholars-program/">W&#038;L’s Sophie Csatlos ’29 Selected for VFIC Presidential Scholars Program</a></h3>
+                                                                                                            <p>In its inaugural year, the statewide program is designed to cultivate the next generation of values-based leaders.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-sophie-csatlos-29-selected-for-vfic-presidential-scholars-program/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/07/Ryan-Brink-300x300.jpg?theia_smart_thumbnails_file_version=2" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wls-campus-kitchen-awarded-a-grant-from-the-blue-ridge-area-food-bank/">W&#038;L’s Campus Kitchen Awarded a Grant from the Blue Ridge Area Food Bank</a></h3>
+                                                                                                            <p>The $45,000 Partner Impact and Innovation Grant will be used to purchase a new walk-in refrigerator and freezer.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wls-campus-kitchen-awarded-a-grant-from-the-blue-ridge-area-food-bank/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/07/Joyce-Yoo-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/whats-next-for-joyce-yoo-26/">What&#8217;s Next for Joyce Yoo ’26</a></h3>
+                                                                                                            <p>Yoo, a chemistry major, will be attending Rice University to pursue a doctorate in chemistry.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/whats-next-for-joyce-yoo-26/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/07/photo-booth-w-friend-camille-ramos-300x300.jpeg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/exploring-the-world/">Exploring the World</a></h3>
+                                                                                                            <p>Johnson Enhancement Funds Open up Opportunities for W&L Johnson Scholars.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/exploring-the-world/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2023/04/Jackson-Flower-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/jackson-flower-25-publishes-paper-in-the-penn-undergraduate-law-journal/">Jackson Flower ’25 Publishes Paper in the Penn Undergraduate Law Journal</a></h3>
+                                                                                                            <p>The article is based on a capstone paper Flower wrote for his minor in law, justice and society at W&L.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/jackson-flower-25-publishes-paper-in-the-penn-undergraduate-law-journal/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/07/IMG_0405WP-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/scandinavian-summer-abroad/">Scandinavian Summer Abroad</a></h3>
+                                                                                                            <p>Neuroscience major Casey Arkoette ’28 is conducting cutting-edge research in Copenhagen, Denmark, while exploring the local culture.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/scandinavian-summer-abroad/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/06/Roadmap-PhotoWP-300x300.jpg" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/malachi-zarahn-28-becomes-first-wl-student-selected-for-uvas-roadmap-scholars-initiative/">Malachi Zarahn ’28 Becomes First W&#038;L Student Selected for UVA’s Roadmap Scholars Initiative</a></h3>
+                                                                                                            <p>The two-year program is designed to help students chart their path into the legal profession.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/malachi-zarahn-28-becomes-first-wl-student-selected-for-uvas-roadmap-scholars-initiative/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2026/06/Outcomes-Marshall-Wilt-scaled-300x300.jpg?theia_smart_thumbnails_file_version=2" alt="">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/whats-next-for-marshall-wilt-26/">What’s Next for Marshall Wilt ’26</a></h3>
+                                                                                                            <p>Wilt is working in wealth management at J.P. Morgan Private Bank in Atlanta.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/whats-next-for-marshall-wilt-26/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="card-wrap">
+                                            <div class="card-inner">
+                                                <div class="content">
+                                                            <p class="img-wrap">
+                                                                <img src="https://columns.wlu.edu/wp-content/uploads/2024/10/SOC10092024_060-300x300.jpg" alt="Tridy cheers on the football team during Parents and Family Weekend.">
+                                                            </p>
+
+
+                                                                                                                <h3 class="h4"><a class="black-text" href="https://columns.wlu.edu/wl-athletics-places-12th-nationally-in-final-learfield-directors-cup-standings/">W&#038;L Athletics Places 12th Nationally in Final Learfield Directors’ Cup Standings</a></h3>
+                                                                                                            <p>The finish equals the best placing in school history.</p>
+
+                                                        <p>
+                                                            <a class="text-cta lava-text" href="https://columns.wlu.edu/wl-athletics-places-12th-nationally-in-final-learfield-directors-cup-standings/">
+                                                                Continue Reading
+                                                                <span class="wlu-icon"><svg aria-hidden="true"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-right"></use></svg></span>
+                                                            </a>
+                                                        </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                        </div>
+
+                    </div>
+                </section>
+    </div>
+
+
+    <div >
+    <section class="tray tray-ctas charcoal white-text" >
+        <div class="container">
+
+            <div class="text-align-center">
+                
+                <div class="vr-wrap bottom-top">
+                    <hr class="vr cornflower" data-aos="vr-grow">
+                </div>
+                
+                    <h2 >Browse or Create Campus Notices</h2>
+
+                    <p class="buttons-wrap" >
+                            <a class="button button-icon white-text" href="https://campusnotices.wlu.edu" >
+                                Read the latest announcements from around campus and/or create your own.
+                            </a>
+                    </p>
+
+                <div class="vr-wrap top-bottom">
+                    <hr class="vr cornflower" data-aos="vr-grow">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    </div>
+
+
+    <div >
+
+    <section class="tray tray-heading smoke glue-top" >
+        <div class="container">
+            <div class="heading row-gutter-wrap">
+                <div class="row row-gutter-60 align-items-end justify-content-center">
+                        <div class="col-lg-auto col-12">
+                            <h2 class="h1">
+                                <span class="slate-text" >Scene</span>
+
+                                    <span class="accent lava-text" >Off Campus</span>
+                            </h2>
+                        </div>
+
+                        <div class="col-lg col-12 mw-50">
+                            <div class="body-copy slate-text">
+                                <p >Scene Off Campus is a frequently updated collection of candid photos highlighting W&L campus life.</p>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+    <div >
+
+    <div id="soc-container" class="tray smoke row-margin-fixer" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                        <div  class="body-copy">
+                            <div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;"><iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://washingtonandlee.smugmug.com/frame/slideshow?key=v8mL4j&amp;speed=3&amp;transition=fade&amp;autoStart=0&amp;captions=1&amp;navigation=1&amp;playButton=0&amp;randomize=1&amp;transitionSpeed=2"></iframe></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="container">
+                <div class="row align-items-lg-end">
+                    <div class="col">
+                            <div class="logo">
+                                <a href="/">
+                                            <img  src="/Global/logo.svg" alt="WLU Footer Logo"   />
+
+                                </a>
+                            </div>
+
+                            <div class="address">
+                                <div class="address">204 W. Washington St. <br class="d-md-none" /><span class="d-none d-md-inline-block pipe" aria-hidden="true">|</span> Lexington VA 24450 <span class="d-none d-md-inline-block pipe" aria-hidden="true">|</span>
+<div class="spacer-20 d-md-none"></div>
+<a class="tel" href="/university-registrar/catalogs/2021-22-university-catalog#">540-458-8400</a></div>
+                            </div>
+                    </div>
+
+                        <div class="col-auto col-md-12 col-lg-auto">
+                            <h2 class="visually-hidden">Social Navigation</h2>
+                            <ul class="social">
+                                        <li>
+                                            <a href="http://facebook.com/washingtonandlee" title="Facebook"><span id="social-icon-icon-facebook-square" class="wlu-icon-title">Facebook</span><span class="wlu-icon"><svg role="img" aria-labelledby="social-icon-icon-facebook-square"><use xlink:href="Content/assets/icons/icon-defs.svg?v=1.1#icon-facebook-square"></use></svg></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://twitter.com/wlunews" title="Twitter"><span id="social-icon-icon-twitter-x-square" class="wlu-icon-title">Twitter</span><span class="wlu-icon"><svg role="img" aria-labelledby="social-icon-icon-twitter-x-square"><use xlink:href="Content/assets/icons/icon-defs.svg?v=1.1#icon-twitter-x-square"></use></svg></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://instagram.com/wlunews" title="Instagram"><span id="social-icon-icon-instagram-square" class="wlu-icon-title">Instagram</span><span class="wlu-icon"><svg role="img" aria-labelledby="social-icon-icon-instagram-square"><use xlink:href="Content/assets/icons/icon-defs.svg?v=1.1#icon-instagram-square"></use></svg></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://vimeo.com/wlunews" title="Vimeo"><span id="social-icon-icon-vimeo" class="wlu-icon-title">Vimeo</span><span class="wlu-icon"><svg role="img" aria-labelledby="social-icon-icon-vimeo"><use xlink:href="Content/assets/icons/icon-defs.svg?v=1.1#icon-vimeo"></use></svg></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/user/wlunews" title="YouTube"><span id="social-icon-icon-youtube-square" class="wlu-icon-title">YouTube</span><span class="wlu-icon"><svg role="img" aria-labelledby="social-icon-icon-youtube-square"><use xlink:href="Content/assets/icons/icon-defs.svg?v=1.1#icon-youtube-square"></use></svg></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/school/washington-and-lee-university/" title="LinkedIn"><span id="social-icon-icon-linkedin" class="wlu-icon-title">LinkedIn</span><span class="wlu-icon"><svg role="img" aria-labelledby="social-icon-icon-linkedin"><use xlink:href="Content/assets/icons/icon-defs.svg?v=1.1#icon-linkedin"></use></svg></span></a>
+                                        </li>
+
+
+                            </ul>
+                        </div>
+                </div>
+
+                    <div class="spacer-30"></div>
+                    <div class="row-gutter-wrap">
+                        <div class="row row-gutter-60">
+                                <div class="col-6">
+                                        <h2>VISITOR NAVIGATION
+</h2>
+                                        <hr>
+                                    <ul class="links">
+                                            <li>
+                                                    <a href="https://www.google.com/maps?q=Washington+and+Lee+University:+Undergraduate+Admissions,+University+Place,+Lexington,+VA&amp;hl=en&amp;sll=37.787598,-79.442289&amp;sspn=0.008496,0.013937&amp;oq=Washington+and+Lee+&amp;hq=Washington+and+Lee+University:+Under"    title="GPS Information">
+        GPS Information
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/about-w-l/the-wandl-difference"    title="Fast Facts">
+        Fast Facts
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/admissions/visit/directions"    title="Maps & Directions">
+        Maps & Directions
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="https://go.wlu.edu/virtualtour"    title="Virtual Tour">
+        Virtual Tour
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/employment-opportunities"    title="Employment Opportunities">
+        Employment Opportunities
+    </a>
+
+                                            </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="col-6">
+                                        <h2>CAMPUS NAVIGATION</h2>
+                                        <hr>
+                                    <ul class="links">
+                                            <li>
+                                                    <a href="https://managementtools3.wlu.edu/Directory/"    title="Directory">
+        Directory
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/emergency-resources"    title="Emergency Resources">
+        Emergency Resources
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/accessibility"    title="Accessibility">
+        Accessibility
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/office-of-general-counsel/legal-notices"    title="Legal Notices">
+        Legal Notices
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/office-of-general-counsel/code-of-policies/technology/privacy-policy"    title="Privacy Policy">
+        Privacy Policy
+    </a>
+
+                                            </li>
+                                            <li>
+                                                    <a href="/office-of-general-counsel/code-of-policies/discrimination-harassment-and-retaliation/non-discrimination-equal-employment-opportunity-statement"    title="Title IX/Non-Discrimination">
+        Title IX/Non-Discrimination
+    </a>
+
+                                            </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                <div class="be-ix-link-block"></div>
+                
+
+                    <div class="legal">
+                        <p>&copy; Copyright 2026 Washington and Lee University</p>
+                    </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="menu" role="navigation" aria-expanded="false">
+        <div class="menu-inner">
+            <div class="top">
+                <div class="row align-items-center">
+                    <div class="col-auto order-2">
+                        <div class="close-menu">
+                            <a href="#" id="close-menu-link" title="Close menu" role="button" aria-label="Close Menu">
+                                <span class="wlu-icon"><svg role="img" aria-labelledby="close-menu-link"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-times"></use></svg></span>
+                            </a>
+                        </div>
+                    </div>
+
+                        <div class="col order-1">
+                            <div class="form-search gradient">
+                                <form action="/search">
+                                    <label id="mobile-search-label">
+                                        <span class="visually-hidden">Search</span>
+                                        <input type="text" placeholder="Search" id="mobile-search-input" class="st-default-search-input" name="q" />
+                                    </label>
+                                    <button type="submit" aria-label="Submit Search" id="submit-search-button">
+                                        <span class="wlu-icon white-text"><svg role="img" aria-labelledby="submit-search-button"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-search"></use></svg></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="nav">
+                    <ul>
+                                    <li><a href="/about-w-l" title="About W&amp;L">About W&L</a></li>
+                                    <li><a href="/academics" title="Academics">Academics</a></li>
+                                    <li><a href="/admissions" title="Admissions &amp; Aid">Admissions & Aid</a></li>
+                                    <li><a href="/campus-life" title="Campus Life">Campus Life</a></li>
+                                    <li><a href="/outcomes" title="Outcomes">Outcomes</a></li>
+                    </ul>
+            </div>
+
+
+                <div class="links">
+                    <ul>
+                                <li><a href="/alumni" title="Alumni">Alumni</a></li>
+                                <li><a href="https://dashboards.wlu.edu/students/" title="Current Students">Current Students</a></li>
+                                <li><a href="https://dashboards.wlu.edu/employees" title="Faculty &amp; Staff">Faculty & Staff</a></li>
+                                <li><a href="/families" title="Families">Families</a></li>
+                                <li><a href="/visitors" title="Visitors">Visitors</a></li>
+                    </ul>
+                    <ul>
+                                <li><a href="https://columns.wlu.edu" title="News">News</a></li>
+                                <li><a href="https://columns.wlu.edu/campus-events/" title="Events">Events</a></li>
+                                <li><a href="/arts" title="Arts">Arts</a></li>
+                                <li><a href="/athletics" title="Athletics">Athletics</a></li>
+                                <li><a href="/giving" title="Giving">Giving</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    <div class="page-shield"></div>
+
+
+        </div>
+
+        <script src="/Content/assets/js/scripts.js?v=8.07"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+
+            // This for AOS page load being inconsistent
+            let scrollRef = 0;
+            window.addEventListener('scroll', function () {
+                // increase value up to 10, then refresh AOS
+                scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+            });
+
+            // AOS options
+            AOS.init({
+                offset: 120,
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+        <script src="/Content/assets/js/igx-dev.js?v=8.07"></script>
+        <script src="/Content/assets/js/autoheight.js?v=02.15.24"></script>
+
+
+                
+        <button id="scrollTop" class="button button-charcoal" title="Scroll to Top"><span class="wlu-icon me-0"><svg role="img" aria-labelledby="icon-to-top"><use xlink:href="Content/assets/icons/icon-defs.svg#icon-arrow-up"></use></svg></span><span id="icon-to-top" class="d-block h6 mb-0">TOP</span></button>
+    </body>
+
+</html>

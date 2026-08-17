@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Apache Subversion Blog</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="stylesheet" href="/style/site.css" type="text/css" media="all">
+<meta name="theme-color" content="#98b0d4">
+</head>
+
+<body>
+<div id="site-banner">
+<div style="font-style: italic;" 
+     id="site-banner-apachelogo">
+  <a href="https://www.apache.org/"
+  ><img src="https://apache.org/foundation/press/kit/asf_logo_wide.svg"
+        height="80"
+        alt="Apache Software Foundation" /></a>
+</div>
+<a href="/">
+  <img src="/images/svn-name-banner.svg"
+       width="379" height="80"
+       alt="[S] Subversion"
+       id="site-banner-svnlogo" /></a>
+</div> <!-- #site-banner -->
+
+<div id="site-nav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+  <nav id="site-nav-menu">
+  <p>About Subversion
+    <ul>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/docs/">Documentation</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/roadmap.html">Roadmap</a></li>
+      <li><a href="/security/">Security</a></li>
+      <li><a href="/quick-start.html">Quick Start</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </p>
+  <p>Getting Subversion
+      <ul>
+      <li><a href="/packages.html">Binary Packages</a></li>
+      <li><a href="/download.cgi">Source Download</a></li>
+      <li><a href="/docs/release-notes/">Release Notes</a></li>
+    </ul>
+  </p>
+  <p>Community
+    <ul>
+      <li><a href="/mailing-lists.html">Mailing Lists</a></li>
+      <li><a href="/reporting-issues.html">Reporting Issues</a></li>
+      <li><a href="https://cwiki.apache.org/confluence/display/SVN/">Wiki</a></li>
+      <li><a href="/contributing.html">Getting Involved</a></li>
+      <li><a href="/source-code.html">Source Code</a></li>
+      <li><a class="linkaway"
+             href="https://apache.org/foundation/policies/conduct.html">Code of Conduct</a></li>
+    </ul>
+  </p>
+  <p>About the <acronym title="Apache Software Foundation">ASF</acronym>
+    <ul>
+      <li><a class="linkaway"
+             href="https://www.apache.org/licenses/">License</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/sponsorship.html">Donate</a></li>
+      <li><a class="linkaway"
+             href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+    </ul>
+  </p>
+
+<p id="site-search">
+  <form action="https://www.google.com/search" method="get"
+        style="margin-top: 10px; margin-bottom: 10px; display: inline;">
+  <div style="display: inline;">
+    <input value="subversion.apache.org" name="sitesearch" type="hidden" />
+    <input name="q" id="query" type="text" placeholder="Search..."
+           style="width: 10em"
+           />
+    <input name="Search" value="Go" type="submit"/>
+  </div>
+  </form>
+</p> <!-- #site-search -->
+
+<p id="site-apachecon-block">
+  <p><a href="https://www.apache.org/events/current-event.html"
+    ><img src="https://www.apache.org/events/current-event-125x125.png"
+          alt="ApacheCon"
+  /></a></p>
+</p> <!-- #site-apachecon-block -->
+
+<p id="site-svnbook-block">
+<p>Read the official Subversion
+   documentation <a href="https://svnbook.red-bean.com/" class="linkaway nopadding">online</a>!</p>
+<p><a href="https://svnbook.red-bean.com/"
+      ><img src="/images/svnbook-cover.jpg"
+            alt="Version Control With Subversion"/></a></p>
+</p> <!-- #site-svnbook-block -->
+
+<p id="copyright">
+<p>Copyright &#169; 2026 <a href="https://www.apache.org/" class="nopadding">The Apache
+   Software Foundation</a>, Licensed under
+   the <a href="https://www.apache.org/licenses/LICENSE-2.0" class="nopadding">Apache
+   License, Version 2.0</a>.  Apache, Apache Subversion, and
+   the Apache logo are trademarks of The Apache Software
+   Foundation.  Subversion and the Apache Subversion logo are
+   registered trademarks of The Apache Software Foundation.</p>
+<p><a href="https://privacy.apache.org/policies/privacy-policy-public.html"
+   class="nopadding">Privacy policy</a></p>
+</p> <!-- #copyright -->
+</nav>
+</div> <!-- #site-nav -->
+
+<div id="site-content">
+<div id="site-notice">
+
+<!-- PUT SITE-WIDE NOTICES HERE AS NECESSARY -->
+
+</div> <!-- #site-notice -->
+
+
+<h1>Apache Subversion Blog</h1>
+
+<p>The Apache Subversion Blog is a collection of articles concerning the
+ design and usage of Subversion.  If you would like to contribute an
+ acticle, please reach out to the <a href="/mailing-lists.html">mailing
+ list</a> <a href="mailto:dev@subversion.apache.org"
+ >dev@subversion.apache.org</a>.</p>
+
+<div class="h2" id="blog-20130628">
+<h2>2013-06-28 &mdash; Foreign Repository Copies
+<a class="sectionlink" href="#blog-20130628"
+   title="Link to this section"></a>
+</h2>
+
+<p>C. Michael Pilato explains how <code>svn copy</code> can be used to maintain a <a href="https://svnbook.red-bean.com/en/1.8/svn.advanced.vendorbr.html">vendor branch</a> to track source maintained in a foreign repository.
+<a href="2013-06-28-foreign-repository-copies.html">Continue reading</a></p>
+
+</div> <!-- #blog-20130628 -->
+
+<div class="h2" id="blog-20130626">
+<h2>2013-06-26 &mdash; Repository Dictated Configuration - Part 3 of 3: Global ignores
+<a class="sectionlink" href="#blog-20130626"
+   title="Link to this section"></a>
+</h2>
+
+<p>This is the final part of a series (the first two parts below) describing repository dictated configuration (RDC). In part 2 we talked about the new svn:auto-props property. Today we&#8217;ll discuss the other new inherited property that involves RDC, <code>svn:global-ignores</code>.
+<a href="2013-06-26-repository-dictated-configuration-part-3-global-ignores.html">Continue reading</a></p>
+
+</div> <!-- #blog-20130625 -->
+
+<div class="h2" id="blog-20130625">
+<h2>2013-06-25 &mdash; Repository Dictated Configuration - Part 2 of 3: Autoprops
+<a class="sectionlink" href="#blog-20130625"
+   title="Link to this section"></a>
+</h2>
+
+<p>Part 1 (below) described the new inheritable properties feature in Subversion 1.8 which paves the way for repository dictated configuration (RDC). In part 2 we look at the first part of Subversion 1.8&#8242;s RDC related features, the new <code>svn:auto-props</code> property.
+<a href="2013-06-25-repository-dictated-configuration-part-2-autoprops.html">Continue reading</a></p>
+
+</div> <!-- #blog-20130625 -->
+
+<div class="h2" id="blog-20130624">
+<h2>2013-06-24 &mdash; Repository Dictated Configuration - Part 1 of 3: Inheritable properties
+<a class="sectionlink" href="#blog-20130624"
+   title="Link to this section"></a>
+</h2>
+
+<p>This is the first article in a series of three describing the different configuration options that can be set in the repository to manage the behaviour of the working copy.
+<a href="2013-06-24-repository-dictated-configuration-part-1-inheritable-properties.html">Continue reading</a></p>
+
+</div> <!-- #blog-20130624 -->
+
+<div class="h2" id="blog-20121024">
+<h2>2012-10-24 &mdash; Reducing network traffic in Subversion 1.8
+  <a class="sectionlink" href="#blog-20121024"
+    title="Link to this section"></a>
+</h2>
+
+<p>Building on WC-NG released in Subversion 1.7, the repository access module libsvn_ra_serf can significantly reduce network traffic for <code>svn switch</code> and <code>svn update</code> if the file contents already exist in the local pristine store. <a
+  href="2012-10-24-reducing_network_traffic_in_subversion_1-8.html">Continue reading</a></p>
+ 
+</div>  <!-- blog-20121024 -->
+
+<div class="h2" id="blog-20091119">
+<h2>2009-11-19 &mdash; Where did that Mergeinfo come from
+  <a class="sectionlink" href="#blog-20091119"
+    title="Link to this section"></a>
+</h2>
+
+<p>Building on the existing <code>svn:mergeinfo</code> property, this
+  article descibes some technical details on subtree merges as well
+  as changes in Subversion 1.7. <a
+  href="2009-11-19-where-did-that-mergeinfo-come-from.html">Continue reading</a></p>
+ 
+</div>  <!-- blog-20080506 -->
+
+<div class="h2" id="blog-20080506">
+<h2>2008-05-06 &mdash; Merge info - Understanding the Internals
+  <a class="sectionlink" href="#blog-20080506"
+    title="Link to this section"></a>
+</h2>
+
+<p>Subversion 1.5 adds a versioned property <code>svn:mergeinfo</code>
+  to track merges between different branches. This article explains
+  usage and implementation details. <a
+  href="2008-05-06-merge-info.html">Continue reading</a></p>
+ 
+</div>  <!-- blog-20080506 -->
+
+<div class="h2" id="blog-20080329">
+<h2>2008-03-29 &mdash; Merging from foreign repositories
+  <a class="sectionlink" href="#blog-20080329"
+    title="Link to this section"></a>
+</h2>
+
+<p>Starting with Subversion 1.5 you can merge changes from a
+  foreign repository. This article contains all details. <a
+  href="2008-03-29-merging-from-foreign-repositories.html">Continue reading</a></p>
+ 
+</div>  <!-- blog-20080506 -->
+
+<div class="h2" id="blog-20070613">
+<h2>2007-06-13 &mdash; Merge auditing
+  <a class="sectionlink" href="#blog-20070613"
+    title="Link to this section"></a>
+</h2>
+
+<p>A short description of the initial implementation of
+  <code>svn:mergeinfo</code>. <a
+  href="2007-06-13-merge_auditing.html">Continue reading</a></p>
+ 
+</div>  <!-- blog-20070613 -->
+
+<div class="h2" id="blog-20070327">
+<h2>2007-03-27 &mdash; Authz and anon authn agony
+  <a class="sectionlink" href="#blog-20070327"
+    title="Link to this section"></a>
+</h2>
+
+<p>C. Michael Pilato reveals a trick to expose a repository root to anonymous
+  users while restricting access to a specific subdirectory to authenticated
+  users. <a
+  href="2007-03-27-authz-and-anon-authn-agony.html">Continue reading</a></p>
+
+</div>  <!-- blog-20070327 -->
+
+<div class="h2" id="blog-20060910">
+<h2>2006-09-10 &mdash; Enhancing Subversion
+  <a class="sectionlink" href="#blog-20060910"
+    title="Link to this section"></a>
+</h2>
+
+<p>This article describe different ways of enhancing and customizing
+  a Subversion installation. <a
+  href="2006-09-10-EnhancingSubversionServer.html">Continue reading</a></p>
+ 
+</div>  <!-- blog-20060910 -->
+
+</div> <!-- #site-content -->
+</body>
+</html>

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Website XSL Stylesheet V2.6.0">
+<link rel="home" href="../../." title="Welcome to The NetBSD Project: Of course it runs NetBSD.">
+<link rel="up" href="../../docs/." title="NetBSD Documentation">
+<link rel="previous" href="../../docs/mirror.html" title="NetBSD Mirror FAQ">
+<link rel="next" href="../../docs/misc/smbprint/." title="NetBSD Documentation: Printing to a remote SMB printer from NetBSD">
+<link rel="first" href="../../docs/Hardware/." title="Hardware Documentation">
+<link rel="last" href="../../docs/x/." title="NetBSD Documentation: The X Window System">
+<link rel="stylesheet" href="../../global.css" type="text/css">
+<link rel="stylesheet" href="../../donations/thermo/fundraiser.css" type="text/css">
+
+<title>NetBSD Documentation: Other FAQs and HOWTOs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+</head>
+<body class="website"><div class="webpage" id="docs-misc-index">
+<div id="top"><a href="#mainContent" id="skiplink" tabindex="1">Skip to main content.</a></div>
+<input id="hamburger" type="checkbox"><label class="menuicon" for="hamburger"><span></span><span></span><span></span></label><div id="navBar" role="navigation">
+<div id="centralHeader"><div id="logo">
+<a href="../../"><img id="projectLogo" alt="" height="120" src="../../images/NetBSD-smaller-tb.png"></a><a href="/"><div id="fundraiser">
+<br><div id="fundraiser-amount"><div id="fundraiser-raised"></div></div>
+</div></a>
+</div></div>
+<span class="doNotDisplay">
+	  Navigation:
+	</span><ul>
+<li>
+<a href="../../">
+	  Home</a><ul>
+<li><a href="../../changes/">
+	    Recent changes</a></li>
+<li><a href="//blog.NetBSD.org/">
+	    NetBSD blog</a></li>
+<li><a href="../../gallery/presentations/">
+	    Presentations</a></li>
+</ul>
+</li>
+<li>
+<a href="../../about/">
+	  About</a><ul>
+<li><a href="../../people/developers.html">
+	    Developers</a></li>
+<li><a href="../../gallery/">
+	    Gallery</a></li>
+<li><a href="//wiki.NetBSD.org/ports/">
+	    Ports</a></li>
+<li><a href="//www.pkgsrc.org/">
+	    Packages</a></li>
+</ul>
+</li>
+<li>
+<a href="../../docs/">
+	  Documentation</a><ul>
+<li><a href="../../docs/misc/index.html">
+	    FAQ &amp; HOWTOs</a></li>
+<li><a href="../../docs/guide/en/">
+	    The Guide</a></li>
+<li><a href="//man.NetBSD.org/">
+	    Manual pages</a></li>
+<li><a href="//wiki.NetBSD.org/">
+	    Wiki</a></li>
+</ul>
+</li>
+<li>
+<a href="../../support/">
+	  Support</a><ul>
+<li><a href="/community/">
+	    Community</a></li>
+<li><a href="/mailinglists/">
+	    Mailing lists</a></li>
+<li><a href="../../support/send-pr.html">
+	    Bug reports</a></li>
+<li><a href="../../support/security/">
+	    Security</a></li>
+</ul>
+</li>
+<li>
+<a href="../../developers/">
+	  Developers</a><ul>
+<li><a href="//cvsweb.NetBSD.org/">
+	    CVSWeb</a></li>
+<li><a href="//anonhg.NetBSD.org/">
+	    Mercurial</a></li>
+<li><a href="//nxr.NetBSD.org/">
+	    Cross-reference</a></li>
+<li><a href="//releng.NetBSD.org/">
+	    Release engineering</a></li>
+<li><a href="//wiki.NetBSD.org/projects/">
+	    Projects list</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="content"><div id="mainContent" class="fullWidth"><div class="rowOfBoxes">
+<h1>NetBSD Documentation: Other FAQs and HOWTOs</h1>
+<div class="sect1" id="content_top">
+<div class="titlepage"></div>
+</div>
+<h3 class="title">Hardware support</h3>
+<ul>
+<li><a href="#supported-devices">Lists of supported devices</a></li>
+<li><a href="#graphical-acceleration">Graphical acceleration</a></li>
+<li><a href="#wifi">Configuring WiFi</a></li>
+<li><a href="#virtual-machines">Virtual machines</a></li>
+</ul>
+<h3 class="title">User configuration</h3>
+<ul>
+<li><a href="#adding-a-user">Adding a user</a></li>
+<li><a href="#shells">Selecting a shell</a></li>
+<li><a href="#adding-to-path">Adding something to your path</a></li>
+<li><a href="#setting-something-for-all-users">Setting something for all users</a></li>
+</ul>
+<h3 class="title">Managing third-party software</h3>
+<ul>
+<li><a href="#package-management">Package management on NetBSD</a></li>
+<li><a href="#pkgin">Installing binary packages with pkgin</a></li>
+<li><a href="#pkgsrc">Advanced: Fetching pkgsrc and building packages from source</a></li>
+</ul>
+<h3 class="title">System services (daemons)</h3>
+<ul>
+<li><a href="#managing-services">Managing services</a></li>
+<li><a href="#run-on-startup">Running services on startup</a></li>
+<li><a href="#run-periodic-tasks">Running periodic tasks</a></li>
+</ul>
+<h3 class="title">Editing files under NetBSD</h3>
+<ul>
+<li><a href="#text-editors">Available text editors</a></li>
+<li><a href="#changing-motd">Changing /etc/motd</a></li>
+</ul>
+<h3 class="title">Disks &amp; Filesystems</h3>
+<ul>
+<li><a href="#viewing-disks">Viewing disk device names</a></li>
+<li><a href="#journal-options">Enabling metadata journaling (WAPBL) on FFS filesystems</a></li>
+<li><a href="#adding-a-disk">Adding a disk to an existing system</a></li>
+<li><a href="#moving-usr">Moving /usr from root to a different partition</a></li>
+<li><a href="#read-only-to-read-write">How to mount a 'read-only' filesystem read/write?</a></li>
+<li><a href="#using-fsck">When is it safe to use fsck?</a></li>
+</ul>
+<h3 class="title">Memory/Swap Configuration</h3>
+<ul>
+<li><a href="#swap">How much swap space?</a></li>
+<li><a href="#adding-swap">Adding more swap to a running system</a></li>
+</ul>
+<h3 class="title">Rescuing a system</h3>
+<ul>
+<li><a href="#why-single-user">Single user mode</a></li>
+<li><a href="#single-user-to-multi-user">How to switch from single-user to multi-user</a></li>
+<li><a href="#rebuilding-dev">Rebuilding /dev</a></li>
+</ul>
+<hr>
+<h3 class="title">Hardware support</h3>
+<h4 class="title" id="supported-devices">Lists of supported devices</h4>
+<p>
+The best way to check that a device is supported is to boot
+NetBSD and check <a href="//man.NetBSD.org/NetBSD-11.0/dmesg.8">dmesg(8)</a>.
+For help selecting devices for your NetBSD machine,
+<a class="ulink" href="//man.NetBSD.org/usb.4" target="_top">usb(4)</a> and
+<a class="ulink" href="//man.NetBSD.org/pci.4" target="_top">pci(4)</a>
+contain lists of supported USB and PCI Express
+device drivers. The man pages for the individual drivers often contain lists of
+individual devices. Other man pages also exist for other buses, for example
+<a href="//man.NetBSD.org/NetBSD-11.0/spi.4">spi(4)</a>.
+</p>
+<p>
+See the <a class="ulink" href="//wiki.NetBSD.org/laptops/" target="_top">laptops wiki page</a>
+for a list of laptops tested by developers.
+</p>
+<p>
+For lists of supported ARM boards, try checking the
+<a class="ulink" href="https://github.com/NetBSD/src/tree/trunk/distrib/sets/lists/dtb" target="_top">device tree set lists</a>.
+Note that this list only contains non-UEFI-based ARM boards, UEFI based ARM
+boards are supported generically.
+</p>
+<p>
+For more niche hardware platforms, try checking
+<a class="ulink" href="//wiki.NetBSD.org/ports/" target="_top">individual port pages</a>.
+</p>
+
+<h4 class="title" id="graphical-acceleration">Graphical acceleration</h4>
+<p>
+On x86, NetBSD 9.0 supports Intel integrated graphics up to Kaby Lake,
+Nvidia graphics up to Maxwell, and AMD graphics up to Graphics Core Next
+(version 1).
+Anything newer than this will work, but will use llvmpipe instead of the
+GPU for OpenGL.
+</p>
+<p>
+On x86, NetBSD 10.0 supports Intel integrated graphics up to Gen12
+("Tiger Lake").
+</p>
+
+<h4 class="title" id="wifi">Configuring WiFi</h4>
+<p>
+See above for information about supported WiFi cards and USB devices.
+To see if your WiFi interface is detected and find its name, run
+<a href="//man.NetBSD.org/NetBSD-11.0/ifconfig.8">ifconfig(8)</a>.
+</p>
+<p>For advice on configuring WiFi, see the <a class="ulink" href="../network/wavelan.html" target="_top">802.11 documentation</a>.
+You can do this in the installer by exiting the installer and dropping to
+a shell, then entering the installer again with <code class="code">exit</code>.
+</p>
+
+<h4 class="title" id="virtual-machines">Virtual machines</h4>
+<p>
+NetBSD can run in most standard virtual machines.
+NetBSD supports paravirtualization in QEMU with <a href="//man.NetBSD.org/NetBSD-11.0/virtio.4">virtio(4)</a>,
+Xen with <a href="//man.NetBSD.org/NetBSD-11.0/xennet.4">xennet(4)</a> and friends, VMware with <a href="//man.NetBSD.org/NetBSD-11.0/x86/vmx.4">vmx(4)</a>,
+Amazon EC2 with <a href="//man.NetBSD.org/NetBSD-11.0/ena.4">ena(4)</a>.
+</p>
+<p>There are various special considerations when running NetBSD
+as a guest OS, especially with regards to IPv6 routes, unclean
+shutdown, and graphics modes. Please see the 
+<a class="ulink" href="../guide/en/chap-virt.html#chap-virt-guest" target="_top">notes on using
+NetBSD as a guest</a> in the official guide.</p>
+<hr>
+<h3 class="title">User configuration</h3>
+<h4 class="title" id="adding-a-user">Adding a user</h4>
+<p>
+You can use the <a href="//man.NetBSD.org/NetBSD-11.0/useradd.8">useradd(8)</a> command to add users and <a href="//man.NetBSD.org/NetBSD-11.0/usermod.8">usermod(8)</a>
+to modify them. The <a href="//man.NetBSD.org/NetBSD-11.0/passwd.1">passwd(1)</a> command can be used to set and change
+your own and (if you are root) other users' passwords
+</p>
+<p>
+Use the <code class="code">-m</code> option to useradd to create and populate their home
+directory with shell configuration from <code class="code">/etc/skel</code>, including
+the correct <code class="code">PATH</code> to run X11 programs and programs from packages.
+Use <code class="code">-g wheel</code> to allow the user to <a href="//man.NetBSD.org/NetBSD-11.0/su.1">su(1)</a> to root if they have
+the correct password.
+</p>
+
+<h4 class="title" id="shells">Selecting a shell</h4>
+<p>
+A number of shells are available in NetBSD as standard.
+<a href="//man.NetBSD.org/NetBSD-11.0/chsh.1">chsh(1)</a> can be used to change or set your shell, and if you're root,
+other users' too.
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/sh.1">sh(1)</a> - <span class="emphasis"><em>Bourne shell</em></span><br>
+	<p>This shell is the standard shell for scripting and interactive use
+	in NetBSD.</p>
+	<p>It supports emacs-style and vi-style editing modes with
+	<code class="code">set -o emacs</code> or <code class="code">set -o vi</code>. Filename
+	completion by TAB can be enabled by <code class="code">set -o tabcomplete</code>.
+	The default configuration has both features enabled
+	(in <code class="filename">/etc/shrc</code>, read from
+	<code class="filename">~/.shrc</code>).
+	<code class="code">sh</code> currently only has tab completion for file paths.</p>
+</li>
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/csh.1">csh(1)</a> - <span class="emphasis"><em>C shell</em></span><br>
+	<p>This was the standard user shell until NetBSD 4.0, it supports
+	filename completion (<code class="code">set filec</code> and use the ESCAPE key)
+	but does not support command line editing.</p>
+</li>
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/ksh.1">ksh(1)</a> - <span class="emphasis"><em>Korn shell</em></span><br>
+	<p>This is a public domain version of the Korn Shell, aka pdksh.
+	Like <code class="code">sh</code> it supports command line editing in emacs
+	and vi modes, but also supports command name completion.</p>
+	<p>
+	In Emacs mode, filename and command completion by TAB is enabled
+	by default. Use <code class="code">set -o vi-tabcomplete</code> or
+	<code class="code">set -o vi-esccomplete</code> to get Vi mode with
+	completion by TAB or ESC, respectively.</p>
+</li>
+<li class="listitem">
+<span class="emphasis"><em>Other shells</em></span><br>
+	<p>The <a class="ulink" href="../software/packages.html" target="_top">NetBSD packages
+	collection</a> also contains various other command line shells
+	under the <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/index.html" target="_top"><code class="filename">shells</code></a> category.
+	</p>
+</li>
+</ul></div>
+<p>
+</p>
+
+<h4 class="title" id="adding-to-path">Adding something to your path</h4>
+<p>
+For example, to add <code class="filename">/usr/local/bin</code> to your path,
+edit the file
+<code class="filename">.profile</code>
+in your home directory and add the following:
+</p>
+<pre class="programlisting">
+PATH=/usr/local/bin:$PATH
+export PATH</pre>
+<p>
+This works for <a href="//man.NetBSD.org/NetBSD-11.0/sh.1">sh(1)</a> and comparable Bourne-compatible shells like
+<a href="//man.NetBSD.org/NetBSD-11.0/ksh.1">ksh(1)</a>.
+</p>
+<p>For the C-shell <a href="//man.NetBSD.org/NetBSD-11.0/csh.1">csh(1)</a>, add the following to
+<code class="filename">.login</code>:
+</p>
+<pre class="programlisting">set path = ( /usr/local/bin $path )</pre>
+<p>
+</p>
+
+<h4 class="title" id="setting-something-for-all-users">Setting something for all users</h4>
+<p>
+You can set something for all users running <a href="//man.NetBSD.org/NetBSD-11.0/sh.1">sh(1)</a>
+by adding it to the following files:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="filename">/etc/profile</code><br>
+    This is run every time a new shell is opened, before any
+    <code class="filename">.profile</code> in the user's home directory.</li>
+<li class="listitem">
+<code class="filename">/etc/shrc</code><br>
+    This is run from <code class="filename">.shrc</code>
+    in the user's home directory and contains interactive mode settings.</li>
+</ul></div>
+<p>
+</p>
+<p>
+You can set something for all users running <a href="//man.NetBSD.org/NetBSD-11.0/csh.1">csh(1)</a> or <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/tcsh/index.html" target="_top"><code class="filename">shells/tcsh</code></a>
+by adding it to one of the following files:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="filename">/etc/csh.cshrc</code><br>
+    This is run every time a new shell is opened, before any
+    <code class="filename">.cshrc</code> in the user's home directory.</li>
+<li class="listitem">
+<code class="filename">/etc/csh.login</code><br>
+    This is run when the user logs in, after anything in
+    <code class="filename">/etc/csh.cshrc</code>, but before any
+    <code class="filename">.login</code>
+    in the user's home directory.</li>
+<li class="listitem">
+<code class="filename">/etc/csh.logout</code><br>
+    This is run when the user logs out, before any <code class="filename">.logout</code> in
+    the user's home directory.</li>
+</ul></div>
+<p>
+</p>
+<hr>
+<h3 class="title">Managing third-party software</h3>
+<h4 class="title" id="package-management">Package management on NetBSD</h4>
+<p>NetBSD uses the
+<span class="bold"><strong><a class="ulink" href="https://pkgsrc.org/" target="_top">pkgsrc</a></strong></span>
+framework for managing installation of third-party software. There are
+various ways to use pkgsrc, this section will only cover the simplest and
+most common ways.</p>
+
+<h4 class="title" id="pkgin">Installing binary packages with pkgin</h4>
+
+<p>The NetBSD Project provides pre-built binaries for thousands of
+software packages. Installing binary packages with pkgin should be the
+quickest and easiest way to get software on to your NetBSD system,
+and is recommended for most users. By default, third-party software
+from pkgsrc is installed to the directory <code class="filename">/usr/pkg</code>.</p>
+
+<p>If you installed a NetBSD port that uses the <a href="//man.NetBSD.org/NetBSD-11.0/sysinst.8">sysinst(8)</a>
+installer, you may have noticed the
+<span class="emphasis"><em>Enable installation of binary packages</em></span>
+option in the post-installation configuration menu.
+This installs the <span class="bold"><strong>pkgin</strong></span> binary package
+manager.</p>
+
+<p>If you didn't do this, it's also possible to install pkgin on a
+fresh NetBSD system with <span class="bold"><strong>pkg_add</strong></span>:</p>
+
+<pre class="programlisting">
+<code class="prompt">#</code> <strong class="userinput"><code>export PKG_PATH=https://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r | cut -d_ -f1)/All</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>pkg_add pkgin</code></strong>
+</pre>
+
+<p>Note that the default <code class="filename">/root/.profile</code> contains an
+example <code class="varname">PKG_PATH</code>.</p>
+
+<p>You can then search for software, e.g. with
+</p>
+<pre class="programlisting"><code class="prompt">#</code> <strong class="userinput"><code>pkgin search shell</code></strong></pre>
+<p>
+Install software with:
+</p>
+<pre class="programlisting"><code class="prompt">#</code> <strong class="userinput"><code>pkgin install fluxbox nginx zsh</code></strong></pre>
+<p>
+Perform package upgrades with:
+</p>
+<pre class="programlisting"><code class="prompt">#</code> <strong class="userinput"><code>pkgin upgrade</code></strong></pre>
+<p>
+For more information, consult the pkgin manual page.</p>
+
+<p>pkgin stores its repository information in
+<code class="filename">/usr/pkg/etc/pkgin/repositories.conf</code>.
+This may need to be edited to the appropriate subdirectory of
+<a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/" target="_top">
+https://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/</a>.</p>
+
+<div class="sect4" id="pkgin-troubleshooting-abi">
+<div class="titlepage"><h5 class="titlepage">Troubleshooting: ABI differences: "Warning: package `X' was built for a platform: ..."</h5></div>
+
+
+<p>NetBSD binary packages are built for the <span class="emphasis"><em>first release of a
+branch</em></span>.
+This means that packages intended for use on 9.1 are built for 9.0, and so on.
+Any difference in the version number of the OS and the packages along this line is fine, since the userspaces are compatible, but it may produce a warning
+due to the different kernel version number.</p>
+
+<p>However, NetBSD HEAD/CURRENT version numbers containing .99, e.g.
+9.99.81 indicate a different branch from 9.0 and cannot be expected
+to be compatible with packages built for 9.0 <span class="emphasis"><em>unless</em></span>
+shared libraries are obtained from a 9.x release's sets.</p>
+</div>
+<div class="sect4" id="pkgin-troubleshooting-shared-object-not-found">
+<div class="titlepage"><h5 class="titlepage">Troubleshooting: No X11 sets: "Shared object 'libX' not found"</h5></div>
+
+
+<p>NetBSD binary packages are built to use the optional native X11 sets
+by default, and will fail to install if a dependency requires a library from
+the X11 sets but the X11 sets aren't installed:</p>
+
+<pre class="programlisting">
+/usr/pkg/lib/ffmpeg4/libavfilter.so.7: Shared object "libfontconfig.so.2" not found
+</pre>
+
+<p>You can install missing sets by running <span class="command"><strong>sysinst</strong></span> as
+root, or by booting the installer.</p>
+</div>
+
+<h4 class="title" id="pkgsrc">Advanced: Fetching pkgsrc and building packages from source</h4>
+
+<p>Fetch and unpack pkgsrc:</p>
+
+<pre class="programlisting">
+<code class="prompt">#</code> <strong class="userinput"><code>ftp https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.xz</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>xzcat pkgsrc.tar.xz | tar xvf -</code></strong>
+</pre>
+
+<p>You can build a package by changing to its directory with
+<a href="//man.NetBSD.org/NetBSD-11.0/cd.1">cd(1)</a> and running <strong class="userinput"><code>make package</code></strong>
+followed by <strong class="userinput"><code>make install</code></strong>.
+There are various tools to automate building from pkgsrc, including
+<a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_chk/index.html" target="_top"><code class="filename">pkgtools/pkg_chk</code></a> and
+<a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pbulk/index.html" target="_top"><code class="filename">pkgtools/pbulk</code></a>.</p>
+
+<p>For more information, consult the
+<a class="ulink" href="https://www.NetBSD.org/docs/pkgsrc/" target="_top">pkgsrc Guide</a>.
+</p>
+<hr>
+<h3 class="title">System services (daemons)</h3>
+<h4 class="title" id="managing-services">Managing services</h4>
+<p>To manage system startup and services, NetBSD uses the
+<a href="//man.NetBSD.org/NetBSD-11.0/rc.8">rc(8)</a> system designed by Luke Mewburn.</p>
+<p>System services are stored inside
+<code class="filename">/etc/rc.d</code> and are controlled through the
+<a href="//man.NetBSD.org/NetBSD-11.0/service.8">service(8)</a> command. For example, to restart the
+<a href="//man.NetBSD.org/NetBSD-11.0/dhcpcd.8">dhcpcd(8)</a> service (responsible for configuring network
+interfaces):</p>
+<pre class="programlisting"><code class="prompt">#</code> <strong class="userinput"><code>service dhcpcd restart</code></strong></pre>
+
+<h4 class="title" id="run-on-startup">Running services on startup</h4>
+<p>The services that run on system startup and default
+flags for services are configured by editing
+<code class="filename">/etc/rc.conf</code>. For example,
+to run the <a href="//man.NetBSD.org/NetBSD-11.0/httpd.8">httpd(8)</a> server on startup on port 8080,
+set in <code class="filename">/etc/rc.conf</code>:</p>
+<pre class="programlisting"><strong class="userinput"><code>httpd=YES
+httpd_flags='-I 8080'</code></strong></pre>
+<p><code class="filename">/etc/rc.local</code> is a script that is run
+as the final part of the boot process, after all networking interfaces,
+daemons, and everything else is already configured. Custom commands
+can also be added to this file to run them on startup.</p>
+
+<h4 class="title" id="run-periodic-tasks">Running periodic tasks</h4>
+<p>The typical way to run periodic tasks on a Unix system is to
+use <a href="//man.NetBSD.org/NetBSD-11.0/cron.8">cron(8)</a>. NetBSD will also automatically periodically run
+periodic scripts. For example, commands can be added to the
+<code class="filename">/etc/daily.local</code> script to run regularly every
+night.</p>
+<hr>
+<h3 class="title">Editing files under NetBSD</h3>
+<h4 class="title" id="text-editors">Available text editors</h4>
+<p>
+There are two obvious options in the base system:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/ed.1">ed(1)</a> (Line oriented text editor)<br>
+    <code class="code">ed</code> is a very simplistic text editor. It has a command
+    mode, (active when first started) and an input mode. Its primary
+    advantages are it is available even in single-user mode with
+    only the '/' filesystem mounted, and will work even without a
+    correct terminal type set.  It is worth gaining a basic
+    understanding of <a href="//man.NetBSD.org/NetBSD-11.0/ed.1">ed(1)</a> - enough to fix <a href="//man.NetBSD.org/NetBSD-11.0/fstab.5">fstab(5)</a> and <a href="//man.NetBSD.org/NetBSD-11.0/rc.conf.5">rc.conf(5)</a>
+    files in an emergency.</li>
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/vi.1">vi(1)</a> (Screen oriented text editor)<br>
+    <code class="code">vi</code> retains the command and input modes of <a href="//man.NetBSD.org/NetBSD-11.0/ex.1">ex(1)</a>, but
+    adds a full screen visual interface. vi is the only screen
+    editor available in the base install, and requires a valid
+    terminal type to run.<br>
+    There are a number of online vi tutorials:
+    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">
+<a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/vilearn/index.html" target="_top"><code class="filename">editors/vilearn</code></a> - in pkgsrc and highly recommended.</li>
+<li class="listitem">
+<a class="ulink" href="http://www.thomer.com/vi/vi.html" target="_top">
+	VI lovers home page</a>.</li>
+<li class="listitem">
+<a class="ulink" href="https://engineering.purdue.edu/ECN/Support/KB/Docs/ViTextEditorTutorial" target="_top">Purdue
+	University Engineering Computer Network</a>.</li>
+</ul></div>
+    </li>
+</ul></div>
+<p>
+</p>
+<p>
+There are a large number of editors available under the
+<a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/index.html" target="_top"><code class="filename">editors</code></a>
+category in pkgsrc, including:
+</p>
+<p>
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<span class="bold"><strong><a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/joe/index.html" target="_top"><code class="filename">editors/joe</code></a></strong></span><br>
+    A small, fast editor capable of emulating WordStar and emacs key
+    bindings (<span class="emphasis"><em>jstar</em></span>, <span class="emphasis"><em>jmacs</em></span>).
+    <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/joe/index.html" target="_top"><code class="filename">editors/joe</code></a> will be
+    familiar to people who have used Borland IDEs.
+    </li>
+<li class="listitem">
+<span class="bold"><strong><a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/nano/index.html" target="_top"><code class="filename">editors/nano</code></a></strong></span><br>
+    A very simple to use text editor.
+    </li>
+<li class="listitem">
+<span class="bold"><strong><a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/emacs/index.html" target="_top"><code class="filename">editors/emacs</code></a></strong></span><br>
+    A proverbial 'everything and the kitchen sink' editor, including a
+    complete lisp interpreter.
+    </li>
+<li class="listitem">
+<span class="bold"><strong><a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/editors/xfce4-mousepad/index.html" target="_top"><code class="filename">editors/xfce4-mousepad</code></a></strong></span><br>
+    A simple GTK3 based GUI editor.
+    </li>
+</ul></div>
+<p>
+</p>
+
+<h4 class="title" id="changing-motd">Changing /etc/motd</h4>
+<p>
+If you delete the header of <code class="code">/etc/motd</code>, the startup process
+will overwrite your
+changes on boot.  This can be disabled by setting
+<code class="code">update_motd=NO</code> in <code class="code">/etc/rc.conf</code>, in which
+<code class="code">/etc/motd</code> will not be touched at all, and you can change it at
+will.
+
+</p>
+<hr>
+<h3 class="title">Disks &amp; Filesystems</h3>
+<h4 class="title" id="viewing-disks">Viewing disk device names</h4>
+<p>Various commands like <a href="//man.NetBSD.org/NetBSD-11.0/gpt.8">gpt(8)</a> and <a href="//man.NetBSD.org/NetBSD-11.0/disklabel.8">disklabel(8)</a>, and
+system configuration files like <code class="filename">/etc/fstab</code> make it
+important to know the names of disk devices.
+You can get a short listing of physical drives with <a href="//man.NetBSD.org/NetBSD-11.0/sysctl.8">sysctl(8)</a>:</p>
+<pre class="programlisting">
+<code class="prompt">$</code> <strong class="userinput"><code>sysctl hw.disknames</code></strong>
+hw.disknames = wd0 dk0 dk1 dk2 cgd0
+</pre>
+<p>The initial sequence of letters refers to the driver (device type),
+and the number is the device number.</p>
+<p>Here, <code class="filename">wd0</code> is a physical SATA drive,
+<code class="filename">dk0</code> through <code class="filename">dk2</code> are GPT
+partitions, and <code class="filename">cgd0</code> is an encrypted partition.</p>
+<p>You can also find more information about devices
+connected to your system by checking <strong class="userinput"><code>dmesg</code></strong>.</p>
+<p>NetBSD always applies a BSD disklabel to connected drives,
+whether real or fictitious. For example, <code class="filename">/dev/wd0a</code>
+refers to the first NetBSD partition, and <code class="filename">/dev/rwd0d</code>
+refers to the entire raw disk. "e" is also special, it will be used
+for FAT32 partitions, e.g. on a USB drive without a real disklabel installed,
+the partition containing the data is likely
+<code class="filename">/dev/sd0e</code>.</p>
+
+<h4 class="title" id="journal-options">Enabling metadata journaling (WAPBL) on FFS filesystems</h4>
+<p>
+Enabling <a href="//man.NetBSD.org/NetBSD-11.0/wapbl.4">wapbl(4)</a> (metadata journaling) on a standard NetBSD FFS
+filesystem can avoid a long <a href="//man.NetBSD.org/NetBSD-11.0/fsck.8">fsck(8)</a> after an unclean shutdown and
+provide better general-use performance. Note that metadata journaling 
+does not help with file corruption when a write operation is interrupted
+by an unclean shutdown, and can in some cases make it worse.
+</p>
+<p>
+Add the <span class="emphasis"><em>log</em></span> option to <code class="filename">/etc/fstab</code>
+to turn on metadata journaling at boot time:
+</p>
+<pre class="programlisting">
+NAME=NetBSD	/	ffs	rw,noatime,log	1 1
+</pre>
+<p>
+</p>
+<p>
+The <span class="emphasis"><em>noatime</em></span> option here disables recording file access
+time, which may be useful on flash-based filesystems, and other situations
+where you might want to avoid excess disk writes.
+</p>
+<p>
+You can then remount the filesystem with journaling enabled:
+</p>
+<pre class="programlisting">
+<code class="prompt">#</code> <strong class="userinput"><code>mount -u -o rw,noatime,log /</code></strong>
+</pre>
+<p>
+</p>
+
+<h4 class="title" id="adding-a-disk">Adding a disk to an existing system</h4>
+<p>
+</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">Halt the system</li>
+<li class="listitem">Connect the new drive and reboot</li>
+<li class="listitem">Check <a href="//man.NetBSD.org/NetBSD-11.0/dmesg.8">dmesg(8)</a> output to confirm that the drive
+    is recognized</li>
+<li class="listitem">Write a <a href="//man.NetBSD.org/NetBSD-11.0/disklabel.5">disklabel(5)</a> including the partitions using <a href="//man.NetBSD.org/NetBSD-11.0/disklabel.8">disklabel(8)</a><br>
+        (if the disk doesn't have a disklabel yet, you'll probably
+         do something like:<pre class="programlisting"> disklabel -i -I sd1 # ignore any "sd1: no disk label"</pre>
+    Partition 'c' is reserved for the entire NetBSD portion of a disk, and
+    on some ports (notably i386), 'd' is similarly reserved for the entire disk.
+    The following is a sample session setting the entire disk to
+    be one filesystem 'e':
+<pre class="programlisting">
+	partition&gt; <span class="bold"><strong>e</strong></span>
+	Filesystem type [?] [unused]: <span class="bold"><strong>4.2BSD</strong></span>
+	Start offset [0c, 0s, 0M]:
+	Partition size ('$' for all remaining) [0c, 0s, 0M]: <span class="bold"><strong>$</strong></span>
+ 	e: 234375000         0     4.2BSD      0     0     0   # (Cyl.    0 - 232514*)
+	partition&gt; <span class="bold"><strong>W</strong></span>
+	Label disk [n]? <span class="bold"><strong>y</strong></span>
+	partition&gt; <span class="bold"><strong>Q</strong></span></pre>
+    Inside <code class="code">disklabel -i</code> you can use '?' for additional help.
+</li>
+<li class="listitem">For each filesystem added, <code class="code"><span class="bold"><strong>newfs &lt;filesystem&gt;</strong></span></code>
+    (where <span class="emphasis"><em>&lt;filesystem&gt;</em></span> is the partition's raw device,
+     like /dev/rsd1e, /dev/rwd1f, ...)
+</li>
+<li class="listitem">Put the filesystems into <code class="code">/etc/fstab</code>
+</li>
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/fsck.8">fsck(8)</a> them: <pre class="programlisting">fsck -f &lt;filesystem&gt;</pre>
+</li>
+<li class="listitem">
+<a href="//man.NetBSD.org/NetBSD-11.0/mount.8">mount(8)</a> them: <pre class="programlisting">mount -va</pre>
+</li>
+</ol></div>
+<p>
+</p>
+
+<h4 class="title" id="moving-usr">Moving /usr from root to a different partition</h4>
+<p>
+    </p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">Make sure that the desired new location (e.g. <code class="code">/dev/sd0e</code>)
+	   does not overlap any existing partitions.
+	   Check the output from <a href="//man.NetBSD.org/NetBSD-11.0/disklabel.8">disklabel(8)</a>.</li>
+<li class="listitem">If it does not already contain a filesystem, run
+	<pre class="programlisting"># <span class="bold"><strong>newfs /dev/sd0e</strong></span></pre>
+        </li>
+<li class="listitem">Mount it and copy across data:
+	<pre class="programlisting"># <span class="bold"><strong>mount /dev/sd0e /mnt</strong></span></pre>
+        </li>
+<li class="listitem"><pre class="programlisting"># <span class="bold"><strong>cd /usr</strong></span></pre></li>
+<li class="listitem"><pre class="programlisting"># <span class="bold"><strong>pax -rw -pe . /mnt</strong></span></pre></li>
+<li class="listitem"><pre class="programlisting"># <span class="bold"><strong>umount /mnt</strong></span></pre></li>
+<li class="listitem">Edit <code class="code">/etc/fstab</code> and add
+	   '<code class="code">/dev/sd0e /usr ffs rw 1 2</code>' (change <code class="code">/dev/sd0e</code>
+	   for your situation).
+        </li>
+<li class="listitem">Shutdown to single user mode and make new mountpoint:
+	<pre class="programlisting"># <span class="bold"><strong>shutdown now</strong></span></pre>
+</li>
+<li class="listitem"><pre class="programlisting"># <span class="bold"><strong>mv /usr /usr.old</strong></span></pre></li>
+<li class="listitem"><pre class="programlisting"># <span class="bold"><strong>mkdir /usr</strong></span></pre></li>
+<li class="listitem">Bring system up, test, and when all OK, '<code class="code">rm -rf
+	   /usr.old</code>'.</li>
+</ol></div>
+<p>
+</p>
+
+<h4 class="title" id="read-only-to-read-write">How to mount a 'read-only' filesystem read/write?</h4>
+<p>
+Use <a href="//man.NetBSD.org/NetBSD-11.0/mount.8">mount(8)</a>'s <code class="code">-u</code> (update) switch: '<span class="bold"><strong><code class="code">mount -u /</code></strong></span>'.  More than likely, you booted single-user
+which mounts the root filesystem read-only by default.  This gives you a chance
+to run fsck by hand before bringing the system up into multi-user.  One
+other way to mount all the filesystems in <code class="code">/etc/fstab</code> as read/write
+is to use '<span class="bold"><strong><code class="code">mount -a</code></strong></span>'.
+</p>
+<p>
+However, the best way to do this is to go into multi-user mode by exiting
+from your single-user shell.  This will mount all of the filesystems in
+<code class="code">/etc/fstab</code> in whatever mode they are listed.
+</p>
+
+<h4 class="title" id="using-fsck">When is it safe to use fsck?</h4>
+<p>
+Only use <a href="//man.NetBSD.org/NetBSD-11.0/fsck.8">fsck(8)</a> on an unmounted or read-only filesystem.  Running
+<a href="//man.NetBSD.org/NetBSD-11.0/fsck.8">fsck(8)</a> on a r/w filesystem is dangerous and could corrupt the filesystem.
+If you bring the system up into single-user mode, the system will be
+mounted read-only.  From there you can do an '<span class="bold"><strong><code class="code">fsck -p</code></strong></span>'
+to check all filesystems before bringing the system up into multi-user
+mode.  If the filesystem has previously been marked "clean," and you still
+want to check it, you can use the <code class="code">-f</code> flag to <a href="//man.NetBSD.org/NetBSD-11.0/fsck.8">fsck(8)</a>.
+</p>
+<p>
+If you do make any changes to the filesystem using fsck, it is probably
+best to type '<span class="bold"><strong><code class="code">reboot -n</code></strong></span>' to reboot the machine immediately
+without syncing the disks.
+</p>
+<hr>
+<h3 class="title">Memory/Swap Configuration</h3>
+<h4 class="title" id="swap">How much swap space?</h4>
+<p>
+    On older Unix systems it was recommended to have twice as much swap
+    space as RAM. This was because active pages in RAM had to have pages
+    allocated in swap, effectively limiting the total virtual memory to
+    the size of the swap space.
+    On NetBSD this is no longer true, so total virtual memory is approximately
+    swap + RAM.
+</p>
+    <p>
+    Under NetBSD there are three primary uses for swap space:
+</p>
+    <div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<span class="bold"><strong>Additional virtual memory</strong></span><br>
+	Less active pages containing modified data can be migrated
+	to swap space allowing virtual memory to be larger than
+	physical memory.
+    </li>
+<li class="listitem">
+<span class="bold"><strong>An area for kernel core dumps</strong></span><br>
+	This is then read by <a href="//man.NetBSD.org/NetBSD-11.0/savecore.8">savecore(8)</a>, on boot. For this to
+	work the primary swap partition must be slightly larger
+	than the total RAM.
+    </li>
+<li class="listitem">
+<span class="bold"><strong>For <a href="//man.NetBSD.org/NetBSD-11.0/mfs.8">mfs(8)</a> filesystems</strong></span><br>
+	Classically mounted on /tmp in order to speed up any
+	programs using /tmp, by adding the following to the
+	<a href="//man.NetBSD.org/NetBSD-11.0/fstab.5">fstab(5)</a> file:
+	<pre class="programlisting">	swap  /tmp  mfs  rw,-s=<span class="emphasis"><em>SIZE</em></span> 0 0</pre>
+	where <span class="emphasis"><em>SIZE</em></span> is in 512byte blocks.
+	The space required is taken from the swap space as the
+	filesystem is used.
+    </li>
+</ol></div>
+
+<h4 class="title" id="adding-swap">Adding more swap to a running system</h4>
+<p>
+    Systems should be configured with sufficient swap space, as per
+    the <a class="ulink" href="#swap" target="_top">How much swap</a> entry.
+</p>
+    <p>
+    There are three ways to add swap to a configured system:
+</p>
+    <p>
+    </p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<span class="bold"><strong>Rebuild the system disk, using a larger swap partition.
+	</strong></span><br>
+	While arguably the cleanest solution, this obviously involves
+	significant disruption.
+    </li>
+<li class="listitem">
+<span class="bold"><strong>Add an additional swap partition.</strong></span><br>
+	When you add a disk it is usually a good idea to include a small
+	'b' partition for additional swap, and add an entry of the form:
+	<pre class="programlisting">	/dev/<span class="emphasis"><em>DISK</em></span>b       none    swap sw 0 0</pre>
+	to your <code class="code">/etc/fstab</code> file to automatically enable on boot.
+	(Where <code class="code"><span class="emphasis"><em>DISK</em></span></code> is the disk name such as 'sd1' or 'wd2').
+    </li>
+<li class="listitem">
+<p><span class="bold"><strong>Create a swap file.</strong></span></p>
+<p>
+	The quickest and simplest option is to create a file in an existing
+	filesystem, and use it as additional swap space. While accessing this
+	will be slightly slower than dedicated swap partitions (due to
+	fragmentation and filesystem overhead), it is ideal for solving a
+	temporary swap shortage.
+	</p>
+	<p>
+	To add 10 MBytes of swap space is as easy as selecting a filesystem
+	with sufficient free space and:
+	</p>
+<pre class="programlisting">	# <span class="bold"><strong>dd if=/dev/zero bs=1m count=10 of=/somefilesystem/swap</strong></span>
+	# <span class="bold"><strong>chmod 600 /somefilesystem/swap</strong></span>
+	# <span class="bold"><strong>swapctl -a -p 1 /somefilesystem/swap</strong></span></pre>
+<p>
+	The <a href="//man.NetBSD.org/NetBSD-11.0/dd.1">dd(1)</a> command creates a 10 MByte file
+	`<code class="code">/somefilesystem/swap</code>'.  This swap file needs to
+	be <a href="//man.NetBSD.org/NetBSD-11.0/chmod.1">chmod(1)</a> 600 so that unprivileged users may not read
+	its contents.  Then <a href="//man.NetBSD.org/NetBSD-11.0/swapctl.8">swapctl(8)</a> command adds <code class="code">/somefilesystem/swap</code>
+	to the system swap space at priority 1.  Priority 0 is the
+	(default) highest priority, and since swapping to files is
+	slightly slower we only want the system to use the file
+	when conventional swap has all been used.
+	</p>
+	<p>
+	To make swapping to that file permanent and enable it on
+	every reboot, put something like the following into
+	/etc/fstab:
+	</p>
+	<pre class="programlisting">/somefilesystem/swap none swap sw,priority=1 0 0</pre>
+    </li>
+</ol></div>
+<p>
+</p>
+<hr>
+<h3 class="title">Rescuing a system</h3>
+<h4 class="title" id="why-single-user">Single user mode</h4>
+<p>
+Single-user mode is when the kernel has booted, but only runs a
+single shell on the console as the superuser. It may be necessary to boot
+into single user mode if your system configuration becomes damaged
+or lost, and ordinary user accounts are inaccessible.
+If you boot single-user only the root filesystem will be mounted,
+and it will be mounted read-only.
+You can enter single-user mode by running '<code class="code"><span class="bold"><strong>shutdown
+now</strong></span></code>' as root on a running system, or  by booting the system
+with the '-s' flag (the method for doing this varies from port to
+port).
+</p>
+<p>
+Once booted single-user you may find some of the following commands useful:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="code"><span class="bold"><strong>fsck -p ; mount -va</strong></span></code><br>
+    Check the filesystems with <a href="//man.NetBSD.org/NetBSD-11.0/fsck.8">fsck(8)</a>, then make them available with <a href="//man.NetBSD.org/NetBSD-11.0/mount.8">mount(8)</a>.
+</li>
+<li class="listitem">
+<code class="code"><span class="bold"><strong>set -E</strong></span></code><br>
+    Enable command line editing.
+</li>
+<li class="listitem">
+<code class="code"><span class="bold"><strong>TERM=vt220 ; export TERM</strong></span></code><br>
+    Set and export the TERM variable, to permit editors such as <a href="//man.NetBSD.org/NetBSD-11.0/vi.1">vi(1)</a> to
+    work. Note: You may need to use a different terminal type from
+    'vt220', depending on the console type.
+</li>
+<li class="listitem">
+<code class="code"><span class="bold"><strong>/etc/rc.d/network start; /etc/rc.d/dhcpcd start</strong></span></code><br>
+    Bring up the network. If you have any nfs mounted filesystems you
+    may want to do this before the fsck and mount.
+</li>
+</ul></div>
+<p>
+</p>
+
+<h4 class="title" id="single-user-to-multi-user">How to switch from single-user to multi-user</h4>
+<p>
+Exit the single-user shell with "exit" or ctrl-D.
+</p>
+<p>
+
+The system will boot up to multi-user mode, starting all kind of services, etc.
+Note that disks are not checked when going from single-user to multi-user
+mode!
+</p>
+
+<h4 class="title" id="rebuilding-dev">Rebuilding <code class="filename">/dev</code>
+</h4>
+<p>
+The <code class="filename">/dev</code> directory contains the necessary device
+files for accessing hardware and pseudo devices. If it becomes damaged,
+much strangeness can ensue. To rebuild the <code class="filename">/dev</code>
+directory, you should first boot single-user (it should be possible
+to perform while multiuser, but this is not recommended), then:
+</p>
+<pre class="programlisting">
+mkdir /newdev
+cd /newdev
+cp /dev/MAKEDEV /newdev/MAKEDEV
+sh MAKEDEV all
+cd /
+mv dev olddev; mv newdev dev
+rm -r olddev</pre>
+<p>
+</p>
+</div></div></div>
+<div class="navfoot"></div>
+<div id="footer"><div id="footerContent">
+<span class="footfeed"><a href="//www.NetBSD.org/cgi-bin/feedback.cgi">
+	  Contact</a> |
+      </span><span class="footcopy"><a href="../../about/disclaimer.html">
+      Disclaimer</a> |
+
+      <span class="copyright">Copyright © 1994-2026 The NetBSD Foundation, Inc. </span>ALL RIGHTS RESERVED.<br>NetBSD<sup>®</sup> is a registered trademark of The NetBSD
+	Foundation, Inc.</span>
+</div></div>
+</div></body>
+</html>
