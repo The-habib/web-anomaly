@@ -1,0 +1,101 @@
+{
+  "domain": "rijksmuseum.nl",
+  "canonical_url": "https://www.rijksmuseum.nl/nl",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:31:12.979531+00:00",
+  "preflight": {
+    "domain": "rijksmuseum.nl",
+    "dns_resolved": true,
+    "dns_ip": "20.50.2.49",
+    "status": "SUCCESS",
+    "final_url": "https://www.rijksmuseum.nl/nl",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://rijksmuseum.nl/",
+      "https://www.rijksmuseum.nl/",
+      "https://www.rijksmuseum.nl/nl"
+    ],
+    "status_code": 200,
+    "latency_ms": 4273.82,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Rijksmuseum, h\u00e9t museum van Nederland",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 87,
+      "scripts_count": 5,
+      "images_count": 31,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:31:13 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Strict-Transport-Security": "max-age=2592000",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "payment=(self), geolocation=(self), microphone=(self), camera=(self)",
+        "Content-Security-Policy": "frame-ancestors 'self'",
+        "X-Powered-By": "ASP.NET",
+        "x-azure-ref": "20260817T193113Z-17d6bd55f76fc8sthC1PNQvyan0000000trg0000000004xn",
+        "Cache-Control": "public, max-age=300",
+        "x-fd-int-roxy-purgeid": "0",
+        "X-Cache-Info": "L2_T2",
+        "X-Cache": "TCP_REMOTE_HIT"
+      },
+      "content_length": 113463
+    },
+    "text_length": 227
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193118",
+    "last_seen": "20260817193118",
+    "earliest_iso": "2026-08-17T19:31:12.979531+00:00",
+    "latest_iso": "2026-08-17T19:31:12.979531+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/rijksmuseum_nl/rendered.html",
+      "sha256": "c3275f4356a82f354d1ba456611d4fb2be77969bc7474af7185e6dca5f730ffd",
+      "size_bytes": 113463
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/rijksmuseum_nl/timeline.json",
+      "sha256": "321a9e33c9e9a4562297af1946ba7152316652e376d56e01ee886fbe599b0212",
+      "size_bytes": 974
+    }
+  ]
+}

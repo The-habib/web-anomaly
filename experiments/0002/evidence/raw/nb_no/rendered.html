@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+	<meta charset="UTF-8" />
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+			<!-- Google Consent Mode -->
+		<script data-cookieconsent="ignore">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("consent", "default", {
+				ad_personalization: "denied",
+				ad_storage: "denied",
+				ad_user_data: "denied",
+				analytics_storage: "denied",
+				functionality_storage: "denied",
+				personalization_storage: "denied",
+				security_storage: "granted",
+				wait_for_update: 500,
+			});
+			gtag("set", "ads_data_redaction", true);
+			gtag("set", "url_passthrough", false);
+		</script>
+		<!-- End Google Consent Mode-->
+					<!-- Google Tag Manager -->
+			<script>
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-KWB7DZC');
+			</script>
+			<!-- End Google Tag Manager -->
+					<!-- Cookiebot CMP-->
+			<script
+				id="Cookiebot"
+				src="https://consent.cookiebot.com/uc.js"
+				data-cbid="dec5108c-cd88-4f94-b015-cede4a522462"
+				data-blockingmode="auto"
+				type="text/javascript"
+				data-consentmode-defaults="disabled"
+				data-culture="nb"			></script>
+			<!-- End Cookiebot CMP -->
+			<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWB7DZC');</script>
+<!-- End Google Tag Manager -->
+		
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.1 (Yoast SEO v27.1.1) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<meta name="description" content="Nasjonalbiblioteket bevarer fortiden for fremtiden. Opplev samlingen i Nettbiblioteket eller gjennom kulturformidling på Solli plass i Oslo." />
+	<link rel="canonical" href="https://www.nb.no/" />
+	<meta property="og:locale" content="nb_NO" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Nasjonalbiblioteket" />
+	<meta property="og:description" content="Nasjonalbiblioteket tilbyr utstillinger, konserter, samtaler, foredrag og omvisninger som formidler og aktualiserer samlingen. Samlingen rommer publisert og upublisert, digitalt og analogt materiale innenfor alle medietyper: bøker, foto, film, musikk, plakater, aviser, småtrykk, kart, brev og mye mer." />
+	<meta property="og:url" content="https://www.nb.no/" />
+	<meta property="og:site_name" content="Nasjonalbiblioteket" />
+	<meta property="article:publisher" content="https://www.facebook.com/nasjonalbiblioteket/" />
+	<meta property="article:modified_time" content="2026-08-17T07:12:14+00:00" />
+	<meta property="og:image" content="https://www.nb.no/content/uploads/2018/03/2d42fbcfb2c82c12cf1627f710570593.jpg" />
+	<meta property="og:image:width" content="719" />
+	<meta property="og:image:height" content="480" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.nb.no/","url":"https://www.nb.no/","name":"Nasjonalbiblioteket | Norske bøker, aviser, tidsskrift og bilder på nett","isPartOf":{"@id":"https://www.nb.no/#website"},"about":{"@id":"https://www.nb.no/#organization"},"primaryImageOfPage":{"@id":"https://www.nb.no/#primaryimage"},"image":{"@id":"https://www.nb.no/#primaryimage"},"thumbnailUrl":"https://www.nb.no/content/uploads/2024/08/Soga-om-Partalopi_krediteres-Codex-Manesse.png","datePublished":"2017-10-11T08:46:36+00:00","dateModified":"2026-08-17T07:12:14+00:00","description":"Nasjonalbiblioteket bevarer fortiden for fremtiden. Opplev samlingen i Nettbiblioteket eller gjennom kulturformidling på Solli plass i Oslo.","breadcrumb":{"@id":"https://www.nb.no/#breadcrumb"},"inLanguage":"nb-NO","potentialAction":[{"@type":"ReadAction","target":["https://www.nb.no/"]}]},{"@type":"ImageObject","inLanguage":"nb-NO","@id":"https://www.nb.no/#primaryimage","url":"https://www.nb.no/content/uploads/2024/08/Soga-om-Partalopi_krediteres-Codex-Manesse.png","contentUrl":"https://www.nb.no/content/uploads/2024/08/Soga-om-Partalopi_krediteres-Codex-Manesse.png","width":1920,"height":1005,"caption":"Illuminasjon fra Codex Manesse (1305 - 1340)"},{"@type":"BreadcrumbList","@id":"https://www.nb.no/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem"}]},{"@type":"WebSite","@id":"https://www.nb.no/#website","url":"https://www.nb.no/","name":"Nasjonalbiblioteket","description":"","publisher":{"@id":"https://www.nb.no/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.nb.no/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"nb-NO"},{"@type":"Organization","@id":"https://www.nb.no/#organization","name":"Nasjonalbiblioteket","url":"https://www.nb.no/","logo":{"@type":"ImageObject","inLanguage":"nb-NO","@id":"https://www.nb.no/#/schema/logo/image/","url":"https://www.nb.no/content/uploads/2019/04/logo.png","contentUrl":"https://www.nb.no/content/uploads/2019/04/logo.png","width":200,"height":19,"caption":"Nasjonalbiblioteket"},"image":{"@id":"https://www.nb.no/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/nasjonalbiblioteket/"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<title>Nasjonalbiblioteket | Norske bøker, aviser, tidsskrift og bilder på nett</title>
+<link rel='dns-prefetch' href='//www.nb.no' />
+<style id='nb-site-logo-style-inline-css'>
+.nb-site-logo{align-items:flex-start;align-items:center;display:flex;font-family:inherit;font-size:clamp(.9375rem,.7857rem + .4048vw,1.15rem);font-weight:var(--wp--custom--font-weight--medium);line-height:1;margin:unset;text-decoration:none}.nb-site-logo,.nb-site-logo>a{gap:var(--wp--preset--spacing--20)}.nb-site-logo>a{flex-wrap:wrap}.nb-site-logo.nb-site-logo--has-sublabel{gap:0 var(--wp--preset--spacing--20)}@media (max-width:959px){.nb-site-logo.nb-site-logo--has-sublabel .nb-site-logo__label{display:none}}.nb-site-logo .nb-site-logo__sublabel,.nb-site-logo .separator{font-weight:var(--wp--custom--font-weight--regular)}.nb-site-logo .nb-site-logo__sublabel,.nb-site-logo a{align-items:center;color:unset;display:flex;text-decoration-line:none}.nb-site-logo a:hover{text-decoration:underline}.nb-site-logo .t2-icon-logo{color:var(--wp--preset--color--primary-default);fill:currentcolor;margin-top:2px;min-height:var(--wp--custom--logo-height)}.nb-site-logo .nb-site-logo__sublabel{gap:var(--wp--preset--spacing--20)}
+
+</style>
+<style id='nb-inline-menu-style-inline-css'>
+:where(body){--nb-inline-menu-typography-font-size:var(--wp--custom--nb-inline-menu--typography--font-size,1rem);--nb-inline-menu-typography-font-weight:var(--wp--custom--nb-inline-menu--typography--font-weight,500);--nb-inline-menu-size-gap:var(--wp--custom--nb-inline-menu--size--gap,0.5rem)}.nb-inline-menu ul{display:flex;gap:var(--nb-inline-menu-size-gap);list-style:none;margin:0;padding:0}.nb-inline-menu a{align-items:center;color:unset;display:flex;font-size:var(--nb-inline-menu-typography-font-size);font-weight:var(--nb-inline-menu-typography-font-weight);height:var(--wp--preset--spacing--50);padding-inline:.5rem;text-decoration:none}.nb-inline-menu .current-menu-item a,.nb-inline-menu a:hover{text-decoration-line:underline}
+
+</style>
+<style id='nb-toggle-dark-mode-style-inline-css'>
+.wp-block-nb-toggle-dark-mode{line-height:0}.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button{background-color:initial;border:none;color:var(--wp--preset--color--text-foreground);cursor:pointer;height:1.5rem;padding:0;position:relative;width:1.5rem}.is-pressed:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button) .t2-icon-day,:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button):not(.is-pressed) .t2-icon-night{display:block}:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button):hover:before{opacity:1}:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button):hover:after{opacity:1;pointer-events:auto}:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button):before{background-color:var(--wp--preset--color--secondary-100);border-radius:50%;content:"";height:200%;left:-50%;opacity:0;position:absolute;top:-50%;transition:opacity .3s ease,transform .3s ease;width:200%}:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button):after{align-items:center;background-color:var(--wp--preset--color--text-foreground);border-radius:var(--wp--custom--border-radius--medium);bottom:-2em;color:var(--wp--preset--color--neutrals-background);content:attr(data-text);display:flex;font-size:var(--wp--preset--font-size--small);height:2rem;left:50%;line-height:1;opacity:0;padding:0 1rem;pointer-events:none;position:absolute;top:calc(150% + var(--wp--preset--spacing--10));transform:translateX(-50%);transition:opacity .3s ease;white-space:nowrap;z-index:200}:is(.wp-block-nb-toggle-dark-mode .nb-toggle-dark-mode__toggle-button) .t2-icon{display:none;fill:currentColor;position:relative;z-index:2}
+
+</style>
+<link rel='stylesheet' id='nb-mega-menu-style-css' href='https://www.nb.no/content/plugins/nb-block-library/build/mega-menu/style-index.css?ver=1.1.1' media='all' />
+<style id='wp-block-group-inline-css'>
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+</style>
+<style id='wp-block-group-theme-inline-css'>
+:where(.wp-block-group.has-background){padding:1.25em 2.375em}
+</style>
+<style id='wp-block-template-part-theme-inline-css'>
+:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='t2-theme-block-styles-core-template-part-parent-css' href='https://www.nb.no/content/themes/theme-block-base/build/blocks/core/template-part.css?ver=1785486632' media='all' />
+<style id='nb-page-menu-style-inline-css'>
+.nb-page-menu{font-family:var(--wp--preset--font-family--body);font-size:var(--wp--preset--font-size--text-small);-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 4rem),#0000);mask-image:linear-gradient(90deg,#000 calc(100% - 4rem),#0000);max-width:100%;position:relative;width:100%}.nb-page-menu__items{-ms-overflow-style:none;scrollbar-width:none}.nb-page-menu ul{display:flex;gap:var(--wp--preset--spacing--10);list-style-type:none;margin:0 auto;padding:6px 0;white-space:nowrap}.nb-page-menu li:last-child{padding-right:4rem}.editor-styles-wrapper .nb-page-menu a,.nb-page-menu a{background-color:var(--wp--preset--color--secondary-100);border-radius:var(--wp--custom--border-radius--extra-large);color:var(--wp--preset--color--primary-default);display:block;font-size:var(--wp--preset--font-size--text-medium);padding:var(--wp--preset--spacing--10) var(--wp--preset--spacing--50);position:relative;text-decoration:none;white-space:nowrap}:is(:is(:is(.nb-page-menu,.editor-styles-wrapper .nb-page-menu) li:not(.current-menu-item)) a:not(.selected)):focus,:is(:is(:is(.nb-page-menu,.editor-styles-wrapper .nb-page-menu) li:not(.current-menu-item)) a:not(.selected)):hover{background-color:var(--wp--preset--color--secondary-200)}:is(:is(:is(.nb-page-menu,.editor-styles-wrapper .nb-page-menu) li:not(.current-menu-item)) a:not(.selected)):focus-visible{outline:2px solid var(--wp--preset--color--secondary-200);outline-offset:2px}.nb-page-menu .current-menu-item a,.nb-page-menu a.selected{background-color:var(--wp--preset--color--primary-active);color:var(--wp--preset--color--secondary-200)}:is(.nb-page-menu a.selected,.nb-page-menu .current-menu-item a):focus-visible{outline:2px solid var(--wp--preset--color--primary-active);outline-offset:2px}header.wp-block-template-part .nb-page-menu{border-bottom:1px solid var(--wp--preset--color--neutral-tints-100);border-top:1px solid var(--wp--preset--color--neutral-tints-100)}:is(header.wp-block-template-part .nb-page-menu) ul{gap:var(--wp--preset--spacing--60);margin:0 auto;width:fit-content}:is(:is(header.wp-block-template-part .nb-page-menu) ul) .page_item,:is(:is(header.wp-block-template-part .nb-page-menu) ul) li{padding:unset}.current_page_item:is(:is(:is(header.wp-block-template-part .nb-page-menu) ul) li,:is(:is(header.wp-block-template-part .nb-page-menu) ul) .page_item) a{color:inherit;text-decoration:underline}:is(:is(:is(header.wp-block-template-part .nb-page-menu) ul) li,:is(:is(header.wp-block-template-part .nb-page-menu) ul) .page_item) a:not(.selected){background-color:unset;font-weight:500;padding-left:0;padding-right:0}:is(:is(:is(:is(header.wp-block-template-part .nb-page-menu) ul) li,:is(:is(header.wp-block-template-part .nb-page-menu) ul) .page_item):not(.current-menu-item) a:not(.selected)):focus,:is(:is(:is(:is(header.wp-block-template-part .nb-page-menu) ul) li,:is(:is(header.wp-block-template-part .nb-page-menu) ul) .page_item):not(.current-menu-item) a:not(.selected)):hover{background-color:unset;text-decoration:underline}
+
+</style>
+<style id='wp-block-button-inline-css'>
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+</style>
+<link rel='stylesheet' id='nb-hero-carousel-style-css' href='https://www.nb.no/content/plugins/nb-block-library/build/hero-carousel/style-index.css?ver=1.1.0' media='all' />
+<style id='wp-block-heading-inline-css'>
+h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-background,h6.has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+</style>
+<link rel='stylesheet' id='nb-library-search-style-css' href='https://www.nb.no/content/plugins/nb-block-library/build/library-search/style-index.css?ver=1.1.0' media='all' />
+<style id='wp-block-columns-inline-css'>
+.wp-block-columns{align-items:normal!important;box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+</style>
+<style id='nb-post-featured-image-style-inline-css'>
+.nb-post-featured-image{background-color:var(--wp--preset--color--secondary-100);height:0;margin:0;overflow:hidden;padding-bottom:56%;position:relative}.nb-post-featured-image img,.nb-post-featured-image svg{height:100%;object-fit:cover;position:absolute;width:100%}.nb-post-featured-image.has-image-ratio-4-3{padding-bottom:75%}.nb-post-featured-image.has-image-ratio-1-1{padding-bottom:100%}.nb-post-featured-image svg text{fill:var(--wp--preset--color--secondary-200);font-family:var(--wp--preset--font-family--body);font-size:180px;text-anchor:middle;text-transform:capitalize;white-space:pre}
+
+</style>
+<style id='t2-post-title-style-inline-css'>
+.t2-post-title{margin:0}.t2-featured-single-post.has-background .t2-post-title{padding:0 1rem}
+</style>
+<style id='nb-post-excerpt-style-inline-css'>
+.nb-post-excerpt{color:var(--color-secondary-600);font-family:var(--wp--preset--font-family--body);font-size:var(--wp--preset--font-size--text-small)}
+
+</style>
+<style id='nb-post-subtitle-style-inline-css'>
+.nb-post-subtitle{font-family:var(--wp--preset--font-family--body);font-size:var(--wp--preset--font-size--text-medium);margin:0}.nb-post-subtitle .event-date-tag{aspect-ratio:1;background-color:var(--wp--preset--color--secondary-200);border-radius:var(--wp--custom--border-radius--round);bottom:calc(100% + var(--wp--preset--spacing--40)*2);color:var(--wp--preset--color--primary-default);display:flex;flex-direction:column;font-size:var(--wp--preset--font-size--text-small);justify-content:center;margin:0;min-width:64px;padding:var(--wp--preset--spacing--10);position:absolute;text-align:center}:is(.nb-post-subtitle .event-date-tag) .event-date-text-big{font-size:var(--wp--preset--font-size--text-medium);font-weight:var(--wp--custom--font-weight--bold);line-height:var(--wp--custom--line-height--120)}:is(.nb-post-subtitle .event-date-tag) .event-date-text-small{font-size:var(--wp--preset--font-size--text-extra-small);line-height:var(--wp--custom--line-height--120)}:is(.nb-post-subtitle .event-date-tag) span.separator{margin:0 2px}.nb-featured-single-post.has-background .nb-post-subtitle{padding:0 1rem}
+
+</style>
+<style id='nb-post-link-style-inline-css'>
+.nb-post-link{width:100%}.nb-featured-single-post.has-background .nb-post-link{padding-bottom:1rem}.nb-featured-single-post.has-background .nb-post-link>.wp-block-group:first-child{padding-top:1rem}
+
+</style>
+<style id='t2-featured-content-layout-style-inline-css'>
+:where(body){--t2-featured-content-layout-spacing-gap:var(--wp--custom--t-2-featured-content-layout--spacing--gap,1rem);--t2-featured-content-layout-spacing-row-gap:var(--wp--custom--t-2-featured-content-layout--spacing--row-gap,var(--t2-featured-content-layout-spacing-gap));--t2-featured-content-layout-spacing-column-gap:var(--wp--custom--t-2-featured-content-layout--spacing--column-gap,var(--t2-featured-content-layout-spacing-gap));--t2-featured-content-layout-spacing-margin:var(--wp--custom--t-2-featured-content-layout--spacing--margin,1.75em 0)}:where(.t2-featured-content-layout){margin-block:var(--t2-featured-content-layout-spacing-margin)}.t2-featured-content-layout{display:grid;gap:var(--t2-featured-content-layout-spacing-row-gap) var(--t2-featured-content-layout-spacing-column-gap);grid-auto-flow:dense;grid-template-columns:repeat(auto-fill,minmax(calc(50% - var(--t2-featured-content-layout-spacing-column-gap)),1fr))}@media (min-width:782px){.t2-featured-content-layout{grid-template-columns:repeat(auto-fill,minmax(calc(8.33333% - var(--t2-featured-content-layout-spacing-column-gap)),1fr))}}.t2-featured-content-layout.has-background{padding:2rem}.t2-featured-content-layout>*{grid-column:span 2}@media (min-width:782px){.t2-featured-content-layout>*{grid-column:span 4}.t2-featured-content-layout-col-3{grid-column:span 3}.t2-featured-content-layout-col-6{grid-column:span 6}.t2-featured-content-layout-col-8{grid-column:span 8}.t2-featured-content-layout-col-12{grid-column:span 12}}.t2-featured-content-layout-row-2{grid-row:span 2}.t2-featured-content-layout-row-3{grid-row:span 3}.t2-featured-content-layout-row-4{grid-row:span 4}
+</style>
+<link rel='stylesheet' id='gravity-forms-wcag-20-form-fields-css-css' href='https://www.nb.no/content/plugins/gravity-forms-wcag-20-form-fields/css/gf_wcag20_form_fields.min.css?ver=6.8.6' media='all' />
+<link rel='stylesheet' id='nb-newsletter-wrapper-style-css' href='https://www.nb.no/content/plugins/nb-block-library/build/newsletter-wrapper/style-index.css?ver=1.1.0' media='all' />
+<style id='wp-block-post-content-inline-css'>
+.wp-block-post-content{display:flow-root}
+</style>
+<style id='t2-post-dynamic-part-style-inline-css'>
+.t2-post-dynamic-part{display:flex;flex-wrap:wrap}
+</style>
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+</style>
+<style id='wp-block-list-inline-css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='wp-block-social-links-css' href='https://www.nb.no/wp/wp-includes/blocks/social-links/style.min.css?ver=6.8.6' media='all' />
+<style id='nb-help-shortcuts-style-inline-css'>
+.wp-block-nb-help-shortcuts{bottom:1rem;margin:unset!important;position:fixed;right:1rem;z-index:2}button.s-lch-widget-float-btn{background-color:var(--wp--preset--color--primary-default);border-radius:var(--wp--custom--border-radius--extra-small);box-shadow:none;cursor:pointer}button.s-lch-widget-float-btn:hover{background-color:var(--wp--preset--color--primary-active)}
+
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.nb.no/wp/wp-includes/css/dist/block-library/common.min.css?ver=6.8.6' media='all' />
+<style id='wp-block-library-inline-css'>
+.wp-block-media-text__media:has(.wp-element-caption), .wp-block-media-text:has(.wp-block-media-text) {
+			display: flex;
+			flex-direction: column;
+			gap: var(--t2-media-text-caption-gap, var(--wp--custom--t-2--caption--gap, var(--wp--preset--spacing--30)));
+		}
+.wp-block-post-featured-image:has(.wp-element-caption) {
+			display: flex;
+			flex-direction: column;
+			gap: var(--t2-post-featured-image-caption-gap, var(--wp--custom--t-2--caption--gap, var(--wp--preset--spacing--30)));
+		}
+</style>
+<link rel='stylesheet' id='t2-editor-content-css' href='https://www.nb.no/content/plugins/t2/build/editor/content.css?ver=f939eb116396b5c2e17d' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--primary-default: #17181B;--wp--preset--color--primary-active: #550029;--wp--preset--color--secondary-400: #FE91B8;--wp--preset--color--secondary-300: #FE91B8;--wp--preset--color--secondary-200: #FDBECA;--wp--preset--color--secondary-100: #FFEAEA;--wp--preset--color--text-foreground: #17181B;--wp--preset--color--text-grey: #5B5C62;--wp--preset--color--neutrals-background: #F4F4F4;--wp--preset--color--neutrals-background-elevated: #FFF;--wp--preset--color--neutrals-background-highlighted: #E4DFDE;--wp--preset--color--neutrals-background-hero: #E4DFDE;--wp--preset--color--additional-green: #93C1B1;--wp--preset--color--additional-white-universal: #FFF;--wp--preset--color--neutral-tints-300: #6D6F76;--wp--preset--color--neutral-tints-200: #919298;--wp--preset--color--neutral-tints-100: #D4D4D4;--wp--preset--color--system-error: #C72A2A;--wp--preset--color--system-warning: #C77F2A;--wp--preset--color--system-success: #007435;--wp--preset--color--sprakbanken-audio: #3e7574;--wp--preset--color--sprakbanken-lexicon: #8e724a;--wp--preset--color--sprakbanken-text: #595ca3;--wp--preset--color--sprakbanken-tool: #9a515e;--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--heading-extra-large: clamp(2.625rem, 1.2857rem + 3.5714vw, 4.5rem);--wp--preset--font-size--heading-large: clamp(2.625rem, 1.6429rem + 2.619vw, 4rem);--wp--preset--font-size--heading-medium: clamp(2rem, 1.2857rem + 1.9048vw, 3rem);--wp--preset--font-size--heading-small: clamp(1.625rem, 1.3571rem + 0.7143vw, 2rem);--wp--preset--font-size--heading-extra-small: clamp(1.25rem, 1.1607rem + 0.2381vw, 1.375rem);--wp--preset--font-size--text-large: clamp(1.125rem, 1.0357rem + 0.2381vw, 1.25rem);--wp--preset--font-size--text-medium: clamp(1rem, 0.9107rem + 0.2381vw, 1.125rem);--wp--preset--font-size--text-small: clamp(0.875rem, 0.7857rem + 0.2381vw, 1rem);--wp--preset--font-size--text-extra-small: 0.875rem;--wp--preset--font-size--meta-large: 1rem;--wp--preset--font-size--meta-small: 0.875rem;--wp--preset--font-family--heading: ClearfaceStd, Georgia, serif;--wp--preset--font-family--body: 'Bureau Sans', -apple-system, sans-serif;--wp--preset--font-family--meta: Gerhard, sans-serif;--wp--preset--spacing--20: clamp(0.5rem, 0.3214rem + 0.4762vw, 0.75rem);--wp--preset--spacing--30: clamp(0.75rem, 0.5714rem + 0.4762vw, 1rem);--wp--preset--spacing--40: clamp(1rem, 0.6429rem + 0.9524vw, 1.5rem);--wp--preset--spacing--50: clamp(1.5rem, 1.1429rem + 0.9524vw, 2rem);--wp--preset--spacing--60: clamp(2rem, 1.2857rem + 1.9048vw, 3rem);--wp--preset--spacing--70: clamp(3rem, 2.2857rem + 1.9048vw, 4rem);--wp--preset--spacing--80: clamp(3rem, 0.8571rem + 5.7143vw, 6rem);--wp--preset--spacing--10: clamp(0.25rem, 0.0714rem + 0.4762vw, 0.5rem);--wp--preset--spacing--00: clamp(0rem, -0.1786rem + 0.4762vw, 0.25rem);--wp--preset--spacing--none: 0;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);--wp--custom--border-radius--extra-large: clamp(3rem, 2.2857rem + 1.9048vw, 4rem);--wp--custom--border-radius--extra-small: clamp(0.75rem, 0.5714rem + 0.4762vw, 1rem);--wp--custom--border-radius--large: clamp(1.5rem, -0.2857rem + 4.7619vw, 4rem);--wp--custom--border-radius--medium: clamp(1.5rem, 1.1429rem + 0.9524vw, 2rem);--wp--custom--border-radius--round: 1e5px;--wp--custom--border-radius--small: clamp(1.25rem, 1.0714rem + 0.4762vw, 1.5rem);--wp--custom--border-size--1: 1px;--wp--custom--border-size--2: 2px;--wp--custom--border-size--3: 3px;--wp--custom--font-weight--black: 900;--wp--custom--font-weight--bold: 700;--wp--custom--font-weight--medium: 500;--wp--custom--font-weight--regular: 400;--wp--custom--font-weight--semibold: 600;--wp--custom--header-height: calc(2 * var(--wp--preset--spacing--50) + var(--wp--custom--logo-height));--wp--custom--line-height--110: 1.1;--wp--custom--line-height--120: 1.2;--wp--custom--line-height--130: 1.33;--wp--custom--line-height--150: 1.5;--wp--custom--logo-height: clamp(1.3125rem, 1.0893rem + 0.5952vw, 1.625rem);--wp--custom--background-noise--url: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAbUExURUdwTP///////////////////////////////xb9HQ4AAAAJdFJOUwBZHzHMjT71wxE4bjcAAAX9SURBVFjDhVhNb9w2EB1SlqAjlU0jH5ldpb3Sq0XSo2sr7XWTWkiOipH27iJBe9wW6P8uhxySQ0pBCWNXFmfI4Zs3H1yAFk4K/KjuYIb6LACkAfsJ4gnCmOszQO8lGxiUlcUh7yvjVa5uQXT2jYJs3Ej8bJWTDfsY+tb4WRcaVhBo7yhosvnqplAQ9K1GLyqjygFnT7pcAVXoBKN9VrQnjmF6o6B/bi6wHvEEDS1i3MN0/Ix4CdgaJx2e3IOFyYIJR/xPqD6eXVdvvzvTWQYT5FGldTDN5VntpPzryzl/pZggHQmPKX8ELlKMJqloQDfjMZ2d1hRI3Cg8pFvh3re1M2KB6pV9uMB0cABVdxEtnPQqIOw64h5R184W1NXLcSJ47b/1uRUVgF8U4KUKqHuVF85i+9ThghLJh3/9s6RyMAVUYWKS5ACZo8agEMSj2h1Fw1GMyFNpJK2jYXuoXRec9uHX6OioItZEPq8IXGWLEzdI5bLyXQvVzAPKRp/I6Cnb9SGrec8tsXvMfPbntG+bCLPnMNamm4uQECJGhGWFfeycuTasfvMq7xQUyP3CjqKl21UyOP6tH26tc7XMMNK5yifrxyXa9YDwWdClzkgKWfQhHsKpiLBnpZmUzMC6Dn4Q0SFikZQ0QnZJkB8oYSprGfer5nlmClNIFzF5p1KuE4WxNI5Z3npPs8qp9KtwzgMVTcDVNZ7NMdQ6q1mnNa1ZSNhFFcFxwPwlAi6ijbZ3TmWBv9NpaEw+f8lDQHQutnP+WlhtCXAmcObCGVZF+DNbhzfdt8BpJEu74oVYyiDVLCGtInIwuYmFSvT3qpZElRMXds/yC+Qlg22N2Sts6r2mUezqD8ipynehtJwVoyTT3zlC2BQKPv4QsXqfGzpmKjYZC1aqRlTpMJvyerHbZBZhNkamV+b3mNl8emc2+vM/FjXIY5kI+Y5t23q0ZJN3Ih7C2LQIlVQIf1ruQWWek8OTP6NK6DOnO7IwCiAZpZMdTPckCX1ZHU20nyKpdZ2A3baJZJTiq3J2Y+2oTncgoxejvXj0k15GChOZZfdqj65WGeqeOMOREJdyxcNKO5wY6qFPoWhi9Elhq2Aj/VVeZRQ7fQnlZ2vIIvpjMGfWLZu6jZdrNsgdeN0WBbct5PKSaa2mgktMWILzc7kF8oOeXtqHz87g7pBnIrQiy+YULcNNkppWmahX1EmIstM4bqQtWLcj4lutZEym//AIxVyRSoFIOQMJHVWe0cJGPDX40D+PCNSosrGpIpVbIrDwoV2ZbTuz/Hd1u7D3pDKnqnlx0ru40gxyzOp1UontwvfEMDfVqznjjOZkPjJGi9QkRc5ERsfUohmjm7ywah68GhZl2X2Qrg+NrkGPty2Ml5mrqPiPtXSSOiW74fVJd1C9w/N8NCkcxddksvYXhXSSQQVYKsUi8IPaun/I0MWd9DpoBWw0DxS3lgzDZpGDm0yOxe3VOaB7Z5ExTOoSSyf5CukZ41H4fDUFPy5eSjc+rEiud3cjnzqDZr8LxcLdkFyePKZ0KVicU3Oj6zzRyfulKKTAWgaFAOn+Bes4Nzus/jri8OS27QrS6FVGFjH7kRdLR+iWXkoD/zMUf1RbWbSkQCB8axvzp8bVGL2Qj0Re29e71GfFi8HUEouaonke87WuvYz0gRlmWsng7HqdVGR8/8gbxDD7k5+bYvvhVE77+3VP+ejntHeBxrQwygjIg0kAHTJ2SO+/g/1yN037Mezm9wY6Q1HVDGbaQtm+VDKsM37889a6ZCwLQOwCJtO5l5wCO21dMvJfKaRTwcxyEe4kSzIW84Fg3LLzTYyW2WVw2WUld8GGgEd/Y9fr4OSyq+0h1Ooq5Ph/ECvKeY5o6L6WuOPbT7GObvUP8+jTcrVjAiKWRlXcHJq4emV891dfKMjemvhDxrxqTkjTWdrGK3yoYFb+jfGeq/CSLzebFN7iIDX753sDPyivsrp7VXdj3mO536OG0y2lhNesAfe0rN/fj2zrWF6rV+fH0GIcpFdphYn6UUWlS0l93jvfH+31UrIGEP4DvB2oCqzp6moAAAAASUVORK5CYII=);--wp--custom--background-noise--opacity: 0.4;--wp--custom--nb-inline-menu--size--gap: var(--wp--preset--spacing--40);--wp--custom--nb-inline-menu--typography--font-size: var(--wp--preset--font-size--text-medium);--wp--custom--t-2--caption--gap: var(--wp--preset--spacing--20);--wp--custom--t-2-featured-content-layout--spacing--gap: var(--wp--preset--spacing--50);}.wp-block-cover{--wp--preset--color--neutrals-background-hero: #E4DFDE;}.wp-block-group{--wp--preset--color--neutrals-background-hero: #E4DFDE;--wp--preset--color--secondary-100: #FFEAEA;--wp--preset--color--text-foreground: #17181B;}:root { --wp--style--global--content-size: 41.75rem;--wp--style--global--wide-size: 86.5rem; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: var(--wp--preset--spacing--70); margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: var(--wp--preset--spacing--70); }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: var(--wp--preset--spacing--70);margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: var(--wp--preset--spacing--70);margin-block-end: 0;}:root :where(.is-layout-flex){gap: var(--wp--preset--spacing--70);}:root :where(.is-layout-grid){gap: var(--wp--preset--spacing--70);}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{background-color: var(--wp--preset--color--neutrals-background);color: var(--wp--preset--color--text-foreground);font-family: var(--wp--preset--font-family--body);font-size: var(--wp--preset--font-size--text-large);font-weight: var(--wp--custom--font-weight--regular);line-height: var(--wp--custom--line-height--150);--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: var(--wp--preset--spacing--40);--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: var(--wp--preset--spacing--40);}a:where(:not(.wp-element-button)){color: var(--wp--preset--color--primary-active);text-decoration: underline;}h1, h2, h3, h4, h5, h6{font-family: var(--wp--preset--font-family--body);font-size: var(--wp--preset--font-size--heading-extra-small);font-weight: var(--wp--custom--font-weight--semibold);line-height: var(--wp--custom--line-height--133);}h1{font-family: var(--wp--preset--font-family--heading);font-size: var(--wp--preset--font-size--heading-large);font-weight: var(--wp--custom--font-weight--regular);line-height: var(--wp--custom--line-height--110);}h2{font-family: var(--wp--preset--font-family--heading);font-size: var(--wp--preset--font-size--heading-small);font-weight: var(--wp--custom--font-weight--regular);line-height: var(--wp--custom--line-height--120);}:root :where(.wp-element-button, .wp-block-button__link){background-color: var(--wp--preset--color--primary-default);border-radius: var(--wp--custom--border-radius--extra-large);border-width: 0;color: var(--wp--preset--color--secondary-200);font-family: inherit;font-size: var(--wp--preset--font-size--text-medium);font-weight: var(--wp--custom--font-weight--medium);line-height: inherit;padding-top: var(--wp--preset--spacing--20);padding-right: var(--wp--preset--spacing--40);padding-bottom: var(--wp--preset--spacing--20);padding-left: var(--wp--preset--spacing--40);text-decoration: none;}:root :where(.wp-element-button:hover, .wp-block-button__link:hover){background-color: var(--wp--preset--color--primary-active);color: var(--wp--preset--color--secondary-200);}:root :where(.wp-element-caption, .wp-block-audio figcaption, .wp-block-embed figcaption, .wp-block-gallery figcaption, .wp-block-image figcaption, .wp-block-table figcaption, .wp-block-video figcaption){color: var(--wp--preset--color--neutral-tints-300);text-align: left;font-family: var(--wp--preset--font-family--meta);font-size: var(--wp--preset--font-size--meta-small);font-weight: var(--wp--custom--font-weight--medium);line-height: unset;margin-top: 0;margin-bottom: 0;}.has-primary-default-color{color: var(--wp--preset--color--primary-default) !important;}.has-primary-active-color{color: var(--wp--preset--color--primary-active) !important;}.has-secondary-400-color{color: var(--wp--preset--color--secondary-400) !important;}.has-secondary-300-color{color: var(--wp--preset--color--secondary-300) !important;}.has-secondary-200-color{color: var(--wp--preset--color--secondary-200) !important;}.has-secondary-100-color{color: var(--wp--preset--color--secondary-100) !important;}.has-text-foreground-color{color: var(--wp--preset--color--text-foreground) !important;}.has-text-grey-color{color: var(--wp--preset--color--text-grey) !important;}.has-neutrals-background-color{color: var(--wp--preset--color--neutrals-background) !important;}.has-neutrals-background-elevated-color{color: var(--wp--preset--color--neutrals-background-elevated) !important;}.has-neutrals-background-highlighted-color{color: var(--wp--preset--color--neutrals-background-highlighted) !important;}.has-neutrals-background-hero-color{color: var(--wp--preset--color--neutrals-background-hero) !important;}.has-additional-green-color{color: var(--wp--preset--color--additional-green) !important;}.has-additional-white-universal-color{color: var(--wp--preset--color--additional-white-universal) !important;}.has-neutral-tints-300-color{color: var(--wp--preset--color--neutral-tints-300) !important;}.has-neutral-tints-200-color{color: var(--wp--preset--color--neutral-tints-200) !important;}.has-neutral-tints-100-color{color: var(--wp--preset--color--neutral-tints-100) !important;}.has-system-error-color{color: var(--wp--preset--color--system-error) !important;}.has-system-warning-color{color: var(--wp--preset--color--system-warning) !important;}.has-system-success-color{color: var(--wp--preset--color--system-success) !important;}.has-sprakbanken-audio-color{color: var(--wp--preset--color--sprakbanken-audio) !important;}.has-sprakbanken-lexicon-color{color: var(--wp--preset--color--sprakbanken-lexicon) !important;}.has-sprakbanken-text-color{color: var(--wp--preset--color--sprakbanken-text) !important;}.has-sprakbanken-tool-color{color: var(--wp--preset--color--sprakbanken-tool) !important;}.has-primary-default-background-color{background-color: var(--wp--preset--color--primary-default) !important;}.has-primary-active-background-color{background-color: var(--wp--preset--color--primary-active) !important;}.has-secondary-400-background-color{background-color: var(--wp--preset--color--secondary-400) !important;}.has-secondary-300-background-color{background-color: var(--wp--preset--color--secondary-300) !important;}.has-secondary-200-background-color{background-color: var(--wp--preset--color--secondary-200) !important;}.has-secondary-100-background-color{background-color: var(--wp--preset--color--secondary-100) !important;}.has-text-foreground-background-color{background-color: var(--wp--preset--color--text-foreground) !important;}.has-text-grey-background-color{background-color: var(--wp--preset--color--text-grey) !important;}.has-neutrals-background-background-color{background-color: var(--wp--preset--color--neutrals-background) !important;}.has-neutrals-background-elevated-background-color{background-color: var(--wp--preset--color--neutrals-background-elevated) !important;}.has-neutrals-background-highlighted-background-color{background-color: var(--wp--preset--color--neutrals-background-highlighted) !important;}.has-neutrals-background-hero-background-color{background-color: var(--wp--preset--color--neutrals-background-hero) !important;}.has-additional-green-background-color{background-color: var(--wp--preset--color--additional-green) !important;}.has-additional-white-universal-background-color{background-color: var(--wp--preset--color--additional-white-universal) !important;}.has-neutral-tints-300-background-color{background-color: var(--wp--preset--color--neutral-tints-300) !important;}.has-neutral-tints-200-background-color{background-color: var(--wp--preset--color--neutral-tints-200) !important;}.has-neutral-tints-100-background-color{background-color: var(--wp--preset--color--neutral-tints-100) !important;}.has-system-error-background-color{background-color: var(--wp--preset--color--system-error) !important;}.has-system-warning-background-color{background-color: var(--wp--preset--color--system-warning) !important;}.has-system-success-background-color{background-color: var(--wp--preset--color--system-success) !important;}.has-sprakbanken-audio-background-color{background-color: var(--wp--preset--color--sprakbanken-audio) !important;}.has-sprakbanken-lexicon-background-color{background-color: var(--wp--preset--color--sprakbanken-lexicon) !important;}.has-sprakbanken-text-background-color{background-color: var(--wp--preset--color--sprakbanken-text) !important;}.has-sprakbanken-tool-background-color{background-color: var(--wp--preset--color--sprakbanken-tool) !important;}.has-primary-default-border-color{border-color: var(--wp--preset--color--primary-default) !important;}.has-primary-active-border-color{border-color: var(--wp--preset--color--primary-active) !important;}.has-secondary-400-border-color{border-color: var(--wp--preset--color--secondary-400) !important;}.has-secondary-300-border-color{border-color: var(--wp--preset--color--secondary-300) !important;}.has-secondary-200-border-color{border-color: var(--wp--preset--color--secondary-200) !important;}.has-secondary-100-border-color{border-color: var(--wp--preset--color--secondary-100) !important;}.has-text-foreground-border-color{border-color: var(--wp--preset--color--text-foreground) !important;}.has-text-grey-border-color{border-color: var(--wp--preset--color--text-grey) !important;}.has-neutrals-background-border-color{border-color: var(--wp--preset--color--neutrals-background) !important;}.has-neutrals-background-elevated-border-color{border-color: var(--wp--preset--color--neutrals-background-elevated) !important;}.has-neutrals-background-highlighted-border-color{border-color: var(--wp--preset--color--neutrals-background-highlighted) !important;}.has-neutrals-background-hero-border-color{border-color: var(--wp--preset--color--neutrals-background-hero) !important;}.has-additional-green-border-color{border-color: var(--wp--preset--color--additional-green) !important;}.has-additional-white-universal-border-color{border-color: var(--wp--preset--color--additional-white-universal) !important;}.has-neutral-tints-300-border-color{border-color: var(--wp--preset--color--neutral-tints-300) !important;}.has-neutral-tints-200-border-color{border-color: var(--wp--preset--color--neutral-tints-200) !important;}.has-neutral-tints-100-border-color{border-color: var(--wp--preset--color--neutral-tints-100) !important;}.has-system-error-border-color{border-color: var(--wp--preset--color--system-error) !important;}.has-system-warning-border-color{border-color: var(--wp--preset--color--system-warning) !important;}.has-system-success-border-color{border-color: var(--wp--preset--color--system-success) !important;}.has-sprakbanken-audio-border-color{border-color: var(--wp--preset--color--sprakbanken-audio) !important;}.has-sprakbanken-lexicon-border-color{border-color: var(--wp--preset--color--sprakbanken-lexicon) !important;}.has-sprakbanken-text-border-color{border-color: var(--wp--preset--color--sprakbanken-text) !important;}.has-sprakbanken-tool-border-color{border-color: var(--wp--preset--color--sprakbanken-tool) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-heading-extra-large-font-size{font-size: var(--wp--preset--font-size--heading-extra-large) !important;}.has-heading-large-font-size{font-size: var(--wp--preset--font-size--heading-large) !important;}.has-heading-medium-font-size{font-size: var(--wp--preset--font-size--heading-medium) !important;}.has-heading-small-font-size{font-size: var(--wp--preset--font-size--heading-small) !important;}.has-heading-extra-small-font-size{font-size: var(--wp--preset--font-size--heading-extra-small) !important;}.has-text-large-font-size{font-size: var(--wp--preset--font-size--text-large) !important;}.has-text-medium-font-size{font-size: var(--wp--preset--font-size--text-medium) !important;}.has-text-small-font-size{font-size: var(--wp--preset--font-size--text-small) !important;}.has-text-extra-small-font-size{font-size: var(--wp--preset--font-size--text-extra-small) !important;}.has-meta-large-font-size{font-size: var(--wp--preset--font-size--meta-large) !important;}.has-meta-small-font-size{font-size: var(--wp--preset--font-size--meta-small) !important;}.has-heading-font-family{font-family: var(--wp--preset--font-family--heading) !important;}.has-body-font-family{font-family: var(--wp--preset--font-family--body) !important;}.has-meta-font-family{font-family: var(--wp--preset--font-family--meta) !important;}.wp-block-cover.has-neutrals-background-hero-color{color: var(--wp--preset--color--neutrals-background-hero) !important;}.wp-block-cover.has-neutrals-background-hero-background-color{background-color: var(--wp--preset--color--neutrals-background-hero) !important;}.wp-block-cover.has-neutrals-background-hero-border-color{border-color: var(--wp--preset--color--neutrals-background-hero) !important;}.wp-block-group.has-neutrals-background-hero-color{color: var(--wp--preset--color--neutrals-background-hero) !important;}.wp-block-group.has-secondary-100-color{color: var(--wp--preset--color--secondary-100) !important;}.wp-block-group.has-text-foreground-color{color: var(--wp--preset--color--text-foreground) !important;}.wp-block-group.has-neutrals-background-hero-background-color{background-color: var(--wp--preset--color--neutrals-background-hero) !important;}.wp-block-group.has-secondary-100-background-color{background-color: var(--wp--preset--color--secondary-100) !important;}.wp-block-group.has-text-foreground-background-color{background-color: var(--wp--preset--color--text-foreground) !important;}.wp-block-group.has-neutrals-background-hero-border-color{border-color: var(--wp--preset--color--neutrals-background-hero) !important;}.wp-block-group.has-secondary-100-border-color{border-color: var(--wp--preset--color--secondary-100) !important;}.wp-block-group.has-text-foreground-border-color{border-color: var(--wp--preset--color--text-foreground) !important;}
+:root :where(.wp-block-heading a:where(:not(.wp-element-button))){color: inherit;}
+:root :where(.wp-block-group-is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.wp-block-group-is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.wp-block-group-is-layout-flow) > *{margin-block-start: var(--wp--preset--spacing--40);margin-block-end: 0;}:root :where(.wp-block-group-is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.wp-block-group-is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.wp-block-group-is-layout-constrained) > *{margin-block-start: var(--wp--preset--spacing--40);margin-block-end: 0;}:root :where(.wp-block-group-is-layout-flex){gap: var(--wp--preset--spacing--40);}:root :where(.wp-block-group-is-layout-grid){gap: var(--wp--preset--spacing--40);}
+:root :where(.wp-block-nb-single-term-from-post){color: var(--wp--preset--color--text-grey);font-family: var(--wp--preset--font-family--body);font-size: var(--wp--preset--font-size--text-small);text-transform: uppercase;}
+:root :where(.wp-block-t2-gallery){font-family: var(--wp--preset--font-family--body);}
+:root :where(.wp-block-t2-ingress){font-size: var(--wp--preset--font-size--text-large);font-weight: var(--wp--custom--font-weight--medium);}
+:root :where(.wp-block-t2-statistics){font-family: var(--wp--preset--font-family--body);font-size: var(--wp--preset--font-size--heading-small);}
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > * { margin-block-start: var(--wp--preset--spacing--70); margin-block-end: 0; }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(p, .wp-block-list) + :where(.wp-block-post-title, .wp-block-heading), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.wp-block-post-title, .wp-block-heading, p) + :where(.t2-link-list, .t2-accordion, .t2-factbox, .wc-block-grid, .t2-featured-content-layout, .wp-block-query), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-quote > .wp-block-t2-icon + p, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-query-pagination, .woocommerce-shop-pagination, .bib-facet-items__pagination, .wp-block-nb-facetwp-display { margin-block-start: var(--wp--preset--spacing--60); }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.wp-block-post-title, .wp-block-heading, p, .wp-block-woocommerce-product-stock-indicator) + .wp-block-buttons, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .nb-page-header > * + *, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .woocommerce-notices-wrapper, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .woocommerce-notices-wrapper + *, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .woocommerce-product-details__short-description, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .woocommerce-product-details__short-description + :where(.cart, .price), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .product-header .stock, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .product-header .cart, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .product-header .price-cart-row, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > * .t2-featured-content.is-post-type-product .wp-block-nb-post-link + .wp-block-group, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .product-header .cart.grouped_form .single_add_to_cart_button { margin-block-start: var(--wp--preset--spacing--50); }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-quote.is-style-quiet > .wp-block-t2-icon + p, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > * .t2-featured-content.is-post-type-product .wp-block-nb-add-to-cart + .wp-block-buttons { margin-block-start: var(--wp--preset--spacing--40); }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(p, .wp-block-post-title, .wp-block-heading, .wp-block-list) + :where(p, .wp-block-list), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.nb-post-link, .t2-post-title) + :where(.wp-block-woocommerce-product-price, .nb-post-read-more), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-woocommerce-product-price + .wp-block-nb-add-to-cart, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-quote > p + cite { margin-block-start: var(--wp--preset--spacing--30); }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > * .t2-featured-content .nb-post-link > .wp-block-group > *, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .product_title + .nb-post-label { margin-block-start: var(--wp--preset--spacing--20); }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-list li { margin-block-start: var(--wp--preset--spacing--00); }
+:root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :first-child, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-post-content:has(> .alignfull.has-background:first-child, > .wp-block-cover.alignwide:first-child, > .wp-block-cover.alignfull:first-child, > .wp-block-spacer:first-child, > .t2-spacer:first-child), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > footer.wp-block-template-part, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.has-background, .wp-block-cover):where(.alignwide, .alignfull) + :where(.has-background, .wp-block-cover):where(.alignwide, .alignfull), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.wp-block-spacer, .t2-spacer), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.wp-block-spacer, .t2-spacer) + *, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :is(main, [role=main]):has(.nb-breadcrumb:first-child, .nb-page-header.has-neutrals-background-hero-background-color:first-child), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-group-is-layout-constrained:has(.wp-block-nb-hero-carousel:first-child), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .nb-breadcrumb + .wp-block-cover.alignfull, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .header-menu-line, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .nb-page-header[hidden] + .entry-content:has(:first-child:is(.wp-block-nb-hero, .wp-block-nb-hero-carousel, .wp-block-cover.alignfull)), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-query .wp-block-post-template-is-layout-flow > .wp-block-post, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .nb-breadcrumb + .nb-page-header, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .wp-block-group-is-layout-constrained:has(.nb-page-header.alignfull:first-child), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :is(main, [role=main]) > .nb-breadcrumb:first-child + .wp-block-nb-hero.has-background.alignfull, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > header.wp-block-template-part + main:has(.entry-content > .alignfull.has-background:first-child), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > :where(.wp-block-woocommerce-product-price, .price) + :where(.wp-block-woocommerce-product-stock-indicator, .stock), :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .nb-post-label + .nb-post-link, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .product-header, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .entry-content .nb-breadcrumb + .woocommerce-notices-wrapper, :root :is(.wp-site-blocks, .is-layout-constrained, .is-layout-flow, .wp-block-media-text__content, .wp-block-post, .entry-summary, .related.products, body.bib-lm-library > .wp-block-group) > .search-results-back-button-wrapper { margin-block-start: var(--wp--preset--spacing--none); }
+:root :is(main.is-layout-constrained, .wp-block-post-content-is-layout-constrained) > :last-child:not(.alignfull.has-background),:root .entry-content.type-product > :last-child:not(.alignfull.has-background),:root .entry-content > :last-child:not(.alignfull.has-background),body.bib-lm-library > .wp-block-group > :last-child { margin-block-end: var(--wp--preset--spacing--70); }
+
+</style>
+<style id='core-block-supports-inline-css'>
+.wp-container-core-group-is-layout-cb46ffcb{flex-wrap:nowrap;justify-content:space-between;}.wp-container-core-columns-is-layout-28f84493{flex-wrap:nowrap;}
+</style>
+<style id='wp-block-template-skip-link-inline-css'>
+
+		.skip-link.screen-reader-text {
+			border: 0;
+			clip-path: inset(50%);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.skip-link.screen-reader-text:focus {
+			background-color: #eee;
+			clip-path: none;
+			color: #444;
+			display: block;
+			font-size: 1em;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+		}
+</style>
+<link rel='stylesheet' id='blockbase-css' href='https://www.nb.no/content/themes/theme-block-base/build/view.css?ver=1785486632' media='all' />
+<link rel='stylesheet' id='nb-block-animation-css' href='https://www.nb.no/content/plugins/nb-block-animation//build/view.css?ver=1785486631' media='all' />
+<link rel='stylesheet' id='nb-dark-mode-native-css' href='https://www.nb.no/content/plugins/nb-dark-mode/build/nb-dark-mode.css?ver=1785486631' media='(prefers-color-scheme: dark)' />
+<link rel='stylesheet' id='nb-employee-css' href='https://www.nb.no/content/plugins/nb-employee/build/view.css?ver=1785486631' media='all' />
+<link rel='stylesheet' id='nb-infoscreen-css' href='https://www.nb.no/content/plugins/nb-infoscreen/build/view.css?ver=1785486631' media='all' />
+<link rel='stylesheet' id='nb-css' href='https://www.nb.no/content/themes/theme-nb/build/view.css?ver=1785486632' media='all' />
+<link rel='stylesheet' id='gform_basic-css' href='https://www.nb.no/content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.9.24.2' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://www.nb.no/content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.9.24.2' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://www.nb.no/content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.9.24.2' media='all' />
+<script src="https://www.nb.no/wp/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://www.nb.no/wp/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="nb-toggle-dark-mode-view-script-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "nb-dark-mode", {"translation-revision-date":"2026-01-23 11:15+0100","generator":"WP-CLI\/2.8.1","source":"build\/toggle-dark-mode\/view.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"nb_NO","plural-forms":"nplurals=2; plural=n != 1;"},"Switch to day mode":["Endre til dagmodus"],"Switch to night mode":["Endre til nattmodus"]}}} );
+</script>
+<script src="https://www.nb.no/content/plugins/nb-dark-mode/build/toggle-dark-mode/view.js?ver=86ba5cee59682273380a" id="nb-toggle-dark-mode-view-script-js" defer data-wp-strategy="defer"></script>
+<script src="https://www.nb.no/wp/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script src="https://www.nb.no/content/plugins/nb-block-library/build/mega-menu/script.js?ver=7fc688128dd5a0e43d7c" id="nb-mega-menu-script-js"></script>
+<script src="https://www.nb.no/content/plugins/nb-block-library/build/page-menu/view.js?ver=a5ae04664c1102aaac04" id="nb-page-menu-view-script-js" defer data-wp-strategy="defer"></script>
+<script src="https://www.nb.no/content/plugins/nb-block-library/build/hero-carousel/view.js?ver=caae92f8d2afb2355aad" id="nb-hero-carousel-view-script-js" defer data-wp-strategy="defer"></script>
+<script src="https://www.nb.no/wp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.nb.no/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script defer='defer' src="https://www.nb.no/content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.24.2" id="gform_json-js"></script>
+<script id="gform_gravityforms-js-extra">
+var gf_global = {"gf_currency_config":{"name":"Norsk krone","symbol_left":"Kr","symbol_right":"","symbol_padding":" ","thousand_separator":".","decimal_separator":",","decimals":2,"code":"NOK"},"base_url":"https:\/\/www.nb.no\/content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.nb.no\/content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"eadeea35521f217b85460ea968d413fa","strings":{"newRowAdded":"Ny rad lagt til.","rowRemoved":"Rad fjernet","formSaved":"Skjemaet er lagret. Innholdet inneholder lenken for \u00e5 returnere og fylle ut skjemaet."}};
+var gf_global = {"gf_currency_config":{"name":"Norsk krone","symbol_left":"Kr","symbol_right":"","symbol_padding":" ","thousand_separator":".","decimal_separator":",","decimals":2,"code":"NOK"},"base_url":"https:\/\/www.nb.no\/content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.nb.no\/content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"eadeea35521f217b85460ea968d413fa","strings":{"newRowAdded":"Ny rad lagt til.","rowRemoved":"Rad fjernet","formSaved":"Skjemaet er lagret. Innholdet inneholder lenken for \u00e5 returnere og fylle ut skjemaet."}};
+var gf_global = {"gf_currency_config":{"name":"Norsk krone","symbol_left":"Kr","symbol_right":"","symbol_padding":" ","thousand_separator":".","decimal_separator":",","decimals":2,"code":"NOK"},"base_url":"https:\/\/www.nb.no\/content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.nb.no\/content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"eadeea35521f217b85460ea968d413fa","strings":{"newRowAdded":"Ny rad lagt til.","rowRemoved":"Rad fjernet","formSaved":"Skjemaet er lagret. Innholdet inneholder lenken for \u00e5 returnere og fylle ut skjemaet."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"Januar","february":"Februar","march":"Mars","april":"April","may":"May","june":"Juni","july":"Juli","august":"August","september":"September","october":"Oktober","november":"November","december":"Desember"},"firstDay":1,"iconText":"Startdato"}};
+var gf_legacy_multi = {"10":""};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"Denne filtypen er ikke tillatt. Den m\u00e5 v\u00e6re en av de f\u00f8lgende:","delete_file":"Slett denne filen","in_progress":"p\u00e5g\u00e5r","file_exceeds_limit":"Filen er for stor","illegal_extension":"Denne filtypen er ikke tillatt.","max_reached":"\u00d8vre grense for antall filer n\u00e5dd","unknown_error":"Det oppstod et problem under lagring av filen p\u00e5 tjeneren.","currently_uploading":"Vennligst vent p\u00e5 at opplastingen fullf\u00f8res","cancel":"Avbryt","cancel_upload":"Avbryt denne opplastingen","cancelled":"Avbrutt","error":"Error","message":"Melding"},"vars":{"images_url":"https:\/\/www.nb.no\/content\/plugins\/gravityforms\/images"}};
+</script>
+<script defer='defer' src="https://www.nb.no/content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.24.2" id="gform_gravityforms-js"></script>
+<script defer='defer' src="https://www.nb.no/content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=48a3755090e76a154853db28fc254681" id="gform_gravityforms_utils-js"></script>
+<script id="gf_wcag20_form_fields_js-js-extra">
+var gf_wcag20_form_fields_settings = {"new_window_text":"this link will open in a new window","failed_validation":""};
+var gf_wcag20_form_fields_settings = {"new_window_text":"this link will open in a new window","failed_validation":""};
+var gf_wcag20_form_fields_settings = {"new_window_text":"this link will open in a new window","failed_validation":""};
+</script>
+<script src="https://www.nb.no/content/plugins/gravity-forms-wcag-20-form-fields/js/gf_wcag20_form_fields.min.js?ver=6.8.6" id="gf_wcag20_form_fields_js-js"></script>
+<link rel='shortlink' href='https://www.nb.no/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.nb.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nb.no%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.nb.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nb.no%2F&#038;format=xml" />
+<link rel="alternate" hreflang="en-GB" href="https://www.nb.no/en/"><link rel="alternate" hreflang="nb-NO" href="https://www.nb.no/"><style class='wp-fonts-local'>
+@font-face{font-family:ClearfaceStd;font-style:normal;font-weight:400;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/ClearfaceStd-Regular.woff2') format('woff2');}
+@font-face{font-family:"Bureau Sans";font-style:normal;font-weight:300 700;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKBureauSansVariableComplete.woff2') format('woff2');}
+@font-face{font-family:"Bureau Sans";font-style:italic;font-weight:300 700;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKBureauSansVariableComplete.woff2') format('woff2');font-variation-settings:'slnt' -9.5;}
+@font-face{font-family:Gerhard;font-style:normal;font-weight:700;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKGerhard-Bold.woff2') format('woff2');}
+@font-face{font-family:Gerhard;font-style:normal;font-weight:300;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKGerhard-Light.woff2') format('woff2');}
+@font-face{font-family:Gerhard;font-style:normal;font-weight:500;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKGerhard-Medium.woff2') format('woff2');}
+@font-face{font-family:Gerhard;font-style:normal;font-weight:600;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKGerhard-SemiBold.woff2') format('woff2');}
+@font-face{font-family:Gerhard;font-style:normal;font-weight:400;font-display:fallback;src:url('https://www.nb.no/content/themes/theme-block-base/assets/fonts/STKGerhard-Standard.woff2') format('woff2');}
+</style>
+<link rel="icon" href="https://www.nb.no/content/uploads/2025/09/cropped-fav-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.nb.no/content/uploads/2025/09/cropped-fav-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.nb.no/content/uploads/2025/09/cropped-fav-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.nb.no/content/uploads/2025/09/cropped-fav-270x270.png" />
+</head>
+
+<body class="home wp-singular page-template-default page page-id-6 wp-embed-responsive wp-theme-theme-block-base wp-child-theme-theme-nb">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com?id=GTM-KWB7DZC"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWB7DZC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		
+<div class="wp-site-blocks"><header class="wp-block-template-part">
+<div
+	class="wp-block-group alignfull has-neutrals-background-hero-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+>
+	<div style="height: var(--wp--preset--spacing--50); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+	
+	<div class="wp-block-group alignwide is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-cb46ffcb wp-block-group-is-layout-flex">
+		<div class="nb-site-logo wp-block-nb-site-logo">
+			<a href="https://www.nb.no/" rel="home" aria-label="Gå til forsiden">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 26" height="26" width="20" class="t2-icon t2-icon-logo" aria-hidden="true" focusable="false"><path d="M1.33333 7.49151C2.06971 7.49151 2.66666 6.89962 2.66666 6.16948C2.66666 5.43934 2.06971 4.84744 1.33333 4.84744C0.596953 4.84744 0 5.43934 0 6.16948C0 6.89962 0.596953 7.49151 1.33333 7.49151Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 0H4.44448V21.5932H20V0ZM15.1111 6.16948C15.1111 6.8996 14.5142 7.4915 13.7778 7.4915C13.0414 7.4915 12.4444 6.8996 12.4444 6.16948C12.4444 5.43935 13.0414 4.84746 13.7778 4.84746C14.5142 4.84746 15.1111 5.43935 15.1111 6.16948ZM8.88888 6.16948C8.88888 6.8996 8.29192 7.4915 7.55556 7.4915C6.8192 7.4915 6.22224 6.8996 6.22224 6.16948C6.22224 5.43935 6.8192 4.84746 7.55556 4.84746C8.29192 4.84746 8.88888 5.43935 8.88888 6.16948ZM13.7778 13.661C14.5142 13.661 15.1111 13.0691 15.1111 12.339C15.1111 11.6088 14.5142 11.017 13.7778 11.017C13.0414 11.017 12.4444 11.6088 12.4444 12.339C12.4444 13.0691 13.0414 13.661 13.7778 13.661ZM15.1111 18.5085C15.1111 19.2386 14.5142 19.8305 13.7778 19.8305C13.0414 19.8305 12.4444 19.2386 12.4444 18.5085C12.4444 17.7783 13.0414 17.1864 13.7778 17.1864C14.5142 17.1864 15.1111 17.7783 15.1111 18.5085Z" fill="currentColor"/><path d="M13.7778 26C14.5142 26 15.1111 25.4081 15.1111 24.678C15.1111 23.9478 14.5142 23.3559 13.7778 23.3559C13.0414 23.3559 12.4445 23.9478 12.4445 24.678C12.4445 25.4081 13.0414 26 13.7778 26Z" fill="currentColor"/></svg>
+				<span class="nb-site-logo__label">Nasjonalbiblioteket</span>
+			</a>
+			
+		</div>
+		
+		<nav class="nb-inline-menu show-for-wide wp-block-nb-inline-menu" aria-label="Snarveier">
+			<ul id="menu-toppmeny" class="menu"><li id="menu-item-89848" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89848"><a href="https://www.nb.no/search"><span class="menu-item__link__label">Nettbiblioteket</span></a></li>
+<li id="menu-item-89849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89849"><a href="https://www.nb.no/historier-fra-samlingen/"><span class="menu-item__link__label">Historier fra samlingen</span></a></li>
+<li id="menu-item-91348" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91348"><a href="/hva-skjer"><span class="menu-item__link__label">Hva skjer?</span></a></li>
+<li id="menu-item-89851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89851"><a href="https://www.nb.no/apningstider/"><span class="menu-item__link__label">Åpningstider</span></a></li>
+<li id="menu-item-91350" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91350"><a href="/forsking-og-utvikling/"><span class="menu-item__link__label">Forskning</span></a></li>
+</ul>
+		</nav>
+			<div class="wp-block-nb-mega-menu">
+		
+		<div class="nb-toggle-dark-mode wp-block-nb-toggle-dark-mode">
+			<button class="nb-toggle-dark-mode__toggle-button " data-text="Skru på nattmodus" aria-label="Skru på/av nattmodus" aria-pressed="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-day" aria-hidden="true" focusable="false"><path d="M11.7 2.817a.761.761 0 0 0-.384.399c-.109.241-.109 1.328 0 1.564.225.487.804.618 1.179.267.225-.21.263-.362.263-1.047 0-.685-.038-.837-.263-1.047a.752.752 0 0 0-.795-.136M5.234 5.515a.734.734 0 0 0-.209 1.052c.058.085.29.331.514.546.331.319.443.403.6.447.553.155 1.033-.317.922-.907-.023-.125-.117-.243-.515-.648-.267-.272-.544-.519-.615-.55a.766.766 0 0 0-.697.06m12.809-.052c-.186.08-.986.885-1.062 1.069-.247.591.294 1.218.886 1.027.219-.071 1.108-.951 1.197-1.185.229-.598-.417-1.174-1.021-.911M11.2 7.823c-1.683.305-3.101 1.487-3.659 3.048a4.74 4.74 0 0 0 0 3.258c.481 1.346 1.631 2.45 3.002 2.883a4.745 4.745 0 0 0 5.439-1.932 4.723 4.723 0 0 0 .477-4.209c-.476-1.331-1.647-2.456-3.004-2.884-.703-.222-1.583-.286-2.255-.164m1.64 1.542c1.056.263 1.94 1.126 2.286 2.235.081.259.094.383.094.9s-.013.641-.094.9c-.365 1.168-1.251 1.996-2.446 2.286-.283.069-1.077.069-1.36 0a3.159 3.159 0 0 1-1.314-.627A3.374 3.374 0 0 1 8.874 13.4c-.081-.259-.094-.383-.094-.9s.013-.641.094-.9c.537-1.721 2.22-2.669 3.966-2.235M2.7 11.817c-.248.111-.458.425-.458.683 0 .259.242.604.491.697.062.024.402.043.767.043s.705-.019.767-.043c.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.169-.064-1.418-.053-1.567.014m17 0c-.248.111-.458.425-.458.683 0 .259.242.604.491.697.062.024.402.043.767.043s.705-.019.767-.043c.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.169-.064-1.418-.053-1.567.014M6.115 17.453c-.079.03-.196.091-.26.136-.21.15-.859.85-.917.99-.197.471.165 1.021.671 1.021a1 1 0 0 0 .322-.055c.071-.031.348-.278.615-.55.523-.532.569-.615.522-.96-.057-.427-.552-.73-.953-.582m11.369-.024c-.16.03-.385.203-.477.367a.817.817 0 0 0-.026.672c.079.19.881.992 1.071 1.071.459.192.979-.088 1.051-.566.046-.305-.047-.462-.593-1.001-.555-.548-.672-.61-1.026-.543M11.7 19.817a.761.761 0 0 0-.384.399c-.062.137-.074.264-.074.784 0 .685.038.837.263 1.047.375.351.954.22 1.179-.267.062-.134.074-.261.074-.78 0-.685-.038-.837-.263-1.047a.752.752 0 0 0-.795-.136"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-night" aria-hidden="true" focusable="false"><path d="M10.88 2.819c-1.873.222-3.497.906-5.04 2.125-.452.357-1.191 1.113-1.548 1.582-2.02 2.659-2.566 5.98-1.506 9.15a9.6 9.6 0 0 0 2.283 3.668c1.532 1.543 3.333 2.455 5.533 2.803.715.114 2.281.102 2.971-.021 2.303-.411 4.351-1.554 5.777-3.226 1.439-1.685 2.248-3.673 2.367-5.82.043-.763.015-.901-.224-1.127a.67.67 0 0 0-.497-.193c-.238 0-.384.079-.731.395a5.8 5.8 0 0 1-2.665 1.352c-.261.056-.517.073-1.1.073-.839 0-1.15-.046-1.8-.269a5.76 5.76 0 0 1-3.029-2.451c-.58-.967-.869-2.242-.759-3.345.13-1.296.612-2.382 1.476-3.328.274-.299.343-.439.343-.687a.75.75 0 0 0-.464-.697c-.145-.056-.852-.047-1.387.016m-.722 1.986a7.11 7.11 0 0 0 .657 7.455 7.1 7.1 0 0 0 6.19 2.82 7 7 0 0 0 2.615-.7c.242-.116.445-.207.452-.2s-.026.161-.073.345a8.4 8.4 0 0 1-3.019 4.558c-1.151.871-2.72 1.485-4.18 1.636-1.852.192-3.979-.36-5.484-1.423-.91-.643-1.776-1.555-2.338-2.462-.55-.888-.898-1.819-1.124-3.014-.098-.516-.117-1.862-.035-2.42.414-2.794 2.104-5.122 4.588-6.319.61-.294 1.438-.583 1.943-.679.006-.001-.081.18-.192.403"/></svg>
+			</button>
+		</div>
+			<button class="nb-mega-menu__trigger" aria-haspopup="true" aria-expanded="false">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-menu_search" aria-hidden="true" focusable="false"><path d="M2.72 5.805c-.262.104-.451.395-.451.695a.75.75 0 0 0 .464.697c.158.06 18.376.06 18.534 0a.75.75 0 0 0 .464-.697.75.75 0 0 0-.464-.697c-.151-.058-18.403-.056-18.547.002m0 6c-.262.104-.451.395-.451.695a.75.75 0 0 0 .464.697c.076.029 1.282.043 3.767.043s3.691-.014 3.767-.043a.75.75 0 0 0 .464-.697.75.75 0 0 0-.464-.697c-.15-.057-7.404-.055-7.547.002m13.666-.006c-1.675.304-2.947 1.662-3.101 3.311-.109 1.166.266 2.234 1.062 3.02.481.475.987.777 1.642.977.32.098.409.107 1.011.107.605 0 .69-.009 1.018-.109.196-.06.517-.192.713-.293l.356-.184.767.764c.421.42.817.783.879.806a.87.87 0 0 0 .559-.012c.283-.118.506-.519.446-.799-.053-.245-.155-.373-.871-1.097l-.722-.73.164-.31a3.8 3.8 0 0 0 .406-2.14 3.6 3.6 0 0 0-1.062-2.24 3.5 3.5 0 0 0-.982-.713c-.518-.263-.926-.362-1.551-.379a5 5 0 0 0-.734.021m1.067 1.5c.52.11.928.361 1.299.798.541.638.646 1.618.26 2.423-.154.322-.688.845-1.02 1-.983.46-2.029.225-2.744-.617-.654-.771-.657-2.018-.007-2.8.567-.683 1.383-.979 2.212-.804M2.72 17.805c-.262.104-.451.395-.451.695a.75.75 0 0 0 .464.697c.076.029 1.282.043 3.767.043s3.691-.014 3.767-.043a.75.75 0 0 0 .464-.697.75.75 0 0 0-.464-.697c-.15-.057-7.404-.055-7.547.002"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-close" aria-hidden="true" focusable="false"><path d="M5.7 5.817c-.248.111-.458.425-.458.683 0 .31.068.386 2.92 3.24l2.757 2.761-2.74 2.739c-2.837 2.836-2.94 2.951-2.938 3.258.002.263.243.605.492.699.16.061.405.053.578-.019.104-.043.992-.904 2.919-2.829L12 13.581l2.77 2.768c1.927 1.925 2.815 2.786 2.919 2.829.313.13.641.057.86-.191.249-.284.266-.591.052-.911-.065-.097-1.333-1.391-2.819-2.876l-2.701-2.699 2.757-2.761c2.852-2.854 2.92-2.93 2.92-3.24 0-.259-.242-.604-.491-.697a.87.87 0 0 0-.578.019c-.104.043-.992.904-2.919 2.829L12 11.419 9.23 8.651C7.303 6.726 6.415 5.865 6.311 5.822a.87.87 0 0 0-.611-.005"/></svg>		<span data-open="Meny" data-close="Lukk" aria-hidden="true">Meny</span>
+		<span class="screen-reader-text" data-open="Åpne meny" data-close="Lukk meny">Åpne meny</span>
+	</button>
+			<div class="nb-mega-menu__wrapper">
+			<div class="nb-mega-menu__inner">
+				<div class="nb-mega-menu__top">
+											<a href="https://www.nb.no/auth/login.html?returnTo=https://www.nb.no/search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-user" aria-hidden="true" focusable="false"><path d="M10.94 1.805c-2.018.193-4.044 1.019-5.66 2.307-.469.373-1.292 1.193-1.655 1.648a11.545 11.545 0 0 0-1.812 3.3c-.594 1.713-.712 3.868-.312 5.72a10.935 10.935 0 0 0 2.124 4.46c.363.455 1.186 1.275 1.655 1.648a10.787 10.787 0 0 0 8.6 2.19 10.735 10.735 0 0 0 7.666-5.658c.827-1.622 1.182-3.099 1.182-4.92 0-1.821-.355-3.298-1.182-4.92a10.337 10.337 0 0 0-1.962-2.682 10.668 10.668 0 0 0-6.604-3.097 14.321 14.321 0 0 0-2.04.004m2.38 1.536a9.323 9.323 0 0 1 2.78.878c2.85 1.412 4.722 4.09 5.1 7.3.051.436.051 1.526 0 1.962-.229 1.944-.991 3.681-2.241 5.11l-.289.332-.219-.443c-.175-.356-.274-.499-.504-.736a3.143 3.143 0 0 0-1.701-.928c-.433-.083-8.059-.083-8.492 0a3.143 3.143 0 0 0-1.701.928c-.23.237-.329.38-.505.737l-.218.444-.265-.304c-1.28-1.467-2.034-3.178-2.265-5.14-.051-.436-.051-1.526 0-1.962.431-3.656 2.86-6.668 6.28-7.788.791-.259 1.333-.371 2.26-.467.322-.033 1.571.015 1.98.077M11.2 5.823c-1.277.231-2.447.989-3.134 2.028-.555.84-.791 1.63-.791 2.649 0 1.019.236 1.809.791 2.649.556.841 1.51 1.558 2.479 1.864 2.54.801 5.225-.606 5.992-3.141.143-.474.19-.821.189-1.392-.003-1.282-.455-2.394-1.338-3.292a4.737 4.737 0 0 0-2.613-1.366 5.577 5.577 0 0 0-1.575.001m1.56 1.513c.841.215 1.481.675 1.996 1.435.492.726.625 1.861.323 2.762a3.199 3.199 0 0 1-1.049 1.499c-.628.497-1.232.707-2.03.707-1.15 0-2.076-.508-2.756-1.51-.416-.614-.59-1.601-.423-2.408.223-1.08 1.014-1.986 2.083-2.386.521-.195 1.317-.237 1.856-.099m3.135 10.943c.515.084.998.415 1.206.827.103.202.121.287.133.622l.013.389-.313.206c-.436.285-1.344.721-1.899.911-1.08.37-1.882.503-3.035.503-1.15 0-1.946-.132-3.035-.501-.515-.175-1.523-.659-1.925-.926l-.26-.172v-.399c0-.363.011-.42.119-.633.065-.129.2-.307.3-.396.216-.192.605-.384.87-.428.279-.047 7.541-.05 7.826-.003" fill="currentColor"/></svg>Logg inn</a>
+										<a href="https://www.nb.no/en/">English</a>					
+		<div class="nb-toggle-dark-mode wp-block-nb-toggle-dark-mode">
+			<button class="nb-toggle-dark-mode__toggle-button " data-text="Skru på nattmodus" aria-label="Skru på/av nattmodus" aria-pressed="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-day" aria-hidden="true" focusable="false"><path d="M11.7 2.817a.761.761 0 0 0-.384.399c-.109.241-.109 1.328 0 1.564.225.487.804.618 1.179.267.225-.21.263-.362.263-1.047 0-.685-.038-.837-.263-1.047a.752.752 0 0 0-.795-.136M5.234 5.515a.734.734 0 0 0-.209 1.052c.058.085.29.331.514.546.331.319.443.403.6.447.553.155 1.033-.317.922-.907-.023-.125-.117-.243-.515-.648-.267-.272-.544-.519-.615-.55a.766.766 0 0 0-.697.06m12.809-.052c-.186.08-.986.885-1.062 1.069-.247.591.294 1.218.886 1.027.219-.071 1.108-.951 1.197-1.185.229-.598-.417-1.174-1.021-.911M11.2 7.823c-1.683.305-3.101 1.487-3.659 3.048a4.74 4.74 0 0 0 0 3.258c.481 1.346 1.631 2.45 3.002 2.883a4.745 4.745 0 0 0 5.439-1.932 4.723 4.723 0 0 0 .477-4.209c-.476-1.331-1.647-2.456-3.004-2.884-.703-.222-1.583-.286-2.255-.164m1.64 1.542c1.056.263 1.94 1.126 2.286 2.235.081.259.094.383.094.9s-.013.641-.094.9c-.365 1.168-1.251 1.996-2.446 2.286-.283.069-1.077.069-1.36 0a3.159 3.159 0 0 1-1.314-.627A3.374 3.374 0 0 1 8.874 13.4c-.081-.259-.094-.383-.094-.9s.013-.641.094-.9c.537-1.721 2.22-2.669 3.966-2.235M2.7 11.817c-.248.111-.458.425-.458.683 0 .259.242.604.491.697.062.024.402.043.767.043s.705-.019.767-.043c.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.169-.064-1.418-.053-1.567.014m17 0c-.248.111-.458.425-.458.683 0 .259.242.604.491.697.062.024.402.043.767.043s.705-.019.767-.043c.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.169-.064-1.418-.053-1.567.014M6.115 17.453c-.079.03-.196.091-.26.136-.21.15-.859.85-.917.99-.197.471.165 1.021.671 1.021a1 1 0 0 0 .322-.055c.071-.031.348-.278.615-.55.523-.532.569-.615.522-.96-.057-.427-.552-.73-.953-.582m11.369-.024c-.16.03-.385.203-.477.367a.817.817 0 0 0-.026.672c.079.19.881.992 1.071 1.071.459.192.979-.088 1.051-.566.046-.305-.047-.462-.593-1.001-.555-.548-.672-.61-1.026-.543M11.7 19.817a.761.761 0 0 0-.384.399c-.062.137-.074.264-.074.784 0 .685.038.837.263 1.047.375.351.954.22 1.179-.267.062-.134.074-.261.074-.78 0-.685-.038-.837-.263-1.047a.752.752 0 0 0-.795-.136"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-night" aria-hidden="true" focusable="false"><path d="M10.88 2.819c-1.873.222-3.497.906-5.04 2.125-.452.357-1.191 1.113-1.548 1.582-2.02 2.659-2.566 5.98-1.506 9.15a9.6 9.6 0 0 0 2.283 3.668c1.532 1.543 3.333 2.455 5.533 2.803.715.114 2.281.102 2.971-.021 2.303-.411 4.351-1.554 5.777-3.226 1.439-1.685 2.248-3.673 2.367-5.82.043-.763.015-.901-.224-1.127a.67.67 0 0 0-.497-.193c-.238 0-.384.079-.731.395a5.8 5.8 0 0 1-2.665 1.352c-.261.056-.517.073-1.1.073-.839 0-1.15-.046-1.8-.269a5.76 5.76 0 0 1-3.029-2.451c-.58-.967-.869-2.242-.759-3.345.13-1.296.612-2.382 1.476-3.328.274-.299.343-.439.343-.687a.75.75 0 0 0-.464-.697c-.145-.056-.852-.047-1.387.016m-.722 1.986a7.11 7.11 0 0 0 .657 7.455 7.1 7.1 0 0 0 6.19 2.82 7 7 0 0 0 2.615-.7c.242-.116.445-.207.452-.2s-.026.161-.073.345a8.4 8.4 0 0 1-3.019 4.558c-1.151.871-2.72 1.485-4.18 1.636-1.852.192-3.979-.36-5.484-1.423-.91-.643-1.776-1.555-2.338-2.462-.55-.888-.898-1.819-1.124-3.014-.098-.516-.117-1.862-.035-2.42.414-2.794 2.104-5.122 4.588-6.319.61-.294 1.438-.583 1.943-.679.006-.001-.081.18-.192.403"/></svg>
+			</button>
+		</div>
+						<button class="nb-mega-menu__trigger" aria-haspopup="true" aria-expanded="false">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-menu_search" aria-hidden="true" focusable="false"><path d="M2.72 5.805c-.262.104-.451.395-.451.695a.75.75 0 0 0 .464.697c.158.06 18.376.06 18.534 0a.75.75 0 0 0 .464-.697.75.75 0 0 0-.464-.697c-.151-.058-18.403-.056-18.547.002m0 6c-.262.104-.451.395-.451.695a.75.75 0 0 0 .464.697c.076.029 1.282.043 3.767.043s3.691-.014 3.767-.043a.75.75 0 0 0 .464-.697.75.75 0 0 0-.464-.697c-.15-.057-7.404-.055-7.547.002m13.666-.006c-1.675.304-2.947 1.662-3.101 3.311-.109 1.166.266 2.234 1.062 3.02.481.475.987.777 1.642.977.32.098.409.107 1.011.107.605 0 .69-.009 1.018-.109.196-.06.517-.192.713-.293l.356-.184.767.764c.421.42.817.783.879.806a.87.87 0 0 0 .559-.012c.283-.118.506-.519.446-.799-.053-.245-.155-.373-.871-1.097l-.722-.73.164-.31a3.8 3.8 0 0 0 .406-2.14 3.6 3.6 0 0 0-1.062-2.24 3.5 3.5 0 0 0-.982-.713c-.518-.263-.926-.362-1.551-.379a5 5 0 0 0-.734.021m1.067 1.5c.52.11.928.361 1.299.798.541.638.646 1.618.26 2.423-.154.322-.688.845-1.02 1-.983.46-2.029.225-2.744-.617-.654-.771-.657-2.018-.007-2.8.567-.683 1.383-.979 2.212-.804M2.72 17.805c-.262.104-.451.395-.451.695a.75.75 0 0 0 .464.697c.076.029 1.282.043 3.767.043s3.691-.014 3.767-.043a.75.75 0 0 0 .464-.697.75.75 0 0 0-.464-.697c-.15-.057-7.404-.055-7.547.002"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-close" aria-hidden="true" focusable="false"><path d="M5.7 5.817c-.248.111-.458.425-.458.683 0 .31.068.386 2.92 3.24l2.757 2.761-2.74 2.739c-2.837 2.836-2.94 2.951-2.938 3.258.002.263.243.605.492.699.16.061.405.053.578-.019.104-.043.992-.904 2.919-2.829L12 13.581l2.77 2.768c1.927 1.925 2.815 2.786 2.919 2.829.313.13.641.057.86-.191.249-.284.266-.591.052-.911-.065-.097-1.333-1.391-2.819-2.876l-2.701-2.699 2.757-2.761c2.852-2.854 2.92-2.93 2.92-3.24 0-.259-.242-.604-.491-.697a.87.87 0 0 0-.578.019c-.104.043-.992.904-2.919 2.829L12 11.419 9.23 8.651C7.303 6.726 6.415 5.865 6.311 5.822a.87.87 0 0 0-.611-.005"/></svg>		<span data-open="Meny" data-close="Lukk" aria-hidden="true">Meny</span>
+		<span class="screen-reader-text" data-open="Åpne meny" data-close="Lukk meny">Åpne meny</span>
+	</button>
+					</div>
+															<div class="nb-mega-menu__form">
+							<form action="/search" role="search" method="get" aria-label="Søk i Nettbiblioteket">
+								<label for="megamenu_search_input">Hva leter du etter?</label>
+								<div class="nb-mega-menu__form__input">
+									<input id="megamenu_search_input" type="text" name="q" placeholder="Søk" required>
+									<button type="submit" aria-label="Søk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-search" aria-hidden="true" focusable="false"><path d="M10.38 2.281a8.743 8.743 0 0 0-6.707 3.957C2.74 7.666 2.271 9.261 2.271 11c0 2.365.886 4.507 2.554 6.175a8.67 8.67 0 0 0 5.001 2.488c.628.088 1.72.088 2.348 0 1.538-.216 3.121-.887 4.23-1.792l.225-.183 1.915 1.919c1.054 1.055 1.993 1.964 2.087 2.02.566.337 1.24-.171 1.085-.815-.044-.181-.158-.304-2.021-2.173-1.086-1.089-1.975-1.994-1.975-2.011 0-.016.088-.142.195-.279.907-1.158 1.535-2.657 1.747-4.171.089-.632.089-1.722.001-2.352a8.757 8.757 0 0 0-3.901-6.153 8.791 8.791 0 0 0-5.382-1.392m1.655 1.541a7.194 7.194 0 0 1 4.086 2.057 7.317 7.317 0 0 1 1.916 3.354c.271 1.07.271 2.464 0 3.534-.452 1.789-1.659 3.439-3.208 4.388-1.214.742-2.422 1.085-3.829 1.085s-2.615-.343-3.829-1.085c-1.549-.949-2.756-2.599-3.208-4.388-.205-.809-.263-1.967-.141-2.802A7.281 7.281 0 0 1 9.94 3.823c.503-.077 1.572-.077 2.095-.001" fill="currentColor" />&laquo;/></svg></button>
+								</div>
+							</form>
+							<div class="nb-mega-menu__form__radios">
+								<label>
+									<input type="radio" name="megamenu_search_type" value="/search" data-label="Søk i Nettbiblioteket" data-name="q" checked>
+									<span></span>
+									Nettbiblioteket								</label>
+								<label>
+									<input type="radio" name="megamenu_search_type" value="/" data-label="Søk på nb.no" data-name="s">
+									<span></span>
+									Redaksjonelt innhold, åpningstider m.m.								</label>
+							</div>
+						</div>
+									
+				<div class="nb-mega-menu__content">
+					<nav class="menu-mega-menu-container"><ul id="menu-mega-menu" class="menu"><li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/search" aria-controls="menu-menu-item-nettbiblioteket" aria-expanded="false" aria-haspopup="true" aria-labelledby="nettbiblioteket" class="nb-mega-menu__top-menu-link" id="menu-item-nettbiblioteket">Nettbiblioteket<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-nettbiblioteket" aria-labelledby="menu-item-nettbiblioteket" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/auth/login.html?returnTo=https://www.nb.no/search" class="nb-mega-menu__sub-menu-link">Logg inn</a></li>
+	<li><a href="https://www.nb.no/search?mediatype=aviser" class="nb-mega-menu__sub-menu-link">Aviser</a></li>
+	<li><a href="https://www.nb.no/search?mediatype=b%C3%B8ker" class="nb-mega-menu__sub-menu-link">Bøker</a></li>
+	<li><a href="https://www.nb.no/search?mediatype=tidsskrift" class="nb-mega-menu__sub-menu-link">Tidsskrift</a></li>
+	<li><a href="http://nb.no/search" class="nb-mega-menu__sub-menu-link">Andre medietyper</a></li>
+	<li><a href="https://www.nb.no/hjelp-og-informasjon/slik-soker-du-i-samlingen/" class="nb-mega-menu__sub-menu-link">Søketips</a></li>
+	<li><a href="https://www.nb.no/tilgang/" class="nb-mega-menu__sub-menu-link">Tilgang til Nettbiblioteket</a></li>
+	<li><a href="https://www.nb.no/search" class="nb-mega-menu__sub-menu-link">Se alt fra Nettbiblioteket</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="/historier-fra-samlingen/" aria-controls="menu-menu-item-historier-fra-samlingen" aria-expanded="false" aria-haspopup="true" aria-labelledby="historier-fra-samlingen" class="nb-mega-menu__top-menu-link" id="menu-item-historier-fra-samlingen">Historier fra samlingen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-historier-fra-samlingen" aria-labelledby="menu-item-historier-fra-samlingen" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/historier-fra-samlingen/kategorier/artikler/" class="nb-mega-menu__sub-menu-link">Artikler</a></li>
+	<li><a href="https://www.nb.no/historier-fra-samlingen/kategorier/video/" class="nb-mega-menu__sub-menu-link">Video</a></li>
+	<li><a href="https://www.nb.no/historier-fra-samlingen/kategorier/norsk-svartmetall/" class="nb-mega-menu__sub-menu-link">Norsk svartmetall</a></li>
+	<li><a href="https://www.nb.no/historier-fra-samlingen/kategorier/podkast/" class="nb-mega-menu__sub-menu-link">Podkast</a></li>
+	<li><a href="https://www.nb.no/historier-fra-samlingen/kategorier/skeive-historier/" class="nb-mega-menu__sub-menu-link">Skeive historier</a></li>
+	<li><a href="https://www.nb.no/blackmetal/" class="nb-mega-menu__sub-menu-link">Dårlig stemning</a></li>
+	<li><a href="/historier-fra-samlingen/" class="nb-mega-menu__sub-menu-link">Se alle historier fra samlingen</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/hva-skjer/" aria-controls="menu-menu-item-hva-skjer-3" aria-expanded="false" aria-haspopup="true" aria-labelledby="hva-skjer-3" class="nb-mega-menu__top-menu-link" id="menu-item-hva-skjer-3">Hva skjer?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-hva-skjer-3" aria-labelledby="menu-item-hva-skjer-3" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/hva-skjer/" class="nb-mega-menu__sub-menu-link">Arrangementer</a></li>
+	<li><a href="/utleie/" class="nb-mega-menu__sub-menu-link">Utleie</a></li>
+	<li><a href="/hva-skjer/" class="nb-mega-menu__sub-menu-link">Utstillinger</a></li>
+	<li><a href="https://www.nb.no/besok/omvising-i-nasjonalbiblioteket/" class="nb-mega-menu__sub-menu-link">Omvisninger</a></li>
+	<li><a href="https://www.nb.no/kartsenteret/" class="nb-mega-menu__sub-menu-link">Kartsenteret</a></li>
+	<li><a href="/hva-skjer" class="nb-mega-menu__sub-menu-link">Utforsk alt som skjer</a></li>
+	<li><a href="/credo/" class="nb-mega-menu__sub-menu-link">Mat og drikke</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/apningstider/" aria-controls="menu-menu-item-apningstider" aria-expanded="false" aria-haspopup="true" aria-labelledby="apningstider" class="nb-mega-menu__top-menu-link" id="menu-item-apningstider">Åpningstider<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-apningstider" aria-labelledby="menu-item-apningstider" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/apningstider/#huset-bokhandel-utstillinger-og-lesesal" class="nb-mega-menu__sub-menu-link">Huset og utstillinger</a></li>
+	<li><a href="https://www.nb.no/apningstider/#bibliotektjenester-og-spesiallesesal" class="nb-mega-menu__sub-menu-link">Bibliotektjenester og spesiallesesal</a></li>
+	<li><a href="/apningstider/#kartsenteret" class="nb-mega-menu__sub-menu-link">Kartsenteret</a></li>
+	<li><a href="https://www.nb.no/credo/" class="nb-mega-menu__sub-menu-link">Mat og drikke</a></li>
+	<li><a href="/apningstider/" class="nb-mega-menu__sub-menu-link">Se alle åpningstider</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/forsking-og-utvikling/" aria-controls="menu-menu-item-91384" aria-expanded="false" aria-haspopup="true" aria-labelledby="91384" class="nb-mega-menu__top-menu-link" id="menu-item-91384">Forskning og utvikling<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-91384" aria-labelledby="menu-item-91384" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/sprakbanken/" class="nb-mega-menu__sub-menu-link">Språkbanken</a></li>
+	<li><a href="https://www.nb.no/dh-lab/" class="nb-mega-menu__sub-menu-link">DH Lab</a></li>
+	<li><a href="https://www.nb.no/ngram" class="nb-mega-menu__sub-menu-link">N-gram</a></li>
+	<li><a href="https://ai.nb.no/" class="nb-mega-menu__sub-menu-link">AI Lab</a></li>
+	<li><a href="https://www.nb.no/forskning/forskarplassar/" class="nb-mega-menu__sub-menu-link">Søknad om forskarplassar</a></li>
+	<li><a href="/forskning/lokalhistorie/" class="nb-mega-menu__sub-menu-link">Lokalhistorie</a></li>
+	<li><a href="/forsking-og-utvikling/" class="nb-mega-menu__sub-menu-link">Utforsk all forsking og utvikling</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/veiledning-og-bibliotektjenester/" aria-controls="menu-menu-item-veiledning-og-bibliotektjenester-2" aria-expanded="false" aria-haspopup="true" aria-labelledby="veiledning-og-bibliotektjenester-2" class="nb-mega-menu__top-menu-link" id="menu-item-veiledning-og-bibliotektjenester-2">Veiledning og bibliotektjenester<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-veiledning-og-bibliotektjenester-2" aria-labelledby="menu-item-veiledning-og-bibliotektjenester-2" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/spor-nasjonalbiblioteket/" class="nb-mega-menu__sub-menu-link">Spør biblioteket</a></li>
+	<li><a href="https://www.nb.no/avtal-veiledning/" class="nb-mega-menu__sub-menu-link">Avtal veiledning</a></li>
+	<li><a href="https://www.nb.no/veiledning-og-bibliotektjenester/soke/" class="nb-mega-menu__sub-menu-link">Søk i samlingen</a></li>
+	<li><a href="/veiledning-og-bibliotektjenester/" class="nb-mega-menu__sub-menu-link">Se alle veiledninger</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/samlingen/" aria-controls="menu-menu-item-om-samlingen" aria-expanded="false" aria-haspopup="true" aria-labelledby="om-samlingen" class="nb-mega-menu__top-menu-link" id="menu-item-om-samlingen">Om samlingen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-om-samlingen" aria-labelledby="menu-item-om-samlingen" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/samlingen/aviser/" class="nb-mega-menu__sub-menu-link">Aviser</a></li>
+	<li><a href="https://www.nb.no/samlingen/litteratur/" class="nb-mega-menu__sub-menu-link">Litteratur</a></li>
+	<li><a href="https://www.nb.no/samlingen/tidsskrift/" class="nb-mega-menu__sub-menu-link">Tidsskrift</a></li>
+	<li><a href="https://www.nb.no/samlingen/bilder/" class="nb-mega-menu__sub-menu-link">Bilder</a></li>
+	<li><a href="https://www.nb.no/samlingen/film/" class="nb-mega-menu__sub-menu-link">Film</a></li>
+	<li><a href="https://www.nb.no/samlingen/kringkasting/" class="nb-mega-menu__sub-menu-link">Kringkasting</a></li>
+	<li><a href="https://www.nb.no/samlingen/privatarkiv/" class="nb-mega-menu__sub-menu-link">Privatarkiv</a></li>
+	<li><a href="https://www.nb.no/samlingen/musikk/" class="nb-mega-menu__sub-menu-link">Musikk</a></li>
+	<li><a href="https://www.nb.no/samlingen/nettarkivet/" class="nb-mega-menu__sub-menu-link">Nettarkivet</a></li>
+	<li><a href="/samlingen/" class="nb-mega-menu__sub-menu-link">Se alle samlingene</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/skole/" aria-controls="menu-menu-item-91896" aria-expanded="false" aria-haspopup="true" aria-labelledby="91896" class="nb-mega-menu__top-menu-link" id="menu-item-91896">Skole<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-91896" aria-labelledby="menu-item-91896" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/skole/" class="nb-mega-menu__sub-menu-link">Tilbud til skoler</a></li>
+	<li><a href="https://www.nb.no/skole/digitalt-tilbud/" class="nb-mega-menu__sub-menu-link">Digitalt program</a></li>
+	<li><a href="https://www.nb.no/skole/omvisninger/" class="nb-mega-menu__sub-menu-link">Omvisninger</a></li>
+	<li><a href="https://www.nb.no/skole/kartsenter/" class="nb-mega-menu__sub-menu-link">Kartsenteret</a></li>
+	<li><a href="https://www.nb.no/skole/booking/" class="nb-mega-menu__sub-menu-link">Påmelding</a></li>
+	<li><a href="/skole/handverksfestival/" class="nb-mega-menu__sub-menu-link">Håndverksfestival</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/andre-soketjenester/" aria-controls="menu-menu-item-89823" aria-expanded="false" aria-haspopup="true" aria-labelledby="89823" class="nb-mega-menu__top-menu-link" id="menu-item-89823">Søketjenester<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-89823" aria-labelledby="menu-item-89823" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/om-flyfoto/" class="nb-mega-menu__sub-menu-link">Flyfoto</a></li>
+	<li><a href="https://www.nb.no/maken/" class="nb-mega-menu__sub-menu-link">Maken</a></li>
+	<li><a href="https://bibsys-g.primo.exlibrisgroup.com/discovery/search?vid=47BIBSYS_NB:NB" class="nb-mega-menu__sub-menu-link">Oria (katalog over samlingen)</a></li>
+	<li><a href="https://www.nb.no/ressurser/bibliografier/" class="nb-mega-menu__sub-menu-link">Bibliografier</a></li>
+	<li><a href="https://bibsok.no/" class="nb-mega-menu__sub-menu-link">Biblioteksøk</a></li>
+	<li><a href="https://verdensbiblioteket.no/" class="nb-mega-menu__sub-menu-link">Verdensbiblioteket</a></li>
+	<li><a href="https://bibsys-almaprimo.hosted.exlibrisgroup.com/primo-explore/dbsearch?vid=NB" class="nb-mega-menu__sub-menu-link">Databaser</a></li>
+	<li><a href="https://www.nb.no/ressurser/e-ressurser/" class="nb-mega-menu__sub-menu-link">E-ressurser</a></li>
+	<li><a href="/andre-soketjenester/" class="nb-mega-menu__sub-menu-link">Utforsk alle søketjenester</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="/butikk" aria-controls="menu-menu-item-butikk" aria-expanded="false" aria-haspopup="true" aria-labelledby="butikk" class="nb-mega-menu__top-menu-link" id="menu-item-butikk">Butikk<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-butikk" aria-labelledby="menu-item-butikk" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/nettbutikk/" class="nb-mega-menu__sub-menu-link">Nettbutikk</a></li>
+	<li><a href="https://www.nb.no/noter/" class="nb-mega-menu__sub-menu-link">NB Noter</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/informasjon-for-utgivere/" aria-controls="menu-menu-item-91760" aria-expanded="false" aria-haspopup="true" aria-labelledby="91760" class="nb-mega-menu__top-menu-link" id="menu-item-91760">For utgivere<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-91760" aria-labelledby="menu-item-91760" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/tjenester/pliktavlevering/" class="nb-mega-menu__sub-menu-link">Pliktavlevering</a></li>
+	<li><a href="/standardnummerering/isbn/" class="nb-mega-menu__sub-menu-link">ISBN</a></li>
+	<li><a href="https://www.nb.no/standardnummerering/issn/" class="nb-mega-menu__sub-menu-link">ISSN</a></li>
+	<li><a href="https://www.nb.no/standardnummerering/ismn/" class="nb-mega-menu__sub-menu-link">ISMN</a></li>
+	<li><a href="https://www.nb.no/tjenester/standardnummerering/isni/" class="nb-mega-menu__sub-menu-link">ISNI</a></li>
+	<li><a href="https://www.nb.no/tjenester/standardnummerering/urn/" class="nb-mega-menu__sub-menu-link">URN</a></li>
+	<li><a href="/informasjon-for-utgivere/" class="nb-mega-menu__sub-menu-link">Alt for utgivere</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/bibliotek-og-kulturarv/" aria-controls="menu-menu-item-91825" aria-expanded="false" aria-haspopup="true" aria-labelledby="91825" class="nb-mega-menu__top-menu-link" id="menu-item-91825">Bibliotek og kulturarv<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-91825" aria-labelledby="menu-item-91825" class="nb-mega-menu__sub-menu">
+	<li><a href="https://bibliotekutvikling.no/" class="nb-mega-menu__sub-menu-link">Bibliotekutvikling</a></li>
+	<li><a href="https://tibi.no/" class="nb-mega-menu__sub-menu-link">Tibi – Biblioteket for tilrettelagt litteratur</a></li>
+	<li><a href="https://bibliotekutvikling.no/statistikk/" class="nb-mega-menu__sub-menu-link">Statistikk</a></li>
+	<li><a href="https://bibliotekutvikling.no/dfb/" class="nb-mega-menu__sub-menu-link">Det flerspråklige bibliotek</a></li>
+	<li><a href="https://abmdig.no/" class="nb-mega-menu__sub-menu-link">Kulturarvdigitalisering</a></li>
+	<li><a href="https://www.nb.no/digital-bevaring/" class="nb-mega-menu__sub-menu-link">Digital bevaring</a></li>
+	<li><a href="https://bibliotekutvikling.no/depotbiblioteket/" class="nb-mega-menu__sub-menu-link">Depotbiblioteket</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/om-nb/" aria-controls="menu-menu-item-89840" aria-expanded="false" aria-haspopup="true" aria-labelledby="89840" class="nb-mega-menu__top-menu-link" id="menu-item-89840">Om Nasjonalbiblioteket<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-89840" aria-labelledby="menu-item-89840" class="nb-mega-menu__sub-menu">
+	<li><a href="https://www.nb.no/om-nb/kontaktadresser/" class="nb-mega-menu__sub-menu-link">Adresseoversikt</a></li>
+	<li><a href="https://www.nb.no/nyheter/" class="nb-mega-menu__sub-menu-link">Nyheter</a></li>
+	<li><a href="https://www.nb.no/om-nb/presse/" class="nb-mega-menu__sub-menu-link">Presserom</a></li>
+	<li><a href="https://www.nb.no/ansatte/" class="nb-mega-menu__sub-menu-link">Ansatte</a></li>
+	<li><a href="https://www.nb.no/om-nb/leiinga-ved-nasjonalbiblioteket/" class="nb-mega-menu__sub-menu-link">Ledelse og organisasjon</a></li>
+	<li><a href="https://www.nb.no/om-nb/mandat-og-strategi/" class="nb-mega-menu__sub-menu-link">Mandat og strategi</a></li>
+	<li><a href="https://www.nb.no/om-nb/arsrapportar/" class="nb-mega-menu__sub-menu-link">Årsrapportar</a></li>
+	<li><a href="https://www.nb.no/personvernerklaering/" class="nb-mega-menu__sub-menu-link">Personvern</a></li>
+</ul>
+</li>
+<li class="nb-mega-menu__top-menu-item"><a href="https://www.nb.no/hjelp-og-informasjon/" aria-controls="menu-menu-item-103829" aria-expanded="false" aria-haspopup="true" aria-labelledby="103829" class="nb-mega-menu__top-menu-link" id="menu-item-103829">Hjelp og informasjon<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-add" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.7 4.817a.761.761 0 0 0-.384.399c-.07.156-.074.328-.075 3.353l-.001 3.19-3.253.01-3.253.011-.148.1c-.168.114-.346.433-.345.618.002.263.243.605.492.699.076.029 1.148.043 3.31.043h3.197l.001 3.19c.001 3.02.005 3.199.075 3.35.286.619 1.082.619 1.368 0 .07-.151.074-.33.075-3.35l.001-3.19h3.197c2.162 0 3.234-.014 3.31-.043.249-.093.491-.438.491-.697 0-.259-.242-.604-.491-.697-.076-.029-1.148-.043-3.31-.043H12.76l-.001-3.19c-.001-3.02-.005-3.199-.075-3.35-.086-.186-.257-.357-.417-.417a.894.894 0 0 0-.567.014"/></svg></a><ul role="group" id="menu-menu-item-103829" aria-labelledby="menu-item-103829" class="nb-mega-menu__sub-menu">
+	<li><a href="/en/" class="nb-mega-menu__sub-menu-link">English information</a></li>
+	<li><a href="/hjelp-og-informasjon/" class="nb-mega-menu__sub-menu-link">Se all hjelp og informasjon</a></li>
+</ul>
+</li>
+</ul></nav>				</div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	
+
+	<div style="height: var(--wp--preset--spacing--50); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+</div>
+
+</header>
+
+
+<main class="wp-block-group hide-for-visible-megamenu has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
+
+<div class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">	<div class="alignfull wp-block-nb-hero-carousel">
+		<div class="nb-hero-carousel__inner">
+			<div class="nb-hero-carousel__content">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+													<div class="swiper-slide">
+								<p>ÅPEN UTSTILLING</p><h2 class="wp-block-heading is-smaller">Utstillingen «Med pennen på strupen» utforsker norske avistegneres historie fra starten av 1900-tallet og frem til vår tid
+</h2>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.nb.no/med-pennen-pa-strupen/">Les mer</a></div>
+							</div>
+													<div class="swiper-slide">
+								<p>NASJONALBIBLIOTEKET I OSLO</p><h2 class="wp-block-heading">Opplev kulturhistorien på Nasjonalbiblioteket</h2>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.nb.no/opplev-kulturhistorien/">Fordyp deg</a></div>
+							</div>
+													<div class="swiper-slide">
+								<p>HVA GJØR NASJONALBIBLIOTEKET?</p><h2 class="wp-block-heading is-smaller">Vi tar vare på, digitaliserer og formidler alt som er publisert for den norske offentligheten</h2>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.nb.no/om-nb/">Utforsk tjenestene våre</a></div>
+							</div>
+											</div>
+				</div>
+				<div class="nb-hero-carousel__controls">
+					<div class="nb-hero-carousel__dots"></div>
+					<button class="nb-hero-carousel__next" aria-label="Neste">
+						<span>Neste</span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 15" height="24" width="24" class="t2-icon t2-icon-arrow_wide" aria-hidden="true" focusable="false"><path d="M19.695.731c-.319.376-.64.755-.713.843l-.134.16 2.668 2.263 2.669 2.262-11.875.012-11.875.013v2.222l11.912.013 11.911.012-2.692 2.34c-1.48 1.288-2.692 2.358-2.692 2.379 0 .021.323.409.718.861l.717.823.182-.156c2.271-1.958 8.461-7.361 8.461-7.386 0-.037-8.608-7.344-8.651-7.344-.015 0-.287.308-.606.683" fill="currentColor" /></svg>					</button>
+				</div>
+			</div>
+			<div class="nb-hero-carousel__images">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+													<div class="swiper-slide">
+								<a href="https://www.nb.no/med-pennen-pa-strupen/"><img fetchpriority="high" decoding="async" width="1011" height="800" src="https://www.nb.no/content/uploads/2026/02/Liggende-3_2-1-e1772188010740.png" class="attachment-large size-large" alt="" srcset="https://www.nb.no/content/uploads/2026/02/Liggende-3_2-1-e1772188010740.png 1011w, https://www.nb.no/content/uploads/2026/02/Liggende-3_2-1-e1772188010740-300x237.png 300w, https://www.nb.no/content/uploads/2026/02/Liggende-3_2-1-e1772188010740-768x608.png 768w" sizes="(max-width: 1011px) 100vw, 1011px" /></a>							</div>
+													<div class="swiper-slide">
+								<a href="https://www.nb.no/opplev-kulturhistorien/"><img decoding="async" width="1200" height="949" src="https://www.nb.no/content/uploads/2025/10/Z6A5170_1-2-1200x949.jpg" class="attachment-large size-large" alt="Interiørbilde fra andre etasje i Nasjonalbiblioteket. En person sitter på en grønn benk foran trappen og leser en bok. Rundt trappen er veggene dekorert med fargerike fresker malt av Per Krohg og Axel Revold. Gulvet er belagt med marmorfliser, og veggene har mørke trepaneler. Trappen leder ned til etasjen under, og et stort vindu slipper inn naturlig lys i rommet." srcset="https://www.nb.no/content/uploads/2025/10/Z6A5170_1-2-1200x949.jpg 1200w, https://www.nb.no/content/uploads/2025/10/Z6A5170_1-2-300x237.jpg 300w, https://www.nb.no/content/uploads/2025/10/Z6A5170_1-2-768x607.jpg 768w, https://www.nb.no/content/uploads/2025/10/Z6A5170_1-2-1536x1215.jpg 1536w, https://www.nb.no/content/uploads/2025/10/Z6A5170_1-2-2048x1620.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px" /></a>							</div>
+													<div class="swiper-slide">
+								<a href="https://www.nb.no/om-nb/"><img decoding="async" width="1200" height="585" src="https://www.nb.no/content/uploads/2024/08/Hva-spiste-de-i-middelalderen_Codex-Manesse_16x9-scaled-1-1200x585.jpg" class="attachment-large size-large" alt="En illuminasjon fra Codex Manesse fra 1305, viser et kjærestepar som smiler og omfavner hverandre" srcset="https://www.nb.no/content/uploads/2024/08/Hva-spiste-de-i-middelalderen_Codex-Manesse_16x9-scaled-1-1200x585.jpg 1200w, https://www.nb.no/content/uploads/2024/08/Hva-spiste-de-i-middelalderen_Codex-Manesse_16x9-scaled-1-300x146.jpg 300w, https://www.nb.no/content/uploads/2024/08/Hva-spiste-de-i-middelalderen_Codex-Manesse_16x9-scaled-1-768x375.jpg 768w, https://www.nb.no/content/uploads/2024/08/Hva-spiste-de-i-middelalderen_Codex-Manesse_16x9-scaled-1-1536x749.jpg 1536w, https://www.nb.no/content/uploads/2024/08/Hva-spiste-de-i-middelalderen_Codex-Manesse_16x9-scaled-1-2048x999.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px" /></a>							</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+<div class="wp-block-columns alignwide is-pattern-library-search is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading is-style-large" id="h-hva-leter-du-etter-i-nettbiblioteket">Hva leter du etter i Nettbiblioteket? </h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+		<form class="wp-block-search nb-library-search nb-library-search__inner-container nb-library-search__inner-container visible-for-open-search-tips wp-block-nb-library-search" role="search" action="https://www.nb.no/search" method="GET">
+			<div class="wp-block-search__inside-wrapper">
+				<label>
+					<span class="screen-reader-text">Søk i Nettbiblioteket</span>
+					<input
+						type="search"
+						name="q"
+						class="wp-block-search__input"
+						placeholder="Søk etter innhold"
+					/>
+				</label>
+				<button
+					type="submit"
+					class="wp-block-search__button wp-element-button"
+					aria-label="Søk">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-search" aria-hidden="true" focusable="false"><path d="M10.38 2.281a8.743 8.743 0 0 0-6.707 3.957C2.74 7.666 2.271 9.261 2.271 11c0 2.365.886 4.507 2.554 6.175a8.67 8.67 0 0 0 5.001 2.488c.628.088 1.72.088 2.348 0 1.538-.216 3.121-.887 4.23-1.792l.225-.183 1.915 1.919c1.054 1.055 1.993 1.964 2.087 2.02.566.337 1.24-.171 1.085-.815-.044-.181-.158-.304-2.021-2.173-1.086-1.089-1.975-1.994-1.975-2.011 0-.016.088-.142.195-.279.907-1.158 1.535-2.657 1.747-4.171.089-.632.089-1.722.001-2.352a8.757 8.757 0 0 0-3.901-6.153 8.791 8.791 0 0 0-5.382-1.392m1.655 1.541a7.194 7.194 0 0 1 4.086 2.057 7.317 7.317 0 0 1 1.916 3.354c.271 1.07.271 2.464 0 3.534-.452 1.789-1.659 3.439-3.208 4.388-1.214.742-2.422 1.085-3.829 1.085s-2.615-.343-3.829-1.085c-1.549-.949-2.756-2.599-3.208-4.388-.205-.809-.263-1.967-.141-2.802A7.281 7.281 0 0 1 9.94 3.823c.503-.077 1.572-.077 2.095-.001" fill="currentColor" />&laquo;/></svg>
+				</button>
+			</div>
+			<fieldset>
+			<legend class="screen-reader-text">Filtrer på medietype</legend>
+			<label for="mediaTypeAlt">
+				<input
+					type="radio"
+					name="mediatype"
+					id="mediaTypeAlt"
+					value="alt"
+					checked
+				>
+				<span></span>
+				All
+			</label><label for="mediaTypeAviser">
+				<input
+					type="radio"
+					name="mediatype"
+					id="mediaTypeAviser"
+					value="aviser"
+					
+				>
+				<span></span>
+				Aviser
+			</label><label for="mediaTypeBøker">
+				<input
+					type="radio"
+					name="mediatype"
+					id="mediaTypeBøker"
+					value="bøker"
+					
+				>
+				<span></span>
+				Bøker
+			</label><label for="mediaTypeBilder">
+				<input
+					type="radio"
+					name="mediatype"
+					id="mediaTypeBilder"
+					value="bilder"
+					
+				>
+				<span></span>
+				Bilder
+			</label><label for="mediaTypeTidsskrift">
+				<input
+					type="radio"
+					name="mediatype"
+					id="mediaTypeTidsskrift"
+					value="tidsskrift"
+					
+				>
+				<span></span>
+				Tidsskrift
+			</label>
+		</fieldset>
+		</form></div>
+</div>
+
+
+
+<h1 class="wp-block-heading has-text-align-center is-style-default" id="h-aktuelt">Aktuelt</h1>
+
+
+<div class="t2-featured-content-layout alignwide alignwide  wp-block-t2-featured-content-layout" role="list">
+<div class="t2-featured-single-post t2-featured-content is-post-type-page wp-block-t2-featured-single-post" role="listitem"><a class="nb-post-link default wp-block-nb-post-link" href="https://www.nb.no/veiledning-og-bibliotektjenester/soke/">
+<figure class="nb-post-featured-image has-image-ratio-16-9 wp-block-nb-post-featured-image"><img loading="lazy" decoding="async" width="768" height="1078" src="https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4-768x1078.png" class="attachment-medium_large size-medium_large wp-post-image" alt="En fargerik botanisk plansje. Rosa og grønn blomst." srcset="https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4-768x1078.png 768w, https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4-214x300.png 214w, https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4-1200x1685.png 1200w, https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4-1094x1536.png 1094w, https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4-1459x2048.png 1459w, https://www.nb.no/content/uploads/2023/08/2023-08-09T1301_NB_generated-4.png 1824w" sizes="auto, (min-width: 1200px) 384px, (min-width: 700px) 33vw, 350px" /></figure>
+
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	
+	<h2 class="t2-post-title wp-block-t2-post-title">Søk i samlingen</h2>
+	
+	<div class="nb-post-read-more wp-block-nb-post-read-more">Søk i Nasjonalbibliotekets samling på nett kan i hovedsak gjøres i Nettbiblioteket og Oria. I tillegg har Nasjonalbiblioteket en rekke spesialsamlinger med egne kataloger. Les mer om veiledning og guider her.</div>
+	
+</div>
+
+</a>
+</div>
+
+<div class="t2-featured-single-post t2-featured-content is-post-type-page wp-block-t2-featured-single-post" role="listitem"><a class="nb-post-link default wp-block-nb-post-link" href="https://www.nb.no/sommeropplevelser-pa-nasjonalbiblioteket/">
+<figure class="nb-post-featured-image has-image-ratio-16-9 wp-block-nb-post-featured-image"><img loading="lazy" decoding="async" width="768" height="512" src="https://www.nb.no/content/uploads/2026/06/20260624GKG116-768x512.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" srcset="https://www.nb.no/content/uploads/2026/06/20260624GKG116-768x512.jpg 768w, https://www.nb.no/content/uploads/2026/06/20260624GKG116-300x200.jpg 300w, https://www.nb.no/content/uploads/2026/06/20260624GKG116-1200x800.jpg 1200w, https://www.nb.no/content/uploads/2026/06/20260624GKG116-1536x1024.jpg 1536w, https://www.nb.no/content/uploads/2026/06/20260624GKG116-2048x1365.jpg 2048w" sizes="auto, (min-width: 1200px) 384px, (min-width: 700px) 33vw, 350px" /></figure>
+
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	
+	<h2 class="t2-post-title wp-block-t2-post-title">Sommeropplevelser på Nasjonalbiblioteket</h2>
+	
+	<div class="nb-post-read-more wp-block-nb-post-read-more">I sommer kan du ta turen innom Nasjonalbiblioteket på Solli plass for å se husets utstillinger eller bli med på omvisning, helt gratis. I tillegg har biblioteket et bredt serveringstilbud.</div>
+	
+</div>
+
+</a>
+</div>
+
+<div class="t2-featured-single-post t2-featured-content is-post-type-story category-arkiv category-artikler category-historier-fra-samlingen tag-har tag-hararbeid tag-harkullor tag-harsmykker tag-minneboker tag-stambok wp-block-t2-featured-single-post" role="listitem"><a class="nb-post-link default wp-block-nb-post-link" href="https://www.nb.no/historier-fra-samlingen/har-i-arkivet/">
+<figure class="nb-post-featured-image has-image-ratio-16-9 wp-block-nb-post-featured-image"><img loading="lazy" decoding="async" width="638" height="798" src="https://www.nb.no/content/uploads/2026/07/Har-og-tegning.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="" srcset="https://www.nb.no/content/uploads/2026/07/Har-og-tegning.jpg 638w, https://www.nb.no/content/uploads/2026/07/Har-og-tegning-240x300.jpg 240w" sizes="auto, (min-width: 1200px) 384px, (min-width: 700px) 33vw, 350px" /></figure>
+
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	<div class="nb-post-label wp-block-nb-post-label">Historier fra samlingen</div>
+	<h2 class="t2-post-title wp-block-t2-post-title">Hvorfor er det hår i samlingen?</h2>
+	
+	<div class="nb-post-read-more wp-block-nb-post-read-more">Hår som kjærlighetserklæringer, minner og smykker.</div>
+	
+</div>
+
+</a>
+</div>
+
+<div class="t2-featured-single-post t2-featured-content is-post-type-story category-video tag-bylov tag-magnus-lagabote tag-magnus-rindal tag-middelalder wp-block-t2-featured-single-post" role="listitem"><a class="nb-post-link default wp-block-nb-post-link" href="https://www.nb.no/historier-fra-samlingen/lova-som-fortalde-korleis-ein-skulle-handtere-fulle-folk-i-gatene/">
+<figure class="nb-post-featured-image has-image-ratio-16-9 wp-block-nb-post-featured-image"><img loading="lazy" decoding="async" width="768" height="440" src="https://www.nb.no/content/uploads/2026/08/Rindal-768x440.png" class="attachment-medium_large size-medium_large wp-post-image" alt="" srcset="https://www.nb.no/content/uploads/2026/08/Rindal-768x440.png 768w, https://www.nb.no/content/uploads/2026/08/Rindal-300x172.png 300w, https://www.nb.no/content/uploads/2026/08/Rindal-1200x688.png 1200w, https://www.nb.no/content/uploads/2026/08/Rindal-1536x880.png 1536w, https://www.nb.no/content/uploads/2026/08/Rindal.png 1920w" sizes="auto, (min-width: 1200px) 384px, (min-width: 700px) 33vw, 350px" /></figure>
+
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	<div class="nb-post-label wp-block-nb-post-label">Video</div>
+	<h2 class="t2-post-title wp-block-t2-post-title">Lova som fortalde korleis ein skulle handtere fulle folk i gatene</h2>
+	
+	<div class="nb-post-read-more wp-block-nb-post-read-more">Bylova er 750 år. Ho regulerte livet i norske byar i mellomalderen. Mykje handla om fyll og brann.</div>
+	
+</div>
+
+</a>
+</div>
+
+<div class="t2-featured-single-post t2-featured-content is-post-type-story category-video tag-filmarven tag-opplyst tag-spillefilm tag-utstilling wp-block-t2-featured-single-post" role="listitem"><a class="nb-post-link default wp-block-nb-post-link" href="https://www.nb.no/historier-fra-samlingen/filmklippene-som-var-for-grove/">
+<figure class="nb-post-featured-image has-image-ratio-16-9 wp-block-nb-post-featured-image"><img loading="lazy" decoding="async" width="768" height="440" src="https://www.nb.no/content/uploads/2026/06/Filmklippene-som-var-for-grove-768x440.png" class="attachment-medium_large size-medium_large wp-post-image" alt="" srcset="https://www.nb.no/content/uploads/2026/06/Filmklippene-som-var-for-grove-768x440.png 768w, https://www.nb.no/content/uploads/2026/06/Filmklippene-som-var-for-grove-300x172.png 300w, https://www.nb.no/content/uploads/2026/06/Filmklippene-som-var-for-grove-1200x688.png 1200w, https://www.nb.no/content/uploads/2026/06/Filmklippene-som-var-for-grove-1536x880.png 1536w, https://www.nb.no/content/uploads/2026/06/Filmklippene-som-var-for-grove.png 1920w" sizes="auto, (min-width: 1200px) 384px, (min-width: 700px) 33vw, 350px" /></figure>
+
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	<div class="nb-post-label wp-block-nb-post-label">Video</div>
+	<h2 class="t2-post-title wp-block-t2-post-title">Filmklippene som var for dristige</h2>
+	
+	<div class="nb-post-read-more wp-block-nb-post-read-more">Det er bare de dristigste klippene som er bevart fra en av Norges aller første spillefilmer.</div>
+	
+</div>
+
+</a>
+</div>
+
+<div class="t2-featured-single-post t2-featured-content is-post-type-page category-tv wp-block-t2-featured-single-post t2-featured-content-layout-col-4" role="listitem"><a class="nb-post-link default wp-block-nb-post-link" href="https://www.nb.no/tv/">
+<figure class="nb-post-featured-image has-image-ratio-16-9 wp-block-nb-post-featured-image"><img loading="lazy" decoding="async" width="768" height="432" src="https://www.nb.no/content/uploads/2025/11/RMF.C.3363-kopi2-768x432.jpg" class="attachment-medium_large size-medium_large wp-post-image" alt="To personer løfter en stor, gammeldags fjernsynsapparat med trebenet stativ inn eller ut av en bil med åpne bakdører. TV-en har avrundet skjerm, dreieknapper og ventilasjonsriller på siden, typisk for 1960-tallets design." srcset="https://www.nb.no/content/uploads/2025/11/RMF.C.3363-kopi2-768x432.jpg 768w, https://www.nb.no/content/uploads/2025/11/RMF.C.3363-kopi2-300x169.jpg 300w, https://www.nb.no/content/uploads/2025/11/RMF.C.3363-kopi2-1200x675.jpg 1200w, https://www.nb.no/content/uploads/2025/11/RMF.C.3363-kopi2-1536x864.jpg 1536w, https://www.nb.no/content/uploads/2025/11/RMF.C.3363-kopi2-2048x1152.jpg 2048w" sizes="auto, (min-width: 1200px) 384px, (min-width: 700px) 33vw, 350px" /></figure>
+
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	
+	<h2 class="t2-post-title wp-block-t2-post-title">Nasjonalbiblioteket TV</h2>
+	
+	<div class="nb-post-read-more wp-block-nb-post-read-more">Se Nasjonalbibliotekets arrangementer live og i opptak — hjemme i din egen stue!</div>
+	
+</div>
+
+</a>
+</div>
+</div>
+
+
+		<div class="alignwide wp-block-nb-newsletter-wrapper">
+								<h2 class="gform_description">Følg med på hva som skjer på Nasjonalbiblioteket.</h2>
+				<div>
+			<div class="gform_confirmation">
+				<span class="gform_confirmation__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" class="t2-icon t2-icon-check" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg></span>
+				<p class="gform_confirmation__title">Påmeldingen er bekreftet</p>
+				<p>Takk for at du meldte deg på Nasjonalbibliotekets nyhetsbrev</p>
+			</div>
+							<p class="gform_title">Meld deg på ukentlig nyhetsbrev</p>
+						
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework flex-layout_wrapper' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_10' ><div id='gf_10' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+							<p class='gform_required_legend'>&quot;<span class="gfield_required gfield_required_asterisk">*</span>&quot; obligatorisk felt</p>
+                        </div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_10' id='gform_10' class='flex-layout' action='/#gf_10' data-formid='10' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_10' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_10_4" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_10_4'>LinkedIn</label><div class='ginput_container'><input name='input_4' id='input_10_4' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_10_4'>Dette feltet er for valideringsformål og skal stå uendret.</div></div><div id="field_10_1" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_10_1'>E-postadresse<span class="gfield_required"><span class="gfield_required gfield_required_asterisk"> * <span class='sr-only'> Required</span></span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_1' id='input_10_1' type='email' value='' class='large'   placeholder='Din e-postadresse…' aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_10_3" class="gfield gfield--type-frcaptcha gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_10_3'>Uten navn</label><div class='ginput_container ginput_container_frcaptcha'><div class="frc-captcha " data-sitekey="FCMMJ6ECQ7JJ8UK1" data-lang="no" ></div>
+		<noscript>You need to enable Javascript for the anti-spam check.</noscript></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_10' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Send inn'  /> <input type='hidden' name='gform_ajax' value='form_id=10&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=b4c5268cabda49d7ec81c7bb8fb432d1' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_10' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_10' id='gform_theme_10' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_10' id='gform_style_settings_10' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_10' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='10' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_10' value='WyJbXSIsImQ3YTAxNTQyNDgzZmQ2ZGE1OGI2ODMzNjhlZTY4NTk4Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_10' id='gform_target_page_number_10' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_10' id='gform_source_page_number_10' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_10' id='gform_ajax_frame_10' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 10, 'https://www.nb.no/content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_10').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_10');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_10').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_10').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_10').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_10').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_10').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_10').val();gformInitSpinner( 10, 'https://www.nb.no/content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [10, current_page]);window['gf_submitting_10'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_10').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_10').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [10]);window['gf_submitting_10'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_10').text());}else{jQuery('#gform_10').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "10", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_10" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_10";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_10" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 10, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+		</div>
+		
+		</div></div></main>
+
+
+<footer class="entry-content hide-for-visible-megamenu wp-block-template-part">
+<div class="wp-block-group alignfull has-text-medium-font-size has-neutrals-background-hero-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33%">
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="apningstider" style="font-weight:500">Åpningstider</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<p>Mandag–fredag: 09:00 &#8211; 22:00<br>Lørdag: 10:00 &#8211; 20:00<br>Søndag: Stengt</p>
+
+
+
+<p>
+				<a href="https://www.nb.no/apningstider/">Les mer om åpningstider og tilbud</a>
+			</p>
+
+
+
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="besoksadresse" style="font-weight:500">
+				Besøksadresse
+			</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<p>
+				<a href="https://www.google.no/maps/place/Nasjonalbiblioteket/@59.9139308,10.7154816,17z/data=!3m1!4b1!4m5!3m4!1s0x46416c2b317e5fa1:0x99daeff36858a72d!8m2!3d59.9139308!4d10.7176703">Henrik Ibsens gate 110, Oslo</a><br>
+				<a href="https://www.google.no/maps/place/Finsetveien%202,%208624%20Mo%20i%20Rana">Finsetveien 2, Mo i Rana</a>
+			</p>
+
+
+
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="kontaktinformasjon" style="font-weight:500">
+				Kontaktinformasjon
+			</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<p>
+				<a href="mailto:nb@nb.no">E-post: nb@nb.no</a><br><a href="tel:+4723276000">Telefon: 23 27 60 00</a>
+			</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33%">
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="snarveier" style="font-weight:500">
+				Snarveier
+			</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<ul class="wp-block-list is-style-clean">
+<li><a href="https://www.nb.no/en/">NB in English</a></li>
+
+
+
+<li><a href="https://www.nb.no/spor-nasjonalbiblioteket/">Spør Nasjonalbiblioteket</a></li>
+
+
+
+<li>
+					<a href="https://www.nb.no/om-nb/ledige-stillinger/">Ledige stillinger</a>
+				</li>
+
+
+
+<li>
+					<a href="https://www.nb.no/tjenester/standardnummerering/">Standardnummerering</a>
+				</li>
+
+
+
+<li>
+					<a href="https://www.nb.no/om-nb/kontaktadresser/">Adresseoversikt</a>
+				</li>
+
+
+
+<li>
+					<a href="https://www.nb.no/hjelp-og-informasjon/">Hjelp og informasjon</a>
+				</li>
+
+
+
+<li>
+					<a href="https://uustatus.no/nb/erklaringer/publisert/fcb9322a-04cf-441d-bf1c-9e68b3b9855e">Tilgjengelighetserklæring</a>
+				</li>
+
+
+
+<li><a href="https://www.nb.no/om-nb/presse/">Presse</a></li>
+
+
+
+<li>
+					<a href="https://einnsyn.no/sok?stat0=http%3A%2F%2Fdata.einnsyn.no%2Fvirksomhet%2Foepeksport_content_provider_126">Offentlig postjournal</a>
+				</li>
+
+
+
+<li><a href="https://www.nb.no/om-nb/">Om oss</a></li>
+
+
+
+<li>
+					<a href="https://www.nb.no/pliktavlevering/">Pliktavlevering</a>
+				</li>
+
+
+
+<li>
+					<a href="https://www.nb.no/personvernerklaering/">Personvernerklæring</a>
+				</li>
+</ul>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33%">
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="ansvarlig-redaktor" style="font-weight:500">
+				Ansvarlig redaktør
+			</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<p>Åse Wetås</p>
+
+
+
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="organisasjonsnummer" style="font-weight:500">
+				Organisasjonsnummer
+			</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<p>976 029 100</p>
+
+
+
+<h2 class="wp-block-heading has-body-font-family has-text-medium-font-size" id="sosiale-medier" style="font-weight:500">
+				Sosiale medier
+			</h2>
+
+
+<div style="height: var(--wp--preset--spacing--10); min-height: 1px;" class="t2-spacer wp-block-t2-spacer" aria-hidden="true"></div>
+
+
+<ul class="wp-block-social-links has-visible-labels is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex"><li class="wp-social-link wp-social-link-instagram  wp-block-social-link"><a href="https://www.instagram.com/nasjonalbiblioteket/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label">Instagram</span></a></li>
+
+<li class="wp-social-link wp-social-link-facebook  wp-block-social-link"><a href="https://www.facebook.com/nasjonalbiblioteket/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label">Facebook</span></a></li></ul>
+</div>
+</div>
+</div>
+
+
+<div class="wp-block-nb-help-shortcuts">
+			
+				<div class="wp-block-button">
+					<a class="wp-block-button__link wp-element-button" href="/spor-nasjonalbiblioteket/">
+						Spør biblioteket
+					</a>
+				</div>
+			
+		</div></footer></div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp\/wp-*.php","\/wp\/wp-admin\/*","\/content\/uploads\/*","\/content\/*","\/content\/plugins\/*","\/content\/themes\/theme-nb\/*","\/content\/themes\/theme-block-base\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script src="https://www.nb.no/wp/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script id="wp-a11y-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2026-07-09 02:54:57+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nb_NO"},"Notifications":["Varsler"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+</script>
+<script src="https://www.nb.no/wp/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script defer='defer' src="https://www.nb.no/content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.9.24.2" id="gform_placeholder-js"></script>
+<script defer='defer' src="https://www.nb.no/content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=4f8b3915c1c1e1a6800825abd64b03cb" id="gform_gravityforms_theme_vendors-js"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"eadeea35521f217b85460ea968d413fa"},"ajax":{"ajaxurl":"https:\/\/www.nb.no\/wp\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"7743b20c98","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}},"product_meta":{"10":null},"pagination":{"10":""}}},"hmr_dev":"","public_path":"https:\/\/www.nb.no\/content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"4ce930f3c6"};
+</script>
+<script defer='defer' src="https://www.nb.no/content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=244d9e312b90e462b62b2d9b9d415753" id="gform_gravityforms_theme-js"></script>
+<script async defer type="module" src="https://www.nb.no/content/plugins/friendly-captcha/public/vendor/v1/widget.module.min.js?ver=0.9.19" id="friendly-captcha-widget-module-js"></script>
+<script async defer nomodule src="https://www.nb.no/content/plugins/friendly-captcha/public/vendor/v1/widget.polyfilled.min.js?ver=0.9.19" id="friendly-captcha-widget-fallback-js"></script>
+<script async defer src="https://www.nb.no/content/plugins/friendly-captcha/public/mutation-observer.js?ver=1.15.23" id="friendly-captcha-mutation-observer-js"></script>
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.id = 'wp-skip-link';
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerText = 'Hopp til innhold';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+</script>
+<script id="dekodegtm-frontend-js-extra">
+var dekodeGTMGlobals = {"dataLayer_content":{"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"Trond Myklebust","pagePostCategories":"Historier fra samlingen","pagePostPrimaryCategory":"Historier fra samlingen"}};
+</script>
+<script src="https://www.nb.no/content/plugins/dekode-gtm-plugin/build/frontend.js?ver=46f200e0a7b2d9af81df" id="dekodegtm-frontend-js"></script>
+<script src="https://www.nb.no/content/plugins/nb-block-animation//build/view.js?ver=c61c6294e3f6b1ea6ad7" id="nb-block-animation-js"></script>
+<script src="https://www.nb.no/content/plugins/nb-infoscreen/build/view.js?ver=fa940200a0cbd622d9c6" id="nb-infoscreen-js"></script>
+<script src="https://www.nb.no/content/themes/theme-block-base/build/view.js?ver=4f1f0690c755ca9c1f07" id="blockbase-js"></script>
+<script src="https://www.nb.no/content/themes/theme-nb/build/view.js?ver=818e16cfaf434cb898a9" id="nb-js"></script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 10) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "10", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_10" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_10";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_10" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 10, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+</body>
+</html>

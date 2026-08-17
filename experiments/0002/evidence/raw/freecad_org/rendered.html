@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html lang="en" class="home">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width = device-width, initial-scale = 1"/>
+  <meta name="description" content="FreeCAD, the open source 3D parametric modeler"/>
+  <meta name="keywords" content="freecad, engineering, open-source, opencascade, architecture, cad, bim, fem, 3d, 3d-printing, mac-osx, linux, windows, coin, parametric-modeler"/>
+
+  <title>FreeCAD: Your own 3D parametric modeler</title>
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+
+  <!-- Include bootstrap CSS file -->
+   <link rel="stylesheet" href="css/bootstrap-5.3.3.min.css"/>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <!-- Social networks -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@FreeCADNews" />
+  <meta name="twitter:creator" content="@FreeCADNews" />
+  <meta property="og:title" content="FreeCAD: Your own 3D parametric modeler" />
+  <meta property="og:description" content="FreeCAD, the open source 3D parametric modeler" />
+  <meta property="og:image" content="https://freecad.org/images/banner.jpg" />
+
+</head>
+
+<body class="">
+  <nav class="navbar fixed-top navbar-expand-xl navbar-dark py-1 navbar-custom">
+    <a class="navbar-brand" href="index.php?lang=en">
+      <img class="img-fluid" src="svg/logo-freecad.svg" alt="FreeCAD"/>
+    </a>
+
+    <div class="nav nav-pills ms-auto order-xl-last">
+      <div class="nav-item dropdown">
+        <button class="nav-link text-light rounded-pill dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          aria-label="Choose language. The current selection is English (en)">
+          <img src="lang/en/flag.jpg" alt="English">
+        </button>
+
+        <div class="dropdown-menu-mobile-left dropdown-lang dropdown-menu dropdown-menu-end">
+          <a class="dropdown-item" href="index.php?lang=en" aria-current="page"><img src="lang/en/flag.jpg" alt="" />English</a><a class="dropdown-item" href="index.php?lang=be"><img src="lang/be_BY/flag.jpg" alt="" />беларуская</a><a class="dropdown-item" href="index.php?lang=ca"><img src="lang/ca_ES/flag.jpg" alt="" />catal&agrave;</a><a class="dropdown-item" href="index.php?lang=de"><img src="lang/de_DE/flag.jpg" alt="" />Deutsch</a><a class="dropdown-item" href="index.php?lang=el"><img src="lang/el_GR/flag.jpg" alt="" />&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;ά</a><a class="dropdown-item" href="index.php?lang=es"><img src="lang/es_ES/flag.jpg" alt="" />espa&ntilde;ol</a><a class="dropdown-item" href="index.php?lang=fr"><img src="lang/fr_FR/flag.jpg" alt="" />fran&ccedil;ais</a><a class="dropdown-item" href="index.php?lang=ga"><img src="lang/ga_IE/flag.jpg" alt="" />Gaeilge</a><a class="dropdown-item" href="index.php?lang=hr"><img src="lang/hr_HR/flag.jpg" alt="" />hrvatski</a><a class="dropdown-item" href="index.php?lang=hu"><img src="lang/hu_HU/flag.jpg" alt="" />magyar</a><a class="dropdown-item" href="index.php?lang=it"><img src="lang/it_IT/flag.jpg" alt="" />italiano</a><a class="dropdown-item" href="index.php?lang=ja"><img src="lang/ja_JP/flag.jpg" alt="" />日本語</a><a class="dropdown-item" href="index.php?lang=ko"><img src="lang/ko_KR/flag.jpg" alt="" />한국어</a><a class="dropdown-item" href="index.php?lang=lo"><img src="lang/lo_LA/flag.jpg" alt="" />ລາວ</a><a class="dropdown-item" href="index.php?lang=pl"><img src="lang/pl_PL/flag.jpg" alt="" />polski</a><a class="dropdown-item" href="index.php?lang=ru"><img src="lang/ru_RU/flag.jpg" alt="" />русский</a><a class="dropdown-item" href="index.php?lang=sl"><img src="lang/sl_SI/flag.jpg" alt="" />sloven&scaron;čina</a><a class="dropdown-item" href="index.php?lang=sv"><img src="lang/sv_SE/flag.jpg" alt="" />svenska</a><a class="dropdown-item" href="index.php?lang=ta"><img src="lang/ta_IN/flag.jpg" alt="" />தமிழ்</a><a class="dropdown-item" href="index.php?lang=tr"><img src="lang/tr_TR/flag.jpg" alt="" />T&uuml;rk&ccedil;e</a><a class="dropdown-item" href="index.php?lang=uk"><img src="lang/uk_UA/flag.jpg" alt="" />українська</a><a class="dropdown-item" href="index.php?lang=zh_CN"><img src="lang/zh_CN/flag.jpg" alt="" />中文</a><a class="dropdown-item" href="index.php?lang=fi"><img src="lang/fi_FI/flag.jpg" alt="" />suomi</a><a class="dropdown-item" href="index.php?lang=pt_BR"><img src="lang/pt_BR/flag.jpg" alt="" />portugu&ecirc;s</a><a class="dropdown-item" href="index.php?lang=nl"><img src="lang/nl_NL/flag.jpg" alt="" />Nederlands</a><a class="dropdown-item" href="index.php?lang=zh_TW"><img src="lang/zh_TW/flag.jpg" alt="" />中文</a><a class="dropdown-item" href="index.php?lang=ka"><img src="lang/ka_GE/flag.jpg" alt="" />ქართული</a><a class="dropdown-item" href="index.php?lang=cs"><img src="lang/cs_CZ/flag.jpg" alt="" />če&scaron;tina</a><a class="dropdown-item" href="index.php?lang=fa"><img src="lang/fa_IR/flag.jpg" alt="" />فارسی</a><a class="dropdown-item" href="index.php?lang=es_CO"><img src="lang/es_CO/flag.jpg" alt="" />espa&ntilde;ol</a><a class="dropdown-item" href="index.php?lang=eu"><img src="lang/eu_ES/flag.jpg" alt="" />euskara</a><a class="dropdown-item" href="index.php?lang=sr"><img src="lang/sr_RS/flag.jpg" alt="" />српски</a>        </div>
+      </div>
+    </div>
+
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarNav">
+      <ul class="nav nav-pills ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link my-2 rounded-pill" href="features.php?lang=en">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link my-2 rounded-pill" href="downloads.php?lang=en">Download</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link my-2 rounded-pill" href="blog.php?lang=en">Blog</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link my-2 rounded-pill dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentation</a>
+
+          <div class="dropdown-menu-mobile-right dropdown-community dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Main_Page">Documentation index</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Getting_started">Getting started</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/User_hub">Users documentation</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Manual">The FreeCAD manual</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Workbenches">Workbenches documentation</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Power_users_hub">Python coding documentation</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Developer_hub">C++ coding documentation</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Tutorials">Tutorials</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Frequently_asked_questions">Frequently asked questions</a>
+            <a class="dropdown-item text-dark" href="privacy.php?lang=en">Privacy policy</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/About_FreeCAD">About FreeCAD</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link my-2 rounded-pill dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Contribute</a>
+
+          <div class="dropdown-menu-mobile-left dropdown-community dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Help_FreeCAD">How to help</a>
+            <a class="dropdown-item text-dark" href="sponsor.php?lang=en">Sponsor</a>
+            <a class="dropdown-item text-dark" href="https://github.com/FreeCAD/FreeCAD/issues">Report a bug</a>
+            <a class="dropdown-item text-dark" href="https://github.com/FreeCAD/FreeCAD/pulls">Make a pull request</a>
+            <a class="dropdown-item text-dark" href="https://fpa.freecad.org/programs.html">Jobs and funding</a>
+            <a class="dropdown-item text-dark" href="contributing.php?lang=en">Contribution guidelines</a>
+            <a class="dropdown-item text-dark" href="https://freecad.github.io/DevelopersHandbook/">Developers handbook</a>
+            <a class="dropdown-item text-dark" href="https://wiki.freecad.org/Localisation">Translations</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link my-2 rounded-pill dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Community</a>
+
+          <div class="dropdown-menu-mobile-right dropdown-community dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item text-dark" href="codeofconduct.php?lang=en">Code of conduct</a>
+            <a class="dropdown-item text-dark font-weight-bold" href="professional-network.php?lang=en">Professional Network</a>
+            <a class="dropdown-item text-dark font-weight-bold" href="https://forum.freecad.org/">Forum</a>
+            <a class="dropdown-item text-dark" href="https://fpa.freecad.org">The FPA</a>
+            <a class="dropdown-item text-dark" href="https://github.com/FreeCAD/FreeCAD">GitHub</a>
+            <a class="dropdown-item text-dark" href="https://social.freecad.org/@FreeCAD">Mastodon</a>
+            <a class="dropdown-item text-dark" href="https://matrix.to/#/#FreeCAD_FreeCAD:gitter.im">Matrix</a>
+            <a class="dropdown-item text-dark" href="https://web.libera.chat/#freecad">IRC via Webchat</a>
+            <a class="dropdown-item text-dark" href="https://discord.gg/w2cTKGzccC">Discord</a>
+            <a class="dropdown-item text-dark" href="https://www.reddit.com/r/freecad">Reddit</a>
+            <a class="dropdown-item text-dark" href="https://twitter.com/FreeCADNews">Twitter</a>
+            <a class="dropdown-item text-dark" href="https://www.facebook.com/FreeCAD">Facebook</a>
+            <a class="dropdown-item text-dark" href="https://www.linkedin.com/groups/4295230">LinkedIn</a>
+            <a class="dropdown-item text-dark" href="events.php?lang=en">Calendar</a>
+            <a class="dropdown-item text-dark" href="addons.php?lang=en">Addons</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link my-2 rounded-pill donate-btn" data-bs-toggle="modal" data-bs-target="#donateModal">♥ Donate</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+<script>
+function send(type, method, amount, currency) {
+    if (method == "github") {
+        if (type == "sponsor") {
+            window.location = "https://github.com/sponsors/FreeCAD?frequency=recurring&amount=" + amount;
+        } else {
+            window.location = "https://github.com/sponsors/FreeCAD?frequency=one-time&amount=" + amount;
+        }
+    } else if (method == "opencollective") {
+        if (type == "sponsor") {
+            window.location = "https://opencollective.com/freecad/donate?interval=month&amount=" + amount;
+        } else {
+            window.location = "https://opencollective.com/freecad/donate?interval=oneTime&amount=" + amount;
+        }
+    } else if (method == "paypal") {
+        window.location = "https://www.paypal.com/donate/?hosted_button_id=M3Z8BGW6DB69Q";
+    } else if (method == "stripe") {
+        var checkoutUrl = new URL("stripe-checkout-session.php", window.location.href);
+        checkoutUrl.searchParams.set("amount", amount);
+        checkoutUrl.searchParams.set("currency", currency);
+        window.location = checkoutUrl.toString();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    var typesRadios = document.getElementById("types");
+    var presetsRadios = document.getElementById("presets");
+    var methodSelect = document.getElementById("method");
+    var currencySelect = document.getElementById("currency");
+    var sepainfo = document.getElementById("sepainfo");
+    var stripeinfo = document.getElementById("stripeinfo");
+    var paypalinfo = document.getElementById("paypalinfo");
+    var submitButton = document.getElementById("submit");
+    var amountInput = document.getElementById("amount");
+    var donateModal = document.getElementById('donateModal');
+    var donationInfo = document.getElementById("donationInfo");
+    var sponsorInfo = document.getElementById("sponsorInfo");
+    var presetValues = {
+        "preset5": "5.00",
+        "preset10": "10.00",
+        "preset25": "25.00",
+        "preset100": "100.00",
+        "preset200": "200.00"
+    };
+    var currencySymbols = {
+        "eur": "€",
+        "usd": "$"
+    };
+
+    function updateCurrencyDisplay(currency) {
+        var symbol = currencySymbols[currency] || currencySymbols[defaultCurrency];
+
+        Object.keys(presetValues).forEach(function(key) {
+            var label = document.querySelector("label[for='" + key + "']");
+            var presetAmount = parseFloat(presetValues[key]);
+            if (label) {
+                label.textContent = " " + symbol + (Number.isInteger(presetAmount) ? presetAmount : presetAmount.toFixed(2)) + " ";
+            }
+        });
+    }
+
+    function methodProcess(method) {
+        if (method == "sepa") {
+            sepainfo.classList.remove("hidden");
+            submitButton.classList.add("disabled");
+            stripeinfo.classList.add("hidden");
+            paypalinfo.classList.add("hidden");
+        }else if(method == "stripe" && type == "sponsor") {
+            sepainfo.classList.add("hidden");
+            submitButton.classList.add("disabled");
+            stripeinfo.classList.remove("hidden");
+            paypalinfo.classList.add("hidden");
+        }else if(method == "paypal") {
+            submitButton.classList.remove("disabled");
+            sepainfo.classList.add("hidden");
+            stripeinfo.classList.add("hidden");
+            paypalinfo.classList.remove("hidden");
+        }else {
+            sepainfo.classList.add("hidden");
+            submitButton.classList.remove("disabled");
+            stripeinfo.classList.add("hidden");
+            paypalinfo.classList.add("hidden");
+        }
+    }
+
+    function typeProcess(type) {
+        if (type == "sponsor") {
+            sponsorInfo.classList.remove("hidden");
+            donationInfo.classList.add("hidden");
+        } else {
+            sponsorInfo.classList.add("hidden");
+            donationInfo.classList.remove("hidden");
+        }
+    }
+
+    function presetProcess(preset) {
+        if (preset === "other") {
+            amountInput.value = "";
+            amountInput.focus();
+        } else {
+            amountInput.value = preset;
+        }
+    }
+
+    function amountProcess(amount) {
+        var parsedAmount = parseFloat(String(amount).trim());
+        if (isNaN(parsedAmount)) {
+            return;
+        }
+
+        var numericAmount = parsedAmount.toFixed(2);
+        var matchedPreset = Object.keys(presetValues).find(key => presetValues[key] === numericAmount);
+
+        if (matchedPreset) {
+            document.getElementById(matchedPreset).checked = true;
+        } else {
+            document.getElementById("presetother").checked = true;
+        }
+    }
+    function showAccordion(amount) {
+        amount = parseFloat(amount);
+
+        var accordions = document.querySelectorAll('.accordion-collapse');
+        accordions.forEach(accordion => {
+            new bootstrap.Collapse(accordion, { toggle: false }).hide();
+        });
+
+        var targetAccordion = null;
+
+        if (amount >= 25 && amount < 100) {
+            targetAccordion = document.getElementById('collapseBronze');
+        } else if (amount >= 100 && amount < 200) {
+            targetAccordion = document.getElementById('collapseSilver');
+        } else if (amount >= 200) {
+            targetAccordion = document.getElementById('collapseGold');
+        } else {
+            targetAccordion = document.getElementById('collapseNormal');
+        }
+
+        if (targetAccordion) {
+            new bootstrap.Collapse(targetAccordion).show();
+        }
+    }
+
+
+    var type = document.querySelector('input[name="type"]:checked').id;
+    var method = methodSelect.value;
+    var amount = amountInput.value;
+    var currency = currencySelect.value;
+    updateCurrencyDisplay(currency);
+    methodProcess(method);
+    typeProcess(type);
+    amountProcess(amount);
+    showAccordion(amount)
+
+
+    typesRadios.addEventListener("change", function() {
+        type = document.querySelector('input[name="type"]:checked').id;
+        typeProcess(type);
+        methodProcess(method);
+    });
+
+    presetsRadios.addEventListener("change", function () {
+        var selectedPreset = document.querySelector("input[name='preset']:checked");
+        var preset;
+
+        if (selectedPreset.id === "presetother") {
+            preset = "other";
+        } else {
+            preset = presetValues[selectedPreset.id];
+            amount = preset;
+        }
+
+        presetProcess(preset);
+        showAccordion(preset)
+    });
+
+    methodSelect.addEventListener('change', function() {
+        method = methodSelect.value;
+        methodProcess(method);
+    });
+
+    currencySelect.addEventListener('change', function() {
+        currency = currencySelect.value || defaultCurrency;
+        updateCurrencyDisplay(currency);
+    });
+
+    amountInput.addEventListener("input", function() {
+        amount = amountInput.value;
+        if (amount === "" || isNaN(amount)) {
+            amountInput.reportValidity();
+            return;
+        }
+        amountProcess(amount);
+        showAccordion(amount)
+    });
+
+    submitButton.addEventListener('click', function() {
+        if (submitButton.classList.contains("disabled")) {
+            return;
+        }
+
+        send(type, method, amount, currency);
+    });
+
+    donateModal.addEventListener('show.bs.modal', function(event) {
+        var modalToogle = event.relatedTarget;
+        var typeAttribute = modalToogle.getAttribute('data-bs-type');
+        var amountAttribute = modalToogle.getAttribute('data-bs-amount');
+        var methodAttribute = modalToogle.getAttribute('data-bs-method');
+        if (typeAttribute) {
+            document.getElementById(typeAttribute).checked = true;
+            type = typeAttribute;
+            typeProcess(type);
+        }
+        if (amountAttribute) {
+            amountInput.value = amountAttribute;
+            amount = amountAttribute;
+            amountProcess(amount);
+            showAccordion(amount)
+        }
+        if (methodAttribute) {
+            methodSelect.value = methodAttribute;
+            method = methodAttribute;
+            methodProcess(method);
+        }
+    });
+});
+</script>
+<div class="modal fade" id="donateModal" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-secondary">
+        <h1 class="modal-title fs-5" id="donateModalLabel"> Donate </h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5 mb-3">
+              <div class="btn-group d-flex flex-wrap" role="group" aria-label="type" id="types">
+                <input type="radio" class="btn-check" name="type" id="donation" autocomplete="off" checked>
+                <label class="btn btn-outline-light text-center flex-fill" for="donation"> One-Time </label>
+                <input type="radio" class="btn-check" name="type" id="sponsor" autocomplete="off">
+                <label class="btn btn-outline-light text-center flex-fill" for="sponsor"> Monthly </label>
+              </div>
+              <div role="group" aria-label="preset" id="presets" class="d-flex flex-wrap mt-3  row-cols-4 gap-2">
+                <input type="radio" class="btn-check" name="preset" id="preset5" autocomplete="off" checked=>
+                <label class="btn btn-outline-light text-center flex-fill col" for="preset5"> €5 </label>
+                <input type="radio" class="btn-check" name="preset" id="preset10" autocomplete="off">
+                <label class="btn btn-outline-light text-center flex-fill col" for="preset10"> €10 </label>
+                <input type="radio" class="btn-check" name="preset" id="preset25" autocomplete="off">
+                <label class="btn btn-outline-light text-center flex-fill col" for="preset25"> €25 </label>
+                <input type="radio" class="btn-check" name="preset" id="preset100" autocomplete="off">
+                <label class="btn btn-outline-light text-center flex-fill col" for="preset100"> €100 </label>
+                <input type="radio" class="btn-check" name="preset" id="preset200" autocomplete="off">
+                <label class="btn btn-outline-light text-center flex-fill col" for="preset200"> €200 </label>
+                <input type="radio" class="btn-check" name="preset" id="presetother" autocomplete="off">
+                <label class="btn btn-outline-light text-center flex-fill col" for="presetother"> Other </label>
+              </div>
+              <div class="input-group mt-3">
+                <select class="form-select bg-dark text-light border-secondary border-end-0 rounded-end-0 w-auto" id="currency" name="currency" aria-label="Currency" title="Currency">
+                  <option value="eur" selected>€</option>
+                  <option value="usd">$</option>
+                </select>
+                <input type="number" class="form-control bg-dark text-light border-secondary border-start-0 rounded-start-0 form-control-lg" name="amount" id="amount" min="0" step="0.01" value="5.00">
+              </div>
+              <div class="input-group mt-3">
+                <select class="form-select bg-dark text-light border-secondary" id="method" name="method">
+                  <option value="stripe" selected title="Credit card payment via Stripe"> Credit card (Stripe) </option>
+                  <option value="sepa" title="Direct SEPA bank transfer using your own bank apps"> SEPA bank transfer </option>
+                  <option value="paypal" title="Paypal allows to donate using your Paypal account, or a credit card"> Paypal </option>
+                  <option value="github" title="GitHub allows you to sponsor your favorite projects using your GitHub account, and a credit card"> GitHub </option>
+                  <option value="opencollective" title="OpenCollective acts as a fiscal host for open-source projects. You can donate with a credit card or bank account."> OpenCollective </option>
+                </select>
+                <button class="btn btn-outline-light input-group-text" value="Submit" id="submit" type="button"> Donate </button>
+              </div>
+              <div class="sepainfo hidden" id="sepainfo">
+                  <table class="table table-dark table-borderless">
+                      <thead>
+                          <tr>
+                              <th colspan="2" class="fw-bold">
+                                  SEPA Information                              </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td colspan="2"> Please set up your SEPA bank transfer to: </td>
+                          </tr>
+                          <tr>
+                              <td>Beneficiary:</td>
+                              <td>The FreeCAD project association</td>
+                          </tr>
+                          <tr>
+                              <td>Address:</td>
+                              <td>Rue Docteur Kuborn 31/46, 1070 Anderlecht, Belgium</td>
+                          </tr>
+                          <tr>
+                              <td>IBAN:</td>
+                              <td><b>BE04 0019 2896 4531</b></td>
+                          </tr>
+                          <tr>
+                              <td>BIC/SWIFT:</td>
+                              <td>GEBABEBBXXX</td>
+                          </tr>
+                          <tr>
+                              <td>Bank agency:</td>
+                              <td>BNP Paribas Fortis</td>
+                              <td>Rue de la Station 64, 1360 Perwez, Belgium</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <div class="stripeinfo hidden mt-3" id="stripeinfo">
+                <p>While Stripe doesn't support monthly donations, you can still become a sponsor! Simply make a one-time donation equivalent to 12 months of support, and you'll gain access to the corresponding sponsoring tier. It's an easy and flexible way to contribute.</p>
+              </div>
+              <div class="paypalinfo hidden mt-3" id="paypalinfo">
+                <p>Paypal charges up to 35% fee for transactions under $5. For small donations we recommend using other methods.</p>
+              </div>
+              </div>
+              <div class="col-lg-7 text-light text-center text-lg-start px-md-4 ">
+              <div id="donationInfo">
+                <p> If you are not sure or not able to commit to a regular donation, but still want to help the project, you can do a one-time donation, of any amount. </p>
+                <p> Choose freely the amount you wish to donate one time only. </p>
+              </div>
+              <div id="sponsorInfo" class="hidden">
+                <p> You can support FreeCAD by sponsoring it as an individual or organization through various platforms. Sponsorship provides a steady income for developers, allowing the FPA to plan ahead and enabling greater investment in FreeCAD. To encourage sponsorship, we offer different tiers, and unless you choose to remain anonymous, your name or company logo will be featured on our website accordingly. </p>
+                <div class="accordion accordion-dark bg-dark text-white" id="sponsorAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNormal">
+                      <button class="accordion-button text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNormal" aria-expanded="true" aria-controls="collapseNormal"> ♥ <b class="normal"> Normal sponsor </b>
+                      </button>
+                    </h2>
+                    <div id="collapseNormal" class="accordion-collapse collapse show" aria-labelledby="headingNormal" data-bs-parent="#sponsorAccordion">
+                      <div class="accordion-body"> from 1 USD / 1 EUR per month. You will not have your name displayed here, but you will have helped the project a lot anyway. Together, normal sponsors maintain the project on its feet as much as the bigger sponsors. </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBronze">
+                      <button class="accordion-button text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBronze" aria-expanded="false" aria-controls="collapseBronze"> 🥉 <b class="bronze"> Bronze sponsor </b>
+                      </button>
+                    </h2>
+                    <div id="collapseBronze" class="accordion-collapse collapse" aria-labelledby="headingBronze" data-bs-parent="#sponsorAccordion">
+                      <div class="accordion-body"> from 25 USD / 25 EUR per month. Your name or company name is displayed on this page. </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSilver">
+                      <button class="accordion-button text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSilver" aria-expanded="false" aria-controls="collapseSilver"> 🥈 <b class="silver"> Silver sponsor </b>
+                      </button>
+                    </h2>
+                    <div id="collapseSilver" class="accordion-collapse collapse" aria-labelledby="headingSilver" data-bs-parent="#sponsorAccordion">
+                      <div class="accordion-body"> from 100 USD / 100 EUR per month. Your name or company name is displayed on this page, with a link to your website, and a one-line description text. </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingGold">
+                      <button class="accordion-button text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGold" aria-expanded="false" aria-controls="collapseGold"> 🥇 <b class="gold"> Gold sponsor </b>
+                      </button>
+                    </h2>
+                    <div id="collapseGold" class="accordion-collapse collapse" aria-labelledby="headingGold" data-bs-parent="#sponsorAccordion">
+                      <div class="accordion-body"> from 200 USD / 200 EUR per month. Your name or company name and logo displayed on this page, with a link to your website and a custom description text. Companies that have helped FreeCAD early on also appear under Gold sponsors. </div>
+                    </div>
+                  </div>
+                </div>
+                <p> The FPA's <a href="https://fpa.freecad.org/handbook/process/accepting-donations.html">donation rules</a> apply to all donations. </p>
+                <p> Instead of donating each month, you might find it more comfortable to make a one-time donation that, when divided by twelve, would give you right to enter a sponsoring tier. Don't hesitate to do so! </p>
+                <p> Choose freely the amount you wish to donate each month. </p>
+                <p> Please inform your forum name or twitter handle as a note in your transfer, or <a href=mailto:fpa@freecad.org>reach to us</a>, so we can give you proper credits! </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    function onClickArrow() {
+        document.getElementById('belowArrow').scrollIntoView();
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+      document.addEventListener('DOMContentLoaded', function() {
+          var animatedSpriteElements = document.querySelectorAll('.animated-sprite');
+
+          animatedSpriteElements.forEach(function(animatedSpriteElement) {
+              setAspectRatio(animatedSpriteElement);
+              setBackgroundSize(animatedSpriteElement);
+
+              window.addEventListener('scroll', function() {
+                  handleScroll(animatedSpriteElement);
+              });
+              handleScroll(animatedSpriteElement);
+          });
+      });
+
+  function setAspectRatio(element) {
+      var frameWidth = parseInt(element.getAttribute('data-frame-width'), 10);
+      var frameHeight = parseInt(element.getAttribute('data-frame-height'), 10);
+
+      if (frameWidth && frameHeight) {
+          var aspectRatioPercentage = (frameHeight / frameWidth) * 100;
+          element.style.setProperty('--bs-aspect-ratio', aspectRatioPercentage + '%');
+      }
+  }
+
+  function setBackgroundSize(element) {
+      var frameCount = parseInt(element.getAttribute('data-frame-count'), 10);
+      var framesPerRow = parseInt(element.getAttribute('data-frames-per-row'), 10) || frameCount;
+
+      var backgroundSizePercentage = framesPerRow * 100;
+      element.style.backgroundSize = backgroundSizePercentage + '% auto';
+  }
+
+  function handleScroll(element) {
+      var frameCount = parseInt(element.getAttribute('data-frame-count'), 10);
+      var elementRect = element.getBoundingClientRect();
+      var elementTopPosition = elementRect.top;
+      var viewportHeight = window.innerHeight;
+
+      var scrollProgress = (elementTopPosition - viewportHeight * 0.2) / (viewportHeight * 0.5);
+      scrollProgress = 1 - Math.max(0, Math.min(1, scrollProgress));
+      var currentFrame = Math.floor(scrollProgress * (frameCount - 1));
+
+      updateBackgroundPosition(element, currentFrame);
+  }
+
+  function updateBackgroundPosition(element, frame) {
+      var frameCount = parseInt(element.getAttribute('data-frame-count'), 10);
+      var framesPerRow = parseInt(element.getAttribute('data-frames-per-row'), 10) || frameCount;
+
+      var backgroundPositionX = -(frame % framesPerRow) * 100;
+      var backgroundPositionY = -Math.floor(frame / framesPerRow) * 100;
+
+      element.style.backgroundPosition = `${backgroundPositionX}% ${backgroundPositionY}%`;
+  }
+  </script>
+
+  <main id="main" class="container-fluid">
+    <section class="row section-cover d-flex align-items-center">
+      <div class="col-lg-8">
+        <img class="img-fluid" src="images/cover-photo.avif" alt="">
+      </div>
+
+      <div class="col-lg-4 text-center text-lg-start align-content-center order-lg-first">
+        <h1 class="home-title text-light mt-n5 mb-0 mt-lg-0"><img class="home-image" src="svg/freecad-home.svg" alt="FreeCAD" /></h1>
+        <h2 class="home-subtitle text-light mb-4">Your own 3D parametric modeler</h2>
+        <div class="flex-column flex-lg-row">
+          <a class="btn btn-light rounded-pill mt-2" role="button" href="downloads.php?lang=en">Download now</a>
+          <a class="btn btn-outline-light rounded-pill mt-2" role="button" href="https://wiki.freecad.org/Release_notes_1.1">See what's new</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="d-flex justify-content-center"><img id="floating-arrow" src="svg/icon-down.svg" onClick="onClickArrow()" onmouseover="" style="cursor: pointer;" alt="" /></div>
+
+    <a id="belowArrow"></a>
+
+    <section class="row section d-flex align-items-center justify-content-around rounded">
+      <div class="col-lg-7 rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by ppemawm">
+        <img class="img-fluid" src="images/screenshot-01.avif" alt="Screenshot 1"/>
+      </div>
+
+      <div class="col-lg-4 text-light text-center text-lg-start rounded text-backround">
+        <h3 class="section-title mt-3">Freedom to build what you want</h3>
+        <p class="section-body">
+          FreeCAD is an open-source parametric 3D modeler made primarily to
+          design real-life objects of any size. Parametric modeling allows you
+          to easily modify your design by going back into your model history
+          and changing its parameters.        </p>
+      </div>
+    </section>
+
+    <section class="row section d-flex align-items-center justify-content-around rounded">
+      <div class="col-lg-7 order-lg-last rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by r-frank">
+        <img class="img-fluid" src="images/screenshot-07.avif" alt="Screenshot 7"/>
+      </div>
+
+      <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround">
+        <h3 class="section-title mt-3">Create 3D from 2D & back</h3>
+        <p class="section-body">
+          FreeCAD allows you to sketch geometry constrained 2D shapes and use
+          them as a base to build other objects. It contains many components
+          to adjust dimensions or extract design details from 3D models to
+          create high quality production ready drawings.        </p>
+      </div>
+    </section>
+
+        <section class="row section d-flex align-items-center justify-content-around rounded">
+
+          <div class="col-lg-7 d-flex justify-content-center rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by ppemawm">
+            <div class="animated-sprite ratio ratio-4x3"
+                data-frame-count="39"
+                data-frames-per-row="12"
+                style="background-image: url('images/f16-main-landing-gear-spritesheet.avif')">
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround">
+            <h3 class="section-title mt-3">For professional design needs...</h3>
+            <p class="section-body whitelinks">
+              FreeCAD is a powerful and evolving open-source parametric 3D modeler, well-suited for many professional and technical tasks. Each new release marks a milestone in stability and usability. FreeCAD puts you in control - no licensing fees, no vendor lock-in. It's not just cost-effective - it’s yours to adapt and build upon.            </p>
+          </div>
+        </section>
+
+        <section class="row section d-flex align-items-center justify-content-around rounded">
+
+          <div class="col-lg-7 order-lg-last d-flex justify-content-center rounded model-backround p-2" data-bs-toggle="tooltip" title="Baked by Kris Wilk">
+            <div class="animated-sprite ratio"
+                data-frame-count="113"
+                data-frames-per-row="12"
+                data-frame-width="1190"
+                data-frame-height="940"
+                style="background-image: url('images/gingerbread-spritesheet.avif')">
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround">
+            <h3 class="section-title mt-3">...And for everything else</h3>
+            <p class="section-body whitelinks">
+              Whether you're prototyping, 3D printing, designing furniture, or learning CAD, FreeCAD offers the tools to support your creativity. With a strong community, extensive documentation, and a growing ecosystem of add-ons, it’s a great place to start - and to grow. No sign-up, no paywall, no restrictions. Just open-source freedom at your fingertips.            </p>
+          </div>
+        </section>
+
+    <section class="row section d-flex align-items-center justify-content-around rounded">
+      <div class="col-lg-7 rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by epileftric">
+        <img class="img-fluid" src="images/screenshot-03.avif" alt="Screenshot 3"/>
+      </div>
+
+      <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround">
+        <h3 class="section-title mt-3">Accessible, flexible & integrated</h3>
+        <p class="section-body">
+          FreeCAD is a multiplatform (Windows, Mac and Linux), highly
+          customizable and extensible software. It reads and writes to many
+          open file formats such as STEP, IGES, STL, SVG, DXF, OBJ, IFC, DAE
+          and many others, making it possible to seamlessly integrate it into
+          your workflow.        </p>
+      </div>
+    </section>
+
+    <section class="row section d-flex align-items-center justify-content-around rounded">
+      <div class="col-lg-7 order-lg-last rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by regis">
+        <img class="img-fluid" src="images/screenshot-08.avif" alt="Screenshot 8"/>
+      </div>
+
+      <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround">
+        <h3 class="section-title mt-3">Designed for your needs</h3>
+        <p class="section-body">
+          FreeCAD is designed to fit a wide range of uses including product
+          design, mechanical engineering and architecture. Whether you are a
+          hobbyist, a programmer, an experienced CAD user, a student or a
+          teacher, you will feel right at home with FreeCAD.        </p>
+      </div>
+    </section>
+
+    <section class="row section d-flex align-items-center justify-content-around rounded">
+      <div class="col-lg-7 rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by rider_mortagnais">
+        <img class="img-fluid" src="images/screenshot-05.avif" alt="Screenshot 5"/>
+      </div>
+
+      <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround pb-3">
+        <h3 class="section-title mt-3">And many more great features</h3>
+        <p class="section-body">
+          FreeCAD equips you with all the right tools for your needs. You get
+          modern Finite Element Analysis (FEA) tools, experimental CFD, dedicated BIM,
+          Geodata or CAM/CNC workbenches, a robot simulation module that
+          allows you to study robot movements and many more features. FreeCAD
+          really is a Swiss Army knife of general-purpose engineering
+          toolkits.        </p>
+        <a class="btn btn-light rounded-pill mt-3" role="button" href="features.php?lang=en">
+          Learn more        </a>
+      </div>
+    </section>
+
+    <section class="row section d-flex align-items-center justify-content-around rounded">
+      <div class="col-lg-7 order-lg-last rounded model-backround p-2" data-bs-toggle="tooltip" title="Modelled by bejant">
+        <img class="img-fluid" src="images/screenshot-06.avif" alt="Screenshot 6"/>
+      </div>
+
+      <div class="col-lg-4 text-light text-center text-lg-start px-md-4 rounded text-backround pb-3">
+        <h3 class="section-title mt-3">Want to contribute to FreeCAD?</h3>
+        <p class="section-body">
+          FreeCAD is a truly open source project and if you would like to help
+          fix bugs, implement new cool features or work on the documentation,
+          we invite you to join us and create a software that benefits the
+          whole community.        </p>
+        <a class="btn btn-light rounded-pill mt-3" role="button" href="https://github.com/FreeCAD/FreeCAD/">
+          Get involved        </a>
+      </div>
+    </section>
+  </main>
+
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+  <footer class="container-fluid footer-custom bg-dark text-center text-light">
+
+    <div class="justify-content-center my-3 my-md-5">
+      Get in touch!<br/>
+      <a href="https://forum.freecad.org/"><img class="icon-social m-2" src="svg/icon-forum-light.svg" alt="Forum"/></a>
+      <a href="https://github.com/FreeCAD/FreeCAD"><img class="icon-social m-2" src="svg/icon-github-light.svg" alt="GitHub"/></a>
+      <a href="https://social.freecad.org/@FreeCAD" rel="me"><img class="icon-social m-2" src="svg/icon-mastodon-light.svg" alt="Mastodon"/></a>
+      <a href="https://matrix.to/#/#FreeCAD_FreeCAD:gitter.im"><img class="icon-social m-2" src="svg/icon-matrix-light.svg" alt="Matrix"/></a>
+      <a href="irc://irc.libera.chat/freecad"><img class="icon-social m-2" src="svg/icon-irc-light.svg" alt="IRC" /></a>
+      <a href="https://gitter.im/FreeCAD/FreeCAD"><img class="icon-social m-2" src="svg/icon-gitter-light.svg" alt="Gitter.im"/></a>
+      <a href="https://discord.gg/w2cTKGzccC"><img class="icon-social m-2" src="svg/icon-discord-light.svg" alt="Discord"/></a>
+      <a href="https://www.reddit.com/r/freecad"><img class="icon-social m-2" src="svg/icon-reddit-light.svg" alt="Reddit"/></a>
+      <a href="https://twitter.com/FreeCADNews"><img class="icon-social m-2" src="svg/icon-twitter-light.svg" alt="Twitter"/></a>
+      <a href="https://www.facebook.com/FreeCAD"><img class="icon-social m-2" src="svg/icon-facebook-light.svg" alt="Facebook"/></a>
+      <a href="https://www.linkedin.com/groups/4295230"><img class="icon-social m-2" src="svg/icon-linkedin-light.svg" alt="LinkedIn"/></a>
+    </div>
+
+    <p class="footer-credits mt-3">
+      © The FreeCAD Team.    </p>
+
+    <p>This project is supported by:      <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=FreeCAD">
+        <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg" width="180px" alt="DigitalOcean">
+      </a>
+      ,
+      <a href="https://www.kipro-pcb.com/">
+          KiCad Services Corp.
+      </a>
+      and      <a href="sponsor.php?lang=en">other sponsors</a>
+    </p>
+
+    <div class="float-sm-end">
+    <a id="githubLink" href="#"><img class="icon-social m-3" src="svg/icon-github-light.svg" alt="GitHub" />Improve this
+      page on GitHub</a>
+    <script>document.getElementById("githubLink").setAttribute("href", "https://github.com/FreeCAD/FreeCAD-Homepage/blob/master/index.php");</script>    </div>
+
+  </footer>
+
+  <!-- Include Bootstrap JS files -->
+  <script src="js/bootstrap-5.3.3.bundle.min.js"></script>
+
+</body>
+</html>

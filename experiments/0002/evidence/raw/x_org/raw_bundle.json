@@ -1,0 +1,102 @@
+{
+  "domain": "x.org",
+  "canonical_url": "https://www.x.org/",
+  "category": "Open-source/project sites",
+  "collection_timestamp": "2026-08-17T19:42:10.878568+00:00",
+  "preflight": {
+    "domain": "x.org",
+    "dns_resolved": true,
+    "dns_ip": "151.101.3.52",
+    "status": "SUCCESS",
+    "final_url": "https://www.x.org/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://x.org/",
+      "http://www.x.org/",
+      "https://www.x.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 9454.97,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "xorg",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 40,
+      "scripts_count": 1,
+      "images_count": 4,
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "3466",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "max-age=600",
+        "Etag": "W/\"b73ea189174bb21fd5564ac3813842b45746d4e2286a5d2b910a3c000336c2cb\"",
+        "Expires": "Mon, 17 Aug 2026 19:52:09 UTC",
+        "Last-Modified": "Mon, 03 Aug 2026 13:27:44 GMT",
+        "X-Request-Id": "7362525388af8a2bba41c80668f14142",
+        "Content-Encoding": "br",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 17 Aug 2026 19:42:11 GMT",
+        "Via": "1.1 varnish",
+        "Age": "2",
+        "X-Served-By": "cache-hyd1500020-HYD",
+        "X-Cache": "HIT",
+        "X-Cache-Hits": "1",
+        "Vary": "Accept-Encoding, Origin",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "content_length": 9379
+    },
+    "text_length": 3403
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194215",
+    "last_seen": "20260817194215",
+    "earliest_iso": "2026-08-17T19:42:10.878568+00:00",
+    "latest_iso": "2026-08-17T19:42:10.878568+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/x_org/rendered.html",
+      "sha256": "c3203243f1cc6dbeae944dd340b6625950d42998e6492af11846eca0bdba4288",
+      "size_bytes": 9379
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/x_org/timeline.json",
+      "sha256": "b6c08dc27ea8dfff60054b6fd4cd0acfd9294967ef86c8bfc14cb3aaaf745ddc",
+      "size_bytes": 963
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "domain": "texas.gov",
+  "canonical_url": "https://www.texas.gov:443/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:27:27.325512+00:00",
+  "preflight": {
+    "domain": "texas.gov",
+    "dns_resolved": true,
+    "dns_ip": "75.2.85.206",
+    "status": "SUCCESS",
+    "final_url": "https://www.texas.gov:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://texas.gov/",
+      "https://www.texas.gov:443/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2648.29,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Texas.gov | The Official Website of the State of Texas",
+      "generator": "Gatsby 2.32.12",
+      "doctype": "HTML5/Standard",
+      "links_count": 26,
+      "scripts_count": 16,
+      "images_count": 3,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Last-Modified": "Wed, 12 Aug 2026 17:35:01 GMT",
+        "x-amz-server-side-encryption": "AES256",
+        "Server": "AmazonS3",
+        "Content-Encoding": "gzip",
+        "Date": "Mon, 17 Aug 2026 04:31:17 GMT",
+        "ETag": "W/\"a9ad2ec156609b2c76f05b0d39121eaf\"",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 343f95616a81dc6903ae0a85d63a0702.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS53-P2",
+        "X-Amz-Cf-Id": "y11FnGeAkd2h1nyHK7g3rPdYFC5rmSjPdZWsHPq0JDzRaEgVKkptOA==",
+        "Age": "53793"
+      },
+      "content_length": 166221
+    },
+    "text_length": 765
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192732",
+    "last_seen": "20260817192732",
+    "earliest_iso": "2026-08-17T19:27:27.325512+00:00",
+    "latest_iso": "2026-08-17T19:27:27.325512+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/texas_gov/rendered.html",
+      "sha256": "9a8bab70f9fabaf17450e2b3204a254a7d7610ecb95e988bc6103fc57893f42a",
+      "size_bytes": 166221
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/texas_gov/timeline.json",
+      "sha256": "885c46b08b9e5608fb99bb9c82f2952f1955769560b99fceb4189a4c3c4eae5d",
+      "size_bytes": 969
+    }
+  ]
+}

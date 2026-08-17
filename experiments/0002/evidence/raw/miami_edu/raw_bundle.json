@@ -1,0 +1,98 @@
+{
+  "domain": "miami.edu",
+  "canonical_url": "https://welcome.miami.edu/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:21:40.456935+00:00",
+  "preflight": {
+    "domain": "miami.edu",
+    "dns_resolved": true,
+    "dns_ip": "52.149.175.238",
+    "status": "SUCCESS",
+    "final_url": "https://welcome.miami.edu/",
+    "redirect_count": 3,
+    "redirect_chain": [
+      "https://miami.edu/",
+      "https://www.miami.edu/",
+      "http://welcome.miami.edu/",
+      "https://welcome.miami.edu/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4246.78,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "University of Miami",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 179,
+      "scripts_count": 19,
+      "images_count": 37,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:21:41 GMT",
+        "Server": "Apache",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Private-Network": "true",
+        "Upgrade": "h2,h2c",
+        "Connection": "Upgrade, Keep-Alive",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "Content-Security-Policy": "frame-ancestors 'self' *.miami.edu;",
+        "Content-Length": "17711",
+        "Keep-Alive": "timeout=5, max=100",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "content_length": 106240
+    },
+    "text_length": 865
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192147",
+    "last_seen": "20260817192147",
+    "earliest_iso": "2026-08-17T19:21:40.456935+00:00",
+    "latest_iso": "2026-08-17T19:21:40.456935+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/miami_edu/rendered.html",
+      "sha256": "16d1a6bdd8b3adb505e6739aa01df38a8dceaabea9d153de72b061dfcd9360c0",
+      "size_bytes": 106240
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/miami_edu/timeline.json",
+      "sha256": "a7a8a47b20f1e3f0106c45769a326ae8dafb2c6ba798c50bd0f19ea9539d4638",
+      "size_bytes": 969
+    }
+  ]
+}

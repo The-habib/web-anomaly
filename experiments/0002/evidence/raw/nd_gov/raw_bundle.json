@@ -1,0 +1,101 @@
+{
+  "domain": "nd.gov",
+  "canonical_url": "https://www.nd.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:05.829900+00:00",
+  "preflight": {
+    "domain": "nd.gov",
+    "dns_resolved": true,
+    "dns_ip": "165.234.159.38",
+    "status": "SUCCESS",
+    "final_url": "https://www.nd.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://nd.gov/",
+      "https://www.nd.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 3505.05,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home | North Dakota State Government - ND Portal",
+      "generator": "Drupal 11 (https://www.drupal.org)",
+      "doctype": "HTML5/Standard",
+      "links_count": 160,
+      "scripts_count": 9,
+      "images_count": 12,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 14:53:39 GMT",
+        "Server": "State of North Dakota",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Cache-Control": "max-age=43200, public",
+        "X-Drupal-Dynamic-Cache": "HIT",
+        "Content-language": "en",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "Vary": "Cookie",
+        "X-Drupal-Cache": "HIT",
+        "Last-Modified": "Mon, 17 Aug 2026 17:53:49 GMT",
+        "ETag": "\"1786989229\"",
+        "Content-Type": "text/html; charset=UTF-8",
+        "X-XSS-Protection": "1;  mode=block",
+        "Keep-Alive": "timeout=15, max=500",
+        "Connection": "Keep-Alive",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 96175
+    },
+    "text_length": 1302
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192613",
+    "last_seen": "20260817192613",
+    "earliest_iso": "2026-08-17T19:26:05.829900+00:00",
+    "latest_iso": "2026-08-17T19:26:05.829900+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nd_gov/rendered.html",
+      "sha256": "47b33b1795572fcd266b6daf825e5ebb76f3aa809bd996cbb1a8ab9b5c8e7233",
+      "size_bytes": 96175
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nd_gov/timeline.json",
+      "sha256": "d5a01bf439be43c499d498755cc2cc91b4eacd214296423a52bcb900bdb3ddf1",
+      "size_bytes": 965
+    }
+  ]
+}

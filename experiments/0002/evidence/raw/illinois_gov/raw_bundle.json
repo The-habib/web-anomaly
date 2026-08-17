@@ -1,0 +1,101 @@
+{
+  "domain": "illinois.gov",
+  "canonical_url": "https://www.illinois.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:26.348587+00:00",
+  "preflight": {
+    "domain": "illinois.gov",
+    "dns_resolved": true,
+    "dns_ip": "216.124.54.81",
+    "status": "SUCCESS",
+    "final_url": "https://www.illinois.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://illinois.gov/",
+      "https://www.illinois.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4252.87,
+    "content_type": "text/html;charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Illinois",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 48,
+      "scripts_count": 14,
+      "images_count": 17,
+      "headers": {
+        "Content-Type": "text/html;charset=utf-8",
+        "Server": "Apache",
+        "X-Dispatcher": "dispatcher2usgovwest1-28580712",
+        "X-Vhost": "publish illinois",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Mon, 17 Aug 2026 19:23:17 GMT",
+        "Accept-Ranges": "bytes",
+        "Content-Encoding": "gzip",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Length": "11939",
+        "Expires": "Mon, 17 Aug 2026 19:25:26 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Mon, 17 Aug 2026 19:25:26 GMT",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains"
+      },
+      "content_length": 67627
+    },
+    "text_length": 248
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192532",
+    "last_seen": "20260817192532",
+    "earliest_iso": "2026-08-17T19:25:26.348587+00:00",
+    "latest_iso": "2026-08-17T19:25:26.348587+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/illinois_gov/rendered.html",
+      "sha256": "ad9ce5c05bfb00c3b3f9e1b5eacb485462092dbdf43b50d6518729fe85be786f",
+      "size_bytes": 67627
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/illinois_gov/timeline.json",
+      "sha256": "b90d43edc9e4620842a3efad3d42ae93310ba1f8cb85813b5f54705eb07b5cef",
+      "size_bytes": 971
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "domain": "gnu.org",
+  "canonical_url": "https://www.gnu.org/",
+  "category": "Open-source/project sites",
+  "collection_timestamp": "2026-08-17T19:38:35.101181+00:00",
+  "preflight": {
+    "domain": "gnu.org",
+    "dns_resolved": true,
+    "dns_ip": "209.51.188.116",
+    "status": "SUCCESS",
+    "final_url": "https://www.gnu.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://gnu.org/",
+      "https://www.gnu.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 3195.26,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The GNU Operating System and the Free Software Movement",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 116,
+      "scripts_count": 0,
+      "images_count": 13,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:38:35 GMT",
+        "Server": "Apache",
+        "Content-Location": "home.html",
+        "Vary": "negotiate,accept-language,Accept-Encoding",
+        "TCN": "choice",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Frame-Options": "sameorigin",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "(null)",
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "max-age=0",
+        "Expires": "Mon, 17 Aug 2026 19:38:35 GMT",
+        "Content-Encoding": "gzip",
+        "Content-Length": "9775",
+        "Keep-Alive": "timeout=5, max=100",
+        "Connection": "Keep-Alive",
+        "Content-Type": "text/html",
+        "Content-Language": "en"
+      },
+      "content_length": 31472
+    },
+    "text_length": 2998
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193840",
+    "last_seen": "20260817193840",
+    "earliest_iso": "2026-08-17T19:38:35.101181+00:00",
+    "latest_iso": "2026-08-17T19:38:35.101181+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/gnu_org/rendered.html",
+      "sha256": "2675f99c91376a325f20140c256748347e3f41883f4e757ab16f1638588a150c",
+      "size_bytes": 31472
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/gnu_org/timeline.json",
+      "sha256": "d742f8e72a87ab5cf8fae8fec956a87054f2bab29bc88fd71fd24836cd7bd628",
+      "size_bytes": 966
+    }
+  ]
+}

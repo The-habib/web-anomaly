@@ -1,0 +1,99 @@
+{
+  "domain": "postgresql.org",
+  "canonical_url": "https://www.postgresql.org/",
+  "category": "Open-source/project sites",
+  "collection_timestamp": "2026-08-17T19:40:44.209032+00:00",
+  "preflight": {
+    "domain": "postgresql.org",
+    "dns_resolved": true,
+    "dns_ip": "217.196.149.50",
+    "status": "SUCCESS",
+    "final_url": "https://www.postgresql.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://postgresql.org/",
+      "https://www.postgresql.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2779.79,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "PostgreSQL: The world's most advanced open source database",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 86,
+      "scripts_count": 2,
+      "images_count": 9,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Mon, 17 Aug 2026 19:36:05 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Frame-Options": "DENY",
+        "Content-Security-Policy": "default-src 'self' ; img-src * data: ; script-src 'unsafe-eval' 'self' www.google-analytics.com ssl.google-analytics.com www.googletagmanager.com tagmanager.google.com data: ; connect-src 'self' www.google-analytics.com ssl.google-analytics.com ; media-src 'self' ; style-src 'self' fonts.googleapis.com tagmanager.google.com ; font-src 'self' fonts.gstatic.com data: ; frame-ancestors 'none' ; report-uri https://csp-report.postgresql.org/",
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "X-XSS-Protection": "1; mode=block",
+        "Content-Encoding": "gzip",
+        "Vary": "Accept-Encoding",
+        "X-Varnish": "177728863 187174056",
+        "Age": "279",
+        "Via": "1.1 zetar (Varnish/9.0)",
+        "Accept-Ranges": "bytes",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Connection": "keep-alive",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 23836
+    },
+    "text_length": 2504
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194049",
+    "last_seen": "20260817194049",
+    "earliest_iso": "2026-08-17T19:40:44.209032+00:00",
+    "latest_iso": "2026-08-17T19:40:44.209032+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/postgresql_org/rendered.html",
+      "sha256": "1a43d1965fc699700e5f3682243810a20f73dae96a3da0142277d2c8f14eb94f",
+      "size_bytes": 23836
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/postgresql_org/timeline.json",
+      "sha256": "64fe747bcfdf791faea8b1217f82376f2c6244ca4374eb43a25fe3d815dd28e7",
+      "size_bytes": 973
+    }
+  ]
+}

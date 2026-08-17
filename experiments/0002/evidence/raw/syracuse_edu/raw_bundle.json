@@ -1,0 +1,99 @@
+{
+  "domain": "syracuse.edu",
+  "canonical_url": "https://www.syracuse.edu:443/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:22:21.026541+00:00",
+  "preflight": {
+    "domain": "syracuse.edu",
+    "dns_resolved": true,
+    "dns_ip": "75.2.68.15",
+    "status": "SUCCESS",
+    "final_url": "https://www.syracuse.edu:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://syracuse.edu/",
+      "https://www.syracuse.edu:443/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4584.45,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home - Syracuse University",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 199,
+      "scripts_count": 12,
+      "images_count": 12,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:22:19 GMT",
+        "Content-Encoding": "br",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "same-origin",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Vary": "Cookie,Accept-Encoding, Origin",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 c402a771da86a02b525e7f764ab34a9e.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM78-P8",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-Amz-Cf-Id": "cdo-3w__WuG_MQgwonu7Al-PpbabPVFbb-dsajWpSTwUFWhXNT0_8A==",
+        "Age": "2",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "content_length": 224577
+    },
+    "text_length": 2566
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192227",
+    "last_seen": "20260817192227",
+    "earliest_iso": "2026-08-17T19:22:21.026541+00:00",
+    "latest_iso": "2026-08-17T19:22:21.026541+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/syracuse_edu/rendered.html",
+      "sha256": "14c9334fc42bc316d4b74640540a84794221fea533139b620fadcd7606aabd33",
+      "size_bytes": 224577
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/syracuse_edu/timeline.json",
+      "sha256": "ee8aa2eb95e48f3965068bcbef0444201068be6ad635c64aa54fe334c7d63502",
+      "size_bytes": 972
+    }
+  ]
+}

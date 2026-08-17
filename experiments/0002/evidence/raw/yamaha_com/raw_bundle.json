@@ -1,0 +1,95 @@
+{
+  "domain": "yamaha.com",
+  "canonical_url": "https://www.yamaha.com/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:36:57.789574+00:00",
+  "preflight": {
+    "domain": "yamaha.com",
+    "dns_resolved": true,
+    "dns_ip": "216.239.32.21",
+    "status": "SUCCESS",
+    "final_url": "https://www.yamaha.com/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://yamaha.com/",
+      "http://www.yamaha.com/",
+      "https://www.yamaha.com/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1359.32,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Yamaha Corporation - Global",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 6,
+      "scripts_count": 12,
+      "images_count": 1,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Server": "Apache",
+        "X-Amz-Cf-Pop": "BOM78-P3",
+        "X-Amz-Cf-Id": "s0F0XwqMJ8aAG5L2-tXCpfYKpDbborbwAo60meHPNCcztZY64DAfNQ==",
+        "X-Akamai-Transformed": "9 1851 0 pmb=mRUM,2",
+        "Content-Encoding": "gzip",
+        "Date": "Mon, 17 Aug 2026 19:36:58 GMT",
+        "Content-Length": "3450",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Server-Timing": "cdn-cache; desc=MISS, edge; dur=20, origin; dur=143, ak_p; desc=\"1786995417927_390167594_1048740655_16253_7236_29_19_-\";dur=1"
+      },
+      "content_length": 9141
+    },
+    "text_length": 101
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193703",
+    "last_seen": "20260817193703",
+    "earliest_iso": "2026-08-17T19:36:57.789574+00:00",
+    "latest_iso": "2026-08-17T19:36:57.789574+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/yamaha_com/rendered.html",
+      "sha256": "0a7a45369b15534987d8b8fe0a608728bfa59dedfa4fbe4a11772ffbfa4bf416",
+      "size_bytes": 9141
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/yamaha_com/timeline.json",
+      "sha256": "8e3eb08f5df82bd574a6108faf3d002d13eec0007efb4a41a6650c0e72c49aa2",
+      "size_bytes": 968
+    }
+  ]
+}

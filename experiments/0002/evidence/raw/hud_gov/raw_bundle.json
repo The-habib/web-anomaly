@@ -1,0 +1,61 @@
+{
+  "domain": "hud.gov",
+  "canonical_url": "https://hud.gov",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:25.400800+00:00",
+  "preflight": {
+    "domain": "hud.gov",
+    "dns_resolved": true,
+    "dns_ip": "170.97.67.13",
+    "status": "CONNECTION_ERROR",
+    "final_url": "https://hud.gov",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": null,
+    "latency_ms": 5019.31,
+    "content_type": null,
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": "HTTPSConnectionPool(host='hud.gov', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='hud.gov', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+  },
+  "live_evidence": {
+    "status_code": null,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": null,
+    "last_seen": null,
+    "earliest_iso": null,
+    "latest_iso": null,
+    "years_span": 0,
+    "total_captures": 0,
+    "unique_years_observed": 0,
+    "observed_year_ratio": 0.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 0.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "unproven",
+    "archive_sources": [],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/hud_gov/timeline.json",
+      "sha256": "8d77f2cac0546fc6bb58b2e2eef61f4aeae2bb0255a80467314efd9a7b28b515",
+      "size_bytes": 521
+    }
+  ]
+}

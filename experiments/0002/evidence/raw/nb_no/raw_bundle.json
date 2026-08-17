@@ -1,0 +1,98 @@
+{
+  "domain": "nb.no",
+  "canonical_url": "https://www.nb.no/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:30:16.859113+00:00",
+  "preflight": {
+    "domain": "nb.no",
+    "dns_resolved": true,
+    "dns_ip": "158.39.129.53",
+    "status": "SUCCESS",
+    "final_url": "https://www.nb.no/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://nb.no/",
+      "https://www.nb.no/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4019.0,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Nasjonalbiblioteket | Norske b\u00f8ker, aviser, tidsskrift og bilder p\u00e5 nett",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 143,
+      "scripts_count": 44,
+      "images_count": 9,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Mon, 17 Aug 2026 19:30:17 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "_nblb=66cdec2b94943d78a07cd6b417282990; expires=Tue, 18-Aug-26 07:30:17 GMT; max-age=43200; path=/",
+        "Vary": "Accept-Encoding, Origin",
+        "Link": "<https://www.nb.no/>; rel=shortlink",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Security-Policy": "frame-ancestors 'self' ai.nb.no tools.nb.no produksjon.nb.no dev.produksjon.nb.no;",
+        "Access-Control-Allow-Origin": "https://www.nb.no",
+        "Access-Control-Allow-Credentials": "true"
+      },
+      "content_length": 166874
+    },
+    "text_length": 212
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193023",
+    "last_seen": "20260817193023",
+    "earliest_iso": "2026-08-17T19:30:16.859113+00:00",
+    "latest_iso": "2026-08-17T19:30:16.859113+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nb_no/rendered.html",
+      "sha256": "f2654e393bcf57858f84cfb0934a72446043506b57447803883a7542c1c36292",
+      "size_bytes": 166874
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nb_no/timeline.json",
+      "sha256": "731e8c898f32922333ce41222ff3d8c8dfb7076f71610c86c8d41965d84dfc54",
+      "size_bytes": 965
+    }
+  ]
+}

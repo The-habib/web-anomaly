@@ -1,0 +1,98 @@
+{
+  "domain": "ou.edu",
+  "canonical_url": "https://www.ou.edu/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:22:01.153030+00:00",
+  "preflight": {
+    "domain": "ou.edu",
+    "dns_resolved": true,
+    "dns_ip": "156.110.247.18",
+    "status": "SUCCESS",
+    "final_url": "https://www.ou.edu/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://ou.edu/",
+      "https://www.ou.edu/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4125.53,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The University of Oklahoma",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 82,
+      "scripts_count": 10,
+      "images_count": 12,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:22:01 GMT",
+        "Server": "Apache/2.4.6 (Red Hat Enterprise Linux) OpenSSL/1.0.1e-fips Communique/4.3.5 mod_fcgid/2.3.9",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Mon, 17 Aug 2026 19:17:31 GMT",
+        "ETag": "\"1c296-65943059649ed-gzip\"",
+        "Accept-Ranges": "bytes",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "Webcomm-Dispatcher": "stella",
+        "Content-Security-Policy": "upgrade-insecure-requests;",
+        "Content-Length": "33241",
+        "Keep-Alive": "timeout=5, max=100",
+        "Connection": "Keep-Alive",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Set-Cookie": "BIGipServerwww_ou_edu_cms_servers=520166154.20480.0000; path=/; Httponly; Secure"
+      },
+      "content_length": 115350
+    },
+    "text_length": 1029
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192202",
+    "last_seen": "20260817192202",
+    "earliest_iso": "2026-08-17T19:22:01.153030+00:00",
+    "latest_iso": "2026-08-17T19:22:01.153030+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/ou_edu/rendered.html",
+      "sha256": "937d61d02f03608e72e1fd46c8a14db5f995e3e9a04978ac8f015d3530d88f51",
+      "size_bytes": 115350
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/ou_edu/timeline.json",
+      "sha256": "5fc692a96a9d0f1d818204170326dcd1c05d80be3ef64f7e40e6fea8584cd93f",
+      "size_bytes": 966
+    }
+  ]
+}

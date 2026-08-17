@@ -1,0 +1,102 @@
+{
+  "domain": "australia.gov.au",
+  "canonical_url": "https://my.gov.au/en/services?redirectFrom=australia.gov.au",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:18.817276+00:00",
+  "preflight": {
+    "domain": "australia.gov.au",
+    "dns_resolved": true,
+    "dns_ip": "45.60.195.154",
+    "status": "SUCCESS",
+    "final_url": "https://my.gov.au/en/services?redirectFrom=australia.gov.au",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://australia.gov.au/",
+      "https://www.australia.gov.au/",
+      "https://my.gov.au/en/services?redirectFrom=australia.gov.au"
+    ],
+    "status_code": 200,
+    "latency_ms": 1353.19,
+    "content_type": "text/html;charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Find government payments and services | myGov",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 35,
+      "scripts_count": 17,
+      "images_count": 8,
+      "headers": {
+        "Content-Type": "text/html;charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:23:21 GMT",
+        "Content-Encoding": "gzip",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63072000; includeSubdomains;",
+        "Content-Security-Policy": "default-src 'self' my.gov.au; script-src 'self' 'unsafe-inline' 'unsafe-eval' www.youtube.com s.ytimg.com assets.adobedtm.com dynatrace.humanservices.gov.au dynatrace.servicesaustralia.gov.au; connect-src blob: 'self' adobedc.demdex.net docs.apigw.my.gov.au edge.adobedc.net *.my.gov.au my.gov.au mygov-dls-bff.apps.openshift-prod1-dca1.csda.gov.au mygov-dls-bff.apps.openshift-prod1-dcb1.csda.gov.au swift.csda.gov.au stats.g.doubleclick.net dynatrace.humanservices.gov.au dynatrace.servicesaustralia.gov.au *.dynamsoft.com https://127.0.0.1:* ws://127.0.0.1:* wss://127.0.0.1:* data: cdn.jsdelivr.net w3.org/svg/2000; img-src 'self' data: blob: stats.g.doubleclick.net swift.csda.gov.au; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; object-src 'self' blob: swift.csda.gov.au; frame-src 'self' blob: bluey-webchat.azurewebsites.net my.gov.au *.my.gov.au swift.csda.gov.au www.youtube.com www.youtube-nocookie.com w.soundcloud.com servicesaustralia.vudoo.io",
+        "X-Vhost": "publish",
+        "X-Content-Type-Options": "nosniff",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 f917d4cb71e9de10786ba0732f0bb228.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM54-P1",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-Amz-Cf-Id": "ZUSkQNHO_71kAKVHnwpgYhQykWFoFNJmrolrNWs8OPNnTPhk8FbKnQ==",
+        "Age": "45748"
+      },
+      "content_length": 80595
+    },
+    "text_length": 159
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192419",
+    "last_seen": "20260817192419",
+    "earliest_iso": "2026-08-17T19:24:18.817276+00:00",
+    "latest_iso": "2026-08-17T19:24:18.817276+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/australia_gov_au/rendered.html",
+      "sha256": "fcf90859dbac3fe0a427a7e542d973ebbd2c587ed3a1bbf966265ce5b7825e6f",
+      "size_bytes": 80595
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/australia_gov_au/timeline.json",
+      "sha256": "c7145cd914a573ee7767551b57483d75911638bca744e68cdf2224e7579386b5",
+      "size_bytes": 975
+    }
+  ]
+}

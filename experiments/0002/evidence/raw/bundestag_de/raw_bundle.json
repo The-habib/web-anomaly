@@ -1,0 +1,99 @@
+{
+  "domain": "bundestag.de",
+  "canonical_url": "https://www.bundestag.de/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:30.943844+00:00",
+  "preflight": {
+    "domain": "bundestag.de",
+    "dns_resolved": true,
+    "dns_ip": "46.243.122.48",
+    "status": "SUCCESS",
+    "final_url": "https://www.bundestag.de/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://bundestag.de/",
+      "https://www.bundestag.de/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2995.27,
+    "content_type": "text/html;charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Startseite - Deutscher Bundestag",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 521,
+      "scripts_count": 39,
+      "images_count": 12,
+      "headers": {
+        "date": "Mon, 17 Aug 2026 19:20:59 GMT",
+        "content-type": "text/html;charset=UTF-8",
+        "content-length": "39817",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Accept-Encoding",
+        "x-frame-options": "DENY",
+        "content-language": "de",
+        "content-encoding": "gzip",
+        "x-ua-compatible": "IE=edge",
+        "age": "211",
+        "accept-ranges": "bytes",
+        "x-xss-protection": "1; mode=block",
+        "x-content-type-options": "nosniff",
+        "content-security-policy": "default-src 'self'; connect-src 'self' https://webtv.bundestag.de https://playerservice.cdn.tv1.eu https://statistik.bundestag.de; font-src 'self' data:; form-action 'self'; frame-src 'self' https://www.bundestag.de https://webtv.bundestag.de https://*.bundestag.de https://bundestag.de https://*.tv1.eu https://media.video.taxi; img-src https: data: *; object-src 'self' https://www.bundestag.de https://bundestag.de; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://statistik.bundestag.de https://webtv.bundestag.de https://*.tv1.eu; style-src 'self' 'unsafe-inline'; frame-ancestors 'self' https://www.bundestag.de https://bundestag.de",
+        "x-permitted-cross-domain-policies": "none",
+        "cache-control": "max-age=600",
+        "strict-transport-security": "max-age=31536000"
+      },
+      "content_length": 270662
+    },
+    "text_length": 561
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192438",
+    "last_seen": "20260817192438",
+    "earliest_iso": "2026-08-17T19:24:30.943844+00:00",
+    "latest_iso": "2026-08-17T19:24:30.943844+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/bundestag_de/rendered.html",
+      "sha256": "564d004fae570442648fca75792a2abb0feaeefec11718c5af3bc8793a51a1b5",
+      "size_bytes": 270662
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/bundestag_de/timeline.json",
+      "sha256": "866db896bc0f47cada286a9930074cb034e8ed239b7622dae7186fd0f49d15e0",
+      "size_bytes": 986
+    }
+  ]
+}

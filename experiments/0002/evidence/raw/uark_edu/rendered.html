@@ -1,0 +1,1920 @@
+<!DOCTYPE html><html lang="en"><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N5Z7HW');</script>
+   
+   
+   		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+   		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+   
+   
+   		<script>
+
+			document.addEventListener("DOMContentLoaded", (event) => {
+
+
+			
+			function setVideoSource() {
+				const videoPlayer = document.getElementById('hero-video');
+				const mp4Source = document.getElementById('mp4Source');
+				const webmSource = document.getElementById('webmSource');
+
+				const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+				 let useHighQuality = false;
+ 
+				if (connection) {
+					const { effectiveType, downlink, rtt } = connection;
+
+					//console.log("Network Info:", connection);
+
+					// 1. Check for 5g or 4g type
+					if (effectiveType === "4g" || effectiveType === "5g") {
+						useHighQuality = true;
+					}
+
+					// 2. Check downlink speed (most accurate)
+					if (downlink && downlink >= 3) {  // 3 Mbps or higher is safe for 1080p
+						useHighQuality = true;
+					}
+
+					// 3. Check latency — high latency = inconsistent network
+					if (rtt && rtt > 150) {
+						useHighQuality = false;  // too laggy → use low quality
+					}
+
+				} else {
+					// No network info → be safe and use low quality
+					useHighQuality = false;
+				}
+
+
+				var supportsWebM = videoPlayer.canPlayType('video/webm') !== '';
+
+				if (useHighQuality) {
+					if (supportsWebM) {
+						webmSource.src = webmSource.dataset.srcWifi;
+					} else {
+						mp4Source.src = mp4Source.dataset.srcWifi;
+					}
+				} else {
+					if (supportsWebM) {
+						webmSource.src = webmSource.dataset.srcCellular;
+					} else {
+						mp4Source.src = mp4Source.dataset.srcCellular;
+					}
+				}
+
+				videoPlayer.load();
+				videoPlayer.play();
+			}
+			
+			// Call the function on page load
+			setVideoSource();
+			
+			
+			gsap.registerPlugin(MotionPathPlugin,DrawSVGPlugin);	
+			document.body.classList.add('loaded');
+
+			let paths = document.querySelectorAll("path");
+			const svgns = "http://www.w3.org/2000/svg";
+			const anim = gsap.timeline();
+
+			gsap.set("svg", { opacity: 1 });
+			gsap.set("path", { opacity: 1 });
+
+
+
+			// use drawSVG to animate in the paths
+			anim.from("path", {
+			drawSVG: 25,
+			duration: 2.2,
+			opacity: 0.2,
+			stagger: {
+			each: 0.15
+			},
+			ease: "none"
+			})
+			.to("#imagine-text", {
+			duration: 1.35,
+			opacity: 1,
+			transformOrigin: "left bottom",
+			scale: 0.65
+			}).to("#letters", {
+			strokeWidth: 6,
+			duration: 1.5,
+			ease: "ease.in"
+			})
+
+			/* undraw method
+			.to("path", {
+			drawSVG: 0,
+			duration: 0.75,
+			opacity: 1,
+			stagger: {
+			each: 0.05
+			},  
+			ease: "none"
+			})
+			*/
+			});
+
+		document.addEventListener("DOMContentLoaded", () => {
+			document.fonts.ready.then(() => {
+			gsap.set("#fadeText", { opacity: 0 });
+			const animWhat = gsap.timeline();
+
+			animWhat.to("#fadeText", {
+			duration: 0.75,
+			delay: 4.2,
+			opacity: 1,
+			x: 20,
+			y: 0
+			});
+
+			//end onFontReady
+			});
+		});
+
+		//</script>
+   
+   
+   
+   
+   		
+   <style>
+			
+			/* alert styling */
+			
+			#UarkSiteAlert {
+			    border: none;
+    			border-radius: 0;
+			}
+			
+
+			
+			
+			/* on page styles */
+
+
+			.noselect {
+			pointer-events: none;
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			-khtml-user-select: none; /* Konqueror HTML */
+			-moz-user-select: none; /* Old versions of Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently
+			supported by Chrome, Edge, Opera and Firefox */
+			}
+
+
+			.fix-size {
+			height: max-content;
+			max-height: min-content;
+
+			video {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+			cursor: pointer;
+			}
+			}
+
+			#razorback-video {
+			cursor: pointer;
+			}
+
+			@media (min-width: 1400px) {
+			.fix-size {
+			height: calc(100vh - 250px);
+			max-height: fit-content;
+			}		
+			}
+
+			/* BEGIN GSAP CSS */
+			#letters {
+			filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+			}
+			#imagine-text {
+			max-width: 85%;
+			max-height: 100%;
+			opacity: 0;
+			}
+			.video-title {
+			left: 10%;
+			}
+			.animate-image {
+			transform: scale(0.5);
+			opacity: 0;
+			}
+			.split {
+			opacity: 1;
+			font-size: clamp(2rem, 5rem, 3vw);
+			letter-spacing: 0.05rem;
+			will-change: transform;
+			}
+			.split * {
+			will-change: transform;
+			}
+			#fadeText {
+			opacity: 0;
+			}
+			/* END GSAP CSS */
+
+			/* Custom styling for the Bootstrap alerts */
+			.alert-razalert-weather {
+			background-color: #e8f4fd !important;
+			border-color: #c5e1f9 !important;
+			color: #333 !important;
+			}
+			.alert-razalert-weather p, .alert-razalert-weather a{
+			color: #333 !important;
+			}
+			.alert-razalert-weather svg { color:#019EE2 }
+			.alert-razalert {
+			background-color: #FFDFDE !important;
+			border-color: #FF171A !important;
+			color: #333 !important;
+			}
+			.alert-razalert svg { color: #FF171A !important }
+			.alert-razalert-warning {
+			background-color: #faf2e1 !important;
+			border-color: #e29509 !important;
+			color: #333 !important;
+			}
+			.alert-razalert-warning svg { color: #e29509 !important }
+			.alert-info p { color: #333; }
+
+			.alert.alert-success.alerts-only.d-flex.align-items-start {
+			background-color: green;
+			}
+			.alert.alert-danger.alerts-only.d-flex.align-items-start {
+			background-color: #8b0000;
+			}
+			.alert.alert-info.alerts-only.d-flex.align-items-start {
+			background-color: #0076e9;
+			}
+
+			.alert.alert-success i.fa-solid.fa-triangle-exclamation.fa-3x {
+			display: none;
+			}
+			
+
+			/***********************************************************************************/
+			/***********************************************************************************/
+			/************************************Media Queries**********************************/
+			/***********************************************************************************/
+			/***********************************************************************************/
+			@media screen and (min-width : 320px) 
+			{
+			.video-title {
+			left: 34px;
+			}
+			.video-link-block a{
+			font-size: 16px;
+			}
+			}
+			
+			#razorbackvideo.photo-box-container {
+				min-height: initial !important;
+				max-height: 620px;
+		    }
+
+			
+
+
+			}
+
+
+			/* Extra Small Devices, Phones */ 
+			@media screen and (min-width : 480px)
+			{
+				.mypath-primary q {
+					font-size: 26px;
+				}
+			
+				.video-title {
+				left: 60px;
+				}
+				.video-link-block a{
+				font-size: 20px;
+				}
+
+				#razorbackvideo.photo-box-container {
+					min-height: initial !important;
+					height: 600px;
+				}
+				
+				#shortTakePrimary {
+					margin-left: -20px;
+					font-size: 1.25em;
+					line-height: .05em;
+					vertical-align: -.075em;
+				}
+			
+			
+			}
+			
+			/* Small Devices, Tablets */
+			@media screen and (min-width : 768px) 
+			{
+			
+			.mypath-primary q {
+					font-size: 33px;
+				}
+			
+			#shortTakePrimary {
+				font-size: 3em;
+				margin-left: -60px;
+			}
+			
+			
+			#razorbackvideo.photo-box-container {
+     		   min-height: 740px !important;
+		    }
+
+
+
+			}
+
+			/* Medium Devices, Desktops */
+			@media screen and (min-width : 992px) 
+			{	
+
+
+			}
+
+			/* Large Devices, Wide Screens */
+			@media screen and (min-width : 1200px) 
+			{ 	
+
+
+
+			}	
+
+
+			/* Extra Large Devices, Extra Wide Screens */
+			@media screen and (min-width : 1400px) 
+			{ 	
+
+
+
+			}
+			
+			
+		
+			
+			
+			
+			
+		</style>
+   
+   	<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<title>University of Arkansas</title>
+   <meta property="og:title" content="">
+   <meta property="og:site_name" content="">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://www.uark.edu/index.php">
+   	
+   
+   <meta name="Description" content="">
+   	
+   <meta name="Keywords" content="">
+   	
+   <meta name="Author" content="">
+   	
+   
+<!-- DO NOT EDIT THIS FILE IN THE CMS  !!! -->
+<!-- DO NOT EDIT THIS FILE IN THE CMS  !!! -->
+<!-- DO NOT EDIT THIS FILE IN THE CMS  !!! -->
+<script async="async" src="https://applygsie.uark.edu/ping">/**/</script>
+<script async="async" src="https://applyundergrad.uark.edu/ping">/**/</script>
+
+  <script async="async" src="https://www.google-analytics.com/analytics.js"></script>
+  <!-- Jquery and bootstrap loaded in xsl/common.xsl file -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://www.uark.edu/_resources/js/left-nav.js"></script>
+<script src="https://www.uark.edu/_resources/js/menu-nav-mobile.js"></script>
+<script defer src="https://kit.fontawesome.com/023239c67e.js" crossorigin="anonymous"></script>
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****@**@@@@@*@@@**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*^^*`^*<<****<<*^^<*^***^***@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^^^^^*@@*@***^^<^<*^***@*^*@@*<``^^**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*<^^^^@@******^^**@@@@@******^```@@@^*@**@*<^*@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*<^^^*@@@@@@***@@@@@@@@@@@@@@@@@@@@@*^^@@*``*@@@@@*<*@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@*******@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**@***@@@@@@@*<^@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@*<<*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**`^^**^@@@@@@@@@@@@@@@@***@*`^^^@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@*^***@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*^```*@@@@@@@@@@@@@*```*@@*@<<@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@^****<^^**<@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@^`*@@@@@@@@@@@@@*^<`^*@@@@*^*@@@@@@@@@@@@@@@-->
+<!--@@@@@******`*@@*@@<*`*@@@@@@@@@@@@@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*^@@@@@@@@@@@@@@@@*@*@@@@@@@@****@@@@@@@@@@@-->
+<!--@@**^^*****`*******`^@@@@@@@@@@@@@@@*<*@@@@@@@@@@@@@@@@@@@@@@@@@@@*@@@@@@@@@@@@@@@@@@@*^*@@*^@@@@@****@@@@@@@@-->
+<!--@****^<*^^^<^<<^<^``*@@@@@@@@@@@@@@@@**^*@@@*@@@@@@@@@@@@@@@@@@@@@@@@*@@@@@@@@@@@@*****^@^*@^@@@@@@@*^<^`<***@-->
+<!--@@@@@@@**@@@@@@**^*`<@@@@@@@@@@@@@@@@@^*^`*@`@@@@@@@@@@@@@@@@@@@@@@@@*`@@@@@@@@@@@*`^**`@@**^@@@@@@@@@**@@@@`*-->
+<!--@@@@@@@@@@@@@@@@@^**`@@@@@@@@@@@@@@@@@<**````^***@@@@@@@@@@@@@@@@@@@@@^`*@@@@@@@@@@@@@*`**`^*^^*@@@@@@@**^**@@-->
+<!--@@@@@@@@@@@@@@@@@@^<^`@@@@@@@<*@@@@@@*`*^`^<<^^@*`^@@@@@@@@@@@@@@@@@*@@^``*@@@@@@@@@@@@@*******``^*@*^^^*@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@<<*^*@@@@@@^^*@@*^^^<****@*^*``*******@@@@@@@@@@@**@*`````^*^^***********@@@*^`^^^**@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@*`*`^@@@@@@*********@@@@@@@``````````````^@@@@@@@^`^*********************<**@@@^*@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@*<*`@@@@@@@@@@@@@@****@@*`````````````^*@@@@@@*^``*^***@@@@@@@@@@@@@@@@@@@****@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@*^*`@@@@@@@@@**^^^^<<**^`````````^**@@@@@@@*^``^**^@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@**<^@@@@@@<^<^<<<*@@*^^<^```<*@@@@@@@@@@^```^****@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@***<@****<<^<*@@@@@@@@@*^*^^<^^*@@@@*@*^```**^@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@^^<<<****@@@@@@@@@@@@@@@@@@*<**<^<**^^******@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<!--
+       _                                                     _      ___,        _                             
+      (_|    |         o                   o                | |    /   |       | |                            
+        |    |   _  _          _   ,_    ,  _|_          __ | |   |    |   ,_  | |  __,   _  _    ,  __,   ,  
+        |    |  / |/ | |  |  ||/  /  |  / \| |  |   |   /  \|/    |    |  /  | |/_)/  |  / |/ |  / \/  |  / \_ 
+         \__/\_/  |  |_/_/ \/ |__/   |_/ \/|_/_/ \_/|/  \__/|__/   \__/\_/   |_/ \_|_/|_/  |  |_/ \/\_/|_/ \/  
+                                                   /|       |\   __                                  _  __    
+                                                   \|       |/  |_  _    __  _| _  _|    o __    /| (_)  //|  
+                                                                |  (_)|_|| |(_|(/_(_|    | | |    | (_) /  | 
+-->
+<!--
+UNIVERSITY OF ARKANSAS
+ - - - - - - - -  
+https://uark.edu
+ - - - - - - - - 
+-->
+
+
+<!-- DO NOT EDIT THIS FILE IN THE CMS  !!! -->
+<!-- DO NOT EDIT THIS FILE IN THE CMS  !!! -->
+<!-- DO NOT EDIT THIS FILE IN THE CMS  !!! -->
+
+<meta name="searchCrawler:sectionType" content="UARK"/>
+<link rel="shortcut icon" href="https://www.uark.edu/_resources/includes-22/assets/icons/favicon.ico"/><link rel="icon" type="image/png" sizes="16x16" href="https://www.uark.edu/_resources/includes-22/assets/icons/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="https://www.uark.edu/_resources/includes-22/assets/icons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="48x48" href="https://www.uark.edu/_resources/includes-22/assets/icons/favicon-48x48.png"/><link rel="manifest" href="https://www.uark.edu/_resources/includes-22/assets/icons/manifest.json"/><meta name="mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#fff"/><meta name="application-name" content="UARK"/><link rel="apple-touch-icon" sizes="57x57" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="167x167" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-167x167.png"/><link rel="apple-touch-icon" sizes="180x180" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-180x180.png"/><link rel="apple-touch-icon" sizes="1024x1024" href="https://www.uark.edu/_resources/includes-22/assets/icons/apple-touch-icon-1024x1024.png"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="UARK"/><script defer="defer" src="https://includes.uark.edu/js/runtime-e1e19517e1f1.pack.js"></script><script defer="defer" src="https://includes.uark.edu/js/uark-main-d40543b7a00b.pack.js"></script><link href="https://includes.uark.edu/css/uark-main-454-b8c21a8f3b55.css" rel="stylesheet"/><meta property="og:image" content="https://www.uark.edu/_resources/images/old-main-about.jpg">	
+<meta property="og:image:alt" content="University of Arkansas">   		
+<meta property="og:description" content="Join the University of Arkansas, a top public research institution offering academic excellence and a vibrant campus community. Start your future here!">  		
+<meta name="theme-color" content="#9D2235">
+<meta name="google-site-verification" content="u19707mubHNaEz4fD6JNl9vtqlNAQSExWELYjpId_JE" />
+
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Organization",
+  "name" : "University of Arkansas",
+  "url" : "https://www.uark.edu/",
+  "sameAs" : [
+    "https://www.facebook.com/UofArkansas",
+    "https://twitter.com/uarkansas",
+    "https://plus.google.com/104159281704656057709/posts",
+	"https://www.youtube.com/user/UniversityArkansas",
+	"https://www.instagram.com/uarkansas/",
+	"https://www.linkedin.com/company/university-of-arkansas"
+  ]
+}
+</script>
+<script type="text/javascript">
+	(function(c,l,a,r,i,t,y){
+		c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+		t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+		y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+	})(window, document, "clarity", "script", "e93vhnpfwh");
+</script>
+<!-- animation -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+
+
+<script>
+
+	document.addEventListener("DOMContentLoaded", (event) => {
+		gsap.registerPlugin(ScrollTrigger,SplitText);	
+		document.body.classList.add('loaded');
+
+		document.querySelectorAll(".fadeRight").forEach((fadeRight) => {
+			gsap.from(fadeRight, {
+				scrollTrigger: fadeRight, // start the animation when ".fadeRight" enters the viewport (once)
+				x: -100,
+				opacity: 0,
+				stagger: 0.8
+			});		
+		});
+
+		document.querySelectorAll(".fadeLeft").forEach((fadeLeft) => {
+			gsap.from(fadeLeft, {
+				scrollTrigger: fadeLeft, // start the animation when ".fadeLeft" enters the viewport (once)
+				x: 100,
+				opacity: 0,
+				stagger: 0.8
+			});		
+		});
+
+		document.querySelectorAll(".fadeUp").forEach((fadeUp) => {
+			gsap.from(fadeUp, {
+				scrollTrigger: fadeUp, // start the animation when ".fadeUp" enters the viewport (once)
+				y: 100,
+				opacity: 0,
+				stagger: 0.8
+			});		
+		});
+
+		document.querySelectorAll(".fadeDown").forEach((fadeDown) => {
+			gsap.from(fadeDown, {
+				scrollTrigger: fadeDown, // start the animation when ".fadeDown" enters the viewport (once)
+				y: -100,
+				opacity: 0,
+				stagger: 0.8
+			});	
+		});
+
+		document.querySelectorAll(".fadeIn").forEach((fadeIn) => {
+			gsap.from(fadeIn, {
+				scrollTrigger: fadeIn, // start the animation when ".fadeIn" enters the viewport (once)
+				opacity: 0,
+				duration: 2,
+				stagger: 0.8
+			});	
+		});
+
+		document.querySelectorAll(".fadeInSlow").forEach((fadeInSlow) => {
+			gsap.from(fadeInSlow, {
+				scrollTrigger: fadeInSlow, // start the animation when ".fadeInSlow" enters the viewport (once)
+				opacity: 0,
+				ease: "sine.inOut",
+				duration: 4,
+				stagger: 0.8
+			});	
+		});
+
+		document.querySelectorAll(".fadeIn20").forEach((fadeIn20) => {
+			gsap.from(fadeIn20, {
+				scrollTrigger: fadeIn20, // start the animation when ".fadeIn20" enters the viewport (once)
+				opacity: .2,
+				duration: 2,
+				stagger: 0.8
+			});		
+		});
+
+		document.querySelectorAll(".splitText").forEach((splitClass) => {
+
+			gsap.set(splitClass, { opacity: 1 });
+			let split;
+
+			SplitText.create(splitClass, {
+				aria: "none",
+				type: "words,lines",
+				linesClass: "line",
+				autoSplit: true,
+				mask: "lines",
+				onSplit: (self) => {
+					split = gsap.from(self.lines, {
+						delay: 0.4,
+						duration: 1.2,
+						yPercent: 100,
+						opacity: 0.2,
+						stagger: 0.25,
+						ease: "expo.out",
+					});
+					return split;
+				}
+			});
+
+
+			ScrollTrigger.create({
+				trigger: splitClass,
+				start: "top bottom", 
+				end: "bottom",
+				onEnter: () => {
+					split.timeScale(1.75).play(0)
+				},
+				onEnterBack: () => {
+					split.timeScale(1.5).play(0)
+				},
+				scrub: 1
+			});
+		});
+
+
+
+		// animate pop stripe counter start
+
+		const sections = gsap.utils.toArray(".pop-stripe");
+
+		sections.forEach((section) => {
+			const children = gsap.utils.toArray(".pop-fact", section);
+			const timeline = gsap.timeline({
+				scrollTrigger: {
+					trigger: section,
+					start: "top 80%", // Adjust as needed
+					end: "bottom 20%", // Adjust as needed
+
+					markers: false // Use for debugging
+				}
+			});
+
+			timeline.fromTo(
+				children,
+				{
+					opacity: 0
+				},
+				{
+					opacity: 1,
+					stagger: 0.3, // Adjust the stagger amount
+					duration: 2 // Adjust the duration
+				}
+			);
+		});
+
+		window.addEventListener("DOMContentLoaded", function () {
+			gsap.registerEffect({
+				name: "counter",
+				extendTimeline: true,
+				defaults: {
+					end: 0,
+					duration: 2,
+					ease: "power1",
+					increment: .1
+				},
+				effect: (targets, config) => {
+					let tl = gsap.timeline();
+					let num = targets[0]?.innerText?.replace(/,/g, "") || "";
+					if (targets.length > 0) { 
+					targets[0].innerText = num;
+					}
+
+
+					tl.to(
+					targets,
+						{
+					duration: config.duration,
+						innerText: config.end,
+							stagger: 0.5,
+								//snap:{innerText:config.increment},
+								modifiers: {
+									innerText: function (innerText) {
+										return gsap.utils
+											.snap(config.increment, innerText)
+											.toString()
+											.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+									}
+								},
+									ease: config.ease
+				},
+				0
+				);
+
+				return tl;
+			}
+								});
+			const statsections = gsap.utils.toArray(".stats-section");
+
+			statsections.forEach((statsection) => {
+				const statNumber = gsap.utils.toArray(".stat-number", statsection);
+				const numbers = statNumber.map((e) => e.dataset.fig);
+
+				const timeline = gsap.timeline({
+					scrollTrigger: {
+						trigger: statsection,
+						start: "top 80%", // Adjust as needed
+						end: "bottom 20%", // Adjust as needed
+						markers: false // Use for debugging
+					}
+				});
+
+				timeline.counter(
+					statNumber,
+					{
+						end: (i) => numbers[i],
+						increment: .1,
+						ease: "linear",
+						duration: 1
+					},
+					"-=0.5"
+				);
+			});
+		});
+
+		// end pop-stripe counter 
+		//end onFontReady
+	});	
+
+</script>
+
+
+<!-- UARK Homepage Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200..900;1,8..144,100..900&display=swap" rel="stylesheet">
+<link crossorigin="" rel="stylesheet" href="https://www.uark.edu/_resources/css/new-uark-pagestyle-2024.css" />
+<style>
+	/* Small Devices, Tablets */
+	@media screen and (min-device-width: 768px) and (max-device-width: 991px) 
+	{			
+		#uark-site-topnav ul>li>a {
+			font-size: 13px !important;
+		}
+
+
+	}
+
+</style>
+<!-- UARK Homepage Styles --></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5Z7HW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><nav id="skiptocontent"><a href="#skip">Skip to content</a></nav>
+   <nav class="offcanvas offcanvas-end" id="uark-mobile-menu" data-bs-scroll="true" data-bs-backdrop="true">
+      <div class="d-flex mb-3 align-items-start" id="mobile-menu-site-id">
+         <div class="pr-2 align-self-end" id="uark-site-id-menu"></div>
+         <div class="ms-auto p-0 border-0"><button id="uarkCloseMobileMenu" class="navbar-toggler text-primary" data-bs-toggle="offcanvas" style="width:115px;" type="button">CLOSE&nbsp;<i aria-hidden="true" class="fas fa-times-circle" style="display:inline;"></i></button></div>
+      </div>
+      <style>
+#suggestionsMobile {
+      border: 1px solid #ccc;
+      max-width: 219px;
+	   margin-top: 34px;
+	   /*margin-left: 102px;*/
+		position: absolute;
+      background: white;
+      z-index: 1000;
+    }
+    #suggestionsMobile div {
+      padding: 8px;
+      cursor: pointer;
+    }
+    #suggestionsMobile div:hover {
+      background-color: #f0f0f0;
+    }
+</style>
+<form action="https://www.uark.edu/search/index.php" method="get" name="gsa" class="d-flex justify-content-left" id="uark-mobile-search-form">
+
+	<!-- funnelback 'global' uark collection repo -->
+		<div>
+			<label class="sr-only" for="uark-search-mobile">Search</label>
+			<input name="searchStudioQuery" id="uark-search-mobile" type="text" title="Site Search" class="form-control mb-1 mr-sm-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" placeholder="Search this site" />
+		</div>
+	
+	<script>
+				var hostname = window.location.hostname;  
+								
+
+				if(hostname !='www.uark.edu' && hostname !='arkansas.edu' && hostname !='uark.edu')
+				{
+								document.write('<input type="hidden" name="scope" value="' + hostname + '"/>');
+				} 
+		</script>
+						<button class="btn btn-primary mb-1" id="uark-search-button-mobile" type="submit">
+							<span aria-hidden="true" class="fas fa-search d-none d-md-block"></span>
+							<span class="d-xs-inline-block d-lg-none d-xl-inline-block">Search</span>
+						</button>
+	<div id="suggestionsMobile"></div>
+</form>      <div class="card bg-light" id="uark-mobile-topnav" role="navigation"><li class=""><a href="https://www.uark.edu/about/index.php">About</a></li>
+<li class=""><a href="https://www.uark.edu/apply/index.php">Apply</a></li>
+<li class=""><a href="https://www.uark.edu/academics/index.php">Academics</a></li>
+<li class=""><a href="https://www.uark.edu/student-life/index.php">Student Life</a></li>
+<li class=""><a href="https://www.uark.edu/research/index.php">Research</a></li>
+<li class=""><a href="https://news.uark.edu/?utm_source=website&utm_medium=website&utm_campaign=UARK_www-homepage">News</a></li>
+<li class=""><a href="https://arkansasrazorbacks.com/?utm_source=website&utm_medium=website&utm_campaign=UARK_www-homepage-topNav">Razorbacks</a></li>
+<li class=""><a href="https://www.arkansasalumni.org/?utm_source=website&utm_medium=website&utm_campaign=UARK_www-homepage-topNav">Alumni</a></li>
+<li class=""><a href="https://onlinegiving.uark.edu/online-giving-site/?a=12272098&utm_campaign=UARK_www-homepage-topNav&utm_medium=website&utm_source=website&amt=50.00">Give</a></li></div>
+      <div class="d-flex justify-content-center align-items-end">
+         <ul id="uark-mobile-quick-links"><li><a href="https://www.uark.edu/a-to-z.php">A-Z Index</a></li>
+<li><a href="https://learn.uark.edu">Blackboard Learn</a></li>
+<li><a href="https://campusmaps.uark.edu/">Campus Map</a></li>
+<li><a href="https://directory.uark.edu/">Directory</a></li>
+<li><a href="https://outlook.office.com">Email</a></li>
+<li><a href="https://myapps.microsoft.com/">myApps</a></li>
+<li><a href="https://wd5.myworkday.com/wday/authgwy/uasys/login-saml2.htmld">Workday</a></li></ul><span><picture>
+               <source type="image/webp" srcset="https://includes.uark.edu/assets/tower-grey.webp">
+               <source type="image/jpeg" srcset="https://includes.uark.edu/assets/tower-grey.png"><img src="https://includes.uark.edu/assets/tower-grey.png" alt="" role="presentation"></picture></span></div>
+   </nav>
+   <header id="uark-header">
+      <nav id="uark-brand">
+         <div class="" id="uark-site-id">
+            <div class="nav-logo"><a href="https://www.uark.edu" id="uark-logo-container"><img alt="University of Arkansas" id="uark-logo" src="https://includes.uark.edu/assets/ua-logo-horz.svg"></a></div>
+            <div class="nav-tiers" id="uark-t2-container"><!-- college header/name/info goes here --></div>
+            <div class="nav-search" id="uark-search-container">
+               <div id="uark-quick-links-container"><a aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" id="uark-quick-links-button"><span aria-hidden="true" class=" fas fa-angle-double-down pe-1"></span><span class="d-xs-inline-block d-md-none d-xl-inline-block">Quick</span>Links</a><div aria-labelledby="uark-quick-links-button" class="dropdown-menu" id="uark-quick-links-items">
+                     <div class="text-center h6"><strong>University of Arkansas</strong></div>
+                     <div id="uark-quick-links">
+                        <ul class="list-group list-group-flush"><li><a href="https://www.uark.edu/a-to-z.php">A-Z Index</a></li>
+<li><a href="https://learn.uark.edu">Blackboard Learn</a></li>
+<li><a href="https://campusmaps.uark.edu/">Campus Map</a></li>
+<li><a href="https://directory.uark.edu/">Directory</a></li>
+<li><a href="https://outlook.office.com">Email</a></li>
+<li><a href="https://myapps.microsoft.com/">myApps</a></li>
+<li><a href="https://wd5.myworkday.com/wday/authgwy/uasys/login-saml2.htmld">Workday</a></li></ul>
+                     </div>
+                  </div>
+               </div>
+               <style>
+    /* Basic styling for suggestions */
+    #suggestions {
+      border: 1px solid #ccc;
+      max-width: 219px;
+	   margin-top: 34px;
+	   /*margin-left: 102px;*/
+		position: absolute;
+      background: white;
+      z-index: 1000;
+    }
+    #suggestions div {
+      padding: 8px;
+      cursor: pointer;
+    }
+    #suggestions div:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+	<form id="search-form" class="form-inline d-flex justify-content-left" action="https://www.uark.edu/search/index.php" method="get" name="gsa">
+    	<label class="sr-only" for="uark-search">Search</label>
+		<input class="form-control mb-1 mr-sm-1" id="uark-search" name="q" placeholder="Search this site" type="text" autocomplete="off" />
+		<button class="btn btn-primary mb-1" id="uark-search-button" type="submit"><span aria-hidden="true" class="fa-solid fa-search"></span><span class="visually-hidden">Search</span>	</button>
+		<div id="suggestions"></div>
+		<script>
+				var hostname = window.location.hostname;  
+								
+				if(hostname !='www.uark.edu' && hostname !='arkansas.edu' && hostname !='uark.edu')
+				{
+								document.write('<input type="hidden" name="scope" value="' + hostname + '"/>');
+				} 
+			
+				document.addEventListener("DOMContentLoaded", () => { 
+					const searchInput = document.getElementById('uark-search');
+					const searchForm = document.getElementById('search-form');
+					
+					searchInput.addEventListener('keydown', (event) => {
+						if (event.key === "Enter") {
+							event.preventDefault();
+								searchForm.submit();
+						}
+					});
+				});
+			
+				
+		</script>
+	</form>
+</div>
+            <nav class="d-block ml-auto mt-2 nav-search" id="uark-mobile-menu-button"><button class="navbar-toggler p-0 border-0 text-uark-red d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#uark-mobile-menu" aria-controls="offcanvas-start" type="button"><span>MENU </span><i aria-hidden="true" class="fas fa-bars"></i></button></nav>
+         </div>
+      </nav>
+      <nav id="nav-component-2">
+         <div class="container" id="uark-site-topnav" role="navigation">
+            <ul><li class=""><a href="https://www.uark.edu/about/index.php">About</a></li>
+<li class=""><a href="https://www.uark.edu/apply/index.php">Apply</a></li>
+<li class=""><a href="https://www.uark.edu/academics/index.php">Academics</a></li>
+<li class=""><a href="https://www.uark.edu/student-life/index.php">Student Life</a></li>
+<li class=""><a href="https://www.uark.edu/research/index.php">Research</a></li>
+<li class=""><a href="https://news.uark.edu/?utm_source=website&utm_medium=website&utm_campaign=UARK_www-homepage">News</a></li>
+<li class=""><a href="https://arkansasrazorbacks.com/?utm_source=website&utm_medium=website&utm_campaign=UARK_www-homepage-topNav">Razorbacks</a></li>
+<li class=""><a href="https://www.arkansasalumni.org/?utm_source=website&utm_medium=website&utm_campaign=UARK_www-homepage-topNav">Alumni</a></li>
+<li class=""><a href="https://onlinegiving.uark.edu/online-giving-site/?a=12272098&utm_campaign=UARK_www-homepage-topNav&utm_medium=website&utm_source=website&amt=50.00">Give</a></li></ul>
+         </div>
+      </nav>
+   </header>
+   <div class="uark-page fluid-container">
+      <div id="main-content" role="main">
+         <div class="col"><span id="skip"></span>
+            		
+            
+            
+            
+            <!-- START NOTIFICATION -->
+            <p class="m-0 p-0">
+ 
+</p>
+<style>
+	
+	.openingDiv{
+		color: #000;
+		background-color: #F2F2F4;
+		opacity: 1;	
+	}
+	
+	.openingDiv .alert {
+		max-width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.openingDiv .alert {
+			max-width: 66.666%;
+		}
+	}
+	
+	.alert-item {
+		margin-bottom: 1.5rem;
+	}
+
+	.emergency-box {
+		background-color: #fff970;
+		padding: 1.5rem;
+		border-radius: 5px;
+	}
+
+	.section-title {
+		font-size: 1.75rem;
+		font-weight: 700;
+		margin-bottom: 1.25rem;
+	}
+
+
+
+
+		</style>            		<!-- END NOTIFICATION -->
+            		
+            		
+            		
+            		
+            		<!-- Top Promotion
+		
+		
+		<section class="m-0 bg-primary" style="background: #9d2235 url('https://www.uark.edu/_resources/images/homepage-promo/ar-icon2.png') repeat; padding: 15px 10px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center" style="background-color: #a2002f; padding-top: 4px; padding-left: 20px; padding-right: 20px; max-width: 840px; margin-left: auto; margin-right: auto;">
+						<img id="promo-text" src="https://www.uark.edu/_resources/images/homepage-promo/learn-text.svg" style="padding-right: 10px" alt="Learn how we're supporting Arkansas students." />
+						
+						<img class="d-none d-lg-inline-block" id="arrows" src="https://www.uark.edu/_resources/images/homepage-promo/polygon.svg" style="" alt="" />
+						<img class="d-none d-lg-inline-block" id="arrows" src="https://www.uark.edu/_resources/images/homepage-promo/polygon.svg" style="" alt="" />
+						
+					
+						<a href="https://advancement.uark.edu/land-of-opportunity/?utm_source=uark&amp;utm_medium=uark-homepage&amp;utm_campaign=Land+of+Opportunity+&amp;utm_id=Land+of+Opportunity+Scholarship" style="text-decoration: none;" class="stretched-link"><img id="promo-logo" class="mt-2 mt-lg-0" src="https://www.uark.edu/_resources/images/homepage-promo/loo-logo.svg" style="padding-left:10px" alt="Land of Opportunity Scholarship" /></a>
+						
+						
+
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+	END Top Promotion	-->
+            		
+            		
+            		
+            		
+            		
+            		
+            		
+            		
+            <section class="m-0 p-0 bg-primary fix-size">
+               			<button type="button" class="play-pause position-absolute end-0 bottom-0 mb-4 me-4 btn btn-lg text-white border-white" style="opacity:0.5;" aria-label="Play/Pause Video"><span class="fa-solid fa-fw fa-pause hero-video-icon"></span></button>
+               			<video id="hero-video" poster="/_resources/images/top-video-poster3.jpg" class="fade-in" playsinline="true" autoplay="true" muted="true" loop="true" preload="auto">
+                  				
+                  <source id="mp4Source" data-src-wifi="https://www.uark.edu/_resources/videos/homepage-top-1080.mp4" data-src-cellular="https://www.uark.edu/_resources/videos/homepage-top-4_h264-max720.mp4" type="video/mp4">
+                  				
+                  <source id="webmSource" data-src-wifi="https://www.uark.edu/_resources/videos/homepage-top-1080.webm" data-src-cellular="https://www.uark.edu/_resources/videos/homepage-top-4_vp9-max720.webm" type="video/webm">
+                  					
+                  <p>Your browser does not support HTML5 video.</p>
+                  				<!-- <source type="video/webm" src="https://www.uark.edu/_resources/videos/homepage-top-4_vp9.webm" /> -->
+                  				<!-- <source type="video/mp4"  src="https://www.uark.edu/_resources/videos/homepage-top.mp4" /> -->
+                  				<!-- vbr webm test -->
+                  			</video>
+               
+               			
+               
+               			
+               <div class="container">
+                  				
+                  <div class="row">
+                     					
+                     <div class="video-overlay text-white position-absolute video-title pe-none">
+                        						<svg id="imagine-text" class="ignoreClick pe-none" width="90%" height="100%" viewBox="0 0 1000 220">
+                           							
+                           <title>Imagine</title>
+                           							
+                           <defs></defs>
+                           							
+                           <g id="letters" fill="none" stroke="#FFF" stroke-miterlimit="10" stroke-width="3">
+                              								
+                              <path d="M33.25 197.9V44.46" class="cls-2"></path>
+                              <path d="m242.17 197.9-.57-150.97.03-.88s-.37-.16-1.29 2.13c0 0-65.15 118.14-68.74 118.03-3.61-.06-69.62-117.43-69.62-117.43-.92-2.29-2.5-1.68-2.5-1.68v150.8" class="cls-1"></path>
+                              <path d="m290.11 197.9 63.33-151.86L417.6 197.9M312.15 145.04l82.79-.77" class="cls-3"></path>
+                              <path d="M573.07 62.22c-11.99-13.6-66.08-30.39-100.28 0-33.51 29.78-41.85 130.44 47.83 135.03 37.24.44 54.36-15.99 54.36-15.99v-48.8l-34.3.14" class="cls-1"></path>
+                              <path id="_2-i" d="M634.12 197.9V44.46" class="cls-2" data-name="2-i"></path>
+                              <path d="M700.06 197.9V48.42s1.58-1.93 2.5.36c0 0 108.7 147.21 108.18 146.61h-.63.63V44.46"></path>
+                              <path d="m876.68 120.25 74.45.16M964.44 195.9h-87.76l-.63-148.08h88.39" class="cls-3"></path>
+                              							</g>
+                           						</svg>
+                        						
+                        <p id="fadeText" class="ignoreClick h2 display-4 mt-0 pt-0 fade-in-shift-delay noselect pe-none">What's Possible</p>
+                        					</div>
+                     				</div>
+                  			</div>
+               		</section>
+            
+            		<!-- Begin Big Red Box Video Section -->
+            		<!-- 
+		<section class="bg-quartz bg-tanspeckles text-white mt-0 pb-2 pt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-8 offset-lg-2">
+						<h2 class="d-block text-center display-3 bold-headline"><span class="fa-duotone fa-sun-bright fa-spin text-arkansas-marvel"></span> Summer on the Hill</h2>
+						<p class="">
+							Fall 2025 Razorbacks take note: February 1 is the final academic scholarship deadline for new freshmen <br /> <a class="btn btn-sm btn-primary" href="https://scholarships.uark.edu/guide-to-academic-freshman-scholarships/index.php"> Apply Now <span class="fa-solid fa-chevron-right"></span></a></p>
+						<div class="d-block d-md-flex align-items-center">
+							<div class="flex-grow-2 ms-3">
+								<p class="lead">Have questions about registering for classes in Workday Student? We’ve got the answers. Find our <a href="https://sis.uark.edu">help desk locations</a> available through May 2nd, or email <a href="mailto:wstudent@uark.edu">wstudent@uark.edu</a> for assistance.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		-->
+            		<!-- END Big Red Box Video Section -->
+            
+            		
+            <section class="mt-0 pt-0 pb-0 border-top border-5 border-primary bg-senior-walk">
+               			
+               <div class="container-fluid mb-0">
+                  				
+                  <div class="row">
+                     					
+                     <div class="col col-md-7 col-lg-5 m-0 mb-0 pb-0 ps-0 bg-opacity-white-85" style="max-width: 600px;">
+                        						
+                        <div class="card h-100 border-0 rounded-0 m-0 p-3 p-md-5 bg-transparent">
+                           							
+                           <h2 id="your-path" class="display-2 text-primary mb-3 pb-0 bold-headline lh-0 mb-4">Your Path <span class="display-3 text-primary mt-0 pt-0 bold-headline fw-light lh-0">Starts Here</span></h2>
+                           							
+                           <p class="lead fw-normal">One of the most unique traditions found on any campus, Senior Walk includes the names
+                              								of more than 230,000 University of Arkansas graduates. </p>
+                           							
+                           <p class="lead fw-normal">It’s a campus path of sidewalks that symbolize the individual successes and collective
+                              								impact of 150+ years of difference-makers determined to build a better world.</p>
+                           							
+                           <div class="d-flex mt-3 gap-4 justify-content-center d-md-block text-center ps-3">
+                              								<a class="col-6 col-md-4 btn btn-lg btn-primary text-white border-white border-2 uark-button-icon-push me-2 text-nowrap" href="https://www.uark.edu/apply/index.php">Apply&nbsp;<span class="fas fa-chevron-right uark-button-animate-icon ps-1"></span></a>
+                              								<a class="col-6 col-md-4 btn btn-lg btn-primary text-white border-white border-2 uark-button-icon-push me-2 text-nowrap" href="https://www.uark.edu/about/explore.php">Visit&nbsp;<span class="fas fa-chevron-right uark-button-animate-icon ps-1"></span></a>
+                              							</div>
+                           						</div>
+                        					</div>
+                     				</div>			
+                  			</div>	
+               		</section>
+            		
+            
+            		
+            
+            
+            		
+            <section class="bg-primary mt-0 pt-3 pt-md-4 pt-xl-4 pb-0 pop-stripe">
+               			
+               <div class="container">
+                  				
+                  <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 text-white text-center">
+                     					
+                     <div class="col position-relative end-seperator">
+                        						
+                        <p class="fs-2 bold-headline mb-0 lh-1 pop-fact">Best Places<br>to Live</p>
+                        						
+                        <p class="fst-italic">U.S. News &amp; World Report</p>
+                        					</div>
+                     					
+                     <div class="col position-relative end-seperator">
+                        						
+                        <p class="fs-2 bold-headline mb-0 lh-1 pop-fact">Best<br>Value</p>
+                        						
+                        <p class="fst-italic">Forbes</p>
+                        					</div>
+                     					
+                     <div class=" col ">
+                        						
+                        <p class="fs-2 bold-headline mb-0 lh-1 pop-fact">Best College<br>for Future Leaders</p>
+                        						
+                        <p class="fst-italic">Time</p>
+                        					</div>
+                     
+                     				</div>
+                  			</div>
+               		</section>
+            
+            		
+            <section id="razorbackvideo" class="mt-0 pt-0 mb-0 pb-0 bg-secondary d-grid photo-box-container pe-auto">
+               			<button type="button" id="razorback-video-button" class="play-pause position-absolute bottom-0 start-0 mb-4 ms-4 btn btn-lg  text-white border-white" style="opacity:0.5;" aria-label="Play/Pause Video"><span class="fa-solid fa-fw fa-pause razorback-video-icon"></span></button>
+               			<video id="razorback-video" poster="/_resources/images/razorback-experience.jpg" class="" playsinline="true" muted="true" loop="true" preload="none" style="object-fit: cover; height: 100% !important;">
+                  				
+                  <source type="video/webm" src="https://www.uark.edu/_resources/videos/razorback-experience-1080.webm">
+                  				
+                  <source type="video/mp4" src="https://www.uark.edu/_resources/videos/razorback-experience-1080.mp4">
+                  			</video>
+               
+               			
+               <div class="video-overlay h-100 text-black position-absolute top-0 end-0 col col-md-6 p-3 p-md-5 m-0 pb-0 bg-opacity-white-85" style="max-width: 540px;">                 	
+                  
+                  				
+                  <div class="position-relative">
+                     					<img loading="lazy" role="presentation" alt="" aria-hidden="true" class="col-5 col-md-8 col-lg-7 position-absolute top-0 img-fluid" src="https://www.uark.edu/_resources/images/razorback-logo.png" style="margin-left: auto;margin-right: auto;left: 0;right: 0;">
+                     				</div>
+                  				
+                  <h2 id="the-razorback-experience" class="lh-0 display-2 mb-0 pb-0 bold-headline mt-5 pt-3 text-primary"><small class="fw-normal">The</small> <br><em>Razorback</em> Experience</h2>
+                  
+                  				
+                  <p class="lead fw-normal text-black mt-4">What college is all about. Unlimited opportunities, collective spirit and traditions
+                     like no other. All in one of the nation’s best places to live. Surrounded by the Ozark
+                     Mountains, with some of America’s best locations for hiking, biking and water fun.</p>
+                  
+                  
+                  				
+                  <div class="row lead mt-4 row-cols-2 g-3 video-link-block">
+                     					
+                     <div class="col"><a class="list-group-item list-group-item-action link-primary fw-bold fadeRight" href="https://www.uark.edu/academics/index.php">Academics <span class="fa-solid fa-chevron-right ps-1"></span></a></div>
+                     					
+                     <div class="col"><a class="list-group-item list-group-item-action link-primary fw-bold fadeLeft" href="https://www.uark.edu/student-life/index.php">Student Life <span class="fa-solid fa-chevron-right ps-1"></span></a></div>
+                     					
+                     <div class="col"><a class="list-group-item list-group-item-action link-primary fw-bold fadeRight" href="https://arkansasrazorbacks.com/?utm_source=website&amp;utm_medium=website&amp;utm_campaign=UARK_www-homepage">Athletics <span class="fa-solid fa-chevron-right ps-1"></span></a></div>
+                     					
+                     <div class="col"><a class="list-group-item list-group-item-action link-primary fw-bold fadeLeft" href="https://housing.uark.edu/?utm_source=website&amp;utm_medium=website&amp;utm_campaign=UARK_www-homepage">Housing <span class="fa-solid fa-chevron-right ps-1"></span></a></div>
+                     					
+                     <div class="col"><a class="list-group-item list-group-item-action link-primary fw-bold fadeRight" href="https://www.uark.edu/about/explore.php">Explore <span class="text-nowrap">Campus <span class="fa-solid fa-chevron-right ps-1"></span></span></a></div>
+                     					
+                     <div class="col"><a class="list-group-item list-group-item-action link-primary fw-bold fadeLeft" href="https://www.uark.edu/student-life/outdoors.php">Get <span class="text-nowrap">Outdoors <span class="fa-solid fa-chevron-right ps-1"></span></span></a></div>
+                     
+                     				</div>
+                  
+                  				<!--
+<div class="row row-cols-2 g-lg-3 text-black text-center mt-4">
+<div>
+<p class="bold-headline h1 display-5 mb-0 pb-0">270+</p>
+<p><span class="small">Academic Programs</span></p>
+</div>
+<div>
+<p class="bold-headline h1 display-5 mb-0 pb-0">Gold</p>
+<p><span class="small">Level Bicycle Friendly City</span></p>
+</div>
+<div>
+<p class="bold-headline h1 display-5 mb-0 pb-0">45</p>
+<p><span class="small">NCAA National Title<br />Champtionships</span></p>
+</div>
+<div>
+<p class="bold-headline h1 display-5 mb-0 pb-0">400+</p>
+<p><span class="small">Registered Student Organizations</span></p>
+</div>
+</div>
+-->
+                  			</div>
+               		</section>
+            
+            
+            		
+            <section class="bg-primary mt-0 pt-3 pt-md-4 pt-xl-4 pb-0 pop-stripe">
+               			
+               <div class="container">
+                  				
+                  <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 text-white text-center stats-section">
+                     					
+                     <div class="col position-relative end-seperator">
+                        						
+                        <p class="fs-2 mb-0 pb-0 bold-headline pop-fact">$<span data-fig="3" class="stat-number">0</span> Billion</p>
+                        						
+                        <p>Annual Economic Impact for Arkansas</p>
+                        					</div>
+                     					
+                     <div class="col position-relative end-seperator">
+                        						
+                        <p class="fs-2 mb-0 pb-0 bold-headline pop-fact"><span data-fig="98" class="stat-number">50</span>%</p>
+                        						
+                        <p>Of Arkansas Students Receive Scholarships</p>
+                        					</div>
+                     					
+                     <div class=" col ">
+                        						
+                        <p class="fs-2 mb-0 pb-0 bold-headline pop-fact">$<span data-fig="106" class="stat-number">60</span> Million</p>
+                        						
+                        <p>Scholarships Awarded</p>
+                        					</div>
+                     
+                     				</div>
+                  			</div>
+               		</section>
+            
+            		
+            		
+            		
+            		
+            <section class="mt-0 pt-0 mb-0 pb-0 bg-twhite photo-box-container">
+               			<img class="img-stretch img-fluid card-img" src="https://www.uark.edu/_resources/images/dedicated-backdrop2.jpg" alt="Researchers inspecting wheat crops and recording observations in a field under a clear sky."> 
+               			
+               <div class="card-img-overlay">
+                  				
+                  <div class="container">
+                     					
+                     <div class="row">
+                        						
+                        <div class="col-lg-7 offset-lg-5 col-xl-6 offset-xl-6 bg-white flex-card">
+                           							
+                           <div class="card-body mx-lg-5 px-2 py-4">
+                              								
+                              <h2 id="dedicated-to-arkansas" class="lh-0 display-2 mb-0 pb-0 bold-headline pt-2 text-primary">Dedicated <br><span class="h2 lh-0 display-3 mt-0 pt-0 ms-1 text-primary fst-normal">to Arkansas</span></h2>
+                              								
+                              <p id="dedicated-text" class="split splitText pb-0 my-3 mb-4 lead fw-normal fs-4">We’ve been on a mission since 1871 to serve Arkansas by educating its future leaders
+                                 and workforce, developing innovations that improve lives and drive the economy, and
+                                 supporting organizations, businesses and communities across the state.</p>
+                              								<a class="btn btn-lg btn-primary uark-button-primary-animate text-nowrap" href="https://determined.uark.edu/">Dedicated to Arkansas <span class="fa-solid fa-chevron-right ps-1 uark-button-animate-icon"></span></a>
+                              							</div>
+                           						</div>   						
+                        					</div>
+                     				</div>
+                  			</div>
+               		</section>	
+            		
+            
+            		
+            <section class="bg-primary mt-0 pt-3 pt-md-4 pt-xl-4 pb-0 pop-stripe">
+               			
+               <div class="container">
+                  				
+                  <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 align-items-center text-white text-center stats-section">
+                     					
+                     <div class="col-6 col-md-4 position-relative end-seperator">
+                        						
+                        <p class="fs-2 mb-0 pb-0 bold-headline lh-2 pop-fact">#1</p>
+                        						
+                        <p>Supply Chain Management <br><span class="fst-italic">Gartner</span></p>
+                        					</div>
+                     					
+                     <div class="col-6 col-md-4 position-relative end-seperator">
+                        						
+                        <p class="fs-2 mb-0 pb-0 bold-headline lh-2 pop-fact">Top 15 <br></p>
+                        						
+                        <p>For Innovation and Impact<br><span class="fst-italic">Engines of Opportunity</span></p>
+                        
+                        					</div>
+                     					
+                     <div class=" col-md-4 order-first order-md-last">
+                        						
+                        <p class="fs-2 mb-0 pb-0 bold-headline lh-2 pop-fact">$252.9 Million</p>
+                        						
+                        <p>Record for Research Conducted (FY25)</p>
+                        
+                        					</div>			
+                     				</div>
+                  			</div>
+               		</section>
+            
+            	
+            		
+            		
+            <section class="mt-0 pt-0 mb-0 pb-0 bg-twhite photo-box-container">
+               			<img class="img-stretch img-fluid card-img" src="https://www.uark.edu/_resources/images/RS31868_10455_Gary_Prinz-Lab-engineering-5-web.jpg" alt="Engineer observing a tensile testing machine applying stress to a metal specimen in a lab."> 
+               			
+               <div class="card-img-overlay">
+                  				
+                  <div class="container">
+                     					
+                     <div class="row">
+                        						
+                        <div class="col-lg-7 col-xl-6 bg-white flex-card">
+                           							
+                           <div class="card-body mx-lg-5 px-2 py-4">
+                              								
+                              <h2 id="determined-to-build-a-better-world" class="lh-0 display-2 mb-0 pb-0 bold-headline pt-2 text-primary">Determined <br><span class="lh-0 display-3 mt-0 pt-0 ms-1 fst-normal text-primary">to Build <br>a Better World</span> </h2>				
+                              								
+                              <p id="determined-text" class="split splitText pb-0 my-3 mb-4 lead fw-normal fs-4">We imagine a better world and we're determined to build it through research and innovation,
+                                 student success, outreach and collaboration.</p>
+                              								<a class="btn btn-lg btn-primary uark-button-primary-animate text-nowrap" href="https://determined.uark.edu/">Determined <span class="fa-solid fa-chevron-right ps-1 uark-button-animate-icon"></span></a>
+                              							</div>
+                           						</div>   						
+                        					</div>
+                     				</div>
+                  			</div>
+               		</section>	
+            	
+            		
+            <section class="my-0 py-5 bg-quartz bg-quartzspeckles">
+               			
+               <div class="container">
+                  				
+                  <div class="row">
+                     					
+                     <div class="">
+                        						
+                        <div class="position-relative float-end">
+                           							
+                           <div class="position-absolute top-0 end-100 pt-4 mt-3 pt-md-0 mt-md-0">
+                              								<a class="list-group-item-action link-primary fw-bold text-end float-end text-nowrap" href="https://www.uark.edu/my-path-senior-walk/index.php">Student&nbsp;Stories <span class="fa-solid fa-chevron-right ps-1"></span></a>
+                              							</div>
+                           						</div>
+                        						
+                        <h2 id="-mypath-to-senior-walk" class="display-5 fw-bold fst-normal text-primary pb-3">#MyPath <span class="text-spoofers-stone fw-bold">to Senior Walk</span></h2>	
+                        					</div>
+                     
+                     					
+                     <div class="col-md-7 col-lg-3">
+                        						
+                        <div class="img-confetti img-confetti-primary img-confetti-br">
+                           							<img class="img-confetti img-fluid" loading="lazy" src="https://www.uark.edu/_resources/images/danterrion-swanigan.jpg" alt="Danterrion sitting by a campus fountain wearing a green sweatshirt and jeans with a backpack nearby."> 
+                           						</div>
+                        					</div>
+                     					
+                     <div class="col-md-5 col-lg-4">
+                        						<!-- <p class="h1 display-5 mb-0 pb-0 bold-headline d-inline">My Path </p><p class="d-inline h3">to Senior Walk</p>
+-->
+                        						
+                        <p class="px-3 pt-3 pt-md-0 mb-0 mypath-primary">
+                           							<q class="ms-1 fst-italic fw-light bold-headline text-spoofers-stone">I've had so many great professors and so many people who have molded and guided me.</q>
+                           							<br>
+                           							
+                           <p class="ms-4 pb-4"><a href="https://www.uark.edu/my-path-senior-walk/#danterrion-swanigan">Danterrion's Story <span class="fa-solid fa-chevron-right ps-1"></span></a></p>
+                           						</p>
+                        					</div>
+                     					
+                     <div class="col-lg-5">
+                        						
+                        <div class="row g-4">
+                           							
+                           <div class="col-4 pt-md-3 pt-lg-0">
+                              								<img class="img-fluid" loading="lazy" src="https://www.uark.edu/_resources/images/10296_MPSW_Elyanna_Martinez-5-web.jpg" alt="Martinez in a green shirt and backpack standing inside a modern building with glass railings.">
+                              							</div>
+                           							
+                           <div class="col-8 ps-4 pt-sm-4">
+                              								<q class="ms-1 fst-italic fw-light bold-headline fs-5 small-quote">Having a community to rely on allows me to focus on building my future.</q>
+                              								
+                              <p><a href="https://www.uark.edu/my-path-senior-walk/#elyana-martinez">Martinez's Story <span class="fa-solid fa-chevron-right ps-1"></span></a></p>
+                              							</div>
+                           							
+                           <div class="col-4">
+                              								<img class="img-fluid" loading="lazy" src="https://www.uark.edu/my-path-senior-walk/10671_MPSW_Jonah_Reid-5-web.jpg" alt="Jonah in a denim jacket with a backpack outside White Engineering Hall on campus.">
+                              							</div>
+                           							
+                           <div class="col-8 ps-4 pt-sm-4">
+                              								<q class="ms-1 fst-italic fw-light bold-headline fs-5 small-quote">In general the amount of student assistance is extraordinary here.</q>
+                              								
+                              <p><a href="https://news.uark.edu/articles/70570/-mypathtoseniorwalk-jonah-windel-finds-his-home-on-the-hill">Jonah's Story <span class="fa-solid fa-chevron-right ps-1"></span></a></p>
+                              							</div>
+                           						</div>
+                        					</div>
+                     				</div>
+                  			</div>
+               		</section>
+            
+            		
+            <section class="my-0 py-5 bg-twhite">
+               			
+               <div class="container text-white">
+                  				
+                  <div class="row">
+                     					
+                     <div class="">
+                        						
+                        <div class="position-relative float-end">
+                           							
+                           <div class="position-absolute top-0 end-100 pt-0 mt-3 pt-md-3 mt-md-0">
+                              								<a class="list-group-item-action link-primary fw-bold text-end float-end text-nowrap" href="https://shorttakes.uark.edu">Short&nbsp;Takes <span class="fa-solid fa-chevron-right ps-1"></span></a>
+                              							</div>
+                           						</div>
+                        						
+                        <h2 id="short-takes" class="display-5 text-primary text-uppercase fw-bold">Short <span class="text-spoofers-stone">Takes</span></h2>	
+                        						
+                        <p class="lead fw-normal text-black">Short videos featuring stories about outstanding students, faculty and special points
+                           of pride at the University of Arkansas.</p>
+                        					</div>
+                     					
+                     <div class="col-md-8">
+                        						
+                        <div class="position-relative w-100">
+                           							<a href="" data-bs-toggle="modal" data-bs-target="#shortTakesFeature">
+                              								<em style="margin-left: -30px; padding: 17px 20px !important;" class="fa-solid fa-play text-white px-4 py-3 rounded-2 bg-primary fa-lg position-absolute top-50 start-50 translate-middle-y text-center"></em>
+                              								<img class="mb-2 img-fluid" loading="lazy" src="https://www.uark.edu/_resources/images/VhVrJFjzcSc-HD.jpg" alt="Aerial view of Old Main surrounded by colorful autumn trees and landscaped walkways.">						
+                              							</a>
+                           						</div>
+                        						
+                        <h2 id="record-breaking-momentum" class="text-primary"><a href="" class="link-offset-1 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#shortTakesFeature">Record-Breaking Momentum</a></h2>
+                        
+                        						<!-- Modal -->
+                        						
+                        <div class="modal fade" id="shortTakesFeature" tabindex="-1" aria-labelledby="shortTakesFeatureLabel" aria-hidden="true">
+                           							
+                           <div class="modal-dialog modal-dialog-centered modal-video">
+                              								
+                              <div class="modal-content">
+                                 									
+                                 <div class="modal-header">
+                                    										
+                                    <h2 class="modal-title fs-5 text-secondary" id="shortTakesFeatureLabel">Record-Breaking Momentum</h2>
+                                    										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    									</div>
+                                 									
+                                 <div class="modal-body p-2">
+                                    										
+                                    <div class="video-container pt-0">
+                                       <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/VezLHHgSQ_Q?rel=0&amp;showinfo=0" width="640" height="480" allowfullscreen="allowfullscreen">&nbsp;</iframe></div>
+                                    </div>
+                                    									</div>
+                                 								</div>
+                              							</div>
+                           						</div>
+                        						<script>
+							$('#shortTakesFeature').on('hidden.bs.modal', function () {
+							$("#shortTakesFeature iframe").attr("src", $("#shortTakesFeature iframe").attr("src"));
+							});
+						</script>
+                        
+                        					</div>
+                     					
+                     <div class="col-md-4 ps-lg-5">
+                        
+                        						
+                        <div class="position-relative pt-4 pt-md-0">
+                           							<a href="" data-bs-toggle="modal" data-bs-target="#shortTakesSecond">
+                              								<em style="margin-left: -30px; padding: 17px 20px !important;" class="fa-solid fa-play text-white px-4 py-3 rounded-2 bg-primary fa-lg position-absolute top-50 start-50 translate-middle-y text-center"></em>
+                              								<img class="mb-2 img-fluid" loading="lazy" src="https://www.uark.edu/_resources/images/jenna-short-takes.jpg" alt="Jenna Klewsaat">						
+                              							</a>
+                           						</div>
+                        
+                        						
+                        <h3 id="growth-happens-here" class="h4 text-primary mb-4"><a href="" class="link-offset-1 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#shortTakesSecond">Growth Happens Here</a></h3>
+                        						<!-- Modal -->
+                        						
+                        <div class="modal fade" id="shortTakesSecond" tabindex="-1" aria-labelledby="shortTakesSecondLabel" aria-hidden="true">
+                           							
+                           <div class="modal-dialog modal-dialog-centered modal-video">
+                              								
+                              <div class="modal-content">
+                                 									
+                                 <div class="modal-header">
+                                    										
+                                    <h2 class="modal-title fs-5 text-secondary" id="shortTakesSecondLabel">Growth Happens Here</h2>
+                                    										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    									</div>
+                                 									
+                                 <div class="modal-body p-2">
+                                    										
+                                    <div class="video-container pt-0">
+                                       <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/pMh-lzQ24KE?rel=0&amp;showinfo=0" width="320" height="240" allowfullscreen="allowfullscreen"> </iframe></div>
+                                    </div>
+                                    									</div>
+                                 								</div>
+                              							</div>
+                           						</div>
+                        
+                        						<script>
+							$('#shortTakesSecond').on('hidden.bs.modal', function () {
+							$("#shortTakesSecond iframe").attr("src", $("#shortTakesSecond iframe").attr("src"));
+							});
+						</script>
+                        
+                        						
+                        <div class="position-relative pt-4 pt-md-0">
+                           							<a href="" data-bs-toggle="modal" data-bs-target="#shortTakesThird">
+                              								<em style="margin-left: -30px; padding: 17px 20px !important;" class="fa-solid fa-play text-white px-4 py-3 rounded-2 bg-primary fa-lg position-absolute top-50 start-50 translate-middle-y text-center"></em>
+                              								<img class="mb-2 img-fluid" loading="lazy" src="https://www.uark.edu/_resources/images/TQZetgFKYf0-HD.jpg" alt="Student displaying a red Razorback flag in front of the historic Colosseum in Rome.">						
+                              							</a>
+                           						</div>
+                        
+                        						
+                        <h3 id="when-in-rome" class="h4 text-primary mb-5"><a href="" class="link-offset-1 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-bs-toggle="modal" data-bs-target="#shortTakesThird">When in Rome</a></h3>
+                        						<!-- Modal -->
+                        						
+                        <div class="modal fade" id="shortTakesThird" tabindex="-1" aria-labelledby="shortTakesThirdLabel" aria-hidden="true">
+                           							
+                           <div class="modal-dialog modal-dialog-centered modal-video">
+                              								
+                              <div class="modal-content">
+                                 									
+                                 <div class="modal-header">
+                                    										
+                                    <h2 class="modal-title fs-5 text-secondary" id="shortTakesThirdLabel">When in Rome</h2>
+                                    										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    									</div>
+                                 									
+                                 <div class="modal-body p-2">
+                                    										
+                                    <div class="video-container pt-0">
+                                       <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/TQZetgFKYf0?rel=0&amp;showinfo=0" width="320" height="240" allowfullscreen="allowfullscreen"> </iframe></div>
+                                    </div>
+                                    									</div>
+                                 								</div>
+                              							</div>
+                           						</div>
+                        
+                        						<script>
+							$('#shortTakesThird').on('hidden.bs.modal', function () {
+							$("#shortTakesThird iframe").attr("src", $("#shortTakesThird iframe").attr("src"));
+							});
+						</script>
+                        
+                        					</div>
+                     				</div>
+                  			</div>
+               		</section>
+            
+            		
+            <section class="py-5 bg-quartz">
+               			
+               <div class="container">
+                  				
+                  <div class="position-relative float-end">
+                     					
+                     <div class="position-absolute top-0 end-100 pt-4 mt-3 pt-md-0 mt-md-0">
+                        						<a class="list-group-item-action link-primary fw-bold text-end float-end text-nowrap" href="https://news.uark.edu">Arkansas&nbsp;News <span class="fa-solid fa-chevron-right ps-1"></span></a>
+                        					</div>
+                     				</div>
+                  				
+                  <h2 id="arkansas-news" class="display-5 text-primary text-uppercase fw-bold pb-3">Arkansas <span class="display-5 fw-bold text-spoofers-stone">News</span></h2>
+                  
+                  
+                  				<script type="text/javascript">
+$(function (){
+$.ajax({
+url: '//campusdata.uark.edu/apiv2/articles/articlesCommon?$orderby=publishDate+desc&$filter=Commons/any(c:+c/id+eq+1)&$top=4',
+data: {},
+contentType: "application/json; charset=utf-8",
+dataType: 'jsonp',
+//jsonpCallback: 'Articles',
+async: "true",
+cache: "true",
+success: function (articles) {
+dataDisplay = "";
+$.each(articles, function (key, a) {
+var briefText = "", image = "";
+var date = new Date(a.publishDate);
+date = date.toDateString();
+if (a.brief != null && a.brief != "") { briefText = a.brief;  briefText = briefText.replace(/(<p>|<\/p>)/g, "");}
+if (a.updatedImage != null && a.updatedImage != "") {
+image = a.updatedImage;
+} else { image = a.image; }
+
+if (key==0) {
+
+dataDisplay = "<div class=''><div class='d-grid gap-0 d-lg-block'>" +
+"<div class='row g-0 mb-4 position-relative'><div class='col-md-8 col-xl-12'><a href='https://news.uark.edu/articles/" + a.id + "'><img loading='lazy'  class='img-fluid w-100' alt='" + a.headline + "' src='//campusdata.uark.edu/resources/images/articles/" + image + "?w=1200' /></a></div>" +
+
+"<div class='col-md-4 col-xl-12'>" +
+"<h3 class='bg-primary link-white p-4 pt-2'><a class='stretched-link link-light link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover' href='https://news.uark.edu/articles/" + a.id + "'>" + a.headline + "</a></h3>" + 
+"<p class='lead d-none'>" + briefText + "</p></div></div>";
+
+$("#mainNews").append(dataDisplay);
+
+} else {
+
+dataDisplay = "<div class='col-md-4 col-xl-12'><div class='row mb-4 position-relative'>" +
+"<div class='col-4 col-md-12 col-xl-4'><a href='https://news.uark.edu/articles/" + a.id + "'><img loading='lazy' class='img-fluid border-primary border-end border-5' alt='" + a.headline + "' src='//campusdata.uark.edu/resources/images/articles/" + image + "?w=660' /></a></div>" +
+"<div class='col-8 col-md-12 col-xl-8'><h3 class='fs-5 fs-lg-4 mb-0 mt-0 mt-md-2 mt-xl-0 lh-base'><a class='link-offset-1 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover stretched-link' href='https://news.uark.edu/articles/" + a.id + "'>" + a.headline + "</a></h3></div>" + 
+"</div></div>";
+
+$("#newsArticles").prepend(dataDisplay);
+
+}
+
+
+
+
+});
+}
+});
+
+});
+// </script>
+                  				
+                  <div class="row g-5">
+                     					
+                     <div id="mainNews" class="col-xl-6"></div>
+                     					
+                     <div class="col-xl-6">
+                        						
+                        <div id="newsArticles" class="row">
+                           
+                           						</div>
+                        					</div>
+                     				</div>
+                  			</div>
+               		</section>
+            
+            
+            		<script type="text/javascript">
+
+			//Hero Video
+			$(document).ready(function () {
+
+
+			$(document).on('click', '.ignoreClick', function() {
+			//event.preventDefault();
+			event.stopPropagation();
+			});
+
+			$(".ignoreClick").delegate(this, 'click', function(e){ e.stopImmediatePropagation(); });
+
+			$('#hero-video').click(function () {
+			var video = this;
+
+			if (video.paused) {
+			video.play();
+			$('.hero-video-icon').removeClass("fa-play").addClass("fa-pause");
+			} else {
+			video.pause();
+			$('.hero-video-icon').removeClass("fa-pause").addClass("fa-play");       
+			}
+			});
+
+			$('#razorback-video').click(function () {
+			var video = this;
+
+			if (video.paused) {
+			video.play();
+			$('.razorback-video-icon').removeClass("fa-play").addClass("fa-pause");    
+			} else {
+			video.pause();
+			$('.razorback-video-icon').removeClass("fa-pause").addClass("fa-play");
+			}
+			});
+
+
+			//razorback video control for media query
+
+
+			function razorbackVideoQuery(screenWidth) {
+			if (screenWidth.matches) {
+			// If media query matches screen width 576px)
+			$('#razorback-video-button').hide();
+			$('#razorback-video').get(0).pause();
+
+			} else {
+			$('#razorback-video-button').show();
+			$('#razorback-video').get(0).autoplay = true;
+			$('#razorback-video').get(0).play();
+
+			}
+			}
+
+			// Create a MediaQueryList object
+			var screenWidth = window.matchMedia("(max-width: 576px)");
+
+			// Call listener function at run time
+			razorbackVideoQuery(screenWidth);
+
+			// Attach listener function on state changes
+			screenWidth.addEventListener("change", function() {
+			razorbackVideoQuery(screenWidth);
+			});
+
+
+			});
+
+
+
+
+		</script>
+            
+            
+            		
+            </div>
+      </div>
+   </div>
+   <!-- begin pre-footer code --> <!-- either remove <h4> through </ul> tags if you don't need a content cell, or comment them out --> <!-- be sure to update ALL information below -->
+<!-- 
+<footer id="section-footer" class="bg-quartz">
+<div class="container">
+<div id="prefooter-row" class="row">
+<div id="pre-footer-cell-1" class="col-md-3 col-sm-6 col-xs-12">
+<h4>Department Name</h4>
+<ul class="list-unstyled">
+<li>Street address<br />University of Arkansas<br />Fayetteville, Arkansas 72701</li>
+<li>P 479-575-2000</li>
+<li><a href="mailto:mailto@uark.edu">mailto@uark.edu</a></li>
+</ul>
+</div>
+<div id="pre-footer-cell-2" class="col-md-3 col-sm-6 col-xs-12">
+<h4>Related Sites</h4>
+<ul class="list-unstyled">
+<li><a href="#">a link</a></li>
+</ul>
+</div>
+<div id="pre-footer-cell-3" class="col-md-3 col-sm-6 col-xs-12">
+<h4>Other Information</h4>
+<ul class="list-unstyled">
+<li><a href="http://uapd.uark.edu/15.php" target="_self">Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act</a></li>
+</ul>
+</div>
+<div id="pre-footer-cell-3" class="col-md-3 col-sm-6 col-xs-12">
+<h4>Updates &amp; Social</h4>
+<ul class="list-unstyled social-media-prefooter">
+
+</ul>
+</div>
+</div>
+</div>
+</footer>
+-->
+<!-- end pre-footer code -->
+
+
+<footer id="uark-footer">
+	<nav class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p id="footer-logo"><a title="University of Arkansas Home Page" href="https://www.uark.edu">UNIVERSITY OF ARKANSAS</a></p>
+				<div class="d-md-flex justify-content-sm-center justify-content-md-between" id="uark-footer-global-links">
+					<div>
+						<ul id="footer-global-links" class="list-inline text-uppercase text-sm-center text-md-left">
+							<li class="list-inline-item"><a title="About the University of Arkansas" href="https://www.uark.edu/about/index.php">About</a></li>
+							<li class="list-inline-item"><a title="Apply to the University of Arkansas" href="https://www.uark.edu/apply/index.php">Apply</a></li>
+							<li class="list-inline-item"><a title="University of Arkansas Academics" href="https://www.uark.edu/academics/index.php">Academics</a></li>
+							<li class="list-inline-item"><a title="University of Arkansas Student Life" href="https://www.uark.edu/student-life/index.php">Student Life</a></li>
+							<li class="list-inline-item"><a title="University of Arkansas Research" href="https://www.uark.edu/research/index.php">Research</a></li>
+							<li class="list-inline-item"><a title="University of Arkansas News" href="https://news.uark.edu/">News</a></li>
+							<li class="list-inline-item"><a title="University of Arkansas Razorbacks" href="https://arkansasrazorbacks.com">Razorbacks</a></li>
+						</ul>
+					</div>
+					<ul class="list-inline text-sm-center text-md-left" id="social-stack">
+						<li class="list-inline-item">
+							<a href="https://www.facebook.com/UofArkansas">
+								<span aria-hidden="true" class="fa-brands fa-lg fa-facebook"></span>
+								<span class="sr-only">Like us on Facebook</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://twitter.com/uarkansas">
+								<span aria-hidden="true" class="fa-brands fa-lg fa-x-twitter"></span>
+								<span class="sr-only">Follow us on Twitter</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.youtube.com/user/UniversityArkansas">
+								<span aria-hidden="true" class="fa-brands fa-lg fa-youtube"></span>
+								<span class="sr-only">Watch us on YouTube</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://instagram.com/uarkansas">
+								<span aria-hidden="true" class="fa-brands fa-lg fa-instagram"></span>
+								<span class="sr-only">See us on Instagram</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.linkedin.com/company/university-of-arkansas">
+								<span aria-hidden="true" class="fa-brands fa-lg fa-linkedin"></span>
+								<span class="sr-only">Connect with us on LinkedIn</span>
+							</a>
+						</li>
+					</ul>
+				</div><hr />
+				<div class="row">
+					<div class="col-md-6 col-lg-3 order-4 order-lg-1">
+						<div class="d-flex">
+							<div class="flex-shrink-0">
+								<a class="border border-0" title="View Campus Maps" href="https://campusmaps.uark.edu/"><span aria-hidden="true" class="fa-duotone fa-map-location-dot fa-2x fa-bounce-click-hover mb-3"></span></a>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<address>
+									1 University of Arkansas
+									<br />
+									Fayetteville, AR 72701
+									<br />
+									<a class="d-inline-block d-lg-none" title="View Campus Maps"  href="https://campusmaps.uark.edu/">View Campus Maps</a>
+									<br class="d-block d-lg-none" />
+									<a href="tel:+1-479-575-2000" aria-label="4 7 9. 5 7 5. 2 0 0 0. ">479-575-2000</a>
+								</address>
+							</div>
+						</div>
+						<a class="d-none d-lg-block" title="View Campus Maps"  href="https://campusmaps.uark.edu/"><img class="img-responsive" src="https://www.uark.edu/_resources/img/map.png" alt="Map of University of Arkansas Campus" /></a></div>
+					<div class="col-md-6 col-lg-3 order-1 order-lg-2 footer-news">
+						<p id="footer-news-header"><a href="https://news.uark.edu/">NEWS</a></p>
+						<ul id="newsFooter"></ul>
+						<script>
+							$(function () {
+								parseNews('https://campusdata.uark.edu/apiv2/articles/UarkArticlesCommon');
+							});
+
+							function parseNews(url) {
+								$.ajax({
+									url: url,
+									data: {},
+									contentType: "application/json; charset=utf-8",
+									dataType: 'jsonp',
+									async: true,
+									cache: true,
+									timeout: 6000, // 6 seconds in ms
+									success: function (articles) {
+										var list_data = '';
+										$.each(articles, function (key, a) {
+											var headline = a.headline;
+											headline = headline.replace("Ã¢â‚¬Ëœ", "'").replace("Ã¢â‚¬â„¢", "'").replace("Ã¢â‚¬Å“", "\"").replace("Ã¢â‚¬", "\"");
+											list_data += '<li><a href="https://news.uark.edu/articles/' + a.id + '" onclick="gaSendEvent(this.href, \'footer-global-links\', \'news.uark.edu\/articles\/' + a.id + '\');">' + headline + '</a></li>';
+										})
+										$(list_data).appendTo("#newsFooter");
+									}
+								});
+
+							}
+						</script>
+					</div>
+					<div class="col-md-6 col-lg-3 order-2 order-lg-3 events-footer">
+						<p id="footer-events-header"><a href="https://calendars.uark.edu/">UPCOMING EVENTS</a></p>
+						<div id="localist-widget-32956344" class="localist-widget"></div><script defer="true" type="text/javascript"
+																								 src="https://calendars.uark.edu/widget/view?schools=uark&amp;exclude_types=35971406519437%2C35971406524561&amp;days=31&amp;num=4&amp;hidedesc=1&amp;hideimage=1&amp;show_times=0&amp;show_view_all_cta=0&amp;hide_past=1&amp;experience=inperson&amp;container=localist-widget-32956344&style=none"></script>					
+					</div>
+					<div class="col-md-6 col-lg-3 footer-buttons mb-3 d-flex flex-column gap-2 order-3 order-lg-4">
+						<a class="btn btn-light btn-lg text-dark text-left" href="https://application.uark.edu/"><span aria-hidden="true" class="fas fa-check fa-lg fa-fw"></span><strong>APPLY </strong>Online</a>
+						<a class="btn btn-light btn-lg text-dark text-left" href="https://visit.uark.edu/"><span aria-hidden="true" class="fas fa-calendar-alt fa-lg fa-fw"></span><strong>Schedule </strong>a Visit</a>
+						<a class="btn btn-light btn-lg text-dark text-left" href="https://onlinegiving.uark.edu/online-giving-site/?a=13220281&amp;utm_campaign=UARK_Global_Footer&amp;utm_medium=website&amp;utm_source=website&amp;amt=50.00"><span aria-hidden="true" class="fas fa-gift fa-lg fa-fw"></span>Make a <strong>Gift </strong></a>
+					</div>
+				</div>
+				<hr />
+				<ul class="list-inline vertical-divide text-center footer-disclaimer">
+					<li class="list-inline-item"><a href="https://emergency.uark.edu/">Emergency Information</a></li>
+					<li class="list-inline-item"><a href="https://report.uark.edu/">Report a Concern</a></li>
+					<li class="list-inline-item"><a href="https://oeoc.uark.edu/titleix/">Title IX</a></li>
+					<li class="list-inline-item"><a href="https://accessibility.uark.edu/">Accessibility</a></li>	
+					<li class="list-inline-item"><a href="https://www.uark.edu/privacy-policy/index.php">Privacy Policy</a></li>
+					<li class="list-inline-item"><a href="https://www.uark.edu/contact-us.php">Contact Us</a></li>
+					<li class="list-inline-item"><a href="https://jobs.uark.edu">Jobs</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</footer><script>
+			var current_path = "/index.php";
+		</script>
+   <!--2026-07-28T05:55:51.915Z--><nav id="directedit-top"><a rel="nofollow" id="oudirectedit" href="https://a.cms.omniupdate.com/11/?skin=uark&amp;account=www&amp;site=www&amp;action=de&amp;path=/index.pcf" ><span class="visually-hidden">Edit webpage</span></a></nav><span aria-hidden="true" id="directedit-footer"></span><script type="text/javascript"><!--
+function directedit() {
+var link = document.getElementById("oudirectedit");
+
+if(link) {
+var html = link.parentNode.innerHTML;
+var anchor = html.replace("</a>","Copyright of University of Arkansas</a>");
+anchor = anchor.replace("oudirectedit", "none");
+document.getElementById("directedit-footer").innerHTML = anchor
+}
+
+
+//console.log(anchor);
+}
+window.onload = function(){ directedit(); }
+//--></script>
+   <!-- javascripts that don't need to go in the head can go here -->
+<script>
+	window.addEventListener("load", function() {
+			$("p, h3, h2").each(function() {
+				$(this).contents().filter(function() {
+					
+					return this.nodeType === Node.TEXT_NODE; // Only target text nodes
+				}).each(function() {
+					
+					const oldValue = this.nodeValue;
+					const newValue = oldValue.replace(/(U of A)/g, '<span class="text-nowrap">U of A</span>');
+					if (oldValue !== newValue) {
+						$(this).replaceWith(newValue);
+					}
+				});
+			});	
+	});
+</script>
+<!-- Ally -->
+<script data-ally-loader="" data-ally-platform-name="web" data-ally-client-id="8729" data-ally-af-style="none" src="https://prod.ally.ac/integration/api/ally.ui.js" />
+   
+
+<!-- respond.js - Enables media queries in some unsupported browsers-->
+<script src="https://www.uark.edu/_resources/js/respond.js" type="text/javascript"></script>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://www.uark.edu/_resources/php/combine.php?t=js&amp;f=nivo/jquery.nivo.slider.pack.js,oucampus.js" type="text/javascript"></script>
+  <link href="https://www.uark.edu/_resources/js/nivo/nivo-slider.css" rel="stylesheet">
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#slider').nivoSlider({
+			effect: 'fade',
+			pauseTime: 6000, // How long each slide will show
+			pauseOnHover: true, // Stop animation while hovering
+		});
+	});
+</script>       
+
+<script src="//www.uark.edu/inc/js/tablesorter/jquery.tablesorter.min.js" type="text/javascript" ></script>
+<script>
+	$(function() {
+		$('table.tablesorter').addClass('table-striped').tablesorter();
+		if (location.hash !== null && location.hash !== "") { 
+            $(location.hash + ".collapse").collapse("show"); 
+        }
+	});
+</script>
+
+<!-- JS and CSS for search and mobile-menu -->
+<script type="text/javascript">
+$(function() {
+
+	$(".form-search").on("click", function() {
+		selectedValue = $(".form-search [name='sitesearch']:checked").val();
+		if(selectedValue == "http://uark.edu" ) {
+			$("label[for=radioLabela]").removeClass("searchSelected");
+			$("label[for=radioLabelb]").addClass("searchSelected");
+			$("#searchbox").attr("placeholder", "Search all uark.edu");
+		} else if($.type(selectedValue) === "string" ) {
+			$("label[for=radioLabela]").addClass("searchSelected");
+			$("label[for=radioLabelb]").removeClass("searchSelected");
+			$("#searchbox").attr("placeholder", "Search this site");
+		}
+	});
+
+
+
+});
+</script>
+
+<!-- END JS and CSS for search and mobile-menu -->
+
+<!--
+<script src="//www.uark.edu/_resources/js/oucampus-2.js" type="text/javascript" ></script>
+-->
+
+
+</body></html>

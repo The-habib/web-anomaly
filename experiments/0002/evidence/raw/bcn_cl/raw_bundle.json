@@ -1,0 +1,106 @@
+{
+  "domain": "bcn.cl",
+  "canonical_url": "https://www.bcn.cl:443/portal/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:20.312309+00:00",
+  "preflight": {
+    "domain": "bcn.cl",
+    "dns_resolved": true,
+    "dns_ip": "34.235.16.99",
+    "status": "SUCCESS",
+    "final_url": "https://www.bcn.cl:443/portal/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://bcn.cl/",
+      "https://www.bcn.cl:443/portal/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1751.46,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Biblioteca del Congreso Nacional de Chile- BCN",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 0,
+      "scripts_count": 17,
+      "images_count": 0,
+      "headers": {
+        "Server": "CloudFront",
+        "Content-Type": "text/html",
+        "Content-Length": "2785",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 01:49:07 GMT",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Fri, 17 Jul 2026 20:42:06 GMT",
+        "Etag": "\"22b8-656d496f5a380-gzip\"",
+        "Content-Encoding": "gzip",
+        "Access-Control-Allow-Headers": "session_id,hashp,t",
+        "Backend": "nuevobcn",
+        "X-Varnish": "421364189, 2492590",
+        "X-Hits": "0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Accept-Ranges": "bytes",
+        "X-Xss-Protection": "1; mode=block",
+        "Vary": "Accept-Encoding",
+        "Via": "1.1 470da146cea57daec736ce1623056a0a.cloudfront.net (CloudFront)",
+        "Age": "63313",
+        "Strict-Transport-Security": "max-age=15768000; preload",
+        "X-Cache": "Hit from cloudfront",
+        "X-Amz-Cf-Pop": "BOM78-P4",
+        "X-Amz-Cf-Id": "AFFku_lHZWTOUGzCmyfvGcM9ExB2KpCL8Zb1HYO8JdrAKbdmQYMN_w=="
+      },
+      "content_length": 8888
+    },
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192420",
+    "last_seen": "20260817192420",
+    "earliest_iso": "2026-08-17T19:24:20.312309+00:00",
+    "latest_iso": "2026-08-17T19:24:20.312309+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/bcn_cl/rendered.html",
+      "sha256": "1bfcb0921270019f70c2fb5c229167dd45a6937b3500ddc61286847a6b06223c",
+      "size_bytes": 8888
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/bcn_cl/timeline.json",
+      "sha256": "3d15dcf3c1267b02e25f58deaaab038b28598324f3bb03d9622ea08c579c1e92",
+      "size_bytes": 964
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "domain": "microsoft.com",
+  "canonical_url": "https://www.microsoft.com/en-in",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:34:54.347426+00:00",
+  "preflight": {
+    "domain": "microsoft.com",
+    "dns_resolved": true,
+    "dns_ip": "13.107.213.48",
+    "status": "SUCCESS",
+    "final_url": "https://www.microsoft.com/en-in",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://microsoft.com/",
+      "https://www.microsoft.com/",
+      "https://www.microsoft.com/en-in"
+    ],
+    "status_code": 200,
+    "latency_ms": 1022.26,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Microsoft \u2013 AI, Cloud, Productivity, Computing, Gaming & Apps",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 108,
+      "scripts_count": 144,
+      "images_count": 20,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Set-Cookie": "CAS_PROGRAM=echo; expires=Mon, 17-Aug-2026 19:35:02 GMT; path=/; secure; SameSite=None",
+        "x-trace-id": "743f6683ee2fac02a1e5f8b962d291ad",
+        "X-RTag": "Homepage_Echo",
+        "X-EdgeScape-Location": "country_code=IN",
+        "ms-cv-esi": "CASMicrosoftCV81f5e5f4.0",
+        "ms-cv": "CASMicrosoftCV81f5e5f4.0",
+        "TLS_version": "tls1.3",
+        "Vary": "Accept-Encoding",
+        "x-azure-ref": "20260817T193248Z-15b6b6fb844tzx9rhC1BOMqny00000000hxg000000002r18",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Accept-CH": "Sec-CH-UA-Platform-Version",
+        "ms-commit-id": "dfb7b27",
+        "x-cascade-version": "vNext",
+        "Cache-Control": "max-age=600,s-maxage=86400",
+        "Content-Encoding": "gzip",
+        "Date": "Mon, 17 Aug 2026 19:34:54 GMT",
+        "Content-Length": "22935",
+        "Connection": "keep-alive"
+      },
+      "content_length": 169918
+    },
+    "text_length": 836
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193459",
+    "last_seen": "20260817193459",
+    "earliest_iso": "2026-08-17T19:34:54.347426+00:00",
+    "latest_iso": "2026-08-17T19:34:54.347426+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/microsoft_com/rendered.html",
+      "sha256": "c42b69142776a98fb4585e63ed144dc809666d10d61c70c05e74f14ff77ad13c",
+      "size_bytes": 169918
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/microsoft_com/timeline.json",
+      "sha256": "dcafbbff826f9e32ff96e80b5ac11e21dd08235877453ee2380b7af0d1b734b6",
+      "size_bytes": 973
+    }
+  ]
+}

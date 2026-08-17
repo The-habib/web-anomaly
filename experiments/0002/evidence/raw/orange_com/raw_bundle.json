@@ -1,0 +1,96 @@
+{
+  "domain": "orange.com",
+  "canonical_url": "https://www.orange.com/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:35:18.310379+00:00",
+  "preflight": {
+    "domain": "orange.com",
+    "dns_resolved": true,
+    "dns_ip": "34.54.184.7",
+    "status": "SUCCESS",
+    "final_url": "https://www.orange.com/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://orange.com/",
+      "https://www.orange.com/"
+    ],
+    "status_code": 200,
+    "latency_ms": 3541.8,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Site verification",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 0,
+      "scripts_count": 3,
+      "images_count": 0,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Mon, 17 Aug 2026 19:35:18 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "X-ID-FE": "rabf02-hw-edge-or0003",
+        "Set-Cookie": "DSR=+QrEPZlXnzEnxm8Jo67yZZVQkSUWAuylNmLyNSvV5NKuY1w9L5y9DQLHURi4o9c5ZvgrbNyNnvvj+mr6OszXzA==; path=/; SameSite=Lax;, DCSS=2A641AB34FEB0272D5C26DA9E09C9F209206107; path=/; SameSite=Lax;",
+        "cache-control": "no-store, no-cache, max-age=0, must-revalidate, private, max-stale=0, post-check=0, pre-check=0",
+        "Surrogate-Control": "no-store",
+        "last-modified": "Fri, 02 Jan 1970 08:00:00 GMT",
+        "X-ID": "rabf02-hw-edge-or0003",
+        "traceparent": "00-b6bb0b50aafffda8b383814ecbfb34d7-6a20428d8e19a361-01",
+        "x-rule-orange": "default"
+      },
+      "content_length": 6429
+    },
+    "text_length": 439
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193523",
+    "last_seen": "20260817193523",
+    "earliest_iso": "2026-08-17T19:35:18.310379+00:00",
+    "latest_iso": "2026-08-17T19:35:18.310379+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/orange_com/rendered.html",
+      "sha256": "de6f8d72625e1f542d66c82aea864861260658a5737166d015583c5a4d7536ff",
+      "size_bytes": 6429
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/orange_com/timeline.json",
+      "sha256": "f6b5445a5a32f725f781822842e839cdf8cbaee23946d3e2692ad89d2adc03e2",
+      "size_bytes": 968
+    }
+  ]
+}

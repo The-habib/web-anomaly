@@ -1,0 +1,105 @@
+{
+  "domain": "wiley.com",
+  "canonical_url": "https://www.wiley.com/en-in/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:36:56.157547+00:00",
+  "preflight": {
+    "domain": "wiley.com",
+    "dns_resolved": true,
+    "dns_ip": "44.214.121.213",
+    "status": "SUCCESS",
+    "final_url": "https://www.wiley.com/en-in/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://wiley.com/",
+      "https://www.wiley.com/",
+      "https://www.wiley.com/en-in/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1796.07,
+    "content_type": "text/html;charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Trusted Research & AI Insights | Wiley",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 150,
+      "scripts_count": 26,
+      "images_count": 9,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:36:56 GMT",
+        "Content-Type": "text/html;charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "x-vhost": "wiley-com",
+        "strict-transport-security": "max-age=2592000",
+        "x-frame-options": "SAMEORIGIN",
+        "Cache-Control": "max-age=300,stale-while-revalidate=120,stale-if-error=86400",
+        "last-modified": "Mon, 17 Aug 2026 17:48:45 GMT",
+        "expires": "Mon, 17 Aug 2026 19:41:56 GMT",
+        "x-content-type-options": "nosniff",
+        "Age": "0",
+        "x-served-by": "cache-bom-vanm7210045-BOM",
+        "x-cache": "HIT",
+        "x-timer": "S1786995416.305756,VS0,VS0,VE1",
+        "vary": "Accept-Encoding,User-Agent",
+        "cf-cache-status": "DYNAMIC",
+        "Content-Encoding": "br",
+        "Server": "cloudflare",
+        "CF-RAY": "a2cb2167d9222c7b-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "content_length": 317657
+    },
+    "text_length": 1312
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193701",
+    "last_seen": "20260817193701",
+    "earliest_iso": "2026-08-17T19:36:56.157547+00:00",
+    "latest_iso": "2026-08-17T19:36:56.157547+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/wiley_com/rendered.html",
+      "sha256": "27251961962f637f5c54f8efab5ad05d42ed1bdceaf642c3707afa35f75c4f80",
+      "size_bytes": 317657
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/wiley_com/timeline.json",
+      "sha256": "63ba724c6537af701e13df98d500fd8b77eadee61acc506165dd751db7eab91f",
+      "size_bytes": 969
+    }
+  ]
+}

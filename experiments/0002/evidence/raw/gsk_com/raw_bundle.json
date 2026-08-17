@@ -1,0 +1,103 @@
+{
+  "domain": "gsk.com",
+  "canonical_url": "https://www.gsk.com:443/en-gb/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:34:07.436510+00:00",
+  "preflight": {
+    "domain": "gsk.com",
+    "dns_resolved": true,
+    "dns_ip": "23.212.50.156",
+    "status": "SUCCESS",
+    "final_url": "https://www.gsk.com:443/en-gb/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://gsk.com/",
+      "https://gsk.com/en-gb/",
+      "https://www.gsk.com:443/en-gb/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2111.67,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home | GSK",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 297,
+      "scripts_count": 5,
+      "images_count": 11,
+      "headers": {
+        "Content-Type": "text/html",
+        "Cache-Control": "public, max-age=1200, max-stale=0, stale-while-revalidate=5, must-revalidate, proxy-revalidate",
+        "Content-Security-Policy": "default-src 'self' 'unsafe-eval' 'unsafe-inline' * data:; font-src 'self' fonts.gstatic.com fonts.googleapis.com data:; style-src 'self' 'unsafe-inline' fonts.googleapis.com *.investisdigital.com *.site.com ; img-src 'self' img.youtube.com *.investisdigital.com *.googlesyndication.com mapsresources-pa.googleapis.com ssl.google-analytics.com www.facebook.com bat.bing.com cm.everesttech.net *.presage.io maps.googleapis.com maps.gstatic.com *.doubleclick.net *.fls.doubleclick.net *.t.co t.co *.twitter.com *.google.com data:; frame-ancestors 'self'; frame-src 'self' *; connect-src 'self' *.gsk.com *.investisdigital.com *.bing.com *.hotjar.com www.google.com *.googlesyndication.com akamai.tiqcdn.com glaxosmithklinebeech.tt.omtrdc.net gsk.com *.spotify.com spotify.com *.bing.net bing.net *.google-analytics.com google-analytics.com *.adsrvr.org adsrvr.org *.demdex.net demdex.net *.googleapis.com googleapis.com talkify.net *.talkify.net linkedin.com *.linkedin.com *.hotjar.io hotjar.io wss://*.hotjar.com *.salesforce-scrt.com *.site.com *.doubleclick.net *.fls.doubleclick.net *.tealiumiq.com;",
+        "cachesource": "NewCache",
+        "strict-transport-security": "max-age=31536000;",
+        "x-frame-options": "sameorigin",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "origin",
+        "Permissions-Policy": "autoplay=*",
+        "Access-Control-Allow-Origin": "https://jobs.gsk.com",
+        "traceparent": "00-488fc4259d0b2895cb0b7d93f1f3d3c9-11f94d44bfbc7d65-00",
+        "x-cloud-trace-context": "488fc4259d0b2895cb0b7d93f1f3d3c9/1295151325515644261",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "br",
+        "Date": "Mon, 17 Aug 2026 19:34:07 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive, Transfer-Encoding",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "X-Cache-Status": "Hit from child"
+      },
+      "content_length": 408894
+    },
+    "text_length": 359
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193412",
+    "last_seen": "20260817193412",
+    "earliest_iso": "2026-08-17T19:34:07.436510+00:00",
+    "latest_iso": "2026-08-17T19:34:07.436510+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/gsk_com/rendered.html",
+      "sha256": "47da80cb1acc7d1af77d09a94ef3ed84b4e98688b1d149556259bc6646cc8feb",
+      "size_bytes": 408894
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/gsk_com/timeline.json",
+      "sha256": "9912c709373f1a40310afb9b67a522b59d0046d42113934e281aced48ba9a84e",
+      "size_bytes": 967
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "domain": "bund.de",
+  "canonical_url": "https://verwaltung.bund.de/portal/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:34.218897+00:00",
+  "preflight": {
+    "domain": "bund.de",
+    "dns_resolved": true,
+    "dns_ip": "80.245.156.34",
+    "status": "SUCCESS",
+    "final_url": "https://verwaltung.bund.de/portal/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://bund.de/",
+      "https://verwaltung.bund.de/",
+      "https://verwaltung.bund.de/portal/"
+    ],
+    "status_code": 200,
+    "latency_ms": 6281.6,
+    "content_type": "text/html;charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Bundesportal | start page",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 0,
+      "scripts_count": 2,
+      "images_count": 0,
+      "headers": {
+        "Server": "myracloud",
+        "Date": "Mon, 17 Aug 2026 19:24:34 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "content-language": "en-US",
+        "content-security-policy": "frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; default-src 'self'; object-src 'none'; connect-src 'self'; img-src 'self' data:; script-src 'self' 'nonce-4719406'; style-src 'self' 'nonce-4719406'; font-src 'self' data:; frame-src 'self' https://www.youtube-nocookie.com;",
+        "cache-control": "no-cache, no-store, max-age=0",
+        "traceresponse": "00-86db20ceef8c1cfc1bb0e86fb8fa8605-dcf0538259d14784-01",
+        "apisix-cache-status": "HIT",
+        "x-frame-options": "deny",
+        "x-download-options": "noopen",
+        "x-permitted-cross-domain-policies": "master-only",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-xss-protection": "0",
+        "x-content-type-options": "nosniff",
+        "Content-Encoding": "gzip",
+        "vary": "accept-encoding"
+      },
+      "content_length": 2669
+    },
+    "text_length": 163
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192435",
+    "last_seen": "20260817192435",
+    "earliest_iso": "2026-08-17T19:24:34.218897+00:00",
+    "latest_iso": "2026-08-17T19:24:34.218897+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/bund_de/rendered.html",
+      "sha256": "ad75b1383e58d2f9fa3ab6ec264c5c73bdf6965b643d57daff1ddf4655e04164",
+      "size_bytes": 2669
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/bund_de/timeline.json",
+      "sha256": "52b7ba9b8645da58fbf09d47e0463130104fc166b3d8354130daa7ccafe5533e",
+      "size_bytes": 965
+    }
+  ]
+}

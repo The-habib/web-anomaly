@@ -1,0 +1,66 @@
+{
+  "domain": "saint-gobain.com",
+  "canonical_url": "https://www.saint-gobain.com/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:35:58.218723+00:00",
+  "preflight": {
+    "domain": "saint-gobain.com",
+    "dns_resolved": true,
+    "dns_ip": "104.18.28.123",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://www.saint-gobain.com/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://saint-gobain.com/",
+      "https://www.saint-gobain.com/"
+    ],
+    "status_code": 403,
+    "latency_ms": 623.3,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193603",
+    "last_seen": "20260817193603",
+    "earliest_iso": "2026-08-17T19:35:58.218723+00:00",
+    "latest_iso": "2026-08-17T19:35:58.218723+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/saint-gobain_com/timeline.json",
+      "sha256": "d304e77952b614c7f2065119d5b6e5b736ec31eb8e52c1af832b205a6f09c2a9",
+      "size_bytes": 971
+    }
+  ]
+}

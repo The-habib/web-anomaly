@@ -1,0 +1,106 @@
+{
+  "domain": "pa.gov",
+  "canonical_url": "https://www.pa.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:14.619321+00:00",
+  "preflight": {
+    "domain": "pa.gov",
+    "dns_resolved": true,
+    "dns_ip": "13.107.226.40",
+    "status": "SUCCESS",
+    "final_url": "https://www.pa.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://pa.gov/",
+      "https://www.pa.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1201.32,
+    "content_type": "text/html;charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home | Commonwealth of Pennsylvania",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 45,
+      "scripts_count": 25,
+      "images_count": 6,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:26:14 GMT",
+        "Content-Type": "text/html;charset=utf-8",
+        "Content-Length": "17092",
+        "Connection": "keep-alive",
+        "x-xss-protection": "1; mode=block",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "SAMEORIGIN",
+        "last-modified": "Mon, 17 Aug 2026 19:25:20 GMT",
+        "etag": "\"17cea-65943218c44dc-gzip\"",
+        "cache-control": "max-age=300",
+        "expires": "Mon, 17 Aug 2026 19:31:14 GMT",
+        "content-encoding": "gzip",
+        "x-vhost": "www.pa.gov",
+        "content-disposition": "inline",
+        "X-Content-Type-Options": "nosniff",
+        "Age": "1",
+        "Strict-Transport-Security": "max-age=31557600",
+        "X-Served-By": "cache-hyd1500033-HYD",
+        "X-Cache": "CONFIG_NOCACHE",
+        "X-Timer": "S1786994775.794289,VS0,VS0,VE2",
+        "Vary": "Accept-Encoding,Origin",
+        "x-azure-ref": "20260817T192614Z-154c9d644fb8d4nchC1PNQnmxs0000001gcg000000000ytm",
+        "Accept-Ranges": "bytes"
+      },
+      "content_length": 97514
+    },
+    "text_length": 1174
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192620",
+    "last_seen": "20260817192620",
+    "earliest_iso": "2026-08-17T19:26:14.619321+00:00",
+    "latest_iso": "2026-08-17T19:26:14.619321+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/pa_gov/rendered.html",
+      "sha256": "11a8214cbd4ae37ebb5a067a9f68224e46aeddc365b78be43d2e229cbc0bc89c",
+      "size_bytes": 97514
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/pa_gov/timeline.json",
+      "sha256": "ad574ada5e9e2c0fd56c7eaa062b0046bc01f4df00cd06f1f180c0ffca2437de",
+      "size_bytes": 965
+    }
+  ]
+}

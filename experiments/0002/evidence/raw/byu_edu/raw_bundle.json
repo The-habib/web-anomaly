@@ -1,0 +1,108 @@
+{
+  "domain": "byu.edu",
+  "canonical_url": "https://www.byu.edu/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:19:28.400848+00:00",
+  "preflight": {
+    "domain": "byu.edu",
+    "dns_resolved": true,
+    "dns_ip": "128.187.16.184",
+    "status": "SUCCESS",
+    "final_url": "https://www.byu.edu/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://byu.edu/",
+      "http://www.byu.edu/",
+      "https://www.byu.edu/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4998.91,
+    "content_type": "text/html;charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home - BYU",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 76,
+      "scripts_count": 15,
+      "images_count": 13,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:19:08 GMT",
+        "Server": "istio-envoy",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains;, max-age=31536000; includeSubDomains",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "text/html;charset=UTF-8",
+        "x-envoy-decorator-operation": "brightspot-frontend-verify.byu.svc.cluster.local:80/*",
+        "referrer-policy": "no-referrer-when-downgrade",
+        "x-powered-by": "Brightspot",
+        "Content-Encoding": "gzip",
+        "x-envoy-upstream-service-time": "199",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 b3fd584b4d3f756557107650af037c1a.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "SLC52-P1",
+        "X-Amz-Cf-Id": "BxCqEeYi-qCNRLmgjRx08-1DbDuW4UViAeU6WIvRV_UBoi_MbxuKXg==",
+        "Age": "21",
+        "X-OneAgent-JS-Injection": "true",
+        "X-ruxit-JS-Agent": "true",
+        "Server-Timing": "dtTrId;desc=\"1c51a49b59bdd769492094937f328a19\", dtSInfo;desc=\"0\", dtRpid;desc=\"-1214791040\"",
+        "Set-Cookie": "dtCookie=v_4_srv_2_sn_82E01FF76DB49A2D18436AD1C345455D_perc_100000_ol_0_mul_1_app-3A5c01f50ec8455dbe_0_rcs-3Acss_0; Path=/; Domain=.byu.edu",
+        "Keep-Alive": "timeout=5, max=100",
+        "Connection": "Keep-Alive",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 128499
+    },
+    "text_length": 3097
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817191959",
+    "last_seen": "20260817191959",
+    "earliest_iso": "2026-08-17T19:19:28.400848+00:00",
+    "latest_iso": "2026-08-17T19:19:28.400848+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/byu_edu/rendered.html",
+      "sha256": "d12b6cb70bd28c103551cf7e3abfb86ea273f68ee11e00879f27e6f67c46ae61",
+      "size_bytes": 128499
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/byu_edu/timeline.json",
+      "sha256": "393e6ef70259b790bb3b989041421a726e3292e073bedf010d5433cd0aa37d87",
+      "size_bytes": 967
+    }
+  ]
+}

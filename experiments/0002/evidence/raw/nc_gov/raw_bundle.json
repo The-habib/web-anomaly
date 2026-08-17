@@ -1,0 +1,106 @@
+{
+  "domain": "nc.gov",
+  "canonical_url": "https://www.nc.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:55.724044+00:00",
+  "preflight": {
+    "domain": "nc.gov",
+    "dns_resolved": true,
+    "dns_ip": "52.204.9.77",
+    "status": "SUCCESS",
+    "final_url": "https://www.nc.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://nc.gov/",
+      "https://www.nc.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2870.2,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home | nc.gov",
+      "generator": "Drupal 10 (https://www.drupal.org)",
+      "doctype": "HTML5/Standard",
+      "links_count": 79,
+      "scripts_count": 72,
+      "images_count": 7,
+      "headers": {
+        "Server": "CloudFront",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:21:28 GMT",
+        "Cache-Control": "max-age=300, public, stale-if-error=86400, stale-while-revalidate=600",
+        "X-Drupal-Dynamic-Cache": "MISS",
+        "Content-Language": "en",
+        "X-Content-Type-Options": "nosniff",
+        "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "Last-Modified": "Sat, 15 Aug 2026 20:01:04 GMT",
+        "X-OneAgent-JS-Injection": "true",
+        "X-ruxit-JS-Agent": "true",
+        "Set-Cookie": "dtCookies7oxrte2=v_4_srv_3_sn_8DCC8BEBC356DBFB88EEA769006D0CA7_perc_100000_ol_0_mul_1_app-3A1a821a3f2450adce_1; Path=/; Domain=.nc.gov",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Content-Security-Policy": "upgrade-insecure-requests; frame-ancestors 'self'",
+        "ETag": "\"1786824065:dtagent10343260715123811z/cR\"",
+        "Vary": "Cookie",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 14a40b308b0455acfadba8b27b21ec62.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS53-P4",
+        "X-Amz-Cf-Id": "wmz2Lgkv_113vfWk-M4Kc0E8Ar1jPomhL9N3BcD3yzdHZIFoIX4YTg==",
+        "Age": "267"
+      },
+      "content_length": 72663
+    },
+    "text_length": 857
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192602",
+    "last_seen": "20260817192602",
+    "earliest_iso": "2026-08-17T19:25:55.724044+00:00",
+    "latest_iso": "2026-08-17T19:25:55.724044+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nc_gov/rendered.html",
+      "sha256": "b89dff528ca67a3b77cea65bce497b8c5fc59b310e6c4e41c4b698c6c2228b4d",
+      "size_bytes": 72663
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nc_gov/timeline.json",
+      "sha256": "bc7f197f334ae9e78543e20d1dc982894938519f8b036959171502b6fbfa844a",
+      "size_bytes": 965
+    }
+  ]
+}

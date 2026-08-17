@@ -1,0 +1,101 @@
+{
+  "domain": "japan.go.jp",
+  "canonical_url": "https://www.japan.go.jp/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:34.086328+00:00",
+  "preflight": {
+    "domain": "japan.go.jp",
+    "dns_resolved": true,
+    "dns_ip": "108.158.61.125",
+    "status": "SUCCESS",
+    "final_url": "https://www.japan.go.jp/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://japan.go.jp/",
+      "https://www.japan.go.jp/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1576.39,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The Government of Japan - JapanGov",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 111,
+      "scripts_count": 16,
+      "images_count": 82,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Sun, 16 Aug 2026 21:37:03 GMT",
+        "x-amz-replication-status": "COMPLETED",
+        "Last-Modified": "Fri, 14 Aug 2026 01:00:11 GMT",
+        "Server": "AmazonS3",
+        "x-amz-server-side-encryption": "AES256",
+        "Cache-Control": "max-age=86400",
+        "x-amz-version-id": "oM2U_IbmPn.1elv7Tcmf6gYKgjBB2bj2",
+        "Content-Encoding": "br",
+        "ETag": "W/\"74e4d5c29f46668c5df9967ce94a18b8\"",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 8c16b7f0d32e35c3623b38043f5589ee.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM78-P4",
+        "X-Amz-Cf-Id": "fdTNGutN-dS0TgC_uk8_ysVGvwuhNUhiDjuLQ5yrbqqy4kYjLiqh6A==",
+        "Age": "78512"
+      },
+      "content_length": 109900
+    },
+    "text_length": 812
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192540",
+    "last_seen": "20260817192540",
+    "earliest_iso": "2026-08-17T19:25:34.086328+00:00",
+    "latest_iso": "2026-08-17T19:25:34.086328+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/japan_go_jp/rendered.html",
+      "sha256": "c25df78f9d3dd2f2338bc43311c2c8f098678ac04d4bd130806059e263941dd5",
+      "size_bytes": 109900
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/japan_go_jp/timeline.json",
+      "sha256": "94bf89682669c90e68b34fed322f8404921e68e44111a7ded29d9ca8c13a732d",
+      "size_bytes": 971
+    }
+  ]
+}

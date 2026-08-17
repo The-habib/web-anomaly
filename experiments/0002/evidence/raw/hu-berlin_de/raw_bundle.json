@@ -1,0 +1,93 @@
+{
+  "domain": "hu-berlin.de",
+  "canonical_url": "https://www.hu-berlin.de/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:21:13.375896+00:00",
+  "preflight": {
+    "domain": "hu-berlin.de",
+    "dns_resolved": true,
+    "dns_ip": "141.20.4.180",
+    "status": "SUCCESS",
+    "final_url": "https://www.hu-berlin.de/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://hu-berlin.de/",
+      "https://www.hu-berlin.de/"
+    ],
+    "status_code": 200,
+    "latency_ms": 3212.97,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Making sure you're not a bot!",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 7,
+      "scripts_count": 7,
+      "images_count": 2,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:21:13 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63115200; preload",
+        "Cache-Control": "no-store",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html; charset=utf-8",
+        "Set-Cookie": "techaro.lol-anubis-auth-347ddb4a=; Path=/; Expires=Mon, 17 Aug 2026 19:20:13 GMT; Max-Age=0; Secure; SameSite=None; Partitioned, techaro.lol-anubis-cookie-verification-347ddb4a=01a0112b-bbd9-7dbd-9122-882d25b0ec37; Path=/; Expires=Mon, 17 Aug 2026 19:51:13 GMT; Secure; SameSite=None; Partitioned",
+        "Keep-Alive": "timeout=90, max=500",
+        "Connection": "Keep-Alive",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 7795
+    },
+    "text_length": 1068
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192119",
+    "last_seen": "20260817192119",
+    "earliest_iso": "2026-08-17T19:21:13.375896+00:00",
+    "latest_iso": "2026-08-17T19:21:13.375896+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/hu-berlin_de/rendered.html",
+      "sha256": "ee302dd1efe81a7ac748febc42a7d5cacb2163d78d871f7a79fe94ef98805e0f",
+      "size_bytes": 7795
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/hu-berlin_de/timeline.json",
+      "sha256": "389f3cfaa3259f8b027f110fa9daa20e827fce084254cf970a6dd97f740884dd",
+      "size_bytes": 970
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "domain": "inch.com",
+  "canonical_url": "https://www.inch.com:443/",
+  "category": "Personal/independent sites",
+  "collection_timestamp": "2026-08-17T19:44:04.396958+00:00",
+  "preflight": {
+    "domain": "inch.com",
+    "dns_resolved": true,
+    "dns_ip": "13.229.34.86",
+    "status": "SUCCESS",
+    "final_url": "https://www.inch.com:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://inch.com/",
+      "https://www.inch.com:443/"
+    ],
+    "status_code": 200,
+    "latency_ms": 694.94,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Inch",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 0,
+      "scripts_count": 5,
+      "images_count": 1,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Served-By-Static-Gateway": "true",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "Date": "Mon, 17 Aug 2026 19:44:04 GMT",
+        "Content-Length": "3276",
+        "Connection": "keep-alive"
+      },
+      "content_length": 9388
+    },
+    "text_length": 4
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194409",
+    "last_seen": "20260817194409",
+    "earliest_iso": "2026-08-17T19:44:04.396958+00:00",
+    "latest_iso": "2026-08-17T19:44:04.396958+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/inch_com/rendered.html",
+      "sha256": "dd90a441f6fca62850e211db0b36b0cf23518b8006273a0fb3eed3fbd4c64a0d",
+      "size_bytes": 9388
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/inch_com/timeline.json",
+      "sha256": "09e7112b881737aa2770ffacb750ba66c6bae0f8b350cfeb3937f22f4fa21352",
+      "size_bytes": 966
+    }
+  ]
+}

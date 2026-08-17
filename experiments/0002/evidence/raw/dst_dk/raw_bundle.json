@@ -1,0 +1,100 @@
+{
+  "domain": "dst.dk",
+  "canonical_url": "https://www.dst.dk/da/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:54.025479+00:00",
+  "preflight": {
+    "domain": "dst.dk",
+    "dns_resolved": true,
+    "dns_ip": "91.208.143.1",
+    "status": "SUCCESS",
+    "final_url": "https://www.dst.dk/da/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://dst.dk/",
+      "https://dst.dk/da/",
+      "https://www.dst.dk/da/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4481.75,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Danmarks Statistik",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 118,
+      "scripts_count": 9,
+      "images_count": 31,
+      "headers": {
+        "Cache-Control": "no-cache, no-store",
+        "Pragma": "no-cache",
+        "Content-Type": "text/html; charset=utf-8",
+        "Expires": "-1",
+        "Server": "Microsoft-IIS/10.0",
+        "Set-Cookie": "website#lang=da; path=/; secure; SameSite=None, ASP.NET_SessionId=2j04ulsmzp2jz3hvd12lyyxv; path=/; secure; HttpOnly; SameSite=None",
+        "X-UA-Compatible": "IE=edge",
+        "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.statistikbanken.dk https://apichart.statbank.dk/ https://api.statbank.dk https://api.cludo.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://digitalfeedback.euro.confirmit.com https://app-script.monsido.com https://heatmaps.monsido.com https://www.thinglink.com https://siteimproveanalytics.com https://code.highcharts.com https://cdn-eu.clickdimensions.com https://analytics-eu.clickdimensions.com https://az551914.vo.msecnd.net https://www.dst.dk/; style-src 'self' 'unsafe-inline' https://fast.fonts.net https://cdn-eu.clickdimensions.com https://fonts.googleapis.com/; img-src 'self' data: blob: https://tracking.monsido.com https://i.vimeocdn.com https://api.cludo.com https://www.statistikbanken.dk https://sdg.statistikbank.dk https://133097.global.siteimproveanalytics.io https://cdn-eu.clickdimensions.com https://www.dst.dk/; font-src 'self' 'unsafe-inline' https://fonts.gstatic.com/; frame-src 'self' data: https://api.statbank.dk https://survey.userneeds.com https://player.vimeo.com https://h5p.laerit.dk https://www.thinglink.com https://statistikbanken.dk https://statbank.dk https://www.statbank.dk https://www.statistikbanken.dk https://www.dst.dk/ https://interviewer.dst.dk https://export.highcharts.com/ https://apichart.statbank.dk/; form-action 'self' https://norstatsurveys.com https://survey.wilke.dk/ https://info.dstsurvey.dk https://dstsurvey.dst.dk https://dstsurvey.dk https://analytics-eu.clickdimensions.com https://export.highcharts.com https://srvblaiseprod3.dst.dk https://study.epinionglobal.com; upgrade-insecure-requests; block-all-mixed-content; base-uri 'self'; connect-src 'self' https://tracking.monsido.com https://digitalfeedback.euro.confirmit.com https://heatmaps.monsido.com https://www.statistikbanken.dk https://apichart.statbank.dk/ https://api.statbank.dk https://api.cludo.com https://eq.userneeds.com",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Date": "Mon, 17 Aug 2026 19:24:54 GMT",
+        "ntCoent-Length": "1101142",
+        "Content-Encoding": "gzip",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 1101142
+    },
+    "text_length": 1159
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192456",
+    "last_seen": "20260817192456",
+    "earliest_iso": "2026-08-17T19:24:54.025479+00:00",
+    "latest_iso": "2026-08-17T19:24:54.025479+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/dst_dk/rendered.html",
+      "sha256": "6a9e4b489c2aeaf9ab0a31abd79bf2246a5c72f4fb0e1743894f59859945fc1f",
+      "size_bytes": 1101142
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/dst_dk/timeline.json",
+      "sha256": "d380f82dbb06b8cc377b4d98c28f910eb04b8980bfd9ce7f249bdfcf0c683df6",
+      "size_bytes": 967
+    }
+  ]
+}

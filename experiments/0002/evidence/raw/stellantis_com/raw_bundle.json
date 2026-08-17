@@ -1,0 +1,97 @@
+{
+  "domain": "stellantis.com",
+  "canonical_url": "https://www.stellantis.com/en",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:36:23.774039+00:00",
+  "preflight": {
+    "domain": "stellantis.com",
+    "dns_resolved": true,
+    "dns_ip": "217.70.184.55",
+    "status": "SUCCESS",
+    "final_url": "https://www.stellantis.com/en",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://stellantis.com/",
+      "https://www.stellantis.com/",
+      "https://www.stellantis.com/en"
+    ],
+    "status_code": 200,
+    "latency_ms": 2192.88,
+    "content_type": "text/html;charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Official Global Website  | Stellantis",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 151,
+      "scripts_count": 10,
+      "images_count": 26,
+      "headers": {
+        "Content-Type": "text/html;charset=utf-8",
+        "X-Dispatcher": "dispatcher1eucentral1-b80",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Fri, 07 Aug 2026 14:28:50 GMT",
+        "ETag": "\"165c2-65875d2c37d15-gzip\"",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "br",
+        "Content-Length": "9928",
+        "Cache-Control": "max-age=600",
+        "Date": "Mon, 17 Aug 2026 19:36:23 GMT",
+        "Connection": "keep-alive",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload"
+      },
+      "content_length": 91586
+    },
+    "text_length": 614
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193628",
+    "last_seen": "20260817193628",
+    "earliest_iso": "2026-08-17T19:36:23.774039+00:00",
+    "latest_iso": "2026-08-17T19:36:23.774039+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/stellantis_com/rendered.html",
+      "sha256": "fcf53e5e4914ba466b671a197a26599eb5e5f9387bfbaac8dd56a3aafdcec39f",
+      "size_bytes": 91586
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/stellantis_com/timeline.json",
+      "sha256": "831d64043db19caba73e7071d70252a01ecaa341cd49fd2bbc4b7e4a5cb3dfe0",
+      "size_bytes": 973
+    }
+  ]
+}

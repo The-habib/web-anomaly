@@ -1,0 +1,66 @@
+{
+  "domain": "rand.org",
+  "canonical_url": "https://www.rand.org:443/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:31:00.857204+00:00",
+  "preflight": {
+    "domain": "rand.org",
+    "dns_resolved": true,
+    "dns_ip": "75.2.127.75",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://www.rand.org:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://rand.org/",
+      "https://www.rand.org:443/"
+    ],
+    "status_code": 403,
+    "latency_ms": 1218.35,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193105",
+    "last_seen": "20260817193105",
+    "earliest_iso": "2026-08-17T19:31:00.857204+00:00",
+    "latest_iso": "2026-08-17T19:31:00.857204+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/rand_org/timeline.json",
+      "sha256": "c15418dcac8421c72274eccca93ea955e7b79d3c67e20ee65826e47053885919",
+      "size_bytes": 963
+    }
+  ]
+}

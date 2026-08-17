@@ -1,0 +1,98 @@
+{
+  "domain": "greenpeace.org",
+  "canonical_url": "https://www.greenpeace.org/global/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:29:05.881896+00:00",
+  "preflight": {
+    "domain": "greenpeace.org",
+    "dns_resolved": true,
+    "dns_ip": "35.184.130.59",
+    "status": "SUCCESS",
+    "final_url": "https://www.greenpeace.org/global/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://greenpeace.org/",
+      "https://www.greenpeace.org/",
+      "https://www.greenpeace.org/global/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2221.72,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Greenpeace",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 3,
+      "scripts_count": 3,
+      "images_count": 2,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:29:06 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "CF-Ray": "a2cb15ec7b23f3f0-BOM",
+        "CF-Cache-Status": "DYNAMIC",
+        "Server": "cloudflare",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "Vary": "Accept-Encoding",
+        "Cf-Apo-Via": "origin,page-rules",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "Content-Encoding": "br",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "content_length": 3697
+    },
+    "text_length": 123
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192911",
+    "last_seen": "20260817192911",
+    "earliest_iso": "2026-08-17T19:29:05.881896+00:00",
+    "latest_iso": "2026-08-17T19:29:05.881896+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/greenpeace_org/rendered.html",
+      "sha256": "42b2467658ef409d8ff14f4f9bf66fd87f2d99429ea8f6117a06beab9f38f41e",
+      "size_bytes": 3697
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/greenpeace_org/timeline.json",
+      "sha256": "53db7f70bcb66644907a1b536e8baa0a732cfc01f8bdb53509b2840bcc1df8c4",
+      "size_bytes": 972
+    }
+  ]
+}

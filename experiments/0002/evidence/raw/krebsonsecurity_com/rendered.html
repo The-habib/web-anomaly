@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<!--[if lt IE 9]>
+<script src="https://krebsonsecurity.com/wp-content/themes/kos-mar2021/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<title>Krebs on Security &#8211; In-depth security news and investigation</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Krebs on Security &raquo; Feed" href="https://krebsonsecurity.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Krebs on Security &raquo; Comments Feed" href="https://krebsonsecurity.com/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/krebsonsecurity.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='colorbox-theme1-css' href='https://krebsonsecurity.com/wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/theme1/colorbox.css?ver=1.3.14' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://krebsonsecurity.com/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://krebsonsecurity.com/wp-includes/css/classic-themes.min.css?ver=6.2.2' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://krebsonsecurity.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='publisho-style-css' href='https://krebsonsecurity.com/wp-content/themes/kos-mar2021/style.css?subver=1.2&#038;ver=6.2.2' type='text/css' media='all' />
+<style id='publisho-style-inline-css' type='text/css'>
+
+	.themonic-nav .current-menu-item > a, .themonic-nav .current-menu-ancestor > a, .themonic-nav .current_page_item > a, .themonic-nav .current_page_ancestor > a {
+		background: #cc6600;
+	}
+	.themonic-nav ul.nav-menu, .themonic-nav div.nav-menu > ul {
+		border-bottom: 5px solid #cc6600;
+	}
+	#site-navigation .topheadmenu a {
+    background: rgba(0, 0, 0, 0);
+	}
+	.themonic-nav li a:hover {
+		background: #cc6600;
+	}
+	.themonic-nav li:hover {
+		background: #cc6600;
+	}.wrapper .flexslider {margin: 0 0 30px;}.frontp .btm-wrap {
+    border-top: 1px solid #e9e9e9;
+	}
+	.entry-summary {
+    border-top: none;
+	}.frontp .btm-wrap { margin-bottom: 30px;}.site { font-size:14px;}.site { font-family:'Roboto', arial ;}
+</style>
+<link rel='stylesheet' id='publisho-custom-style-css' href='https://krebsonsecurity.com/wp-content/themes/kos-mar2021/custom.css?subver=1.2&#038;ver=6.2.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='publisho-ie-css' href='https://krebsonsecurity.com/wp-content/themes/kos-mar2021/css/ie.css?ver=20160606' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='fontawesome-css-css' href='https://krebsonsecurity.com/wp-content/themes/kos-mar2021/fonts/font-awesome.min.css?ver=6.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='publisho_custom_fonts-css' href='//fonts.googleapis.com/css?family=Roboto%3Aregular%2Citalic%2C500%26subset%3Dlatin%2C' type='text/css' media='screen' />
+<script type='text/javascript' src='https://krebsonsecurity.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://krebsonsecurity.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://krebsonsecurity.com/wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js?ver=1.3.14' id='colorbox-js'></script>
+<link rel="https://api.w.org/" href="https://krebsonsecurity.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://krebsonsecurity.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://krebsonsecurity.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2.2" />
+<!-- JavaScript Pull-Quotes plugin v2.2 -->
+	<link rel="stylesheet" href="https://krebsonsecurity.com/wp-content/plugins/jspullquotes/resources/jspullquotes-core.css" type="text/css" />
+	<link rel="stylesheet" href="https://krebsonsecurity.com/wp-content/plugins/jspullquotes/resources/jspullquotes-default.css" type="text/css" />
+	<script type="text/javascript" src="https://krebsonsecurity.com/wp-content/plugins/jspullquotes/resources/jspullquotes.js"></script>
+	<script type="text/javascript">
+		var arrOptions = new Array("1", "1", "right", "1", "1", "blockquote", "pullquote", "pullquote pqRight");
+		pullQuoteOpts(arrOptions);
+	</script>
+<!-- end pull-quote additions -->
+<!-- jQuery Lightbox For Native Galleries v3.1.3 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link rel="me" href="https://twitter.com/briankrebs" /><meta name="twitter:widgets:link-color" content="#000000" /><meta name="twitter:widgets:border-color" content="#000000" /><meta name="twitter:partner" content="tfwp" />
+<meta name="twitter:card" content="summary" /><meta name="twitter:title" content="Krebs on Security" /><meta name="twitter:site" content="@briankrebs" /><meta name="twitter:description" content="In-depth security news and investigation" />
+</head>
+<body class="home blog custom-background custom-background-white single-author frontp hfeed">
+<div id="page" class="site">
+	<!-- <div class="publisho-top-mobile-nav clear"></div> -->
+	<div class="themonic-logo themonic-ad3"><div class="a-statement">Advertisement</div><a href="https://www.gartner.com/en/conferences/na/symposium-us/sessions?utm_medium=display&amp;utm_campaign=EVT_NA_2026_SYM36_PD_BN1_STAYAHEAD&amp;utm_term=krebs">
+<img src="/b-gartner/11.png">
+</a></div>
+	<div class="themonic-logo themonic-ad6"><div class="a-statement">Advertisement</div><a href="https://www.gartner.com/en/conferences/na/symposium-us/conference-resources/security?utm_medium=display&amp;utm_campaign=EVT_NA_2026_SYM36_PD_BN1_CYBERINSIGHTS&amp;utm_term=krebs">
+<img src="/b-gartner/16.png">
+</a></div>
+	<nav id="site-navigation" class="themonic-nav" role="navigation">
+	</nav><!-- #site-navigation -->
+	<div class="clear"></div>
+	<header id="masthead" class="site-header" role="banner">
+ 					<div class="desktop-social">
+						<div class="socialmedia">
+							<a href="http://twitter.com/briankrebs" target="_blank"><i class="fa fa-twitter"></i></a> 
+															<a class="rss" href="https://krebsonsecurity.com/feed/" target="_blank"><i class="fa fa-rss"></i></a>	
+									<a class="rss" href="https://www.linkedin.com/in/bkrebs/" target="_blank"><i class="fa fa-linkedin"></i></a>	
+								</div>
+				 	</div>
+																						   
+		
+		<div class="themonic-logo responsive-img-container">
+			<a href="https://krebsonsecurity.com/" title="Krebs on Security" rel="home"><img src="https://krebsonsecurity.com/wp-content/uploads/2021/03/kos-27-03-2021.jpg" alt="Krebs on Security"></a>
+		</div>
+
+					<div class="mobile-social">
+						<div class="socialmedia">
+							<a href="http://twitter.com/briankrebs" target="_blank"><i class="fa fa-twitter"></i></a> 
+															<a class="rss" href="https://krebsonsecurity.com/feed/" target="_blank"><i class="fa fa-rss"></i></a>	
+									<a class="rss" href="https://www.linkedin.com/in/bkrebs/" target="_blank"><i class="fa fa-linkedin"></i></a>	
+								</div>
+					</div>
+		
+				<!-- <div class="publisho-mobile-nav clear"></div> -->
+		<nav id="site-navigation" class="themonic-nav" role="navigation">
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div id="menu-top" class="nav-menu"><ul>
+<li class="current_page_item"><a href="https://krebsonsecurity.com/">Home</a></li><li class="page_item page-item-2"><a href="https://krebsonsecurity.com/about/">About the Author</a></li>
+<li class="page_item page-item-645"><a href="https://krebsonsecurity.com/cpm/">Advertising/Speaking</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</header><!-- #masthead -->
+	<div id="main" class="wrapper">
+		<div id="primary" class="site-content">
+	
+
+	
+		<div id="content" role="main">
+
+		<article id="post-74105" class="post-74105 post type-post status-publish format-standard has-post-thumbnail hentry category-sunshine category-security-tools category-web-fraud-2-0 tag-adblock tag-adblock-plus tag-alfa-bank tag-between-digital tag-bitsight tag-decryptads tag-fengwo-group tag-infoblox tag-opera tag-pi-hole tag-raspberry-pi tag-ublock-origin tag-zach-edwards">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/" title="Permalink to Who&#8217;s Tracking You? Use This New Service to Find Out" rel="bookmark">Who&#8217;s Tracking You? Use This New Service to Find Out</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">August 14, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/#comments">23 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>It can be daunting to determine who&#8217;s responsible for showing ads on the websites we visit, or who&#8217;s harvesting data from the mobile apps we use every day. That information is already semi-public, but it is not easily parsed and traditionally much of it has remained walled away in the hands of large advertising platforms. Not anymore: A powerful and free new service called <strong>DecryptAds</strong> scrapes and correlates this adtech data and makes it simple to quickly learn a great deal about the entities that are tracking you.</p>
+<div id="attachment_74134" style="width: 760px" class="wp-caption aligncenter"><a href="https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-ESPN.png" target="_blank" rel="noopener"><img aria-describedby="caption-attachment-74134" decoding="async" class="wp-image-74134" src="https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-ESPN.png" alt="" width="750" height="443" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-ESPN.png 1346w, https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-ESPN-768x454.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-ESPN-782x462.png 782w" sizes="(max-width: 750px) 100vw, 750px" /></a><p id="caption-attachment-74134" class="wp-caption-text">A Decryptads summary of the advertising partnerships declared by espn.com.</p></div>
+<p>The <a href="https://decryptads.com/blog/posts/ad-tech-transparency-launch.html" target="_blank" rel="noopener">newly launched</a> <strong>decryptads.com</strong> says it is constantly scraping the files that websites and apps make publicly available to disclose the companies that are permitted to run ads or collect user data. These files include:</p>
+<p>&#8211;<strong>ads.txt</strong>: all of the adtech companies and data brokers that may run ads or harvest data from the site;<br />
+&#8211;<strong>app-ads.txt</strong>: entities that can harvest data from or display ads on mobile and smart TV apps;<br />
+&#8211;<strong>buyers.json/sellers.json</strong>: the entities buying, selling or reselling ad inventory for a given site or app.</p>
+<p><strong>Zach Edwards </strong>is chief research officer for DecryptAds and a threat researcher at the security company <strong>Infoblox</strong>. Edwards said he and two other founders decided the service was needed because the adtech data in these files is generally only useful when it can be cross-referenced to build a more complete picture of the advertising ecosystem for each website or app.</p>
+<p>&#8220;It&#8217;s an adtech tool but we&#8217;re trying to approach adtech from a security perspective,&#8221; Edwards said. &#8220;It&#8217;s really built for a lot of privacy and security use cases that have been dramatically underserved.&#8221;</p>
+<p>Those use cases, he said, include tracking down the source of malicious ads that try to foist malware on targeted users, identifying ad networks located in adversarial nations, and detecting the fast growing swarms of AI-generated slop websites and apps. And as decryptads.com demonstrates, these potential security and privacy threats are near impossible to detect just by viewing a single apps.txt or app-ads.txt file.</p>
+<p>&#8220;Supply-chain integrity issues rarely live in a single file,&#8221; the site <a href="https://decryptads.com/blog/posts/analytical-features.html" target="_blank" rel="noopener">explains</a>. &#8220;They show up as broken cross-references between ads.txt, app-ads.txt, and sellers.json files; as cloned declaration sets across unrelated domains; as seller removals that only make sense when viewed across exchanges; and even as supply paths in bid logs that never actually appear in any given publisher’s authorized-seller list.&#8221;</p>
+<p>A search in DecryptAds for the hugely popular sports network <strong>espn.com</strong> reveals 143 ad partners and 19 registered data broker domains are listed within its <a href="https://www.espn.com/ads.txt" target="_blank" rel="noopener">ads.txt</a> and <a href="https://www.espn.com/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a> files. That data broker information is gradually becoming available because four states &#8212; California, Oregon, Texas and Vermont &#8212; have recently passed laws requiring data brokers to register if they buy or sell data on consumers from those states. DecryptAds reports that almost half of those data brokers are collecting geolocation data from espn.com visitors who aren&#8217;t blocking ads, while another three disclose that they collect device fingerprints and sensitive personal information.</p>
+<div id="attachment_74131" style="width: 760px" class="wp-caption aligncenter"><a href="https://krebsonsecurity.com/wp-content/uploads/2026/08/espn-supplychain.png" target="_blank" rel="noopener"><img aria-describedby="caption-attachment-74131" decoding="async" loading="lazy" class="wp-image-74131" src="https://krebsonsecurity.com/wp-content/uploads/2026/08/espn-supplychain.png" alt="" width="750" height="230" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/08/espn-supplychain.png 1790w, https://krebsonsecurity.com/wp-content/uploads/2026/08/espn-supplychain-768x236.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/08/espn-supplychain-1536x472.png 1536w, https://krebsonsecurity.com/wp-content/uploads/2026/08/espn-supplychain-782x240.png 782w" sizes="(max-width: 750px) 100vw, 750px" /></a><p id="caption-attachment-74131" class="wp-caption-text">A visual representation of the complex ad supply chain declared by espn.com. Image: decryptads.com.</p></div>
+<h2>HIGH-RISK AD PARTNERS</h2>
+<p>DecryptAds also makes it easy to learn the beneficiaries and national origins of the advertising firms lurking in apps and websites, displaying a conspicuous warning when adtech partners of an app or website are based in <a href="https://decryptads.com/geo_risk" target="_blank" rel="noopener">&#8220;geo-risk&#8221;</a> areas like China and Russia, or in countries with strong financial and political ties to both &#8212; such as Cyprus and the United Arab Emirates (UAE).</p>
+<p>According to DecryptAds, espn.com works with four different advertising entities that are based in either Russia, China or the UAE, including the adtech firm <strong>Between Digital</strong>, which lists a New York address. However, the <a href="https://decryptads.com/ad_system/betweendigital.com" target="_blank" rel="noopener">dossier on Between Digital</a> flags them as a Russian firm, showing that <a href="https://cp.betweendigital.com/files/PublisherOffer.pdf" target="_blank" rel="noopener">their publisher offers</a> (PDF) are processed through <strong>Alfa Bank</strong>, Russia&#8217;s largest private commercial bank and one of several financial institutions placed under U.S. sanctions in 2022 after Russia invaded Ukraine. KrebsOnSecurity sought comment from both Between Digital and the company&#8217;s founder, and will update this story in the event that either replies.</p>
+<p>A search for several top U.S. military news websites &#8212; including <a href="https://decryptads.com/search/publisher/armytimes.com" target="_blank" rel="noopener">armytimes.com</a>, <a href="https://decryptads.com/publisher/airforcetimes.com" target="_blank" rel="noopener">airforcetimes.com</a>, <a href="https://decryptads.com/publisher/defensenews.com" target="_blank" rel="noopener">defensenews.com</a>, <a href="https://decryptads.com/publisher/navytimes.com" target="_blank" rel="noopener">navytimes.com</a>, <a href="https://decryptads.com/publisher/marinecorpstimes.com" target="_blank" rel="noopener">marinecorpstimes.com</a> and <a href="https://decryptads.com/publisher/federaltimes.com" target="_blank" rel="noopener">federaltimes.com</a> &#8212; shows they all allow Between Digital to serve ads and track users, as well as two entities in the UAE and another in the ownership secrecy haven of Panama. DecryptAds reports that Between Digital is collecting ad data on approximately 55,000 partner websites.</p>
+<div id="attachment_74140" style="width: 758px" class="wp-caption aligncenter"><a href="https://krebsonsecurity.com/?attachment_id=74140" target="_blank" rel="noopener"><img aria-describedby="caption-attachment-74140" decoding="async" loading="lazy" class="wp-image-74140" src="https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-georisk.png" alt="" width="748" height="374" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-georisk.png 1750w, https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-georisk-768x384.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-georisk-1536x769.png 1536w, https://krebsonsecurity.com/wp-content/uploads/2026/08/decryptads-georisk-782x391.png 782w" sizes="(max-width: 748px) 100vw, 748px" /></a><p id="caption-attachment-74140" class="wp-caption-text">The &#8220;Geo Risk&#8221; section of decryptads.com.</p></div>
+<p>Pivoting on Between Digital&#8217;s <a href="https://decryptads.com/ad_system_sites/betweendigital.com/app_ads_txt/all" target="_blank" rel="noopener">app-ads.txt file</a> reveals hundreds of domains featuring simple web-based games that are frequently interrupted by ads. Edwards said Between Digital&#8217;s own declarations show the company is listed as both a publisher and a reseller on approximately two-thirds of their portfolio.</p>
+<p>&#8220;It means they are basically playing both sides of the bidding equation, which creates opportunities to direct client spend at your owned and operated properties or client infrastructure, essentially creating opportunities for conflicts of interest,&#8221; Edwards told KrebsOnSecurity. &#8220;The problem we have right now is that for years we&#8217;ve had almost no one policing these ads.txt and app-ads.txt files.&#8221;</p>
+<p>The <strong>Opera</strong> Web browser remains quite popular, and probably many users are unaware that since 2016 it has been majority owned and controlled by the Chinese company Kunlun Tech (the operational headquarters of Opera remain in Oslo, Norway).</p>
+<p>Opera.com&#8217;s <a href="https://decryptads.com/search/ad_system/opera.com" target="_blank" rel="noopener">profile at DecryptAds</a> identifies 27 registered data brokers collecting information, including 15 adtech partners in the UAE, six in China, three in Cyprus, two in Russia and one each in Hong Kong and Ukraine. DecryptAds makes clear, however, that these companies represent just seven percent of the adtech partners specified in Opera.com&#8217;s ads.txt and app-ads.txt files. <a href="https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/#more-74105" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+	<div id="between_article_ad" class="themonic-ad5"><a href="https://www.gartner.com/en/conferences/na/symposium-us/sessions?utm_medium=display&amp;utm_campaign=EVT_NA_2026_SYM36_PD_BN1_STAYAHEAD&amp;utm_term=krebs">
+<img src="/b-gartner/14.png">
+</a></div>	<article id="post-74106" class="post-74106 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-warnings category-security-tools category-patches tag-1password tag-afd-sys tag-automox tag-cve-2026-62832 tag-cve-2026-68820 tag-cve-2026-72971 tag-ed-skoudis tag-landon-miles tag-microsoft-patch-tuesday-august-2026 tag-nightmare-eclipse tag-sans-technology-institute">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/" title="Permalink to Microsoft Plugs Nearly 400 Security Holes" rel="bookmark">Microsoft Plugs Nearly 400 Security Holes</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">August 11, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/#comments">20 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p><strong>Microsoft</strong> today released updates to remedy at least 398 security vulnerabilities in its <strong>Windows</strong> operating systems and supported software, including one weakness that is already being actively exploited and two others that were publicly detailed prior to today.</p>
+<div id="attachment_74109" style="width: 758px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74109" decoding="async" loading="lazy" class=" wp-image-74109" src="https://krebsonsecurity.com/wp-content/uploads/2026/08/workingonpc.png" alt="" width="748" height="531" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/08/workingonpc.png 649w, https://krebsonsecurity.com/wp-content/uploads/2026/08/workingonpc-100x70.png 100w" sizes="(max-width: 748px) 100vw, 748px" /><p id="caption-attachment-74109" class="wp-caption-text">Image: Shutterstock, Mallika Home Studio.</p></div>
+<p>August&#8217;s overstuffed bundle of patch joy from Microsoft did not eclipse its recording breaking release of <a href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" target="_blank" rel="noopener">more than 570 security updates last month</a>, but it is double June&#8217;s then-record batch of <a href="https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-for-june-2026/#more-73788" target="_blank" rel="noopener">nearly 200 fixes</a>. Microsoft has attributed the recent patch deluge to vulnerability discoveries aided by artificial intelligence, and experts roundly agree that Windows users should get used to the idea of Patch Tuesdays (the second Tuesday of each month) covering hundreds of newly discovered security flaws.</p>
+<p>Fully 42 of the 398 flaws that Microsoft patched today earned Redmond&#8217;s most-dire &#8220;critical&#8221; rating, meaning they are severe enough that malware or malcontents could exploit them to gain remote control over a Windows computer with little to no help from the user.</p>
+<p>The sole known &#8220;zero day&#8221; bug fixed by Microsoft this month is <a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2026-68820" target="_blank" rel="noopener">CVE-2026-68820</a>, a privilege escalation weakness in a core Windows component called <strong>afd.sys</strong>, which the security firm <strong>Automox</strong> describes as &#8220;the driver behind Windows socket connections on effectively every endpoint.&#8221;</p>
+<p>&#8220;This isn&#8217;t a front-door bug,&#8221; Automox&#8217;s <strong>Landon Miles</strong> <a href="https://www.automox.com/blog/patch-fix-tuesday-august-2026" target="_blank" rel="noopener">wrote</a> in a Patch Tuesday blog post. &#8220;It&#8217;s step two in a chain: an attacker phishes their way into a low-privilege foothold, then uses the driver flaw to take the box. The 7.0 score reflects the high attack complexity, because race conditions are fiddly. The exploit has to be thrown over and over until the timing lands. Someone is clearly landing it anyway.&#8221;</p>
+<p><a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2026-62832" target="_blank" rel="noopener">CVE-2026-62832</a> is another privilege escalation flaw that Microsoft has labeled likely to be exploited; this flaw, in the Windows User Profile Service, may be related to the recent <a href="https://www.theregister.com/security/2026/07/15/microsofts-serial-tormentor-drops-legacyhive-0-day/5271723" target="_blank" rel="noopener">&#8220;LegacyHive&#8221; public disclosure</a> from the prolific bug hunter known as <strong>Nightmare Eclipse</strong>. The other publicly disclosed flaw is <a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2026-72971" target="_blank" rel="noopener">CVE-2026-72971</a>, a low-impact local tampering vulnerability that Microsoft reckons is unlikely to be exploited. <a href="https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/#more-74106" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+	<div class="themonic-ad2"><div class="a-statement">Advertisement</div></div>	<article id="post-74093" class="post-74093 post type-post status-publish format-standard has-post-thumbnail hentry category-breadcrumbs category-neer-do-well-news category-ransomware tag-cameron-john-wagenius tag-connor-riley-moucka tag-intelsecrets tag-irdev tag-john-erin-binns tag-judische tag-snowflake tag-waifu">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/" title="Permalink to Canadian Man Pleads Guilty in Snowflake Extortions" rel="bookmark">Canadian Man Pleads Guilty in Snowflake Extortions</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">August 6, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/#comments">16 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>A 26-year-old Canadian man once described as one of the most consequential cybercrime threat actors of 2024 has pleaded guilty to computer fraud and conspiracy to hack and extort more than 165 organizations that used the cloud provider <strong>Snowflake</strong>. <strong>Connor Riley Moucka</strong>, of Kitchener, Ontario, also admitted to stealing call and text history records of more than 100 million AT&amp;T customers.</p>
+<div id="attachment_69625" style="width: 759px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-69625" decoding="async" loading="lazy" class="wp-image-69625" src="https://krebsonsecurity.com/wp-content/uploads/2024/11/moucka-surveillance.png" alt="" width="749" height="575" srcset="https://krebsonsecurity.com/wp-content/uploads/2024/11/moucka-surveillance.png 1137w, https://krebsonsecurity.com/wp-content/uploads/2024/11/moucka-surveillance-768x590.png 768w, https://krebsonsecurity.com/wp-content/uploads/2024/11/moucka-surveillance-782x600.png 782w" sizes="(max-width: 749px) 100vw, 749px" /><p id="caption-attachment-69625" class="wp-caption-text">A surveillance photo of Connor Riley Moucka, a.k.a. “Judische” and “Waifu,” dated Oct 21, 2024, 9 days before Moucka’s arrest. This image was included in an affidavit filed by an investigator with the Royal Canadian Mounted Police (RCMP).</p></div>
+<p>The U.S. Justice Department said between February and October 2024, Moucka and co-conspirators used stolen login credentials to steal cloud-hosted data belonging to at least 165 customers of a U.S.-based software-as-a-service company.</p>
+<p>The hackers targeted stolen credentials for Snowflake customer accounts that did not enforce multi-factor authentication, and extorted or attempted to extort a host of well-known companies, including TicketMaster, Lending Tree, Advance Auto Parts and Neiman Marcus. Snowflake responded to the data thefts by increasing password complexity requirements and enforcing multi-factor authentication.</p>
+<p>Moucka adopted new nicknames frequently &#8212; sometimes operating multiple identities concurrently &#8212; but two of his best-known monikers were &#8220;<strong>Judische</strong>&#8221; and &#8220;<strong>Waifu</strong>.&#8221; Judische&#8217;s admitted role in the Snowflake data thefts was first documented by KrebsOnSecurity in <a href="https://krebsonsecurity.com/2024/09/the-dark-nexus-between-harm-groups-and-the-com" target="_blank" rel="noopener">a September 2024 story</a> about the overlap between Western, English-speaking cybercriminals and extremist groups that harass and extort minors into harming themselves or others.</p>
+<p>That September 2024 story identified Judische as a software engineer from Ontario who has been involved in numerous data breaches and voice phishing attacks against U.S. companies since at least 2020. A little more than a month later, Canadian authorities <a href="https://krebsonsecurity.com/2024/11/canadian-man-arrested-in-snowflake-data-extortions/" target="_blank" rel="noopener">arrested Moucka</a> on a provisional warrant from the United States.</p>
+<p>The government says Moucka and others used their unauthorized access to steal billions of sensitive customer records and download terabytes of information, &#8220;including individuals’ non-content call and text history records, banking and other financial information, payroll records, Drug Enforcement Administration (DEA) registration numbers, driver’s license numbers, passport numbers, social security numbers and other personally identifiable information. They then extorted victims by threatening to publish data online.&#8221;</p>
+<p>Moucka also threatened and harassed government officials and security researchers who were helping to track him down. The Justice Department said the conspirators made over $2.5 million in ransom payments, and that in at least one instance, Moucka re-extorted a victim with threats of further disclosure of the victim’s stolen data.</p>
+<p>&#8220;Moucka used the stolen data of a government officer and members of a then-former government officer’s immediate family in this re-extortion attempt,&#8221; reads <a href="https://www.justice.gov/opa/pr/canadian-man-pleads-guilty-hacking-us-cloud-storage-provider-and-extorting-its-customers" target="_blank" rel="noopener">a statement</a> from the Justice Department. <a href="https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/#more-74093" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-74047" class="post-74047 post type-post status-publish format-standard has-post-thumbnail hentry category-sunshine category-internet-of-things-iot category-latest-warnings category-web-fraud-2-0 tag-ai-digital-humans tag-bitsight tag-bitsight-trace tag-blockly tag-fengwo-group tag-h96 tag-huawei tag-pedro-fale tag-residential-proxy tag-samsung tag-vivo tag-xiaomi tag-zhejiang-fengwo-iot-technology-ltd">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/" title="Permalink to Read This Before You Buy That TV Streaming Stick" rel="bookmark">Read This Before You Buy That TV Streaming Stick</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">July 30, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/#comments">50 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>Security experts have been sounding the alarm for years about the risks of using generic TV boxes that promise unlimited content streaming for a one-time fee, warning that they secretly rent the user&#8217;s Internet connection out to strangers. But a groundbreaking new analysis finds these devices also routinely spoof themselves as mobile phones clicking ads on AI-generated websites as part of a sprawling operation that seeks to defraud online merchants and advertising networks.</p>
+<p><strong>Pedro Falé </strong>is a threat researcher with the security firm <strong>Bitsight</strong>. Falé told KrebsOnSecurity he was able to peer inside a vast and complex ad fraud network by registering an expired domain name that was used to coordinate fake ad clicks across a particularly popular brand of these streaming devices known as <strong>H96</strong>.</p>
+<div id="attachment_74051" style="width: 760px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74051" decoding="async" loading="lazy" class=" wp-image-74051" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-amazon.png" alt="" width="750" height="472" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-amazon.png 975w, https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-amazon-768x484.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-amazon-782x492.png 782w" sizes="(max-width: 750px) 100vw, 750px" /><p id="caption-attachment-74051" class="wp-caption-text">An H96 TV streaming device currently advertised for sale on Amazon.</p></div>
+<p>Falé said the domain he scooped up was previously used for telemetry, periodically collecting full hardware information and the entire list of installed apps from tens of thousands of H96 streaming sticks plugged into television sets around the globe. But upon inspecting the traffic being funneled to the domain, he discovered nearly all of the TV boxes transmitting data claimed to be mobile phone models from a variety of manufacturers, including Samsung, Vivo, Huawei, and Xiaomi.</p>
+<p>&#8220;We noticed something was wildly wrong,&#8221; Falé said. &#8220;Multiple devices reporting to this factory Android TV Box backdoor were ‘phones.'&#8221;</p>
+<div id="attachment_74053" style="width: 759px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74053" decoding="async" loading="lazy" class="wp-image-74053 " src="https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-shipspreinfected.png" alt="" width="749" height="298" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-shipspreinfected.png 1135w, https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-shipspreinfected-768x305.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/h96-shipspreinfected-782x311.png 782w" sizes="(max-width: 749px) 100vw, 749px" /><p id="caption-attachment-74053" class="wp-caption-text">Image: Bitsight.</p></div>
+<p>The researcher found all of the devices reported having the same two apps installed, and that those apps were made by a company called <strong>Zhejiang Fengwo IoT Technology Ltd</strong>, an entity founded in 2019 in mainland China which operates an ad-publishing portfolio under the name <strong>Fengwo Group</strong>. Further investigation into the Fengwo Group revealed it has registered multiple patents that match the inner workings of these apps.</p>
+<p>&#8220;Bitsight TRACE identified several Hong Kong, Singapore, and single person ‘legal’ shell identities used to collect the monetization and traced the operation back to a mainland China company known as Zhejiang Fengwo IoT Technology Co., Ltd, which operates under the Fengwo Group,&#8221; Falé <a href="https://www.bitsight.com/blog/fuyao-enterprise-building-ad-fraud-empire-ai-and-kids-coding-blocks" rel="noopener" target="_blank">wrote</a> in a report released today about their findings.</p>
+<p>Falé said an analysis of the apps shows they help to coordinate an ad fraud network that uses these H96 devices as a captive traffic source to click on ads at AI-generated websites operated by the Fengwo Group.</p>
+<p>Bitsight discovered the websites contain machine-generated news articles and graphics across a range of categories, including finance, health, education, gaming, music and food blogs. But they also found none of those sites displayed ads unless the device visiting the page matched the spoofed mobile profile of these H96 devices.</p>
+<h2>AI DIGITAL HUMANS</h2>
+<p>The domain for the Fengwo Group &#8212; fwgcloud[.]com &#8212; claims the company is &#8220;redefining the boundaries of human-AI interaction,&#8221; and that it has created more than 120,000 &#8220;AI digital humans&#8221; available to rent for everything from emotional companionship to 24/7 customer service and creative design.</p>
+<div id="attachment_74058" style="width: 760px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74058" decoding="async" loading="lazy" class=" wp-image-74058" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/fwgcloud-dot-com.png" alt="" width="750" height="377" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/fwgcloud-dot-com.png 1401w, https://krebsonsecurity.com/wp-content/uploads/2026/07/fwgcloud-dot-com-768x386.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/fwgcloud-dot-com-782x393.png 782w" sizes="(max-width: 750px) 100vw, 750px" /><p id="caption-attachment-74058" class="wp-caption-text">The homepage for fwgcloud dot com.</p></div>
+<p>Falé said the Fengwo Group&#8217;s domain shared its SSL certificate data with other domains associated with the apps found on H96 devices, specifically the phone spoofing mechanism. He noted the domain also has an internal wiki platform that directly ties the Fengwo Group to a proprietary implementation of a Google-built visual programming language called <strong>Blockly</strong>, which was originally designed to help kids learn how to write software.</p>
+<p>According to Bitsight, the Fengwo Group&#8217;s employees use Blockly to build the sham websites, allowing low-skilled operators to drag blocks of code together in their Blockly editor &#8212; without any need to understand what the underlying code blocks do or how they work.</p>
+<div id="attachment_74055" style="width: 760px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74055" decoding="async" loading="lazy" class=" wp-image-74055" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/tryblockly.png" alt="" width="750" height="370" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/tryblockly.png 1150w, https://krebsonsecurity.com/wp-content/uploads/2026/07/tryblockly-768x379.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/tryblockly-782x386.png 782w" sizes="(max-width: 750px) 100vw, 750px" /><p id="caption-attachment-74055" class="wp-caption-text">The Blockly homepage.</p></div>
+<p>&#8220;An operator can drag blocks together in their Blockly editor, to define each fraud routine, given a task type,&#8221; reads Bitsight&#8217;s report. &#8220;Once the routine is saved, it gets exported as JavaScript and uploaded to the S3 buckets. An operator doesn’t need as much understanding of the underlying technicalities, as it is all set in place for ease of use.&#8221; <a href="https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/#more-74047" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-74000" class="post-74000 post type-post status-publish format-standard has-post-thumbnail hentry category-sunshine category-internet-of-things-iot category-comingstorm tag-bright-data tag-john-taylor tag-lg-electronics-usa tag-residential-proxies tag-samsung tag-spur tag-tizen tag-trevor-sutter tag-webos">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/" title="Permalink to LG to Ban Residential Proxies from Smart TV Apps" rel="bookmark">LG to Ban Residential Proxies from Smart TV Apps</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">July 21, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/#comments">61 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>The home appliance giant <strong>LG Electronics USA</strong> said this week it plans to suspend any apps built for its smart TVs that turn one&#8217;s television into an always-on residential proxy node. The move comes less than a month after researchers found that more than 42 percent of games and other apps available for download on LG&#8217;s webOS store allow unknown third-parties to route their Internet traffic through a user&#8217;s TV.</p>
+<div id="attachment_74001" style="width: 758px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74001" decoding="async" loading="lazy" class=" wp-image-74001" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/smarttv-proxysdks.png" alt="" width="748" height="327" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/smarttv-proxysdks.png 956w, https://krebsonsecurity.com/wp-content/uploads/2026/07/smarttv-proxysdks-768x336.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/smarttv-proxysdks-782x342.png 782w" sizes="(max-width: 748px) 100vw, 748px" /><p id="caption-attachment-74001" class="wp-caption-text">Proxy SDK prevalence among smart TV apps for LG (webOS) and Samsung (Tizen OS) televisions. Image: Spur.us.</p></div>
+<p>On July 2, we <a href="https://krebsonsecurity.com/2026/07/fbi-seizes-netnut-proxy-platform-popa-botnet/" target="_blank" rel="noopener">featured research</a> by the security firm <strong>Spur</strong> that examined the prevalence of residential proxy software development kits (SDKs) in smart TV apps. Spur <a href="https://spur.us/blog/smart-tv-apps-residential-proxy-sdks" target="_blank" rel="noopener">found</a> more than 42 percent of apps available for download on LG smart TVs include SDKs that turn one’s television in a proxy node indefinitely, and that more than a quarter of the apps made for Samsung’s Tizen operating system had similar residential proxy components.</p>
+<p>Responding to questions about Spur&#8217;s research, <strong>LG Senior Vice President John Taylor</strong> told KrebsOnSecurity the company was working with app developers to remove the residential proxy option from their apps on the webOS platform. Developers that fail to comply, he said, will find their apps suspended.</p>
+<p>&#8220;A residential proxy network is not an intended use for LG smart TVs, and LG Electronics is working with developers to remove the residential proxy option from their apps on the webOS platform,&#8221; Taylor said. &#8220;If this option is not removed, these apps will be suspended.&#8221;</p>
+<p>Taylor said LG is committed to keeping residential proxy networks out of its smart TV apps going forward, and that the company&#8217;s review of those apps is &#8220;well underway now.&#8221;</p>
+<p>&#8220;As part of our ongoing efforts to enhance platform quality and the user experience, LG will continue to strengthen our evaluation process for developer-submitted apps, including those that incorporate residential proxy SDKs,&#8221; Taylor wrote in an emailed statement.</p>
+<p>App makers looking for ways to monetize their creations can turn to residential proxy providers, which pay developers to include SDKs that turn the user&#8217;s device into a residential proxy node that is rented to paying customers. In the case of LG and Samsung smart TVs, Spur found residential proxy SDKs bundled with everything from simple games like Pac-Man to screensavers and file utilities.</p>
+<div id="attachment_74003" style="width: 760px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-74003" decoding="async" loading="lazy" class=" wp-image-74003" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/pac-man-brightdata.png" alt="" width="750" height="494" /><p id="caption-attachment-74003" class="wp-caption-text">A Pac-Man smart TV app from Bright Data offers users the choice between viewing ads in the game or agreeing to allow their TV to serve as a residential proxy node. Image: Spur.us.</p></div>
+<p> <a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/#more-74000" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-73991" class="post-73991 post type-post status-publish format-standard has-post-thumbnail hentry category-security-tools category-comingstorm category-patches tag-action1 tag-active-directory-federation-services tag-chris-goettl tag-cve-2026-48561 tag-cve-2026-50661 tag-cve-2026-56155 tag-cve-2026-56164 tag-ivanti tag-jack-bicer tag-microsoft-corp tag-patch-tuesday-july-2026 tag-pavan-davuluri tag-satnam-narang tag-tenable tag-windows-bitlocker">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" title="Permalink to Microsoft Patches a Record 570 Security Flaws" rel="bookmark">Microsoft Patches a Record 570 Security Flaws</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">July 14, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/#comments">43 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p><strong>Microsoft Corp.</strong> today released software updates to plug at least 570 security holes in its <strong>Windows</strong> operating systems and other software, almost triple the number of vulnerabilities the software giant fixed in its record-smashing Patch Tuesday release last month. Microsoft attributed the burgeoning patch counts to vulnerability discoveries aided by artificial intelligence.</p>
+<p><img decoding="async" loading="lazy" class=" wp-image-56287 aligncenter" src="https://krebsonsecurity.com/wp-content/uploads/2021/07/windupate.png" alt="A picture of a windows laptop in its updating stage, saying do not turn off the computer." width="749" height="527" srcset="https://krebsonsecurity.com/wp-content/uploads/2021/07/windupate.png 841w, https://krebsonsecurity.com/wp-content/uploads/2021/07/windupate-768x541.png 768w, https://krebsonsecurity.com/wp-content/uploads/2021/07/windupate-782x550.png 782w, https://krebsonsecurity.com/wp-content/uploads/2021/07/windupate-100x70.png 100w" sizes="(max-width: 749px) 100vw, 749px" /></p>
+<p>Nearly 60 of the bugs quashed in July&#8217;s Patch Tuesday earned a &#8220;critical&#8221; severity rating, meaning miscreants or malware could use them to seize remote control over a Windows device with little or no help from the user. Microsoft also addressed three zero-day flaws, including two that are already being exploited in the wild.</p>
+<p>Two of the zero-day weaknesses allow an attacker to elevate their user rights on a Windows system, as do approximately 250 other elevation of privilege flaws fixed this month; they include <a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2026-56155" target="_blank" rel="noopener">CVE-2026-56155</a> &#8212; an <strong>Active Directory Federation Services</strong> bug &#8212; and <a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2026-56164" target="_blank" rel="noopener">CVE-2026-56164</a>, a <strong>Microsoft Sharepoint</strong> vulnerability.</p>
+<p><a href="https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2026-50661" target="_blank" rel="noopener">CVE-2026-50661</a> is a security feature bypass in <strong>Windows BitLocker</strong> that could allow attackers to gain access to encrypted data if they have physical access to the device. Microsoft said this bug has been detailed publicly, but that it is not aware of any active exploitation.</p>
+<p>In a blog post on July 9, Microsoft Executive Vice President <strong>Pavan Davuluri</strong> wrote that Windows users will notice “a higher volume of security updates included in each security release” as a result of AI aiding in the discovery of vulnerabilities.</p>
+<p>&#8220;The pace of vulnerability discovery is changing with advances in AI making it possible to find more issues, faster, across more code, with new mechanisms that can accelerate both discovery and analysis,&#8221; Davuluri <a href="https://blogs.windows.com/windowsexperience/2026/07/09/evolving-windows-vulnerability-management-to-meet-the-speed-of-ai-powered-discovery/" target="_blank" rel="noopener">wrote</a>. <a href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/#more-73991" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-73982" class="post-73982 post type-post status-publish format-standard has-post-thumbnail hentry category-sunshine category-data-breaches category-latest-warnings tag-brad-libbey tag-cybersecurity-and-infrastructure-security-agency tag-gitguardian tag-guillaume-valadon tag-preston-werntz">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/" title="Permalink to Lessons Learned from CISA&#8217;s Recent GitHub Leak" rel="bookmark">Lessons Learned from CISA&#8217;s Recent GitHub Leak</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">July 13, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/#comments">16 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>The <strong>Cybersecurity and Infrastructure Security Agency</strong> (CISA) has issued a postmortem on a recent data leak in which a contractor published dozens of internal CISA credentials &#8212; including AWS Govcloud keys &#8212; in a public GitHub repository for almost six months before being notified by KrebsOnSecurity. Experts say the gaps identified in the agency&#8217;s initial response provide important lessons that all security teams should absorb.</p>
+<p><img decoding="async" loading="lazy" class=" wp-image-73648 aligncenter" src="https://krebsonsecurity.com/wp-content/uploads/2026/05/CISA-logo.png" alt="" width="747" height="153" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/05/CISA-logo.png 1873w, https://krebsonsecurity.com/wp-content/uploads/2026/05/CISA-logo-768x157.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/05/CISA-logo-1536x314.png 1536w, https://krebsonsecurity.com/wp-content/uploads/2026/05/CISA-logo-782x160.png 782w" sizes="(max-width: 747px) 100vw, 747px" /></p>
+<p>On May 15, 2026, the security firm <strong>GitGuardian</strong> asked for help in notifying CISA about the existence of a public GitHub repository called &#8220;Private CISA&#8221; that included 844 MB of sensitive CISA-related data. One of the exposed files, titled “importantAWStokens,” included the administrative credentials to three Amazon AWS GovCloud servers. Another file — “AWS-Workspace-Firefox-Passwords.csv” — listed plaintext usernames and passwords for dozens of internal CISA systems.</p>
+<p>CISA quickly acknowledged our initial alert, but took more than 48 hours to invalidate the AWS keys and many other important secrets leaked in the GitHub repo. In <a href="https://www.cisa.gov/news-events/news/lessons-cisas-cyber-incident" target="_blank" rel="noopener">its report on the data leak</a>, CISA said the complexities of the agency&#8217;s systems and interconnections with federal and industry partners caused its key rotation to take longer than anticipated.</p>
+<p>&#8220;Drawing on this experience, CISA encourages others to maintain mature and well-tested key management capabilities,&#8221; the report notes.</p>
+<p>CISA also admitted it can do better when it comes to responding to security incident notifications from external parties. The postmortem stresses that clear and distinct reporting channels are essential to ensure that incidents affecting the organization itself are handled differently from those involving its products or customers.</p>
+<p>&#8220;In CISA&#8217;s case, these channels were not well defined, leading the security researcher to try multiple avenues – including emailing the contractor, submitting through CISA’s vulnerability disclosure platform (which is intended for vulnerabilities impacting the broader cybersecurity community), and ultimately involving a reporter,&#8221; reads the analysis written by <strong>Preston Werntz</strong> and <strong>Brad Libbey</strong>, the acting chief information officer and acting chief information security officer at CISA, respectively.</p>
+<p>CISA said it is refining its reporting channels to make them easier and faster for researchers. &#8220;Additionally, while many researchers rely on the security.txt file, organizations can ensure clarity by publishing reporting instructions in multiple prominent locations,&#8221; the CISA authors wrote.</p>
+<p><strong>Guillaume Valadon</strong>, the GitGuardian researcher who first contacted KrebsOnSecurity about the exposed CISA credentials, said CISA ignored nine automated alerts about the exposed credentials prior to our notification on May 15. Valadon’s company constantly scans public code repositories at GitHub and elsewhere for exposed secrets, automatically alerting the offending accounts of any apparent sensitive data exposures.</p>
+<p>&#8220;Letting nine notification emails go unanswered is how a one-day incident becomes a six-month exposure,&#8221; Valadon <a href="https://blog.gitguardian.com/cisa-github-leak-incident-response-lessons/" target="_blank" rel="noopener">wrote</a> in an analysis of CISA&#8217;s report. &#8220;Make it trivial to report a leak about you, not just about your products. The person reporting a leak to you is not the threat. Publish a <a href="https://krebsonsecurity.com/2021/09/does-your-organization-have-a-security-txt-file/" target="_blank" rel="noopener">security.txt</a>, but do not stop there. Put reporting instructions in several prominent places, and make sure a report about your own infrastructure does not land in a product-bug queue.&#8221; <a href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/#more-73982" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-73834" class="post-73834 post type-post status-publish format-standard has-post-thumbnail hentry category-sunshine category-latest-warnings category-neer-do-well-news tag-calvexa-group-llc tag-iris-c2 tag-jack-burkman tag-jacob-wohl tag-lobbymatic">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/" title="Permalink to Felons, Fraudsters Flog Offensive Cybersecurity Startup" rel="bookmark">Felons, Fraudsters Flog Offensive Cybersecurity Startup</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">July 8, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/#comments">35 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>A cybersecurity startup dangling millions of dollars to acquire zero-day security vulnerabilities in popular software is run by a pair of far-right conspiracy theorists and convicted felons whose most recent ventures included fake intelligence companies and a now-defunct AI-based lobbying platform they operated under assumed names.</p>
+<p>The X/Twitter account <strong>IRIS C2</strong> (@C2IRIS) has gained more than 4,000 followers since its creation in January 2025, posting frequently about security vulnerabilities, AI and software exploits. IRIS C2 says it is a company in McLean, Va. that sells offensive cybersecurity capabilities.</p>
+<div id="attachment_73902" style="width: 760px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-73902" decoding="async" loading="lazy" class=" wp-image-73902" src="https://krebsonsecurity.com/wp-content/uploads/2026/06/irisc2prices.png" alt="" width="750" height="458" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/06/irisc2prices.png 1359w, https://krebsonsecurity.com/wp-content/uploads/2026/06/irisc2prices-768x469.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/06/irisc2prices-782x478.png 782w" sizes="(max-width: 750px) 100vw, 750px" /><p id="caption-attachment-73902" class="wp-caption-text">The IRIS C2 website dangles the possibility of million-dollar payouts for exploits to attract talent.</p></div>
+<p>&#8220;Our business model is this,&#8221; reads a pinned post on top of the IRIS C2 account on X. &#8220;Attract the very best vulnerability researchers and exploit developers in the world to join our company. This mostly revolves around junior engineers with raw talent/extremely high IQ. We don&#8217;t care if they have a college degree/industry experience.&#8221;</p>
+<p>The website linked in that profile &#8212; <strong>irisc2[.]com</strong> &#8212; says the company is hiring for a number of open positions, and a recent post on its LinkedIn page enthuses about an overwhelming number of applications from potential employees. The website claims IRIS C2 is in the business of acquiring &#8220;zero-day exploits, individual primitives, partial chains, and full capabilities across all major platforms. Payouts range from $10,000 to $7 million depending on target, reliability, and operational value.&#8221;</p>
+<p>The government contracting portal <strong>g2exchange.com</strong> <a href="https://g2xchange.com/app/companies/Q38JJNA3WAT4" target="_blank" rel="noopener">reports</a> that irisc2[.]com is operated by a business based in Virginia called <strong>Calvexa Group LLC</strong>. The &#8220;contact&#8221; link on the website for Calvexa Group &#8212; <strong>calvexagroup[.]com</strong> &#8212; forwards visitors to irisc2[.]com. G2Exchange shows that while Calvexa Group LLC is registered as a federal contractor, it does not appear to be working on any direct government contracts.</p>
+<p>A search on the Arlington, Va. address listed in the incorporation records for Calvexa Group LLC finds the property is occupied by <a href="https://en.wikipedia.org/wiki/Jack_Burkman" target="_blank" rel="noopener"><strong>Jack Burkman</strong></a>, the 60-year-old founder and managing partner of the lobbying firm <strong>Burkman &amp; Associates</strong>. When approached with questions about IRIS C2, Burkman referred further inquiries to his longtime associate, 28-year-old <strong>Jacob Wohl</strong>.</p>
+<div id="attachment_73904" style="width: 805px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-73904" decoding="async" loading="lazy" class="size-full wp-image-73904" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/burkman-wohl.png" alt="" width="795" height="524" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/burkman-wohl.png 795w, https://krebsonsecurity.com/wp-content/uploads/2026/07/burkman-wohl-768x506.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/burkman-wohl-782x515.png 782w" sizes="(max-width: 795px) 100vw, 795px" /><p id="caption-attachment-73904" class="wp-caption-text">Jack Burkman (left) and Jacob Wohl, at a press conference in August 2020. Image: Wikipedia.</p></div>
+<p>Burkman and Wohl have a <a href="https://en.wikipedia.org/wiki/Jacob_Wohl" target="_blank" rel="noopener">storied history</a> of creating fake intelligence companies and using them to spread false claims about and frame public figures, including fabricated sexual assault claims against then FBI director <strong>Robert Mueller</strong>, and <strong>Pete Buttigieg</strong>, then mayor of South Bend, Indiana and a Democratic candidate for the presidency. In 2019, Burkman and Wohl held press conferences falsely alleging extramarital affairs by <strong>Sen. Elizabeth Warren</strong> (D-Mass.) and then-2020 presidential candidate <strong>Kamala Harris</strong>.</p>
+<p>In the wake of the 2020 presidential election, Wohl and Burkman were prosecuted by multiple U.S. states for making thousands of robocalls to residents of battleground states and disseminating false claims about mail-in ballots. They were indicted in Cleveland on 15 felony counts of orchestrating a robocall scheme aimed at suppressing the black vote in Detroit, and were <a href="https://apnews.com/article/2022-midterm-elections-ohio-cleveland-893b60cd297b918f9e1b193c25caee97" target="_blank" rel="noopener">sentenced in late 2025</a> to probation after their appeals to dismiss the charges were rejected. <a href="https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/#more-73834" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-73923" class="post-73923 post type-post status-publish format-standard has-post-thumbnail hentry category-sunshine category-neer-do-well-news category-web-fraud-2-0 tag-alarum-technologies-ltd tag-benjamin-brundage tag-fbi tag-google tag-google-threat-intelligence-group tag-internal-revenue-service-criminal-investigation tag-ipidea tag-lg tag-lumen tag-netnut tag-popa-botnet tag-samsung tag-shadowserver tag-synthient">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/07/fbi-seizes-netnut-proxy-platform-popa-botnet/" title="Permalink to FBI Seizes NetNut Proxy Platform, Popa Botnet" rel="bookmark">FBI Seizes NetNut Proxy Platform, Popa Botnet</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">July 2, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/07/fbi-seizes-netnut-proxy-platform-popa-botnet/#comments">22 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>The <strong>Federal Bureau of Investigation</strong> (FBI) said today it worked with industry partners to seize hundreds of domains associated with <strong>NetNut</strong>, a sprawling residential proxy service operated by the publicly-traded Israeli company <strong>Alarum Technologies </strong>[NASDAQ: ALAR]. The action comes roughly two weeks after KrebsOnSecurity published findings from multiple security firms connecting NetNut to the <strong>Popa</strong> botnet, a collection of at least two million devices that have been compromised by malicious software with little or no consent from victims.</p>
+<div id="attachment_73926" style="width: 757px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-73926" decoding="async" loading="lazy" class=" wp-image-73926" src="https://krebsonsecurity.com/wp-content/uploads/2026/07/netnutseizure.png" alt="" width="747" height="415" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/07/netnutseizure.png 1407w, https://krebsonsecurity.com/wp-content/uploads/2026/07/netnutseizure-768x427.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/07/netnutseizure-782x435.png 782w" sizes="(max-width: 747px) 100vw, 747px" /><p id="caption-attachment-73926" class="wp-caption-text">The NetNut homepage today was replaced by this seizure banner from the FBI.</p></div>
+<p>On June 19, three different security firms <a href="https://krebsonsecurity.com/2026/06/popa-botnet-linked-to-publicly-traded-israeli-firm/" target="_blank" rel="noopener">issued similar findings</a>: That NetNut is a residential proxy network which populates a botnet called Popa, and distributes software for devices commonly found in homes, such as smart TVs and streaming boxes. NetNut&#8217;s software turns those systems into always-on residential proxy nodes that are rented to others, who predominantly use them to relay abusive and intrusive Internet traffic, such as mass content scraping, advertising fraud, and account takeover activity.</p>
+<p>Earlier today, NetNut&#8217;s homepage was replaced with a seizure notice from the FBI and the <strong>Internal Revenue Service Criminal Investigation</strong> division. The seizure notice thanked <strong>Google</strong>, <strong>Lumen</strong>, <strong>Shadowserver</strong> and other industry partners for their help in dismantling hundreds of domains tied to the Popa botnet, which experts say has long been synonymous with NetNut&#8217;s residential proxy infrastructure.</p>
+<p>In a blog post published today, the <strong>Google</strong> <strong>Threat Intelligence Group</strong> (GTIG) said NetNut&#8217;s proxy network is widely resold and white-labeled by a number of third-party proxy providers, and that its services are heavily sought out by cybercriminals seeking to obfuscate the source of their malicious traffic. The GTIG said that in a single week during June 2026, they observed 316 distinct clusters of threat actors using suspected NetNut exit nodes, including cybercriminal and espionage groups.</p>
+<p>&#8220;These bad actors can use NetNut to mask their origin IP address when accessing victim environments, accessing their own infrastructure, and conducting password spray attacks,&#8221; Google&#8217;s GTIG <a href="https://cloud.google.com/blog/topics/threat-intelligence/google-continued-disruption-residential-proxy-networks" target="_blank" rel="noopener">wrote</a>. &#8220;Furthermore, when a consumer device becomes an exit node, unauthorized network traffic passes through it. This means bad actors can access other private devices on the same home network, effectively exposing them to Internet threats.&#8221;</p>
+<p>Google said it disabled Google accounts and services used by NetNut for malware command and control, and that it shared technical intelligence on NetNut&#8217;s software development kits (SDKs) and backend infrastructure with platform providers, law enforcement and research firms. The company also disabled apps known to bundle NetNut&#8217;s various SDKs.</p>
+<p><strong>Omer Weiss</strong>, legal counsel for NetNut parent Alarum Technologies, said the company was aware of the FBI seizure and cooperating with investigators.</p>
+<p>&#8220;Alarum takes this matter seriously and will fully cooperate with law enforcement to ensure any misuse of its infrastructure is thoroughly investigated and those responsible are held to account,&#8221; Weiss said in a written statement.<br />
+ <a href="https://krebsonsecurity.com/2026/07/fbi-seizes-netnut-proxy-platform-popa-botnet/#more-73923" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+		<article id="post-73876" class="post-73876 post type-post status-publish format-standard has-post-thumbnail hentry category-neer-do-well-news category-ransomware tag-bbc tag-everlynn tag-owen-flowers tag-scattered-spider tag-thalha-jubair tag-transport-for-london tag-tyler-tylerb-buchanan">
+				<header class="entry-header">
+						<h2 class="entry-title">
+				<a href="https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/" title="Permalink to Scattered Spider Hackers Plead Guilty on Day 1 of Trial" rel="bookmark">Scattered Spider Hackers Plead Guilty on Day 1 of Trial</a>
+			</h2>
+					<div class="clear"></div>
+	<div class="btm-wrap">
+	<div class="below-title-meta">
+		<div class="adt">
+			
+			
+				
+				<span class="date updated">June 23, 2026</span>
+					
+        </div>
+		<div class="adt-comment">
+		<span><a class="link-comments" href="https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/#comments">43 Comments</a></span> 
+        </div>    <div class="clear"></div>	   
+    </div><!-- below title meta end -->
+	</div>
+		
+						</header><!-- .entry-header -->
+		
+							<div class="entry-content">
+												<p>Two men pleaded guilty in the United Kingdom this week to criminal charges stemming from an August 2024 cyberattack that crippled <strong>Transport for London</strong>, the entity responsible for the public transport network in the Greater London area. The duo were key members of a prolific cybercrime group known as <strong>Scattered Spider</strong>, and their guilty pleas came on the first day of what was expected to be a six-week trial.</p>
+<div id="attachment_73881" style="width: 760px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-73881" decoding="async" loading="lazy" class=" wp-image-73881" src="https://krebsonsecurity.com/wp-content/uploads/2026/06/flowers-jubair-nca.png" alt="" width="750" height="421" srcset="https://krebsonsecurity.com/wp-content/uploads/2026/06/flowers-jubair-nca.png 926w, https://krebsonsecurity.com/wp-content/uploads/2026/06/flowers-jubair-nca-768x431.png 768w, https://krebsonsecurity.com/wp-content/uploads/2026/06/flowers-jubair-nca-782x439.png 782w" sizes="(max-width: 750px) 100vw, 750px" /><p id="caption-attachment-73881" class="wp-caption-text">Owen Flowers (left) 18, and Thalha Jubair, 20. Image: UK National Crime Agency (NCA).</p></div>
+<p><strong>Thalha Jubair</strong>, 20, of East London and 18-year-old <strong>Owen Flowers</strong> of Walsall admitted conspiring to commit unauthorized acts against Transport for London computer systems and causing risk of serious damage to human welfare. According to <a href="https://www.bbc.com/news/articles/czx5yp9qy0do" target="_blank" rel="noopener">a report</a> from the BBC, Flowers alone admitted to being part of a conspiracy to hack into U.S. based healthcare providers SSM Health Care Corporation and Sutter Health in September 2024.</p>
+<p>Jubair is also wanted by U.S. law enforcement agencies. In September 2025, prosecutors in New Jersey unsealed <a href="https://www.justice.gov/opa/pr/united-kingdom-national-charged-connection-multiple-cyber-attacks-including-critical" target="_blank" rel="noopener">an indictment</a> alleging Jubair and other Scattered Spider members committed computer fraud, wire fraud, and money laundering in relation to 120 computer network intrusions involving 47 U.S. entities between May 2022 and September 2025, and that the group’s victims paid at least $115 million in ransom payments.</p>
+<p>In July 2025, KrebsOnSecurity <a href="https://krebsonsecurity.com/2025/07/uk-charges-four-in-scattered-spider-ransom-group/" target="_blank" rel="noopener">reported</a> that Flowers and Jubair were arrested in the United Kingdom in connection with Scattered Spider <a href="https://www.thetimes.com/uk/technology-uk/article/ransoms-hackers-cyber-crime-t5kjldwwm" target="_blank" rel="noopener">ransom attacks</a> against the retailers <strong>Marks &amp; Spencer</strong> and <strong>Harrods</strong>, and the British food retailer <strong>Co-op Group</strong>. Multiple sources familiar with those investigations said Flowers was the Scattered Spider member who anonymously <a href="https://krebsonsecurity.com/2024/09/the-dark-nexus-between-harm-groups-and-the-com/" target="_blank" rel="noopener">gave interviews to the media</a> in the days after the group’s September 2023 ransomware attacks disrupted operations at Las Vegas casinos operated by <strong>MGM Resorts</strong> and <strong>Caesars Entertainment</strong>.</p>
+<p>According to prosecutors, Jubair co-ran a bustling Telegram channel called <strong>Star Chat</strong>, the home of a <a href="https://krebsonsecurity.com/?s=SIM-swapping" target="_blank" rel="noopener">SIM-swapping</a> group that used voice- and SMS-based phishing attacks to steal credentials from employees at the major wireless providers in the U.S. and U.K. The group would then use that access to sell a service that could redirect a target’s phone number to a device the attackers controlled and intercept the victim’s calls and text messages (including one-time codes for multi-factor authentication).</p>
+<div id="attachment_72238" style="width: 819px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-72238" decoding="async" loading="lazy" class="size-full wp-image-72238" src="https://krebsonsecurity.com/wp-content/uploads/2025/09/rocketace-tmobile.png" alt="" width="809" height="915" srcset="https://krebsonsecurity.com/wp-content/uploads/2025/09/rocketace-tmobile.png 809w, https://krebsonsecurity.com/wp-content/uploads/2025/09/rocketace-tmobile-768x869.png 768w, https://krebsonsecurity.com/wp-content/uploads/2025/09/rocketace-tmobile-782x884.png 782w" sizes="(max-width: 809px) 100vw, 809px" /><p id="caption-attachment-72238" class="wp-caption-text">A receipt from Star Fraud Chat&#8217;s SIM-swapping service targeting a T-Mobile customer after the group gained access to internal T-Mobile employee tools. &#8220;Rocket Ace&#8221; was one of Jubair&#8217;s hacker handles, according to U.S. prosecutors.</p></div>
+<p>New Jersey prosecutors also allege Jubair also was involved in a <a href="https://krebsonsecurity.com/2022/08/how-1-time-passcodes-became-a-corporate-liability/" target="_blank" rel="noopener">mass SMS phishing campaign during the summer of 2022</a> that stole single sign-on credentials from employees at hundreds of companies. That weeks-long SMS phishing campaign led to intrusions and data thefts at more than 130 organizations, including <strong>LastPass</strong>, <strong>DoorDash</strong>, <strong>Mailchimp</strong>, <strong>Plex</strong> and <strong>Signal</strong>. <a href="https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/#more-73876" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+											</div><!-- .entry-content -->
+		
+			
+	
+	<footer class="entry-meta">
+		
+					
+	</footer>
+
+	</article><!-- #post -->
+				
+			
+								<div class="themonic-pagination"><div class='pagination'><ul><li class='current'><span class='currenttext'>1</span></li><li><a href='https://krebsonsecurity.com/page/2/' class='inactive'>2</a></li><li><a href='https://krebsonsecurity.com/page/3/' class='inactive'>3</a></li><li><a href='https://krebsonsecurity.com/page/4/' class='inactive'>4</a></li><li><a href='https://krebsonsecurity.com/page/2/' class='inactive'>Next &rsaquo;</a></li><a class='inactive' href='https://krebsonsecurity.com/page/253/'>Last &raquo;</a></ul></div></div>
+					<div style="display: block; clear: both;"></div>
+			
+		
+
+	
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+
+        <div id="sidebar_ad" class="widget themonic-ad5"><div class="a-statement">Advertisement</div><a href="https://www.keepersecurity.com/free-data-breach-scan.html?utm_source=Krebs&amp;utm_medium=display+ad&amp;utm_campaign=Krebs_ads">
+<img src="/b-keeper/19.png" />
+</a></div>
+
+                        <br><div class="widget themonic-ad1"><div class="a-statement">Advertisement</div></div><br>
+
+			<aside id="custom_html-2" class="widget_text widget widget_custom_html"><p class="widget-title">Mailing List</p><div class="textwidget custom-html-widget"><a href="/subscribe/">Subscribe here</a></div></aside><aside id="search-2" class="widget widget_search"><p class="widget-title">Search KrebsOnSecurity</p><form role="search" method="get" id="searchform" class="searchform" action="https://krebsonsecurity.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>
+		<aside id="recent-posts-3" class="widget widget_recent_entries">
+		<p class="widget-title">Recent Posts</p>
+		<ul>
+											<li>
+					<a href="https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/">Who&#8217;s Tracking You? Use This New Service to Find Out</a>
+									</li>
+											<li>
+					<a href="https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/">Microsoft Plugs Nearly 400 Security Holes</a>
+									</li>
+											<li>
+					<a href="https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/">Canadian Man Pleads Guilty in Snowflake Extortions</a>
+									</li>
+											<li>
+					<a href="https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/">Read This Before You Buy That TV Streaming Stick</a>
+									</li>
+											<li>
+					<a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/">LG to Ban Residential Proxies from Smart TV Apps</a>
+									</li>
+					</ul>
+
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a name="subscribe2"></a></div>
+		</aside><aside id="categories-2" class="widget widget_categories"><p class="widget-title">Story Categories</p>
+			<ul>
+					<li class="cat-item cat-item-5"><a href="https://krebsonsecurity.com/category/sunshine/">A Little Sunshine</a>
+</li>
+	<li class="cat-item cat-item-2240"><a href="https://krebsonsecurity.com/category/all-about-skimmers/">All About Skimmers</a>
+</li>
+	<li class="cat-item cat-item-9085"><a href="https://krebsonsecurity.com/category/ashley-madison-breach/">Ashley Madison breach</a>
+</li>
+	<li class="cat-item cat-item-3191"><a href="https://krebsonsecurity.com/category/breadcrumbs/">Breadcrumbs</a>
+</li>
+	<li class="cat-item cat-item-3771"><a href="https://krebsonsecurity.com/category/data-breaches/">Data Breaches</a>
+</li>
+	<li class="cat-item cat-item-4624"><a href="https://krebsonsecurity.com/category/ddos-for-hire/">DDoS-for-Hire</a>
+</li>
+	<li class="cat-item cat-item-11540"><a href="https://krebsonsecurity.com/category/doge/">DOGE</a>
+</li>
+	<li class="cat-item cat-item-9173"><a href="https://krebsonsecurity.com/category/employment-fraud/">Employment Fraud</a>
+</li>
+	<li class="cat-item cat-item-2151"><a href="https://krebsonsecurity.com/category/how-to-break-into-security/">How to Break Into Security</a>
+</li>
+	<li class="cat-item cat-item-10357"><a href="https://krebsonsecurity.com/category/internet-of-things-iot/">Internet of Things (IoT)</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="https://krebsonsecurity.com/category/latest-warnings/">Latest Warnings</a>
+</li>
+	<li class="cat-item cat-item-4071"><a href="https://krebsonsecurity.com/category/neer-do-well-news/">Ne&#039;er-Do-Well News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://krebsonsecurity.com/category/other/">Other</a>
+</li>
+	<li class="cat-item cat-item-1306"><a href="https://krebsonsecurity.com/category/pharma-wars/">Pharma Wars</a>
+</li>
+	<li class="cat-item cat-item-8240"><a href="https://krebsonsecurity.com/category/ransomware/">Ransomware</a>
+</li>
+	<li class="cat-item cat-item-9635"><a href="https://krebsonsecurity.com/category/russias-war-on-ukraine/">Russia&#039;s War on Ukraine</a>
+</li>
+	<li class="cat-item cat-item-599"><a href="https://krebsonsecurity.com/category/security-tools/">Security Tools</a>
+</li>
+	<li class="cat-item cat-item-8298"><a href="https://krebsonsecurity.com/category/sim-swapping/">SIM Swapping</a>
+</li>
+	<li class="cat-item cat-item-4079"><a href="https://krebsonsecurity.com/category/spam-nation/">Spam Nation</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://krebsonsecurity.com/category/smallbizvictims/">Target: Small Businesses</a>
+</li>
+	<li class="cat-item cat-item-5167"><a href="https://krebsonsecurity.com/category/tax-refund-fraud/">Tax Refund Fraud</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://krebsonsecurity.com/category/comingstorm/">The Coming Storm</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://krebsonsecurity.com/category/patches/">Time to Patch</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://krebsonsecurity.com/category/web-fraud-2-0/">Web Fraud 2.0</a>
+</li>
+			</ul>
+
+			</aside><aside id="media_image-2" class="widget widget_media_image"><p class="widget-title">Why So Many Top Hackers Hail from Russia</p><a href="https://krebsonsecurity.com/2017/06/why-so-many-top-hackers-hail-from-russia/"><img width="580" height="389" src="https://krebsonsecurity.com/wp-content/uploads/2017/06/computered-580x389.png" class="image wp-image-39684  attachment-medium size-medium" alt="" decoding="async" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://krebsonsecurity.com/wp-content/uploads/2017/06/computered-580x389.png 580w, https://krebsonsecurity.com/wp-content/uploads/2017/06/computered-768x514.png 768w, https://krebsonsecurity.com/wp-content/uploads/2017/06/computered-940x630.png 940w, https://krebsonsecurity.com/wp-content/uploads/2017/06/computered.png 1551w" sizes="(max-width: 580px) 100vw, 580px" /></a></aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	
+	<div id="publisho-footer" class="widget-area">
+				<div class="footer-widget">
+                				</div>
+				<div class="footer-widget">
+								</div>
+				<div class="footer-widget">
+								</div>
+	</div>
+
+	<div class="site-wordpress">
+					&copy; Krebs on Security - <a rel="me" href="https://infosec.exchange/@briankrebs">Mastodon</a> <br />
+  </div>
+	<!-- .site-info --><div class="clear"></div>
+</div><!-- #page -->
+
+<script type='text/javascript' src='https://krebsonsecurity.com/wp-content/themes/kos-mar2021/js/slicknav.js?ver=6.2.2' id='publisho-mobile-navigation-js'></script>
+</body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 233/235 objects using memcached
+Page Caching using memcached 
+Database Caching using memcached
+
+Served from: krebsonsecurity.com @ 2026-08-17 15:32:07 by W3 Total Cache
+-->

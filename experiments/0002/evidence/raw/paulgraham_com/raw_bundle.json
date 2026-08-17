@@ -1,0 +1,90 @@
+{
+  "domain": "paulgraham.com",
+  "canonical_url": "https://paulgraham.com/",
+  "category": "Personal/independent sites",
+  "collection_timestamp": "2026-08-17T19:45:08.591895+00:00",
+  "preflight": {
+    "domain": "paulgraham.com",
+    "dns_resolved": true,
+    "dns_ip": "52.204.244.237",
+    "status": "SUCCESS",
+    "final_url": "https://paulgraham.com/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 2782.85,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Paul Graham",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 3,
+      "scripts_count": 2,
+      "images_count": 8,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:45:09 GMT",
+        "Cache-Control": "private, max-age=3600",
+        "X-XRDS-Location": "http://paulgraham.com/ystore/openid/rp.xrds",
+        "Vary": "User-Agent,Accept-Encoding",
+        "Expires": "Mon, 17 Aug 2026 20:45:09 GMT",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html",
+        "Age": "0",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "content_length": 5351
+    },
+    "text_length": 116
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194514",
+    "last_seen": "20260817194514",
+    "earliest_iso": "2026-08-17T19:45:08.591895+00:00",
+    "latest_iso": "2026-08-17T19:45:08.591895+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/paulgraham_com/rendered.html",
+      "sha256": "2342835f11d203ac4c81eb7bb7475c5f363a3d378cd6eb6f702b5d9c4f4ebdcc",
+      "size_bytes": 5351
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/paulgraham_com/timeline.json",
+      "sha256": "1f6b4dc41fd6e9dd47208d1d6af0492a875b76e934f212feb83049a6c322dd6c",
+      "size_bytes": 972
+    }
+  ]
+}

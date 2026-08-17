@@ -1,0 +1,99 @@
+{
+  "domain": "nypl.org",
+  "canonical_url": "https://www.nypl.org/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:30:31.442598+00:00",
+  "preflight": {
+    "domain": "nypl.org",
+    "dns_resolved": true,
+    "dns_ip": "199.83.129.97",
+    "status": "SUCCESS",
+    "final_url": "https://www.nypl.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://nypl.org/",
+      "https://www.nypl.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2508.86,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The New York Public Library",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 149,
+      "scripts_count": 18,
+      "images_count": 69,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:30:31 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "AWSALB=nDH/iG+pIGzMAxPyARTM7fSjXpIU1z9HlPSj4Ixmj86tJ24me8m3bgL9qp1t8H5+IgWZI5/5DDJDU3nQv0omzLBTBlsPkJ7qszKCuSNJNr3F8bYpbzEi566wJpHc; Expires=Mon, 24 Aug 2026 19:30:31 GMT; Path=/, AWSALBCORS=nDH/iG+pIGzMAxPyARTM7fSjXpIU1z9HlPSj4Ixmj86tJ24me8m3bgL9qp1t8H5+IgWZI5/5DDJDU3nQv0omzLBTBlsPkJ7qszKCuSNJNr3F8bYpbzEi566wJpHc; Expires=Mon, 24 Aug 2026 19:30:31 GMT; Path=/; SameSite=None; Secure, nlbi_5938=F5KdctLe12H/uRfN+2L/sAAAAADv1r3FX+uE5TwuqT1JgmlH; HttpOnly; path=/; Domain=.nypl.org; Secure; SameSite=None, incap_ses_935_5938=l9rTRuEUWVTsSUjJ2Mn5DFhhg2oAAAAA28Q178DAd4ldz2iRIhiXyw==; path=/; Domain=.nypl.org; Secure; SameSite=None",
+        "Server": "nginx",
+        "x-nextjs-cache": "HIT",
+        "X-Powered-By": "Next.js",
+        "Cache-Control": "s-maxage=60, stale-while-revalidate",
+        "ETag": "\"essh3a8z1revkq\"",
+        "Vary": "Accept-Encoding, Origin",
+        "Content-Encoding": "gzip",
+        "Access-Control-Allow-Origin": "*",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-CDN": "Imperva",
+        "X-Iinfo": "53-235867254-235867131 PNNy RT(1786995031541 27) q(0 0 0 0) r(6 6) U24"
+      },
+      "content_length": 694320
+    },
+    "text_length": 3606
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193037",
+    "last_seen": "20260817193037",
+    "earliest_iso": "2026-08-17T19:30:31.442598+00:00",
+    "latest_iso": "2026-08-17T19:30:31.442598+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nypl_org/rendered.html",
+      "sha256": "5cac614731f5745ebe2d7636a0c9a347fce3f6501885a4ba2d02acc0af3c1a4c",
+      "size_bytes": 694320
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nypl_org/timeline.json",
+      "sha256": "4ec578b02d94a7c67c9f2b0e3730642630dd33a6620c0701b417e9cea4052e42",
+      "size_bytes": 968
+    }
+  ]
+}

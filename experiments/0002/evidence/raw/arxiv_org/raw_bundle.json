@@ -1,0 +1,94 @@
+{
+  "domain": "arxiv.org",
+  "canonical_url": "https://arxiv.org/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:28:01.251487+00:00",
+  "preflight": {
+    "domain": "arxiv.org",
+    "dns_resolved": true,
+    "dns_ip": "151.101.195.42",
+    "status": "SUCCESS",
+    "final_url": "https://arxiv.org/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 1401.52,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "arXiv.org e-Print archive",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 257,
+      "scripts_count": 5,
+      "images_count": 4,
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "38051",
+        "via": "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish",
+        "server": "Google Frontend",
+        "x-cloud-trace-context": "ffb8ed08ca58ed291141e402d8bff670",
+        "content-security-policy": "frame-ancestors 'none'",
+        "x-frame-options": "SAMEORIGIN",
+        "content-type": "text/html; charset=utf-8",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 17 Aug 2026 19:28:01 GMT",
+        "Age": "1",
+        "X-Served-By": "cache-lga21942-LGA, cache-lga21942-LGA, cache-lga21968-LGA, cache-hyd1500031-HYD",
+        "X-Cache": "MISS, HIT, HIT",
+        "X-Timer": "S1786994881.401448,VS0,VE1"
+      },
+      "content_length": 38051
+    },
+    "text_length": 5462
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192806",
+    "last_seen": "20260817192806",
+    "earliest_iso": "2026-08-17T19:28:01.251487+00:00",
+    "latest_iso": "2026-08-17T19:28:01.251487+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/arxiv_org/rendered.html",
+      "sha256": "d7ed6c1e9723edcceae8a3d3f258a7ca991bd64f841fad43632caa13a7fad746",
+      "size_bytes": 38051
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/arxiv_org/timeline.json",
+      "sha256": "f882cc7b14dcd67377baf756f62e3ba28e2ba246a36fefedb346bf4132c3e00a",
+      "size_bytes": 983
+    }
+  ]
+}

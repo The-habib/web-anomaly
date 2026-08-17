@@ -1,0 +1,100 @@
+{
+  "domain": "maine.gov",
+  "canonical_url": "https://www.maine.gov/portal/index.html",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:43.819304+00:00",
+  "preflight": {
+    "domain": "maine.gov",
+    "dns_resolved": true,
+    "dns_ip": "35.153.7.158",
+    "status": "SUCCESS",
+    "final_url": "https://www.maine.gov/portal/index.html",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://maine.gov/",
+      "https://www.maine.gov/",
+      "https://www.maine.gov/portal/index.html"
+    ],
+    "status_code": 200,
+    "latency_ms": 2316.34,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Maine.gov",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 85,
+      "scripts_count": 22,
+      "images_count": 8,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:18:04 GMT",
+        "Server": "Apache",
+        "Accept-Ranges": "bytes",
+        "zbe": "vw3, lh81",
+        "zbe1": "vw3",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "X-Frame-Options": "SAMEORIGIN",
+        "zfe": "vw3",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 1dee4028c21f3cc4606688d80e46eec4.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS53-P5",
+        "X-Amz-Cf-Id": "0LOJn1arLW9GIsbZgbGxRm6U-cuW9Kd3jtYqSsVOceKQ1LCLzR_uIA==",
+        "Age": "460"
+      },
+      "content_length": 31928
+    },
+    "text_length": 1632
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192549",
+    "last_seen": "20260817192549",
+    "earliest_iso": "2026-08-17T19:25:43.819304+00:00",
+    "latest_iso": "2026-08-17T19:25:43.819304+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/maine_gov/rendered.html",
+      "sha256": "e5fda54277cda5bf39e598debb182f5ac2bb4b793e58ae8edf009bfa0d628803",
+      "size_bytes": 31928
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/maine_gov/timeline.json",
+      "sha256": "5c8c6d05ad53518e7a0a33e19e284d4ae1642fc6fb0001158adf98f824065183",
+      "size_bytes": 968
+    }
+  ]
+}

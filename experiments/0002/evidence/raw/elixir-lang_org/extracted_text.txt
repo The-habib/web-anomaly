@@ -1,0 +1,29 @@
+Elixir helps developers write clear and purposeful code that focuses on your data and your domain. Thanks to immutability, memory safety, and Elixir's gradual type system, you can build systems that recover from failures and are easy to maintain.
+Scalability
+A single Elixir codebase can scale vertically (on multi-core machines) and horizontally (communicating across nodes), excelling at message-oriented and web real-time systems. Combined with projects like Numerical Elixir, Elixir scales across cores, clusters, and GPUs.
+Loved by developers
+Voted one of the world's most admired languages several years in a row.
+Elixir ships with a package manager, code formatter, and best in class documentation. Projects like IEx (interactive shell) and Livebook (interactive notebooks) enable rapid prototyping and live-debugging of running systems.
+Elixir in production
+Elixir is used by solopreneurs and Fortune 500 companies alike, supporting teams that value developer happiness as well as large-scale operations, across diverse industries and applications.
+Web development Embedded systems Machine Learning Data and media IoT & Distributed Systems
+Web development
+The Phoenix web framework delivers rapid development, LiveView adds real-time features with minimal code, and Ecto makes your data layer a joy to work with. Ship faster, at scale.
+# Update server state from browser eventsdefmoduleMyAppWeb.CounterLivedouseMyAppWeb, :live_viewdefmount(_params, _session, socket) do {:ok, assign(socket, count:0)}enddefhandle_event("increment", _, socket) do {:noreply, update(socket, :count, &(&1 +1))}endend
+Embedded systems
+Nerves packages your entire application into compact firmware, with over-the-air updates and telecom-grade fault-tolerance, while AtomVM brings Elixir to devices as small as microcontrollers.
+# Control hardware from a supervised processdefhandle_info(:toggle_led, %{led: led} = state) do next_level =1- state.level:ok=Circuits.GPIO.write(led, next_level)Process.send_after(self(), :toggle_led, 500) {:noreply, %{state |level: next_level}}end
+Machine Learning
+Numerical Elixir (Nx) brings GPU-accelerated tensors to Elixir, while Livebook makes exploration interactive: run pre-trained models, visualize data, and deploy - all in one place.
+# Run a pre-trained model with Nx acceleration{:ok, model} =Bumblebee.load_model({:hf, "google/vit"}){:ok, featurizer} =Bumblebee.load_featurizer({:hf, "google/vit"})serving =Bumblebee.Vision.image_classification(model, featurizer,compile: [batch_size:1],defn_options: [compiler:EXLA] )Nx.Serving.run(serving, image)
+Data and media
+Process data at scale with backpressure and concurrency. Broadway handles millions of events from queues, while Membrane gives you composable pipelines for audio, video, and beyond.
+Thanks to the Erlang VM, Elixir also excels at IoT, distributed systems, and everything Erlang is renowned for. Explore some excellent Erlang projects below.
+# Update server state from browser eventsdefmoduleMyAppWeb.CounterLivedouseMyAppWeb, :live_viewdefmount(_params, _session, socket) do {:ok, assign(socket, count:0)}enddefhandle_event("increment", _, socket) do {:noreply, update(socket, :count, &(&1 +1))}endend
+# Control hardware from a supervised processdefhandle_info(:toggle_led, %{led: led} = state) do next_level =1- state.level:ok=Circuits.GPIO.write(led, next_level)Process.send_after(self(), :toggle_led, 500) {:noreply, %{state |level: next_level}}end
+# Run a pre-trained model with Nx acceleration{:ok, model} =Bumblebee.load_model({:hf, "google/vit"}){:ok, featurizer} =Bumblebee.load_featurizer({:hf, "google/vit"})serving =Bumblebee.Vision.image_classification(model, featurizer,compile: [batch_size:1],defn_options: [compiler:EXLA] )Nx.Serving.run(serving, image)
+# Connect nodes through Erlang distributionedge_nodes = [:"edge@factory-1", :"edge@factory-2"]Enum.each(edge_nodes, &Node.connect/1)# Execute concurrently across every connected node:erpc.multicall( edge_nodes,Sensor, :read_temperature, [])
+Shaped by many
+Elixir is shaped by the contributions of many. The Elixir Team steers
+the language and the Erlang Ecosystem Foundation supports Elixir and
+the broader Erlang community.

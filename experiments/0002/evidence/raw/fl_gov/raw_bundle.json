@@ -1,0 +1,96 @@
+{
+  "domain": "fl.gov",
+  "canonical_url": "https://www.myflorida.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:00.268842+00:00",
+  "preflight": {
+    "domain": "fl.gov",
+    "dns_resolved": true,
+    "dns_ip": "199.250.30.229",
+    "status": "SUCCESS",
+    "final_url": "https://www.myflorida.gov/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 4018.42,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "- MyFlorida",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 10,
+      "scripts_count": 11,
+      "images_count": 1,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Fri, 17 Apr 2026 20:02:08 GMT",
+        "Content-Encoding": "br",
+        "ETag": "W/\"789dc2572aead3b837809cd2213e08bb\"",
+        "Server": "AmazonS3",
+        "Cache-Control": "public, max-age=0, s-maxage=31536000",
+        "Last-Modified": "Fri, 17 Apr 2026 20:01:59 GMT",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 67cbf6fb64aa59cf4c0b942d241f0eac.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM54-P1",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-Amz-Cf-Id": "axh5E0a6vXPsDNtN1l9XJ9mxQl6zMIPcz_0IKBK5tKlevGRWvNj09g==",
+        "Age": "10538572"
+      },
+      "content_length": 19090
+    },
+    "text_length": 198
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192506",
+    "last_seen": "20260817192506",
+    "earliest_iso": "2026-08-17T19:25:00.268842+00:00",
+    "latest_iso": "2026-08-17T19:25:00.268842+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/fl_gov/rendered.html",
+      "sha256": "63622e92866ed7fe6ffb9e2f6a794a9c4946c448815d3d5e2ab649919ee5f48f",
+      "size_bytes": 19090
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/fl_gov/timeline.json",
+      "sha256": "aca0f89423c2d9fe5dbb39c65dbc7bbbe7e06715a43580f76264d479af4fc427",
+      "size_bytes": 965
+    }
+  ]
+}

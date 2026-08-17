@@ -1,0 +1,103 @@
+{
+  "domain": "wikipedia.org",
+  "canonical_url": "https://www.wikipedia.org/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:31:50.858363+00:00",
+  "preflight": {
+    "domain": "wikipedia.org",
+    "dns_resolved": true,
+    "dns_ip": "103.102.166.224",
+    "status": "SUCCESS",
+    "final_url": "https://www.wikipedia.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://wikipedia.org/",
+      "https://www.wikipedia.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1057.05,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Wikipedia",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 376,
+      "scripts_count": 4,
+      "images_count": 1,
+      "headers": {
+        "date": "Sun, 16 Aug 2026 23:33:49 GMT",
+        "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+        "server": "ATS/9.2.13",
+        "etag": "W/\"1d629-65738a87fd940\"",
+        "last-modified": "Wed, 22 Jul 2026 20:05:17 GMT",
+        "content-type": "text/html",
+        "content-encoding": "gzip",
+        "age": "71881",
+        "accept-ranges": "bytes",
+        "x-cache": "cp5024 miss, cp5024 hit/1366099",
+        "x-cache-status": "hit-front",
+        "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+        "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+        "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+        "set-cookie": "WMF-Last-Access=17-Aug-2026;Path=/;HttpOnly;secure;Expires=Fri, 18 Sep 2026 12:00:00 GMT, WMF-Last-Access-Global=17-Aug-2026;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Fri, 18 Sep 2026 12:00:00 GMT, GeoIP=IN:MH:Pune:18.52:73.85:v4; Path=/; secure; Domain=.wikipedia.org, NetworkProbeLimit=0.001;Path=/;Secure;SameSite=None;Max-Age=3600, WMF-Uniq=aHUdIi7-6lXC-YVoE2OUZgO_AAAAAFvdUQRez4g87ZgbhEWACGJsXLFGMMbtNp7Z;Domain=.wikipedia.org;Path=/;HttpOnly;secure;SameSite=None;Expires=Tue, 17 Aug 2027 00:00:00 GMT",
+        "x-client-ip": "4.240.39.198",
+        "content-length": "30635",
+        "x-request-id": "a4e93905-e0ce-4f77-8f35-6902d64ecea8",
+        "x-analytics": "",
+        "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp5024\",co_id;desc=\"469723491\""
+      },
+      "content_length": 120361
+    },
+    "text_length": 683
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193156",
+    "last_seen": "20260817193156",
+    "earliest_iso": "2026-08-17T19:31:50.858363+00:00",
+    "latest_iso": "2026-08-17T19:31:50.858363+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/wikipedia_org/rendered.html",
+      "sha256": "a9575d30da0900fd8bf397c853dac1b2d9826a81ea27145887d3fa2fb4d7de96",
+      "size_bytes": 120361
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/wikipedia_org/timeline.json",
+      "sha256": "cc0ee0b7b75f9ab31505a913715d1f0d9acf639eaee72b0c193c5ad3b19eb833",
+      "size_bytes": 973
+    }
+  ]
+}

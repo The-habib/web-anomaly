@@ -1,0 +1,99 @@
+{
+  "domain": "lmu.de",
+  "canonical_url": "https://www.lmu.de/de/index.html",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:21:30.068953+00:00",
+  "preflight": {
+    "domain": "lmu.de",
+    "dns_resolved": true,
+    "dns_ip": "141.84.44.56",
+    "status": "SUCCESS",
+    "final_url": "https://www.lmu.de/de/index.html",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://lmu.de/",
+      "https://www.lmu.de/",
+      "https://www.lmu.de/de/index.html"
+    ],
+    "status_code": 200,
+    "latency_ms": 2789.28,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Startseite - LMU M\u00c3\u00bcnchen",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 65,
+      "scripts_count": 11,
+      "images_count": 7,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:21:30 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Last-Modified": "Mon, 17 Aug 2026 14:29:01 GMT",
+        "ETag": "\"a07a-6593efdcba337-gzip\"",
+        "Accept-Ranges": "bytes",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "sameorigin",
+        "X-XSS-Protection": "1; mode=block",
+        "Content-Length": "8195",
+        "Keep-Alive": "timeout=5, max=100",
+        "Connection": "Keep-Alive",
+        "Content-Type": "text/html"
+      },
+      "content_length": 41082
+    },
+    "text_length": 1942
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192130",
+    "last_seen": "20260817192130",
+    "earliest_iso": "2026-08-17T19:21:30.068953+00:00",
+    "latest_iso": "2026-08-17T19:21:30.068953+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/lmu_de/rendered.html",
+      "sha256": "e8778de85f4deee3d82dfeabfb10a089b78a9576ea60ab9d96345a7cf8f54b59",
+      "size_bytes": 41082
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/lmu_de/timeline.json",
+      "sha256": "48b96694211cc47582b8813108c2e3f418b2ca0276c26444cdbaad1659d2997c",
+      "size_bytes": 965
+    }
+  ]
+}

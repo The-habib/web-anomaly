@@ -1,0 +1,95 @@
+{
+  "domain": "haproxy.org",
+  "canonical_url": "https://www.haproxy.org/",
+  "category": "Open-source/project sites",
+  "collection_timestamp": "2026-08-17T19:38:48.568882+00:00",
+  "preflight": {
+    "domain": "haproxy.org",
+    "dns_resolved": true,
+    "dns_ip": "37.58.153.207",
+    "status": "SUCCESS",
+    "final_url": "https://www.haproxy.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://haproxy.org/",
+      "https://www.haproxy.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2184.3,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "HAProxy - The Reliable, High Perf. TCP/HTTP Load Balancer",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 709,
+      "scripts_count": 2,
+      "images_count": 7,
+      "headers": {
+        "date": "Mon, 17 Aug 2026 19:38:15 GMT",
+        "server": "Apache",
+        "last-modified": "Mon, 17 Aug 2026 04:25:01 GMT",
+        "etag": "W/\"14b91b-14018-659368dbea346\"",
+        "accept-ranges": "bytes",
+        "content-type": "text/html",
+        "age": "34",
+        "alt-svc": "h2=\":443\"; ma=3600, h3=\":443\"; ma=3600",
+        "set-cookie": "served=1:TLSv1.3+TCP:IPv4",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding",
+        "content-encoding": "gzip"
+      },
+      "content_length": 81944
+    },
+    "text_length": 10629
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193854",
+    "last_seen": "20260817193854",
+    "earliest_iso": "2026-08-17T19:38:48.568882+00:00",
+    "latest_iso": "2026-08-17T19:38:48.568882+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/haproxy_org/rendered.html",
+      "sha256": "16705fa02a1e87b6f638252796503989047c7f63554577f54d614a5d8993e411",
+      "size_bytes": 81944
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/haproxy_org/timeline.json",
+      "sha256": "4032378ba4c4cd90fbe43f751fef1f246220af08e19a65d62ea3e750faaffdee",
+      "size_bytes": 970
+    }
+  ]
+}

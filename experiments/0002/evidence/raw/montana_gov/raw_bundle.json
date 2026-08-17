@@ -1,0 +1,89 @@
+{
+  "domain": "montana.gov",
+  "canonical_url": "https://montana.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:52.229846+00:00",
+  "preflight": {
+    "domain": "montana.gov",
+    "dns_resolved": true,
+    "dns_ip": "161.7.35.25",
+    "status": "SUCCESS",
+    "final_url": "https://montana.gov/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 4369.76,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "MT.gov - Official State Website",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 200,
+      "scripts_count": 14,
+      "images_count": 38,
+      "headers": {
+        "Content-Type": "text/html",
+        "Content-Encoding": "gzip",
+        "Last-Modified": "Mon, 03 Aug 2026 14:04:11 GMT",
+        "Accept-Ranges": "bytes",
+        "ETag": "\"80bf40f55023dd1:0\"",
+        "Vary": "Accept-Encoding",
+        "Date": "Mon, 17 Aug 2026 19:25:52 GMT",
+        "Content-Length": "12919",
+        "Set-Cookie": "TS019cbb33=01f9310cc25eb0086ce3a8bac5746588bb430b3f6444ca69d98e3b07a3833d9751e9dda32e0ef4adc1f4d75f5d7a3b4961de39eec5; Path=/; Domain=.montana.gov"
+      },
+      "content_length": 85954
+    },
+    "text_length": 5164
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192554",
+    "last_seen": "20260817192554",
+    "earliest_iso": "2026-08-17T19:25:52.229846+00:00",
+    "latest_iso": "2026-08-17T19:25:52.229846+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/montana_gov/rendered.html",
+      "sha256": "2449402ec045fcde479f635e765014e23d143979695eedb38387423bc4c96806",
+      "size_bytes": 85954
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/montana_gov/timeline.json",
+      "sha256": "040c921c12281179277812d88ebda1223bbc015b5053dc051d3138f3ab390183",
+      "size_bytes": 970
+    }
+  ]
+}

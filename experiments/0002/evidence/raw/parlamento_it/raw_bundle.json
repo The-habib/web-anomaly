@@ -1,0 +1,102 @@
+{
+  "domain": "parlamento.it",
+  "canonical_url": "https://www.parlamento.it/home",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:24.450449+00:00",
+  "preflight": {
+    "domain": "parlamento.it",
+    "dns_resolved": true,
+    "dns_ip": "18.66.41.21",
+    "status": "SUCCESS",
+    "final_url": "https://www.parlamento.it/home",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://parlamento.it/",
+      "https://www.parlamento.it/",
+      "https://www.parlamento.it/home"
+    ],
+    "status_code": 200,
+    "latency_ms": 5828.12,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "parlamento.it",
+      "generator": "interact Xmanager",
+      "doctype": "HTML5/Standard",
+      "links_count": 27,
+      "scripts_count": 21,
+      "images_count": 10,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:26:22 GMT",
+        "Server": "Microsoft-IIS/10.0",
+        "X-Powered-By": "",
+        "Cache-Control": "private, max-age=0, must-revalidate",
+        "X-senato-producer": "xma",
+        "Content-Encoding": "br",
+        "X-request-source": "'internet'",
+        "Set-Cookie": "_session_id=f5762b43a8f36da81c95254ae93b756f; path=/",
+        "ETag": "W/\"079dd7395183d2361fe6cae04fa585e6\"",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 e7ce1281af608c74f8f603f1d3f6740a.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM78-P1",
+        "X-Amz-Cf-Id": "z4iLuhzsDNIRgV1CalWCD1ZFvhdtUmH8UxYL14N1tLY05X66MjTRTg==",
+        "Age": "2"
+      },
+      "content_length": 11618
+    },
+    "text_length": 1037
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192630",
+    "last_seen": "20260817192630",
+    "earliest_iso": "2026-08-17T19:26:24.450449+00:00",
+    "latest_iso": "2026-08-17T19:26:24.450449+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/parlamento_it/rendered.html",
+      "sha256": "dc263ea4b086b4c5244ef30178f301e10d4a0ad7c26ccb03021d8d3351889372",
+      "size_bytes": 11618
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/parlamento_it/timeline.json",
+      "sha256": "bc8d40f6ab26f5d8b2056ea58b025cbf02abf7a012634d15e808f6910b83b3ce",
+      "size_bytes": 972
+    }
+  ]
+}

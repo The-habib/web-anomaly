@@ -1,0 +1,101 @@
+{
+  "domain": "usa.gov",
+  "canonical_url": "https://www.usa.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:27:35.557148+00:00",
+  "preflight": {
+    "domain": "usa.gov",
+    "dns_resolved": true,
+    "dns_ip": "23.22.13.113",
+    "status": "SUCCESS",
+    "final_url": "https://www.usa.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://usa.gov/",
+      "https://www.usa.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2795.18,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Making government services easier to find | USAGov",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 77,
+      "scripts_count": 14,
+      "images_count": 9,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Content-Encoding": "br",
+        "X-Frame-Options": "DENY",
+        "X-Vcap-Request-Id": "78d8f547-2932-4e26-7dfd-a633c4e7d43e",
+        "Last-Modified": "Fri, 14 Aug 2026 19:18:35 GMT",
+        "Strict-Transport-Security": "max-age=63072000; includeSubdomains",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 17 Aug 2026 19:20:06 GMT",
+        "Cache-Control": "max-age=900",
+        "ETag": "W/\"8cb15b6d3c2a49749e3d03b4ac2b2211\"",
+        "Vary": "Accept-Encoding,Accept-Encoding,Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 2f60289312992373b517623785f072a2.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS52-P2",
+        "X-Amz-Cf-Id": "8kuut-KjQBxgCuIabmI9sQgedQiPqlzFCF53qp7fXZz8O9SnB0bL4Q==",
+        "Age": "448"
+      },
+      "content_length": 47217
+    },
+    "text_length": 3700
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192736",
+    "last_seen": "20260817192736",
+    "earliest_iso": "2026-08-17T19:27:35.557148+00:00",
+    "latest_iso": "2026-08-17T19:27:35.557148+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/usa_gov/rendered.html",
+      "sha256": "b79416455869b8db3f09689c71584b81d83660b37ed13cfa8fd296bdbb37c95e",
+      "size_bytes": 47217
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/usa_gov/timeline.json",
+      "sha256": "ada04b82090ec88ad1d66f5909d5d543f00d0d97db6e161d20609497d1dbbb27",
+      "size_bytes": 966
+    }
+  ]
+}

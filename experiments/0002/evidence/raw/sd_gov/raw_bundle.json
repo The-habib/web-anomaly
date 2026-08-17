@@ -1,0 +1,101 @@
+{
+  "domain": "sd.gov",
+  "canonical_url": "https://www.sd.gov/cs",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:35.425694+00:00",
+  "preflight": {
+    "domain": "sd.gov",
+    "dns_resolved": true,
+    "dns_ip": "150.171.109.129",
+    "status": "SUCCESS",
+    "final_url": "https://www.sd.gov/cs",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://sd.gov/",
+      "https://www.sd.gov/",
+      "https://www.sd.gov/cs"
+    ],
+    "status_code": 200,
+    "latency_ms": 4183.62,
+    "content_type": "text/html;charset=UTF-8",
+    "has_robots": false,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "South Dakota Official State Homepage - Citizen Services",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 4,
+      "scripts_count": 72,
+      "images_count": 0,
+      "headers": {
+        "Server": "snow_adc",
+        "Date": "Mon, 17 Aug 2026 19:26:36 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "BIGipServerpool_sdcsm=d45c2122e273e49155f1be1229bf8374; httponly; secure; samesite=None; path=/, JSESSIONID=0481049B1F7F546347EB388FE2EA075B; Path=/; HttpOnly; Secure; SameSite=None, glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; Secure; SameSite=None, glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; Secure; SameSite=None, glide_user_route=glide.461773b6b89618df16356e7407afda13; Max-Age=2147483647; Expires=Sat, 04-Sep-2094 22:40:43 GMT; Path=/; HttpOnly; Secure; SameSite=None, glide_node_id_for_js=dab3563733ede4c9e71cb074c3bb5dff9de5684ddb2ca31f55f9608f0cb4ce64; Path=/; Secure; SameSite=None",
+        "Server-Timing": "t;desc=\"8c445acd873e\", sem_wait;dur=0, sesh_wait;dur=0",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Is-Logged-In": "false",
+        "X-Transaction-ID": "8c445acd873e",
+        "X-Content-Type-Options": "nosniff",
+        "Pragma": "no-store,no-cache",
+        "Cache-Control": "no-cache,no-store,must-revalidate,max-age=-1",
+        "Expires": "0",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains"
+      },
+      "content_length": 973111
+    },
+    "text_length": 78
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192644",
+    "last_seen": "20260817192644",
+    "earliest_iso": "2026-08-17T19:26:35.425694+00:00",
+    "latest_iso": "2026-08-17T19:26:35.425694+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/sd_gov/rendered.html",
+      "sha256": "faa908f8e6c55cb1ed84edc466a95277eb45998dcfbf920dd3c63bc68181946d",
+      "size_bytes": 973111
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/sd_gov/timeline.json",
+      "sha256": "8566de2e7121587c101203f23f18f5ed2ff04f01f19e283e14183facf4f99595",
+      "size_bytes": 966
+    }
+  ]
+}

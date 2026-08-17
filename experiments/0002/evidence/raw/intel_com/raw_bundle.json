@@ -1,0 +1,106 @@
+{
+  "domain": "intel.com",
+  "canonical_url": "https://www.intel.com/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:34:32.121176+00:00",
+  "preflight": {
+    "domain": "intel.com",
+    "dns_resolved": true,
+    "dns_ip": "13.91.95.74",
+    "status": "SUCCESS",
+    "final_url": "https://www.intel.com/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://intel.com/",
+      "https://www.intel.com/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1455.68,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Intel | Data Center Solutions, IoT, and PC Innovation",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 0,
+      "scripts_count": 3,
+      "images_count": 0,
+      "headers": {
+        "x-amz-id-2": "M2IH7qF8OSkqlZhyL/uBDyqotpyve9+Z6oZzK/lCvOhSk9UBPkanh8vr5q2PK+tBwaNVyDkZdlR9J+Kq4SIFObYsyXcGpf0l",
+        "x-amz-request-id": "AR2BJWX2255467Z3",
+        "Server": "AmazonS3",
+        "Last-Modified": "Tue, 28 Dec 2021 18:38:07 GMT",
+        "ETag": "\"ef82a865043d2864a6058be3518bac21\"",
+        "x-amz-server-side-encryption": "AES256",
+        "x-amz-version-id": "dvJFshsEar4rrG11nBKheEe3sl3mZ5E0",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "text/html",
+        "Content-Encoding": "gzip",
+        "Content-Length": "378",
+        "Date": "Mon, 17 Aug 2026 19:34:32 GMT",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Set-Cookie": "detected_bandwidth=HIGH; path=/; domain=.intel.com; secure; HttpOnly, src_countrycode=in; path=/; domain=.intel.com; secure; HttpOnly",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "Content-Security-Policy": "frame-ancestors 'self' https://premiersupport.intel.com https://c0.avaamo.com *.intel.com; object-src 'self';",
+        "X-GRN": "0.2c7c4117.1786995272.3c0e9c73",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Access-Control-Allow-Origin": "*",
+        "X-XSS-Protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+        "X-Content-Type-Options": "nosniff"
+      },
+      "content_length": 633
+    },
+    "text_length": 57
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193437",
+    "last_seen": "20260817193437",
+    "earliest_iso": "2026-08-17T19:34:32.121176+00:00",
+    "latest_iso": "2026-08-17T19:34:32.121176+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/intel_com/rendered.html",
+      "sha256": "a2b5fd54623fc01ab6ef1238d31dfa94e9ad55ca05da78d5da21b95252f37ab4",
+      "size_bytes": 633
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/intel_com/timeline.json",
+      "sha256": "8472fe8092f50d25ec6a725eecb9687a36ffde5574a64237dd723f511a54ca11",
+      "size_bytes": 966
+    }
+  ]
+}

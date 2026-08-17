@@ -1,0 +1,101 @@
+{
+  "domain": "kansas.gov",
+  "canonical_url": "https://portal.kansas.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:38.442084+00:00",
+  "preflight": {
+    "domain": "kansas.gov",
+    "dns_resolved": true,
+    "dns_ip": "206.17.31.208",
+    "status": "SUCCESS",
+    "final_url": "https://portal.kansas.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://kansas.gov/",
+      "https://portal.kansas.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 5713.49,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home - Kansas.gov",
+      "generator": "Elementor 4.2.2; features: additional_custom_breakpoints; settings: css_print_method-internal, google_font-enabled, font_display-auto",
+      "doctype": "HTML5/Standard",
+      "links_count": 98,
+      "scripts_count": 61,
+      "images_count": 21,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:25:38 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Cache-Control": "max-age=600",
+        "Expires": "Mon, 17 Aug 2026 19:35:38 GMT",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload;",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=(), midi=(), payment=(), usb=(), accelerometer=(), gyroscope=(), magnetometer=(), fullscreen=(self), picture-in-picture=()",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 940915213fd248bf3a8a248a4b18e446.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS52-P6",
+        "X-Amz-Cf-Id": "nxO3nG2uABCjcdLdK0as9RHTDQYFMi7aKsFGNjF4pujY2i5XhTe6lw=="
+      },
+      "content_length": 289863
+    },
+    "text_length": 1190
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192545",
+    "last_seen": "20260817192545",
+    "earliest_iso": "2026-08-17T19:25:38.442084+00:00",
+    "latest_iso": "2026-08-17T19:25:38.442084+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/kansas_gov/rendered.html",
+      "sha256": "b7fb99a9067d2bd586ebbc1867e6534ba5838fcb5f45ec22c1eb8f22f1f3d00f",
+      "size_bytes": 289863
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/kansas_gov/timeline.json",
+      "sha256": "a5b16ad9273ae11e80bb9e1d4d4df4e44f845e758a5d6854fec2111efddcdbdc",
+      "size_bytes": 970
+    }
+  ]
+}

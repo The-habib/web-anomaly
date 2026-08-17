@@ -1,4 +1,4 @@
-"""Unified Command Line Interface for Project Atlas (Phase 0.5)."""
+"""Unified Command Line Interface for Project Atlas (Phase 0.5 & Phase 1)."""
 
 import sys
 import json
@@ -9,15 +9,24 @@ from pathlib import Path
 from atlas import __version__, __codename__
 from atlas.core.config import FINDINGS_DIR, REPORTS_DIR, EXPERIMENTS_DIR, ROOT_DIR
 from atlas.core.logger import logger
-from atlas.core.models import FindingVerificationReport, ArtifactVerificationResult
 from atlas.pipeline.pipeline import EvidencePipeline
 from atlas.experiments.ledger import ExperimentLedger
+
+# Phase 1 Subsystems
+from atlas.phase1.corpus import generate_seed_corpus
+from atlas.phase1.scanner import run_phase1_scan
+from atlas.phase1.freezer import freeze_collected_evidence
+from atlas.phase1.scoring_runner import run_phase1_scoring
+from atlas.phase1.ranking import generate_candidate_rankings
+from atlas.phase1.review import conduct_stratified_human_review
+from atlas.phase1.metrics import compute_phase1_metrics
+from atlas.phase1.report import generate_phase1_research_reports
 
 def print_banner():
     print(f"""
 ===============================================================
        PROJECT ATLAS — Web Anomaly Research Laboratory
-   Version: {__version__} | Codename: {__codename__} | Scientific Mode (Phase 0.5)
+   Version: {__version__} | Codename: {__codename__} | Scientific Mode (Phase 1)
 ===============================================================
 """)
 
@@ -47,11 +56,6 @@ def cmd_experiment_new(args):
         target_urls=args.urls
     )
     print(f"\n[+] Created Experiment {exp_dir.name} at: {exp_dir}")
-    print(f"    - {exp_dir}/hypothesis.md")
-    print(f"    - {exp_dir}/setup.md")
-    print(f"    - {exp_dir}/notes.md")
-    print(f"    - {exp_dir}/result.md")
-    print(f"    - {exp_dir}/evidence/\n")
 
 def cmd_experiment_list(args):
     print_banner()
@@ -93,7 +97,6 @@ def cmd_evidence_verify(args):
     if args.finding_id:
         target_file = FINDINGS_DIR / f"{args.finding_id}.json"
         if not target_file.exists():
-            # Try searching without prefix
             matches = list(FINDINGS_DIR.glob(f"*{args.finding_id}*.json"))
             if matches:
                 target_file = matches[0]
@@ -153,6 +156,75 @@ def cmd_evidence_verify(args):
         status_color = "\033[92mALL PASS\033[0m" if failed == 0 and missing == 0 else "\033[91mCORRUPTED/INCOMPLETE\033[0m"
         print(f"Integrity Result: {passed}/{len(artifacts)} Verified | {status_color}\n")
 
+# Phase 1 Subcommands
+def cmd_phase1(args):
+    print_banner()
+    subaction = args.phase1_action
+
+    if subaction == "corpus":
+        recs, path = generate_seed_corpus()
+        print(f"[+] Seed corpus generated: {len(recs)} domains in {path}")
+        print(f"    Audit report: reports/PHASE_1_CORPUS_AUDIT.md\n")
+
+    elif subaction in ("scan", "resume"):
+        is_resume = (subaction == "resume" or getattr(args, "resume", False))
+        limit = getattr(args, "limit", None)
+        res = run_phase1_scan(resume=is_resume, max_domains=limit)
+        print(f"[+] Scan result: {res.get('status')} ({res.get('total_processed', 0)} processed)\n")
+
+    elif subaction == "freeze":
+        mf_path = freeze_collected_evidence()
+        print(f"[+] Evidence frozen: manifest saved to {mf_path}\n")
+
+    elif subaction == "score":
+        res = run_phase1_scoring()
+        print(f"[+] Offline scoring complete: {res.get('total_scored', 0)} scored, {res.get('total_findings', 0)} findings, {res.get('total_near_misses', 0)} near misses\n")
+
+    elif subaction == "rank":
+        reports = generate_candidate_rankings()
+        print(f"[+] Rankings generated: {len(reports)} reports created in reports/\n")
+
+    elif subaction == "review":
+        res = conduct_stratified_human_review()
+        print(f"[+] Human review complete: {res.get('total_reviewed', 0)} reviewed, {res.get('false_positives_count', 0)} false positives, {res.get('false_negatives_count', 0)} false negatives\n")
+
+    elif subaction == "report":
+        metrics = compute_phase1_metrics()
+        rep_path = generate_phase1_research_reports(metrics)
+        print(f"[+] Research reports compiled: {rep_path}\n")
+
+    elif subaction == "run":
+        # Full end-to-end execution of Phase 1
+        print("[1/7] Generating Seed Corpus (N=1,000)...")
+        generate_seed_corpus()
+
+        print("[2/7] Executing Blind Preflight & Evidence Collection...")
+        run_phase1_scan(resume=False, max_domains=getattr(args, "limit", None))
+
+        print("[3/7] Freezing Collected Raw Evidence...")
+        freeze_collected_evidence()
+
+        print("[4/7] Running Versioned Offline Scoring Engine...")
+        run_phase1_scoring()
+
+        print("[5/7] Generating Multi-Criteria Candidate Rankings...")
+        generate_candidate_rankings()
+
+        print("[6/7] Conducting Stratified Human Review Protocol...")
+        conduct_stratified_human_review()
+
+        print("[7/7] Computing Final Metrics & Publication Reports...")
+        metrics = compute_phase1_metrics()
+        generate_phase1_research_reports(metrics)
+
+        print("\n===============================================================")
+        print("  PHASE 1 BLIND EXPERIMENT SUCCESSFULLY COMPLETED")
+        print(f"  Processed: {metrics['coverage']['domains_successfully_processed']} domains")
+        print(f"  Candidates: {metrics['discovery']['candidate_count']}")
+        print(f"  Manifest: data/phase1_manifest.json")
+        print(f"  Report:   reports/PHASE_1_RESULTS.md")
+        print("===============================================================\n")
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -161,18 +233,16 @@ def main():
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     # scan
-    scan_parser = subparsers.add_parser("scan", help="Run full evidence pipeline on a target URL")
+    scan_parser = subparsers.add_parser("scan", help="Run full evidence pipeline on a single target URL")
     scan_parser.add_argument("url", help="Target URL to inspect")
 
     # experiment
     exp_parser = subparsers.add_parser("experiment", help="Manage experiment ledger")
     exp_sub = exp_parser.add_subparsers(dest="subcommand")
-
     exp_new = exp_sub.add_parser("new", help="Provision next numbered experiment in ledger")
     exp_new.add_argument("title", help="Experiment Title")
     exp_new.add_argument("--hypothesis", "-H", help="Hypothesis statement", default="")
     exp_new.add_argument("--urls", "-u", nargs="*", help="Initial target URLs", default=[])
-
     exp_list = exp_sub.add_parser("list", help="List all experiments in ledger")
 
     # findings
@@ -184,7 +254,13 @@ def main():
     evidence_parser = subparsers.add_parser("evidence", help="Evidence operations")
     evidence_sub = evidence_parser.add_subparsers(dest="subcommand")
     evidence_verify = evidence_sub.add_parser("verify", help="Verify cryptographic SHA-256 integrity of evidence artifacts")
-    evidence_verify.add_argument("finding_id", nargs="?", help="Specific Finding ID to verify (verifies all if omitted)")
+    evidence_verify.add_argument("finding_id", nargs="?", help="Specific Finding ID to verify")
+
+    # phase1
+    p1_parser = subparsers.add_parser("phase1", help="Phase 1 Blind Seed-Corpus Discovery Experiment")
+    p1_parser.add_argument("phase1_action", choices=["corpus", "scan", "resume", "freeze", "score", "rank", "review", "report", "run"], help="Phase 1 workflow action")
+    p1_parser.add_argument("--resume", action="store_true", help="Resume from last checkpoint")
+    p1_parser.add_argument("--limit", type=int, help="Limit number of domains for test runs", default=None)
 
     args = parser.parse_args()
 
@@ -207,6 +283,8 @@ def main():
             cmd_evidence_verify(args)
         else:
             evidence_parser.print_help()
+    elif args.command == "phase1":
+        cmd_phase1(args)
     else:
         print_banner()
         parser.print_help()

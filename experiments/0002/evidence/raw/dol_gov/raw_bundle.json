@@ -1,0 +1,101 @@
+{
+  "domain": "dol.gov",
+  "canonical_url": "https://www.dol.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:50.390293+00:00",
+  "preflight": {
+    "domain": "dol.gov",
+    "dns_resolved": true,
+    "dns_ip": "23.9.120.26",
+    "status": "SUCCESS",
+    "final_url": "https://www.dol.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://dol.gov/",
+      "https://www.dol.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 985.87,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home | U.S. Department of Labor",
+      "generator": "Drupal 10 (https://www.drupal.org)",
+      "doctype": "HTML5/Standard",
+      "links_count": 143,
+      "scripts_count": 21,
+      "images_count": 9,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Server": "nginx/1.30.0",
+        "Content-Language": "en",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+        "Content-Security-Policy": "frame-ancestors 'self';",
+        "X-Amz-Cf-Pop": "ATL59-P5",
+        "X-Amz-Cf-Id": "h36zYti0CMtW6BTJFMHG7n55n0ydj6KhA3UO6WLyMxjclEDHJgyPCQ==",
+        "Vary": "Accept-Encoding",
+        "X-Akamai-Transformed": "9 - 0 pmb=mRUM,1",
+        "Content-Encoding": "gzip",
+        "Cache-Control": "private, no-cache, must-revalidate",
+        "Expires": "Mon, 17 Aug 2026 19:24:50 GMT",
+        "Date": "Mon, 17 Aug 2026 19:24:50 GMT",
+        "Content-Length": "17450",
+        "Connection": "keep-alive",
+        "Server-Timing": "cdn-cache; desc=HIT, edge; dur=1, ak_p; desc=\"1786994690516_390167595_2328188365_28_8836_31_19_-\";dur=1",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload"
+      },
+      "content_length": 87776
+    },
+    "text_length": 316
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192456",
+    "last_seen": "20260817192456",
+    "earliest_iso": "2026-08-17T19:24:50.390293+00:00",
+    "latest_iso": "2026-08-17T19:24:50.390293+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/dol_gov/rendered.html",
+      "sha256": "eb30b36bd9e5b3fc2dc6d9083aa17a2994d83d7d68eecfb1e5bdf3484e735b62",
+      "size_bytes": 87776
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/dol_gov/timeline.json",
+      "sha256": "526d159ec6ed3acad51ae91b00582db316e7e9c5a5e952e1765dfcf531c508fd",
+      "size_bytes": 966
+    }
+  ]
+}

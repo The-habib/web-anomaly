@@ -1,0 +1,66 @@
+{
+  "domain": "metafilter.com",
+  "canonical_url": "https://www.metafilter.com/",
+  "category": "Personal/independent sites",
+  "collection_timestamp": "2026-08-17T19:44:30.838544+00:00",
+  "preflight": {
+    "domain": "metafilter.com",
+    "dns_resolved": true,
+    "dns_ip": "104.26.7.211",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://www.metafilter.com/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://metafilter.com/",
+      "https://www.metafilter.com/"
+    ],
+    "status_code": 403,
+    "latency_ms": 347.65,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194435",
+    "last_seen": "20260817194435",
+    "earliest_iso": "2026-08-17T19:44:30.838544+00:00",
+    "latest_iso": "2026-08-17T19:44:30.838544+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/metafilter_com/timeline.json",
+      "sha256": "7338371076358597262b2418adf143b17d2de9227acc77e5ba50366bd2257173",
+      "size_bytes": 969
+    }
+  ]
+}

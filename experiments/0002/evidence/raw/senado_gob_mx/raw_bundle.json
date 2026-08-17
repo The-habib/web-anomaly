@@ -1,0 +1,63 @@
+{
+  "domain": "senado.gob.mx",
+  "canonical_url": "https://senado.gob.mx/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:35.175777+00:00",
+  "preflight": {
+    "domain": "senado.gob.mx",
+    "dns_resolved": true,
+    "dns_ip": "45.60.246.195",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://senado.gob.mx/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 403,
+    "latency_ms": 1322.22,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192635",
+    "last_seen": "20260817192635",
+    "earliest_iso": "2026-08-17T19:26:35.175777+00:00",
+    "latest_iso": "2026-08-17T19:26:35.175777+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/senado_gob_mx/timeline.json",
+      "sha256": "5bb5040782664b2893d0664288de6bd4d5345a52c0f274de48bcec68ebf21bec",
+      "size_bytes": 968
+    }
+  ]
+}

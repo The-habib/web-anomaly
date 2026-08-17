@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>coreboot</title>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://www.coreboot.org; font-src 'self' data: https://www.coreboot.org; script-src 'self' 'unsafe-inline' data: https://www.coreboot.org; img-src 'self' https://www.coreboot.org; media-src 'self' https://www.coreboot.org;">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8; X-Content-Type-Options=nosniff; X-Frame-Options=SAMEORIGIN" />
+	<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/fontawesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/brands.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/ribbon.css" type="text/css" />
+	<link rel="shortcut icon" href="assets/images/favicon.ico" />
+	<link rel="me" href="https://fosstodon.org/@coreboot" />
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
+</head>
+
+<body>
+	<picture>
+		<source type="image/webp"
+			srcset="assets/images/background-12.webp 780w,
+				assets/images/background-25.webp 1625w,
+				assets/images/background-33.webp 2145w,
+				assets/images/background-50.webp 3250w,
+				assets/images/background-full.webp 6500w"
+			sizes="100vw">
+		<source type="image/jpeg"
+			srcset="assets/images/background-12.jpg 780w,
+				assets/images/background-25.jpg 1625w,
+				assets/images/background-33.jpg 2145w,
+				assets/images/background-50.jpg 3250w,
+				assets/images/background-full.jpg 6500w"
+			sizes="100vw">
+		<img src="assets/images/background-12.jpg" id="bgvid" alt=""
+			srcset="assets/images/background-12.jpg 780w,
+				assets/images/background-25.jpg 1625w,
+				assets/images/background-33.jpg 2145w,
+				assets/images/background-50.jpg 3250w,
+				assets/images/background-full.jpg 6500w"
+			sizes="100vw">
+	</picture>
+
+	<!-- update the data token with the command pwgen -s 25 -->
+	<!-- Removed until the next conference
+	<div class="modalDialog" data-token="uiHHhJpRxpcQJiipRmASLF0Cc">
+		<a href="#modalClose" title="Close" class="modalClose">X</a>
+		<a href="https://ecc2017.coreboot.org/">European coreboot conference 2017</a> -
+		Thursday, October 26 to Sunday, October 29, 2017 -
+		<div id="timer"></div>
+	</div>
+	-->
+
+	<nav class="social">
+		<ul>
+			<li><a href="https://fosstodon.org/@coreboot">Mastodon <span class="fa-brands fa-mastodon"></span></a></li>
+			<li><a href="https://www.linkedin.com/company/coreboot">LinkedIn <span class="fa-brands fa-linkedin"></span></a></li>
+			<li><a href="https://github.com/coreboot">Github <span class="fa-brands fa-github"></span></a></li>
+			<li><a href="https://www.youtube.com/channel/UCviiVAz65y6EiFLITbLG81w/videos">Youtube <span class="fa-brands fa-youtube"></span></a></li>
+			<li><a href="https://www.twitch.tv/coreboot_org">Twitch <span class="fa-brands fa-twitch"></span></a></li>
+			<li><a href="https://www.reddit.com/r/coreboot">Reddit <span class="fa-brands fa-reddit"></span></a></li>
+		</ul>
+	</nav>
+	<a href="https://doc.coreboot.org/community/forums.html">
+		<div class="corner-ribbon top-right white sticky shadow">Talk to us</div>
+	</a>
+	<div class="content modal centered">
+		<p class="banner-wrapper">
+			<img src="assets/images/banner.svg" class="banner" alt="coreboot" />
+		</p>
+		<div class="buttons-wrapper">
+			<div class="buttons buttons-5">
+				<div id="b-news">
+					<a href="https://blogs.coreboot.org" title="News"></a>
+				</div>
+				<div id="b-calendar">
+					<a href="calendar.html" title="Calendar"></a>
+				</div>
+				<div id="b-wiki">
+					<a href="https://doc.coreboot.org" title="Documents"></a>
+				</div>
+				<div id="b-gerrit">
+					<a href="https://review.coreboot.org" title="Gerrit"></a>
+				</div>
+				<div id="b-downloads">
+					<a href="downloads.html" title="Downloads"></a>
+				</div>
+			</div>
+		</div>
+		<div class="buttons-wrapper">
+			<div class="buttons buttons-6">
+				<div id="b-jobs">
+					<a href="jobs.html" title="Job Board"></a>
+				</div>
+				<div id="b-vendors">
+					<a href="https://doc.coreboot.org/distributions.html" title="Vendors"></a>
+				</div>
+				<div id="b-bugtracker">
+					<a href="https://ticket.coreboot.org/" title="Bugtracker"></a>
+				</div>
+				<div id="b-consulting">
+					<a href="consulting.html" title="Consulting"></a>
+				</div>
+				<div id="b-videos">
+					<a href="videos.html" title="Videos"></a>
+				</div>
+				<div id="b-leadership">
+					<a href="leadership.html" title="Leaders"></a>
+				</div>
+			</div>
+		</div>
+		<h1>Fast, secure and flexible Open Source firmware</h1>
+		<div class="action-content centerme">
+			<nav class="buttons centered">
+				<a id="users" href="end_users.html" class="fadeIn">
+					<div class="button-text">For <span class="bold">End Users</span></div>
+				</a>
+				<a id="devs" href="developers.html" class="fadeIn">
+					<div class="button-text">For <span class="bold">Developers</span></div>
+				</a>
+				<a id="hw" href="oems_and_odms.html" class="fadeIn">
+					<div class="button-text">For <span class="bold">OEMs/ODMs</span></div>
+				</a>
+				<p class="centered">
+					coreboot is an extended firmware platform that delivers a lightning fast and
+					secure boot experience on modern computers and embedded systems. As an Open
+					Source project it provides auditability and maximum control over technology.
+				</p>
+			</nav>
+			<p class="centered">
+				coreboot is a member of the <a href="https://sfconservancy.org">Software Freedom Conservancy</a><br>
+				<a href="donate.html">Donations accepted through paypal, by check, or by wire transfer.</a><br>
+			</p>
+			<p class="centered">
+				General inquiries about coreboot can be brought up on our mailing list <a href="mailto:coreboot@coreboot.org">coreboot@coreboot.org</a>.
+				To report security issues privately, please send an email to <a href="mailto:security@coreboot.org">security@coreboot.org</a>.<br>
+			</p>
+			<a class="legal-link centered" href="about.html">2019 coreboot. <u>Disclaimer</u> and <u>data privacy</u>.</a>
+		</div>
+	</div>
+</body>
+
+</html>

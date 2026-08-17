@@ -1,0 +1,100 @@
+{
+  "domain": "python.org",
+  "canonical_url": "https://www.python.org/",
+  "category": "Open-source/project sites",
+  "collection_timestamp": "2026-08-17T19:40:55.295941+00:00",
+  "preflight": {
+    "domain": "python.org",
+    "dns_resolved": true,
+    "dns_ip": "151.101.192.223",
+    "status": "SUCCESS",
+    "final_url": "https://www.python.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://python.org/",
+      "https://www.python.org/"
+    ],
+    "status_code": 200,
+    "latency_ms": 398.95,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Welcome to Python.org",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 215,
+      "scripts_count": 11,
+      "images_count": 1,
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "11459",
+        "server": "nginx",
+        "content-encoding": "gzip",
+        "content-security-policy-report-only": "script-src 'self'; style-src 'self'; connect-src 'self'; form-action 'self'; img-src 'self' data:; object-src 'none'; font-src 'self'; default-src 'self'; frame-ancestors 'self'; base-uri 'self'",
+        "x-frame-options": "SAMEORIGIN",
+        "via": "1.1 varnish, 1.1 varnish, 1.1 varnish",
+        "content-type": "text/html; charset=utf-8",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 17 Aug 2026 19:40:55 GMT",
+        "Age": "236",
+        "X-Served-By": "cache-iad-kiad7000081-IAD, cache-iad-kiad7000081-IAD, cache-iad-kiad7000081-IAD, cache-bom-vanm7210076-BOM",
+        "X-Cache": "MISS, HIT, HIT",
+        "X-Cache-Hits": "0, 528, 71",
+        "X-Timer": "S1786995655.423224,VS0,VE0",
+        "Vary": "Cookie",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+      },
+      "content_length": 52442
+    },
+    "text_length": 1173
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194100",
+    "last_seen": "20260817194100",
+    "earliest_iso": "2026-08-17T19:40:55.295941+00:00",
+    "latest_iso": "2026-08-17T19:40:55.295941+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/python_org/rendered.html",
+      "sha256": "64ce260faf52b9fd182dbde754015626ab608df53e33c466e90b0034f810e601",
+      "size_bytes": 52442
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/python_org/timeline.json",
+      "sha256": "59586ec6fd0029475f1ee603858e68c2b554f096c0b86c9e836f5d00273b23f4",
+      "size_bytes": 984
+    }
+  ]
+}

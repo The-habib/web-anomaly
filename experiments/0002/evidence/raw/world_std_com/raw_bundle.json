@@ -1,0 +1,101 @@
+{
+  "domain": "world.std.com",
+  "canonical_url": "https://theworld.com/",
+  "category": "Personal/independent sites",
+  "collection_timestamp": "2026-08-17T19:47:42.264717+00:00",
+  "preflight": {
+    "domain": "world.std.com",
+    "dns_resolved": true,
+    "dns_ip": "192.74.137.5",
+    "status": "SUCCESS",
+    "final_url": "https://theworld.com/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://world.std.com/",
+      "https://theworld.com/"
+    ],
+    "status_code": 200,
+    "latency_ms": 8498.36,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The World | d01",
+      "generator": "Drupal 7 (http://drupal.org)",
+      "doctype": "HTML5/Standard",
+      "links_count": 12,
+      "scripts_count": 5,
+      "images_count": 6,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:47:43 GMT",
+        "Server": "Apache/2",
+        "X-Content-Type-Options": "nosniff",
+        "X-Powered-By": "PHP/5.6.24",
+        "X-Drupal-Cache": "HIT",
+        "Etag": "\"1786996057-1\"",
+        "Content-Language": "en",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Generator": "Drupal 7 (http://drupal.org)",
+        "Cache-Control": "public, max-age=900",
+        "Last-Modified": "Mon, 17 Aug 2026 19:47:37 GMT",
+        "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "Vary": "Cookie,Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "Content-Length": "6679",
+        "Keep-Alive": "timeout=5, max=100",
+        "Connection": "Keep-Alive",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "content_length": 26130
+    },
+    "text_length": 1082
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194749",
+    "last_seen": "20260817194749",
+    "earliest_iso": "2026-08-17T19:47:42.264717+00:00",
+    "latest_iso": "2026-08-17T19:47:42.264717+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/world_std_com/rendered.html",
+      "sha256": "e6cd2f6647f3b265f96be492140cc05283a41f006d9b5f2d06562653dfd042fd",
+      "size_bytes": 26130
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/world_std_com/timeline.json",
+      "sha256": "833e7d661aac6f8824f293d082e443c1212f3d80510fbf44f853a128c483a546",
+      "size_bytes": 972
+    }
+  ]
+}

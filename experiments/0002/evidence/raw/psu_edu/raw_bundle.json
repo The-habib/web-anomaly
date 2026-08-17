@@ -1,0 +1,104 @@
+{
+  "domain": "psu.edu",
+  "canonical_url": "https://www.psu.edu:443/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:21:59.603095+00:00",
+  "preflight": {
+    "domain": "psu.edu",
+    "dns_resolved": true,
+    "dns_ip": "75.2.126.119",
+    "status": "SUCCESS",
+    "final_url": "https://www.psu.edu:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://psu.edu/",
+      "https://www.psu.edu:443/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2572.65,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The Pennsylvania State University | Penn State",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 242,
+      "scripts_count": 45,
+      "images_count": 9,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Encoding": "br",
+        "Date": "Mon, 17 Aug 2026 19:20:23 GMT",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Matched-Path": "/[[...slug]]",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Powered-By": "Next.js",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::iad1::7nzjh-1786994519749-a353f3e8e74b",
+        "ETag": "W/\"6rpjqze8xm65ii\"",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 e3d27343c37766f7c4e8005d9d973068.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM78-P10",
+        "X-Amz-Cf-Id": "CrAVeQzxMy3M8algBZhVN9wv2w40tjkH_sje4HAkbiVmw3xXR_Bedw==",
+        "Age": "95"
+      },
+      "content_length": 287116
+    },
+    "text_length": 1161
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192205",
+    "last_seen": "20260817192205",
+    "earliest_iso": "2026-08-17T19:21:59.603095+00:00",
+    "latest_iso": "2026-08-17T19:21:59.603095+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/psu_edu/rendered.html",
+      "sha256": "787ca8a9224efc930f941999faee240b82df517721e357f2b1fdf660ca971d2d",
+      "size_bytes": 287116
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/psu_edu/timeline.json",
+      "sha256": "6cc92153cffe4d0a032afc2de22191142faada964b2e486573ec6e357a0c3f21",
+      "size_bytes": 967
+    }
+  ]
+}

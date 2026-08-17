@@ -1,0 +1,91 @@
+{
+  "domain": "scb.se",
+  "canonical_url": "https://www.scb.se/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:35.180694+00:00",
+  "preflight": {
+    "domain": "scb.se",
+    "dns_resolved": true,
+    "dns_ip": "193.180.124.91",
+    "status": "SUCCESS",
+    "final_url": "https://www.scb.se/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://scb.se/",
+      "https://www.scb.se/"
+    ],
+    "status_code": 200,
+    "latency_ms": 4271.39,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Statistikmyndigheten SCB",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 58,
+      "scripts_count": 3,
+      "images_count": 9,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Mon, 17 Aug 2026 19:26:35 GMT",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Set-Cookie": "TS017383fb=017dca055c4df98c71d6cb736d623791634b6374c9c0a16047fb03d5675932e82e4258757a08c861fbd8344d74b5f0dddc672b820e; Path=/; Domain=.www.scb.se; Secure; HttpOnly",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 28393
+    },
+    "text_length": 1140
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192636",
+    "last_seen": "20260817192636",
+    "earliest_iso": "2026-08-17T19:26:35.180694+00:00",
+    "latest_iso": "2026-08-17T19:26:35.180694+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/scb_se/rendered.html",
+      "sha256": "1e3e7eb34fdc8a6f596f13ec03cd4fcc887e408fafe6953a7489cf64a8f7d351",
+      "size_bytes": 28393
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/scb_se/timeline.json",
+      "sha256": "620b588f93f5750697d3b11c83460675ea67b459798e7c87c2492016cdd79128",
+      "size_bytes": 965
+    }
+  ]
+}

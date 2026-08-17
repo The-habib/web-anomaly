@@ -1,0 +1,96 @@
+{
+  "domain": "stat.gov.pl",
+  "canonical_url": "https://new.stat.gov.pl",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:27:14.878687+00:00",
+  "preflight": {
+    "domain": "stat.gov.pl",
+    "dns_resolved": true,
+    "dns_ip": "194.165.48.116",
+    "status": "SUCCESS",
+    "final_url": "https://new.stat.gov.pl",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://stat.gov.pl/",
+      "https://new.stat.gov.pl"
+    ],
+    "status_code": 200,
+    "latency_ms": 2161.71,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "G\u0142\u00f3wny Urz\u0105d Statystyczny | GUS - Portal Informacyjny",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 143,
+      "scripts_count": 59,
+      "images_count": 38,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Connection": "keep-alive",
+        "Cache-Control": "must-revalidate, no-cache, private",
+        "Date": "Mon, 17 Aug 2026 19:27:05 GMT",
+        "Content-language": "pl",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "X-Consumer-ID": "default_consumer",
+        "Vary": "X-Consumer-ID",
+        "Content-Encoding": "gzip",
+        "Set-Cookie": "cookie=3613cc6a56b0cfeaeeddc2fb9360836a;max-age=1800;Path=/;HttpOnly, cookiesession1=678B28D0C533D793EF3F4096AA5FF28B;Expires=Tue, 17 Aug 2027 19:27:15 GMT;Path=/;HttpOnly",
+        "Content-Length": "31208"
+      },
+      "content_length": 138649
+    },
+    "text_length": 396
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192721",
+    "last_seen": "20260817192721",
+    "earliest_iso": "2026-08-17T19:27:14.878687+00:00",
+    "latest_iso": "2026-08-17T19:27:14.878687+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/stat_gov_pl/rendered.html",
+      "sha256": "6bf2387479a52c3d8238abcbe1e4a3557a36cb0f416bba354fdac9279a4268f6",
+      "size_bytes": 138649
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/stat_gov_pl/timeline.json",
+      "sha256": "4bc980aeac7245d8bbc7f7b95cf17661e49106ca3cbb24a462a139e8b06ba5d7",
+      "size_bytes": 971
+    }
+  ]
+}

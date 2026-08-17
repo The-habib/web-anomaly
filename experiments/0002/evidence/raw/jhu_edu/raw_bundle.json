@@ -1,0 +1,66 @@
+{
+  "domain": "jhu.edu",
+  "canonical_url": "https://www.jhu.edu/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:21:14.126829+00:00",
+  "preflight": {
+    "domain": "jhu.edu",
+    "dns_resolved": true,
+    "dns_ip": "128.220.193.2",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://www.jhu.edu/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://jhu.edu/",
+      "https://www.jhu.edu/"
+    ],
+    "status_code": 403,
+    "latency_ms": 1515.09,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192120",
+    "last_seen": "20260817192120",
+    "earliest_iso": "2026-08-17T19:21:14.126829+00:00",
+    "latest_iso": "2026-08-17T19:21:14.126829+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/jhu_edu/timeline.json",
+      "sha256": "e518be9dd5e12d79a9bd9d2e71e812be86daef2fd648a252f949677506b3fd16",
+      "size_bytes": 962
+    }
+  ]
+}

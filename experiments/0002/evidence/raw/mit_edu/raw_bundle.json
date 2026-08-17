@@ -1,0 +1,98 @@
+{
+  "domain": "mit.edu",
+  "canonical_url": "https://web.mit.edu/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:21:38.799580+00:00",
+  "preflight": {
+    "domain": "mit.edu",
+    "dns_resolved": true,
+    "dns_ip": "23.15.150.186",
+    "status": "SUCCESS",
+    "final_url": "https://web.mit.edu/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://mit.edu/",
+      "https://web.mit.edu/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2148.66,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "MIT - Massachusetts Institute of Technology",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 63,
+      "scripts_count": 3,
+      "images_count": 7,
+      "headers": {
+        "Server": "Apache",
+        "Last-Modified": "Mon, 17 Aug 2026 04:01:51 GMT",
+        "ETag": "\"baff-659363ade09c0\"",
+        "Accept-Ranges": "bytes",
+        "Content-Type": "text/html",
+        "Content-Encoding": "gzip",
+        "Content-Length": "11541",
+        "Cache-Control": "public, max-age=3351, s-maxage=3600",
+        "Date": "Mon, 17 Aug 2026 19:21:38 GMT",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Content-Security-Policy": "frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Strict-Transport-Security": "max-age=600",
+        "Akamai-GRN": "0.2a7c4117.1786994498.3e74989c"
+      },
+      "content_length": 47871
+    },
+    "text_length": 1477
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192144",
+    "last_seen": "20260817192144",
+    "earliest_iso": "2026-08-17T19:21:38.799580+00:00",
+    "latest_iso": "2026-08-17T19:21:38.799580+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/mit_edu/rendered.html",
+      "sha256": "64e03737c17d73e3f762067ea3cc8b01407a48c6c2e0b6c4e5c93ece660b1659",
+      "size_bytes": 47871
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/mit_edu/timeline.json",
+      "sha256": "11752b8452bc7c374364e57e9ee0e82ebe9756df07743a1d2e35431f7d03e963",
+      "size_bytes": 966
+    }
+  ]
+}

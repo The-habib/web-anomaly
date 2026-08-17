@@ -1,0 +1,95 @@
+{
+  "domain": "phantom.com",
+  "canonical_url": "https://phantom.com/",
+  "category": "Personal/independent sites",
+  "collection_timestamp": "2026-08-17T19:45:28.961277+00:00",
+  "preflight": {
+    "domain": "phantom.com",
+    "dns_resolved": true,
+    "dns_ip": "104.18.40.111",
+    "status": "SUCCESS",
+    "final_url": "https://phantom.com/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 524.26,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Phantom: The money app that'll take you places",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 43,
+      "scripts_count": 8,
+      "images_count": 0,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:45:29 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "vary": "accept-encoding",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qjz5D4%2BjGzGQwv12eSSJQJZ2BGkYtCLbaZ1Kzod7Nn%2FA10k3NHGQ%2FP%2BogTRIAO9qQZXBYgnOC647fD0fNBFyR1K5i524m%2BmrpuYMwn1DsukC1lurl8%2BmnPJ93loSrg%3D%3D\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "Server": "cloudflare",
+        "cf-cache-status": "DYNAMIC",
+        "Set-Cookie": "lng=ImVuIg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax, csrf=IjZDV3RWMHNkd1YzN0c5c3FzRjJxNWc2RnJVMTFKMjdmendTSTJ2ZzFBTVUi; Max-Age=86400; Path=/; HttpOnly; Secure; SameSite=Lax, country-suggested-locale=en; Path=/; Secure; HttpOnly; SameSite=Lax, country-code=IN; Path=/; Secure; SameSite=Lax, __cf_bm=wZ2uk3OnSQ3dN_8QQX9DZ1yNIckVcdQFPcj34ATiPMg-1786995929.0932171-1.0.1.1-vUNWH9jnCgN4vDf449kdR7enw8NcpEBCptNglOk6vqDW9zCsZHXM.uedvLtKtFP1ytC.doYLmoA7C2o1LOoFk1VFN8j3uqxIXSABUAK0mYodrwJ36icJGEa94XJmz8kQ; HttpOnly; SameSite=None; Secure; Path=/; Domain=phantom.com; Expires=Mon, 17 Aug 2026 20:15:29 GMT",
+        "content-security-policy-report-only": "frame-ancestors 'self'; report-uri https://rt.phantom.app/csp",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a2cb2decdc114930-BOM"
+      },
+      "content_length": 126788
+    },
+    "text_length": 979
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194534",
+    "last_seen": "20260817194534",
+    "earliest_iso": "2026-08-17T19:45:28.961277+00:00",
+    "latest_iso": "2026-08-17T19:45:28.961277+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/phantom_com/rendered.html",
+      "sha256": "5fa7325ae0ade898e216dc06210ee14be9ff9384942e432415c6f58c2216f9a5",
+      "size_bytes": 126788
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/phantom_com/timeline.json",
+      "sha256": "04514573576e0a63278c52abb5ba60f6dfc8d555d4016012a66a25fe4ddffcb9",
+      "size_bytes": 971
+    }
+  ]
+}

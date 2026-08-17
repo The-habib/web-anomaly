@@ -1,0 +1,101 @@
+{
+  "domain": "rogers.com",
+  "canonical_url": "https://www.rogers.com/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:35:48.553940+00:00",
+  "preflight": {
+    "domain": "rogers.com",
+    "dns_resolved": true,
+    "dns_ip": "20.175.172.222",
+    "status": "SUCCESS",
+    "final_url": "https://www.rogers.com/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 2010.8,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Mobile, Internet, TV, Home Monitoring, Home phone - Rogers",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 52,
+      "scripts_count": 10,
+      "images_count": 36,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "Content-Security-Policy": "frame-ancestors 'self' https://*.shaw.ca",
+        "Permissions-Policy": "camera=(), microphone=(self), geolocation=(self), payment=(), usb=(), gyroscope=(), accelerometer=(), autoplay=(self), encrypted-media=(self), fullscreen=(self \"https://www.youtube.com\"), picture-in-picture=(self \"https://www.youtube.com\")",
+        "ETag": "W/\"40d4b-iLKDMbQSAmqzxlP8ZEnVUfQ+QTY\"",
+        "x-envoy-upstream-service-time": "14195",
+        "X-Akamai-Transformed": "9l - 0 pmb=mRUM,2",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "br",
+        "Expires": "Mon, 17 Aug 2026 19:35:48 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Mon, 17 Aug 2026 19:35:48 GMT",
+        "Content-Length": "33811",
+        "Connection": "keep-alive",
+        "Set-Cookie": "country=IN; path=/; domain=.rogers.com; secure, adobe_network_info={\"asn\":\"8075\",\"network\":\"microsoft\",\"network-type\":\"hosted\",\"bandwidth\":\"5000\",\"country\":\"IN\",\"province\":\"MH\"}; path=/; domain=.rogers.com; secure, _analyticsUUID=15f8998c-5a20-4a7f-962f-8f8eacbf3d82; expires=Mon, 31-Dec-2038 23:59:59 GMT; domain=.rogers.com; secure; HttpOnly; SameSite=None, _analyticsUUID2=15f8998c-5a20-4a7f-962f-8f8eacbf3d82; expires=Mon, 31-Dec-2038 23:59:59 GMT; domain=.rogers.com, ALB-Rogers-Browse=Prod-B; path=/; secure; HttpOnly, akavpau_browse_en=1786995948~id=a3f4bde8f9ca4d6c71eeb9bb0124af2a; Path=/; HttpOnly; Secure; SameSite=None",
+        "Server-Timing": "cdn-cache; desc=HIT, edge; dur=1, ak_p; desc=\"1786995348693_390167603_1699109909_28_8977_30_20_-\";dur=1",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+        "aka-request-id": "0.337c4117.1786995348.65465c15"
+      },
+      "content_length": 270343
+    },
+    "text_length": 1474
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193553",
+    "last_seen": "20260817193553",
+    "earliest_iso": "2026-08-17T19:35:48.553940+00:00",
+    "latest_iso": "2026-08-17T19:35:48.553940+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/rogers_com/rendered.html",
+      "sha256": "7bfd1861cb0063a5d4488a98fe3a91b6104bdb11feef03601c2851d31c047ecf",
+      "size_bytes": 270343
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/rogers_com/timeline.json",
+      "sha256": "486a8bfe35ac00ba65981452962d4574184488f2488d7017893bcda95bc5b124",
+      "size_bytes": 970
+    }
+  ]
+}

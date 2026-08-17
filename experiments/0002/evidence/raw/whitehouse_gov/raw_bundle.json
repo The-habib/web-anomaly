@@ -1,0 +1,100 @@
+{
+  "domain": "whitehouse.gov",
+  "canonical_url": "https://www.whitehouse.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:27:48.017397+00:00",
+  "preflight": {
+    "domain": "whitehouse.gov",
+    "dns_resolved": true,
+    "dns_ip": "192.0.66.51",
+    "status": "SUCCESS",
+    "final_url": "https://www.whitehouse.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://whitehouse.gov/",
+      "https://www.whitehouse.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 531.44,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The White House",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 177,
+      "scripts_count": 27,
+      "images_count": 23,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Mon, 17 Aug 2026 19:27:48 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Content-Security-Policy": "upgrade-insecure-requests; frame-ancestors 'none'",
+        "Content-Encoding": "br",
+        "x-rq": "bom1 0 30 9980",
+        "accept-ranges": "bytes",
+        "cache-control": "max-age=300, must-revalidate",
+        "x-cache": "HIT",
+        "Strict-Transport-Security": "max-age=31536000;includeSubdomains;preload"
+      },
+      "content_length": 299461
+    },
+    "text_length": 1093
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192753",
+    "last_seen": "20260817192753",
+    "earliest_iso": "2026-08-17T19:27:48.017397+00:00",
+    "latest_iso": "2026-08-17T19:27:48.017397+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/whitehouse_gov/rendered.html",
+      "sha256": "ca2050ff3dc8fcfadf46a7ff98faeea2df047bbfde06d5f6c366d099bea5605c",
+      "size_bytes": 299461
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/whitehouse_gov/timeline.json",
+      "sha256": "0f7763fab6b929d7393cc5ed4af03705a5b777f1e68e49122d6987517971dacd",
+      "size_bytes": 974
+    }
+  ]
+}

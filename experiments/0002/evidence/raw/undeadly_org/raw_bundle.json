@@ -1,0 +1,90 @@
+{
+  "domain": "undeadly.org",
+  "canonical_url": "https://undeadly.org/cgi?action=front",
+  "category": "Personal/independent sites",
+  "collection_timestamp": "2026-08-17T19:47:24.082961+00:00",
+  "preflight": {
+    "domain": "undeadly.org",
+    "dns_resolved": true,
+    "dns_ip": "46.23.81.23",
+    "status": "SUCCESS",
+    "final_url": "https://undeadly.org/cgi?action=front",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://undeadly.org/",
+      "https://undeadly.org/cgi?action=front"
+    ],
+    "status_code": 200,
+    "latency_ms": 2610.85,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "OpenBSD Journal: A resource for the OpenBSD community",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 133,
+      "scripts_count": 0,
+      "images_count": 3,
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html",
+        "Date": "Mon, 17 Aug 2026 19:47:24 GMT",
+        "Server": "OpenBSD httpd",
+        "Strict-Transport-Security": "max-age=31536000; preload",
+        "Transfer-Encoding": "chunked"
+      },
+      "content_length": 26449
+    },
+    "text_length": 4772
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194729",
+    "last_seen": "20260817194729",
+    "earliest_iso": "2026-08-17T19:47:24.082961+00:00",
+    "latest_iso": "2026-08-17T19:47:24.082961+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/undeadly_org/rendered.html",
+      "sha256": "a52663ddde31de243ce47449b1c3a684b67c6fbe5ff82ad893e569236eb1b7fb",
+      "size_bytes": 26449
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/undeadly_org/timeline.json",
+      "sha256": "8077015dbfbf03bc7a7dd906fe08a084be610380990fdcaf44a473de93a67abc",
+      "size_bytes": 971
+    }
+  ]
+}

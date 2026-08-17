@@ -1,0 +1,91 @@
+{
+  "domain": "nginx.org",
+  "canonical_url": "https://nginx.org/",
+  "category": "Open-source/project sites",
+  "collection_timestamp": "2026-08-17T19:40:04.931450+00:00",
+  "preflight": {
+    "domain": "nginx.org",
+    "dns_resolved": true,
+    "dns_ip": "3.125.197.172",
+    "status": "SUCCESS",
+    "final_url": "https://nginx.org/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 2037.12,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "nginx",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 57,
+      "scripts_count": 0,
+      "images_count": 5,
+      "headers": {
+        "Server": "nginx/1.29.8",
+        "Date": "Mon, 17 Aug 2026 19:40:19 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "2241",
+        "Last-Modified": "Wed, 12 Aug 2026 20:29:59 GMT",
+        "Connection": "keep-alive",
+        "Keep-Alive": "timeout=15",
+        "ETag": "\"6a7cd7c7-8c1\"",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Accept-Ranges": "bytes"
+      },
+      "content_length": 6679
+    },
+    "text_length": 2067
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817194010",
+    "last_seen": "20260817194010",
+    "earliest_iso": "2026-08-17T19:40:04.931450+00:00",
+    "latest_iso": "2026-08-17T19:40:04.931450+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nginx_org/rendered.html",
+      "sha256": "197f2f8cf2fbdeef4915f2012784ded06ccf769f1e79b5bab4015cd36d3ae408",
+      "size_bytes": 6679
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nginx_org/timeline.json",
+      "sha256": "c726350e3654a40eff176b5db77997fb0cb23b11ad2e1aacd9e27f6f2c3d4b45",
+      "size_bytes": 967
+    }
+  ]
+}

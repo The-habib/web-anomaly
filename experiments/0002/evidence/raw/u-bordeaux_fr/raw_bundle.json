@@ -1,0 +1,93 @@
+{
+  "domain": "u-bordeaux.fr",
+  "canonical_url": "https://www.u-bordeaux.fr/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:22:22.710718+00:00",
+  "preflight": {
+    "domain": "u-bordeaux.fr",
+    "dns_resolved": true,
+    "dns_ip": "147.210.215.141",
+    "status": "SUCCESS",
+    "final_url": "https://www.u-bordeaux.fr/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://u-bordeaux.fr/",
+      "https://www.u-bordeaux.fr/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2305.05,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Accueil - Universit\u00e9 de Bordeaux",
+      "generator": "Concrete CMS",
+      "doctype": "HTML5/Standard",
+      "links_count": 625,
+      "scripts_count": 14,
+      "images_count": 32,
+      "headers": {
+        "server": "nginx/1.18.0 (Ubuntu)",
+        "content-type": "text/html; charset=UTF-8",
+        "transfer-encoding": "chunked",
+        "cache-control": "max-age=3600, s-maxage=3600, private",
+        "date": "Mon, 17 Aug 2026 19:22:23 GMT",
+        "pragma": "public",
+        "expires": "Mon, 17 Aug 2026 20:20:08 GMT",
+        "content-encoding": "gzip",
+        "strict-transport-security": "max-age=31536000;",
+        "set-cookie": "WWWBackend=sticky.v-www11; path=/"
+      },
+      "content_length": 459632
+    },
+    "text_length": 3252
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192230",
+    "last_seen": "20260817192230",
+    "earliest_iso": "2026-08-17T19:22:22.710718+00:00",
+    "latest_iso": "2026-08-17T19:22:22.710718+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/u-bordeaux_fr/rendered.html",
+      "sha256": "59961c3eee1d4f22305ea74a9e8d2eaabc452fe56eff1e873fa499f8973c0c5d",
+      "size_bytes": 459632
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/u-bordeaux_fr/timeline.json",
+      "sha256": "fd1c7483e3e1f9c5697c0688a057d1eab5f8757bb8f8b098c5554582f59610b5",
+      "size_bytes": 988
+    }
+  ]
+}

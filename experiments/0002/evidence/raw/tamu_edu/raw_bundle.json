@@ -1,0 +1,103 @@
+{
+  "domain": "tamu.edu",
+  "canonical_url": "https://www.tamu.edu:443/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:22:20.057244+00:00",
+  "preflight": {
+    "domain": "tamu.edu",
+    "dns_resolved": true,
+    "dns_ip": "75.2.123.204",
+    "status": "SUCCESS",
+    "final_url": "https://www.tamu.edu:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://tamu.edu/",
+      "https://www.tamu.edu:443/"
+    ],
+    "status_code": 200,
+    "latency_ms": 3557.62,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Texas A&M University | Texas A&M University",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 189,
+      "scripts_count": 10,
+      "images_count": 10,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Last-Modified": "Fri, 14 Aug 2026 10:00:12 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Encoding": "gzip",
+        "Server": "AmazonS3",
+        "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
+        "Referrer-Policy": "same-origin",
+        "Content-Security-Policy": "frame-ancestors 'self' https://*.tamu.edu",
+        "X-Content-Type-Options": "nosniff",
+        "Date": "Mon, 17 Aug 2026 19:22:19 GMT",
+        "ETag": "W/\"4d519c2f95f39e5222471e2af4879d22\"",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 eb30334168b977cb7e4b3fc2a751b90a.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM78-P2",
+        "X-Amz-Cf-Id": "rx3-G9Ss4UnlEeN2BLIrpcvpisonDiMvUoagv5uqbI2oU99Lnie9FA==",
+        "Age": "2"
+      },
+      "content_length": 106738
+    },
+    "text_length": 2950
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192220",
+    "last_seen": "20260817192220",
+    "earliest_iso": "2026-08-17T19:22:20.057244+00:00",
+    "latest_iso": "2026-08-17T19:22:20.057244+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/tamu_edu/rendered.html",
+      "sha256": "ec30a6d11ce0d1a235a86118be67af0566a00c3d9cf994b47381a894944efddb",
+      "size_bytes": 106738
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/tamu_edu/timeline.json",
+      "sha256": "5256119e6e5a57f26182569de1b67f97c91e9d6505089ff56a2221160febb4f1",
+      "size_bytes": 968
+    }
+  ]
+}

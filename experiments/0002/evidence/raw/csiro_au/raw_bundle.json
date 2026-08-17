@@ -1,0 +1,61 @@
+{
+  "domain": "csiro.au",
+  "canonical_url": "https://csiro.au",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:24:40.113114+00:00",
+  "preflight": {
+    "domain": "csiro.au",
+    "dns_resolved": true,
+    "dns_ip": "150.229.21.37",
+    "status": "CONNECTION_ERROR",
+    "final_url": "https://csiro.au",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": null,
+    "latency_ms": 1079.76,
+    "content_type": null,
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": "HTTPSConnectionPool(host='csiro.au', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1000)')))"
+  },
+  "live_evidence": {
+    "status_code": null,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": null,
+    "last_seen": null,
+    "earliest_iso": null,
+    "latest_iso": null,
+    "years_span": 0,
+    "total_captures": 0,
+    "unique_years_observed": 0,
+    "observed_year_ratio": 0.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 0.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "unproven",
+    "archive_sources": [],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/csiro_au/timeline.json",
+      "sha256": "656b27bfc2ff0b568d634785fa4db919dcf51f5388ce42c147c33e0a01ef8c66",
+      "size_bytes": 522
+    }
+  ]
+}

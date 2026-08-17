@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="themes/default.css" title="default/standard theme">
+
+
+<link rel="alternate" type="application/rss+xml" title="OpenBSD Journal" href="https://undeadly.org/cgi?action=rss">
+<title>OpenBSD Journal: A resource for the OpenBSD community</title>
+</head>
+<body>
+
+<header id="page_hdr">
+
+
+
+
+
+<div id="logo">
+<a href="/cgi?action=front"><img src="images/MangaRamblo_25_x.png" alt="Front page"></a>
+</div>
+
+<div id="search">
+<form action="https://undeadly.org/cgi" method="post" autocomplete="off" autocapitalize="none">
+<input type="hidden" name="action" value="search">
+<input id="f_q" type="text" name="q" required>
+<input type="submit" title="We canardly search!" name="submit" value="Search site">
+</form>
+</div>
+
+<p class="branding">OpenBSD Journal</p>
+
+<nav id="menubar">
+<p><a href="/cgi?action=front">Home</a>
+<a href="/cgi?action=archive">Archives</a>
+<a href="/cgi?action=about">About</a>
+
+<a href="https://undeadly.org/cgi?action=submit">Submit Story</a>
+<a href="https://undeadly.org/cgi?action=register">Create Account</a>
+<a href="https://undeadly.org/cgi?action=login">Login</a>
+</p>
+</nav>
+
+
+<h1 id="front">OpenBSD Journal</h1>
+</header>
+
+
+<main>
+<div id="primary">
+
+<article class="story" id="s20260811113606">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260811113606">OpenSSH 10.5 released</a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-08-11T05:41:03Z">2026-08-11</time>
+from the SSH! SSLithering out to the world dept.</p>
+</header>
+<div class="story_text">
+In another move that signals a new <em><a href="https://www.openbsd.org/">OpenBSD</a></em> release is in the works, the <em><a href="https://www.openssh.org/">OpenSSH</a></em> project has released without fanfare its new version, <em><a href="https://www.openssh.org/releasenotes.html#10.5">OpenSSH 10.5</a></em>.
+<p>
+The <a href="https://www.openssh.org/releasenotes.html#10.5">release notes</a> read, 
+<p>
+<blockquote>
+<pre>
+OpenSSH 10.5/10.5p1 (2026-08-11)
+
+OpenSSH 10.5 was released on 2026-08-11. It is available from the
+mirrors listed at <a href="https://www.openssh.com/">https://www.openssh.com/</a>.
+OpenSSH is a 100% complete SSH protocol 2.0 implementation and
+includes sftp client and server support.
+
+Recently the OpenSSH team have received a large number of security
+bug reports, many of which are findings from <abbr>AI</abbr> models or made with
+<abbr>AI</abbr> assistance. While many <abbr>AI</abbr> reports are determined not to have
+security impact when considered in the context of a realistic
+threat model, we very much welcome these reports, especially when
+combined with human triage, analysis, test-cases and particularly
+when accompanied by proposed fixes.
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260811113606">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260811113606">1 comment (3d9:43 ago)</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260807061435">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260807061435">OpenBGPD 9.2 released</a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-08-06T20:50:11Z">2026-08-06</time>
+from the not the roto-router dept.</p>
+</header>
+<div class="story_text">
+A sure sign that a new
+<a href="https://www.openbsd.org/">OpenBSD</a>
+will soon be ready is that a new <a href="https://www.openbgpd.org">OpenBGPD</a> release appears. On August 6th, 2026, the project <a href="https://marc.info/?l=openbsd-announce&m=178602261830583&w=2">released OpenBGPD version 9.2</a>.
+<p>
+The <a href="https://marc.info/?l=openbsd-announce&m=178602261830583&w=2">announcement</a> reads,
+<p>
+<blockquote>
+<pre>
+List:       openbsd-announce
+Subject:    OpenBGPD 9.2 released
+From:       Claudio Jeker &lt;claudio () openbsd ! org&gt;
+Date:       2026-08-06 13:22:26
+Message-ID: anSKksatjxeom0lQ () diehard ! n-r-g ! com
+
+We have released OpenBGPD 9.2, which will be arriving in the
+OpenBGPD directory of your local <a href="https://www.openbsd.org/ftp.html">OpenBSD mirror</a> soon.
+
+This release includes the following changes to the previous release:
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260807061435">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260807061435">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260805083816">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260805083816">Dead Software Walking: The ongoing evolution of <code>relayd(8)</code> and <code>httpd(8)</code></a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-08-05T06:48:27Z">2026-08-05</time>
+from the https, really relayed dept.</p>
+</header>
+<div class="story_text">
+Returning readers of this site may have noticed that the pace of development in <a href="https://man.openbsd.org/relayd">relayd(8)</a> and <a href="https://man.openbsd.org/httpd">httpd(8)</a> has been picking up recently. Now Rafael Sadowski (<code>rsadowski@</code>) has a new blog post out titled <em><a href="https://rsadowski.de/posts/2026/dead-software-walking-relayd-and-httpd/">Dead Software Walking: The ongoing evolution of relayd(8) and httpd(8)</a></em> where he tells the story.
+<p>
+The article starts with
+<blockquote>
+<strong>Start with WHY</strong>
+<p>
+As I mentioned in my <a href="https://rsadowski.de/posts/2025/openbsd-78/#daemons">OpenBSD 7.8 highlights</a> post, development of <a href="https://man.openbsd.org/relayd">relayd(8)</a> and <a href="https://man.openbsd.org/httpd">httpd(8)</a> had stalled. Many diffs appeared on the <code>tech@</code> mailing list from different contributors, but few were committed into the repository. The main reason was simple: Established OpenBSD developers werenât interested in these daemons anymore. Call it momentum, or timing.
+</blockquote>
+<p>
+And he goes on to describe his motivation, and the numerous improvements that he and Kirill Korinsky (<code>kirill@</code>) added to those daemons once they got started.
+<p>
+Read the whole thing here: <em><a href="https://rsadowski.de/posts/2026/dead-software-walking-relayd-and-httpd/">Dead Software Walking: The ongoing evolution of relayd(8) and httpd(8)</a></em>.
+
+</div>
+
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260805083816">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260804054218">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260804054218">Call for testing: OpenBSD <code>vmm(4)</code>/<code>vmd(8</code>) fd-ification</a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-08-03T15:07:52Z">2026-08-03</time>
+from the fd-ize my vm FTW dept.</p>
+</header>
+<div class="story_text">
+Thanks to the tireless work of among others Dave Voutila (<code>dv@</code>), development of the <a href="https://www.openbsd.org/amd64.html">OpenBSD/amd64</a> virtualization system <a href="https://man.openbsd.org/vmm">vmm(4)</a>/<a href="https://man.openbsd.org/vmd">vmd(8)</a> continues to make progress.
+<p>
+Now <em>breaking</em> changes, but with with potential benefits in both process isolation and compartmentalization of functionality, are on the way. It almost goes without saying that this code needs testing. 
+<p>
+In a message to the <code>tech@</code> mailing list with the subject <em><a href="https://marc.info/?l=openbsd-tech&m=178576796041205&w=2">tests wanted: vmm(4)/vmd(8) fd-ification</a></em>, Dave Voutila presents the code along with some explanation:
+<p>
+<blockquote>
+<pre>
+List:       openbsd-tech
+Subject:    tests wanted: vmm(4)/vmd(8) fd-ification
+From:       Dave Voutila &lt;dv () sisu ! io&gt;
+Date:       2026-08-03 14:36:00
+Message-ID: 87a4r3fezz.fsf () mars ! sisu ! io
+
+Calling on <a href="https://man.openbsd.org/vmm">vmm(4)</a>/<a href="https://man.openbsd.org/vmd">vmd(8)</a> users to give this diff a test please!
+
+This is a major breaking change I'm proposing to land soon. It changes
+the vmm(4) design to create a new file type for each VM. When a VM is
+created, the caller gets a new file descriptor for using <a href="https://man.openbsd.org/ioctl">ioctl(2)</a> calls
+against that VM.
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260804054218">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260804054218">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260730130302">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260730130302">LLVM toolchain coming to OpenBSD/sparc64</a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-07-30T12:13:06Z">2026-07-30</time>
+from the LLVM, LLVM, sparc64'd dept.</p>
+</header>
+<div class="story_text">
+Yes, you read that right. Modern development tools in the form of the <a href="https://llvm.org">LLVM</a> compiler infrastructure is well on its way to supporting <a href="https://www.openbsd.org/sparc64.html">OpenBSD/sparc64</a> along with other more conventional architectures.
+<p>
+The support is now ready for testing, via a patch set presented by Kirill A. Korinsky (<code>kirill@</code>) in a message to the <code>tech@</code> mailing list, with the subject <em><a href="https://marc.info/?l=openbsd-tech&m=178541174421083&w=2">LLVM toolchain for sparc64</a></em>.
+<p>
+The message reads,
+<p>
+<blockquote>
+<pre>
+List:       openbsd-tech
+Subject:    LLVM toolchain for sparc64
+From:       Kirill A. Korinsky &lt;kirill () korins ! ky&gt;
+Date:       2026-07-30 11:38:55
+Message-ID: 87jyqcogfk.wl-kirill () korins ! ky
+
+Folks,
+
+I'd like to commit to devel/llvm/22 and gnu/llvm my cumulative patch for
+support sparc64 by LLVM toolchain.
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260730130302">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260730130302">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260725103657">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260725103657"><code>httpd(8)</code> gains support for custom <abbr>HTTP</abbr> headers</a></h1>
+<p class="attrib">Contributed by
+<a href="https://www.openbsdfoundation.org/donations.html">rueda</a>
+on <time datetime="2026-07-25T09:34:04Z">2026-07-25</time>
+from the headers FTW dept.</p>
+</header>
+<div class="story_text">
+<p>In a change likely to be widely welcomed,
+Rafael Sadowski (<code>rsadowski@</code>)
+<a href="https://marc.info/?l=openbsd-cvs&amp;m=178495844507568&amp;w=2">committed</a>
+support for custom <abbr>HTTP</abbr> headers in
+<a href="https://man.openbsd.org/httpd.8"><code>httpd(8)</code></a>.
+This obviates the need to use <abbr>FastCGI</abbr> support or
+<a href="https://man.openbsd.org/relayd.8"><code>relayd(8)</code></a>
+to achieve things like adding
+<abbr>SSL</abbr>/<abbr>TLS</abbr> security headers.</p>
+
+<p>The
+<a href="https://marc.info/?l=openbsd-cvs&amp;m=178495844507568&amp;w=2">commit</a>
+reads:</p>
+<blockquote>
+<pre>CVSROOT:	/cvs
+Module name:	src
+Changes by:	rsadowski@cvs.openbsd.org	2026/07/24 23:48:39
+
+Modified files:
+	usr.sbin/httpd : config.c httpd.c httpd.conf.5 httpd.h parse.y 
+	                 server.c server_fcgi.c server_http.c 
+
+Log message:
+httpd: add custom <abbr>HTTP</abbr> header support
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260725103657">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260725103657">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260721124747">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260721124747">OpenBSD <code>relayd(8)</code> adds <abbr>ECDSA</abbr> support with <abbr>CA</abbr> engine code from <code>smtpd(8)</code></a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-07-21T09:54:34Z">2026-07-21</time>
+from the relay my ECDSA to me dept.</p>
+</header>
+<div class="story_text">
+Up until quite recently, <code><a href="https://man.openbsd.org/relayd">relayd(8)</a></code> did not actually support <em><a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm"><abbr>ECDSA</abbr></a></em> keys and certificates, as described in the <em><a href="https://marc.info/?l=openbsd-tech&m=177694901230708&w=2">Relayd doesn't like <abbr>ecdsa</abbr></a></em> thread on the <code>tech@</code> mailing list.
+<p>
+The problem is now solved. 
+<p>
+In <a href="https://marc.info/?l=openbsd-cvs&m=178456919006176&w=2">this commit</a> by Rafael Sadowski (<code>rsadowski@</code>), code that originated in <code><a href="https://man.openbsd.org/smptd">smtpd(8)</a></code> adds the previously lacking support.
+<p>
+The commit message reads,
+<p>
+<blockquote>
+<pre>
+List:       openbsd-cvs
+Subject:    CVS: cvs.openbsd.org: src
+From:       Rafael Sadowski &lt;rsadowski () cvs ! openbsd ! org&gt;>
+Date:       2026-07-20 17:41:07
+Message-ID: 17bfa7826d307ce0 () cvs ! openbsd ! org
+
+CVSROOT:	/cvs
+Module name:	src
+Changes by:	rsadowski@cvs.openbsd.org	2026/07/20 11:41:07
+
+Modified files:
+	usr.sbin/relayd: ca.c relay.c relayd.h ssl.c 
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260721124747">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260721124747">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260721102106">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260721102106">Game of Trees 0.127 released</a></h1>
+<p class="attrib">Contributed by
+grÃ¦y
+on <time datetime="2026-07-20T18:56:34Z">2026-07-20</time>
+from the not as many -Vs as Trogdor yet --version functions too! dept.</p>
+</header>
+<div class="story_text">
+<a href="https://gameoftrees.org/releases/changes.html#2026-07-20">Version 0.127</a> of  <a href="https://www.gameoftrees.org">Game of Trees</a> has been released (and the port <a href="https://marc.info/?l=openbsd-ports-cvs&m=178456064495922&w=2">updated</a>). Complete release notes are as follows:<br>
+<br>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260721102106">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260721102106">No comments</a>
+</span></p>
+</div>
+</article>
+<article class="story" id="s20260719093851">
+<header class="story_item_hdr">
+<h1 class="story_subj"><a href="/cgi?action=article;sid=20260719093851"><abbr>WPA3</abbr> support coming to OpenBSD</a></h1>
+<p class="attrib">Contributed by
+<a href="https://nxdomain.no/~peter/blogposts/">Peter N. M. Hansteen</a>
+on <time datetime="2026-07-18T12:40:52Z">2026-07-18</time>
+from the iwx, iwm, qwx, even WiFier! dept.</p>
+</header>
+<div class="story_text">
+<em><a href="https://www.openbsd.org">OpenBSD</a></em> is moving closer to adding <a href="https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access"><abbr>WPA3</abbr></a> support.
+<p>
+Stefan Sperling (<code>stsp@</code>) posted a message with the subject
+<i><a href="https://marc.info/?l=openbsd-tech&m=178437520390575&w=2">add <abbr>WPA3</abbr> support</a></i>
+to the <code>tech</code> mailling list with a patch that implements <abbr>WPA3</abbr> in OpenBSD's <code>net80211</code> subsystem including <code><a href="https://man.openbsd.org/ifconfig">ifconfig(8)</a></code>, asking for testing and feedback. 
+<p>
+He also noted that this effort is <a href="https://nlnet.nl/project/OpenBSD-wifi-WPA3/">supported</a> by the <a href="https://nlnet.nl">NLNet Foundaton</a> (as noted in an earlier <a href="https://undeadly.org/cgi?action=article;sid=20251017070142">article</a>).
+<p>
+The <a href="https://marc.info/?l=openbsd-tech&m=178437520390575&w=2">message</a> reads,
+<blockquote>
+<pre>
+List:       openbsd-tech
+Subject:    add <abbr>WPA3</abbr> support
+From:       Stefan Sperling &lt;stsp () stsp ! name&gt;
+Date:       2026-07-18 11:40:08
+Message-ID: altmGGN9mVtJ1Eqd () yumyan ! stsp ! name
+
+The patch below adds support for <abbr>WPA3</abbr> to the net80211 subsystem.
+
+This effort is supported by the NLnet Foundation's NGI0 Commons Fund.
+Without such support, I would not have been able to invest the time
+required to work on this. I am very grateful to be given this opportunity.
+</pre>
+</blockquote>
+
+</div>
+<p><a href="/cgi?action=article;sid=20260719093851">Read more&hellip;</a></p>
+<div class="x_cmds_status">
+<p><span class="x_cmds"><a href="/cgi?action=article;sid=20260719093851">No comments</a>
+</span></p>
+</div>
+</article>
+
+
+</div>
+<div id="extras">
+
+<div class="extra">
+<h2>Donate!</h2>
+<p>Donate to <a href="https://www.openbsd.org/donations.html">OpenBSD</a></p>
+</div>
+
+<div class="extra">
+<h2>Features</h2>
+<p>We are constantly on the lookout for stories of how you put OpenBSD to work.
+Please submit any informative articles on how OpenBSD is helping your company.</p>
+</div>
+
+<div class="extra">
+<h2>Earlier Articles</h2>
+<ul><li><time datetime="2026-07-16">Thu, Jul 16</time><ul><li><b><time datetime="2026-07-16T11:52:31Z">11:52</time></b>
+<a href="/cgi?action=article;sid=20260716115231">OpenBSD moves to 8.0-beta in -current and snapshots</a>
+(0)</li>
+<li><b><time datetime="2026-07-16T11:00:34Z">11:00</time></b>
+<a href="/cgi?action=article;sid=20260716110034"><code>OpenBSD/loongson</code> hardware platform retired</a>
+(0)</li>
+</ul></li>
+<li><time datetime="2026-07-14">Tue, Jul 14</time><ul><li><b><time datetime="2026-07-14T09:45:47Z">09:45</time></b>
+<a href="/cgi?action=article;sid=20260714094547">g2k26 Hackathon Report: Job Snijders (job@) on rpki-client(8) progress</a>
+(0)</li>
+</ul></li>
+<li><time datetime="2026-07-08">Wed, Jul 08</time><ul><li><b><time datetime="2026-07-08T05:56:08Z">05:56</time></b>
+<a href="/cgi?action=article;sid=20260708055608">OpenBSD's <code>pledge(2)</code> and <code>unveil(2)</code> are developer-friendly, study finds</a>
+(1)</li>
+</ul></li>
+<li><time datetime="2026-07-06">Mon, Jul 06</time><ul><li><b><time datetime="2026-07-06T19:01:44Z">19:01</time></b>
+<a href="/cgi?action=article;sid=20260706190144">OpenSSH 10.4/10.4p1 released!</a>
+(0)</li>
+</ul></li>
+<li><time datetime="2026-06-29">Mon, Jun 29</time><ul><li><b><time datetime="2026-06-29T16:57:50Z">16:57</time></b>
+<a href="/cgi?action=article;sid=20260629165750"><code>relayd(8)</code> and <code>httpd(8)</code> <abbr>TLS</abbr> settings update.</a>
+(1)</li>
+</ul></li>
+<li><time datetime="2026-06-23">Tue, Jun 23</time><ul><li><b><time datetime="2026-06-23T11:46:53Z">11:46</time></b>
+<a href="/cgi?action=article;sid=20260623114653">OpenBSD/amd64 kernel virtual address space is now 512<abbr>GB</abbr></a>
+(2)</li>
+</ul></li>
+<li><time datetime="2026-06-12">Fri, Jun 12</time><ul><li><b><time datetime="2026-06-12T08:02:10Z">08:02</time></b>
+<a href="/cgi?action=article;sid=20260612080210"><code>syslogd(8)</code> privileged and non-privileged parts now separate binaries</a>
+(0)</li>
+</ul></li>
+<li><time datetime="2026-06-05">Fri, Jun 05</time><ul><li><b><time datetime="2026-06-05T06:41:36Z">06:41</time></b>
+<a href="/cgi?action=article;sid=20260605064136">Random relinking at boot comes to <code>httpd(8)</code> and <code>smtpd(8)</code></a>
+(0)</li>
+</ul></li>
+</ul>
+
+</div>
+
+<div class="extra">
+<h2>OpenBSD Errata</h2>
+<p><a href="/errata/errata.rss"><img src="images/xml.gif" alt="Unofficial RSS feed of OpenBSD errata"></a></p>
+<p id="errata_vers_7.9"><i>OpenBSD 7.9</i></p>
+<table id="errata_tbl_7.9">
+<tr><td><a href="https://www.openbsd.org/errata79.html#p009_iked"><span class="erratum_num">009</span></a></td><td><span class="erratum_date">2026-08-11</span> <span class="erratum_kind">RELIABILITY</span> iked(8) could be crashed remotely pre authentication.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata79.html#p008_npppd"><span class="erratum_num">008</span></a></td><td><span class="erratum_date">2026-08-11</span> <span class="erratum_kind">RELIABILITY</span> Heap or stack corruption in npppd(8) LCP option handling could lead
+to crashes.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata79.html#p007_ipsec"><span class="erratum_num">007</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind">RELIABILITY</span> Stricter IPsec and IPComp input validation prevents kernel crash.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata79.html#p006_nfs"><span class="erratum_num">006</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind">RELIABILITY</span> Fix double-free, memory leaks, and vnode references in NFS server.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata79.html#p005_sysv"><span class="erratum_num">005</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind"><strong class="security_erratum">SECURITY</strong></span> Fix numerous problems in the System V (sem, msg, ipc) system call
+layers.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata79.html#p004_elf"><span class="erratum_num">004</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind">RELIABILITY</span> Fix some info leaks, kernel crashes, and pinsyscall(8) / kbind(8)
+locking failures.</td></tr>
+</table>
+
+<p id="errata_vers_7.8"><i>OpenBSD 7.8</i></p>
+<table id="errata_tbl_7.8">
+<tr><td><a href="https://www.openbsd.org/errata78.html#p045_iked"><span class="erratum_num">045</span></a></td><td><span class="erratum_date">2026-08-11</span> <span class="erratum_kind">RELIABILITY</span> iked(8) could be crashed remotely pre authentication.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata78.html#p044_npppd"><span class="erratum_num">044</span></a></td><td><span class="erratum_date">2026-08-11</span> <span class="erratum_kind">RELIABILITY</span> Heap or stack corruption in npppd(8) LCP option handling could lead
+to crashes.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata78.html#p043_ipsec"><span class="erratum_num">043</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind">RELIABILITY</span> Stricter IPsec and IPComp input validation prevents kernel crash.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata78.html#p042_nfs"><span class="erratum_num">042</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind">RELIABILITY</span> Fix double-free, memory leaks, and vnode references in NFS server.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata78.html#p041_sysv"><span class="erratum_num">041</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind"><strong class="security_erratum">SECURITY</strong></span> Fix numerous problems in the System V (sem, msg, ipc) system call
+layers.</td></tr>
+<tr><td><a href="https://www.openbsd.org/errata78.html#p040_elf"><span class="erratum_num">040</span></a></td><td><span class="erratum_date">2026-07-16</span> <span class="erratum_kind">RELIABILITY</span> Fix some info leaks, kernel crashes, and pinsyscall(8) / kbind(8)
+locking failures.</td></tr>
+</table>
+
+</div>
+
+<div class="extra">
+<h2>OpenBSD Resources</h2>
+<ul>
+<li><a href="https://www.openbsd.org">OpenBSD</a></li>
+<li><a href="https://www.openbsdfoundation.org">The OpenBSD Foundation</a></li>
+<li><a href="https://openports.pl/">OpenBSD Ports Readme</a></li>
+<li><a href="https://marc.info/"><abbr>MARC</abbr></a></li>
+<li><a href="https://www.freshbsd.org/openbsd">Commits on <i>FreshBSD</i></a></li>
+<li><a href="https://twitter.com/OpenBSD_stable">-stable commits</a></li>
+<li><a href="http://daemonforums.org/">OpenBSD discussions</a></li>
+<li><a href="http://hup.hu/taxonomy/term/67">Hungarian OpenBSD news</a></li>
+<li><a href="https://lobste.rs/t/openbsd">OpenBSD on <i>Lobsters</i></a></li>
+<li>#openbsd <a href="https://bsd.network/tags/openbsd">toots</a> /
+<a href="https://bsky.app/hashtag/openbsd"><abbr>bsky</abbr></a></li>
+<li><a href="https://www.linkedin.com/groups/81750/">LinkedIn group</a></li>
+</ul>
+</div>
+
+<div class="extra">
+<h2><abbr>XML</abbr>/<abbr>RSS</abbr>/<abbr>RDF</abbr></h2>
+<p>Users wishing <abbr>RSS</abbr>/<abbr>RDF</abbr> summary files of <em>OpenBSD Journal</em>
+can retrieve: <a href="/cgi?action=rss"><img src="images/xml.gif" alt="RSS feed"></a></p>
+<p>Options are <a href="/cgi?action=show_doc;topic=help_rss">available</a>.</p>
+</div>
+
+<div class="extra">
+<h2>Credits</h2>
+<p id="credits">Copyright &copy;
+<time datetime="2004">2004</time>-<time datetime="2008">2008</time>
+<a href="http://www.benzedrine.ch/dhartmei.html">Daniel Hartmeier</a>.
+All rights reserved.
+Articles and comments are copyright their respective authors,
+submission implies license to publish on this web site.
+Contents of the archive prior to
+<time datetime="2004-04-02">April 2nd 2004</time> as well as images
+and HTML templates were copied from the fabulous original
+<a href="http://web.archive.org/web/20010331150409/http://deadly.org/">deadly.org</a> with
+<a href="http://monkey.org/~jose">Jose</a>'s and
+<a href="mailto:jamesp@deadly.org">Jim</a>'s kind permission.
+This journal runs as <abbr>CGI</abbr> with
+<a href="https://man.openbsd.org/httpd.8">httpd(8)</a>
+on <a href="https://www.openbsd.org/">OpenBSD</a>, the
+<a href="/src/">source code</a> is
+<a href="http://www.opensource.org/licenses/bsd-license.php"><abbr>BSD</abbr> licensed</a>.
+undeadly \Un*dead"ly\, a. Not subject to death; immortal. [Obs.]</p>
+
+</div>
+
+</div>
+</main>
+
+</body>
+</html>

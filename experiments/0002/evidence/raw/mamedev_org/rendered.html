@@ -1,0 +1,642 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>MAMEdev.org | Home of The MAME Project</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="/_include/css/bootstrap.min.css" rel="stylesheet" />
+
+	<link href="/_include/css/docs.min.css" rel="stylesheet" />
+
+	<!-- Custom CSS -->
+	<link href="/_include/css/mamedev.css" rel="stylesheet" />
+
+	<!-- Custom Fonts -->
+	<link href="/_include/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- Shortcut icon -->
+	<link href="/_include/img/favicon.ico" rel="icon" />
+</head>
+
+<body>
+	<a href="//github.com/mamedev/mame"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="//github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		<a class="navbar-brand" href="/index.php"><img src="/_include/img/logo-mame-small-gradient.svg" alt="MAME" style="height: 1.3em; vertical-align: middle;"/>dev.org</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Information <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/about.html">About</a></li>
+						<li><a href="/history.html">History</a></li>
+						<li><a href="/legal.html">Legal</a></li>
+						<li><a href="/logo.html">Logo</a></li>
+						<li><a href="/contact.html">Contact</a></li>
+						<li><a href="/links.html">Resources</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/release.html">Latest Release</a></li>
+						<li><a href="/oldrel.html">Previous Releases</a></li>
+						<li><a href="/roms/">ROMs</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://docs.mamedev.org/">MAME Documentation</a></li>
+						<li><a href="https://wiki.mamedev.org/">MAMEdev Wiki</a></li>
+						<li><a href="https://wiki.mamedev.org/index.php/Frequently_Asked_Questions">Frequently Asked Questions</a></li>
+						<li><a href="https://wiki.mamedev.org/index.php/System-Specific_Setup_and_Information">Emulated System Guides</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://forum.mamedev.org">Official Forums</a></li>
+						<li><a href="https://github.com/orgs/mamedev/discussions">MAMEdev Discussions on GitHub</a></li>
+						<li><a href="/irc.html">Chat on IRC</a></li>
+						<li><a href="//twitter.com/mamedev_org">MAME on Twitter</a></li>
+						<li><a href="https://bsky.app/profile/mamedev.bsky.social">MAMEdev on Bluesky</a></li>
+						<li><a href="//www.facebook.com/mamedev.org/">MAME on Facebook</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://github.com/mamedev/mame/">MAME on GitHub</a></li>
+						<li><a href="https://docs.mamedev.org/initialsetup/compilingmame.html">Compiling MAME</a></li>
+						<li><a href="https://docs.mamedev.org/techspecs/">Technical Specifications</a></li>
+						<li><a href="//git.redump.net/mame/tree/">Browse Source Code</a></li>
+						<li><a href="/tools/">Development Tools</a></li>
+					</ul>
+				</li>
+				<form class="navbar-form navbar-right" method="get" id="search" action="//wiki.mamedev.org/index.php">
+					<div class="input-group" style="width:300px;">
+						<input class="input-medium search form-control" maxlength="128" type="text" name="search" id="searchInput" size="20" autocomplete="off" value="Search wiki…" onclick="if (this.value == 'Search wiki…') this.value = '';" onblur="if (this.value == '') this.value = 'Search this wiki…';" />
+						<input type="hidden" name="title" value="Special:Search">
+						<div class="input-group-btn">
+							<button type="submit" class="btn btn-default">Search</button>
+						</div>
+					</div>
+				</form>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+
+    <!-- Full Width Image Header with Logo -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+    <header class="image-bg-fluid-height">
+        <img class="img-responsive img-center" src="_include/img/logo-mame.png" alt="">
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <center><h1 class="page-header">Welcome to The Official Site of the MAME Development Team</h1></center>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h4>What is MAME?</h4>
+				</div>
+				<div class="panel-body">
+					<p>MAME is a multi-purpose emulation framework.</p>
+					<p>MAME’s purpose is to preserve decades of software history. As electronic technology continues to rush forward, MAME prevents this important "vintage" software from being lost and forgotten. This is achieved by documenting the hardware and how it functions. The source code to MAME serves as this documentation. The fact that the software is usable serves primarily to validate the accuracy of the documentation (how else can you prove that you have recreated the hardware faithfully?). Over time, MAME (originally stood for Multiple Arcade Machine Emulator) absorbed the sister-project MESS (Multi Emulator Super System), so MAME now documents a wide variety of (mostly vintage) computers, video game consoles and calculators, in addition to the arcade video games that were its initial focus.</p>
+				</div>
+			</div>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h4>License</h4>
+				</div>
+				<div class="panel-body">
+				<p>The MAME project as a whole is distributed under the terms of the <a href="https://opensource.org/licenses/GPL-2.0">GNU General Public License, 2</a> (GPL-2.0), since it contains code made available under multiple GPL-compatible licenses.
+				A great majority of files (over 90% including core files) are under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause License</a> and we would encourage new contributors to distribute files under this license.</p>
+				<p>Please note that MAME is a registered trademark of Gregory Ember, and permission is required to use the "MAME" name, logo or wordmark.</p>
+				</div>
+			</div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Supported Platforms Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <center><h2 class="page-header">Supported Platforms</h2></center>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6">
+                <center><i class="fa fa-windows fa-5x"></i><br/><br/><a href="release.php" class="btn btn-success"><h2>Download</h2></a><br/><br/></center>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6">
+				<center><i class="fa fa-apple fa-5x"></i><br/><br/><a href="//wiki.mamedev.org/index.php/SDL_Supported_Platforms" class="btn btn-success"><h2>Download</h2></a><br/><br/></center>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <center><i class="fa fa-linux fa-5x"></i><br/><br/><a href="//wiki.mamedev.org/index.php/SDL_Supported_Platforms" class="btn btn-success"><h2>Download</h2></a><br/><br/></center>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Posts Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <center><h2 class="page-header">News</h2></center>
+            </div>
+	    <!-- navigation bar -->
+    <div class="row">
+		<div id="new-news-nav" class="col-md-4 col-sm-4 col-xs-4">
+		<center><a title="&lt; Newer News" rel="prev" href="/" class="btn btn-success btn-sm" disabled="disabled">&lt; Newer</a></center>
+		</div>
+        <div class="col-md-4 col-sm-4 col-xs-4"></div>
+        	<div id="old-news-nav" class="col-md-4 col-sm-4 col-xs-4">
+		<center><a title="Older News &gt;" rel="next" href="/?page=2" class="btn btn-success btn-sm">Older &gt;</a></center>
+		</div>
+	</div>
+    <!-- /.row -->
+					<div id="post-565" class="col-md-8">
+						<h2><a title="Permanent Link to MAME 0.289" rel="bookmark" href="/?p=565">MAME 0.289</a></h2>
+						<small>31 Jul 2026</small>
+						<div class="entry">
+							
+							<p>After two long months, MAME 0.289 is ready, and it’s an undeniably
+							massive update!  But before we talk about emulation, there are a few
+							more mundane things to mention.  Our Windows binary releases now include
+							the SDL sound output and joystick input modules.  The <tt>sdljoy</tt>
+							joystick input module now supports game controllers with up to 128
+							buttons.  The Win32 debugger module handles dynamic UI scaling changes.
+							Finally, outputs have been overhauled, improving performance and fixing
+							issues, but you may need to update your configuration if you’ve got
+							external programs hooked up, and some artwork files may need
+							updating.</p>
+							
+							<p>You’ll notice a number of systems and coprocessor cards based around
+							NS32000 family CPUs are now working.  If you aren’t familiar with it,
+							the NS32000 architecture was one of the first single-chip CPU families
+							with a 32-bit ALU.  It used a highly orthogonal instruction set with
+							clear influences from Digital Equipment Corporation’s earlier work.  In
+							retrospect, it didn’t have enough registers, the instruction encoding
+							was too complex, it took them too long to overtake Motorola’s 68k
+							family’s performance, and bugs in the initial implementation hurt early
+							adopters.  But now you can relive its glory days in MAME, running
+							contemporary 32-bit System V UNIX!  David Rand, the mastermind behind
+							these NS32000 emulation advances, has also turned his attention in other
+							directions.  He’s brought the Xerox 820 and Big Board families up to
+							working status, emulated Toshiba CP/M systems, and added the hard disk
+							controller to the Kaypro 10, and more!</p>
+							
+							<p>If you’re a fan of Sega arcade games, you’ll have lots to enjoy.  For
+							the groundbreaking Model 1 platform, there are numerous fixes for
+							graphical issues, better collision detection in Virtua Fighter, and the
+							bad bits in the DSP program that were breaking Wing War have been
+							identified and patched.  Even NetMerc is in better shape.  The very
+							unconventional Flash Beats game is now playable.  It has basic internal
+							artwork, but someone sufficiently motivated could have it looking
+							spectacular by creating suitable external artwork.  There are also some
+							fixes for games that use the SCSP sound chip.</p>
+							
+							<p>MAME has emulated the EACA Colour Genie EG2000 for quite some time
+							now, but this release adds support for the EACA Genie III, which was
+							released in the same year.  There are lots of fixes for issues with the
+							widely-used PowerPC and 68k CPU families, which will benefit a wide
+							range of emulated systems.  In particular, more versions of classic
+							MacOS are now running happily on MAME’s emulated PowerMacs, and A/UX
+							(Apple’s early attempt at merging MacOS and UNIX) boots and runs.
+							Numerous games using NES-like SoCs from V.R. Technology have been
+							promoted to working, including several from Lexibook’s Compact Cyber
+							Arcade line.  NEC’s PC-6001 family have had numerous issues fixed, as
+							well as receiving a substantial update to their software lists.  The
+							steady progress on emulating electronic musical instruments hasn’t
+							stopped, either.</p>
+							
+							<p>As always, there’s far more in this release than we have time to talk
+							about here, but you can read all about it in the <a
+							href="https://www.mamedev.org/releases/whatsnew_0289.txt">whatsnew.txt
+							file</a>.  You can find the source code and 64-bit Windows binary
+							packages on <a href="https://www.mamedev.org/release.html">our download
+							page</a>.</p>
+							
+							<p><a href="/?p=565#readmore">Read the rest of this entry »</a></p>
+						</div>
+					</div>
+					<div id="post-564" class="col-md-8">
+						<h2><a title="Permanent Link to MAME 0.288" rel="bookmark" href="/?p=564">MAME 0.288</a></h2>
+						<small>29 May 2026</small>
+						<div class="entry">
+							
+							<p>We’re proud to present MAME 0.288 today.  We’ve already mentioned it
+							before, but in case you forgot, we’ve migrated to C++20 and raised the
+							requirements for development tools and operating systems.  Windows users
+							will now need an up-to-date version of Windows 10 or later.  We’ve also
+							switched to compiling our Windows x64 releases with clang, using the
+							UCRT and libc++ libraries.  This makes our Windows x64 and Arm64
+							releases more consistent.  One other benefit of the updated runtime
+							libraries we’re now using is that whatever was causing MAME for Windows
+							Arm64 to be almost unusably slow with the debugger active is fixed.</p>
+							
+							<p>There are some noticeable changes to MAME’s user interface in this
+							release, too.  The most significant is that many options are shown in a
+							de-emphasised colour if they currently have default or inherited values.
+							This is the <em>opposite of the previous behaviour</em> for the input
+							assignments menus.  The menus for controlling mounted media behave a
+							little differently, but hopefully more intuitively.  There are a couple
+							of additional settings for how menus are handled (find them in the
+							<b>Miscellaneous Options</b> menu or change them in ui.ini).  There’s
+							also a slight change to how MAME loads settings from INI files, but
+							most users shouldn’t notice the difference.</p>
+							
+							<p>It’s been two months since our last release, so a lot has changed.
+							Rare Bubble System versions of Konami’s Galactic Warriors and RF2 -
+							Red Fighter have been dumped.  MAME now supports the linked play
+							deathmatch mode in Taito’s Gunbuster over a network.  The Sony SMC-777
+							home computer can run a reasonable selection of software from disk.  If
+							you like classic synthesisers, you’ll be thrilled to know that the
+							Sequential Circuits Prophet 5 is now working.</p>
+							
+							<p>It’s been a big two months for computer emulation.  The Epson QX-10,
+							HP-98x6 and GRiD Compass have additional media options available.  There
+							have been a lot of small updates for the Spectrum Next that all add up.
+							Several issues affecting the Apple II family, and particularly some of
+							the clones, have been fixed.  The Research Machines 380Z now supports
+							stepping one instruction at a time in its debugger.  Canon X-07 sound
+							output now works with more software.  And speaking of sound, the sound
+							chips used in Macintosh models from the Macintosh II onwards should be
+							working better than ever before.</p>
+							
+							<p>To find out about everything else we’ve been working on (including
+							some rare arcade games that are now playable), read on, and make sure
+							you check out the <a
+							href="https://www.mamedev.org/releases/whatsnew_0288.txt">whatsnew.txt
+							file</a>.  As always, the source code and 64-bit Windows binary packages
+							are linked from <a href="https://www.mamedev.org/release.html">our
+							download page</a>.</p>
+							
+							<p><a href="/?p=564#readmore">Read the rest of this entry »</a></p>
+						</div>
+					</div>
+					<div id="post-563" class="col-md-8">
+						<h2><a title="Permanent Link to Updated requirements for MAME" rel="bookmark" href="/?p=563">Updated requirements for MAME</a></h2>
+						<small>07 Apr 2026</small>
+						<div class="entry">
+							
+							<p>I hope you enjoyed our April Fools’ Day announcement.  With that out
+							of the way, it’s time to discuss actual upcoming changes to MAME.  We’re
+							upgrading the development language standard from C++17 to C++20 and
+							winding back support for obsolete configurations.  We’ll also be
+							reducing the frequency of releases a bit, so there will no longer be a
+							release nearly every month.  There will be no April release; our next
+							release will be near the end of May.</p>
+							
+							<p>A summary of updated requirements:</p>
+							
+							<ul>
+							    <li>A compiler and C++ standard library with a reasonable level of
+							    C++20 support.  GCC 11 is the oldest version of GCC that we will
+							    support.  You can also use a reasonably up-to-date version of
+							    clang.</li>
+							    <li>Windows releases will require an updated installation of
+							    Windows 10 or later.  Microsoft has already discontinued mainstream
+							    support for Windows 10, as well as all prior versions of Windows
+							    Home and Pro, and Windows 11 is already four years old.</li>
+							    <li>MAME’s Qt-based debugger will require Qt 6.</li>
+							</ul>
+							
+							<p>A summary of some functionality we’re removing:</p>
+							
+							<ul>
+							    <li>The 32-bit x86 (i686) recompiler back-end.  It’s been over two
+							    decades since the x86-64 architecture was introduced.  All major x86
+							    operating systems have supported x86-64 for years, and 32-bit x86
+							    support is being wound back.</li>
+							    <li>Support for compiling on OpenSolaris and other System V UNIX
+							    systems.  There are no actively developed OpenSolaris distributions
+							    remaining, and no other System V UNIX variants have a meaningful
+							    presence on desktop systems.</li>
+							    <li>Specific optimisations for PowerPC host systems.  PowerPC and
+							    OpenPOWER currently have no meaningful desktop presence, and the
+							    Libre-SOC project to produce a completely free, high-performance
+							    OpenPOWER implementation has stalled.</li>
+							    <li>The obsolete aueffectutil tool for macOS.  This tool is no
+							    longer relevant with MAME’s new audio output system, and it had not
+							    been updated to work with recent versions of macOS.</li>
+							    <li>The pre-built MSYS2 environments with included development
+							    tools.  There are multiple issues with our MSYS2 environment that we
+							    can’t practically solve.</li>
+							</ul>
+							
+							<p>Read on for some more background and details.</p>
+							
+							<p><a href="/?p=563#readmore">Read the rest of this entry »</a></p>
+						</div>
+					</div>
+					<div id="post-562" class="col-md-8">
+						<h2><a title="Permanent Link to Future plans announcement" rel="bookmark" href="/?p=562">Future plans announcement</a></h2>
+						<small>01 Apr 2026</small>
+						<div class="entry">
+							
+							<p>Hello everyone,</p>
+							
+							<p>It is rare that the MAME Team addresses the community with news of
+							this magnitude, and we want to approach this moment with the
+							transparency and care it deserves. What follows is a candid account of
+							where this project stands, where it is going, and why the decisions we
+							have made — difficult as some of them are — represent the most
+							responsible path forward for a codebase that has grown into one of the
+							most complex preservation efforts in the history of open-source
+							software.</p>
+							
+							<p><b>🚀 On the Question of Technical Debt and Organizational Capacity</b></p>
+							
+							<p>MAME has, for most of its existence, operated through the
+							extraordinary dedication of volunteers who give their time and expertise
+							freely. That generosity has produced something remarkable: a codebase
+							that accurately emulates thousands of distinct hardware architectures,
+							often to a degree of fidelity that no commercial effort has matched or
+							even attempted. We do not take that legacy lightly. What we must
+							acknowledge, however — and what we have been reluctant to state plainly
+							until now — is that the accumulated complexity of that codebase has
+							begun to exceed the realistic capacity of any volunteer-driven review
+							process to maintain safely and sustainably.</p>
+							
+							<p>The decision we are announcing today did not emerge from a single
+							conversation or a sudden shift in priorities. It is the result of a long
+							period of internal reflection on what it means to steward a project of
+							this scope responsibly.</p>
+							
+							<p><b>🔧 The Confirmed Direction: Rust Migration and AI-Assisted Review</b></p>
+							
+							<p>Following extensive deliberation, the MAME Team has reached a
+							unanimous decision to pursue a <b>phased architectural migration toward
+							Rust</b>, to be introduced incrementally across subsystems beginning
+							with the May release. Concurrent with this migration, all pull requests
+							submitted to the project will be subject to <b>mandatory AI-assisted
+							code review</b> prior to human maintainer evaluation. Submissions that
+							do not satisfy the automated review criteria will be closed without
+							further escalation.</p>
+							
+							<p>We wish to be unambiguous: this is not a request for community input,
+							nor is it a proposal subject to revision through discussion. The
+							decision has been made. We are communicating it now because the
+							community that has supported this work deserves to understand the
+							reasoning behind it, not simply to receive the outcome.</p>
+							
+							<p><b>📍 May Release Scope and Migration Priorities</b></p>
+							
+							<p>The May release represents the first concrete milestone in this
+							transition. The initial migration scope includes:</p>
+							
+							<ul>
+							    <li><b>Memory safety wrappers</b>: The highest-priority concern from a security and long-term maintainability standpoint.</li>
+							    <li><b>Sound driver subsystems</b>: An area of the codebase where Rust's ownership model offers the most immediate and demonstrable benefits.</li>
+							</ul>
+							
+							<p>Our governing principle throughout this process is one that long-time
+							contributors will recognize: if a driver cannot pass a cycle-accuracy
+							parity check against the existing stable build, it does not ship. We
+							will not sacrifice correctness for the sake of modernity.</p>
+							
+							<p><b>🖥️ Platform Targeting and Contributor Requirements</b></p>
+							
+							<p>We recognize this element of the announcement may provoke significant
+							discussion, and we want to address it directly.</p>
+							
+							<p>Going forward, MAME's primary development target is a PC running a
+							<b>recent version of Windows</b>, equipped with a GPU compliant with at
+							minimum <b>DirectX 11 (SM5), OpenGL 4.3, or Vulkan</b>. This requirement
+							is not arbitrary. The AI-assisted toolchain that underpins both code
+							review and regression testing requires local model inference
+							capabilities, and we believe it is reasonable to ask that contributors
+							have access to hardware capable of running those tools.</p>
+							
+							<p>We want to be clear about what this does and does not mean. Ports to
+							other platforms remain explicitly permitted under the terms of the
+							existing license. Those ports will be upstreamed as they become
+							available, subject to the project's monthly token budget constraints.
+							Modifications to source layout, core APIs, and OSD-layer support remain
+							at the discretion of relevant fork maintainers, provided that any such
+							modifications pass the AI-administered unit test suite prior to
+							upstreaming. Contributions that exhaust the project's monthly token
+							allocation will be queued to the following development cycle; we
+							appreciate your patience as we calibrate these limits.</p>
+							
+							<p><b>🤖 On the Appropriate and Responsible Use of AI in This Context</b></p>
+							
+							<p>We are aware that any announcement involving AI tooling will raise
+							legitimate questions about the integrity of the work being produced. We
+							want to address those questions honestly.</p>
+							
+							<p>The language models integrated into our development pipeline serve
+							three specific, bounded functions:</p>
+							
+							<ul>
+							    <li><b>Structural refactoring</b>: Models are used to map established C++ memory-safety patterns into idiomatic Rust. Every output is reviewed and validated by a human contributor before it is considered for inclusion.</li>
+							    <li><b>Test matrix generation</b>: AI synthesizes comprehensive regression test cases derived from hardware datasheets, covering timing and behavioral edge cases at a scale that would be impractical to produce manually.</li>
+							    <li><b>Cycle-accuracy verification</b>: The AI-administered test suite exists to confirm, not to assume, that emulation fidelity is preserved throughout the migration process.</li>
+							</ul>
+							
+							<p>We are not using generative tools to write drivers, to make
+							architectural decisions, or to substitute for human expertise in matters
+							of hardware behavior. The goal is augmentation of human capacity, not
+							replacement of human judgment.</p>
+							
+							<p><b>🛠️ Communication Going Forward</b></p>
+							
+							<p>Official updates regarding this migration will be communicated
+							through:</p>
+							
+							<ul>
+							    <li><b>GitHub</b>: Technical specifications, commit history, and branch tracking</li>
+							    <li><b>mamedev.org</b>: Milestone summaries and roadmap documentation</li>
+							    <li><b>Discord</b>: Community discussion and beta testing coordination</li>
+							</ul>
+							
+							<p>We are transitioning away from mailing lists as the primary channel
+							for core development announcements. We recognize that this represents a
+							meaningful change for a portion of our long-term community, and we have
+							made this decision thoughtfully.</p>
+							
+							<p><b>🙏 A Final Word</b></p>
+							
+							<p>The history that MAME exists to preserve is irreplaceable. The
+							hardware it documents is dying. The window during which accurate
+							emulation can still be validated against physical reference hardware is
+							narrowing. These are the stakes that motivate every decision described
+							in this announcement, and they are the reason we have chosen to act now
+							rather than continue managing decline incrementally.</p>
+							
+							<p>The first milestone release will be accompanied by detailed
+							comparison data demonstrating cycle-accuracy parity across all affected
+							subsystems. We invite scrutiny of that data. We are confident it will
+							speak for itself.</p>
+							
+							<p>Thank you, as always, for the trust you have placed in this
+							project.</p>
+							
+							<p><b>MAME Core Team</b></p>
+						</div>
+					</div>
+					<div id="post-561" class="col-md-8">
+						<h2><a title="Permanent Link to MAME 0.287" rel="bookmark" href="/?p=561">MAME 0.287</a></h2>
+						<small>31 Mar 2026</small>
+						<div class="entry">
+							
+							<p>It’s the end of another month, which means it’s time for another
+							MAME release!  As you’d expect, MAME 0.287 includes a wide-ranging array
+							of emulation improvements to a multitude of systems.  Interesting
+							changes this month include better Namco System 23 graphics, improved
+							lighting for Sega Model 3, and software-controlled volume
+							control/panning for Philips CD-i (along with improved stability).</p>
+							
+							<p>The GRiD Compass family has received a keyboard overhaul as well as
+							an initial DAC sound output implementation.  The Apple II family now
+							handles tricky raster effects more realistically, as well as getting a
+							substantial software list update (metadata for the MECC collection is in
+							much better shape).  And speaking of software lists, a couple of NES
+							prototypes have been added.</p>
+							
+							<p>As always, you can read about everything that changed this month in
+							the <a
+							href="https://www.mamedev.org/releases/whatsnew_0287.txt">whatsnew.txt
+							file</a>.  You can find the source code and 64-bit Windows binary
+							packages linked from <a href="https://www.mamedev.org/release.html">our
+							download page</a>.</p>
+							
+							<p><a href="/?p=561#readmore">Read the rest of this entry »</a></p>
+						</div>
+					</div>
+					<div id="post-560" class="col-md-8">
+						<h2><a title="Permanent Link to MAME 0.286" rel="bookmark" href="/?p=560">MAME 0.286</a></h2>
+						<small>26 Feb 2026</small>
+						<div class="entry">
+							
+							<p>It’s time for MAME 0.286, bringing you more adventures in emulation.
+							This month, we’ve added support for SDL3, which will be used by default
+							when building on macOS (the default is still SDL2 on other UNIX-like
+							platforms).  You can choose SDL2 or SDL3 by adding <tt>OSD=sdl</tt> or
+							<tt>OSD=sdl3</tt> to your build options, respectively.  There may be
+							some teething issues, so if you build against SDL3 and things break, let
+							us know.</p>
+							
+							<p>In arcade emulation, we’ve added a rare early version of
+							Mario Bros. (which may have served as the basis for the Apple II port),
+							the original Tecmo release of Back Fire, and the elusive Monkichicchi no
+							Fuwafuwa Puzzle.  Outside arcades, dozens of systems have seen updates
+							over the past few weeks, including the ZX Spectrum and its descendants,
+							the Apple II family and clones, the Epson QX-10, the Canon X-07, and the
+							Sharp MZ-80B.  There are also some nice software list updates, including
+							the latest prototype cartridge dumps and plenty of homebrew
+							software.</p>
+							
+							<p>If you want to read about everything that changed this month, check
+							out the <a
+							href="https://www.mamedev.org/releases/whatsnew_0286.txt">whatsnew.txt
+							file</a>.  As always, the source code and 64-bit Windows binary packages
+							are available from <a href="https://www.mamedev.org/release.html">our
+							download page</a>.</p>
+							
+							<p><a href="/?p=560#readmore">Read the rest of this entry »</a></p>
+						</div>
+					</div>
+					<div id="post-559" class="col-md-8">
+						<h2><a title="Permanent Link to MAME 0.285" rel="bookmark" href="/?p=559">MAME 0.285</a></h2>
+						<small>30 Jan 2026</small>
+						<div class="entry">
+							
+							<p>Are you ready for the first MAME release of 2026?  MAME 0.285 is out
+							now!  We’ve added support for an early, unreleased version of Atari’s
+							Relief Pitcher running on their System 1 platform.  Moon Raker, a
+							Nichibutsu shooter from the late ’70s, has also been found and emulated.
+							Sega’s Waku Waku series has been further filled out with the addition of
+							Waku Waku Jumbo.  And for something completely different, Apple’s first
+							computer built around the WIMP paradigm, the Lisa, is starting the year
+							in substantially better shape.</p>
+							
+							<p>If you play arcade games that utilised lightguns, you’ll no doubt be
+							aware that pulling the trigger while aiming the gun away from the screen
+							was a common way to reload.  You may also be aware that MAME had an
+							option to make this a bit easier if you’re using a lightgun to play.
+							That option has been removed, with a new plugin taking its place.  The
+							great news is that the plugin works <em>even if you aren’t using a
+							lightgun</em>.  That’s right, you can now assign a button to reload when
+							you’re playing Virtua Cop or Lethal Enforcers with a keyboard, mouse or
+							trackball.  Check <a
+							href="https://docs.mamedev.org/plugins/index.html">the plugin
+							documentation</a> for more details.</p>
+							
+							<p>The Hanimex Pencil II computer has had a bit of an overhaul, which
+							should make more software usable.  A few more of the many BBC Micro
+							peripherals have been emulated.  Other improvements this month include
+							better Apple <span style="font-variant: small-caps">IIgs</span> periodic
+							interrupt emulation, another working Apple II clone from behind the Iron
+							Curtain, better representation of base Grid Compass hardware
+							configurations, and better default sound routing for people using Apple
+							notebook computers.</p>
+							
+							<p>As always, you can read about everything that changed this month in
+							the <a
+							href="https://www.mamedev.org/releases/whatsnew_0285.txt">whatsnew.txt
+							file</a>, and the source code and 64-bit Windows binary packages are
+							linked from <a href="https://www.mamedev.org/release.html">our
+							download page</a>.</p>
+							
+							<p><a href="/?p=559#readmore">Read the rest of this entry »</a></p>
+						</div>
+					</div>
+		<!-- posts end -->
+    </div>
+    <div class="row"></div> 
+    <!-- navigation bar -->
+    <div class="row">
+		<div id="new-news-nav" class="col-md-4 col-sm-4 col-xs-4">
+		<center><a title="&lt; Newer News" rel="prev" href="/" class="btn btn-success btn-sm" disabled="disabled">&lt; Newer</a></center>
+		</div>
+        <div class="col-md-4 col-sm-4 col-xs-4"></div>
+		<div id="old-news-nav" class="col-md-4 col-sm-4 col-xs-4">
+		<center><a title="Older News &gt;" rel="next" href="/?page=2" class="btn btn-success btn-sm">Older &gt;</a></center>
+		</div>
+	</div>
+    <!-- /.row -->
+    <!-- /.container -->
+	<br/><br/><br/>
+	<br/><br/><br/>
+	
+
+	<nav class="navbar navbar-default navbar-fixed-bottom hidden-sm hidden-xs" role="navigation">
+		<div class="container">
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/index.php" accesskey="h"><i class="fa fa-home"></i></a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li style="padding-right: 1em"><p class="navbar-text">Copyright &copy;&nbsp;2026 <img src="/_include/img/logo-mame-small-black.svg" alt="MAME" style="height: 1.3em; vertical-align: middle;"/></p></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- jQuery Version 1.11.0 -->
+	<script src="/_include/js/jquery-1.11.0.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="/_include/js/bootstrap.min.js"></script>
+</body>
+</html>

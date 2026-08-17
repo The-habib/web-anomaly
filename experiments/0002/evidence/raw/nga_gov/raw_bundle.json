@@ -1,0 +1,61 @@
+{
+  "domain": "nga.gov",
+  "canonical_url": "https://nga.gov",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:30:19.337784+00:00",
+  "preflight": {
+    "domain": "nga.gov",
+    "dns_resolved": true,
+    "dns_ip": "199.16.64.40",
+    "status": "CONNECTION_ERROR",
+    "final_url": "https://nga.gov",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": null,
+    "latency_ms": 758.08,
+    "content_type": null,
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": "HTTPSConnectionPool(host='nga.gov', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='nga.gov', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+  },
+  "live_evidence": {
+    "status_code": null,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": null,
+    "last_seen": null,
+    "earliest_iso": null,
+    "latest_iso": null,
+    "years_span": 0,
+    "total_captures": 0,
+    "unique_years_observed": 0,
+    "observed_year_ratio": 0.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 0.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "unproven",
+    "archive_sources": [],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nga_gov/timeline.json",
+      "sha256": "5e479f47def0bc9153c244924323559ba55f208d53df6b5caf94a546bd35805c",
+      "size_bytes": 521
+    }
+  ]
+}

@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<!--scale the layout to work correctly on moble decives-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--define the character encoding for the page-->
+		<meta charset="UTF-8">
+		<title>Home - CSO - Central Statistics Office</title>
+          <!-- navigation object :  Key words --><meta name="DC.Keywords" content="" /> <!-- Keywords -->
+          <!-- navigation object :  Last modified --><meta property="article:published_time" name="DC.Keywords" content="2019-08-28" /> <!-- modified -->
+          <meta name="DC.Publisher" content="CSO" /> <!-- modified -->
+
+          <!-- start css -->  
+          
+          <!-- IE compatibility mode fix--><meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+          
+		<!--include main stylesheet - all other stylesheets are embeded within this-->
+		<!--main.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/main.css" />
+    <!--CS-62145-->
+        <!--earthworm.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/earthworm.css" />
+        <!--layout.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/layout.css" />
+        <!--colours.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/colours-aa.css" />
+        <!--flexslider.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/flexslider.css" />
+        <!--jquery.fancybox.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/fancybox/jquery.fancybox.css" />
+        <!--mediaQueries.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/mediaQueries.css" />
+		
+        <!--include jQuery-->
+		<!--jquery-1.11.1.min.js--><script type="text/javascript" src="/en/media/styleassets/javascript/granite/jquery-1.11.1.min.js"></script>
+		
+        
+        <!--include Flexslider - used for carousels and image slders-->
+		<!--jquery.flexslider-min.js--><script type="text/javascript" src="/en/media/styleassets/javascript/granite/jquery.flexslider.js"></script>
+          
+		<!--include Fancyboc - used for modal windows-->
+		<!--jquery.fancybox.js--><script type="text/javascript" src="/en/media/styleassets/fancybox/jquery.fancybox.js"></script>
+          
+      
+		<!--include sitewide JavaScript for cso.ie-->
+		<!--site.js--><script type="text/javascript" src="/en/media/styleassets/javascript/granite/site.js"></script>
+          
+          
+         
+           
+          <!-- end css -->
+          
+           <!--include High Charts-->
+	 <script type="text/javascript" src="https://code.highcharts.com/9.3.3/highcharts.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/maps/9.3.3/modules/map.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/9.3.3/modules/data.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/9.3.3/highcharts-more.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/maps/9.3.3/modules/exporting.js"></script>
+          
+    
+<script> 
+//js to set current tab to active on main nav DR
+
+    $(document).ready(function () {
+
+
+        var theme = '';
+
+        //alert(theme);
+
+        if (theme.length == '0') {
+            $("#homeTab").addClass("currentbranch0");
+            // alert('I am here');
+        }
+
+        else if (theme == 'Statistics' || theme == 'Releases and Publications') {
+
+            $("#statisticsTab").addClass("currentbranch0");
+
+        }
+
+        else if (theme == 'Databases') {
+
+            $("#databasesTab").addClass("currentbranch0");
+
+        }
+
+
+        else if (theme == 'Surveys and Methodology') {
+
+            $("#methodsTab").addClass("currentbranch0");
+
+        }
+
+        else if (theme == 'About Us') {
+
+            $("#aboutUsTab").addClass("currentbranch0");
+
+        }
+
+
+        else {
+            //do nothing
+        }
+
+
+    });
+
+    //end main nav JS DR
+</script>
+     
+
+ 
+       
+ <!-- start header -->
+
+		<!-- ********** HEADER ********** -->
+		<!-- navigation object : Header code --><!--start Code only (admin)-->
+<!-- Website Header - Nov 2025 -->
+
+<!-- Font-awesome - https://github.com/FortAwesome/Font-Awesome/-->
+<link rel="stylesheet" href="
+https://cdn.jsdelivr.net/gh/CSOIreland/Fontawesome@6.5.2b1/css/all.min.css"
+integrity="sha256-vvmBgdkRo5x0l5TaZ9VSsHaMyObJD8oBGA0etv2xnRk=" crossorigin="anonymous">
+
+<!--masthead.css--><link rel="stylesheet" type="text/css" media="" href="/en/media/styleassets/css/granite/masthead.css" />
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-57x57.png">
+
+<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.cso.ie/client/1.0.2/favicon/apple-icon-180x180.png">
+
+<link rel="icon" type="image/png" sizes="192x192"  href="https://cdn.cso.ie/client/1.0.2/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.cso.ie/client/1.0.2/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.cso.ie/client/1.0.2/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.cso.ie/client/1.0.2/favicon/favicon-16x16.png">
+
+<link rel="manifest" href="/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5K0ZBH6F8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    // Initialize with consent denied
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+
+    gtag('config', 'G-M5K0ZBH6F8', {
+      'send_page_view': false,  // Prevent the initial page view
+      'anonymize_ip': true
+    });
+
+    gtag('set', {
+      'allow_google_signals': false,
+      'allow_ad_personalization_signals': false,
+      'restricted_data_processing': true
+    });
+
+  </script>
+
+<!-- Begin Cookie Consent plugin by Osano- https://cookieconsent.insites.com/ -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+<style>
+.cc-message a:visited {
+     color: rgb(255, 255, 255)
+}
+.cc-highlight cc-btn:focus, .cc-highlight .cc-btn:hover {
+    border-color: rgb(31, 31, 31);
+}
+.cc-highlight .cc-btn:first-child:focus, .cc-highlight .cc-btn:first-child:hover {
+    text-decoration: none;
+    border-color: rgb(31, 31, 31);
+    background-color: rgb(134, 147, 179);
+    filter: brightness(120%);
+}
+</style>
+<script>
+
+function setCookie(cname, cvalue, exdays, domain) {
+      domain = domain || "";
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;domain=" + domain;
+    }
+
+
+window.addEventListener("load", function () {
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#35456B",
+        "text": "#ffffff"
+      },
+      "button": {
+        "background": "#00959f",
+        "text": "#1f1f1f"
+      },
+      "highlight": {
+        "background": "#8693B3",
+        "text": "#1f1f1f"
+      }
+    },
+    position: "bottom",
+    "static": false,
+    "type": "opt-in",
+    "revokable": false,
+    "content": {
+      "message": "<h2 style='margin-bottom: 10px'>Cookies</h2>This website uses cookies to improve your experience and to monitor the site traffic. Non-essential cookies are not set by default. To learn more and manage your cookie consent view our ",
+      "allow": "Allow All",
+      "deny": "Only Necessary",
+      "link": "<span style='font-weight: bold'>Privacy Statement</span>",
+      "href": "#",
+       "policy":  "Cookie Policy"
+    },
+    "onInitialise": function (e) {
+     if (e == "allow") {
+         gtag('consent', 'update', {
+              'analytics_storage': 'granted'
+            });
+            // Manually send the page view after consent is granted
+            gtag('event', 'page_view');
+      } else {
+//delete ga cookies
+         setCookie("_ga", "", 0, ".cso.ie");
+            setCookie("_ga_M5K0ZBH6F8", "", 0, ".cso.ie");
+      }     
+    },
+    "onStatusChange": function (e, t) {
+
+     if (e == "allow") {
+        gtag('consent', 'update', {
+              'analytics_storage': 'granted'
+            });
+            // Manually send the page view after consent is granted
+            gtag('event', 'page_view');
+            // window.location.href = window.location.pathname;
+            $("#cookie-consent-status-toggle").prop("checked", true)
+      } else {
+
+       setCookie("_ga", "", 0, ".cso.ie");
+            setCookie("_ga_M5K0ZBH6F8", "", 0, ".cso.ie");
+
+      }
+    }
+  });
+
+$(".cc-message").append(
+
+);
+
+$(".cc-message").append(
+    $("<br>").get(0).outerHTML +
+    $("<br>").get(0).outerHTML +
+    $("<a>", {
+        "html": "Dismiss this message",
+        "href": "#",
+        "name": "dismiss-cookie-banner",
+        "style": "color: #ffffff"
+    }).get(0).outerHTML
+
+);
+
+$("[name=dismiss-cookie-banner]").click(function(e) {
+    e.preventDefault();
+    $(".cc-window").hide();
+});
+
+
+
+
+  $(".cc-link, #cookie-banner-privacy-statement-link").click(function (e) {
+    e.preventDefault()
+    //setCookie("cookieconsent_status", "deny", 365);
+    window.location.href = "/en/aboutus/lgdp/dataprotectionprivacytransparency/websiteprivacystatement/index.html#cookie-toggle-anchor"
+  });
+
+  window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M5K0ZBH6F8', { 'anonymize_ip' : true });
+      gtag('set', {'allow_google_signals': false});
+      gtag('set', {'allow_ad_personalization_signals': false});
+      gtag ( 'set', { 'restricted_data_processing': true });
+
+});
+</script>
+<!-- End Cookie Consent plugin -->
+
+<!-- JQuery UI -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- JS-Cookie - https://github.com/js-cookie/js-cookie -->
+    <script src="https://cdn.jsdelivr.net/gh/js-cookie/js-cookie@v2.2.1/src/js.cookie.min.js"></script>
+<!-- Datatables - https://datatables.net/ powered by CloudFlare -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <!-- PapaParse CSV - https://github.com/mholt/PapaParse/ -->
+    <script src="https://cdn.jsdelivr.net/gh/mholt/PapaParse@5.1.0/papaparse.min.js"></script>
+</head>
+
+
+<body>
+
+<a href="#" class="back-to-top">Back to Top</a> 
+
+<a id="top"></a> 
+
+  <!-- banner to appear at top of page when enabled -->     
+
+<!-- SITE MASTHEAD -->        
+<header class="container masthead">
+    <div class="row">
+        <div class="masthead-logo">
+            <a href="/en/">
+            <picture>
+                <source media="(min-width: 960px)" srcset="/en/media/csologo.png" width="444" height="108">
+                <img src="/en/media/Logo.png" alt="Central Statistics Office" width="70" height="83">
+            </picture> 
+            </a>
+        </div> <!-- /logo -->
+        <div class="masthead-buttons masthead-button-1">
+            <a href="https://data.cso.ie/" class="btn"><i class="fa fa-database" aria-hidden="true"></i> Statistics Database</a>
+        </div> <!-- /masthead-buttons -->
+        <div class="masthead-buttons masthead-button-2">
+            <a href="/en/baile/" class="btn"><i class="fa fa-globe" aria-hidden="true"></i> cso.ie as Gaeilge</a>
+        </div> <!-- /masthead-buttons -->
+        <div class="masthead-search">
+            <!-- Form's action must be the results page's URL -->
+            <form method="get" action="https://www.cso.ie/en/search/">
+                <!-- Search field's name must be addsearch -->
+                <input type="text" name="addsearch" placeholder="&#128269; Search cso.ie" autocomplete="off" aria-label="Search cso.ie" />
+            </form>          
+        </div> <!-- /masthead search -->
+    </div> <!-- /row -->
+</header> <!-- container masthead -->
+<!-- END MASTHEAD -->
+
+<!-- SITE NAVIGATION -->
+<p class="hide" aria-hidden>&nbsp;<a accesskey="s" href="#content">Skip navigation</a></p>
+
+<div class="container mainNav">
+<div class="row">
+<div class="col span12"><a class="toggleMainNav navMobile" href="javascript:" title="show menu">Show Menu <em class="fa fa-navicon">&nbsp;</em></a>
+<ul class="mainNavList">
+<li><span id="homeTab"><a title="Home" href="/en/">Home</a></span></li>
+<li><span id="statisticsTab">Statistics</span>
+<div class="ddBox"><a class="pageLink" href="/en/statistics/">Explore Statistics</a>
+<ul class="statisticsList">
+<li><a href="/en/statistics/">People and Society</a>
+<!-- navigation object : People and society box --><span id="d.en.88546"></span>
+<ul class="links ulList">
+  
+  <li id="li88546_1"><a href="/en/statistics/population/">Population</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_2"><a href="/en/statistics/education/">Education</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_3"><a href="/en/statistics/birthsdeathsandmarriages/"> Births, Deaths &amp; Marriages </a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_4"><a href="/en/statistics/crimeandjustice/">Crime and Justice</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_5"><a href="/en/statistics/socialconditions/">Social Conditions</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_6"><a href="/en/statistics/health/">Health</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_7"><a href="/en/statistics/informationsociety/">Information Society</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_8"><a href="/en/statistics/housingandhouseholds/">Housing and Households</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88546_9">  <span class="externalSource"></span></li>
+  
+  <li id="li88546_10">  <span class="externalSource"></span></li>
+  
+  <li id="li88546_11">  <span class="externalSource"></span></li>
+  
+  <li id="li88546_12">  <span class="externalSource"></span></li>
+</ul>
+
+
+<!--<div style="margin-bottom: 20px"></div>-->
+
+<script>
+ 
+ $("#li88546_1").not(":has(a)").remove();  
+  $("#li88546_2").not(":has(a)").remove();
+  $("#li88546_3").not(":has(a)").remove();  
+  $("#li88546_4").not(":has(a)").remove();  
+  $("#li88546_5").not(":has(a)").remove();
+  $("#li88546_6").not(":has(a)").remove();
+  $("#li88546_7").not(":has(a)").remove();
+  $("#li88546_8").not(":has(a)").remove();
+  $("#li88546_9").not(":has(a)").remove();
+  $("#li88546_10").not(":has(a)").remove();
+  $("#li88546_11").not(":has(a)").remove();
+  $("#li88546_12").not(":has(a)").remove();
+  
+</script>  
+
+
+</li>
+<li><a href="/en/statistics/">Labour Market and Earnings</a>
+<!-- navigation object : Labour Market & Earnings --><span id="d.en.88548"></span>
+<ul class="links ulList">
+  
+  <li id="li88548_1"><a href="/en/statistics/labourmarket/">Labour Market</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88548_2"><a href="/en/statistics/earnings/">Earnings</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88548_3">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_4">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_5">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_6">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_7">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_8">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_9">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_10">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_11">  <span class="externalSource"></span></li>
+  
+  <li id="li88548_12">  <span class="externalSource"></span></li>
+</ul>
+
+
+<!--<div style="margin-bottom: 20px"></div>-->
+
+<script>
+ 
+ $("#li88548_1").not(":has(a)").remove();  
+  $("#li88548_2").not(":has(a)").remove();
+  $("#li88548_3").not(":has(a)").remove();  
+  $("#li88548_4").not(":has(a)").remove();  
+  $("#li88548_5").not(":has(a)").remove();
+  $("#li88548_6").not(":has(a)").remove();
+  $("#li88548_7").not(":has(a)").remove();
+  $("#li88548_8").not(":has(a)").remove();
+  $("#li88548_9").not(":has(a)").remove();
+  $("#li88548_10").not(":has(a)").remove();
+  $("#li88548_11").not(":has(a)").remove();
+  $("#li88548_12").not(":has(a)").remove();
+  
+</script>  
+
+
+</li>
+<li><a href="/en/statistics/">Business Sectors</a>
+<!-- navigation object : Business Sectors --><span id="d.en.88550"></span>
+<ul class="links ulList">
+  
+  <li id="li88550_1"><a href="/en/statistics/agriculture/">Agriculture</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_2"><a href="/en/statistics/buildingandconstruction/">Building and Construction</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_3"><a href="/en/statistics/digitaleconomy/">Digital Economy</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_4"><a href="/en/statistics/enterprisestatistics/">Enterprise Statistics</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_5"><a href="/en/statistics/industry/">Industry</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_6"><a href="/en/statistics/internationalenterprises/">International Enterprises</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_7"><a href="/en/statistics/peopleinbusiness/">People in Business</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_8"><a href="/en/statistics/retailandservices/">Retail and Services</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_9"><a href="/en/statistics/smallandmediumenterprises/">Small and Medium Enterprises</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_10"><a href="/en/statistics/technologyandinnovation/">Technology and Innovation</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_11"><a href="/en/statistics/tourismandtravel/">Tourism and Travel</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88550_12"><a href="/en/statistics/transport/">Transport</a>  <span class="externalSource"></span></li>
+</ul>
+
+
+<!--<div style="margin-bottom: 20px"></div>-->
+
+<script>
+ 
+ $("#li88550_1").not(":has(a)").remove();  
+  $("#li88550_2").not(":has(a)").remove();
+  $("#li88550_3").not(":has(a)").remove();  
+  $("#li88550_4").not(":has(a)").remove();  
+  $("#li88550_5").not(":has(a)").remove();
+  $("#li88550_6").not(":has(a)").remove();
+  $("#li88550_7").not(":has(a)").remove();
+  $("#li88550_8").not(":has(a)").remove();
+  $("#li88550_9").not(":has(a)").remove();
+  $("#li88550_10").not(":has(a)").remove();
+  $("#li88550_11").not(":has(a)").remove();
+  $("#li88550_12").not(":has(a)").remove();
+  
+</script>  
+
+
+</li>
+<li><a href="/en/statistics/">Economy</a>
+<!-- navigation object : Economy --><span id="d.en.88556"></span>
+<ul class="links ulList">
+  
+  <li id="li88556_1"><a href="/en/statistics/internationalaccounts/">International Accounts</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_2"><a href="/en/statistics/prices/">Prices</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_3"><a href="/en/statistics/nationalaccounts/">National Accounts</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_4"><a href="/en/statistics/governmentaccounts/">Government Accounts</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_5"><a href="/en/statistics/externaltrade/">External Trade</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_6"><a href="/en/statistics/keyeconomicindicators/">Key Economic Indicators</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_7"><a href="/en/statistics/imfsummarydatapage/">IMF Summary Data Page</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88556_8">  <span class="externalSource"></span></li>
+  
+  <li id="li88556_9">  <span class="externalSource"></span></li>
+  
+  <li id="li88556_10">  <span class="externalSource"></span></li>
+  
+  <li id="li88556_11">  <span class="externalSource"></span></li>
+  
+  <li id="li88556_12">  <span class="externalSource"></span></li>
+</ul>
+
+
+<!--<div style="margin-bottom: 20px"></div>-->
+
+<script>
+ 
+ $("#li88556_1").not(":has(a)").remove();  
+  $("#li88556_2").not(":has(a)").remove();
+  $("#li88556_3").not(":has(a)").remove();  
+  $("#li88556_4").not(":has(a)").remove();  
+  $("#li88556_5").not(":has(a)").remove();
+  $("#li88556_6").not(":has(a)").remove();
+  $("#li88556_7").not(":has(a)").remove();
+  $("#li88556_8").not(":has(a)").remove();
+  $("#li88556_9").not(":has(a)").remove();
+  $("#li88556_10").not(":has(a)").remove();
+  $("#li88556_11").not(":has(a)").remove();
+  $("#li88556_12").not(":has(a)").remove();
+  
+</script>  
+
+
+</li>
+<li><a href="/en/statistics/">Environment</a>
+<!-- navigation object : Environment and Climate --><span id="d.en.88559"></span>
+<ul class="links ulList">
+  
+  <li id="li88559_1"><a href="/en/statistics/agri-environment/">Agri-Environment</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_2"><a href="/en/statistics/climate/">Climate</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_3"><a href="/en/statistics/ecosystemaccounts/">Ecosystem Accounts</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_4"><a href="/en/statistics/energy/">Energy</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_5"><a href="/en/statistics/environmentaccounts/">Environment Accounts</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_6"><a href="/en/statistics/fishery/">Fishery</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_7"><a href="/en/statistics/forestry/">Forestry</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_8"><a href="/en/statistics/indicators/">Indicators</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_9"><a href="/en/statistics/social/">Social</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_10"><a href="/en/statistics/waterandwastewater/">Water and Waste Water</a>  <span class="externalSource"></span></li>
+  
+  <li id="li88559_11">  <span class="externalSource"></span></li>
+  
+  <li id="li88559_12">  <span class="externalSource"></span></li>
+</ul>
+
+
+<!--<div style="margin-bottom: 20px"></div>-->
+
+<script>
+ 
+ $("#li88559_1").not(":has(a)").remove();  
+  $("#li88559_2").not(":has(a)").remove();
+  $("#li88559_3").not(":has(a)").remove();  
+  $("#li88559_4").not(":has(a)").remove();  
+  $("#li88559_5").not(":has(a)").remove();
+  $("#li88559_6").not(":has(a)").remove();
+  $("#li88559_7").not(":has(a)").remove();
+  $("#li88559_8").not(":has(a)").remove();
+  $("#li88559_9").not(":has(a)").remove();
+  $("#li88559_10").not(":has(a)").remove();
+  $("#li88559_11").not(":has(a)").remove();
+  $("#li88559_12").not(":has(a)").remove();
+  
+</script>  
+
+
+</li>
+<li><a href="/en/statistics/generalintereststatistics/">General Statistical Publications</a><br><br>
+     <a href="/en/statistics/a-zofreleasespublications/">A-Z of Releases and Publications</a><br><br>
+     <a href="/en/statistics/hubsdashboards/">Hubs & Dashboards</a>
+</li>
+</ul>
+<a class="close" href="javascript:">close <em class="fa fa-arrow-circle-up">&nbsp;</em></a></div>
+<!--/ddBox--></li>
+<li><span id="databasesTab"><a title="Databases" href="/en/databases/">Databases</a></span></li>
+<li><span id="methodsTab"><a title="Methods" href="/en/methods/">Methods</a></span></li>
+<li><span id="surveysTab"><a title="Surveys" href="/en/surveys/">Surveys</a></span></li>
+<li><span id="aboutUsTab"><a title="About Us" href="/en/aboutus/">About Us</a></span></li>
+<li><span id="censusTab"><a title="Census" href="/en/census/">Census</a></span></li>
+<li><span id="trustTab"><a title="Trust & Transparency" href="/en/trusttransparency/">Trust & Transparency</a></span></li>
+</div><!--/col-->
+</div><!--/row-->
+</div><!--/mainNav-->
+  <!-- END NAVIGATION -->
+
+<!--end Code only (admin)-->	
+      <!--/mainNav-->
+
+
+		<!-- ********** CONTENT ********** -->
+		<div class="container content homepage">
+          <!-- end header -->
+          
+                    
+			<div class="row quickStats">
+				<div class="col span12">
+					<div class="carousel ">
+						<ul class="slides">
+          <li class="tooltip purple" rel="tooltip" title="Consumer prices rose by 3.4% in the 12 months to July 2026">
+
+							<a href="/en/releasesandpublications/ep/p-cpi/consumerpriceindexjuly2026/">
+								<i class="fa fa fa-shopping-cart icon"></i>
+								<h3><i class="fa fa-arrow-up" aria-hidden="true"></i> 3.4%</h3>
+								<p>Consumer Price Index</p>
+								<span>July 2026</span>
+                                </a>
+							</li><li class="tooltip teal" rel="tooltip" title="The Monthly Unemployment rate for July 2026 was 5.1%, up from 5.0% in June 2026">
+
+							<a href="/en/releasesandpublications/ep/p-mue/monthlyunemploymentjuly2026/">
+								<i class="fa fa fa-pie-chart icon"></i>
+								<h3><i class="fa fa-arrow-up" aria-hidden="true"></i> 5.1%</h3>
+								<p>Monthly Unemployment rate</p>
+								<span>July 2026</span>
+                                </a>
+							</li><li class="tooltip mint" rel="tooltip" title="Early estimates indicate that Gross Domestic Product increased by 3.9% in Quarter 2 2026">
+
+							<a href="/en/releasesandpublications/fp/fp-pgdp/preliminarygdpestimatequarter22026/">
+								<i class="fa fa fa-eur icon"></i>
+								<h3><i class="fa fa-arrow-up" aria-hidden="true"></i> 3.9%</h3>
+								<p>GDP</p>
+								<span>Quarter 2 2026</span>
+                                </a>
+							</li><li class="tooltip green" rel="tooltip" title="Volume of Retail Sales up 0.4% in June 2026">
+
+							<a href="/en/releasesandpublications/ep/p-rsi/retailsalesindexjune2026provisionalandmay2026final/">
+								<i class="fa fa-shopping-bag icon"></i>
+								<h3><i class="fa fa-arrow-up" aria-hidden="true"></i> 0.4%</h3>
+								<p>Retail Sales Index</p>
+								<span>June 2026</span>
+                                </a>
+							</li><li class="tooltip yellow" rel="tooltip" title="The national Residential Property Price Index increased by 6.2% in the 12 months to May 2026
+">
+
+							<a href="/en/releasesandpublications/ep/p-rppi/residentialpropertypriceindexmay2026/">
+								<i class="fa fa-home icon"></i>
+								<h3><i class="fa fa-arrow-up" aria-hidden="true"></i> 6.2%</h3>
+								<p>Residential Property Price Index</p>
+								<span>May 2026</span>
+                                </a>
+							</li><li class="tooltip yellow" rel="tooltip" title="5.15 million<br/>Census of Population 2022 - Summary Results">
+
+							<a href="/en/releasesandpublications/ep/p-cpsr/censusofpopulation2022-summaryresults/">
+								<i class="fa fa-users icon"></i>
+								<h3>5.15 million</h3>
+								<p>Population</p>
+								<span>2022</span>
+                                </a>
+							</li>
+          </ul></div>
+					
+					<a href="javascript:" class="toggleQuickStats">Show more like this <i class="fa fa-angle-down"></i></a>
+				</div>
+			</div>
+          
+          
+          
+			<div class="row modules">
+				<div class="col span4">   
+                  
+          <div class="module open yellow">
+						<div class="moduleHeader">
+							<h2><a href="#">CSO Notices</a></h2>
+						</div>
+						<div class="moduleBody">
+							<ul>
+								<!-- navigation object : News Corner Box --><li>
+<a href="https://csorecruitment.tal.net/vx/appcentre-ext/brand-4/spa-1/candidate/so/pm/1/pl/3/opp/54-Open-Competition-for-Marketing-Communications-Manager-Assistant-Principal-Officer-Level-2026/en-GB" target="_blank">
+Recruitment: Marketing & Communications Manager (Assistant Principal Officer level) <span class="label">New</span>  
+</a>
+</li><li>
+<a href="https://www.nsb.ie/news/strategicprioritiesforofficialstatistics2027-2032/" target="_blank">
+National Statistics Board: Strategic Priorities for Official Statistics 2027-2032 <span class="label">New</span>  
+</a>
+</li><li>
+<a href="/en/census/census2027/publicconsultationoncensus2027output/">
+Public Consultation on Census 2027 Output <span class="label">New</span>   
+</a>
+</li>
+<li>
+<a href="https://eu2026.cso.ie/en/" target="_blank">
+CSO Launches EU Presidency 2026 <span class="label">New</span>  
+</a>
+</li><li>
+<a href="/en/aboutus/lgdp/cgt/ocg/csostatementofstrategy/">
+CSO Statement of Strategy    
+</a>
+</li>
+<li>
+<a href="/en/statistics/historicalreports/">
+CSO Historical Reports    
+</a>
+</li>
+
+							</ul>
+						</div>
+            <div class="moduleFooter">
+							<a class="btn" href="/en/csolatestnews/featurearticles/">feature articles <i class="fa fa-angle-right"></i></a>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/csolatestnews/">more news from the CSO <i class="fa fa-angle-right"></i></a>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/csolatestnews/eventsconferencesseminars/">events, conferences &amp; seminars <i class="fa fa-angle-right"></i></a>
+						</div>
+            
+					</div><!--/module-->
+
+          
+          <div class="sideitem cobalt">
+						<h3><a href="/en/trusttransparency/">Why you can trust the CSO <i class="fa-solid fa-shield-halved"></i></a></h3>
+            <p>Our statistics are independently verified, we are transparent about our methods and sources, and we adhere to the highest international standards</p>
+            <div class="sideitemFooter">
+							<a class="btn" href="/en/trusttransparency/">Go to Trust &amp; Transparency <i class="fa fa-angle-right"></i></a>
+             </div>
+					</div><!--/sideitem--> 
+          
+          
+          <div class="module open csoblue">
+						<div class="moduleHeader">
+							<h2><a href="#">CSO Surveys</a></h2>
+						</div>
+						<div class="moduleBody">
+							<ul>
+								<!-- navigation object : Survey links Box --><li>
+  <a href="/en/surveys/householdsurveys/takingpart/">
+Taking Part in a Household Survey?
+<p>Have you received an invitation to take part in our of our CSO Household Surveys? Learn more about our surveys and what it means to take part.</p>
+  </a>
+</li><li>
+  <a href="/en/surveys/householdsurveys/silc/">
+Survey on Income &amp; Living Conditions
+<p>The Survey on Income &amp; Living Conditions is now under way. Visit our survey information page to learn more.</p>
+  </a>
+</li><li>
+  <a href="/en/surveys/householdsurveys/growingupinirelandsurvey/growingupinirelandcohort08/">
+Growing Up in Ireland Cohort '08
+<p>We are now inviting participants from GUI Cohort '08 to take part again. Learn more on our survey information pages.</p>
+  </a>
+</li>
+							</ul>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/surveys/householdsurveys/takingpart/" target="_blank">about cso household surveys <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div><!--/module-->
+                        
+                  
+					<div class="sideitem pink">
+						<h3><a href="/en/aboutus/careers/">Careers &amp; Recruitment <i class="fa fa-id-badge fa-lg"></i></a></h3>
+						<p>Rewarding roles, career progression, unique culture - learn about everything that a career with the CSO has to offer</p>
+                      <div class="sideitemFooter">
+						<a class="btn" href="/en/aboutus/careers/">Go to cso careers <i class="fa fa-angle-right"></i></a>
+                      </div>
+					</div><!--/sideitem-->
+
+<!--
+          <div class="sideitem purple">
+						<h3><a href="/en/aboutus/lgdp/cgt/ocg/csostatementofstrategy/">CSO Statement of Strategy 2025-28 <i class="fa-solid fa-landmark"></i></a></h3>
+            <p>Learn about our mission and our values, our strategic goals and how we intend to deliver on them over the coming years</p>
+            <div class="sideitemFooter">
+							<a class="btn" href="/en/aboutus/lgdp/cgt/ocg/csostatementofstrategy/">go to cso statement of strategy <i class="fa fa-angle-right"></i></a>
+             </div>
+					</div>
+--> 
+		                                    
+					
+				</div><!--/col-->
+				<div class="col span4">
+					<div class="module teal open">
+						<div class="moduleHeader">
+							<h2><a href="#">Latest Statistics</a></h2>
+							
+						</div>
+						<div class="moduleBody">
+							<ul>
+							 <!-- navigation object : Home: Latest Releases Box --><li>
+  <a href="/en/releasesandpublications/ep/p-api/agriculturalpriceindicesjune2026/">
+Agricultural Price Indices June 2026
+<p>14 August 2026</p>
+  </a>
+</li>
+<li>
+  <a href="/en/releasesandpublications/ep/p-ngdsd/networkedgasdailysupplyanddemandjanuary-march2026/">
+Networked Gas Daily Supply and Demand January-March 2026
+<p>14 August 2026</p>
+  </a>
+</li>
+<li>
+  <a href="/en/releasesandpublications/ep/p-cpi/consumerpriceindexjuly2026/">
+Consumer Price Index July 2026
+<p>13 August 2026</p>
+  </a>
+</li>
+<li>
+  <a href="/en/releasesandpublications/ep/p-vlftm/vehicleslicensedforthefirsttimejuly2026/">
+Vehicles Licensed for the first time July 2026
+<p>11 August 2026</p>
+  </a>
+</li>
+	
+							</ul>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/csolatestreleases/">statistical releases by publish date <i class="fa fa-angle-right"></i></a>
+							
+						</div>
+            <div class="moduleFooter">
+							<a class="btn"  href="/en/csolatestnews/releasecalendar/">upcoming statistics calendar <i class="fa fa-angle-right"></i></a>
+                          
+						</div>
+            <div class="moduleFooter">							
+                <a class="btn"  href="/en/csolatestnews/pressreleases/2026pressreleases/">press releases <i class="fa fa-angle-right"></i></a>
+						</div>
+            <div class="moduleFooter mint">							
+                <a class="btn"  href="/en/statistics/">explore statistics <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div><!--/module-->
+
+          <div class="sideitem purple">
+						<h3><a href="/en/census/census1926reports/census1926forms-nationalarchives/">Census 1926 <i class="fa-solid fa-people-group"></i></a></h3>
+            <p>History in the making: 100 years on from the first census of the Irish Free State, the Census 1926 forms were made public for the first time by the National Archives in April.</p>
+            <div class="sideitemFooter">
+							<a class="btn" href="/en/census/census1926reports/census1926forms-nationalarchives/">learn more about census 1926 <i class="fa fa-angle-right"></i></a>
+             </div>
+					</div><!--/sideitem--> 
+          
+          <div class="module open purple">
+						<div class="moduleHeader">
+							<h2><a href="#">Census</a></h2>
+						</div>
+						<div class="moduleBody">
+							<ul>
+								<!-- navigation object : Census links Box --><li>
+<a href="/en/statistics/population/censusofpopulation2022/">
+Census 2022 Results   <span class="label">Updated</span> 
+</a>
+</li>
+<li>
+<a href="/en/census/census2022/census2022smallareapopulationstatistics/">
+Census 2022 Small Area Population Statistics    
+</a>
+</li>
+<li>
+<a href="https://visual.cso.ie/?body=entity/censusurbanprofiles" target="_blank">
+Census 2022 Urban Profiles on CSO Visual <span class="label">New</span>  
+</a>
+</li>
+							</ul>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/census/" target="_blank">all census <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div><!--/module-->
+                        
+           <div class="sideitem teal">
+						<h3><a href="/en/statistics/enterprisestatistics/businessinireland">Business in Ireland Series <i class="fa-solid fa-city"></i></a></h3>
+            <p>Find comprehensive insight and information on businesses in Ireland in our new series of releases</p>
+            <div class="sideitemFooter">
+							<a class="btn" href="/en/statistics/enterprisestatistics/businessinireland/">go to the Business in Ireland series <i class="fa fa-angle-right"></i></a>
+             </div>
+					</div>                  
+
+                  
+
+          
+          
+				</div><!--/col-->
+				<div class="col span4">
+                  
+  <div class="module green open">
+    <div class="moduleHeader">
+      <h2><a href="#">CSO Visualisations </a></h2>     
+    </div>
+
+    <div class="moduleBody visualisationsMmoduleBody">
+
+        <div class="flexslider2">
+            <ul class="slides">
+                <li><a href="/en/releasesandpublications/ep/p-oiiaf/outputinputandincomeinagriculture-finalestimate2025/">
+     <img src="/en/media/csoie/visualisationtools/infographics/businesssectors/2025/0296401_Output,_Input_and_Income_in_Agriculture_-_Final_Estimate_2025_Infographic_SLIDER.png" alt="Output, Input and Income in Agriculture - Final Estimate 2025" title="Output, Input and Income in Agriculture - Final Estimate 2025" />
+      <p class="flex-caption">Output, Input and Income in Agriculture - Final Estimate 2025</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-civf/compositionofirelandsvehiclefleet2026/">
+     <img src="/en/media/csoie/visualisationtools/infographics/businesssectors/2026/0296801_Composition_of_Ireland's_Vehicle_Fleet_2026_infographic_SLIDER.png" alt="Composition of Ireland's Vehicle Fleet" title="Composition of Ireland's Vehicle Fleet 2026" />
+      <p class="flex-caption">Composition of Ireland's Vehicle Fleet 2026</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-eaet/environmenttaxes2025/">
+     <img src="/en/media/csoie/visualisationtools/infographics/environment/2025/0297401_Environment_Taxes_2025_infographic_SLIDER.png" alt="Environment Taxes 2025 " title="Environment Taxes 2025" />
+      <p class="flex-caption">Environment Taxes 2025</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-iie/innovationinirishenterprises2024/">
+     <img src="/en/media/csoie/visualisationtools/infographics/businesssectors/2024/0296101_Innovation_in_Irish_Enterprises_Infographic_SLIDER.png" alt="Innovation in Irish Enterprises 2024" title="Innovation in Irish Enterprises 2024
+" />
+      <p class="flex-caption">Innovation in Irish Enterprises 2024
+</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-mdsihs/measuringdistancetoservicesinireland2026-healthservices/">
+     <img src="/en/media/csoie/visualisationtools/infographics/peopleandsociety/2026/0290001_-_Measuring_Distance_to_Services_in_Ireland_2026_Health_Services_Infographic_SLIDER.png" alt="Measuring Distance to Services in Ireland 2026 - Health Services " title="Measuring Distance to Services in Ireland 2026 - Health Services" />
+      <p class="flex-caption">Measuring Distance to Services in Ireland 2026 - Health Services</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-pros/prisonre-offendingstatistics2023/">
+     <img src="/en/media/csoie/visualisationtools/infographics/peopleandsociety/2023/0294001_Crime_and_Criminal_Justice_Prison_Re-Offending_Statistics_2023_Infographic_SLIDER.png" alt="Prison Re-offending Statistics 2023" title="Prison Re-offending Statistics 2023" />
+      <p class="flex-caption">Prison Re-offending Statistics 2023</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-ntstb/travelbehaviourtrends2024/">
+     <img src="/en/media/csoie/visualisationtools/infographics/businesssectors/2024/0292901_Travel_Behaviour_Trends_2024_Infographic_SLIDER.png" alt="Travel Behaviour Trends 2024 " title="Travel Behaviour Trends 2024 " />
+      <p class="flex-caption">Travel Behaviour Trends 2024 </p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-gei/goodsexportsandimportsmay2026/">
+     <img src="/en/media/csoie/visualisationtools/infographics/economy/2026/0270908_Trade_Monthly_Infographic_May_2026_SLIDER.png" alt="Goods Exports and Imports May 2026" title="Goods Exports and Imports May 2026" />
+      <p class="flex-caption">Goods Exports and Imports May 2026</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2025/">
+     <img src="/en/media/csoie/visualisationtools/infographics/environment/2025/0294601_Data_Centres_Metered_Electricity_Consumption_2025_Infographic_SLIDER.png" alt="Data Centres Metered Electricity Consumption 2025" title="Data Centres Metered Electricity Consumption 2025" />
+      <p class="flex-caption">Data Centres Metered Electricity Consumption 2025</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-mec/meteredelectricityconsumption2025/">
+     <img src="/en/media/csoie/visualisationtools/infographics/environment/2025/0294701_Metered_Electricity_Consumption_2025_Infographic_SLIDER.png" alt="Metered Electricity Consumption 2025" title="Metered Electricity Consumption 2025" />
+      <p class="flex-caption">Metered Electricity Consumption 2025</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-ana/annualnationalaccounts2025/">
+     <img src="/en/media/csoie/visualisationtools/infographics/economy/2025/0294801_National_Accounts_Ireland's_Economy_2025_Infographic_SLIDER.png" alt="Annual National Accounts 2025" title="Annual National Accounts 2025" />
+      <p class="flex-caption">Annual National Accounts 2025</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-na/quarterlynationalaccountsquarter12026final/">
+     <img src="/en/media/csoie/visualisationtools/infographics/economy/2026/0290802_Quarterly_National_Accounts_Q1_Final_2026_Infographic_SLIDER.png" alt="Quarterly National Accounts Q1 Final" title="Quarterly National Accounts Q1 Final" />
+      <p class="flex-caption">Quarterly National Accounts Q1 Final</p>
+  </a></li><li><a href="/en/releasesandpublications/ep/p-ia/internationalaccountsq12026final/">
+     <img src="/en/media/csoie/visualisationtools/infographics/economy/2026/0295401_International_accounts_Q1_2026_Final_Infographic_SLIDER.png" alt="International Accounts Q1 2026 Final" title="International Accounts Q1 2026 Final" />
+      <p class="flex-caption">International Accounts Q1 2026 Final</p>
+  </a></li><li><a href="/en/interactivezone/visualisationtools/babynamesofireland/">
+     <img src="/en/media/csoie/visualisationtools/visualisationcards/0094401_Baby_Names.png" alt="Baby Names of Ireland" title="Baby Names of Ireland" />
+      <p class="flex-caption">Baby Names of Ireland</p>
+  </a></li><li><a href="https://visual.cso.ie/?body=entity/ima/cop/2022" target="_blank">
+     <img src="/en/media/csoie/visualisationtools/visualisationcards/SAP_Maps_Outline_-_Purple.png" alt="Illustration of a map with a map marker" title="Census Interactive Map" />
+      <p class="flex-caption">Census Interactive Map</p>
+  </a></li><li><a href="">
+     <img src="/en/media/csoie/visualisationtools/visualisationcards/House_Prices_-_Orange.png" alt="House Prices Interactive App" title="Check out our House Prices Interactive App" />
+      <p class="flex-caption">Check out our House Prices Interactive App</p>
+  </a></li><li><a href="">
+     <img src="/en/media/csoie/visualisationtools/visualisationcards/Top_Motors_-_Blue.png" alt="CSO Interactive App - Ireland's Top Motors" title="Ireland's Top Motors" />
+      <p class="flex-caption">Ireland's Top Motors</p>
+  </a></li><li><a href="">
+     <img src="/en/media/csoie/visualisationtools/visualisationcards/Birthdays_-_Blue.png" alt="How Popular is your Birthday?" title="How Popular is your Birthday?" />
+      <p class="flex-caption">How Popular is your Birthday?</p>
+  </a></li><li><a href="">
+     <img src="/en/media/csoie/visualisationtools/visualisationcards/Inflation_Calculator_-_Blue.png" alt="Consumer Price Index Inflation Calculator" title="Consumer Price Index Inflation Calculator" />
+      <p class="flex-caption">Consumer Price Index Inflation Calculator</p>
+  </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="moduleFooter">
+        
+        <a class="btn" href="/en/interactivezone/visualisationtools/infographics/">more infographics <i class="fa fa-angle-right"></i></a>
+    </div>
+
+</div>
+          
+<!--Start  HUB highlight--
+<div id="hub-highlight-side-item">
+        <div class="sideitem teal">
+            	<h3><a href="/en/releasesandpublications/hubs/p-cyp/childrenandyoungpersonshub/">Children and Young Persons Hub<i class="fa fa-users" aria-hidden="true"></i></a></h3>
+            	<p>A snapshot of the lives of children and young people in Ireland through data and statistics</p>
+		
+		<div class="sideitemFooter">
+                	<a class="btn" href="/en/releasesandpublications/hubs/p-cyp/childrenandyoungpersonshub/">go to Children and Young Persons Hub <i class="fa fa-angle-right"></i></a>
+            	</div>
+        </div>
+</div>
+--End HUB highlight-->  
+          
+
+          			
+          <div class="module open mint">
+						<div class="moduleHeader">
+							<h2><a href="#">Hubs and Interactive Apps</a></h2>
+						</div>
+						<div class="moduleBody">
+							<ul>
+								<!-- navigation object : Hubs and Tools Box --><li>
+<a href="/en/releasesandpublications/hubs/p-cyp/childrenandyoungpersonshub/">
+Children and Young Persons Hub    
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/hubs/p-hh/housinghub/">
+Housing Hub    
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/hubs/p-wmi/womenandmeninirelandhub/">
+Women and Men in Ireland Hub    
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/hubs/p-transo/transporthub/">
+Transport Hub    
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/hubs/p-opi/olderpersonsinformationhub/">
+Older Persons Information Hub    
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/hubs/p-wbhub/well-beinginformationhub/">
+Well-being Hub: How Ireland is Doing    
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/db/db-transp/transportdashboard/">
+Transport Dashboard    
+</a>
+</li>
+<li>
+<a href="https://visual.cso.ie/?body=entity/ima/cop/2022" target="_blank">
+Census 2022 Interactive Map   
+</a>
+</li><li>
+<a href="/en/releasesandpublications/ep/p-uahub/irelandsrelationshipwithukrainianpeopleandtheireconomy/">
+Ireland's Relationship with Ukrainian People and their Economy    
+</a>
+</li>
+<li>
+<a href="/en/interactivezone/visualisationtools/babynamesofireland/">
+Baby Names of Ireland: Interactive Visualisation   <span class="label">Updated</span> 
+</a>
+</li>
+<li>
+<a href="/en/releasesandpublications/ep/p-covid19/covid-19informationhub/">
+COVID-19 Information Hub   <span class="label">Updated</span> 
+</a>
+</li>
+<li>
+<a href="https://visual.cso.ie" target="_blank">
+CSO Visual: Interactive Visualisations   <span class="label">Updated</span>
+</a>
+</li>
+							</ul>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/interactivezone/visualisationtools/" target="_blank">CSO visual: all interactive visualisations <i class="fa fa-angle-right"></i></a>
+						</div>
+						<div class="moduleFooter">
+							<a class="btn" href="/en/statistics/hubsdashboards/">all hubs &amp; dashboards <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div><!--/module-->
+
+          
+					<div class="sideitem cobalt">
+						<h3><a href="/en/interactivezone/">Education &amp; Visualisation <i class="fa fa-lightbulb-o fa-lg"></i></a></h3>
+						<p>Our interactive zone has visualisations, infographics, school resources, competitions and much more...</p>
+                      <div class="sideitemFooter">
+						<a class="btn" href="/en/interactivezone/">Go to Education &amp; Visualisation <i class="fa fa-angle-right"></i></a>
+                      </div>
+					</div><!--/sideitem-->
+                 
+                                                                     
+
+
+          
+				</div><!--/col-->
+			</div><!--/row-->
+			
+		</div><!--/content-->
+<!-- start footer -->
+<!-- navigation object : Footer code --><!--start Code only (admin)-->
+<!-- GLOBAL FOOTER -->
+<div class="footer container">
+  <div class="row">
+     <div class="col span4 contactDetails">
+        <h2>Contact us </h2>
+        <p><b>Central Statistics Office</b><br>
+           Skehard Road, Cork T12 X00E, Ireland
+        </p>
+        <div class="divFooterTable">
+           <div class="divFooterTableBody">
+              <div class="divFooterTableRow">
+                 <div class="divFooterTableCell"><b>Tel:</b></div>
+                 <div class="divFooterTableCell"><a href="tel:+353214535000">(+353) 21 453 5000</a></div>
+              </div>
+              
+              <div class="divFooterTableRow">
+                 <div class="divFooterTableCell"><b>E-Mail:</b></div>
+                 <div class="divFooterTableCell"><a href="mailto:information@cso.ie">information@cso.ie</a></div>
+              </div>
+           </div>
+        </div> <!-- divFooterTable.com -->
+     </div> <!--/col-->
+
+     <div class="col span4 footerLinks">
+        <h2>Links </h2>
+<ul class="footerNavList">
+           <li><a href="/en/aboutus/whoweare/copyrightpolicy/">&copy; 2026</a></li>
+           <li><a href="/en/aboutus/whoweare/copyrightpolicy/">Copyright and Re-use Policy</a></li>
+           <li><a href="/en/freedomofinformation/">Freedom of Information</a></li>
+           <li><a href="/en/accessibilityatthecso/accessibility/">Accessibility</a></li>
+           <li><a href="/en/aboutus/lgdp/dataprotectionprivacytransparency/">Data Protection & Transparency</a></li>
+           <li><a href="/en/aboutus/lgdp/dataprotectionprivacytransparency/websiteprivacystatement/">Privacy & Cookies</a></li>
+           <li><a href="/en/aboutus/contactus/feedback/">Feedback</a></li>
+           <li><a href="/en/aboutus/contactus/">Contact us</a></li>
+           </ul>
+     </div> <!--/col-->
+
+     <div class="col span4 footerSocial">
+        <h2>Careers</h2>
+        <p>You can count on a rewarding career with the CSO.</p>
+        <p><a href="/en/aboutus/careers/">Learn about our variety of roles and the benefits of working with the CSO.</a></p>
+        <h2>Follow us </h2>
+        <ul class="socialNavList inverted">
+           <li class="youtube">
+            <a href="https://www.youtube.com/user/CSOIrelandMedia" title="Follow us on YouTube" target="_blank"><i class="fa-brands fa-square-youtube fa-xl"></i></a>
+          </li>
+           <li class="twitter">
+            <a href="https://twitter.com/csoIreland" title="Follow us on Twitter" target="_blank"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
+          </li>
+           <li class="facebook">
+            <a href="https://www.facebook.com/CSOIreland" title="Like us on Facebook"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+          </li>
+           <li class="instagram">
+            <a href="https://www.instagram.com/csoireland/" title="Follow us on Instagram"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
+          </li>
+          <li class="linkedin">
+            <a href="https://www.linkedin.com/company/csoireland" title="Follow us LinkedIn"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+         </li>
+          <li class="whatsapp">
+            <a href="https://whatsapp.com/channel/0029VbCWqldBlHpfx897413J" title="Get updates on WhatsApp fa-lg"><i class="fa-brands fa-square-whatsapp fa-xl"></i></a>
+         </li>
+
+   </ul>
+     </div> <!--/col-->
+  </div> <!--/row-->
+</div><!--/footer container-->
+
+</body>
+</html>
+ <!-- /GLOBAL FOOTER -->
+<!--end Code only (admin)-->	
+<!-- end footer -->

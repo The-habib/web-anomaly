@@ -1,0 +1,109 @@
+{
+  "domain": "justice.gov",
+  "canonical_url": "https://www.justice.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:34.580579+00:00",
+  "preflight": {
+    "domain": "justice.gov",
+    "dns_resolved": true,
+    "dns_ip": "172.65.90.25",
+    "status": "SUCCESS",
+    "final_url": "https://www.justice.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://justice.gov/",
+      "https://www.justice.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1939.39,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Department of Justice |  Homepage | United States Department of Justice",
+      "generator": "Drupal 11 (https://www.drupal.org)",
+      "doctype": "HTML5/Standard",
+      "links_count": 99,
+      "scripts_count": 11,
+      "images_count": 48,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Content-Encoding": "gzip",
+        "Content-Language": "en",
+        "Content-Security-Policy": "object-src 'none'; frame-ancestors 'self' https://doj365.sharepoint.us; report-uri /report-csp-violation",
+        "Content-Type": "text/html; charset=UTF-8",
+        "ETag": "\"1786994645-gzip\"",
+        "Last-Modified": "Mon, 17 Aug 2026 19:24:05 GMT",
+        "Referrer-Policy": "no-referrer-when-downgrade",
+        "Server": "nginx",
+        "X-Age": "0",
+        "X-AH-Environment": "prod",
+        "X-Cache-Hits": "2",
+        "X-Content-Type-Options": "nosniff",
+        "X-Drupal-Dynamic-Cache": "UNCACHEABLE (poor cacheability)",
+        "X-Frame-Options": "ALLOW-FROM https://doj365.sharepoint.us",
+        "X-Generator": "Drupal 11 (https://www.drupal.org)",
+        "X-Request-ID": "v-36530b76-9a71-11f1-8289-7b845312d150",
+        "X-XSS-Protection": "0",
+        "Content-Length": "15494",
+        "Cache-Control": "public, max-age=300",
+        "Expires": "Mon, 17 Aug 2026 19:30:34 GMT",
+        "Date": "Mon, 17 Aug 2026 19:25:34 GMT",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "content_length": 101854
+    },
+    "text_length": 2729
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192535",
+    "last_seen": "20260817192535",
+    "earliest_iso": "2026-08-17T19:25:34.580579+00:00",
+    "latest_iso": "2026-08-17T19:25:34.580579+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/justice_gov/rendered.html",
+      "sha256": "03df9a00ec33ce6d260671b24b4d07af3daf55b3aed5425ceb3405ed457c2572",
+      "size_bytes": 101854
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/justice_gov/timeline.json",
+      "sha256": "8b13a31f210783be4b9eae23266ac6720d4e30931f7cd1798aa4feea3425c11f",
+      "size_bytes": 971
+    }
+  ]
+}

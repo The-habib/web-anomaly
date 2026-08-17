@@ -1,0 +1,66 @@
+{
+  "domain": "britishmuseum.org",
+  "canonical_url": "https://www.britishmuseum.org/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:28:08.913373+00:00",
+  "preflight": {
+    "domain": "britishmuseum.org",
+    "dns_resolved": true,
+    "dns_ip": "104.20.41.81",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://www.britishmuseum.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://britishmuseum.org/",
+      "https://www.britishmuseum.org/"
+    ],
+    "status_code": 403,
+    "latency_ms": 163.99,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192814",
+    "last_seen": "20260817192814",
+    "earliest_iso": "2026-08-17T19:28:08.913373+00:00",
+    "latest_iso": "2026-08-17T19:28:08.913373+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/britishmuseum_org/timeline.json",
+      "sha256": "c5c2ca27fbdd2a8a94d2f1ef9a38cad82df38240a652ea06f91f736fbd8c96be",
+      "size_bytes": 972
+    }
+  ]
+}

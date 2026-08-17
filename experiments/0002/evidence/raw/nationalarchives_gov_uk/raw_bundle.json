@@ -1,0 +1,103 @@
+{
+  "domain": "nationalarchives.gov.uk",
+  "canonical_url": "https://www.nationalarchives.gov.uk/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:53.464840+00:00",
+  "preflight": {
+    "domain": "nationalarchives.gov.uk",
+    "dns_resolved": true,
+    "dns_ip": "108.158.46.112",
+    "status": "SUCCESS",
+    "final_url": "https://www.nationalarchives.gov.uk/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://nationalarchives.gov.uk/",
+      "https://www.nationalarchives.gov.uk/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1884.97,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home - The National Archives",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 59,
+      "scripts_count": 3,
+      "images_count": 7,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 19:24:04 GMT",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Server": "nginx",
+        "Cache-Control": "public, max-age=3600",
+        "Content-Security-Policy": "default-src 'self'; object-src 'none'; frame-ancestors 'self' https://wagtail.nationalarchives.gov.uk; child-src 'none'; connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://noembed.com *.google-analytics.com *.googletagmanager.com *.analytics.google.com; font-src 'self' https://fonts.gstatic.com https://use.typekit.net *.gstatic.com data:; frame-src 'self' https://www.youtube-nocookie.com www.google.com www.youtube.com www.youtube-nocookie.com; img-src 'self' https://*.nationalarchives.gov.uk https://i.ytimg.com https://img.youtube.com https://www.googletagmanager.com img.youtube.com i.ytimg.com *.googletagmanager.com ssl.gstatic.com www.gstatic.com *.google-analytics.com; media-src 'self' https://*.nationalarchives.gov.uk; script-src 'self' https://www.googletagmanager.com https://*.sentry-cdn.com https://www.youtube.com ajax.googleapis.com *.googleanalytics.com *.google-analytics.com www.youtube.com *.gstatic.com *.googletagmanager.com tagmanager.google.com; style-src 'self' https://fonts.googleapis.com https://p.typekit.net https://use.typekit.net ajax.googleapis.com fonts.googleapis.com *.gstatic.com googletagmanager.com tagmanager.google.com; worker-src 'self' blob: www.nationalarchives.gov.uk",
+        "Cross-Origin-Embedder-Policy": "unsafe-none",
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "Cross-Origin-Resource-Policy": "same-origin",
+        "Referrer-Policy": "strict-origin-when-cross-origin, no-referrer-when-downgrade",
+        "X-Content-Type-Options": "nosniff",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 5f4d92760eb44aa9b547a50acdc4f48e.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS53-P2",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-Amz-Cf-Id": "FqefCU2iruxJAh_wJOn-cvOX7aTxSzgi5xH86Lq-X7WD7-ulC08lew==",
+        "Age": "109"
+      },
+      "content_length": 52212
+    },
+    "text_length": 1197
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192554",
+    "last_seen": "20260817192554",
+    "earliest_iso": "2026-08-17T19:25:53.464840+00:00",
+    "latest_iso": "2026-08-17T19:25:53.464840+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nationalarchives_gov_uk/rendered.html",
+      "sha256": "1fb441729766802297a140b1f065ffa3f9df622f404f22628556b2a576521440",
+      "size_bytes": 52212
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nationalarchives_gov_uk/timeline.json",
+      "sha256": "b085eac6343b8b943c0730e71a7a60a12d35bc7c0ab4c2267a719ce2cd5ed92c",
+      "size_bytes": 982
+    }
+  ]
+}

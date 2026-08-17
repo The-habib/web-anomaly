@@ -1,0 +1,98 @@
+{
+  "domain": "hawaii.gov",
+  "canonical_url": "https://portal.ehawaii.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:21.653977+00:00",
+  "preflight": {
+    "domain": "hawaii.gov",
+    "dns_resolved": true,
+    "dns_ip": "162.221.244.172",
+    "status": "SUCCESS",
+    "final_url": "https://portal.ehawaii.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://hawaii.gov/",
+      "https://portal.ehawaii.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2562.6,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "The Official Website of the Aloha State | Hawaii.gov",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 89,
+      "scripts_count": 6,
+      "images_count": 1,
+      "headers": {
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Date": "Mon, 17 Aug 2026 18:47:22 GMT",
+        "Last-Modified": "Mon, 17 Aug 2026 18:04:17 GMT",
+        "Server": "AmazonS3",
+        "x-amz-server-side-encryption": "AES256",
+        "Content-Encoding": "gzip",
+        "ETag": "W/\"f6efa73eb10c86cf07b4fc17e5673e00\"",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 34e132ac7dbc5297621cf2bb6f93b3d0.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "MRS53-P4",
+        "X-Amz-Cf-Id": "ajEwtrzmV9A_6lW9cdgVygoy_Mhiq_f-dzlWhNterc-I2vxVxVAWMg==",
+        "Age": "2281"
+      },
+      "content_length": 33492
+    },
+    "text_length": 1194
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192522",
+    "last_seen": "20260817192522",
+    "earliest_iso": "2026-08-17T19:25:21.653977+00:00",
+    "latest_iso": "2026-08-17T19:25:21.653977+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/hawaii_gov/rendered.html",
+      "sha256": "708dc12b08ccc1ed7e4e2721445ffc0f0360ad58597e131c265fdf4802afe3fa",
+      "size_bytes": 33492
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/hawaii_gov/timeline.json",
+      "sha256": "c2593e3656f532cdde6781ebdd98a153ced956420eee167a3ab989a3e10ed57b",
+      "size_bytes": 969
+    }
+  ]
+}

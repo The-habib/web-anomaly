@@ -1,0 +1,92 @@
+{
+  "domain": "gob.mx",
+  "canonical_url": "https://www.gob.mx/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:04.427203+00:00",
+  "preflight": {
+    "domain": "gob.mx",
+    "dns_resolved": true,
+    "dns_ip": "207.249.122.223",
+    "status": "SUCCESS",
+    "final_url": "https://www.gob.mx/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 200,
+    "latency_ms": 3971.87,
+    "content_type": "text/html;charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Portal Gob MX",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 50,
+      "scripts_count": 37,
+      "images_count": 26,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Vary": "Accept-Encoding",
+        "X-Akamai-Transformed": "9 13275 0 pmb=mRUM,1",
+        "Content-Encoding": "gzip",
+        "Expires": "Mon, 17 Aug 2026 19:25:05 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Mon, 17 Aug 2026 19:25:05 GMT",
+        "Content-Length": "14953",
+        "Connection": "keep-alive",
+        "Set-Cookie": "INGRESS_STICKY=1786994706.197.16113.126722|e111204022b23e5bf7a7a6e3313c6224; Path=/; HttpOnly, JSESSIONID=y9N8GElny8bEFZjO-KrQYnbdelr-ADo0ZCm58OHe.gobmx-wildfly-27; path=/",
+        "Server-Timing": "cdn-cache; desc=MISS, edge; dur=497, origin; dur=55, ak_p; desc=\"1786994704797_1611765349_368070079_55215_12805_2_7_-\";dur=1"
+      },
+      "content_length": 81454
+    },
+    "text_length": 877
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192511",
+    "last_seen": "20260817192511",
+    "earliest_iso": "2026-08-17T19:25:04.427203+00:00",
+    "latest_iso": "2026-08-17T19:25:04.427203+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/gob_mx/rendered.html",
+      "sha256": "6c2c1087fc5e7318554d75fd09319799b6867dd259f787586d5ef87af003143d",
+      "size_bytes": 81454
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/gob_mx/timeline.json",
+      "sha256": "04f081a62038590a13fc0158e49679a9c7559c0e05d9de626b733d1ad46f755d",
+      "size_bytes": 965
+    }
+  ]
+}

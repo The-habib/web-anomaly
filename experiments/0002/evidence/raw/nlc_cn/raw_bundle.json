@@ -1,0 +1,61 @@
+{
+  "domain": "nlc.cn",
+  "canonical_url": "https://nlc.cn",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:30:31.515751+00:00",
+  "preflight": {
+    "domain": "nlc.cn",
+    "dns_resolved": true,
+    "dns_ip": "202.96.31.117",
+    "status": "CONNECTION_ERROR",
+    "final_url": "https://nlc.cn",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": null,
+    "latency_ms": 8492.82,
+    "content_type": null,
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": "HTTPSConnectionPool(host='www.nlc.cn', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nlc.cn', port=443) at 0x78b516f51970>, 'Connection to www.nlc.cn timed out. (connect timeout=5)'))"
+  },
+  "live_evidence": {
+    "status_code": null,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": null,
+    "last_seen": null,
+    "earliest_iso": null,
+    "latest_iso": null,
+    "years_span": 0,
+    "total_captures": 0,
+    "unique_years_observed": 0,
+    "observed_year_ratio": 0.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 0.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "unproven",
+    "archive_sources": [],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nlc_cn/timeline.json",
+      "sha256": "bec8507831aa99a9cfb0dbee444cc617d8fc11ab4a3595964a791170a15d3863",
+      "size_bytes": 520
+    }
+  ]
+}

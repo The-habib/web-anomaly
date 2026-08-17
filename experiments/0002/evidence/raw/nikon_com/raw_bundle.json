@@ -1,0 +1,104 @@
+{
+  "domain": "nikon.com",
+  "canonical_url": "https://www.nikon.com:443/",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:35:05.195819+00:00",
+  "preflight": {
+    "domain": "nikon.com",
+    "dns_resolved": true,
+    "dns_ip": "15.197.198.50",
+    "status": "SUCCESS",
+    "final_url": "https://www.nikon.com:443/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://nikon.com/",
+      "https://www.nikon.com:443/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1339.01,
+    "content_type": "text/html;charset=utf-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Nikon",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 34,
+      "scripts_count": 16,
+      "images_count": 4,
+      "headers": {
+        "Content-Type": "text/html;charset=utf-8",
+        "Content-Length": "36259",
+        "Connection": "keep-alive",
+        "x-frame-options": "SAMEORIGIN",
+        "Accept-Ranges": "bytes",
+        "x-vhost": "nikoncom",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31557600",
+        "X-Served-By": "cache-nrt-rjtf7700041-NRT",
+        "X-Timer": "S1786993131.304417,VS0,VS0,VE42",
+        "Content-Security-Policy": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;",
+        "Date": "Mon, 17 Aug 2026 19:35:04 GMT",
+        "Cache-Control": "max-age=0,s-maxage=600,stale-while-revalidate=3600,stale-if-error=3600",
+        "Expires": "Mon, 17 Aug 2026 19:33:55 GMT",
+        "ETag": "W/\"8da3-65942c2cf4123\"",
+        "Vary": "Accept-Encoding",
+        "X-Cache": "Hit from cloudfront",
+        "Via": "1.1 8a4ad7a380f44490867006729a8f8656.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "BOM78-P11",
+        "X-Amz-Cf-Id": "_5Acbo5XXclOrVfPKZi-_Y4NXO8A0Hz6akan_mxseuzFc_rB_WUknw==",
+        "Age": "369"
+      },
+      "content_length": 36259
+    },
+    "text_length": 970
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193510",
+    "last_seen": "20260817193510",
+    "earliest_iso": "2026-08-17T19:35:05.195819+00:00",
+    "latest_iso": "2026-08-17T19:35:05.195819+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/nikon_com/rendered.html",
+      "sha256": "20950e8db29d2eb1666f6fca59ca40f97255c50c5a83025e418615087a84b8e6",
+      "size_bytes": 36259
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/nikon_com/timeline.json",
+      "sha256": "87415680d1b6cfe43f2c910b9e6c4f245ed50538f3d71b020cf66317cb772b10",
+      "size_bytes": 968
+    }
+  ]
+}

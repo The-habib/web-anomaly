@@ -1,0 +1,103 @@
+{
+  "domain": "oup.com",
+  "canonical_url": "https://corp.oup.com",
+  "category": "Long-running companies",
+  "collection_timestamp": "2026-08-17T19:35:16.799297+00:00",
+  "preflight": {
+    "domain": "oup.com",
+    "dns_resolved": true,
+    "dns_ip": "75.2.119.185",
+    "status": "SUCCESS",
+    "final_url": "https://corp.oup.com",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://oup.com/",
+      "https://corp.oup.com"
+    ],
+    "status_code": 200,
+    "latency_ms": 1343.22,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Homepage - Oxford University Press",
+      "generator": "Site Kit by Google 1.185.0",
+      "doctype": "HTML5/Standard",
+      "links_count": 81,
+      "scripts_count": 34,
+      "images_count": 19,
+      "headers": {
+        "Date": "Mon, 17 Aug 2026 19:35:17 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "cf-cache-status": "DYNAMIC",
+        "Vary": "Accept-Encoding, Accept-Encoding,Cookie",
+        "Link": "<https://corp.oup.com/wp-json/>; rel=\"https://api.w.org/\", <https://corp.oup.com/wp-json/wp/v2/pages/124>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://corp.oup.com/>; rel=shortlink",
+        "X-Powered-By": "WP Engine",
+        "X-Tec-Api-Origin": "https://corp.oup.com",
+        "X-Tec-Api-Root": "https://corp.oup.com/wp-json/tribe/events/v1/",
+        "X-Tec-Api-Version": "v1",
+        "X-Cacheable": "SHORT",
+        "Cache-Control": "max-age=600, must-revalidate",
+        "X-Cache": "HIT: 97",
+        "X-Cache-Group": "normal",
+        "set-cookie": "__cf_bm=eR.Ul81.TW7BfF7hBaVkcvD3QIs6EVIr_wPSfqnnIwY-1786995316.9347684-1.0.1.1-C1CMKtx7rjv9TBnRsUFz5yOnqyXCPC4P4pDZyIatT.lYZR1y7O38hfcMjFWfdRWYZdMRphDy4TN_YRn8yHVOp5Wc_8gQNUaIPe_Tq83WuWBH3EtECtvV2idRisbK66ck; HttpOnly; SameSite=None; Secure; Path=/; Domain=corp.oup.com; Expires=Mon, 17 Aug 2026 20:05:17 GMT",
+        "Content-Encoding": "br",
+        "CF-RAY": "a2cb1efadfbf40d5-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "content_length": 88209
+    },
+    "text_length": 2760
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817193522",
+    "last_seen": "20260817193522",
+    "earliest_iso": "2026-08-17T19:35:16.799297+00:00",
+    "latest_iso": "2026-08-17T19:35:16.799297+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/oup_com/rendered.html",
+      "sha256": "6b798a672d59670bb005eeefadafc558e844ff4ceb752c873e7da9e62980ab7d",
+      "size_bytes": 88209
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/oup_com/timeline.json",
+      "sha256": "8c0263c3965345ea29fc998c4685c5bbdc5b7f38e856cba717a4456ff8bcc93b",
+      "size_bytes": 966
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "domain": "michigan.gov",
+  "canonical_url": "https://michigan.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:25:47.625910+00:00",
+  "preflight": {
+    "domain": "michigan.gov",
+    "dns_resolved": true,
+    "dns_ip": "104.81.29.50",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://michigan.gov/",
+    "redirect_count": 0,
+    "redirect_chain": [],
+    "status_code": 403,
+    "latency_ms": 222.56,
+    "content_type": "text/html",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192547",
+    "last_seen": "20260817192547",
+    "earliest_iso": "2026-08-17T19:25:47.625910+00:00",
+    "latest_iso": "2026-08-17T19:25:47.625910+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/michigan_gov/timeline.json",
+      "sha256": "fb6ed0d836e57f9c97177a076915ef9bf9df840e6056cc6bdbccf335ccb44dc8",
+      "size_bytes": 967
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "domain": "supremecourt.gov",
+  "canonical_url": "https://www.supremecourt.gov/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:27:23.056525+00:00",
+  "preflight": {
+    "domain": "supremecourt.gov",
+    "dns_resolved": true,
+    "dns_ip": "23.216.151.35",
+    "status": "SUCCESS",
+    "final_url": "https://www.supremecourt.gov/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://supremecourt.gov/",
+      "https://www.supremecourt.gov/"
+    ],
+    "status_code": 200,
+    "latency_ms": 1131.58,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Home - Supreme Court of the United States",
+      "generator": "None",
+      "doctype": "HTML5/Standard",
+      "links_count": 176,
+      "scripts_count": 19,
+      "images_count": 4,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Last-Modified": "Mon, 17 Aug 2026 19:00:00 GMT",
+        "Vary": "Accept-Encoding",
+        "X-Akamai-Transformed": "9 - 0 pmb=mRUM,2",
+        "Content-Encoding": "gzip",
+        "Cache-Control": "private, max-age=5",
+        "Date": "Mon, 17 Aug 2026 19:27:23 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive, Transfer-Encoding",
+        "Server-Timing": "cdn-cache; desc=HIT, edge; dur=197, origin; dur=0, ak_p; desc=\"1786994843163_399782553_3478662695_19588_8204_2_7_-\";dur=1",
+        "Alt-Svc": "h3=\":443\"; ma=93600",
+        "Strict-Transport-Security": "max-age=31536000"
+      },
+      "content_length": 111860
+    },
+    "text_length": 2803
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192728",
+    "last_seen": "20260817192728",
+    "earliest_iso": "2026-08-17T19:27:23.056525+00:00",
+    "latest_iso": "2026-08-17T19:27:23.056525+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/supremecourt_gov/rendered.html",
+      "sha256": "47805f62d1406cd0814a261fe60a57281f3a3935e325f3a39c90e2efb14d1b28",
+      "size_bytes": 111860
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/supremecourt_gov/timeline.json",
+      "sha256": "ca8cca9b94993bb278e957249149bdea6d66b930633e071d0e5ba16464ba13e6",
+      "size_bytes": 976
+    }
+  ]
+}

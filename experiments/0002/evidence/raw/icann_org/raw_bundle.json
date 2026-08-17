@@ -1,0 +1,66 @@
+{
+  "domain": "icann.org",
+  "canonical_url": "https://www.icann.org/",
+  "category": "Nonprofits",
+  "collection_timestamp": "2026-08-17T19:29:19.879780+00:00",
+  "preflight": {
+    "domain": "icann.org",
+    "dns_resolved": true,
+    "dns_ip": "192.0.43.7",
+    "status": "HTTP_FAILURE",
+    "final_url": "https://www.icann.org/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://icann.org/",
+      "https://www.icann.org/"
+    ],
+    "status_code": 403,
+    "latency_ms": 1465.42,
+    "content_type": "text/html; charset=UTF-8",
+    "has_robots": false,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 403,
+    "metadata": {},
+    "text_length": 0
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192924",
+    "last_seen": "20260817192924",
+    "earliest_iso": "2026-08-17T19:29:19.879780+00:00",
+    "latest_iso": "2026-08-17T19:29:19.879780+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/icann_org/timeline.json",
+      "sha256": "0d03ebae034fd405a0c21804918e59287f77abdf169ba81427394b925ac51b79",
+      "size_bytes": 964
+    }
+  ]
+}

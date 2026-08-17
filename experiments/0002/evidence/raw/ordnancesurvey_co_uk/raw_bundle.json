@@ -1,0 +1,118 @@
+{
+  "domain": "ordnancesurvey.co.uk",
+  "canonical_url": "https://www.ordnancesurvey.co.uk/",
+  "category": "Government",
+  "collection_timestamp": "2026-08-17T19:26:12.874712+00:00",
+  "preflight": {
+    "domain": "ordnancesurvey.co.uk",
+    "dns_resolved": true,
+    "dns_ip": "159.60.142.33",
+    "status": "SUCCESS",
+    "final_url": "https://www.ordnancesurvey.co.uk/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://ordnancesurvey.co.uk/",
+      "https://www.ordnancesurvey.co.uk/"
+    ],
+    "status_code": 200,
+    "latency_ms": 2910.12,
+    "content_type": "text/html; charset=utf-8",
+    "has_robots": true,
+    "has_sitemap": true,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "Ordnance Survey | Great Britain's national mapping service",
+      "generator": "Contensis",
+      "doctype": "HTML5/Standard",
+      "links_count": 28,
+      "scripts_count": 10,
+      "images_count": 10,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 17 Aug 2026 18:59:22 GMT",
+        "access-control-allow-credentials": "true",
+        "surrogate-control": "max-age=3600",
+        "x-is-iis-fallback": "false",
+        "request-handler-metrics": "routeInfoFetch: 6 ms (nodeLookup: 3ms, getRouteInfoFetch: 3ms), generalRequestFetch: 2337 ms, fallbackRequest 0 ms",
+        "x-version-no": "356",
+        "alt-svc": "h3=\":443\";ma=60;",
+        "x-origin-server": "backend-coordinator",
+        "x-host": "live-osweb-ordnancesurvey.cloud.contensis.com",
+        "x-varnish-authentication": "true",
+        "x-grace": "72h",
+        "x-backend-ttl": "3600.000",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "x-varnish": "77143213 77573473",
+        "x-contensis-groups-authenticated": "|0|",
+        "x-authcache-status": "NotAuthenticated",
+        "x-contensis-viewer-groups": "0",
+        "debug-project": "",
+        "debug-delivery-api-viewer-group": "",
+        "x-authcache-get-key": "skip",
+        "x-contensis-authorised": "True",
+        "x-age": "1610",
+        "cache-control": "public",
+        "accept-ranges": "bytes",
+        "content-length": "41750",
+        "x-server-name": "z-ordnancesurvey-CACHE1",
+        "strict-transport-security": "max-age=15768000",
+        "x-geoip-country-code": "IN",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-envoy-upstream-service-time": "718",
+        "x-volterra-location": "mb2-mum",
+        "server": "volt-adc"
+      },
+      "content_length": 197575
+    },
+    "text_length": 392
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192620",
+    "last_seen": "20260817192620",
+    "earliest_iso": "2026-08-17T19:26:12.874712+00:00",
+    "latest_iso": "2026-08-17T19:26:12.874712+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/ordnancesurvey_co_uk/rendered.html",
+      "sha256": "d0ff4a394d1b3349c9cc6bf1fa64441ba6ee3cb38c18569de9e873a6031a1304",
+      "size_bytes": 197575
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/ordnancesurvey_co_uk/timeline.json",
+      "sha256": "27840ee2915488023399c8df341dd4f18662316812c418f1ffc0cde6de864103",
+      "size_bytes": 995
+    }
+  ]
+}

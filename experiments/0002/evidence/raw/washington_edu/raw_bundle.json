@@ -1,0 +1,92 @@
+{
+  "domain": "washington.edu",
+  "canonical_url": "https://www.washington.edu/",
+  "category": "Universities",
+  "collection_timestamp": "2026-08-17T19:24:11.075930+00:00",
+  "preflight": {
+    "domain": "washington.edu",
+    "dns_resolved": true,
+    "dns_ip": "128.208.60.208",
+    "status": "SUCCESS",
+    "final_url": "https://www.washington.edu/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://washington.edu/",
+      "https://www.washington.edu/"
+    ],
+    "status_code": 200,
+    "latency_ms": 3834.77,
+    "content_type": "text/html",
+    "has_robots": true,
+    "has_sitemap": false,
+    "error": null
+  },
+  "live_evidence": {
+    "status_code": 200,
+    "metadata": {
+      "title": "UW Homepage",
+      "generator": "WordPress 6.9.7",
+      "doctype": "HTML5/Standard",
+      "links_count": 149,
+      "scripts_count": 15,
+      "images_count": 5,
+      "headers": {
+        "last-modified": "Mon, 17 Aug 2026 16:36:23 GMT",
+        "etag": "\"13e9e-65940c54f8454\"",
+        "accept-ranges": "bytes",
+        "content-length": "81566",
+        "content-type": "text/html",
+        "date": "Mon, 17 Aug 2026 19:24:11 GMT",
+        "server": "Apache",
+        "set-cookie": "_affinity=w11|aoNf3; path=/; HttpOnly; Secure",
+        "cache-control": "private"
+      },
+      "content_length": 81566
+    },
+    "text_length": 827
+  },
+  "archive_evidence": {
+    "wayback_summary": {
+      "total_snapshots": 0,
+      "first_seen": null,
+      "last_seen": null,
+      "status_counts": {}
+    },
+    "commoncrawl_error": "query_commoncrawl_timeline() got an unexpected keyword argument 'limit'"
+  },
+  "timeline_metrics": {
+    "first_seen": "20260817192418",
+    "last_seen": "20260817192418",
+    "earliest_iso": "2026-08-17T19:24:11.075930+00:00",
+    "latest_iso": "2026-08-17T19:24:11.075930+00:00",
+    "years_span": 0,
+    "total_captures": 1,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 1.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "live"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "raw_artifacts": [
+    {
+      "type": "html",
+      "file_name": "rendered.html",
+      "relative_path": "evidence/raw/washington_edu/rendered.html",
+      "sha256": "d17e8bd50b66087b7ccbe2633fb816f644440adf7ec5ce46b2fb08313a1a55cd",
+      "size_bytes": 81566
+    },
+    {
+      "type": "timeline",
+      "file_name": "timeline.json",
+      "relative_path": "evidence/raw/washington_edu/timeline.json",
+      "sha256": "ef92558a90bd93e1efd616e281ffa71c4382c87607ab6dfcea57a5d5669a9e59",
+      "size_bytes": 973
+    }
+  ]
+}
