@@ -1,0 +1,19 @@
+{
+  "experiment_name": "Phase 1.5 Deep Web Archaeology & Root-vs-Depth Paired Study",
+  "sampling_seed": 42,
+  "study_cohort_size": 300,
+  "category_quotas": {
+    "Universities": 60,
+    "Government": 60,
+    "Nonprofits": 45,
+    "Long-running companies": 45,
+    "Open-source/project sites": 45,
+    "Personal/independent sites": 45
+  },
+  "max_candidates_per_domain": 50,
+  "max_retrievals_per_domain": 15,
+  "batch_size": 50,
+  "batch_count": 6,
+  "execution_mode": "LIVE",
+  "scoring_engine": "AnomalyScorer_v1.4_frozen"
+}
