@@ -1,0 +1,21 @@
+{
+  "experiment_id": "phase1_7_path_density_validation",
+  "corpus_version": "2.0",
+  "total_population_domains": 1000,
+  "sampling_seed": 42,
+  "arms": {
+    "uniform": {
+      "target_domains": 100,
+      "blinded_label": "STUDY_A"
+    },
+    "density_prioritized": {
+      "target_domains": 100,
+      "blinded_label": "STUDY_B"
+    }
+  },
+  "holdout_domains": 200,
+  "max_retrievals_per_domain": 15,
+  "http_timeout": 5,
+  "anomaly_threshold": 50.0,
+  "candidate_threshold": 40.0
+}
