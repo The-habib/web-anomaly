@@ -1,0 +1,36 @@
+{
+  "audit_timestamp": "2026-08-17T19:59:55.229874+00:00",
+  "corpus_integrity": {
+    "csv_rows_count": 1000,
+    "unique_domains_count": 1000,
+    "category_distribution": {
+      "Universities": 200,
+      "Government": 200,
+      "Nonprofits": 150,
+      "Long-running companies": 150,
+      "Open-source/project sites": 150,
+      "Personal/independent sites": 150
+    }
+  },
+  "scoring_reconciliation": {
+    "total_scored_results": 1000,
+    "score_histogram": {
+      "0": 997,
+      "2": 1,
+      "4": 2
+    },
+    "candidates_count": 3,
+    "findings_count": 3,
+    "replayed_identical_rate": 1.0
+  },
+  "review_reconciliation": {
+    "total_reviews_count": 23,
+    "verdict_histogram": {
+      "POTENTIAL_ANOMALY": 2,
+      "ORDINARY": 20,
+      "FALSE_NEGATIVE_CANDIDATE": 1
+    },
+    "reviewed_candidate_count": 3,
+    "reviewed_control_count": 20
+  }
+}
