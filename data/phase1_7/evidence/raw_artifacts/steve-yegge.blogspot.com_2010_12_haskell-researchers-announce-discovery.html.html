@@ -1,0 +1,1459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Stevey's Blog Rants: Haskell Researchers Announce Discovery of Industry Programmer Who Gives a Shit</title>
+
+  <script type="text/javascript">(function() { (function(){function b(g){this.t={};this.tick=function(h,m,f){var n=f!=void 0?f:(new Date).getTime();this.t[h]=[n,m];if(f==void 0)try{window.console.timeStamp("CSI/"+h)}catch(q){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var e=(a=window.performance.timing)&&a.responseStart;var p=e>0?new b(e):new b;window.jstiming={Timer:b,load:p};if(a){var c=a.navigationStart;c>0&&e>=c&&(window.jstiming.srt=e-c)}if(a){var d=window.jstiming.load;
+c>0&&e>=c&&(d.tick("_wtsrt",void 0,c),d.tick("wtsrt_","_wtsrt",e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&c>0&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",c))),a==null&&window.gtbExternal&&(a=window.gtbExternal.pageT()),a==null&&window.external&&(a=window.external.pageT,d&&c>0&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();window.tickAboveFold=function(b){var a=0;if(b.offsetParent){do a+=b.offsetTop;while(b=b.offsetParent)}b=a;b<=750&&window.jstiming.load.tick("aft")};var k=!1;function l(){k||(k=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",l,!1):window.attachEvent("onscroll",l);
+ })();</script><script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return c[1].search("(^|&)m=")>=0?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(d.indexOf("Mobile")!=-1&&d.indexOf("WebKit")!=-1&&d.indexOf("iPad")==-1||d.indexOf("Opera Mini")!=-1||d.indexOf("IEMobile")!=-1){var e=a();e&&window.location.replace(e)};
+</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Stevey&#39;s Blog Rants - RSS" href="https://steve-yegge.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://www.blogger.com/feeds/13674163/posts/default" />
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/4843689720028827443/comments/default" />
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/static/v1/v-css/1601750677-blog_controls.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=13674163&zx=e1765c07-d2d0-4d69-bd1c-c9e888df1350"/>
+
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#fff;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Georgia,Serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+a:link {
+  color:#58a;
+  text-decoration:none;
+  }
+a:visited {
+  color:#969;
+  text-decoration:none;
+  }
+a:hover {
+  color:#c60;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Header
+----------------------------------------------- */
+@media all {
+  #header {
+    width:660px;
+    margin:0 auto 10px;
+    border:1px solid #ccc;
+    }
+  }
+@media handheld {
+  #header {
+    width:90%;
+    }
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #eee;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #eee;
+  border-width:0 1px 1px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:760px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:510px;
+    float:left;
+    }
+  #sidebar {
+    width:220px;
+    float:right;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font: "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  /*color:#999;*/
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#c60;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+/* styles I added for code examples, etc. */
+re {color: #4169E1;}
+code {color: #2E8B57;}
+unix {color: #9370DB;}
+span.question {color: #B22222; font-style: italic;}
+
+/* emacs font-lock faces */
+.blue-violet { color: #8a2be2; }
+.constant { color: #696969; }
+.firebrick { color: #b22222; }
+.function-name { color: #b22222; }
+.keyword { color: #0000cd; }
+.string { color: #4169e1; }
+.type { color: #4682b4; }
+.variable-name { color: #2e8b57; }
+
+/* from htmlize.el */
+.comment {
+  /* font-lock-comment-face */
+  color: #006400;
+}
+.comment-delimiter {
+}
+.function-name {
+  /* font-lock-function-name-face */
+  color: #cd2626;
+}
+.keyword {
+  /* font-lock-keyword-face */
+  color: #0000cd;
+}
+.string {
+  /* font-lock-string-face */
+  color: #4169e1;
+}
+.variable-name {
+  /* font-lock-variable-name-face */
+  color: #2e8b57;
+}
+
+</style>
+
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<!-- data-ad-client=ca-pub-1448465482748307 -->
+<!-- --><style type="text/css">@import url(//www.blogger.com/static/v1/v-css/navbar/3334278262-classic.css);
+div.b-mobile {display:none;}
+</style>
+
+</head>
+
+<body><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar/13674163?origin\x3dhttps://steve-yegge.blogspot.com',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+
+<div id="header">
+
+  <h1 id="blog-title">
+    <a href="http://steve-yegge.blogspot.com/">
+	Stevey's Blog Rants
+	</a>
+  </h1>
+  <p id="description">Random whining and stuff.</p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+<div class='adsense' style='text-align:center; padding: 0px 3px 0.5em 3px;'>
+<script type="text/javascript"><!--
+google_ad_client="ca-pub-1448465482748307";
+google_ad_host = "pub-1556223355139109";
+google_ad_width=468;
+google_ad_height=60;
+google_ad_format="468x60_as";
+google_ad_type="text";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="CC6600";
+google_color_url="CC6600";
+google_color_text="999999";
+//--></script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+
+    
+  <h2 class="date-header">Wednesday, December 01, 2010</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="4843689720028827443"></a>
+         
+    <h3 class="post-title">
+	 
+	 Haskell Researchers Announce Discovery of Industry Programmer Who Gives a Shit
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <div style="clear:both;"></div>The worldwide Haskell community met up over beers today to celebrate their unprecedented discovery of an industry programmer who gives a shit about Haskell.<br /><br />On Wednesday, researchers issued a press release revealing that 27-year-old Seth Briars of North Carolina, a Java programmer at Blackwater accounting firm Ross and Fordham, actually gives a shit about Haskell.<br /><br />"Mr. Briars has followed every single one of our press releases for years," the press release stated.  "Probably even this one."<br /><br />Haskell researcher Dutch Van Der Linde explained how they had stumbled on the theoretical possibility of Briars and his persistent interest in Haskell.  "We knew that there are precisely 38 people who give a shit about Haskell," said Van Der Linde, "because every Haskell-related reddit post gets exactly 38 upvotes.  It's a pure, deterministic function of no arguments -- that is, the result is independent of what we actually announce.  But there are only 37 of us on our mailing list, so we figured there was a lurker somewhere."<br /><br />"That, or it was an off-by-1 error not detectable by our type system," Van Der Linde added.  "But we don't, uh, like to dwell on, I mean with good unit testing practices we can, um... sorry, I need to get some water."<br /><br />As Van Der Linde stumbled off in a coughing fit, his fellow researcher Bonnie MacFarlane outlined their basic dilemma: "Finding a person who gives a shit about Haskell is an inherently NP-complete computer science problem.  It's similar in scope and complexity to the problem of trying to find a tenured academic who didn't have the bulk of his or her work done by uncredited graduate students.  So even though we suspected Briars existed, we needed a strategy to smoke him out."<br /><br />She explained the trap they set for Briars: "We crafted a fake satirical post lampooning Haskell as an unusable, overly complex turd -- a writing task that was emotionally difficult but conceptually trivial.  Then we laced the post with deeper social subtext decrying the endemic superficiality and laziness of global industry programming culture, to make ourselves feel better.  Finally, each of us upvoted the post, which was unexpectedly contentious because nobody could agree on what the reddit voting arrows actually mean."<br /><br />"And then we waited to see who, if anyone, would give a shit," she said.<br /><br />MacFarlane concluded, "Our elegant approach didn't work, so we hired a Perl hacker to go dig up the personal details on all 38 accounts that had ever upvoted a Haskell post, and the only one we didn't know was Seth Briars.  So we reached out to him, and thankfully so far he hasn't threatened to sue us."<br /><br />Briars says he is pleased to have been recognized for his apparently unique shit-giving about Haskell.  "I've been giving a shit about Haskell for a long as I can remember.  I follow all their announcements and developments closely, just in case I ever get the urge to use the language for something someday."<br /><br />"It's a beautiful, elegant language," Briars observed as he busied himself cleaning a fingernail.  "You'd be hard-pressed to find a more expressive and composable core.  And they've made astounding advances over the years in performance, interoperability, extensibility, tooling and documentation."<br /><br />"I'm kind of surprised I'm the only person on earth who gives a shit about it," Briars continued.  "I'd have thought there would be more people following the press releases closely and then not using Haskell.  But they all just skip the press releases and go straight to the not using it part."<br /><br />"People see words like <em>monads</em> and <em>category theory</em>," Briars continued, swatting invisible flies around his head for emphasis, "and their Giving a Shit gene shuts down faster than a teabagger with a grade-school arithmetic book.  I'm really disappointed that more programmers don't get actively involved in reading endless threads about how to subvert Haskell's type system to accomplish basic shit you can do in other languages.  But I guess that's the lazy, ignorant, careless world we live in: the so-called 'real' world."<br /><br />Haskell researcher Javier Escuella remains hopeful that one day they may be able to double or even triple the number of industry programmers who give a shit about Haskell.  "I believe the root cause of the popularity problem is Haskell's lack of reasonable support for mutually recursive generic container types.  If we can create a monadic composition-functor wrapper that is perceived as sufficiently sexy by hardened industry veterans, then I think we will see an uptick in giving a shit, possibly as much as a full extra person."<br /><br />Haskell aficionado Harold MacDougal is not quite as sanguine as his colleague Escuella.  "I doubt Haskell will ever be appreciated by the uneducated natives of this industry.  As exciting as it is, the discovery of Briars should be considered an anomaly, and not as a sign that more people will ever give a shit.  Programmers only seem to pay attention to things when there is humor involved."<br /><br />"We do have an experimental humor monad," added MacDougal.  "But it doesn't seem to be getting much adoption.  Haskell fans just don't see the need for it."<br /><br /><hr><br /><br /><small><b>MORE NEWS</b></small><br /><br />Previous article:  <b>Perl Community Debating Adding Monads</b> The Perl lists are brimming with discussions about the value of adding monads to Perl.  "We don't really know what they do, but it doesn't make sense _not_ to have something in Perl," said Perl hacker Landon Ricketts.  <a href="http://www.perlmonks.org/?node_id=620692">Read more</a><br /><br />Next article:  <b>Microsoft to Introduce Mutually Recursive Error Messages</b>  Software giant Microsoft announced today the launch of their new REDRUM platform, an elegant system that allows Windows system error messages to shuffle blame around indefinitely by using continuation-passing.  <a href="http://oreilly.com/catalog/9781565923560">Read more</a><div style="clear:both; padding-bottom:0.25em"></div>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Steve Yegge at <a href="http://steve-yegge.blogspot.com/2010/12/haskell-researchers-announce-discovery.html" title="permanent link">1:16 PM</a></em>
+        <span class="item-control blog-admin pid-1139049968"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=13674163&postID=4843689720028827443&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://resources.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+  <div id="comments">
+
+	<a name="comments"></a>
+        <h4>79 Comments:</h4>
+        <dl id="comments-block">
+      
+      <dt class="comment-poster" id="c3703226292771204426"><a name="c3703226292771204426"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/03160927907722433196" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Oh, Steve, you do make me laugh, always.<br />And it&#39;s so long between posts these days I hardly believed it when Safari hinted that there was some action over at Steve&#39;s. <br /><br />Thank you.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3703226292771204426" title="comment permalink">2:43 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-364958866"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3703226292771204426" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7154084093175884028"><a name="c7154084093175884028"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04470354941740277258" rel="nofollow">Joel Martin</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>ROTFL</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7154084093175884028" title="comment permalink">3:18 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-58497686"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7154084093175884028" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4565698451912934779"><a name="c4565698451912934779"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16162425128153851009" rel="nofollow">Mitch</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>To be fair, I&#39;ve been <i>thinking really hard</i> about using it at work.<br /><br />Seriously, though, it&#39;s different enough that it&#39;s going to take some time to get traction.  It&#39;s not going to be like ruby on rails, where a bunch of kids suddenly decide that it&#39;s the greatest thing ever.<br /><br />It was easy for python and ruby to get traction because they&#39;re basically the same as perl.  Sure, syntactically they&#39;re different, but semantically they&#39;re all almost exactly the same (ergo, parrot).  So it wasn&#39;t much of a mental shift for perl users to start using those languages.<br /><br />But Haskell is enough of a departure, both syntactically and semantically, that it&#39;ll take longer.  It may even be a generational shift--I do sense some frustration from old farts (not just you) who used to pick up new languages all the time and now are struggling to understand Haskell.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4565698451912934779" title="comment permalink">3:18 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1321702673"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4565698451912934779" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7012403298848538773"><a name="c7012403298848538773"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16162425128153851009" rel="nofollow">Mitch</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Haskell (or something haskell-ish) is definitely the future, though--cheap abstraction (which in haskell is enabled by the type system, and by purity) is just too big of a win.<br /><br />However, I can certainly imagine that it might not catch on at google.  If you literally have armies of programmers, then productivity is less of a concern for you than it is for the rest of us.<br /><br />Plus, adding a language to the blessed list would open up a huge religious war internally, right?  It&#39;s only because of your posts about it that I understand why google is kind of stuck with the languages it has.  Is this post at all fueled by sour grapes over your Ruby battles, I wonder?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7012403298848538773" title="comment permalink">3:30 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1321702673"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7012403298848538773" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7323218755782799769"><a name="c7323218755782799769"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07971100206179099050" rel="nofollow">Rob</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is hilarious. It looks like you found one more person who give a shit in Mitch. This is truly a great day for Haskell.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7323218755782799769" title="comment permalink">3:53 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1258297065"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7323218755782799769" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c964378970018265442"><a name="c964378970018265442"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/02835376424060382389" rel="nofollow">James Iry</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Before Haskell fans go off on Yegge, they should note that he lists Haskell as his 8th favorite language.  That&#39;s giving something like half a shit.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#964378970018265442" title="comment permalink">4:28 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1680713355"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/964378970018265442" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2509242805420700426"><a name="c2509242805420700426"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13186288222562851626" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>wasn&#39;t haskell created around the same time as perl???</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2509242805420700426" title="comment permalink">4:28 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-880694208"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2509242805420700426" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c9094462445815124654"><a name="c9094462445815124654"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Could help but notice the Red Dead Redemption character names turning up in that post. Any particular reason?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#9094462445815124654" title="comment permalink">4:45 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/9094462445815124654" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c982410017065397055"><a name="c982410017065397055"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17048943411957487502" rel="nofollow">Andreas Mundane</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I think Miranda was created about the same time as Perl.  It&#39;s very similar to Haskell, so I don&#39;t think the being-around argument holds.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#982410017065397055" title="comment permalink">4:59 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-266585155"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/982410017065397055" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1663040431964797702"><a name="c1663040431964797702"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06184609115664981425" rel="nofollow">goaasim</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>LMAO!!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1663040431964797702" title="comment permalink">5:28 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-93959939"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1663040431964797702" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1803679432573577035"><a name="c1803679432573577035"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00778828051435084886" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@James Iry<br /><br />Putting a language #8 in your list of favorites is far enough from the top that you can explain away unfamiliarity when pressed, but close enough to seem like you&#39;re in the know. <br /><br />&quot;Hey Steve, could you help me debug this applicative functor I wrote?&quot;<br /><br />&quot;Oh Haskell? Yea that was my favorite 8 languages ago. Sorry I&#39;ve uh, gotta run though. Good luck with that.&quot;<br /><br />Ironic considering there are a couple groups at Google (where Yegge works) that use Haskell for internal tools.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1803679432573577035" title="comment permalink">5:50 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1184483799"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1803679432573577035" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4046308954966406989"><a name="c4046308954966406989"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13336649267304857235" rel="nofollow">X</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Didn&#39;t this joke become a cliche many years ago? Lack of originality doesn&#39;t hurt whatever elements of truth are there, but it does hurt the humour.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4046308954966406989" title="comment permalink">5:51 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-920603245"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4046308954966406989" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5181137083715500933"><a name="c5181137083715500933"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17783105866399018368" rel="nofollow">Boxo</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Joke&#39;s on you, Haskell&#39;s motto is &quot;Avoid success at all costs&quot;!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5181137083715500933" title="comment permalink">6:08 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-959773756"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5181137083715500933" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1351216083221376290"><a name="c1351216083221376290"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09068573729010320573" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hilarious. Love it. I want to give a shit about Haskell... but it&#39;s so hard! :p</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1351216083221376290" title="comment permalink">6:12 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-485188758"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1351216083221376290" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1333442120965913380"><a name="c1333442120965913380"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07743083626700897251" rel="nofollow">Nathan</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This thread should be locked when 38 people have commented on it.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1333442120965913380" title="comment permalink">6:24 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-2038536813"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1333442120965913380" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2088811083213065016"><a name="c2088811083213065016"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11282907160270521589" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>They teach Haskell to comp sci &amp; eng students in my school&#39;s freshman year. I&#39;m glad I came from another major and didn&#39;t have to :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2088811083213065016" title="comment permalink">7:29 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-516516651"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2088811083213065016" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6646601506443543829"><a name="c6646601506443543829"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00629084308245243340" rel="nofollow">eadmund</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>You know, I liked it right up until this: &#39;shuts down faster than a teabagger with a grade-school arithmetic book.&#39;<br /><br />Mindless bigotry from someone who&#39;s intelligent enough to know better.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6646601506443543829" title="comment permalink">8:30 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1795363807"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6646601506443543829" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1516028429369903283"><a name="c1516028429369903283"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13466586996802181998" rel="nofollow">Vlad Patryshev</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Monad composition commutativity problem is pretty similar to Schroedinger law - if two monads don&#39;t commute, a kitten may die. <br /><br />This may explain the industry programmers reluctance to see quantum things.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1516028429369903283" title="comment permalink">8:45 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-252891401"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1516028429369903283" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c668243557797458650"><a name="c668243557797458650"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10460945405578482251" rel="nofollow">Infidel</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>That&#39;s pure Onion material there.  You should send it to them.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#668243557797458650" title="comment permalink">9:22 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1307873583"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/668243557797458650" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5666654335678541562"><a name="c5666654335678541562"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16731698589180237330" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@James Iry, @John<br /><br />I could be wrong but there doesn&#39;t seem to be anything indicating that that list is ordered?<br />I&#39;d assume given the amount of familiarity Steve seems to show in making the jokes he does that he actually has a bit of a soft spot for Haskell.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5666654335678541562" title="comment permalink">9:38 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1712530198"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5666654335678541562" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1067325751378609196"><a name="c1067325751378609196"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11782508603268183191" rel="nofollow">Denton Gentry</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hilarious!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1067325751378609196" title="comment permalink">9:49 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-110584352"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1067325751378609196" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3524595213635706410"><a name="c3524595213635706410"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15244693817559226798" rel="nofollow">Bob Hazard</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>The More News was a nice touch</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3524595213635706410" title="comment permalink">10:26 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-548118907"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3524595213635706410" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c938168005336445416"><a name="c938168005336445416"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01664156685602017625" rel="nofollow">klang</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&gt; Programmers only seem to pay attention to things when there is humor involved.<br /><br />You got that right and you got me to read the whole thing!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#938168005336445416" title="comment permalink">10:48 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-864068498"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/938168005336445416" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6395311386872700234"><a name="c6395311386872700234"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05233254958164002500" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Loved it. Not sure if there was enough humour to make me give a shit for Haskell, though. ;-)<br /><br />Keep it up.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6395311386872700234" title="comment permalink">11:04 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-853770552"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6395311386872700234" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6150147343820885797"><a name="c6150147343820885797"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I think more programmers give a shit about Haskell than give a shit about the Tea Party. They&#39;re a disruptive group lacking in intelligence that discredit the Republican Party as a whole, but that&#39;s a whole different post, eadmund.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6150147343820885797" title="comment permalink">11:24 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6150147343820885797" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c694193940052738900"><a name="c694193940052738900"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12455682719152169026" rel="nofollow">Nikos</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Excellent!!! LMAO!! Loved the part on how they smoked him out, and the experimental humour monad!<br /><br />REDRUM!!! REDRUM!!!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#694193940052738900" title="comment permalink">11:42 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-1895536310"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/694193940052738900" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5000000616611649991"><a name="c5000000616611649991"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06243794715165114179" rel="nofollow">kewp</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>HAHAHHAAHA!!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5000000616611649991" title="comment permalink">11:56 PM, December 01, 2010</a>
+	  <span class="item-control blog-admin pid-817581987"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5000000616611649991" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1468587950586133607"><a name="c1468587950586133607"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15170654303076130969" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Splendid!!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1468587950586133607" title="comment permalink">12:56 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1592667042"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1468587950586133607" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4454986909571917282"><a name="c4454986909571917282"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01602827735606341943" rel="nofollow">Christof Damian</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Nice one. <br /><br />I just would like to point out that I don&#39;t give a shit about Haskell. Just in case there are more than 38 people commenting here who might give a shit.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4454986909571917282" title="comment permalink">1:39 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1114104710"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4454986909571917282" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5933132380990915955"><a name="c5933132380990915955"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/14076527068502260545" rel="nofollow">Benjol</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Another humorous take on Haskell <a href="http://www.xent.com/pipermail/fork/Week-of-Mon-20070219/044101.html" rel="nofollow">here</a>.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5933132380990915955" title="comment permalink">1:54 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1180707618"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5933132380990915955" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c742471514149656676"><a name="c742471514149656676"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>andrewmu: Miranda was created before perl and Haskell and actually Haskell owes a <i>lot</i> to Miranda, particularly it&#39;s beautiful syntax. Having learned about this recently, I feel a bit bad that we in the Haskell community don&#39;t give David Turner as much credit as he deserves.<br /><br />Vald: monads are not generally commutative, though there was a wonderful talk at ICFP 2009 about what the world is like when you limit yourself to only commutative monads. (Anybody, feel free to e-mail me for the paper.)<br /><br />I thought that the best part of this was the link to the quite serious post where the guy implemented monads in perl and then complained that, &quot;the syntax was totally abominable.&quot; (Hello! It&#39;s perl, dude!)<br /><br />Speaking as an old Java guy myself, Steve truly captured the idea of Haskell sometime between a post before he left Amazon (&quot;I&#39;ve written more than 600,000 lines of Java! I rock!&quot;) and a post after he joined Google (&quot;I&#39;ve written 600,000 lines of Java! Oh no! What have I done?!&quot;)<br /><br />(And yes, I&#39;m that guy that wrote the high-frequency trading system in Haskell. I reckon that the 12,000 lines of code I wrote would have been 100k+ lines in Java.)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#742471514149656676" title="comment permalink">2:06 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/742471514149656676" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8452689135390448782"><a name="c8452689135390448782"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01863908675256558774" rel="nofollow">Matt</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>oh dear<br /><br />I thought you were ok, turns out you&#39;re a douche.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8452689135390448782" title="comment permalink">3:30 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-684431412"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8452689135390448782" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4718198086035872849"><a name="c4718198086035872849"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07546574132583244982" rel="nofollow">TAG</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@Chris @eadmund<br /><br />And here I thought he was talking about annoying FPS players who repeatedly crouch over your avatar once they&#39;ve killed you.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4718198086035872849" title="comment permalink">6:18 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1470865783"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4718198086035872849" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c230425077866858114"><a name="c230425077866858114"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01819105731065341920" rel="nofollow">What's in the name</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Haskell did save a lot of typing during assignments :P</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#230425077866858114" title="comment permalink">6:52 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-90909490"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/230425077866858114" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c184514992844594920"><a name="c184514992844594920"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/18167878666820551140" rel="nofollow">Matt Lye</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Yo Haskell, I&#39;m really happy for you, I&#39;mma let you finish, but Concurrent Clean had one of the most beautiful list comprehension syntaxes of all time.  Of all time!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#184514992844594920" title="comment permalink">6:55 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-12121638"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/184514992844594920" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1778290639973997073"><a name="c1778290639973997073"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/02436340179949427584" rel="nofollow">namekuseijin</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&quot;Programmers only seem to pay attention to things when there is humor involved.&quot;<br /><br />hope someone pay attention to this redeeming line... :)<br /><br />REDRUM REDRUM</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1778290639973997073" title="comment permalink">8:33 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-2102698726"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1778290639973997073" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c9198658150621088811"><a name="c9198658150621088811"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09866225196395497073" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>You know, there are Tea Party supporters who actually give a shit about Haskell (and use functional programming in production). As improbable as it is, here I am. The T-word was definitely out of line.<br /><br />Otherwise, me lol&#39;d.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#9198658150621088811" title="comment permalink">9:11 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-915544662"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/9198658150621088811" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5741186553377325624"><a name="c5741186553377325624"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06259365934806715496" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>making it 38</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5741186553377325624" title="comment permalink">10:02 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-808410242"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5741186553377325624" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7398728174845060342"><a name="c7398728174845060342"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00188809615684373166" rel="nofollow">Kiru</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Considering virtually every math prof at my local (top tier) university is a Tea Party supporter... the dig was unintentionally hilarious.<br /><br />Oh well, other than that, good post.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7398728174845060342" title="comment permalink">11:47 AM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-2144847649"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7398728174845060342" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5359235476408825609"><a name="c5359235476408825609"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05111167194178030567" rel="nofollow">Steve Pierce</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>39.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5359235476408825609" title="comment permalink">1:18 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-991833178"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5359235476408825609" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8832535560211697093"><a name="c8832535560211697093"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09707247617873542958" rel="nofollow">John M Kerr</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>OK Steve, you have convinced me that post quality varies inversely with frequency. But dammit your posts are just too fukcing good. Unnecessarily so. Experiment&#39;s over, please speak to us much more often (weather&#39;s a fine topic, but I really want to know what you think of C#&#39;s ventures into monad&#39;s land).</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8832535560211697093" title="comment permalink">1:52 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1882721856"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8832535560211697093" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3769461952320048556"><a name="c3769461952320048556"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/14487234899087991206" rel="nofollow">Rasta</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&quot;You know, I liked it right up until this: &#39;shuts down faster than a teabagger with a grade-school arithmetic book.&#39; Mindless bigotry from someone who&#39;s intelligent enough to know better&quot;.<br /><br />IT WAS ONLY FUNNY WHEN YOU WERE MAKING FUN OF SOMEONE ELSE! YOU SUCK!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3769461952320048556" title="comment permalink">2:04 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-636554134"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3769461952320048556" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7559862351738543145"><a name="c7559862351738543145"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13380845220807525035" rel="nofollow">The Little Lebowski</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is the best thing I have read on the Interwebs in ages. It just points out that industry needs to agree to focus all their energies on a single functional language so we can ignore the more margin... er, academic ones.  I&#39;m sure the teapartiers would support letting the Supreme Court decide in favor of F# (or OCaml since it uses F# syntax). <br><br>Srsly, thanks for the post, you rock!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7559862351738543145" title="comment permalink">2:48 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1006068170"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7559862351738543145" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3304050067445857010"><a name="c3304050067445857010"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09475223830485383319" rel="nofollow">Viktor</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I think Haskell is very cool and I plan to learn it once I get a little more familiar with Common Lisp. Maybe I&#39;ll even write a game in Haskell. Just think of the amount of shit that I am giving right now!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3304050067445857010" title="comment permalink">2:54 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1872969924"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3304050067445857010" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c627378753762640548"><a name="c627378753762640548"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07056323950998078263" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Haskell sucks and will never be relevant.  I appreciate that you appreciate this also.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#627378753762640548" title="comment permalink">3:42 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-922483149"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/627378753762640548" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6788234275246500034"><a name="c6788234275246500034"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00265331700609152907" rel="nofollow">Andres N. Kievsky</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Very funny - especially the perl comments. So fucking true! it&#39;s my kind of humor - take a look at similar stuff<br /><a href="http://www.eyesalt.net" rel="nofollow">here [NSFW]</a></p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6788234275246500034" title="comment permalink">5:18 PM, December 02, 2010</a>
+	  <span class="item-control blog-admin pid-1819732616"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6788234275246500034" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6268283865444677904"><a name="c6268283865444677904"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06922660281980424260" rel="nofollow">Beta</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@Little Lebowski: WHAT????? OCaml uses F# syntax???<br />Dude, is the other way round!<br /><br />Thanks Church ML does not face this problem. There is one <i>entire</i> company that use it!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6268283865444677904" title="comment permalink">12:29 AM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-646217039"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6268283865444677904" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4914212949334014145"><a name="c4914212949334014145"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/18257043690169788508" rel="nofollow">alang</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Obviously fake. The real Haskell community would have had a metatype system that classifies upvote providence with only minor tweaks to the standard prelude.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4914212949334014145" title="comment permalink">12:51 AM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-1433610576"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4914212949334014145" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2157841957387832958"><a name="c2157841957387832958"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Lebowski, we <i>are</i> ignoring the more academic functional languages. For most purposes outside of theorem proving, Haskell is a model of practicality compared to, say, Agda.<br /><br />Beta: I&#39;m not sure what you mean by your ML comment, but ML is certainly in heavy use in the commercial programming world if you count F# and OCaml (I know banks and proprietary trading companies doing huge amounts of work in both), and while I don&#39;t have as much personal evidence of commercial SML usage, there is a largish project, Mirage, that&#39;s written what&#39;s essentially a simple OS, along with servers of various sorts (HTTP, DNS, SSH) in SML.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2157841957387832958" title="comment permalink">2:29 AM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2157841957387832958" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3842081004455419043"><a name="c3842081004455419043"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06922660281980424260" rel="nofollow">Beta</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Curt, there are more than 1 industry guy who give a shit about Haskell (I used to know one, in fact, but I&#39;m not sure if he&#39;s still using Haskell).<br />So, you can use the same thinking about ML, and simplify it to &quot;there&#39;s one company that gives a shit&quot;. Compared with the amount of people who gives a shit about Java, 1 or 100 companies are still in the same order of magnitude.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3842081004455419043" title="comment permalink">3:46 AM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-646217039"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3842081004455419043" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2460582681830007340"><a name="c2460582681830007340"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11740139097865154127" rel="nofollow">Uncompetative</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>LtU&#39;s editor has gotten into trouble quoting you:<br /><br />http://lambda-the-ultimate.org/node/4153<br /><br />It would seem that those most keen on language theory care about **** which seems to be the only aspect of Haskell to actually produce an effect.<br /><br />:-)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2460582681830007340" title="comment permalink">8:24 AM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-979616959"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2460582681830007340" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3463555182128893598"><a name="c3463555182128893598"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17336465823284750371" rel="nofollow">Surge</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>This is one of the most entertaining posts I have read.  I could not stop reading, and I tried.  Have you tried a good shrink?  LOL</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3463555182128893598" title="comment permalink">8:44 AM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-253833713"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3463555182128893598" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c776329422456671192"><a name="c776329422456671192"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05467008945942364887" rel="nofollow">glathoud</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Thanks for the laugh!<br /><br />...and well pointed:<br /><br />&quot;... an inherently NP-complete computer science problem. It&#39;s similar in scope and complexity to the problem of trying to find a tenured academic who didn&#39;t have the bulk of his or her work done by uncredited graduate students.&quot;</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#776329422456671192" title="comment permalink">3:01 PM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-518931296"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/776329422456671192" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c110735068823542650"><a name="c110735068823542650"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/14654577173325873072" rel="nofollow">Bartosz Milewski</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Whatever bit you, Stevey? Why rant against Haskell? Have you been recently bullied by Haskellites? I thought they were pretty harmless. <br /><br />BTW, since when are you running on a populist platform? I mean, you&#39;ll get a lot of votes from yahoos who don&#39;t give a shit about anything that happens outside of their villages. You&#39;re giving them an excuse to dismiss and ridicule anything they don&#39;t understand, not only monads or category theory. I can see them marching behind you with pitchforks and torches ready to ban exceptions, templates, STL, and all this highbrow stuff. It would be funny if it weren&#39;t already happening even at the top software companies (how modern are the Google coding standards?).</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#110735068823542650" title="comment permalink">5:10 PM, December 03, 2010</a>
+	  <span class="item-control blog-admin pid-301374066"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/110735068823542650" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8249379969136027145"><a name="c8249379969136027145"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16447976353069828503" rel="nofollow">Jedaï</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I found the post funny before I started reading the comments... Now I wonder who those readers are that still think this is an accurate reflection of the Haskell world.<br /><br />Ten years ago that could have been the case, but nowadays Haskell is used increasingly in plenty of practical tasks, from generating real-time code for embedded chips in transport truck to checking the security of some US state networks (not the diplomatic ones...). A lot of the more mundane usages can be seen by the variety of library on Hackage which while not the CPAN is still of a very respectable size for the library repository of an &quot;academic&quot; language.<br /><br />If you truly think that this post content was serious unlike its humorous tone, wake up and smell the coffee : FP languages are becoming part of the CS industry faster than you think and Haskell is one of the good candidates.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8249379969136027145" title="comment permalink">8:13 AM, December 04, 2010</a>
+	  <span class="item-control blog-admin pid-1623193297"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8249379969136027145" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7315636193610614262"><a name="c7315636193610614262"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05767259722272808668" rel="nofollow">Olie</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Polishing up the portfolio for that big move to The Onion&#39;s tech division?<br /><br />:D<br /><br />Either way -- YAY!  Stevie&#39;s posting!  My favorites are the late-night wine-powered rants, but I&#39;ve never seen a bad Stevie posting, yet.  Keep &#39;em coming!<br /><br />Captcha: &quot;sterm&quot; -- isn&#39;t that the faux soda in Futurama?  ;)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7315636193610614262" title="comment permalink">10:35 AM, December 04, 2010</a>
+	  <span class="item-control blog-admin pid-602392084"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7315636193610614262" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5314662507163613651"><a name="c5314662507163613651"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05932817237900351366" rel="nofollow">Steve Simmons</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Marvelous! Best of all, it&#39;s almost language-independent. You can change the language name and a few buzzwords, and it correctly applies to the bigot-driven language du jour.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5314662507163613651" title="comment permalink">11:19 AM, December 04, 2010</a>
+	  <span class="item-control blog-admin pid-452547372"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5314662507163613651" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5985420100079048012"><a name="c5985420100079048012"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06887762560560522733" rel="nofollow">9000</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I know at least one person that ues Haskell in a heavily commercial setting, and he&#39;s not Mr Briars. The original researchers have overlooked up to 50% of positive cases! Such error margins cast doubt to the entire research.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5985420100079048012" title="comment permalink">1:11 PM, December 04, 2010</a>
+	  <span class="item-control blog-admin pid-1457120415"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5985420100079048012" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6081759675307136233"><a name="c6081759675307136233"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13453592439537191882" rel="nofollow">yehnan</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Excellent hilarious. And it&#39;s short! Thanks Steve.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6081759675307136233" title="comment permalink">6:16 PM, December 04, 2010</a>
+	  <span class="item-control blog-admin pid-1313122170"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6081759675307136233" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c9116416888796330310"><a name="c9116416888796330310"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01372149893686183066" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Haskell has 2 problems<br /><br />1. Monads are an ugly kludge to nail state into a stateless environment. If you need state that badly, you shouldn&#39;t be using a functional language.<br /><br />2. The community.<br /><br />I have a MS in CS and often whine about the state of software engineering being full of self-taught morons who don&#39;t know why they are writing code and what it is really doing.<br /><br />I have been accused of being an annoying anal-retentive nerd. So it is no small thing for me to say that I don&#39;t like the Haskell community because they are annoying anal-retentive nerds.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#9116416888796330310" title="comment permalink">1:59 PM, December 06, 2010</a>
+	  <span class="item-control blog-admin pid-1761772699"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/9116416888796330310" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7598558214878323968"><a name="c7598558214878323968"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01372149893686183066" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&quot;You know, I liked it right up until this: &#39;shuts down faster than a teabagger with a grade-school arithmetic book.&#39;<br /><br />Mindless bigotry from someone who&#39;s intelligent enough to know better.&quot;<br /><br />What?<br /><br />Since when is making fun of ignorant people easily swayed by corporate interests bigotry? Are teabaggers their own race, or even species? That would explain a lot.<br /><br />Teabaggers are morons, it is not a controversial statement.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7598558214878323968" title="comment permalink">2:32 PM, December 06, 2010</a>
+	  <span class="item-control blog-admin pid-1761772699"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7598558214878323968" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c294932764121975920"><a name="c294932764121975920"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01372149893686183066" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&quot;You know, there are Tea Party supporters who actually give a shit about Haskell (and use functional programming in production). As improbable as it is, here I am. The T-word was definitely out of line.<br /><br />Otherwise, me lol&#39;d.&quot;<br /><br />Operation Tea Bag is where the term came from. Your fellow morons invented it!<br /><br />The T-word? You idiots really think you are a separate race don&#39;t you?<br /><br />The Master Race perhaps?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#294932764121975920" title="comment permalink">2:35 PM, December 06, 2010</a>
+	  <span class="item-control blog-admin pid-1761772699"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/294932764121975920" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2288979413207977941"><a name="c2288979413207977941"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>&quot;If you need state that badly, you shouldn&#39;t be using a functional language.&quot;<br /><br />Please don&#39;t take this the wrong way, as I don&#39;t wish to be insulting, but you appear to be confused.<br /><br />First, whether functions have undeclared (to the type system) state or not is nothing to do with whether a language is functional or not (at least in Peter van der Roy&#39;s CTM definition--let me know if you&#39;re using another one); it&#39;s dependent on whether the language is pure or not. If you consider languages such as ML, Lisp and Scheme to be functional (and most would), these are all languages in which functions have undeclared side effects. (In fact, global variables, for example, are quite heavily used in Lisp.)<br /><br />Second, even in &quot;pure&quot; (I use this as the term of art) languages such as Haskell and Clean, state is quite heavily used: the big difference is in how you manage state, not in its existence.<br /><br />I myself am also considered an &quot;annoying anal-retentive nerd&quot; by many (and I&#39;m quite the Dijkstra fan to boot), and I&#39;m sorry to say that you come across not as a computing scientist but as just some guy who doesn&#39;t understand pure languages.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2288979413207977941" title="comment permalink">7:51 AM, December 07, 2010</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2288979413207977941" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7117977463703518800"><a name="c7117977463703518800"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17333411991137454111" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I do in fact give even less of a shit about Haskell than I previously did.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7117977463703518800" title="comment permalink">3:05 PM, December 09, 2010</a>
+	  <span class="item-control blog-admin pid-1474887204"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7117977463703518800" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8296887806927236630"><a name="c8296887806927236630"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12241185247897084810" rel="nofollow">Torsten Seemann</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Thank you for making me laugh today!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8296887806927236630" title="comment permalink">3:25 AM, December 12, 2010</a>
+	  <span class="item-control blog-admin pid-1050186148"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8296887806927236630" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2993020173125724497"><a name="c2993020173125724497"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06688886122549415711" rel="nofollow">Dave Conrad</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>It will be much easier to give a shit about Haskell in the future, once they implement the excrement combinator.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2993020173125724497" title="comment permalink">11:17 AM, December 13, 2010</a>
+	  <span class="item-control blog-admin pid-528670621"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2993020173125724497" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6076413884973988071"><a name="c6076413884973988071"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07889594182800701518" rel="nofollow">Harris Reynolds</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Brilliant post.  Nothing short of brilliant.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6076413884973988071" title="comment permalink">1:04 PM, December 15, 2010</a>
+	  <span class="item-control blog-admin pid-1384271121"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6076413884973988071" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c9019368103989190115"><a name="c9019368103989190115"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17270199693086340552" rel="nofollow">John Allen</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Glorious, thank you!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#9019368103989190115" title="comment permalink">11:29 PM, December 21, 2010</a>
+	  <span class="item-control blog-admin pid-860427248"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/9019368103989190115" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c807560716009582619"><a name="c807560716009582619"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15837799162296244975" rel="nofollow">ggm</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I can&#39;t decide which kills herpes faster, this blog, or a 3 wolves moon tee-shirt.<br /><br />oh, can you write a haskell program to solve the CAPTCHA on the blog? I&#39;d use that to post more often.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#807560716009582619" title="comment permalink">12:36 AM, December 31, 2010</a>
+	  <span class="item-control blog-admin pid-1819908174"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/807560716009582619" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2525451787621703721"><a name="c2525451787621703721"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09021815313737629567" rel="nofollow">Andreas Larsson</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hey Steve! I just recently started reading your blog and already you&#39;ve inspired me to start learning to type and take up blogging. <br />I&#39;m looking forward to reading the rest I havn&#39;t read and the stuff that you will write (I hope). <br />I&#39;m grateful for what you&#39;re doing. Keep up the good work</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2525451787621703721" title="comment permalink">10:30 AM, January 03, 2011</a>
+	  <span class="item-control blog-admin pid-1658457066"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2525451787621703721" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6777571075262702071"><a name="c6777571075262702071"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Question for you Steve<br /><br />hey steve , i have question for you<br />in google, about 2 years ago you gave lecture about Rhino on rails and jruby, Ruby on rails still slow and sucks till today.<br /><br />But what do you think about Grails<br />Groovy is java + rails + spring =Grails<br /><br />It can do meta-programming like ruby plus has everything in Java which I loved<br /><br />Is google has any love for grails?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6777571075262702071" title="comment permalink">12:09 AM, January 04, 2011</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6777571075262702071" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4596698086006382367"><a name="c4596698086006382367"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/14892386755350244000" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@ggm what you need is a fine-tuned pattern recognition algorithm, not a FP magic..</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4596698086006382367" title="comment permalink">1:45 AM, January 04, 2011</a>
+	  <span class="item-control blog-admin pid-71332100"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4596698086006382367" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3437936104570716433"><a name="c3437936104570716433"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01372149893686183066" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@Curt Sampson<br /><br />You are on crack. Haskell is not useful for stateful environments because monads are an ugly hack.<br /><br />Anyone that considers Lisp to be a functional language can be safely ignored.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3437936104570716433" title="comment permalink">10:23 AM, February 21, 2011</a>
+	  <span class="item-control blog-admin pid-1761772699"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3437936104570716433" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2625415024739558581"><a name="c2625415024739558581"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16740829862759572966" rel="nofollow">Mίro</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Great post with a high LOL factor, thanks Steve :-)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2625415024739558581" title="comment permalink">6:53 AM, April 02, 2011</a>
+	  <span class="item-control blog-admin pid-472442378"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2625415024739558581" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c223471142029227498"><a name="c223471142029227498"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04770655497128144653" rel="nofollow">Ludovic Kuty</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Thanks, the reading was very fun. As always. I wish you could post more often.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#223471142029227498" title="comment permalink">4:42 AM, April 06, 2011</a>
+	  <span class="item-control blog-admin pid-1803662602"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/223471142029227498" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4731989677481860117"><a name="c4731989677481860117"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11272032265377687219" rel="nofollow">dmr</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>May 18, 2009 &quot;We&#39;re getting close to the end of my blog. After today&#39;s entry, I only have three left to write.&quot;<br /><br />I was assuming yegge-lengthed posts. When?</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4731989677481860117" title="comment permalink">1:41 AM, April 12, 2011</a>
+	  <span class="item-control blog-admin pid-293845784"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4731989677481860117" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3245449819330633295"><a name="c3245449819330633295"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15304724475471224632" rel="nofollow">Roger</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>LMAO ... Steve, I wish you wrote these more often... this one&#39;s priceless :)<br />Wish &#39;Big Bang&#39; would add you as a dialog writer too ... I had Sheldon&#39;s voice in my head as I read how they unearthed the PWGASAH.<br />Rock On! :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3245449819330633295" title="comment permalink">3:20 AM, May 04, 2011</a>
+	  <span class="item-control blog-admin pid-424584983"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3245449819330633295" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c9049761703290049422"><a name="c9049761703290049422"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/07029047831650274832" rel="nofollow">PJ Cabrera</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I&#39;m sorry, I can&#39;t get to give a shit about your blog with its new focus. You used to have something to say</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#9049761703290049422" title="comment permalink">11:10 PM, July 24, 2011</a>
+	  <span class="item-control blog-admin pid-806707013"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/9049761703290049422" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6994508150649255529"><a name="c6994508150649255529"></a>
+        <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="https://resources.blogblog.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Qwerty wrote: &quot;Haskell is not useful for stateful environments because monads are an ugly hack.&quot;<br /><br />Well, in a word, &quot;no.&quot; Even if you can&#39;t appreciate the (admittedly somewhat mathematical) elegance of monads, it should be hint that not only do people use monads for state when they have other options (e.g., internal program state that never goes near I/O--just look at any parser combinator library), but monads are also useful for a lot of other things besides state. (The &quot;All About Monads&quot; tutorial gives some nice examples.)<br /><br />I&#39;m guessing you&#39;re denying this because you simply don&#39;t understand monads. Probably twenty years ago you&#39;d have been saying that object-oriented programming is a bunch of rubbish.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6994508150649255529" title="comment permalink">3:40 AM, July 29, 2011</a>
+	  <span class="item-control blog-admin pid-974167206"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6994508150649255529" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+    </dl>
+		<p class="comment-timestamp">
+
+    <a class="comment-link" href="https://www.blogger.com/comment/fullpage/post/13674163/4843689720028827443">Post a Comment</a>
+    </p>
+    	    
+    
+
+
+		<p class="comment-timestamp">
+	<a href="http://steve-yegge.blogspot.com/">&lt;&lt; Home</a>
+    </p>
+    </div>
+
+
+
+  <!-- End #comments -->
+
+
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
+<dl class="profile-datablock"><dt class="profile-img"><a href="https://www.blogger.com/profile/14812997485690838920"><img src="//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8lMplUBvgDts4l0lod1nWJ71okMnRPkuOiZXzCG3lFp7UqiY4MymxpbZIyAtcosW8amfQNznW4wye0IIOOdBe0egaGFj0jnAopXvqmJVikZPc6QPO9WiBG1rVHYOy2t8/s220/stevey-6-21-07.jpg" width="80" height="59" alt="My Photo"></a></dt>
+<dd class="profile-data"><strong>Name:</strong> <a rel="author" href="https://www.blogger.com/profile/14812997485690838920"> Steve Yegge </a></dd>
+<dd class="profile-data"><strong>Location:</strong>  Kirkland, Washington, United States </dd></dl>
+
+<p class="profile-link"><a rel="author" href="https://www.blogger.com/profile/14812997485690838920">View my complete profile</a></p></div>
+   
+  <!-- End #profile -->
+    
+  
+
+  
+  <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/wikileaks-to-leak-5000-open-source-java.html">Wikileaks To Leak 5000 Open Source Java Projects W...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/blogger-finger.html">Blogger Finger</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/05/programmers-view-of-universe-part-3.html">A programmer&#39;s view of the Universe, part 3:  The ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/04/have-you-ever-legalized-marijuana.html">Have you ever legalized marijuana?</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/03/story-time.html">Story Time</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/12/programmers-view-of-universe-part-2.html">A programmer&#39;s view of the Universe, part 2:  Mari...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/12/fable-ii-arguably-better-than-getting.html">Fable II:  Arguably Better than Getting Your Head ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/11/ejacs-javascript-interpreter-for-emacs.html">Ejacs:  a JavaScript interpreter for Emacs</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/10/programmers-view-of-universe-part-1.html">A programmer&#39;s view of the Universe, part 1:  The ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/10/universal-design-pattern.html">The Universal Design Pattern</a></li>
+     
+  </ul>
+    
+
+      <p id="powered-by"><a href="//www.blogger.com"><img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tkSp8-68tdzh-Lglx-c9GxvAepqHW8gobeBSOvQ0LscFvJ1tLuFNaYEJVCB-dwkHcf5I8oA9bwdWsJirbc8BmkiYqa9VJgv2Ny_Qm87U3o=s0-d" alt="Powered by Blogger"></a></p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+</div>
+<!-- End #footer -->
+
+
+<script src="//www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-238999-1";
+urchinTracker();
+</script>
+</body>
+</html>

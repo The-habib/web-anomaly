@@ -1,0 +1,2930 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="ltr" dir="ltr" lang="en-US">
+<head>
+	<title>Inventor Assistance Program (IAP)</title>
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+	<!-- Favicon for modern browsers -->
+	<link rel="icon" type="image/svg+xml" href="https://www.wipo.int/web-assets/images/favicon.svg"/>
+
+	<!-- PNG icons for legacy and specific resolutions -->
+	<link rel="icon" type="image/png" sizes="192x192" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-192.png"/>
+	<link rel="icon" type="image/png" sizes="48x48" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-48.png"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-32.png"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-16.png"/>
+
+	<!-- Apple Touch Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-180.png"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+
+
+
+
+
+
+
+
+<meta content="Empowering inventors and amplifying innovation ecosystems" lang="en-US" name="description" />
+
+
+
+
+<script type="importmap">{"imports": {"@clayui/alert": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$alert.js", "@clayui/autocomplete": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$autocomplete.js", "@clayui/badge": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$badge.js", "@clayui/breadcrumb": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$breadcrumb.js", "@clayui/button": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$button.js", "@clayui/card": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$card.js", "@clayui/color-picker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$color-picker.js", "@clayui/core": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$core.js", "@clayui/data-provider": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$data-provider.js", "@clayui/date-picker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$date-picker.js", "@clayui/drop-down": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$drop-down.js", "@clayui/empty-state": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$empty-state.js", "@clayui/form": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$form.js", "@clayui/icon": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$icon.js", "@clayui/label": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$label.js", "@clayui/layout": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$layout.js", "@clayui/link": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$link.js", "@clayui/list": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$list.js", "@clayui/loading-indicator": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$loading-indicator.js", "@clayui/localized-input": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$localized-input.js", "@clayui/management-toolbar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$management-toolbar.js", "@clayui/modal": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$modal.js", "@clayui/multi-select": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$multi-select.js", "@clayui/multi-step-nav": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$multi-step-nav.js", "@clayui/nav": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$nav.js", "@clayui/navigation-bar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$navigation-bar.js", "@clayui/pagination": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$pagination.js", "@clayui/pagination-bar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$pagination-bar.js", "@clayui/panel": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$panel.js", "@clayui/popover": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$popover.js", "@clayui/progress-bar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$progress-bar.js", "@clayui/provider": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$provider.js", "@clayui/shared": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$shared.js", "@clayui/slider": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$slider.js", "@clayui/sticker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$sticker.js", "@clayui/table": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$table.js", "@clayui/tabs": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$tabs.js", "@clayui/time-picker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$time-picker.js", "@clayui/toolbar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$toolbar.js", "@clayui/tooltip": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$tooltip.js", "@clayui/upper-toolbar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$upper-toolbar.js","@liferay/dynamic-data-mapping-form-field-type/api": "https://cdn.webcms.wipo.int/o/dynamic-data-mapping-form-field-type/__liferay__/api.js","@ckeditor/ckeditor5-adapter-ckfinder/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-adapter-ckfinder$dist$index.js.js", "@ckeditor/ckeditor5-alignment/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-alignment$dist$index.js.js", "@ckeditor/ckeditor5-autoformat/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-autoformat$dist$index.js.js", "@ckeditor/ckeditor5-autosave/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-autosave$dist$index.js.js", "@ckeditor/ckeditor5-basic-styles/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-basic-styles$dist$index.js.js", "@ckeditor/ckeditor5-block-quote/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-block-quote$dist$index.js.js", "@ckeditor/ckeditor5-bookmark/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-bookmark$dist$index.js.js", "@ckeditor/ckeditor5-ckbox/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-ckbox$dist$index.js.js", "@ckeditor/ckeditor5-ckfinder/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-ckfinder$dist$index.js.js", "@ckeditor/ckeditor5-clipboard/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-clipboard$dist$index.js.js", "@ckeditor/ckeditor5-cloud-services/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-cloud-services$dist$index.js.js", "@ckeditor/ckeditor5-code-block/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-code-block$dist$index.js.js", "@ckeditor/ckeditor5-core/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-core$dist$index.js.js", "@ckeditor/ckeditor5-easy-image/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-easy-image$dist$index.js.js", "@ckeditor/ckeditor5-editor-balloon/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-balloon$dist$index.js.js", "@ckeditor/ckeditor5-editor-classic/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-classic$dist$index.js.js", "@ckeditor/ckeditor5-editor-decoupled/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-decoupled$dist$index.js.js", "@ckeditor/ckeditor5-editor-inline/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-inline$dist$index.js.js", "@ckeditor/ckeditor5-editor-multi-root/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-multi-root$dist$index.js.js", "@ckeditor/ckeditor5-emoji/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-emoji$dist$index.js.js", "@ckeditor/ckeditor5-engine/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-engine$dist$index.js.js", "@ckeditor/ckeditor5-enter/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-enter$dist$index.js.js", "@ckeditor/ckeditor5-essentials/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-essentials$dist$index.js.js", "@ckeditor/ckeditor5-find-and-replace/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-find-and-replace$dist$index.js.js", "@ckeditor/ckeditor5-font/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-font$dist$index.js.js", "@ckeditor/ckeditor5-fullscreen/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-fullscreen$dist$index.js.js", "@ckeditor/ckeditor5-heading/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-heading$dist$index.js.js", "@ckeditor/ckeditor5-highlight/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-highlight$dist$index.js.js", "@ckeditor/ckeditor5-horizontal-line/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-horizontal-line$dist$index.js.js", "@ckeditor/ckeditor5-html-embed/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-html-embed$dist$index.js.js", "@ckeditor/ckeditor5-html-support/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-html-support$dist$index.js.js", "@ckeditor/ckeditor5-icons/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-icons$dist$index.js.js", "@ckeditor/ckeditor5-image/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-image$dist$index.js.js", "@ckeditor/ckeditor5-indent/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-indent$dist$index.js.js", "@ckeditor/ckeditor5-language/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-language$dist$index.js.js", "@ckeditor/ckeditor5-link/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-link$dist$index.js.js", "@ckeditor/ckeditor5-list/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-list$dist$index.js.js", "@ckeditor/ckeditor5-markdown-gfm/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-markdown-gfm$dist$index.js.js", "@ckeditor/ckeditor5-media-embed/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-media-embed$dist$index.js.js", "@ckeditor/ckeditor5-mention/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-mention$dist$index.js.js", "@ckeditor/ckeditor5-minimap/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-minimap$dist$index.js.js", "@ckeditor/ckeditor5-page-break/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-page-break$dist$index.js.js", "@ckeditor/ckeditor5-paragraph/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-paragraph$dist$index.js.js", "@ckeditor/ckeditor5-paste-from-office/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-paste-from-office$dist$index.js.js", "@ckeditor/ckeditor5-react": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-react.js", "@ckeditor/ckeditor5-remove-format/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-remove-format$dist$index.js.js", "@ckeditor/ckeditor5-restricted-editing/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-restricted-editing$dist$index.js.js", "@ckeditor/ckeditor5-select-all/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-select-all$dist$index.js.js", "@ckeditor/ckeditor5-show-blocks/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-show-blocks$dist$index.js.js", "@ckeditor/ckeditor5-source-editing/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-source-editing$dist$index.js.js", "@ckeditor/ckeditor5-special-characters/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-special-characters$dist$index.js.js", "@ckeditor/ckeditor5-style/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-style$dist$index.js.js", "@ckeditor/ckeditor5-table/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-table$dist$index.js.js", "@ckeditor/ckeditor5-typing/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-typing$dist$index.js.js", "@ckeditor/ckeditor5-ui/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-ui$dist$index.js.js", "@ckeditor/ckeditor5-undo/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-undo$dist$index.js.js", "@ckeditor/ckeditor5-upload/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-upload$dist$index.js.js", "@ckeditor/ckeditor5-utils/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-utils$dist$index.js.js", "@ckeditor/ckeditor5-watchdog/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-watchdog$dist$index.js.js", "@ckeditor/ckeditor5-widget/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-widget$dist$index.js.js", "@ckeditor/ckeditor5-word-count/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-word-count$dist$index.js.js","@liferay/oauth2-provider-web/client": "https://cdn.webcms.wipo.int/o/oauth2-provider-web/__liferay__/client.js","@liferay/fragment-impl/api": "https://cdn.webcms.wipo.int/o/fragment-impl/__liferay__/api.js","react": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react.js", "react-16": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-16.js", "react-18": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-18.js", "react-dom": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom.js", "react-dom/client": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom$client.js", "react-dom-16": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom-16.js", "react-dom-18": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom-18.js", "react-dom-18/client": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom-18$client.js","@liferay/frontend-js-api": "https://cdn.webcms.wipo.int/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api.js", "@liferay/frontend-js-api/data-set": "https://cdn.webcms.wipo.int/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api$data-set.js","@liferay/language/": "https://cdn.webcms.wipo.int/o/js/language/"}, "scopes": {}}</script><script data-senna-track="permanent" src="/o/frontend-js-svg4everybody-web/index.js" type="text/javascript"></script>
+<link data-senna-track="temporary" href="https://www.wipo.int/en/web/inventor-assistance-program" rel="canonical" />
+<link data-senna-track="temporary" href="https://www.wipo.int/es/web/inventor-assistance-program" hreflang="es-ES" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/zh/web/inventor-assistance-program" hreflang="zh-CN" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/ru/web/inventor-assistance-program" hreflang="ru-RU" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/ar/web/inventor-assistance-program" hreflang="ar-SA" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/fr/web/inventor-assistance-program" hreflang="fr-FR" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/en/web/inventor-assistance-program" hreflang="en-US" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/en/web/inventor-assistance-program" hreflang="x-default" rel="alternate" />
+<meta property="og:description" content="Empowering inventors and amplifying innovation ecosystems">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="inventor-assistance-program">
+<meta property="og:title" content="Inventor Assistance Program (IAP)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.wipo.int/en/web/inventor-assistance-program">
+<script data-senna-track="permanent" src="/o/wipo-template-context-contributor/js/jquery-3.5.1.min.js"></script>
+
+
+<link href="https://cdn.webcms.wipo.int/o/wipo-universal-theme/images/favicon.ico" rel="apple-touch-icon" />
+<link href="https://cdn.webcms.wipo.int/o/wipo-universal-theme/images/favicon.ico" rel="icon" />
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.wipo.int/o/wipo-universal-theme/css/clay.css?browserId=other&amp;themeId=wipouniversaltheme_WAR_wipouniversaltheme&amp;minifierType=css&amp;languageId=en_US&amp;t=1786530646000" id="liferayAUICSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+	<link href="https://cdn.webcms.wipo.int/o/portal-search-web/css/main.(ewQ02j$q6kw).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="2fc4d944" />
+<link href="https://cdn.webcms.wipo.int/o/product-navigation-product-menu-web/css/main.(i$0IgPwR2kk).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="2f131867" />
+<link href="https://cdn.webcms.wipo.int/o/product-navigation-user-personal-bar-web/css/main.(Mc2kn1EU56k).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="932526fc" />
+<link href="https://cdn.webcms.wipo.int/o/site-navigation-menu-web/css/main.(wnU1o3f4AJ0).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="eaafc85d" />
+
+
+
+
+
+
+
+
+<script data-senna-track="temporary" type="text/javascript">
+(function() {
+	function buildESMStub(contextPath, symbol) {
+		return (
+			(...args) => {
+				import(
+					Liferay.ThemeDisplay.getCDNHost() +
+					Liferay.ThemeDisplay.getPathContext() +
+						'/o/' +
+						contextPath +
+						'/__liferay__/index.js'
+				).then(
+					(exports) => exports[symbol](...args)
+				);
+			}
+		);
+	}
+
+	function defineReadOnlyGlobal(name, getValue) {
+		Object.defineProperty(
+			window,
+			name,
+			{
+				get: getValue,
+				set: (x) => {
+					if (x !== getValue()) {
+						console.error(`Global variable '${name}' is read-only`);
+					}
+				}
+			}
+		);
+	}
+
+	function isObject(item) {
+		return (item && typeof item === 'object' && !Array.isArray(item));
+	}
+
+	function merge(target, source) {
+		for (const key in source) {
+			if (isObject(source[key])) {
+				if (!target[key]) {
+					Object.assign(target, { [key]: {} });
+				}
+
+				merge(target[key], source[key]);
+			}
+			else {
+				Object.assign(target, { [key]: source[key] });
+			}
+		}
+	}
+
+	let __liferay = {
+AUI: {
+getCombine: () => true,
+getComboPath: () => '/combo/?browserId=other&minifierType=&languageId=en_US&t=1786530601648&',
+getDateFormat: () => '%m/%d/%Y',
+getEditorCKEditorPath: () => '/o/frontend-editor-ckeditor-web',
+getFilter: () => 'min',
+getFilterConfig: () => null,
+getJavaScriptRootPath: () => '/o/frontend-js-web',
+getPortletRootPath: () => '/html/portlet',
+getStaticResourceURLParams: () => '?browserId=other&minifierType=&languageId=en_US&t=1786530601648',
+},
+Browser: {
+acceptsGzip: () => false,
+getMajorVersion: () => '0',
+getRevision: () => '',
+getVersion: () => '',
+isAir: () => false,
+isChrome: () => false,
+isEdge: () => false,
+isFirefox: () => false,
+isGecko: () => false,
+isIe: () => false,
+isIphone: () => false,
+isLinux: () => false,
+isMac: () => false,
+isMobile: () => false,
+isMozilla: () => false,
+isOpera: () => false,
+isRtf: () => false,
+isSafari: () => false,
+isSun: () => false,
+isWebKit: () => false,
+isWindows: () => false,
+},
+Data: {
+ICONS_INLINE_SVG: true,
+NAV_SELECTOR: '#navigation',
+NAV_SELECTOR_MOBILE: '#navigationCollapse',
+isCustomizationView: () => false,
+notices: [
+],
+},
+FeatureFlags: {
+'LPD-11342': false,
+'LPD-23840': false,
+'LPD-36010': true,
+'LPD-36719': true,
+'LPD-39203': false,
+'LPD-40529': true,
+'LPD-48372': true,
+'LPD-48975': true,
+'LPD-78863': true,
+'LPS-157670': false,
+'LPS-172416': false,
+'LPS-183672': false,
+'LPS-186360': false,
+'LRAC-14771': false,
+'COMMERCE-13024': false,
+'COMMERCE-8087': false,
+'COMMERCE-8949': false,
+'LPD-10562': false,
+'LPD-10964': false,
+'LPD-11003': false,
+'LPD-11131': true,
+'LPD-11228': false,
+'LPD-11235': false,
+'LPD-11313': false,
+'LPD-11848': false,
+'LPD-13311': true,
+'LPD-13778': true,
+'LPD-17564': false,
+'LPD-19870': false,
+'LPD-19955': false,
+'LPD-20183': false,
+'LPD-20379': false,
+'LPD-20640': false,
+'LPD-21414': false,
+'LPD-29516': false,
+'LPD-31212': false,
+'LPD-31228': false,
+'LPD-31789': false,
+'LPD-32867': false,
+'LPD-34594': false,
+'LPD-35013': true,
+'LPD-35128': false,
+'LPD-35443': false,
+'LPD-36105': false,
+'LPD-38564': false,
+'LPD-38869': true,
+'LPD-39304': true,
+'LPD-39437': false,
+'LPD-40530': true,
+'LPD-40533': true,
+'LPD-40534': true,
+'LPD-40535': true,
+'LPD-42553': false,
+'LPD-43996': false,
+'LPD-44091': true,
+'LPD-44307': true,
+'LPD-44771': true,
+'LPD-45276': false,
+'LPD-47713': true,
+'LPD-48862': true,
+'LPD-51356': false,
+'LPD-56718': false,
+'LPD-57655': false,
+'LPD-58677': false,
+'LPD-60546': true,
+'LPD-62272': false,
+'LPD-63311': false,
+'LPD-63415': false,
+'LPD-63416': false,
+'LPD-6368': false,
+'LPD-65299': false,
+'LPD-65399': false,
+'LPD-66359': false,
+'LPD-66611': true,
+'LPD-74328': false,
+'LPD-74739': true,
+'LPD-75032': false,
+'LPD-75525': false,
+'LPD-7822': false,
+'LPS-122920': false,
+'LPS-135430': false,
+'LPS-153332': false,
+'LPS-153714': false,
+'LPS-153813': false,
+'LPS-155284': false,
+'LPS-159643': false,
+'LPS-164563': false,
+'LPS-165482': false,
+'LPS-169837': false,
+'LPS-170670': false,
+'LPS-174417': false,
+'LPS-174816': false,
+'LPS-176691': false,
+'LPS-177027': false,
+'LPS-178052': false,
+'LPS-178642': false,
+'LPS-180090': false,
+'LPS-185892': false,
+'LPS-186620': false,
+'LPS-193884': false,
+'LPS-196935': true,
+'LPS-197477': false,
+'LPS-197909': false,
+'LPS-198183': false,
+'LPS-200108': false,
+'LPS-202104': false,
+'LRAC-10757': false,
+'LRAC-15017': false,
+},
+Language: {
+	_cache:
+		window?.Liferay?.Language?._cache
+			? Liferay.Language._cache
+			: {},
+	available: {
+'en_US': 'English\x20\x28United\x20States\x29',
+'es_ES': 'español\x20\x28España\x29',
+'fr_FR': 'français\x20\x28France\x29',
+'ru_RU': 'русский\x20\x28Россия\x29',
+'ar_SA': 'العربية\x20\x28المملكة\x20العربية\x20السعودية\x29',
+'de_DE': 'Deutsch\x20\x28Deutschland\x29',
+'pt_PT': 'português\x20\x28Portugal\x29',
+'ja_JP': '日本語\x20\x28日本\x29',
+'ko_KR': '한국어\x20\x28대한민국\x29',
+'tr_TR': 'Türkçe\x20\x28Türkiye\x29',
+'vi_VN': 'Tiếng\x20Việt\x20\x28Việt\x20Nam\x29',
+'zh_CN': '中文\x20\x28中国\x29',
+'it_IT': 'italiano\x20\x28Italia\x29',
+'pl_PL': 'polski\x20\x28Polska\x29',
+'bg_BG': 'български\x20\x28България\x29',
+'hr_HR': 'hrvatski\x20\x28Hrvatska\x29',
+'nl_NL': 'Nederlands\x20\x28Nederland\x29',
+'et_EE': 'eesti\x20\x28Eesti\x29',
+'hi_IN': 'हिन्दी\x20\x28भारत\x29',
+'lt_LT': 'lietuvių\x20\x28Lietuva\x29',
+'ro_RO': 'română\x20\x28România\x29',
+'th_TH': 'ไทย\x20\x28ไทย\x29',
+'uk_UA': 'українська\x20\x28Україна\x29',
+
+	},
+	direction: {
+'en_US': 'ltr',
+'es_ES': 'ltr',
+'fr_FR': 'ltr',
+'ru_RU': 'ltr',
+'ar_SA': 'rtl',
+'de_DE': 'ltr',
+'pt_PT': 'ltr',
+'ja_JP': 'ltr',
+'ko_KR': 'ltr',
+'tr_TR': 'ltr',
+'vi_VN': 'ltr',
+'zh_CN': 'ltr',
+'it_IT': 'ltr',
+'pl_PL': 'ltr',
+'bg_BG': 'ltr',
+'hr_HR': 'ltr',
+'nl_NL': 'ltr',
+'et_EE': 'ltr',
+'hi_IN': 'ltr',
+'lt_LT': 'ltr',
+'ro_RO': 'ltr',
+'th_TH': 'ltr',
+'uk_UA': 'ltr',
+
+	},
+	get:
+		(key) => {
+			let value = Liferay.Language._cache[key];
+
+			if (value === undefined) {
+				value = key;
+			}
+
+			return value;
+		},
+},
+Portlet: {
+openModal: buildESMStub('frontend-js-components-web', 'openPortletModal'),
+openWindow: buildESMStub('frontend-js-components-web', 'openPortletWindow'),
+},
+PortletKeys: {
+DOCUMENT_LIBRARY: 'com_liferay_document_library_web_portlet_DLPortlet',
+DYNAMIC_DATA_MAPPING: 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet',
+INSTANCE_SETTINGS: 'com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet',
+ITEM_SELECTOR: 'com_liferay_item_selector_web_portlet_ItemSelectorPortlet',
+},
+PropsValues: {
+JAVASCRIPT_SINGLE_PAGE_APPLICATION_TIMEOUT: 0,
+UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE: 104857600,
+},
+ThemeDisplay: {
+getLayoutId: () => '27',
+getLayoutRelativeControlPanelURL: () => '/en/group/inventor-assistance-program/~/control_panel/manage',
+getLayoutRelativeURL: () => '/en/web/inventor-assistance-program/index',
+getLayoutURL: () => 'https://www.wipo.int/en/web/inventor-assistance-program/index',
+getParentLayoutId: () => '0',
+getPathFriendlyURLPublic: () => '/web',
+isControlPanel: () => false,
+isPrivateLayout: () => false,
+isVirtualLayout: () => false,
+getBCP47LanguageId: () => 'en-US',
+getCanonicalURL: () => 'https\x3a\x2f\x2fwww\x2ewipo\x2eint\x2fen\x2fweb\x2finventor-assistance-program',
+getCDNBaseURL: () => 'https://cdn.webcms.wipo.int',
+getCDNDynamicResourcesHost: () => '',
+getCDNHost: () => 'https://cdn.webcms.wipo.int',
+getCompanyGroupId: () => '20123',
+getCompanyId: () => '20097',
+getDefaultLanguageId: () => 'en_US',
+getDoAsUserIdEncoded: () => '',
+getLanguageId: () => 'en_US',
+getParentGroupId: () => '2810545',
+getParentSiteGroupId: () => '102028',
+getPathContext: () => '',
+getPathImage: () => '/image',
+getPathJavaScript: () => '/o/frontend-js-web',
+getPathMain: () => '/en/c',
+getPathThemeImages: () => 'https://cdn.webcms.wipo.int/o/wipo-universal-theme/images',
+getPathThemeRoot: () => '/o/wipo-universal-theme',
+getPlid: () => '27714',
+getPortalURL: () => 'https://www.wipo.int',
+getRealUserId: () => '20102',
+getRemoteAddr: () => '10.44.247.40',
+getRemoteHost: () => '10.44.247.40',
+getScopeGroupId: () => '2810545',
+getScopeGroupIdOrLiveGroupId: () => '2810545',
+getSessionId: () => '',
+getSiteAdminURL: () => 'https://www.wipo.int/group/inventor-assistance-program/~/control_panel/manage?p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view',
+getSiteGroupId: () => '2810545',
+getTimeZone: () => 'Europe/Paris',
+getURLControlPanel: () => '/en/group/control_panel?refererPlid=27714',
+getURLHome: () => 'https\x3a\x2f\x2fwww\x2ewipo\x2eint\x2fweb\x2fguest',
+getUserEmailAddress: () => '',
+getUserId: () => '20102',
+getUserName: () => '',
+isAddSessionIdToURL: () => false,
+isImpersonated: () => false,
+isSignedIn: () => false,
+isStagedPortlet: () => false,
+isStateExclusive: () => false,
+isStateMaximized: () => false,
+isStatePopUp: () => false,
+},
+Util: {
+Window: {
+	_map: {},
+	getById: (id) => Liferay.Util.Window._map[id],
+},
+openAlertModal: buildESMStub('frontend-js-components-web', 'openAlertModal'),
+openConfirmModal: buildESMStub('frontend-js-components-web', 'openConfirmModal'),
+openModal: buildESMStub('frontend-js-components-web', 'openModal'),
+openSelectionModal: buildESMStub('frontend-js-components-web', 'openSelectionModal'),
+openSimpleInputModal: buildESMStub('frontend-js-components-web', 'openSimpleInputModal'),
+openToast: buildESMStub('frontend-js-components-web', 'openToast'),
+},
+authToken: 'aUwoj6l5',
+currentURL: '\x2fen\x2fweb\x2finventor-assistance-program',
+currentURLEncoded: '\x252Fen\x252Fweb\x252Finventor-assistance-program',
+
+	};
+
+	if (window.Liferay) {
+		merge(window.Liferay, __liferay);
+	}
+	else {
+		defineReadOnlyGlobal('Liferay', () => __liferay);
+		defineReadOnlyGlobal('themeDisplay', () => window.Liferay.ThemeDisplay);
+	}
+})();
+</script>
+<script crossorigin="" data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/portal-url-builder-impl/Liferay.js" type="text/javascript"></script><script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=en_US&t=1786530601648&/o/frontend-js-aui-web/aui/aui/aui-min.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base-min.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex-min.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core-min.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable-min.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras-min.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base-min.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex-min.js&/o/frontend-js-aui-web/aui/oop/oop-min.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang-min.js&/o/frontend-js-aui-web/liferay/dependency.js" type="text/javascript"></script>
+<script crossorigin="" data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/frontend-js-web/Liferay.js" type="text/javascript"></script>
+<script crossorigin="" data-senna-track="permanent" type="module">await import(`@liferay/language/${Liferay.ThemeDisplay.getLanguageId()}/frontend-js-web/all.js`);</script>
+<script data-senna-track="temporary" type="text/javascript">window.__CONFIG__= {basePath: '', combine: true, defaultURLParams: null, explainResolutions: false, exposeGlobal: false, logLevel: 'warn', moduleType: 'module', namespace:'Liferay', nonce: '', reportMismatchedAnonymousModules: 'warn', resolvePath: '/o/js_resolve_modules', url: '/combo/?browserId=other&minifierType=js&languageId=en_US&t=1786530601648&', waitTimeout: 60000};</script><script data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/frontend-js-loader-modules-extender/loader.js" type="text/javascript"></script><script data-senna-track="temporary">Liferay.Icons = Liferay.Icons || {};Liferay.Icons.controlPanelSpritemap = 'https://cdn.webcms.wipo.int/o/admin-theme/images/clay/icons.svg'; Liferay.Icons.spritemap = 'https://cdn.webcms.wipo.int/o/wipo-universal-theme/images/clay/icons.svg';</script>
+<script data-senna-track="permanent" type="text/javascript">window.Liferay.CSP = {nonce: ''};</script>
+<script data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/oauth2-provider-web/__liferay__/global.js" type="module"></script>
+<script data-senna-track="temporary" type="text/javascript">window.Liferay = Liferay || {}; window.Liferay.OAuth2 = {getAuthorizeURL: function() {return 'https://www.wipo.int/o/oauth2/authorize';}, getBuiltInRedirectURL: function() {return 'https://www.wipo.int/o/oauth2/redirect';}, getIntrospectURL: function() { return 'https://www.wipo.int/o/oauth2/introspect';}, getTokenURL: function() {return 'https://www.wipo.int/o/oauth2/token';}, getUserAgentApplication: function(externalReferenceCode) {return Liferay.OAuth2._userAgentApplications[externalReferenceCode];}, _userAgentApplications: {}}</script><script data-senna-track="temporary" type="text/javascript"  src="https://www.wipo.int/documents/d/global/accordian-fix.js"></script><script data-senna-track="temporary" type="text/javascript">try {var MODULE_MAIN='site-navigation-menu-web@6.0.82/index';var MODULE_PATH='/o/site-navigation-menu-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			navigationmenuweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-navigation-interaction': {
+						path: 'navigation_interaction.js',
+						plugins: {
+							'liferay-navigation-interaction-touch': {
+								condition: {
+									name: 'liferay-navigation-interaction-touch',
+									test(A) {
+										return A.UA.touchEnabled;
+									},
+									trigger: 'liferay-navigation-interaction',
+								},
+							},
+						},
+						requires: [
+							'aui-base',
+							'aui-component',
+							'event-mouseenter',
+							'node-focusmanager',
+							'plugin',
+						],
+					},
+					'liferay-navigation-interaction-touch': {
+						path: 'navigation_interaction_touch.js',
+						requires: [
+							'event-tap',
+							'event-touch',
+							'liferay-navigation-interaction',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='staging-processes-web@5.0.72/index';var MODULE_PATH='/o/staging-processes-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			stagingprocessesweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-staging-processes-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-ckeditor-web@5.0.129/index';var MODULE_PATH='/o/frontend-editor-ckeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			editor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'inline-editor-ckeditor': {
+						path: 'main.js',
+						requires: [
+							'array-invoke',
+							'liferay-inline-editor-base',
+							'node-event-simulate',
+							'overlay',
+							'yui-later',
+						],
+					},
+					'liferay-inline-editor-base': {
+						path: 'inline_editor_base.js',
+						requires: ['aui-base', 'aui-overlay-base-deprecated'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='contacts-web@5.0.71/index';var MODULE_PATH='/o/contacts-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			contactscenter: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-contacts-center': {
+						path: 'main.js',
+						requires: [
+							'aui-io-plugin-deprecated',
+							'aui-toolbar',
+							'autocomplete-base',
+							'datasource-io',
+							'json-parse',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-state-web@1.0.35/index';var MODULE_PATH='/o/frontend-js-state-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			state: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='calendar-web@5.0.120/index';var MODULE_PATH='/o/calendar-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			calendar: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-calendar-a11y': {
+						path: 'calendar_a11y.js',
+						requires: ['calendar'],
+					},
+					'liferay-calendar-container': {
+						path: 'calendar_container.js',
+						requires: [
+							'aui-alert',
+							'aui-base',
+							'aui-component',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-date-picker-sanitizer': {
+						path: 'date_picker_sanitizer.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-interval-selector': {
+						path: 'interval_selector.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-interval-selector-scheduler-event-link': {
+						path: 'interval_selector_scheduler_event_link.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-list': {
+						path: 'calendar_list.js',
+						requires: [
+							'aui-template-deprecated',
+							'liferay-scheduler',
+						],
+					},
+					'liferay-calendar-message-util': {
+						path: 'message_util.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-calendar-recurrence-converter': {
+						path: 'recurrence_converter.js',
+						requires: [],
+					},
+					'liferay-calendar-recurrence-dialog': {
+						path: 'recurrence.js',
+						requires: [
+							'aui-base',
+							'liferay-calendar-recurrence-util',
+						],
+					},
+					'liferay-calendar-recurrence-util': {
+						path: 'recurrence_util.js',
+						requires: ['aui-base', 'liferay-util-window'],
+					},
+					'liferay-calendar-reminders': {
+						path: 'calendar_reminders.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-remote-services': {
+						path: 'remote_services.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'liferay-calendar-util',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-session-listener': {
+						path: 'session_listener.js',
+						requires: ['aui-base', 'liferay-scheduler'],
+					},
+					'liferay-calendar-simple-color-picker': {
+						path: 'simple_color_picker.js',
+						requires: ['aui-base', 'aui-template-deprecated'],
+					},
+					'liferay-calendar-simple-menu': {
+						path: 'simple_menu.js',
+						requires: [
+							'aui-base',
+							'aui-template-deprecated',
+							'event-outside',
+							'event-touch',
+							'widget-modality',
+							'widget-position',
+							'widget-position-align',
+							'widget-position-constrain',
+							'widget-stack',
+							'widget-stdmod',
+						],
+					},
+					'liferay-calendar-util': {
+						path: 'calendar_util.js',
+						requires: [
+							'aui-datatype',
+							'aui-io',
+							'aui-scheduler',
+							'aui-toolbar',
+							'autocomplete',
+							'autocomplete-highlighters',
+						],
+					},
+					'liferay-scheduler': {
+						path: 'scheduler.js',
+						requires: [
+							'async-queue',
+							'aui-datatype',
+							'aui-scheduler',
+							'dd-plugin',
+							'liferay-calendar-a11y',
+							'liferay-calendar-message-util',
+							'liferay-calendar-recurrence-converter',
+							'liferay-calendar-recurrence-util',
+							'liferay-calendar-util',
+							'liferay-scheduler-event-recorder',
+							'liferay-scheduler-models',
+							'promise',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-event-recorder': {
+						path: 'scheduler_event_recorder.js',
+						requires: [
+							'dd-plugin',
+							'liferay-calendar-util',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-models': {
+						path: 'scheduler_models.js',
+						requires: [
+							'aui-datatype',
+							'dd-plugin',
+							'liferay-calendar-util',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-js-components-web@2.0.100/index';var MODULE_PATH='/o/frontend-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			components: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-alloyeditor-web@5.0.66/index';var MODULE_PATH='/o/frontend-editor-alloyeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			alloyeditor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-alloy-editor': {
+						path: 'alloyeditor.js',
+						requires: [
+							'aui-component',
+							'liferay-portlet-base',
+							'timers',
+						],
+					},
+					'liferay-alloy-editor-source': {
+						path: 'alloyeditor_source.js',
+						requires: [
+							'aui-debounce',
+							'liferay-fullscreen-source-editor',
+							'liferay-source-editor',
+							'plugin',
+						],
+					},
+					'liferay-fullscreen-source-editor': {
+						path: 'fullscreen_source_editor.js',
+						requires: ['liferay-source-editor'],
+					},
+					'liferay-source-editor': {
+						path: 'source_editor.js',
+						requires: ['aui-ace-editor'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='exportimport-web@5.0.118/index';var MODULE_PATH='/o/exportimport-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			exportimportweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-export-import-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/image-uploader-web@5.0.60/index';var MODULE_PATH='/o/image-uploader-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			imageuploaderweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-logo-editor': {
+						path: 'logo_editor.js',
+						requires: ['aui-image-cropper', 'liferay-portlet-base'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/document-library-web@6.0.220/index';var MODULE_PATH='/o/document-library-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			dl: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'document-library-upload-component': {
+						path: 'DocumentLibraryUpload.js',
+						requires: [
+							'aui-component',
+							'aui-data-set-deprecated',
+							'aui-overlay-manager-deprecated',
+							'aui-overlay-mask-deprecated',
+							'aui-parse-content',
+							'aui-progressbar',
+							'aui-template-deprecated',
+							'liferay-search-container',
+							'querystring-parse-simple',
+							'uploader',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-search-web@6.0.169/index';var MODULE_PATH='/o/portal-search-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			search: {
+				base: MODULE_PATH + '/js/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-search-custom-range-facet': {
+						path: 'custom_range_facet.js',
+						requires: ['aui-form-validator'],
+					},
+				},
+				root: MODULE_PATH + '/js/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-react-web@5.0.73/index';var MODULE_PATH='/o/frontend-js-react-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			react: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='dynamic-data-mapping-web@5.0.126/index';var MODULE_PATH='/o/dynamic-data-mapping-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	const LiferayAUI = Liferay.AUI;
+
+	AUI().applyConfig({
+		groups: {
+			ddm: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: LiferayAUI.getFilterConfig(),
+				modules: {
+					'liferay-ddm-form': {
+						path: 'ddm_form.js',
+						requires: [
+							'aui-base',
+							'aui-datatable',
+							'aui-datatype',
+							'aui-image-viewer',
+							'aui-parse-content',
+							'aui-set',
+							'aui-sortable-list',
+							'json',
+							'liferay-form',
+							'liferay-map-base',
+							'liferay-translation-manager',
+							'liferay-util-window',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'main.js',
+						requires: [
+							'arraysort',
+							'aui-form-builder-deprecated',
+							'aui-form-validator',
+							'aui-map',
+							'aui-text-unicode',
+							'json',
+							'liferay-menu',
+							'liferay-translation-manager',
+							'liferay-util-window',
+							'text',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping-custom-fields': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'custom_fields.js',
+						requires: ['liferay-portlet-dynamic-data-mapping'],
+					},
+					'liferay-translation-manager': {
+						path: 'translation_manager.js',
+						requires: ['aui-base'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-workflow-kaleo-designer-web@5.0.165/index';var MODULE_PATH='/o/portal-workflow-kaleo-designer-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			'kaleo-designer': {
+				base: MODULE_PATH + '/designer/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-kaleo-designer-autocomplete-util': {
+						path: 'autocomplete_util.js',
+						requires: ['autocomplete', 'autocomplete-highlighters'],
+					},
+					'liferay-kaleo-designer-definition-diagram-controller': {
+						path: 'definition_diagram_controller.js',
+						requires: [
+							'liferay-kaleo-designer-field-normalizer',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-dialogs': {
+						path: 'dialogs.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-kaleo-designer-editors': {
+						path: 'editors.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-base',
+							'aui-datatype',
+							'aui-node',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-field-normalizer': {
+						path: 'field_normalizer.js',
+						requires: ['liferay-kaleo-designer-remote-services'],
+					},
+					'liferay-kaleo-designer-nodes': {
+						path: 'nodes.js',
+						requires: [
+							'aui-datatable',
+							'aui-datatype',
+							'aui-diagram-builder',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-remote-services': {
+						path: 'remote_services.js',
+						requires: ['aui-io'],
+					},
+					'liferay-kaleo-designer-templates': {
+						path: 'templates.js',
+						requires: ['aui-tpl-snippets-deprecated'],
+					},
+					'liferay-kaleo-designer-utils': {
+						path: 'utils.js',
+						requires: [],
+					},
+					'liferay-kaleo-designer-xml-definition': {
+						path: 'xml_definition.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'dataschema-xml',
+							'datatype-xml',
+						],
+					},
+					'liferay-kaleo-designer-xml-definition-serializer': {
+						path: 'xml_definition_serializer.js',
+						requires: ['escape', 'liferay-kaleo-designer-xml-util'],
+					},
+					'liferay-kaleo-designer-xml-util': {
+						path: 'xml_util.js',
+						requires: ['aui-base'],
+					},
+					'liferay-portlet-kaleo-designer': {
+						path: 'main.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-tpl-snippets-deprecated',
+							'dataschema-xml',
+							'datasource',
+							'datatype-xml',
+							'event-valuechange',
+							'io-form',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-nodes',
+							'liferay-kaleo-designer-remote-services',
+							'liferay-kaleo-designer-utils',
+							'liferay-kaleo-designer-xml-util',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/designer/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/layout-js-components-web@1.0.53/index';var MODULE_PATH='/o/layout-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			layout: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-layout': {
+						path: 'layout.js',
+					},
+					'liferay-layout-column': {
+						path: 'layout_column.js',
+						requires: ['aui-sortable-layout', 'dd'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}</script>
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+		
+			
+				
+				
+			
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+	
+		
+		
+
+			
+
+			
+		
+		
+	
+
+
+
+	
+		
+
+			
+
+			
+		
+		
+		
+	
+
+
+
+	
+		
+		
+		
+
+			
+
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.wipo.int/o/wipo-universal-theme/css/main.css?browserId=other&amp;themeId=wipouniversaltheme_WAR_wipouniversaltheme&amp;minifierType=css&amp;languageId=en_US&amp;t=1786530646000" id="liferayThemeCSS" rel="stylesheet" type="text/css" />
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+		.ulf-section-accordion-item {
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+ 
+      .ulf-section-accordion-head h2::after {
+        font-family: "bootstrap-icons";
+        content: "\f229";
+        font-size: 1rem;
+        margin-left: auto;
+        transition: transform 0.3s ease;
+      }
+ 
+      .ulf-section-accordion-head h2[aria-expanded="false"]::after {
+        transform: rotate(180deg);
+      }
+ 
+      #ulf-section-accordion-id .ulf-section-accordion-head-item {
+        margin-bottom: 0;
+        padding-block: 1rem;
+        color: #0059c6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+.ulf-wipo .ulf-banner-item-out {
+    background-color: rgba(250, 250, 250, 0.9);
+	</style>
+
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+	</style>
+
+
+<style data-senna-track="temporary" type="text/css">
+</style>
+<link data-senna-track="permanent" href="https://cdn.webcms.wipo.int/o/frontend-js-aui-web/alloy_ui.css" rel="stylesheet"></link>
+<link data-senna-track="temporary" href="/o/layout-common-styles/main.css?plid=27714&segmentsExperienceId=8474619&t=1786538184885" rel="stylesheet" type="text/css"><script type="module">
+import {init} from 'https://cdn.webcms.wipo.int/o/frontend-js-spa-web/__liferay__/index.js';
+{
+init({"navigationExceptionSelectors":":not([data-cke-saved-href]):not([data-cke-saved-href]):not([target=\"_blank\"]):not([data-senna-off]):not([data-resource-href])","cacheExpirationTime":-1,"clearScreensCache":false,"portletsBlacklist":["com_liferay_login_web_portlet_CreateAccountPortlet","com_liferay_nested_portlets_web_portlet_NestedPortletsPortlet","com_liferay_site_navigation_directory_web_portlet_SitesDirectoryPortlet","com_liferay_questions_web_internal_portlet_QuestionsPortlet","com_liferay_account_admin_web_internal_portlet_AccountUsersRegistrationPortlet","com_liferay_login_web_portlet_ForgotPasswordPortlet","com_liferay_portal_language_override_web_internal_portlet_PLOPortlet","com_liferay_digital_sales_room_web_internal_portlet_DigitalSalesRoomInviteMemberPortlet","com_liferay_login_web_portlet_LoginPortlet","com_liferay_login_web_portlet_UpdatePasswordPortlet","com_liferay_login_web_portlet_FastLoginPortlet"],"excludedTargetPortlets":["com_liferay_users_admin_web_portlet_UsersAdminPortlet","com_liferay_server_admin_web_portlet_ServerAdminPortlet"],"validStatusCodes":[221,490,494,499,491,496,492,493,495,220],"debugEnabled":false,"loginRedirect":"","excludedPaths":["/c/document_library","/documents","/image","/o/cms/download-folder","/o/cms/translations"],"preloadCSS":false,"userNotification":{"message":"It looks like this is taking longer than expected.","title":"Oops","timeout":30000},"requestTimeout":0});
+}
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+Liferay.on(
+	'ddmFieldBlur', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldBlurred',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					focusDuration: event.focusDuration,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFieldFocus', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldFocused',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title:event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormPageShow', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'pageViewed',
+				'Form',
+				{
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormSubmit', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formSubmitted',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormView', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formViewed',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	if (window.Analytics) {
+		window._com_liferay_document_library_analytics_isViewFileEntry = false;
+	}
+</script>
+
+
+
+<!-- css universal start -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;300;400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
+<link rel="stylesheet" href="https://webcomponents.wipo.int/wipo-navbar/ulf-fonts.css"> 
+<!-- css universal end -->
+<!-- Start Navbar Component-->
+	<style>
+        @font-face {
+          font-family: 'simplon';
+          font-weight: 400;
+          src: url("https://webcomponents.wipo.int/fonts/SimplonNorm-Regular-WebXL.woff2")
+        }
+        @font-face {
+          font-family: 'simplon';
+          font-weight: 500;
+          src: url("https://webcomponents.wipo.int/fonts/SimplonNorm-Medium-WebXL.woff2")
+        }
+        @font-face {
+          font-family: 'simplon';
+          font-weight: 700;
+          src: url("https://webcomponents.wipo.int/fonts/SimplonNorm-Bold-WebXL.woff2")
+        }
+      </style>
+<script src='https://cdn.webcms.wipo.int/o/wipo-universal-theme/js/cookie.js'></script>
+<script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/latest/components/wipo-footer.js"></script>
+<link rel="stylesheet" href="https://cdnjs.wipo.int/universal-lf-webcomponents/latest/style/footer.css">
+<script src="https://webcomponents.wipo.int/polyfills/webcomponents-loader.js"></script>
+<script src="https://webcomponents.wipo.int/wipo-navbar/wipo-navbar.js"></script>    
+<!-- End Navbar Component -->	<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+'ad_storage': 'granted',
+'ad_user_data': 'denied',
+'ad_personalization': 'denied',
+'analytics_storage': 'granted'
+});
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.wipo.int/metrics/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P7RLS2');</script>
+<!-- End Google Tag Manager -->
+<!-- Start Matomo -->
+<script type="text/javascript" src="https://webcomponents.wipo.int/wipo-analytics/wipo-analytics-oj6DkAWh.js"></script>
+<!-- End Matomo -->
+<!-- Start CrazzyEgg -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0115/2064.js" async="async"></script>
+<!-- End CrazzyEgg -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@wipo" />
+		<meta name="twitter:site:id" content="428885306" />
+		<meta name="twitter:title" content="Inventor Assistance Program (IAP)" />
+		<meta name="twitter:description" content="Empowering inventors and amplifying innovation ecosystems" />
+
+</head>
+<body  class="ulf-wipo" data-spy="scroll" data-target="#ulf-toc" id="wipo-int">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<nav aria-label="Quick Links" class="bg-dark cadmin quick-access-nav text-center text-white" id="lfpf_quickAccessNav">
+		
+			
+				<a class="d-block p-2 sr-only sr-only-focusable text-reset" href="#main-content">
+		Skip to Main Content
+	</a>
+			
+			
+		
+	</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d-flex flex-column min-vh-100">
+<header class="container-navbar-outer" id="container-navbar-outer">
+    <nav class="container-fluid container-fluid-max-xl">
+        <wipo-navbar
+                full-mode
+                language = 'en'
+                languageOptions = '[{"code":"ar","link":"/en/c/portal/update_language?p_l_id=27714&redirect=%2Fen%2Fweb%2Finventor-assistance-program&languageId=ar_SA"},{"code":"en"},{"code":"es","link":"/en/c/portal/update_language?p_l_id=27714&redirect=%2Fen%2Fweb%2Finventor-assistance-program&languageId=es_ES"},{"code":"fr","link":"/en/c/portal/update_language?p_l_id=27714&redirect=%2Fen%2Fweb%2Finventor-assistance-program&languageId=fr_FR"},{"code":"ru","link":"/en/c/portal/update_language?p_l_id=27714&redirect=%2Fen%2Fweb%2Finventor-assistance-program&languageId=ru_RU"},{"code":"zh","link":"/en/c/portal/update_language?p_l_id=27714&redirect=%2Fen%2Fweb%2Finventor-assistance-program&languageId=zh_CN"}]'
+        customBreadcrumbs = '[{"itemName":"Inventor Assistance Program","itemURL":"/en/web/inventor-assistance-program"}]'
+            helpOptions = '[{
+            "code": "contact",
+            "link": "https://www.wipo.int/contact/en/area.jsp?area=iap",
+            "sameTab": "false"
+            },
+            {
+            "code": "termsOfUse",
+            "link": "https://www.wipo.int/en/web/terms-of-use"
+            },
+            {
+            "code": "privacyPolicy",
+            "link": "https://www.wipo.int/en/web/privacy-policy"
+            }]'
+            >
+    <div style="height: 48px; width: 100%"></div>
+</wipo-navbar></nav></header><!--SEO links -->
+<div id="wipo-seo-links" class="hide"><div style="display: none">	
+	<a href="https://www.wipo.int/en/web/about-ip">About Intellectual Property</a>
+	<a href="https://www.wipo.int/en/web/about-ip#training">IP Training</a>
+	<a href="https://www.wipo.int/en/web/respect-for-ip">Respect for IP</a>
+	<a href="https://www.wipo.int/en/web/ip-outreach">IP Outreach</a>
+	<a href="https://www.wipo.int/en/web/about-ip#for">IP for…</a>
+	<a href="https://www.wipo.int/en/web/about-ip#and">IP and...</a>
+	<a href="https://www.wipo.int/en/web/about-ip#in">IP in...</a>
+	<a href="https://www.wipo.int/en/web/patents/patent-information">Patent & Technology Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#trademarks">Trademark Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#designs">Design Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#geographical-indications">Geographical Indication Information</a>
+	<a href="https://www.upov.int/">Plant Variety Information (UPOV)</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#legal">IP Laws, Treaties & Judgments</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#analysis">IP Resources</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#reports">IP Reports</a>
+	<a href="https://www.wipo.int/en/web/patents/protection">Patent Protection</a>
+	<a href="https://www.wipo.int/en/web/trademarks/protection">Trademark Protection</a>
+	<a href="https://www.wipo.int/en/web/designs/protection">Design Protection</a>
+	<a href="https://www.wipo.int/en/web/geographical-indications/protection">Geographical Indication Protection</a>
+	<a href="https://www.upov.int/portal/index.html.en">Plant Variety Protection (UPOV)</a>
+	<a href="https://www.wipo.int/en/web/amc">IP Dispute Resolution</a>
+	<a href="https://www.wipo.int/en/web/ip-office-business-solutions">IP Office Business Solutions</a>
+	<a href="https://www.wipo.int/en/web/paying-for-ip-services">Paying for IP Services</a>
+	<a href="https://www.wipo.int/en/web/decision-making-and-negotiating-bodies">Negotiation & Decision-Making</a>
+	<a href="https://www.wipo.int/en/web/cooperation">IP Cooperation</a>
+	<a href="https://www.wipo.int/en/web/patents#technology">Innovation Support</a>
+	<a href="https://www.wipo.int/en/web/cooperation/public-private-partnerships">Public-Private Partnerships</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services">AI Tools & Services</a>
+	<a href="https://www.wipo.int/en/web/about-wipo">The Organization</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo">Working at WIPO</a>
+	<a href="https://www.wipo.int/en/web/about-wipo#accountability">Accountability</a>
+	<a href="https://www.wipo.int/en/web/patents">Patents</a>
+	<a href="https://www.wipo.int/en/web/trademarks">Trademarks</a>
+	<a href="https://www.wipo.int/en/web/designs">Designs</a>
+	<a href="https://www.wipo.int/en/web/geographical-indications">Geographical Indications</a>
+	<a href="https://www.wipo.int/en/web/copyright">Copyright</a>
+	<a href="https://www.wipo.int/en/web/trade-secrets">Trade Secrets</a>
+	<a href="https://www.wipo.int/en/web/future-of-ip">Future of IP</a>
+	<a href="https://www.wipo.int/en/web/wipo-academy">WIPO Academy</a>
+	<a href="https://www.wipo.int/meetings/en/topic_type.jsp?group_id=242">Workshops & Seminars</a>
+	<a href="https://www.wipo.int/en/web/ip-enforcement">IP Enforcement</a>
+	<a href="https://www.wipo.int/en/web/wipo-alert">WIPO ALERT</a>
+	<a href="https://www.wipo.int/en/web/respect-for-ip/awareness-raising">Raising Awareness</a>
+	<a href="https://www.wipo.int/en/web/ipday">World IP Day</a>
+	<a href="https://www.wipo.int/en/web/wipo-magazine">WIPO Magazine</a>
+	<a href="https://www.wipo.int/en/web/ip-advantage">Case Studies & Success Stories</a>
+	<a href="https://www.wipo.int/en/web/news/explore">IP News</a>
+	<a href="https://www.wipo.int/en/web/awards">WIPO Awards</a>
+	<a href="https://www.wipo.int/en/web/business">Business</a>
+	<a href="https://www.wipo.int/en/web/women">Women</a>
+	<a href="https://www.wipo.int/en/web/universities">Universities</a>
+	<a href="https://www.wipo.int/en/web/traditional-knowledge/engagement">Indigenous Peoples</a>
+	<a href="https://www.wipo.int/en/web/judiciaries">Judiciaries</a>
+	<a href="https://www.wipo.int/en/web/youth-engagement">Youth</a>
+	<a href="https://www.wipo.int/en/web/examiners">Examiners</a>
+	<a href="https://www.wipo.int/en/web/innovation-ecosystems">Innovation Ecosystems</a>
+	<a href="https://www.wipo.int/en/web/economics">Economics</a>
+	<a href="https://www.wipo.int/en/web/ip-financing">Finance</a>
+	<a href="https://www.wipo.int/en/web/intangible-assets">Intangible Assets</a>
+	<a href="https://www.wipo.int/en/web/global-health">Global Health</a>
+	<a href="https://www.wipo.int/en/web/climate-change">Climate Change</a>
+	<a href="https://www.wipo.int/en/web/competition-policy">Competition Policy</a>
+	<a href="https://www.wipo.int/en/web/sdgs">Sustainable Development Goals</a>
+	<a href="https://www.wipo.int/en/web/traditional-knowledge">Genetic Resources, Traditional Knowledge and Traditional Cultural Expressions</a>
+	<a href="https://www.wipo.int/en/web/frontier-technologies">Frontier Technologies</a>
+	<a href="https://www.wipo.int/en/web/mobile-apps">Mobile Applications</a>
+	<a href="https://www.wipo.int/en/web/sports">Sports</a>
+	<a href="https://www.wipo.int/en/web/tourism">Tourism</a>
+	<a href="https://www.wipo.int/en/web/music">Music</a>
+	<a href="https://www.wipo.int/en/web/fashion">Fashion</a>
+	<a href="https://www.wipo.int/en/web/patentscope">PATENTSCOPE</a>
+	<a href="https://www.wipo.int/en/web/patent-analytics">Patent Analytics</a>
+	<a href="https://www.wipo.int/en/web/classification-ipc">International Patent Classification</a>
+	<a href="https://www.wipo.int/en/web/ardi">ARDI – Research for Innovation</a>
+	<a href="https://www.wipo.int/en/web/aspi">ASPI – Specialized Patent Information</a>
+	<a href="https://www.wipo.int/en/web/global-brand-database">Global Brand Database</a>
+	<a href="https://www3.wipo.int/madrid/monitor/en/">Madrid Monitor</a>
+	<a href="https://6ter.wipo.int/struct-search">Article 6ter Express Database</a>
+	<a href="https://www.wipo.int/en/web/classification-nice">Nice Classification</a>
+	<a href="https://www.wipo.int/en/web/classification-vienna">Vienna Classification</a>
+	<a href="https://www.wipo.int/en/web/global-design-database">Global Design Database</a>
+	<a href="https://hague.wipo.int/#/bulletin/browse-by-bulletin">International Designs Bulletin</a>
+	<a href="https://designdb.wipo.int/designdb/hague/en/">Hague Express Database</a>
+	<a href="https://www.wipo.int/en/web/classification-locarno">Locarno Classification</a>
+	<a href="https://lisbon-express.wipo.int/">Lisbon Express Database</a>
+	<a href="https://branddb.wipo.int/en/IPO-LISBON/quicksearch?by=brandName&v=&start=0&_=1676544734688">Global Brand Database for GIs</a>
+	<a href="https://pluto.upov.int/">PLUTO Plant Variety Database</a>
+	<a href="https://www.upov.int/genie/">GENIE Database</a>
+	<a href="https://www.wipo.int/en/web/treaties">WIPO-Administered Treaties</a>
+	<a href="https://www.wipo.int/en/web/wipolex">WIPO Lex - IP Laws, Treaties & Judgments</a>
+	<a href="https://www.wipo.int/en/web/standards">WIPO Standards</a>
+	<a href="https://www.wipo.int/en/web/ip-statistics">IP Statistics</a>
+	<a href="https://www.wipo.int/en/web/wipo-pearl">WIPO Pearl (Terminology)</a>
+	<a href="https://www.wipo.int/publications/en/">WIPO Publications</a>
+	<a href="https://www.wipo.int/en/web/country-profiles">Country IP Profiles</a>
+	<a href="https://www.wipo.int/en/web/wipo-knowledge-center">WIPO Knowledge Center</a>
+	<a href="https://www.wipo.int/en/web/intangible-assets/measuring-investments#highlights">World Intangible Investment Highlights</a>
+	<a href="https://www.wipo.int/en/web/technology-trends">WIPO Technology Trends</a>
+	<a href="https://www.wipo.int/en/web/global-innovation-index">Global Innovation Index</a>
+	<a href="https://www.wipo.int/en/web/world-ip-report">World Intellectual Property Report</a>
+	<a href="https://www.wipo.int/en/web/pct-system">PCT – The International Patent System</a>
+	<a href="https://pct.wipo.int/ePCT/">ePCT</a>
+	<a href="https://www.wipo.int/en/web/budapest-system">Budapest – The International Microorganism Deposit System</a>
+	<a href="https://www.wipo.int/en/web/madrid-system">Madrid – The International Trademark System</a>
+	<a href="https://madrid.wipo.int/">eMadrid</a>
+	<a href="https://www.wipo.int/en/web/article-6ter">Article 6ter (armorial bearings, flags, state emblems)</a>
+	<a href="https://www.wipo.int/en/web/hague-system">Hague – The International Design System</a>
+	<a href="https://hague.wipo.int/">eHague</a>
+	<a href="https://www.wipo.int/en/web/lisbon-system">Lisbon – The International System of Appellations of Origin and Geographical Indications</a>
+	<a href="https://lisbon-system.wipo.int/">eLisbon</a>
+	<a href="https://www3.wipo.int/upovprisma">UPOV PRISMA</a>
+	<a href="https://www.wipo.int/en/web/amc#mediation">Mediation</a>
+	<a href="https://www.wipo.int/en/web/amc#arbitration">Arbitration</a>
+	<a href="https://www.wipo.int/en/web/amc#expert-determination">Expert Determination</a>
+	<a href="https://www.wipo.int/en/web/amc/domain-name-disputes">Domain Name Disputes</a>
+	<a href="https://www.wipo.int/en/web/case">Centralized Access to Search and Examination (CASE)</a>
+	<a href="https://www.wipo.int/en/web/das">Digital Access Service (DAS)</a>
+	<a href="https://www.wipo.int/en/web/wipo-pay">WIPO Pay</a>
+	<a href="https://www.wipo.int/en/web/current-account-at-wipo">Current Account at WIPO</a>
+	<a href="https://www.wipo.int/en/web/assemblies">WIPO Assemblies</a>
+	<a href="https://www.wipo.int/en/web/decision-making-and-negotiating-bodies#bodies">Standing Committees</a>
+	<a href="https://www.wipo.int/meetings/en/">Calendar of Meetings</a>
+	<a href="https://webcast.wipo.int/">WIPO Webcast</a>
+	<a href="https://www.wipo.int/meetings/en/archive.jsp">WIPO Official Documents</a>
+	<a href="https://www.wipo.int/en/web/development-agenda">Development Agenda</a>
+	<a href="https://www.wipo.int/en/web/cooperation/tailored-initiatives">Tailored Initiatives & Projects</a>
+	<a href="https://www.wipo.int/en/web/cooperation/collaborative-forums">Collaborative Forums & Dialogues</a>
+	<a href="https://www.wipo.int/en/web/innovation-creativity-and-development-acceleration-program">Innovation, Creativity and Development Acceleration Program</a>
+	<a href="https://www.wipo.int/pressroom/en/stories/">IP for Impact</a>
+	<a href="https://www.wipo.int/en/web/national-ip-strategies">National IP Strategies</a>
+	<a href="https://www.wipo.int/en/web/cooperation/cooperation-hub">Cooperation Hub</a>
+	<a href="https://www.wipo.int/en/web/tisc">Technology and Innovation Support Centers (TISC)</a>
+	<a href="https://www.wipo.int/en/web/technology-transfer">Technology Transfer</a>
+	<a href="https://www.wipo.int/en/web/inventor-assistance-program">Inventor Assistance Program</a>
+	<a href="https://www3.wipo.int/wipogreen/en/">WIPO GREEN</a>
+	<a href="https://www.wipo.int/pat-informed/en/">WIPO's Pat-INFORMED</a>
+	<a href="https://www.accessiblebooksconsortium.org/en/portal/index">Accessible Books Consortium</a>
+	<a href="https://www.wipo.int/en/web/wipo-for-creators">WIPO for Creators</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/wipo-translate">WIPO Translate</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/speech-to-text">Speech-to-Text</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/classification-assistant">Classification Assistant</a>
+	<a href="https://www.wipo.int/members/en/">Member States</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/observers">Observers</a>
+	<a href="https://www.wipo.int/en/web/director-general">Director General</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/activities-by-unit">Activities by Unit</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/offices">External Offices</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo#staff">Staff Positions</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo#affiliated">Affiliated Personnel Positions</a>
+	<a href="https://www.wipo.int/en/web/procurement">Procurement</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/budget">Results & Budget</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/budget/financial">Financial Reporting</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/oversight">Oversight</a>
+</div></div>	
+<div class="d-flex flex-column flex-fill position-relative" id="wrapper">
+	<section class=" flex-fill" id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		<div class="layout-content portlet-layout" id="main-content" role="main">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	<div class="lfr-layout-structure-item-830dac65-7b6d-f81c-b2ad-cae0e60f4acb lfr-layout-structure-item-container sticky-top bg-blue-9 ulf-hide" data-layout-structure-item-id="830dac65-7b6d-f81c-b2ad-cae0e60f4acb"><div class="lfr-layout-structure-item-a69e46ba-e357-1d36-4e99-b46c5ae6e513 lfr-layout-structure-item-container py-1 container-fluid container-fluid-max-xl" data-layout-structure-item-id="a69e46ba-e357-1d36-4e99-b46c5ae6e513"><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-703bf760-b691-4a5d-2fc1-930f98945046 " data-layout-structure-item-id="703bf760-b691-4a5d-2fc1-930f98945046"><div id="fragment-21506227-5663-3c93-b41d-f33681cbbb8f" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p style="text-align: center;">Apply as a beneficiary or volunteer on the <a href="https://iap.wipo.int/iap/" rel="noopener noreferrer" target="_blank">Online IAP Platform</a>.&nbsp;</p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div></div></div><div class="lfr-layout-structure-item-d606561a-a573-17b3-9076-e2598f562851 lfr-layout-structure-item-container pt-5 bg-img" data-layout-structure-item-id="d606561a-a573-17b3-9076-e2598f562851" style="--lfr-background-image-d606561a-a573-17b3-9076-e2598f562851: url(/documents/d/wipo/images-banners-iap-index-1920.webp);"><div class="lfr-layout-structure-item-21c63936-ca7f-fd56-cec5-ce07d774b4bd lfr-layout-structure-item-container  container-fluid container-fluid-max-xl" data-layout-structure-item-id="21c63936-ca7f-fd56-cec5-ce07d774b4bd"><div class="lfr-layout-structure-item-d7b1e372-c3fd-0e75-452d-5ecdac0e69cd lfr-layout-structure-item-row " data-layout-structure-item-id="d7b1e372-c3fd-0e75-452d-5ecdac0e69cd"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-8 col-sm-12 col-12 col-md-8"><div class="lfr-layout-structure-item-basic-component-html lfr-layout-structure-item-ae90bf99-f71e-0106-d639-0d4ade4b4fd6 " data-layout-structure-item-id="ae90bf99-f71e-0106-d639-0d4ade4b4fd6"><div id="fragment-e36da0b8-a533-8687-f242-09267d5c599b" > <div class="component-html" data-lfr-editable-id="element-html" data-lfr-editable-type="html"><div class="ulf-banner-item-out">
+  <div class="ulf-banner-item">
+    <h1 id="intro">
+      Inventor Assistance Program (IAP)
+    </h1>
+    <p class="lead">
+      <b>Empowering inventors and amplifying innovation ecosystems</b>
+    </p>
+  </div>
+</div>
+</div></div><style >.component-html img {
+	max-width: 100%;
+}</style></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"></div></div></div></div></div><div class="lfr-layout-structure-item-f7af72ee-c525-83dd-8689-f063d2983555 lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="f7af72ee-c525-83dd-8689-f063d2983555"><div class="lfr-layout-structure-item-8d3a8890-072c-a2a4-81ad-6e7ed2f2905a lfr-layout-structure-item-row " data-layout-structure-item-id="8d3a8890-072c-a2a4-81ad-6e7ed2f2905a"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-8 col-sm-12 col-12 col-md-8"><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-a0ba206a-56e8-fe4c-3384-381a7b658627 " data-layout-structure-item-id="a0ba206a-56e8-fe4c-3384-381a7b658627"><div id="fragment-08a5645c-a3d7-455a-e05c-93a6b531a4ca" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span class="lead">Every spark of genius can transform our world. With the right support, inventors translate creativity into progress that benefits everyone. This opportunity should be available to all inventors, regardless of their financial means.</span></p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-ca11137f-a5e8-e9c9-0fac-40ba3d70e024 " data-layout-structure-item-id="ca11137f-a5e8-e9c9-0fac-40ba3d70e024"><div id="fragment-cfcb833f-4c2a-a7c2-9186-ca9e35e956cf" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: rgb(250,250,250);"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">WIPO’s Inventor Assistance Program (IAP) connects individuals and small businesses with qualified professionals who help them navigate the patent system at no cost, increasing the odds of turning innovative ideas into commercial assets.</span></span></span></span></span></span></span></p>
+
+
+</div></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-82a386c3-1d96-7d74-9be5-205c6994b6ab " data-layout-structure-item-id="82a386c3-1d96-7d74-9be5-205c6994b6ab"><div id="fragment-e6d2ced0-8794-352d-74a9-8fd8f4ceef0e" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: rgb(250,250,250);"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">By empowering underserved inventors, the IAP serves as a catalyst for global innovation, ensuring inventors worldwide have the chance to make a lasting impact.</span></span></span></span></span></span></span></p>
+
+
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-w-top-image-u--copy- lfr-layout-structure-item-85e79988-9b38-bfc1-6a30-099ec3c05c4d " data-layout-structure-item-id="85e79988-9b38-bfc1-6a30-099ec3c05c4d"><div id="fragment-afa48f66-dfe4-0161-c080-6749741520b6" > <div class="card feature-highlight-card">
+<div class="feature-highlight" id="card-feature">Featured</div>
+	<figure class="figure">	
+	<img src="/documents/d/ip-advantage/images-emptyre-inventor-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	</figure>	
+	<div class="card-body">
+		<h3 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a target="_self" href="/en/web/ip-advantage/w/stories/emptyre-car-anti-theft-device">EMPTYRE Car Anti-theft Device Stops Thieves in their Tracks</a></h3>
+	<div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-0fa86d3f-bc93-362a-abda-2eec111c1521 lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="0fa86d3f-bc93-362a-abda-2eec111c1521"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-3ef98837-2e41-a12e-d808-954d062ebf1a " data-layout-structure-item-id="3ef98837-2e41-a12e-d808-954d062ebf1a"><div id="fragment-8e3f07dd-13a8-f386-b46e-01e2255424e5" > <div class="row row-heading" id="overview">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-a7e224c2-b7a0-af6c-fef0-b1fd60319000 " data-layout-structure-item-id="a7e224c2-b7a0-af6c-fef0-b1fd60319000"><div id="fragment-01c3329d-5fd0-8ed9-77c3-749ae3dd7ecd"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">IAP at a glance</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-80932bef-5a79-3c86-5af4-a98bbde0e41d lfr-layout-structure-item-row " data-layout-structure-item-id="80932bef-5a79-3c86-5af4-a98bbde0e41d"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-8 col-sm-12 col-12 col-md-8"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-6eb26858-8b54-d4b0-5b7b-bb1e28a087d9 " data-layout-structure-item-id="6eb26858-8b54-d4b0-5b7b-bb1e28a087d9"><div id="fragment-af5267da-0520-f4ac-ccbe-b8d28e9a3757" > <div class="card ">
+	<div class="card-body">
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-0cacd9d9-6d66-4ccb-d8c5-df361ac86d38 " data-layout-structure-item-id="0cacd9d9-6d66-4ccb-d8c5-df361ac86d38"><div id="fragment-ce2a4997-2c31-c054-2324-817e0cb2cf90"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: white;"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">Participating countries - Chile, Colombia, Ecuador, Kenya, Morocco, Pakistan, Peru, the Philippines, Singapore, South Africa.</span></span></span></span></span></span></span></p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-accordion-u lfr-layout-structure-item-eff97351-ed0d-03a5-ba2c-2d9814dee1b2 " data-layout-structure-item-id="eff97351-ed0d-03a5-ba2c-2d9814dee1b2"><div id="fragment-9a22ea47-1dc6-3f54-b211-3221c753aada" > <div class="accordion" id="accordion_lnjr">
+    <div class="card m-0">	
+        <div class="card-header" id="heading_1_lnjr">
+			  <h2>				  
+				<button type="button" data-toggle="collapse" data-target="#collapse_1_lnjr" class="btn btn-link collapsed" aria-expanded="false" aria-controls="collapse_1_lnjr">				 
+						 <span class="material-symbols-outlined">arrow_right</span> 
+						 <span data-lfr-editable-id="element-title_1" data-lfr-editable-type="text">Who can apply for support through the IAP?</span>
+				</button>				  
+			  </h2>
+			</div>
+		<div id="collapse_1_lnjr" class="collapse " aria-labelledby="heading_1_lnjr" data-parent="#accordion_lnjr" style="">
+			  <div class="card-body" id="element-text_1">
+				<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-cccee73a-0c9d-5f21-f183-b9f177986f83 " data-layout-structure-item-id="cccee73a-0c9d-5f21-f183-b9f177986f83"><div id="fragment-4e22b654-09fa-d041-de97-e75aff8bb48f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p style="margin-bottom: 11.0px;">Individual inventors and small businesses from participating countries who meet the local eligibility criteria determined by each country.</p>
+
+
+</div></div></div></div>
+				</div>
+		</div>
+	</div>
+</div></div></div><div class="lfr-layout-structure-item-accordion-u lfr-layout-structure-item-41bf7e99-da89-9ff9-0bb6-32d78148aad1 " data-layout-structure-item-id="41bf7e99-da89-9ff9-0bb6-32d78148aad1"><div id="fragment-840ae145-3c0d-d71b-2682-0a941d0997a4" > <div class="accordion" id="accordion_uhvj">
+    <div class="card m-0">	
+        <div class="card-header" id="heading_1_uhvj">
+			  <h2>				  
+				<button type="button" data-toggle="collapse" data-target="#collapse_1_uhvj" class="btn btn-link collapsed" aria-expanded="false" aria-controls="collapse_1_uhvj">				 
+						 <span class="material-symbols-outlined">arrow_right</span> 
+						 <span data-lfr-editable-id="element-title_1" data-lfr-editable-type="text">What services are offered by the IAP?</span>
+				</button>				  
+			  </h2>
+			</div>
+		<div id="collapse_1_uhvj" class="collapse " aria-labelledby="heading_1_uhvj" data-parent="#accordion_uhvj" style="">
+			  <div class="card-body" id="element-text_1">
+				<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-69d51cda-f2e9-59d1-9801-a51050f27572 " data-layout-structure-item-id="69d51cda-f2e9-59d1-9801-a51050f27572"><div id="fragment-4b9d5cf8-2d3e-0b64-28bc-e061ff5ca42f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+<p>Qualifying inventors receive help securing patents or utility models in their country and internationally, including through the<span style="font-size: 11.0pt;"><span style="line-height: 107.0%;"><span style="font-family: Aptos , sans-serif;"> </span></span></span><a href="/en/web/pct-system">PCT system</a>. Beneficiaries can also get guidance for commercializing patents supported by the Program.</p>
+
+
+</div></div></div></div>
+				</div>
+		</div>
+	</div>
+</div></div></div><div class="lfr-layout-structure-item-accordion-u lfr-layout-structure-item-1194d7f2-bc53-7048-09fd-0e5d699efded " data-layout-structure-item-id="1194d7f2-bc53-7048-09fd-0e5d699efded"><div id="fragment-fe6200a9-65f5-8379-9a62-f1d206f9ea04" > <div class="accordion" id="accordion_oyru">
+    <div class="card m-0">	
+        <div class="card-header" id="heading_1_oyru">
+			  <h2>				  
+				<button type="button" data-toggle="collapse" data-target="#collapse_1_oyru" class="btn btn-link collapsed" aria-expanded="false" aria-controls="collapse_1_oyru">				 
+						 <span class="material-symbols-outlined">arrow_right</span> 
+						 <span data-lfr-editable-id="element-title_1" data-lfr-editable-type="text">Does the IAP provide financial assistance?</span>
+				</button>				  
+			  </h2>
+			</div>
+		<div id="collapse_1_oyru" class="collapse " aria-labelledby="heading_1_oyru" data-parent="#accordion_oyru" style="">
+			  <div class="card-body" id="element-text_1">
+				<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-7df8ce7b-64a0-b152-95e1-f91f0c8cff48 " data-layout-structure-item-id="7df8ce7b-64a0-b152-95e1-f91f0c8cff48"><div id="fragment-41c125c8-7a43-4d9d-edb0-55619b0eeb6d"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p style="margin-bottom: 11.0px;">No. The IAP does not provide any direct finance assistance. While volunteers provide their services for free, beneficiaries remain responsible for official patent fees, translation costs, and other out-of-pocket expenses necessary to complete patent applications.</p>
+
+
+</div></div></div></div>
+				</div>
+		</div>
+	</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-1d3e0549-3e66-389d-2c28-372812024165 " data-layout-structure-item-id="1d3e0549-3e66-389d-2c28-372812024165"><div id="fragment-cdd7f515-f98a-ca41-ee15-e7b41f208632" > <div class="card ">
+	<figure class="figure">	
+	<img src="/documents/d/wipo/images-iap-guiding-principles-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	</figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="/documents/d/inventor-assistance-program/docs-en-iap_guiding_principles.pdf">IAP Guiding Principles, Structure and Governance [PDF]</a></h2>
+	<div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-b7bb400f-f91d-da58-ccec-ba2991a4faea lfr-layout-structure-item-container bg-white" data-layout-structure-item-id="b7bb400f-f91d-da58-ccec-ba2991a4faea"><div class="lfr-layout-structure-item-93a1ae84-28de-3830-d92a-6cc9d1bff976 lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="93a1ae84-28de-3830-d92a-6cc9d1bff976"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-73da5ed7-07dc-b914-1375-43c65d1395bb " data-layout-structure-item-id="73da5ed7-07dc-b914-1375-43c65d1395bb"><div id="fragment-7065d111-f826-4606-f609-0ac7f53bb5a2" > <div class="row row-heading" id="who">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-c398382b-6544-935c-89db-9324706253c2 " data-layout-structure-item-id="c398382b-6544-935c-89db-9324706253c2"><div id="fragment-a9986201-e15c-3867-4f6c-a597aa9e3a50"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Who’s involved in the IAP?</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-ba8516cd-5196-8726-9533-b31b6fde445c lfr-layout-structure-item-row " data-layout-structure-item-id="ba8516cd-5196-8726-9533-b31b6fde445c"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-9b3adb53-ff45-a0fc-1e88-723f54a7f212 " data-layout-structure-item-id="9b3adb53-ff45-a0fc-1e88-723f54a7f212"><div id="fragment-e63a1fb8-2d56-fb21-88b4-dac561c3e8da" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<img src="/documents/d/wipo/images-iap-inventors-small-business-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	</figure>	
+	<div class="card-body">
+	<h3 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/inventor-assistance-program/beneficiaries">Inventors and small businesses</a></h3>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-9cf24536-9ea7-00ac-f816-9f0557b64be6 " data-layout-structure-item-id="9cf24536-9ea7-00ac-f816-9f0557b64be6"><div id="fragment-d67cc075-588a-aaa4-9587-10d638cac4b0"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p style="margin-bottom: 11.0px;">Need professional support to secure a patent? Worried you can’t afford it?</p>
+
+
+</div></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-f6d0d8ad-fd23-bbe2-27ab-42121485b06f " data-layout-structure-item-id="f6d0d8ad-fd23-bbe2-27ab-42121485b06f"><div id="fragment-d1cf5399-762a-1d7c-c517-5b5399772b58"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p>The IAP can help you transform your idea into a commercial asset.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-33c2819c-4d11-94ab-35a9-80a51dd6bbae " data-layout-structure-item-id="33c2819c-4d11-94ab-35a9-80a51dd6bbae"><div id="fragment-8e751198-28c0-e842-e5a9-97f9826a400c" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<img src="/documents/d/wipo/images-iap-volunteers-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	</figure>	
+	<div class="card-body">
+	<h3 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/inventor-assistance-program/volunteers">Volunteers</a></h3>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-90cdbf56-a19f-e50d-1e1d-fe79b9275d08 " data-layout-structure-item-id="90cdbf56-a19f-e50d-1e1d-fe79b9275d08"><div id="fragment-b7706862-e2bb-cf39-9e16-41232e1c1c4b"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+<p>Inventors worldwide need your expertise.</p>
+
+
+</div></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-068e1579-3980-1efb-9fd6-480cb9369d3b " data-layout-structure-item-id="068e1579-3980-1efb-9fd6-480cb9369d3b"><div id="fragment-116698a9-b795-994b-b32d-93a443e98184"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+<p>Join our global network of IP experts providing pro bono services and make a meaningful impact using your professional skills.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-d6a26f58-c512-24ec-bff5-4d957a3b79fb " data-layout-structure-item-id="d6a26f58-c512-24ec-bff5-4d957a3b79fb"><div id="fragment-bc60c8c0-6971-c6a9-9d78-6d4cfbaac807" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<img src="/documents/d/wipo/images-iap-governments-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	</figure>	
+	<div class="card-body">
+	<h3 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/inventor-assistance-program/participating-countries">Governments</a></h3>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-3a902df5-9470-4f7f-d4cd-64328c0d4bbd " data-layout-structure-item-id="3a902df5-9470-4f7f-d4cd-64328c0d4bbd"><div id="fragment-967ca98d-4df6-7833-3ce2-f4c1d709b499"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+<p>Unlock innovation in your country and increase the total value of IP assets in the economy.</p>
+
+
+</div></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-c0ea178d-a3f7-c8a8-2c5a-0078a3270cb9 " data-layout-structure-item-id="c0ea178d-a3f7-c8a8-2c5a-0078a3270cb9"><div id="fragment-231d989d-4688-41e5-714b-c5d5d1f2a1c5"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+<p>The IAP helps develop your innovation ecosystem and ultimately transform local creativity into a new source of revenue, jobs and inspiration.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-592f1b84-3a73-6291-2a96-165a122a4505 " data-layout-structure-item-id="592f1b84-3a73-6291-2a96-165a122a4505"><div id="fragment-6108f5df-7447-8e8b-fdc1-a75c97cca9f0" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<img src="/documents/d/wipo/images-iap-sponsors-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	</figure>	
+	<div class="card-body">
+	<h3 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/inventor-assistance-program/sponsors">Sponsors</a></h3>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-3c08cac0-b545-4eae-d563-c1261dac62d1 " data-layout-structure-item-id="3c08cac0-b545-4eae-d563-c1261dac62d1"><div id="fragment-46c41ffd-1fda-7e1c-43aa-a03098b8723e"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p style="margin-bottom: 11.0px;">Want to help make inclusive innovation a reality?</p>
+
+
+</div></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-fac2b3ac-740b-3e2d-ce30-fb66c4ff0b9a " data-layout-structure-item-id="fac2b3ac-740b-3e2d-ce30-fb66c4ff0b9a"><div id="fragment-9119d94d-32d2-13de-6eb1-8a2edb3d900b"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p>Partner with the IAP to close the innovation gap by expanding the Program’s reach and impact.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div></div><div class="lfr-layout-structure-item-531426a7-d4ae-6752-93be-fc50e970fec4 lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="531426a7-d4ae-6752-93be-fc50e970fec4"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-b0fc8e8e-3eb4-d509-cdad-5547efd7390e " data-layout-structure-item-id="b0fc8e8e-3eb4-d509-cdad-5547efd7390e"><div id="fragment-0259e86e-3bf4-8ed8-b7e6-8cd16f9f1396" > <div class="row row-heading" id="numbers">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-aafbb07f-427c-dff1-3a10-84e2557d5b4e " data-layout-structure-item-id="aafbb07f-427c-dff1-3a10-84e2557d5b4e"><div id="fragment-ebcc277c-6422-f328-8bc0-a109896ab8b7"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Real results, real stories</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-35b227b3-de74-d947-fff8-330659be4b35 lfr-layout-structure-item-row " data-layout-structure-item-id="35b227b3-de74-d947-fff8-330659be4b35"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-basic-component-html lfr-layout-structure-item-bce1ed2a-bba7-f8ab-5891-458606deb97c " data-layout-structure-item-id="bce1ed2a-bba7-f8ab-5891-458606deb97c"><div id="fragment-10613f73-4b06-8d53-5474-7b4956c7362d" > <div class="component-html" data-lfr-editable-id="element-html" data-lfr-editable-type="html"><h3 class="display-3">10</h3>
+</div></div><style >.component-html img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-8a2f501f-667b-c4c6-5163-15c1a5bc997e " data-layout-structure-item-id="8a2f501f-667b-c4c6-5163-15c1a5bc997e"><div id="fragment-b0e8fdc4-c2ae-0ff2-993b-063b1c1234c6" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: rgb(250,250,250);"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">IAP participating countries</span></span></span></span></span></span></span></p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-basic-component-html lfr-layout-structure-item-65a70e58-debc-370b-32a0-f1d0842bfe6a " data-layout-structure-item-id="65a70e58-debc-370b-32a0-f1d0842bfe6a"><div id="fragment-c8c59a6e-e75b-d600-c522-5e9a6f7b8240" > <div class="component-html" data-lfr-editable-id="element-html" data-lfr-editable-type="html"><h3 class="display-3">300+</h3>
+</div></div><style >.component-html img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-77debce6-5b12-913a-e386-9d887b9a25d3 " data-layout-structure-item-id="77debce6-5b12-913a-e386-9d887b9a25d3"><div id="fragment-f1644a9c-b2f9-7638-fdde-aae2f573b066" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: rgb(250,250,250);"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">beneficiaries helped</span></span></span></span></span></span></span></p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-basic-component-html lfr-layout-structure-item-61f500bb-f64e-99e0-5e50-357684d81ebc " data-layout-structure-item-id="61f500bb-f64e-99e0-5e50-357684d81ebc"><div id="fragment-90028fd5-47dd-1bc3-d2d6-7188bc1f2704" > <div class="component-html" data-lfr-editable-id="element-html" data-lfr-editable-type="html"><h3 class="display-3">130+</h3>
+</div></div><style >.component-html img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-d44f7227-ec46-83de-4ba5-99b6ab46a5cf " data-layout-structure-item-id="d44f7227-ec46-83de-4ba5-99b6ab46a5cf"><div id="fragment-3236b33d-6270-9ffc-caa4-ea5e35ba8f0a" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: rgb(250,250,250);"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">patent applications filed</span></span></span></span></span></span></span></p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-basic-component-html lfr-layout-structure-item-432ba01f-e9fb-7e54-bb2d-a48d378f38a7 " data-layout-structure-item-id="432ba01f-e9fb-7e54-bb2d-a48d378f38a7"><div id="fragment-e5bf8350-d6b7-a516-dc4d-c5f18e681013" > <div class="component-html" data-lfr-editable-id="element-html" data-lfr-editable-type="html"><h3 class="display-3">75+</h3>
+</div></div><style >.component-html img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-eaba3f34-7d41-b3e8-b883-078fedcb79e6 " data-layout-structure-item-id="eaba3f34-7d41-b3e8-b883-078fedcb79e6"><div id="fragment-42de148f-3697-c2d1-bd9e-3156b4d5e686" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span style="font-size: 11.0pt;"><span style="background: rgb(250,250,250);"><span style="line-height: normal;"><span style="font-family: Aptos , sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: 'Noto Sans Display' , sans-serif;"><span style="color: rgb(48,48,48);">patents granted</span></span></span></span></span></span></span></p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div></div></div></div></div><div class="lfr-layout-structure-item-51edbff0-19eb-d3da-a27e-c8cf8ccb0332 lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="51edbff0-19eb-d3da-a27e-c8cf8ccb0332"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-d4ea9396-2012-df47-0302-396dbb14ddcd " data-layout-structure-item-id="d4ea9396-2012-df47-0302-396dbb14ddcd"><div id="fragment-83d4ac72-1561-81d9-3523-565eb9f9f377" > <div class="row row-heading" id="stories">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-a3e5baac-f69a-e3dd-bb4c-fa3a2cbd0c35 " data-layout-structure-item-id="a3e5baac-f69a-e3dd-bb4c-fa3a2cbd0c35"><div id="fragment-a893bd53-00d8-70fc-ab26-262c66e09bec"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">From idea to patent: stories of innovation made possible</h2></div></div></div>
+</div>
+<div class="col-md-3 text-md-right text-sm-left">
+		<div><div class="lfr-layout-structure-item-basic-component-button lfr-layout-structure-item-fb5347b4-9d27-8bda-95b3-d01f9d63eb79 " data-layout-structure-item-id="fb5347b4-9d27-8bda-95b3-d01f9d63eb79"><div id="fragment-529fbefe-b53c-d381-39fc-064ce0e4ed94"> 		<div class="component-button text-break">
+			<a class="btn btn-nm btn-secondary" data-lfr-editable-id="link" data-lfr-editable-type="link" href="/en/web/ip-advantage/iap-stories" id="fragment-jlne-link">Read more IAP success stories</a>
+		</div>
+</div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-78b565c4-ae7b-24ad-51e7-3ce2570669c3 lfr-layout-structure-item-collection" data-layout-structure-item-id="78b565c4-ae7b-24ad-51e7-3ce2570669c3" data-analytics-targetable-collection="com.liferay.layout.list.retriever.ClassedModelListObjectReference@880b679" id="analytics-targetable-collection-78b565c4-ae7b-24ad-51e7-3ce2570669c3"><div class="container-fluid overflow-hidden px-0"><div class="row align-items-start"><div class="col col-lg-3 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-9e0434fd-d152-56e1-376a-c17359242d09 " data-layout-structure-item-id="9e0434fd-d152-56e1-376a-c17359242d09"><div id="fragment-719277cb-8e38-aa54-caf5-0f326a89cfd2" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<picture data-fileentryid="9877348"><source media="(max-width:300px)" srcset="/o/adaptive-media/image/9877348/Thumbnail-300x300/emptyre-inventor-960.jpg?t=1774018647631" /><source media="(max-width:960px) and (min-width:300px)" srcset="/o/adaptive-media/image/9877348/Preview-1000x0/emptyre-inventor-960.jpg?t=1774018647631" /><img src="https://www.wipo.int/documents/1576608/1577531/emptyre-inventor-960.jpg/2f8b9d6b-20fd-e8ff-f155-aee02c5bff7c?version=1.0&amp;t=1774018647631" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image" data-fileentryid="9877348"></picture>
+	</figure>	
+	<div class="card-body">
+	<h4 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/en/web/ip-advantage/w/stories/emptyre-car-anti-theft-device">EMPTYRE Car Anti-theft Device Stops Thieves in their Tracks</a></h4>
+	<div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-9e0434fd-d152-56e1-376a-c17359242d09 " data-layout-structure-item-id="9e0434fd-d152-56e1-376a-c17359242d09"><div id="fragment-b0fcbe90-b503-9f17-e213-bce83ffaf03f" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<picture data-fileentryid="9450392"><source media="(max-width:300px)" srcset="/o/adaptive-media/image/9450392/Thumbnail-300x300/battery-level-emoji-960.jpg?t=1768839255750" /><source media="(max-width:960px) and (min-width:300px)" srcset="/o/adaptive-media/image/9450392/Preview-1000x0/battery-level-emoji-960.jpg?t=1768839255750" /><img src="https://www.wipo.int/documents/1576608/1577531/battery-level-emoji-960.jpg/ee5a755e-e137-3b44-a6d4-e6f364ad107a?version=1.0&amp;t=1768839255750" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image" data-fileentryid="9450392"></picture>
+	</figure>	
+	<div class="card-body">
+	<h4 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/en/web/ip-advantage/w/stories/iap-supported-moroccan-inventor-in-patenting-battery-health-checker">IAP Supported Moroccan Inventor in Patenting Battery Health Checker</a></h4>
+	<div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-9e0434fd-d152-56e1-376a-c17359242d09 " data-layout-structure-item-id="9e0434fd-d152-56e1-376a-c17359242d09"><div id="fragment-46c0c191-2d32-6c4d-bca6-aa67f349cda8" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<picture data-fileentryid="9152080"><source media="(max-width:300px)" srcset="/o/adaptive-media/image/9152080/Thumbnail-300x300/iap-stari-yaqua-feature-960.jpg?t=1764683791544" /><source media="(max-width:960px) and (min-width:300px)" srcset="/o/adaptive-media/image/9152080/Preview-1000x0/iap-stari-yaqua-feature-960.jpg?t=1764683791544" /><img src="https://www.wipo.int/documents/1576608/1577531/iap-stari-yaqua-feature-960.jpg/35ac661f-c5c3-55a5-9dbf-482682efb10a?version=1.0&amp;t=1764683791544" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image" data-fileentryid="9152080"></picture>
+	</figure>	
+	<div class="card-body">
+	<h4 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/en/web/ip-advantage/w/stories/iap-helped-peruvian-inventor-patent-a-wastewater-treatment-system">IAP Helped Peruvian Inventor Patent a Wastewater Treatment System</a></h4>
+	<div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-9e0434fd-d152-56e1-376a-c17359242d09 " data-layout-structure-item-id="9e0434fd-d152-56e1-376a-c17359242d09"><div id="fragment-973d5eff-e87d-eb58-4b8a-4d277bfaab17" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	<img src="https://www.wipo.int/documents/102028/3877304/man-bike-carrying+backpacks-kangaroo-960.webp/8fe426de-e3ab-9dc9-a379-b16c83e037a5?version=1.0&amp;t=1757933432940" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image" data-fileentryid="8584226">
+	</figure>	
+	<div class="card-body">
+	<h4 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/en/web/ip-advantage/w/stories/kangaroo-bike-mount">IP Journey of Kangaroo Bike Mount for Backpacks</a></h4>
+	<div></div>
+</div>
+</div></div></div></div></div></div></div></div><div class="lfr-layout-structure-item-323ee2ea-ebda-b8dc-8479-60983570e09c lfr-layout-structure-item-container bg-gray-warm" data-layout-structure-item-id="323ee2ea-ebda-b8dc-8479-60983570e09c"><div class="lfr-layout-structure-item-5371eff9-9cb7-d762-ec8d-9627bd93f702 lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="5371eff9-9cb7-d762-ec8d-9627bd93f702"><div class="lfr-layout-structure-item-24a85126-83af-261a-aa22-c12dba19d8a4 lfr-layout-structure-item-row " data-layout-structure-item-id="24a85126-83af-261a-aa22-c12dba19d8a4"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-6 col-sm-12 col-12 col-md-6"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-7db7dfba-c950-4475-1730-5ebcc6e16b42 " data-layout-structure-item-id="7db7dfba-c950-4475-1730-5ebcc6e16b42"><div id="fragment-a96f74a6-807e-4a08-5c49-3e88a1252c25" > <div class="row row-heading" id="news">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-90dc9c59-d096-bfee-2fa9-1819e3f29127 " data-layout-structure-item-id="90dc9c59-d096-bfee-2fa9-1819e3f29127"><div id="fragment-84ee2196-36fb-7c6b-ee48-1e8ddd24c123"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">IAP News</h2></div></div></div>
+</div>
+<div class="col-md-3 text-md-right text-sm-left">
+		<div><div class="lfr-layout-structure-item-basic-component-button lfr-layout-structure-item-b40be469-63fd-1990-ba3d-358a5089e986 " data-layout-structure-item-id="b40be469-63fd-1990-ba3d-358a5089e986"><div id="fragment-12e1cea9-65db-5f66-41df-63790f493dba"> 		<div class="component-button text-break">
+			<a class="btn btn-nm btn-secondary" data-lfr-editable-id="link" data-lfr-editable-type="link" href="/en/web/inventor-assistance-program/news" id="fragment-tyji-link">All news</a>
+		</div>
+</div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-f890d262-1dd9-0e73-765e-54f8aecdf6a4 lfr-layout-structure-item-collection" data-layout-structure-item-id="f890d262-1dd9-0e73-765e-54f8aecdf6a4" data-analytics-targetable-collection="com.liferay.layout.list.retriever.ClassedModelListObjectReference@18355513" id="analytics-targetable-collection-f890d262-1dd9-0e73-765e-54f8aecdf6a4"><div class="container-fluid overflow-hidden px-0"><div class="row align-items-start"><div class="col col-lg-12 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-article-news-dropzone lfr-layout-structure-item-c2d9ba03-d5fc-a262-7ffd-fe744678d3e8 " data-layout-structure-item-id="c2d9ba03-d5fc-a262-7ffd-fe744678d3e8"><div id="fragment-4506d4ed-e448-9be5-5c46-548ffaa988c7" > <ul class="dividers text-decoration-none">
+<div><div class="lfr-layout-structure-item-paragraph--copy--3 lfr-layout-structure-item-785f7e78-b8ff-fb25-b192-bd4affe0301d " data-layout-structure-item-id="785f7e78-b8ff-fb25-b192-bd4affe0301d"><div id="fragment-6d1a2c02-5334-3572-3dd6-b4566c30af94"><li>
+<p><a data-lfr-editable-id="element-text-news-title" data-lfr-editable-type="link" href="https://www.wipo.int/en/web/inventor-assistance-program/w/news/2026/decade-delivered-ten-years-iap-philippines">A Decade Delivered: Ten Years of the IAP in the Philippines</a></p>
+<p class="small">
+June 19, 2026</p>
+</li></div><style>.listing, .listing__item, .group__item {
+    margin: 16px 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc !important;
+}</style></div></div>
+	</ul></div></div></div><div class="col col-lg-12 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-article-news-dropzone lfr-layout-structure-item-c2d9ba03-d5fc-a262-7ffd-fe744678d3e8 " data-layout-structure-item-id="c2d9ba03-d5fc-a262-7ffd-fe744678d3e8"><div id="fragment-32eabc01-0b47-d9f8-383c-e5a024ca0d71" > <ul class="dividers text-decoration-none">
+<div><div class="lfr-layout-structure-item-paragraph--copy--3 lfr-layout-structure-item-785f7e78-b8ff-fb25-b192-bd4affe0301d " data-layout-structure-item-id="785f7e78-b8ff-fb25-b192-bd4affe0301d"><div id="fragment-e127b636-742f-0b79-dfe3-137f92df32fd"><li>
+<p><a data-lfr-editable-id="element-text-news-title" data-lfr-editable-type="link" href="https://www.wipo.int/en/web/inventor-assistance-program/w/news/2026/cultivating-south-african-innovation-for-a-global-harvest">Cultivating South African Innovation for a Global Harvest</a></p>
+<p class="small">
+April 9, 2026</p>
+</li></div></div></div>
+	</ul></div></div></div><div class="col col-lg-12 col-sm-12 col-12 col-md-12"><div class="lfr-layout-structure-item-article-news-dropzone lfr-layout-structure-item-c2d9ba03-d5fc-a262-7ffd-fe744678d3e8 " data-layout-structure-item-id="c2d9ba03-d5fc-a262-7ffd-fe744678d3e8"><div id="fragment-d445d4bf-976e-8ddc-5731-f9b4a6e1d2ef" > <ul class="dividers text-decoration-none">
+<div><div class="lfr-layout-structure-item-paragraph--copy--3 lfr-layout-structure-item-785f7e78-b8ff-fb25-b192-bd4affe0301d " data-layout-structure-item-id="785f7e78-b8ff-fb25-b192-bd4affe0301d"><div id="fragment-d646d09a-e3da-aaf3-d195-4e4dfbf6ea20"><li>
+<p><a data-lfr-editable-id="element-text-news-title" data-lfr-editable-type="link" href="https://www.wipo.int/en/web/inventor-assistance-program/w/news/2026/iap-deepens-its-presence-in-peru-through-outreach-webinar-for-innovators">IAP Deepens Its Presence in Peru Through Outreach Webinar for Innovators</a></p>
+<p class="small">
+April 8, 2026</p>
+</li></div></div></div>
+	</ul></div></div></div></div></div></div></div><div class="col col-lg-6 col-sm-12 col-12 col-md-6"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-50fffae4-2935-de5d-04db-ee70af9b952b " data-layout-structure-item-id="50fffae4-2935-de5d-04db-ee70af9b952b"><div id="fragment-3e290e1b-82d3-0586-bffd-5a5d6fc718aa" > <div class="row row-heading" id="events">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-b198cd89-ce37-499c-3de1-d1a36691a440 " data-layout-structure-item-id="b198cd89-ce37-499c-3de1-d1a36691a440"><div id="fragment-ab954646-bbb2-a473-7b4a-d53bbb6445c2"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">IAP Events</h2></div></div></div>
+</div>
+<div class="col-md-3 text-md-right text-sm-left">
+		<div><div class="lfr-layout-structure-item-basic-component-button lfr-layout-structure-item-2920d79d-4e1a-c0fa-3bc1-16e5b679bc53 " data-layout-structure-item-id="2920d79d-4e1a-c0fa-3bc1-16e5b679bc53"><div id="fragment-90a9fefe-8188-2e2a-13df-30307d1f5450"> 		<div class="component-button text-break">
+			<a class="btn btn-nm btn-secondary" data-lfr-editable-id="link" data-lfr-editable-type="link" href="https://www.wipo.int/meetings/en/topic.jsp?group_id=291" id="fragment-xhtr-link">All events</a>
+		</div>
+</div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-basic-component-html lfr-layout-structure-item-30285d53-d2c9-18bd-15f9-6be0c5ad5aec " data-layout-structure-item-id="30285d53-d2c9-18bd-15f9-6be0c5ad5aec"><div id="fragment-9aa4c5f5-a276-c440-ee56-1c2121b5794d" > <div class="component-html" data-lfr-editable-id="element-html" data-lfr-editable-type="html"><div id="wipo-events" data-xml="https://www.wipo.int/meetings/en/includes/topic.xml?group_id=291" data-number="3"><div class="listings listings--archive"></div></div></div></div><style >.component-html img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-slider-scripts-only--copy- lfr-layout-structure-item-bb3ead4d-1a72-e474-5e68-f95a80f71295 " data-layout-structure-item-id="bb3ead4d-1a72-e474-5e68-f95a80f71295"><div id="fragment-9c37dad5-e236-0dfe-2914-62c17c124a7c" > <script type="text/javascript" src="/documents/102028/103638/wipo-events.js"></script></div></div></div></div></div></div></div><div class="lfr-layout-structure-item-12718ae3-88f5-2293-89fa-c8ce91b8813c lfr-layout-structure-item-container border-bottom bg-gray-10 ulf-section-related-links" data-layout-structure-item-id="12718ae3-88f5-2293-89fa-c8ce91b8813c"><div class="lfr-layout-structure-item-98699a65-df95-8727-1931-5270add07aec lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="98699a65-df95-8727-1931-5270add07aec"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-c921c997-45c2-e094-9596-01207a95a639 " data-layout-structure-item-id="c921c997-45c2-e094-9596-01207a95a639"><div id="fragment-2e2ea10e-d525-bc06-9033-1d86a146f38b" > <div class="row row-heading" id="related">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-c0456039-c517-87a9-81e4-b03714deee21 " data-layout-structure-item-id="c0456039-c517-87a9-81e4-b03714deee21"><div id="fragment-a2259128-4bfc-ee99-cf25-4d62e937265a"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Related links</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-d7c7b914-5081-aa44-7a01-43d687501353 lfr-layout-structure-item-row " data-layout-structure-item-id="d7c7b914-5081-aa44-7a01-43d687501353"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-428ba683-ad50-6231-ca89-f59019a1ab42 " data-layout-structure-item-id="428ba683-ad50-6231-ca89-f59019a1ab42"><div id="fragment-d68808e6-5e54-ddae-ae6c-9255801b718f" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/patents">Patents</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-00609c46-60c5-0fe4-a86b-83cc0d7df57e " data-layout-structure-item-id="00609c46-60c5-0fe4-a86b-83cc0d7df57e"><div id="fragment-47b305a5-7924-e259-1f01-a042fd09862c"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Learn more about patents and how to secure patent protection for your innovation.</div></div><style>.component-paragraph img {
+	max-width: 100%;
+}</style></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-ef4c8aa0-a1d4-7217-3b28-51e337ccc9a5 " data-layout-structure-item-id="ef4c8aa0-a1d4-7217-3b28-51e337ccc9a5"><div id="fragment-41ce5c74-dfd4-dd61-64a8-4fd477a1f261" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/patent-drafting">WIPO Patent Drafting Training Program</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-b347bac9-52c2-8d2d-6b16-98aa4e874a09 " data-layout-structure-item-id="b347bac9-52c2-8d2d-6b16-98aa4e874a09"><div id="fragment-e14fcea4-58e3-01ca-49f5-31461cff5265"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Improving the skills of those filing patent applications.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-57f5241f-5289-87dd-cb33-0ba19a3741a1 " data-layout-structure-item-id="57f5241f-5289-87dd-cb33-0ba19a3741a1"><div id="fragment-11b94c36-7a14-caea-9613-9f475a631cc0" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/tisc">Technology and Innovation Support Centers (TISCs)</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-f62db318-3e63-d2fc-c858-a1b29710ddbf " data-layout-structure-item-id="f62db318-3e63-d2fc-c858-a1b29710ddbf"><div id="fragment-92df8011-15f1-af21-6013-85a3acc35ca6"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Access high quality technology information and related services in your country.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-62ca20ab-55e8-880c-876b-ee4d5c7b626c " data-layout-structure-item-id="62ca20ab-55e8-880c-876b-ee4d5c7b626c"><div id="fragment-691cf085-eb26-d97f-a743-db19776d9481" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="https://inspire.wipo.int/">WIPO INSPIRE</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-5cd878ac-0277-cbce-3a43-ced951ac8956 " data-layout-structure-item-id="5cd878ac-0277-cbce-3a43-ced951ac8956"><div id="fragment-395b21d6-04d5-3d78-b88f-c6f7302db18f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">A global knowledge center, helping innovators and entrepreneurs make informed decisions.</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div></div>
+
+
+
+
+		</div>
+	
+
+
+<form action="#" aria-hidden="true" class="hide" id="hrefFm" method="post" name="hrefFm"><span></span><button hidden type="submit">Hidden</button></form>
+
+	
+	</section>
+</div>
+<div class="container-footer-outer">
+<div class="container-fluid container-fluid-max-xl">
+    <wipo-footer id="footer">
+        <span slot="contact">https://www.wipo.int/contact/en/area.jsp?area=iap</span>
+        <span slot="media">https://www.wipo.int/pressroom/en/</span>
+        <span slot="terms">https://www.wipo.int/en/web/inventor-assistance-program/terms</span>
+    <span slot="privacy">https://www.wipo.int/en/web/privacy-policy</span>
+    <span slot="accessibility">https://www.wipo.int/en/web/accessibility</span>
+    <span slot="sitemap">https://www.wipo.int/en/web/sitemap</span>
+    <span slot="newsletters">https://www.wipo.int/en/web/newsletters</span>
+    <span slot="podcast">https://www.wipo.int/en/web/podcasts</span>
+    <span slot="rss-feed">https://www.wipo.int/en/web/news/rss</span>
+</wipo-footer>
+</div>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	
+		
+		
+
+			
+
+			
+		
+	
+
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="module">
+		import {Session} from 'https://cdn.webcms.wipo.int/o/frontend-js-web/__liferay__/legacy.js';
+
+		if (Liferay.Session && Liferay.Session.destructor) {
+			Liferay.Session.destructor();
+		}
+
+		Liferay.Session = new Session(
+			{
+				autoExtend: true,
+				redirectOnExpire: false,
+				redirectUrl: 'https\x3a\x2f\x2fwww\x2ewipo\x2eint\x2fweb\x2fguest',
+				rememberMe: false,
+				sessionLength: 600,
+				sessionTimeoutOffset: 130,
+				warningLength: 60
+			})
+	</script>
+
+
+<script type="text/javascript">
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onShare = function (data) {
+		if (window.Analytics) {
+			Analytics.send('shared', 'SocialBookmarks', {
+				className: data.className,
+				classPK: data.classPK,
+				type: data.type,
+				url: data.url,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('socialBookmarks:share', onShare);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('socialBookmarks:share', onShare);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onDestroyPortlet = function () {
+		Liferay.detach('messagePosted', onMessagePosted);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+
+	var onMessagePosted = function (event) {
+		if (window.Analytics) {
+			const eventProperties = {
+				className: event.className,
+				classPK: event.classPK,
+				commentId: event.commentId,
+				externalReferenceCode: event.externalReferenceCode,
+				text: event.text,
+			};
+
+			const blogNode = document.querySelector(
+				'[data-analytics-asset-id="' + event.classPK + '"]'
+			);
+
+			const dmNode = document.querySelector(
+				'[data-analytics-file-entry-id="' + event.classPK + '"]'
+			);
+
+			if (blogNode) {
+				eventProperties.title = blogNode.dataset.analyticsAssetTitle;
+			}
+			else if (dmNode) {
+				eventProperties.title = dmNode.dataset.analyticsFileEntryTitle;
+			}
+
+			Analytics.send('posted', 'Comment', eventProperties);
+		}
+	};
+
+	Liferay.on('messagePosted', onMessagePosted);
+})();
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onVote = function (event) {
+		if (window.Analytics) {
+			let title = event.contentTitle;
+
+			if (!title) {
+				const dmNode = document.querySelector(
+					'[data-analytics-file-entry-id="' + event.classPK + '"]'
+				);
+
+				if (dmNode) {
+					title = dmNode.dataset.analyticsFileEntryTitle;
+				}
+			}
+
+			Analytics.send('VOTE', 'Ratings', {
+				className: event.className,
+				classPK: event.classPK,
+				externalReferenceCode: event.externalReferenceCode,
+				ratingType: event.ratingType,
+				score: event.score,
+				title,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('ratings:vote', onVote);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('ratings:vote', onVote);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+
+	function getValueByAttribute(node, attr) {
+		return (
+			node.dataset[attr] ||
+			(node.parentElement && node.parentElement.dataset[attr])
+		);
+	}
+
+	function sendDocumentDownloadedAnalyticsEvent(anchor) {
+		var fileEntryId = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryId'
+		);
+		var title = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryTitle'
+		);
+		var version = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryVersion'
+		);
+		var externalReferenceCode = getValueByAttribute(
+			anchor,
+			'analyticsExternalReferenceCode'
+		);
+
+		if (fileEntryId) {
+			Analytics.send('documentDownloaded', 'Document', {
+				externalReferenceCode,
+				fileEntryId,
+				groupId: themeDisplay.getScopeGroupId(),
+				preview:
+					!!window._com_liferay_document_library_analytics_isViewFileEntry,
+				title,
+				version,
+			});
+		}
+	}
+
+	function handleDownloadClick(event) {
+		if (window.Analytics) {
+			if (event.target.nodeName.toLowerCase() === 'a') {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target
+				);
+			}
+			else if (
+				event.target.parentNode &&
+				event.target.parentNode.nodeName.toLowerCase() === 'a'
+			) {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target.parentNode
+				);
+			}
+			else {
+				var target = event.target;
+				var matchTextContent =
+					target.textContent &&
+					target.textContent.toLowerCase() ===
+						'download';
+				var matchTitle =
+					target.title && target.title.toLowerCase() === 'download';
+				var matchAction = target.action === 'download';
+				var matchLexiconIcon = !!target.querySelector(
+					'.lexicon-icon-download'
+				);
+				var matchLexiconClassName = target.classList.contains(
+					'lexicon-icon-download'
+				);
+				var matchParentTitle =
+					target.parentNode &&
+					target.parentNode.title &&
+					target.parentNode.title.toLowerCase() === 'download';
+				var matchParentLexiconClassName =
+					target.parentNode &&
+					target.parentNode.classList.contains('lexicon-icon-download');
+
+				if (
+					matchTextContent ||
+					matchTitle ||
+					matchParentTitle ||
+					matchAction ||
+					matchLexiconIcon ||
+					matchLexiconClassName ||
+					matchParentLexiconClassName
+				) {
+					var selectedFiles = document.querySelectorAll(
+						'.form .custom-control-input:checked'
+					);
+
+					selectedFiles.forEach(({value}) => {
+						var selectedFile = document.querySelector(
+							'[data-analytics-file-entry-id="' + value + '"]'
+						);
+
+						sendDocumentDownloadedAnalyticsEvent(
+							selectedFile
+						);
+					});
+				}
+			}
+		}
+	}
+
+	Liferay.once('destroyPortlet', () => {
+		document.body.removeEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+	Liferay.once('portletReady', () => {
+		document.body.addEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+
+	if (window.svg4everybody && Liferay.Data.ICONS_INLINE_SVG) {
+		svg4everybody(
+			{
+				polyfill: true,
+				validate: function (src, svg, use) {
+					return !src || !src.startsWith('#');
+				}
+			}
+		);
+	}
+
+(function() {var $ = AUI.$;var _ = AUI._;
+	Liferay.Util.delegate(
+		document,
+		'focusin',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.add('open');
+		}
+	);
+
+	Liferay.Util.delegate(
+		document,
+		'focusout',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.remove('open');
+		}
+	);
+})();
+
+	// <![CDATA[
+
+		
+
+		Liferay.currentURL = '\x2fen\x2fweb\x2finventor-assistance-program';
+		Liferay.currentURLEncoded = '\x252Fen\x252Fweb\x252Finventor-assistance-program';
+
+	// ]]>
+
+
+		// <![CDATA[
+			(function() {
+				window.addEventListener("scroll", function () {
+  let scrollValue = window.scrollY || document.documentElement.scrollTop;
+  const div = document.querySelector(".ulf-hide");
+ 
+  if (!div) return;
+ 
+  if (scrollValue > 720) {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+});
+			})();
+		// ]]>
+	
+
+</script><script type="module">
+import {InfoItemActionHandler as ComponentModule} from 'https://cdn.webcms.wipo.int/o/layout-taglib/__liferay__/render.js';
+AUI().use(
+  'liferay-menu',
+function(A) {
+{
+Liferay.component('infoItemActionComponent', new ComponentModule({"executeInfoItemActionURL":"https:\/\/www.wipo.int\/en\/c\/portal\/execute_info_item_action?p_l_mode=view&plid=27714","namespace":"","spritemap":"https:\/\/cdn.webcms.wipo.int\/o\/wipo-universal-theme\/images\/clay\/icons.svg"}), { destroyOnNavigate: true, portletId: ''});
+}
+(function() {
+var $ = AUI.$;var _ = AUI._;
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 0; i < liferayNotices.length; i++) {
+		Liferay.Util.openToast(liferayNotices[i]);
+	}
+
+})();
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.webcms.wipo.int/o/wipo-universal-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=en_US&amp;t=1786530646000" type="text/javascript"></script>
+
+
+
+
+<script type="module">
+import {main} from 'https://cdn.webcms.wipo.int/o/frontend-js-bootstrap-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {main} from 'https://cdn.webcms.wipo.int/o/frontend-js-tooltip-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="text/javascript">
+Liferay.CustomDialogs = {enabled: false};
+
+</script><script>
+
+</script><!--<script src="https://cdnjs.wipo.int/npm/jquery/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.wipo.int/npm/popper.js@1.16.0/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.wipo.int/npm/bootstrap@4.4.1/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src='https://cdn.webcms.wipo.int/o/wipo-universal-theme/js/universal.js'></script>
+</body>
+</html>
+		
+	
+

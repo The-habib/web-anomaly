@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+  content="sourcehut is a network of useful open source tools for software project maintainers and collaborators, including git repos, bug tracking, continuous integration, and mailing lists." />
+<link href="/logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="/logo.png" rel="icon" sizes="any" type="image/png"/>
+
+<link rel="stylesheet" href="/main.min.6aac2e6e8f22393df8147bdefc69df266b64b8c9cc261f99140a9845b3969183.css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/index.xml">
+
+    <title>What&#39;s the scope of Sourcehut&#39;s alpha?</title>
+  </head>
+  <body>
+    <div>
+  <nav>
+    <span class="brand">
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"/></svg>
+      </span>
+      <a href="/">
+        sourcehut
+      </a>
+    </span>
+    <a href="/blog">blog</a>
+    <a href="/pricing">pricing</a>
+    <a href="/community">community</a>
+    <a href="https://www.hellotux.com/sourcehut">merchandise</a>
+    
+    <a href="https://sr.ht" class="btn pull-right hidden-small">
+      Go to sr.ht
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+
+      </span>
+    </a>
+  </nav>
+</div>
+
+    <div class="content">
+      <h1 id="sourcehuts-public-alpha">Sourcehut&rsquo;s public alpha</h1>
+<p>We aim for a higher standard of quality than most software &amp; services working in
+this domain. What we consider an alpha passes for a production-ready system to
+some. Today, SourceHut is relied upon by thousands of projects as a robust,
+secure, and reliable service. We have <a href="https://status.sr.ht">better uptime</a> than
+<a href="https://www.githubstatus.com/">GitHub</a> or <a href="https://status.gitlab.com/">GitLab</a>.</p>
+<h2 id="alpha-guarantees">Alpha guarantees</h2>
+<p>We provide the following guarantees regarding the production quality of the
+SourceHut hosted services:</p>
+<h3 id="your-account-data-is-safe-and-secure">Your account data is safe and secure</h3>
+<p>We take frequent backups and use highly redundant systems to store your data.
+We utilize <a href="https://man.sr.ht/ops">extensive active monitoring</a> and frequent
+testing to ensure the reliability of our backup systems. Each development change
+which requires changes to our storage systems is carefully planned for to ensure
+your account data is carried over intact. There will be no &ldquo;clean slate&rdquo; event
+as we progress from the alpha to the beta to production.</p>
+<p>We also take great pains to carefully ensure the security of all of its systems.
+We use a distributed architecture which shares data internally between services
+on a &ldquo;need to know&rdquo; basis. Your data is hosted on privately owned hardware
+colocated in private, secure facilities. We do not use public clouds. We store
+only as much data as is necessary to faciliate your services, and data is shared
+with third-parties on a strict need-to-know basis, and only after you have
+explicitly consented to this sharing. For details, see
+<a href="https://man.sr.ht/privacy.md">our privacy policy</a>.</p>
+<h3 id="your-voice-matters">Your voice matters</h3>
+<p>We welcome feedback and questions in public on the
+<a href="https://lists.sr.ht/~sircmpwn/sr.ht-discuss">sr.ht-discuss</a> mailing list, or in
+private <a href="mailto:~sircmpwn/sr.ht-support@lists.sr.ht">via email</a>.</p>
+<h2 id="alpha-caveats">Alpha caveats</h2>
+<p>However, we also hold some caveats regarding the alpha.</p>
+<h3 id="payment-will-be-required-later">Payment will be required later</h3>
+<p>From the beta onwards, unpaid accounts will be limited to read-only access to
+their own projects. Affected users will be emailed at least 60 days in advance
+of the transition. Users who host their own instance of Sourcehut, on their own
+servers, will be unaffected by this. Additionally, financial aid will be
+provided to those who cannot pay; no one is going to be priced out.</p>
+<p>The exact details of any billing changes will be discussed extensively with the
+community well in advance, and you are welcome to make yourself heard in these
+discussions.</p>
+<p>See the <a href="https://man.sr.ht/billing-faq.md">billing FAQ</a> for details.</p>
+<h3 id="some-services-are-incomplete">Some services are incomplete</h3>
+<p>Some of our services are not complete, and you may notice conspicuously absent
+features. However, if you find the current featureset meets your needs, it may
+already be suitable for your use. Our documentation is also incomplete.</p>
+<p>Some notable features which are still under development in the alpha period
+include:</p>
+<ul>
+<li>First-class support for user groups/organizations</li>
+<li>A web-based workflow for submitting and reviewing patches on lists.sr.ht</li>
+<li>Full data autonomy, including account data import &amp; export, account
+deletion, and username changes</li>
+</ul>
+<h3 id="the-api-is-subject-to-change">The API is subject to change</h3>
+<p>We are developing a new GraphQL API which we intend to support onwards into the
+future. Users of the legacy API will be notified of any deprecations in advance,
+and assistance in migrating your software will be offered. The new API, once
+finalized, will be supported for at least 5 years.</p>
+<h2 id="goals-for-the-beta-and-beyond">Goals for the beta and beyond</h2>
+<p>The beta will be considered feature complete, but may be lacking in docs and
+polish, or have minor known bugs. &ldquo;Feature complete&rdquo; is defined as &ldquo;meeting the
+basic goals in a stable and consistent package&rdquo;, but doesn&rsquo;t necessarily mean
+that no new features will be developed in the post-beta period. The beta period
+will be short, we will settle any issues which arise from the payment model
+changing, polish and document everything, and promote it to the production phase
+shortly thereafter.</p>
+
+    </div>
+    <footer>
+  <div class="box">
+    <div class="content index-grid">
+      <div class="left">
+        <p>
+          <strong>Welcome to sourcehut!</strong> This suite of open source tools is
+          the software development platform you've been waiting for.
+        </p>
+        <ul>
+          <li>
+            Git and Mercurial hosting, mailing lists, bug tracking, continuous
+            integration, and more
+          </li>
+          <li>Absolutely no tracking or advertising</li>
+          <li>All features work without JavaScript</li>
+          <li>No AI features whatsoever</li>
+          <li>
+            <a href="https://sr.ht/~sircmpwn/sourcehut" rel="noopener">
+              100% free and open source software
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <a class="btn btn-primary" href="https://meta.sr.ht/register">
+          Register for sr.ht
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+          </span>
+        </a>
+        or <a href="/">
+          learn more
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <span>
+      &copy; 2026 sourcehut
+    </span>
+    <a
+      href="https://man.sr.ht/privacy.md"
+      rel="noopener"
+    >Privacy Policy</a>
+    <a
+      href="https://man.sr.ht/terms.md"
+      rel="noopener"
+    >Terms of Use</a>
+    <a
+      href="/logo"
+      rel="noopener"
+    >Logo &amp; Media resources</a>
+    <span>
+      <a
+        href="https://sr.ht/~sircmpwn/sourcehut/"
+        rel="noopener"
+      >Source Code</a>
+      <small class="text-muted">(AGPL, BSD et al)</small>
+    </span>
+  </div>
+  <blockquote>
+    We are here to make free software better. We will be honest, transparent,
+    and empathetic. We care for our users, and we will not exploit them, and
+    we hope that they will reward our care and diligence with success.
+  </blockquote>
+  <blockquote class="correspondence">
+    SourceHut<br />
+    Postbus 3068<br />
+    1620GB Hoorn<br />
+    Netherlands<br />
+    KVK-nummer: 84165251<br />
+    BTW-nummer: NL003921490B16<br />
+    <a href="mailto:~sircmpwn/sr.ht-support@lists.sr.ht">sr.ht-support</a>
+  </blockquote>
+</footer>
+
+  </body>
+</html>

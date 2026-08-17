@@ -1,0 +1,2162 @@
+<!doctype html>
+
+<!--[if IEMobile 7 ]> <html lang="en-US"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="en-US" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en-US" class="no-js"><!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>OpenStack Blog | Open Infrastructure Foundation | The latest news and information for the OpenStack Community.</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta class="swiftype" name="domain" data-type="enum" content="blog" />
+  		<link rel="pingback" href="https://www.openstack.org/blog/xmlrpc.php">
+
+	    <!-- Fonts -->
+	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+			<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-TXHH27P');</script>
+			<!-- End Google Tag Manager -->
+
+
+		<!-- wordpress head functions -->
+		<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//platform-api.sharethis.com' />
+<link rel='dns-prefetch' href='//www.openstack.org' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.openstack.org\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.openstack.org/blog/wp-includes/css/dist/block-library/style.min.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/library/css/bootstrap.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/style.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#product=ga&#038;property=5c64dba51ef90f001147a98c' id='googleanalytics-platform-sharethis-js'></script>
+<link rel="https://api.w.org/" href="https://www.openstack.org/blog/wp-json/" /><script>
+(function() {
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-17511903-1', 'auto');
+			ga('send', 'pageview');
+	})();
+</script>
+		<style type="text/css" id="wp-custom-css">
+			.blog-title {
+    width: 100%;
+    background: url(https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c…/www-assets-dev/learn/OS-Blog-1314x492-blue.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}		</style>
+				<!-- end of wordpress head -->
+		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
+			<!-- media-queries.js (fallback) -->
+		<!--[if lt IE 9]>
+			<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+
+		<!-- html5.js -->
+		<!--[if lt IE 9]>
+			<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+			<!-- respond.js -->
+		<!--[if lt IE 9]>
+            <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="home blog">
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXHH27P"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="brand-wrapper">
+                        <a class="navbar-brand" href="/"></a>
+                    </div>
+                    <div class="search-icon show">
+                        <i class="fa fa-search"></i> <span class="header-search-text">Search</span>
+                    </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="search-container tiny">
+                        <div id="gcse">
+                            <script type="text/javascript" src="https://www.openstack.org/node_modules/jquery/dist/jquery.min.js"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/node_modules/js-cookie/src/js.cookie.js"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/querystring.jquery.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org//themes/openstack/javascript/shadowbox/shadowbox.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/jquery.ticker.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/jquery.tools.min.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/jcarousellite.min.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/navigation.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/filetracking.jquery.js?m=1484877364"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+                            <script type="text/javascript" src="https://www.openstack.org/themes/openstack/javascript/home.js?m=1484877364"></script>
+                            <script type="text/javascript">//<![CDATA[
+                            jQuery(document).ready(function($) {
+
+                                var d = new Date();
+                                var user_date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+                                Cookies.set('user_date', user_date , { expires: 360, path: '/' });
+
+                                $('body').filetracking();
+
+                                $(document).on("click", ".outbound-link", function(event){
+                                    var href = $(this).attr('href');
+                                    recordOutboundLink(this,'Outbound Links',href);
+                                    event.preventDefault();
+                                    event.stopPropagation()
+                                    return false;
+                                });
+
+                                var use_shadow_box = false;
+                                if(use_shadow_box)
+                                    Shadowbox.init();
+                            });
+
+                            //]]></script>
+
+                            <div class="openstack-search-bar" data-baseUrl="search.openstack.org" data-context="blog"></div>
+                            <script>
+                                    (function (window, document) {
+                                            var loader = function () {
+                                                    var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+                                                    script.src = "https://search.openstack.org/widget/embed.min.js?t="+Date.now();
+                                                    tag.parentNode.insertBefore(script, tag);
+                                                };
+                                            window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+                                        })(window, document);
+                                </script>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav navbar-main show">
+                        <li>
+                            <div class="openstack-search-bar ossw-mobile st-default-search-input custom-search-box-mobile" data-baseUrl="search.openstack.org" data-context="blog"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.openstack.org/software/" class="drop" id="dropdownMenuSoftware">Software <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+                            <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuSoftware">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/">Overview</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/project-navigator/">Project Navigator</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/sample-configs/">Sample Configs</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/security/">Security</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/start/">Get Started</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/roadmap/">Roadmap</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/latest-release/">Latest Release</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/software/sourcecode/">Source Code</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.openstack.org/user-stories/" class="drop" id="dropdownMenuUsers">Users <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+                            <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuUsers">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/user-stories/">Overview</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/telecoms-and-nfv/">Telecom & NFV</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/enterprise/">OpenStack in the Enterprise</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/science/">OpenStack in Science</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/appdev/">App Developers & ISVs</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://superuser.openstack.org/">Superuser Magazine</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/surveys/landing">User Survey</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.openstack.org/community/" class="drop" id="dropdownMenuCommunity">Community <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+                            <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuCommunity">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/">Welcome! Start Here</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/foundation/">OpenStack Foundation</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://wiki.openstack.org">OpenStack Wiki</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://groups.openstack.org">User Groups</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/speakers/">Speakers Bureau</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/foundation/companies/">Supporting Companies</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/jobs/">Jobs</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/join/">Join The Community</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.openstack.org/marketplace/">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="https://www.openstack.org/events/" class="drop" id="dropdownMenuEvents">Events <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+                            <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuEvents">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/events/">Overview</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/summit/">The OpenStack Summit</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/ptg/">Project Teams Gathering</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/events/openstackdays">OpenStack Days</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/community/events/openstackhackathons">OpenStack App Hackathons</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.openstack.org/learn/" class="drop" id="dropdownMenuLearn">Learn <i class="fa fa-caret-down"></i></a><i class="mobile-expand"></i>
+                            <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuEvents">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/marketplace/training/">Training</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/coa/">Get Certified</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://ask.openstack.org">Ask a Technical Question</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://superuser.openstack.org">Superuser Magazine</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/videos/">Summit Videos</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/analysts/">Analyst Reports</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/news/">News</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/blog/">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://docs.openstack.org/">Docs</a>
+                        </li>
+                        <li class="join-nav-section">
+                            <a href="#" id="dropdownMenuJoin">Join <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu dropdown-hover" role="menu" aria-labelledby="dropdownMenuJoin" style="display: none;">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/join/register/?membership-type=foundation">Sign up for Foundation Membership</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/join/#sponsor">Sponsor the Foundation</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.openstack.org/foundation">More about the Foundation</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/Security/login/?BackURL=/home/" class="sign-in-btn">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        <!-- /.container -->
+        </nav>
+
+
+<div class="blog-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<img class="blog-o" src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/blog-o.svg" onerror="this.onerror=null; this.src=https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/blog-o.png" alt="OpenStack Blog">
+				<h1>
+					The OpenStack Blog
+					<span>Everything in & around OpenStack in written words.</span>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="container">
+			
+			<div id="content" class="clearfix row blog">
+			
+				<div id="main" class="col-lg-7 col-md-7 col-sm-7" role="main">
+
+										
+					<article id="post-9938" class="clearfix post-9938 post type-post status-publish format-standard hentry category-event" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/open-source-for-the-ai-era-openstack-sessions-you-cant-miss-at-kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china-2026/" rel="bookmark" title="Permanent Link to Open Source for the AI Era: OpenStack Sessions You Can&#8217;t Miss at KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China 2026">Open Source for the AI Era: OpenStack Sessions You Can&#8217;t Miss at KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China 2026</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/allison-price/" title="Posts by Allison Price" rel="author">Allison Price</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">June 30, 2026</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<h1>At the inaugural <strong><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/">KubeCon + CloudNativeCon + OpenInfra Summit Asia + PyTorch Conference China</a></strong>, these OpenStack sessions showcase how the project continues to evolve alongside Kubernetes, AI, and modern cloud infrastructure.</h1>
+
+
+
+<p class="lead">From secure AI agent execution and declarative infrastructure to large-scale production migrations and bare metal automation, these talks highlight why OpenStack remains the open infrastructure platform powering the next generation of cloud and AI workloads.</p>
+
+
+
+<h2>Declarative Infrastructure for Modern OpenStack Clouds</h2>
+
+
+
+<p>As Kubernetes and OpenStack become increasingly complementary, operators are finding new ways to manage physical infrastructure with cloud native principles. <em><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1224992">Declarative Underlays: Scaling Purpose-Built Infrastructure (Clusters) for OpenStack with Cluster API</a></em> explores how Cluster API can be used to provision and manage specialized GPU, networking, and storage clusters while dynamically rebalancing resources across large OpenStack environments.</p>
+
+
+
+<h2>AI is Changing How OpenStack is Built</h2>
+
+
+
+<p><em><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1224932">Spec-Driven Evolution: How AI Agents are Rewriting the OpenStack/K8s Playbook</a></em> demonstrates how AI coding agents can accelerate upstream development by transforming technical specifications into architectural proposals, production-ready code, and automated test suites for OpenStack Tacker—all while maintaining collaborative open source workflows.</p>
+
+
+
+<h2>Securing AI Workloads on OpenStack</h2>
+
+
+
+<p>As AI agents move into production, securely executing AI-generated code has become a critical challenge. <em><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1224832">Secure AI Agent Sandboxing with OpenStack Zun and Kata Containers</a></em> showcases an OpenStack-native approach that combines Zun, Kata Containers, Glance, and Neutron to provide hardware-level isolation for untrusted AI workloads without sacrificing scalability or flexibility.</p>
+
+
+
+<h2>Optimizing Performance and Operations</h2>
+
+
+
+<p>Strong workload isolation is only valuable if you can observe what&#8217;s happening beneath the surface. <em><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1225339">Uncovering Hidden Bottlenecks in Kata Containers on OpenStack with Prometheus</a></em> shares practical techniques for identifying CPU, memory, and I/O bottlenecks that traditional monitoring often misses, helping operators improve reliability in production environments.</p>
+
+
+
+<h2>Modernizing Infrastructure from Bare Metal to the Cloud</h2>
+
+
+
+<p>OpenStack operators will also get an early look at new capabilities in <em><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1223326">From Disk Images to Container Images: Deploying bootc to Bare Metal with Kubernetes and Ironic</a></em>, which demonstrates how modern OCI-based workflows can simplify bare metal provisioning using OpenStack Ironic and Metal3.</p>
+
+
+
+<p>Meanwhile, <a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1219415"><em>Escaping the Vendor Trap: A Journey for Migrating Legacy Infrastructure to OpenStack and K8s</em> </a>shares Viettel&#8217;s migration of more than 80% of its infrastructure from proprietary virtualization platforms to an open architecture built on OpenStack, Ceph, Kubernetes, and Prometheus—offering valuable lessons for organizations planning similar transformations.</p>
+
+
+
+<h2>Growing the Global OpenStack Community</h2>
+
+
+
+<p>The final OpenStack session, <em><a href="https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/program/schedule/?id=1225189">Redesigning OpenStack i18n for the AI Era: Weblate &amp; Zero-GPU AI</a></em>, looks beyond infrastructure to the community itself. The talk highlights the OpenStack internationalization team&#8217;s migration to Weblate, AI-assisted translation running entirely on CPUs, and how these efforts are helping make OpenStack more accessible to contributors around the world.</p>
+
+
+
+<h2>Join the OpenStack Community in Shanghai</h2>
+
+
+
+<p>Together, these sessions reflect the momentum behind OpenStack as it continues to power private clouds, AI infrastructure, edge deployments, and cloud native platforms around the world.</p>
+
+
+
+<p>If you&#8217;re attending KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China, be sure to add these sessions to your schedule and stop by the OpenInfra Foundation booth to meet OpenStack users, contributors, and maintainers from across the global community.</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9934" class="clearfix post-9934 post type-post status-publish format-standard hentry category-development category-tools tag-networking tag-open-vswitch tag-ovn tag-ovs" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/ovs-and-ovn-explained-the-networking-stack-behind-openstack/" rel="bookmark" title="Permanent Link to OVS and OVN Explained: The Networking Stack Behind OpenStack">OVS and OVN Explained: The Networking Stack Behind OpenStack</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/thzuskapico/" title="Posts by Thzuska Pico" rel="author">Thzuska Pico</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">June 29, 2026</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">Open vSwitch gave us a programmable dataplane. Open Virtual Network added a control plane. Together they power Neutron in most OpenStack clouds. This tutorial explains the architecture, compares OVS vs. OVN, and shows how to trace a packet from instance to instance in OpenStack.</p>
+
+
+
+<p>You’ve deployed two instances on different compute nodes. Same tenant. Same network. They can’t ping each other. Security groups allow ICMP. The physical network is up. Sound familiar? In OpenStack Neutron with OVN, most cross-host packet losses are not bugs – they are logical flow denials waiting to be read.</p>
+
+
+
+<p>When your OpenStack instances can ping each other on the same compute node but go silent across hypervisors, you’re dealing with a networking failure that spans two layers: the dataplane and the control plane. Understanding how OVS and OVN operate across those layers turns a frustrating mystery into a solvable problem — because that’s where most OpenStack networking issues actually hide.</p>
+
+
+
+<h2><strong>What is SDN? (Software-Defined Networking)</strong></h2>
+
+
+
+<p>Before we dive into OVS and OVN, it helps to understand why these technologies exist in the first place.</p>
+
+
+
+<p>Traditional networking works like this: each switch and router has its own control plane deciding where packets go and data plane forwarding packets. To change how traffic flows, you reconfigure each device individually – often by using protocols like NETCONF or RESTCONF. This approach works until you need to scale. In a cloud environment with hundreds of hypervisors and thousands of VMs, manual per-device configuration becomes impossible.</p>
+
+
+
+<p>Software-Defined Networking (SDN) changes the game by separating the control plane from the data plane. A central SDN controller decides where traffic should go, and the underlying switches and routers simply follow those instructions. This separation brings three major benefits to cloud environments:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Benefit</strong></td><td>Why it matters in cloud environments</td></tr><tr><td><strong>Centralized control</strong></td><td>You manage network policy centrally, not per-switch&nbsp;</td></tr><tr><td><strong>Programmability</strong></td><td>Networks adapt dynamically as VMs are created, migrated, or deleted</td></tr><tr><td><strong>Automation</strong></td><td>No manual switch configuration</td></tr></tbody></table></figure>
+
+
+
+<p>OVS and OVN are SDN technologies. OVS provides the high-performance data plane on each hypervisor. OVN provides the distributed control plane that tells OVS what to do. Together, they implement SDN for OpenStack Neutron.</p>
+
+
+
+<h2><strong>What is Open vSwitch?&nbsp;</strong></h2>
+
+
+
+<p>Open vSwitch (OVS) is an open source virtual switch that speaks OpenFlow, supports tunnel encapsulation (VXLAN, GRE, Geneve), and integrates with KVM, Xen, and other virtualization platforms. Unlike basic Linux bridges, OVS was built for large data center environments: it handles high throughput via a kernel module, gives you visibility with sFlow/NetFlow, and lets you apply QoS per flow.</p>
+
+
+
+<p>OVS became the default switch for OpenStack Neutron back in 2012. But it had a limitation: it exposed low-level OpenFlow rules, not logical network abstractions like &#8220;virtual router&#8221; or &#8220;security group&#8221;. Managing OVS directly at scale meant writing complex flows via CLI as Neutron OVS Agent did back in the days. And that was the point where OVN came in.</p>
+
+
+
+<h2><strong>OVN – The Control Plane OVS was Missing</strong></h2>
+
+
+
+<p>Open Virtual Network (OVN) started as part of the OVS project in 2013 and reached maturity by 2016. OVN does not replace OVS. It sits on top of it, providing a logical networking model – virtual switches, routers, ports and ACLs that are translated automatically into OpenFlow rules inside OVS.</p>
+
+
+
+<p>Think of it this way:</p>
+
+
+
+<ul><li>OVS = the worker who moves packets</li><li>OVN = the manager who decides where packets should go and remembers the network topology</li></ul>
+
+
+
+<p>Today, OVN is the default Neutron driver in most OpenStack distributions. When you create a network, subnet, router, or security group in OpenStack, Neutron calls the OVN driver. That driver writes entries into OVN&#8217;s Southbound Database. OVN then programs every OVS instance on every hypervisor with the required flows.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="683" src="https://www.openstack.org/blog/wp-content/uploads/2026/06/01-OpenStack-Neutron-with-OVN-High-Level-1024x683.webp" alt="" class="wp-image-9941" srcset="https://www.openstack.org/blog/wp-content/uploads/2026/06/01-OpenStack-Neutron-with-OVN-High-Level-1024x683.webp 1024w, https://www.openstack.org/blog/wp-content/uploads/2026/06/01-OpenStack-Neutron-with-OVN-High-Level-300x200.webp 300w, https://www.openstack.org/blog/wp-content/uploads/2026/06/01-OpenStack-Neutron-with-OVN-High-Level-768x512.webp 768w, https://www.openstack.org/blog/wp-content/uploads/2026/06/01-OpenStack-Neutron-with-OVN-High-Level.webp 1536w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2><strong>OVS vs. OVN – Comparison Table</strong></h2>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Aspect</strong></td><td><strong>OVS alone</strong></td><td><strong>OVS + OVN</strong></td></tr><tr><td>Control plane</td><td>None (you configure flows manually or via OpenFlow controller)</td><td>Built-in distributed control plane</td></tr><tr><td>Logical abstractions</td><td>No – you work with ports, flows, tunnels</td><td>Yes – logical switches, routers, ports, ACLs</td></tr><tr><td>OpenStack integration</td><td>Mapping from Neutron to OVS flows</td><td>Native driver (Neutron ML2/OVN) with automation</td></tr><tr><td>Scalability</td><td>Flow table explosion in large environments</td><td>Southbound DB aggregates topology allowing larger scale</td></tr><tr><td>Typical use case</td><td>Standalone SDN dataplane or simple labs, old releases of OpenStack, Proxmox</td><td>OpenStack from Ussuri release, Kubernetes (OVN-K8s)</td></tr><tr><td>Learning curve</td><td>Low for basic switching, steep for OpenFlow</td><td>Moderate – you think in logical networks, not flows</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Bottom line</strong>: OVS standalone can be used for small labs or test setups. OVN is what makes automated networking work at a cloud scale.</p>
+
+
+
+<h2><strong>Why ML2/OVN Became the Standard</strong></h2>
+
+
+
+<p>For many years, ML2/OVS was the most widely used OpenStack Neutron backend. In this architecture, Open vSwitch (OVS) handled packet forwarding, while Neutron agents provided services such as routing and DHCP. This approach introduced additional agents to manage, showed scaling limitations and had the infamous full-sync issue which could bring Neutron database or RabbitMQ down when too many neutron-openvswitch-agents were restarted at once.</p>
+
+
+
+<p>OVN was designed to simplify OpenStack networking by integrating networking functions into a distributed SDN architecture. Instead of relying on multiple Neutron agents, OVN provides native support for routing, DHCP, and network policy management through a centralized control plane and distributed data plane.</p>
+
+
+
+<p>The main advantages of ML2/OVN include:</p>
+
+
+
+<ul><li>Fewer agents to manage</li><li>Better scalability for large cloud environments</li><li>Native distributed routing and DHCP services</li><li>Simpler operations and troubleshooting</li></ul>
+
+
+
+<p>As OVN matured, it became the primary focus of networking development within the OpenStack community. By 2023.1 (Antelope) release ML2/OVN became the default solution in most OpenStack deployment tools and vendor solutions reflecting the broader shift toward OVN as the preferred backend.</p>
+
+
+
+<p>For all new OpenStack deployments, ML2/OVN is the recommended choice and is considered the standard approach for modern OpenStack networking. Older deployments still using ML2/OVS are encouraged to migrate to ML2/OVN.</p>
+
+
+
+<h2><strong>OVN Architecture Overview</strong></h2>
+
+
+
+<p>At a high level, OVN separates responsibilities into two distinct layers:</p>
+
+
+
+<ul><li>Control plane</li><li>Data plane</li></ul>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="576" src="https://www.openstack.org/blog/wp-content/uploads/2026/06/02-OVN-Architecture-1024x576.webp" alt="" class="wp-image-9942" srcset="https://www.openstack.org/blog/wp-content/uploads/2026/06/02-OVN-Architecture-1024x576.webp 1024w, https://www.openstack.org/blog/wp-content/uploads/2026/06/02-OVN-Architecture-300x169.webp 300w, https://www.openstack.org/blog/wp-content/uploads/2026/06/02-OVN-Architecture-768x432.webp 768w, https://www.openstack.org/blog/wp-content/uploads/2026/06/02-OVN-Architecture-1536x864.webp 1536w, https://www.openstack.org/blog/wp-content/uploads/2026/06/02-OVN-Architecture-2048x1152.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>The control plane is responsible for defining how the virtual network topology should look like. And the data plane is responsible for actually forwarding packets according to the topology and instructions.</p>
+
+
+
+<p>This separation allows OVN to maintain a consistent network model while distributing packet processing across the infrastructure.</p>
+
+
+
+<h3><strong>Control Plane Components</strong></h3>
+
+
+
+<p>At the top of the architecture sits OpenStack Neutron.</p>
+
+
+
+<p>When users create Networks, Routers, Subnets, Security groups, or Floating IPs through OpenStack APIs, Neutron passes this information to the ML2/OVN mechanism driver.</p>
+
+
+
+<p>The mechanism driver converts OpenStack networking objects into OVN logical entities and stores them inside the OVN Northbound Database (NBDB).</p>
+
+
+
+<p>The<strong> Northbound Database </strong>represents the desired state of the network. It answers the question: <strong>&#8220;What should the virtual network look like?&#8221;</strong></p>
+
+
+
+<p>When OpenStack users create networking resources, the ML2/OVN driver converts those resources into OVN logical objects and stores them in the Northbound Database.</p>
+
+
+
+<p>Examples include:</p>
+
+
+
+<ul><li>Logical switches</li><li>Logical routers</li><li>ACLs</li><li>NAT policies</li><li>Load balancers</li><li>Logical ports</li></ul>
+
+
+
+<p>The ovn-northd is the central control daemon of OVN. It acts as a translator between the Northbound and Southbound databases.</p>
+
+
+
+<p>Its responsibility is to:</p>
+
+
+
+<ol><li>Read logical network definitions from the Northbound Database.</li><li>Convert them into implementation details.</li><li>Populate the Southbound Database.</li></ol>
+
+
+
+<p>Whenever a network change occurs, ovn-northd recalculates the required network behavior and distributes updated information throughout the environment.</p>
+
+
+
+<h3><strong>Data Plane Components</strong></h3>
+
+
+
+<p>The Southbound Database (SBDB) acts as the communication layer between OVN&#8217;s control plane and the individual hosts running workloads. It answers the question: <strong>&#8220;How should each node implement the desired network state?&#8221;</strong></p>
+
+
+
+<p>It contains implementation-specific information such as:</p>
+
+
+
+<ul><li>Chassis registrations</li><li>Tunnel endpoints</li><li>Datapath bindings</li><li>Port bindings</li><li>Flow information</li></ul>
+
+
+
+<p>Each compute node and gateway node runs:</p>
+
+
+
+<ul><li>Open vSwitch</li><li>OVSDB</li><li>ovn-controller</li></ul>
+
+
+
+<p>The ovn-controller process continuously monitors the Southbound Database and retrieves configuration relevant to its local chassis (compute or gateway node).</p>
+
+
+
+<p>It then programs Open vSwitch accordingly by creating:</p>
+
+
+
+<ul><li>Tunnel configurations</li><li>Datapath entries</li><li>Logical flows</li><li>OpenFlow rules</li></ul>
+
+
+
+<p>This enables each node to enforce networking behavior independently while remaining synchronized with the cluster.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Overview of Components:</strong><strong>Northbound Database (NB DB)</strong><br>Stores the logical network configuration as intended by the administrator or OpenStack. Example entries: logical switches, routers, ports, ACL rules. Neutron writes directly to the NB DB via the OVN driver.<strong>Southbound Database (SB DB)</strong><br>Stores the actual, low-level state calculated from the NB DB. Each chassis (OVS on hypervisor) reports its local OVS port bindings here. The SB DB also holds logical flow tables – a mid-level representation between Neutron&#8217;s intent and OVS&#8217;s OpenFlow rules.<strong>ovn‑controller</strong><br>Runs on every compute node. It watches the SB DB, translates logical flows into OpenFlow flows, and pushes them into the local br-int integration bridge. It also reports back local port status and tunnel endpoint IPs.<strong>ovn‑northd</strong><br>Runs on a centralized controller node. Its job is to translate the Neutron-configured NB DB into the more detailed, distributed-ready SB DB. It runs continuously, watching for changes and updating the SB DB accordingly.<strong>Tunnel overlay</strong><br>OVN uses tunnels (Geneve or VXLAN) to carry traffic between compute nodes. Each OVN chassis has a tunnel endpoint IP. When a packet leaves a VM, OVN encapsulates it and sends it to the destination chassis, where decapsulation happens before delivery. Tunnel overlays work over both L2 and L3 networks allowing greater cloud scalability.</td></tr></tbody></table></figure>
+
+
+
+<h3><strong>Understanding the OVN Workflow</strong></h3>
+
+
+
+<p>The complete workflow is essentially a seven-step process:</p>
+
+
+
+<ol><li>User creates a network resource in OpenStack.</li><li>Neutron writes the logical configuration to the Northbound Database.</li><li>ovn-northd converts logical intent into implementation details.</li><li>That information is written into the Southbound Database.</li><li>Local ovn-controller processes receive updates.</li><li>Open vSwitch is (re-)programmed automatically.</li><li>Traffic begins flowing according to the new desired configuration.</li></ol>
+
+
+
+<p>This process occurs continuously and transparently, allowing operators to manage networking through OpenStack APIs while OVN handles the underlying implementation.</p>
+
+
+
+<h2><strong>East-West vs. North-South Traffic in OVN</strong></h2>
+
+
+
+<p>Before we dive into logical flows and packet tracing, it helps to understand two traffic patterns that OVN handles very differently.</p>
+
+
+
+<p><strong>East-West traffic</strong> refers to communication between workloads inside the same data center or cloud environment. In OpenStack terms, this means:</p>
+
+
+
+<ul><li>VM-to-VM within the same tenant network</li><li>VM-to-VM across different tenant networks (routed via a virtual router)</li><li>Traffic between VMs and container workloads</li></ul>
+
+
+
+<p>East-West traffic typically stays inside the OVN overlay network. It is encapsulated in tunnels (Geneve/VXLAN) and never touches the physical gateway unless routed over L3 provider networks. This communication pattern can be commonly observed in modern software architectures, where backend operations, database replication, and internal API calls are done in private, isolated tenant networks.</p>
+
+
+
+<p><strong>North-South traffic</strong> refers to communication between workloads and the outside world. Examples include:</p>
+
+
+
+<ul><li>A user accessing a web server running on an OpenStack instance via a floating IP</li><li>An instance downloading packages from the Internet</li><li>User connecting to the cloud environment via a VPN</li></ul>
+
+
+
+<p>North-South traffic must exit the OVN overlay and reach the physical network. In OpenStack Neutron, this typically happens through:</p>
+
+
+
+<ul><li>Virtual routers with gateway ports attached to a provider network</li><li>Floating IPs – which use NAT (DNAT) to map a public IP to a private instance IP</li><li>Load balancers or virtual gateways (e.g., OVN&#8217;s own distributed gateway ports)</li></ul>
+
+
+
+<h3><strong>OVN Trace Tool – Debugging Traffic End-to-End</strong></h3>
+
+
+
+<p>Now that we understand the conceptual path of a packet traveling from a VM to its destination — whether that destination is on the same logical switch, a different tenant network, or the internet. ovn-trace is the tool that lets you verify this path in practice.</p>
+
+
+
+<p>Rather than sending real packets and observing what happens, ovn-trace simulates the packet&#8217;s journey through OVN&#8217;s logical pipelines. It shows you, step by step, which logical flows match, what actions are taken, and where the packet would exit or be dropped.</p>
+
+
+
+<p>Some administrators avoid ovn-trace because the output appears complex at first. However, once you understand the pipeline stages, it becomes as readable as tcpdump or tracepath — and far more revealing, because it shows OVN&#8217;s <em>internal</em> decision-making, not just network-level behavior.</p>
+
+
+
+<p><strong>When the Pipeline Behavior Changes</strong></p>
+
+
+
+<p>When you run ovn-trace, the packet&#8217;s path through the pipeline depends entirely on its destination. OVN applies different logical pipeline stages based on where the traffic is headed:</p>
+
+
+
+<ol><li><strong>Destination inside the same logical switch </strong>(same Neutron network)<br>The packet undergoes L2 switching only. The pipeline applies security group ACLs (ingress and egress), performs MAC learning and lookup, and forwards the packet directly to the destination port. No routing or NAT occurs.</li><li><strong>Destination in a different logical switch but within the same tenant</strong> (requires a logical router)<br>The packet passes through the logical switch ingress pipeline, then enters the logical router pipeline. Here, OVN performs:<ul><li>TTL decrement</li><li>Route lookup</li><li>MAC address rewriting</li><li>Egress pipeline on the destination logical switch</li><li>No NAT is applied unless the destination is on a different tenant network that requires floating IPs.</li></ul></li><li><strong>Destination outside the cloud entirely </strong>(external internet or provider network)<br>The packet goes through:<ul><li>Logical switch ingress</li><li>Logical router pipeline (route lookup)</li><li>SNAT/DNAT (if the source VM has a Floating IP or the router has SNAT enabled)</li><li>Gateway chassis selection (or local routing when DVR is enabled)</li><li>localnet port pipeline to egress to the physical network via br-ex</li></ul></li></ol>
+
+
+
+<p>This distinction is critical because a misconfiguration that breaks external connectivity (e.g., missing SNAT) won&#8217;t affect internal east-west traffic. ovn-trace makes this clear by showing you exactly which pipeline stages are traversed and where the packet stops.</p>
+
+
+
+<p>Example Trace: Unicast TCP Traffic to the Internet</p>
+
+
+
+<p>In the example below, we trace traffic originating from a VM on the private network:</p>
+
+
+
+<ul><li>Source port: from VM&#8217;s logical port f24970ab&#8230;</li><li>Source MAC/IP: fa:16:3e:9e:94:4a / 192.168.1.74</li><li>Destination: public IP 8.8.8.8</li><li>Protocol: TCP, destination port 80</li></ul>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="576" src="https://www.openstack.org/blog/wp-content/uploads/2026/06/03-OVN-Trace-Tool-1024x576.webp" alt="" class="wp-image-9943" srcset="https://www.openstack.org/blog/wp-content/uploads/2026/06/03-OVN-Trace-Tool-1024x576.webp 1024w, https://www.openstack.org/blog/wp-content/uploads/2026/06/03-OVN-Trace-Tool-300x169.webp 300w, https://www.openstack.org/blog/wp-content/uploads/2026/06/03-OVN-Trace-Tool-768x432.webp 768w, https://www.openstack.org/blog/wp-content/uploads/2026/06/03-OVN-Trace-Tool-1536x864.webp 1536w, https://www.openstack.org/blog/wp-content/uploads/2026/06/03-OVN-Trace-Tool-2048x1152.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p><strong>The trace command:</strong></p>
+
+
+
+<p><strong>The output shows each stage:</strong></p>
+
+
+
+<p><code>ovn-trace --ct=new --summary neutron-644c25c6-7d1b-41af-a98a-0cda8266f05c \  </code></p>
+
+
+
+<p><code>'inport == "f24970ab-4e7f-453e-9940-9c09f9e9d636" &amp;&amp; \   </code></p>
+
+
+
+<p><code>eth.src == fa:16:3e:9e:94:4a &amp;&amp; ip4.src == 192.168.1.74 &amp;&amp; \   </code></p>
+
+
+
+<p><code>eth.dst == fa:16:3e:c2:bb:ff &amp;&amp; ip4.dst == 8.8.8.8 &amp;&amp; \   </code></p>
+
+
+
+<p><code>ip.ttl == 64 &amp;&amp; ip4 &amp;&amp; tcp.dst == 80 &amp;&amp; tcp.src == 3000'</code></p>
+
+
+
+<ol><li>Packet enters the logical switch from the VM port.</li><li>Ingress ACLs (security groups) are evaluated.</li><li>Packet is forwarded to the logical router port.</li><li>Logical router pipeline: TTL decremented, route lookup finds the default route.</li><li>NAT rule is applied (dnat_and_snat):</li></ol>
+
+
+
+<p><code>logical ip: 192.168.1.74&nbsp;&nbsp;</code></p>
+
+
+
+<p><code></code><code>external ip: 10.40.196.127&nbsp;&nbsp;</code></p>
+
+
+
+<p><code></code><code>type: dnat_and_snat</code></p>
+
+
+
+<ol><li>Packet is forwarded to the localnet port on the provider network.</li><li>Egress ACLs are evaluated.</li><li>Packet exits via the provnet-374f85&#8230; port, which maps to physical bridge br-ex.</li></ol>
+
+
+
+<p>The trace output shows exactly this progression, confirming that NAT and routing are working as expected.</p>
+
+
+
+<p><strong>Adjusting Verbosity</strong></p>
+
+
+
+<p>You can control how much detail the trace shows:</p>
+
+
+
+<p><code>ovn-trace --summary ...&nbsp; &nbsp; <em># High-level stages only<br></em></code><code>ovn-trace --minimal ...&nbsp; &nbsp; <em># Minimal output (just the result)<br></em></code><code>ovn-trace --detailed ... &nbsp; <em># Full pipeline with all matches and actions</em></code></p>
+
+
+
+<p><strong>When to Use ovn-trace</strong></p>
+
+
+
+<p>Use ovn-trace when:</p>
+
+
+
+<ul><li>A VM cannot reach a specific destination, but other VMs on the same network can.</li><li>You suspect a NAT or routing misconfiguration.</li><li>You want to confirm which gateway chassis is handling a particular flow.</li><li>Security group ACLs appear to be dropping traffic.</li><li>You need to verify that a change (e.g., adding a Floating IP) has been applied correctly in the OVN pipeline.</li></ul>
+
+
+
+<p>What ovn-trace Cannot Do</p>
+
+
+
+<ul><li>It does not send real packets, so it cannot detect physical network issues (e.g., cable failures, switch misconfiguration).</li><li>It does not test actual performance or latency.</li><li>It relies on the current state of the OVN databases — if the databases are out of sync, the trace reflects that incorrect state.</li></ul>
+
+
+
+<p>Despite these limitations, ovn-trace is one of the most valuable debugging tools in the OVN ecosystem. Once you become comfortable with its output, troubleshooting becomes a matter of reading the pipeline rather than guessing at the problem.</p>
+
+
+
+<h2><strong>Understanding Neutron to OVN Mapping</strong></h2>
+
+
+
+<p>Before diving into specific resource mappings, it is helpful to understand a fundamental principle: almost every Neutron object has a direct counterpart in OVN. This one-to-one correspondence is what makes OVN debugging systematic rather than opaque.</p>
+
+
+
+<p>When you create a network, subnet, port, router, or security group in OpenStack, the ML2/OVN mechanism driver translates that API request into entries in the OVN Northbound Database. The ovn-northd daemon then converts those logical entries into flow instructions in the Southbound Database, which are finally pushed to ovn-controller on each compute and gateway node.</p>
+
+
+
+<p>The following sections show the exact mapping for each Neutron resource type — including the specific ovn-nbctl and ovn-sbctl commands you can use to verify that Neutron&#8217;s configuration has propagated correctly into OVN.</p>
+
+
+
+<h2><strong>Logical Flows vs. Physical Flows&nbsp;</strong></h2>
+
+
+
+<p>One of the most valuable concepts in OVN is the separation between logical flows and physical flows.</p>
+
+
+
+<p>Logical flows operate at the level of your virtual network topology. They reference objects like logical switches, logical routers, and logical ports. A logical flow might say: &#8220;Packets from logical port A to logical port B on the same logical switch are allowed.&#8221; You don’t need to deal with physical interfaces, tunnel IPs, or MAC addresses here.</p>
+
+
+
+<p>Physical flows (OpenFlow rules) exist inside OVS on each hypervisor. They reference physical ports like eth0, tap devices, tunnel interfaces, and exact match fields like VLAN tags or tunnel keys. These flows are generated automatically by ovn-controller based on the logical flows.</p>
+
+
+
+<p>Why does this matter? When troubleshooting, you might run ovn-sbctl lflow-list, which shows you logical flows – the intent. When you run ovs-ofctl dump-flows br-int, you are looking at physical flows – the actual forwarding rules installed in the kernel. A mismatch between the two is often the root cause of connectivity issues.</p>
+
+
+
+<h2><strong>Key OVN CLI Tools for Troubleshooting</strong></h2>
+
+
+
+<p>Before we move on to the troubleshooting guide, here are some essential OVN commands you will use:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Command</strong></td><td><strong>Purpose</strong></td></tr><tr><td>ovn-sbctl show&nbsp;</td><td>Display chassis and port bindings&nbsp;</td></tr><tr><td>ovn-sbctl lflow-list&nbsp;</td><td>List all logical flows in the SB DB&nbsp;</td></tr><tr><td>ovn-sbctl dump-flows&nbsp;</td><td>Show OpenFlow flows generated by OVN (alternative view)&nbsp;</td></tr><tr><td>ovn-trace (or ovn-sbctl lflow-trace)&nbsp;</td><td>Simulate a packet path through logical flows&nbsp;</td></tr><tr><td>ovn-nbctl show&nbsp;</td><td>Display logical network topology (switches, routers, ports)&nbsp;</td></tr><tr><td>ovs-ofctl dump-flows br-int&nbsp;</td><td>Show physical OpenFlow rules on a compute node&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<h1><strong>Logical Networking Concepts</strong></h1>
+
+
+
+<p>As already outlined, OVN introduces several abstractions that simplify network management. Let’s have a closer look at those.</p>
+
+
+
+<h2><strong>Logical Switches</strong></h2>
+
+
+
+<p>Logical switches provide Layer 2 connectivity between workloads.</p>
+
+
+
+<p>Unlike physical switches, they exist entirely in software and can span multiple hosts.</p>
+
+
+
+<p>A logical switch can connect virtual machines regardless of where they are physically located in the data center.</p>
+
+
+
+<h2><strong>Logical Routers</strong></h2>
+
+
+
+<p>Logical routers provide Layer 3 connectivity between logical networks.</p>
+
+
+
+<p>These routers support:</p>
+
+
+
+<ul><li>Static routing</li><li>Distributed routing</li><li>NAT</li><li>External connectivity</li></ul>
+
+
+
+<p>Unlike traditional centralized routers, OVN routers can distribute routing functionality throughout the environment for high availability.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="576" src="https://www.openstack.org/blog/wp-content/uploads/2026/06/04-Neutron-Router-OVN-Logical-Router-1024x576.webp" alt="" class="wp-image-9944" srcset="https://www.openstack.org/blog/wp-content/uploads/2026/06/04-Neutron-Router-OVN-Logical-Router-1024x576.webp 1024w, https://www.openstack.org/blog/wp-content/uploads/2026/06/04-Neutron-Router-OVN-Logical-Router-300x169.webp 300w, https://www.openstack.org/blog/wp-content/uploads/2026/06/04-Neutron-Router-OVN-Logical-Router-768x432.webp 768w, https://www.openstack.org/blog/wp-content/uploads/2026/06/04-Neutron-Router-OVN-Logical-Router-1536x864.webp 1536w, https://www.openstack.org/blog/wp-content/uploads/2026/06/04-Neutron-Router-OVN-Logical-Router-2048x1152.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2><strong>Logical Ports</strong></h2>
+
+
+
+<p>Logical ports represent attachment points between workloads and logical networks. Every virtual machine interface is typically associated with a logical port.</p>
+
+
+
+<p>OVN uses these ports to determine where traffic should enter and exit the logical topology.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="576" src="https://www.openstack.org/blog/wp-content/uploads/2026/06/05-Neutron_Network_Port_router-_OVN_Logical_Router_Port-1024x576.webp" alt="" class="wp-image-9945" srcset="https://www.openstack.org/blog/wp-content/uploads/2026/06/05-Neutron_Network_Port_router-_OVN_Logical_Router_Port-1024x576.webp 1024w, https://www.openstack.org/blog/wp-content/uploads/2026/06/05-Neutron_Network_Port_router-_OVN_Logical_Router_Port-300x169.webp 300w, https://www.openstack.org/blog/wp-content/uploads/2026/06/05-Neutron_Network_Port_router-_OVN_Logical_Router_Port-768x432.webp 768w, https://www.openstack.org/blog/wp-content/uploads/2026/06/05-Neutron_Network_Port_router-_OVN_Logical_Router_Port-1536x864.webp 1536w, https://www.openstack.org/blog/wp-content/uploads/2026/06/05-Neutron_Network_Port_router-_OVN_Logical_Router_Port-2048x1152.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2><strong>Access Control Lists (ACLs)</strong></h2>
+
+
+
+<p>ACLs define security policies governing traffic between workloads. Examples include:</p>
+
+
+
+<ul><li>Allowing SSH access</li><li>Allowing access only to certain ports (e.g. 443)</li><li>Enforcing tenant isolation</li></ul>
+
+
+
+<p>OVN translates these logical policies into dataplane enforcement rules automatically.</p>
+
+
+
+<h2><strong>Network Address Translation (NAT)</strong></h2>
+
+
+
+<p>OVN supports multiple forms of NAT including:</p>
+
+
+
+<ul><li>Source NAT (SNAT)</li><li>Destination NAT (DNAT)</li><li>Floating IP mappings</li></ul>
+
+
+
+<p>NAT policies are associated with logical routers and distributed throughout the environment.</p>
+
+
+
+<h1><strong>Following a Packet Through OVN</strong></h1>
+
+
+
+<p>One of the best ways to understand OVN is to trace a packet&#8217;s journey from a virtual machine to its destination — whether that destination is another VM on the same compute node, a VM on a different node, or an external server on the internet.</p>
+
+
+
+<p>This section walks through each logical stage of the packet&#8217;s path. Later, we will show how to verify this behavior using the ovn-trace debugging tool.</p>
+
+
+
+<h3><strong>Stage 1: Packet Leaves the Source VM</strong></h3>
+
+
+
+<p>A VM sends a packet from its virtual network interface. The hypervisor passes this packet to the OVS bridge br-int (the integration bridge) on the compute node where the VM resides.</p>
+
+
+
+<p>The VM has no knowledge of OVN — it simply sees a standard Ethernet interface with a MAC address, IP address, and default gateway. In our example:</p>
+
+
+
+<ul><li>VM MAC: fa:16:3e:9e:94:4a</li><li>VM IP: 192.168.1.74</li><li>Default gateway: 192.168.1.1 (the logical router interface)</li></ul>
+
+
+
+<h3><strong>Stage 2: Packet Enters the Logical Switch</strong></h3>
+
+
+
+<p>The ovn-controller on the compute node has already programmed OpenFlow rules into br-int based on the OVN Southbound database. These rules direct packets to the correct logical switch.</p>
+
+
+
+<p>Each Neutron network corresponds to an OVN logical switch. When the packet arrives, OVN identifies which logical switch port it came from by matching the inbound interface.</p>
+
+
+
+<p>To see the logical switch and its ports:</p>
+
+
+
+<p><code>ovn-nbctl show neutron-&lt;NETWORK_UUID&gt;</code></p>
+
+
+
+<p>For a VM port, the output shows an empty type (&#8220;&#8221;), confirming it is a regular compute port:&nbsp;</p>
+
+
+
+<p><code>port f24970ab-4e7f-453e-9940-9c09f9e9d636<br></code><code>&nbsp;&nbsp;&nbsp;&nbsp;addresses: ["fa:16:3e:9e:94:4a 192.168.1.74"]<br></code><code>&nbsp;&nbsp;&nbsp;&nbsp;type: ""</code></p>
+
+
+
+<h3><strong>Stage 3: Layer 2 Resolution (ARP/ND)</strong></h3>
+
+
+
+<p>If the packet&#8217;s destination is on the same logical switch (same Neutron network), OVN performs layer 2 forwarding:</p>
+
+
+
+<ol><li>The packet&#8217;s destination MAC is looked up in OVN&#8217;s logical switch MAC binding table.</li><li>OVN determines which logical switch port has that MAC address.</li><li>If the destination is on a different compute node, OVN encapsulates the packet in a tunnel (VXLAN or Geneve) and forwards it to the correct hypervisor.</li></ol>
+
+
+
+<p>If the destination MAC is unknown (e.g., the VM is trying to reach a new IP), the VM first sends an ARP request (for IPv4) or an ND (for IPv6). OVN handles ARP natively without flooding the entire network — it responds locally if the IP belongs to a known port.</p>
+
+
+
+<h3><strong>Stage 4: Packet Reaches the Logical Router (East-West Traffic)</strong></h3>
+
+
+
+<p>When a VM sends a packet to an IP address on a different Neutron network that is connected via a shared logical router, the packet must pass through the logical router.</p>
+
+
+
+<p>The VM sends the packet to its default gateway MAC address. OVN recognizes that this MAC belongs to a logical router port attached to the logical switch.</p>
+
+
+
+<p>Inspect the logical router and its ports:</p>
+
+
+
+<p><code>ovn-nbctl show neutron-&lt;ROUTER_UUID&gt;</code></p>
+
+
+
+<p>Example output shows both internal and external ports:</p>
+
+
+
+<p><code>router 81c4be90-5078-4528-b5f6-fd79705686d0 (test-router)<br>&nbsp;&nbsp;&nbsp;&nbsp;port lrp-71a2b3c4-d5e6-4789-a0b1-c2d3e4f56789<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mac: "fa:16:3e:c2:bb:ff"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;networks: ["192.168.1.1/24"]<br>&nbsp;&nbsp;&nbsp;&nbsp;port lrp-81c4be90-5078-4528-b5f6-fd79705686d0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mac: "fa:16:3e:73:78:ee"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;networks: ["10.40.196.189/24"]</code></p>
+
+
+
+<p>The internal router port (lrp-71a2b3c4&#8230;) is connected to the tenant network. Where an external router port (lrp-81c4be90&#8230;) connects to the provider network.</p>
+
+
+
+<p>When the packet enters the logical router:</p>
+
+
+
+<ol><li>OVN decrements the TTL.</li><li>OVN looks up the destination IP in the router&#8217;s routing table.</li><li>OVN rewrites the source MAC to the router&#8217;s egress port MAC and the destination MAC to the next hop&#8217;s MAC.</li><li>The packet is forwarded to the logical switch attached to the destination network (for east-west traffic) or to the gateway chassis (for north-south traffic).</li></ol>
+
+
+
+<h3><strong>Stage 5: North-South Traffic and NAT</strong></h3>
+
+
+
+<p>If the packet&#8217;s destination is outside the OpenStack cluster (e.g., 8.8.8.8), the logical router forwards it to a gateway chassis that has external connectivity.</p>
+
+
+
+<p>For a VM with a Floating IP, OVN applies NAT rules. To view the NAT configuration you can run:</p>
+
+
+
+<p><code>ovn-nbctl show neutron-&lt;ROUTER_UUID&gt;</code></p>
+
+
+
+<p>Example NAT output:</p>
+
+
+
+<p><code>nat dnat_and_snat<br></code><code>&nbsp;&nbsp;&nbsp;&nbsp;external ip: "10.40.196.214"<br></code><code>&nbsp;&nbsp;&nbsp;&nbsp;logical ip: "192.168.1.133"<br></code><code>&nbsp;&nbsp;&nbsp;&nbsp;external mac: "fa:16:3e:4c:27:37"<br></code><code>&nbsp;&nbsp;&nbsp;&nbsp;logical port: f24970ab-4e7f-453e-9940-9c09f9e9d636<br></code><code>nat snat<br></code><code> &nbsp;&nbsp;&nbsp;external ip: "10.40.196.141"</code><br><code>&nbsp; &nbsp;logical ip: "192.168.1.0/24"</code></p>
+
+
+
+<p>For a VM with a Floating IP, OVN performs:</p>
+
+
+
+<ol><li>SNAT (Source NAT) — Rewrites the source IP from the VM&#8217;s fixed IP to the Floating IP (or gateway external IP) so return traffic can be routed back.</li><li>DNAT (Destination NAT) — Rewrites the destination IP of incoming traffic from the Floating IP to the VM&#8217;s fixed IP.</li></ol>
+
+
+
+<p>In distributed mode (DVR enabled), the NAT happens on the compute node where the VM resides. In centralized mode, it happens on the dedicated gateway node.</p>
+
+
+
+<p>To identify the active gateway chassis you need to run:</p>
+
+
+
+<p><code>ovn-nbctl lrp-get-gateway-chassis &lt;PORT_UUID&gt;</code></p>
+
+
+
+<p><code>ovn-sbctl get Chassis &lt; CHASSIS_ UUID&gt; host name</code></p>
+
+
+
+<h3><strong>Stage 6: Egress to Physical Network</strong></h3>
+
+
+
+<p>Once the packet has passed through the logical router and any NAT rules, it must leave the OVN overlay and enter the physical network.</p>
+
+
+
+<p>This happens via a localnet port on the provider network&#8217;s logical switch. The localnet port is mapped to a physical bridge (typically br-ex) on the gateway chassis using bridge mappings.</p>
+
+
+
+<p>Inspect the chassis bridge mappings:</p>
+
+
+
+<p><code>ovn-sbctl get Chassis &lt;CHASSIS_UUID&gt; external_ids</code></p>
+
+
+
+<p>Expected output:</p>
+
+
+
+<p><code>{ovn-bridge-mappings="public:br-ex", ...}</code></p>
+
+
+
+<p>Where public is the name of the provider network. The ovn-controller on the gateway chassis strips the OVN tunnel encapsulation (if any) and forwards the raw Ethernet frame onto br-ex, which then sends it out the physical NIC to the external network.</p>
+
+
+
+<h3><strong>Stage 7: Return Path and Stateful Tracking</strong></h3>
+
+
+
+<p>OVN maintains connection tracking (conntrack) for stateful services like NAT and security groups. When a response packet returns from the provider network:</p>
+
+
+
+<ol><li>It enters via br-ex on the gateway chassis.</li><li>OVN reverses the SNAT/DNAT translation using the connection tracking state.</li><li>The packet is encapsulated and tunneled to the appropriate compute node.</li><li>The compute node&#8217;s ovn-controller delivers the packet to the original VM.</li></ol>
+
+
+
+<p>For security groups, OVN uses ACLs attached to Port Groups. Each ACL rule is evaluated in the pipeline before forwarding decisions are made.</p>
+
+
+
+<h3><strong>Verifying the Packet Path with ovn-trace</strong></h3>
+
+
+
+<p>The conceptual path described above can be simulated using OVN&#8217;s built-in trace tool. For example, tracing TCP traffic from our VM to 8.8.8.8:</p>
+
+
+
+<p><code>ovn-trace --ct=new --summary neutron-644c25c6-7d1b-41af-a98a-0cda8266f05c \</code><code><br>'inport == "f24970ab-4e7f-453e-9940-9c09f9e9d636" &amp;&amp; \</code><code><br>eth.src == fa:16:3e:9e:94:4a &amp;&amp; ip4.src == 192.168.1.74 &amp;&amp; \</code><code><br>eth.dst == fa:16:3e:c2:bb:ff &amp;&amp; ip4.dst == 8.8.8.8 &amp;&amp; \</code><code><br>ip.ttl == 64 &amp;&amp; ip4 &amp;&amp; tcp.dst == 80 &amp;&amp; tcp.src == 3000'</code></p>
+
+
+
+<p>The output will show each pipeline stage: ingress from the logical switch, routing decision, NAT application, and egress to the provider network.</p>
+
+
+
+<h3><strong>Summary of the Packet&#8217;s Journey</strong></h3>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Step</strong></td><td><strong>Location</strong></td><td><strong>Action</strong></td></tr><tr><td>1</td><td>Source VM&nbsp;</td><td>Packet leaves VM&#8217;s virtual interface&nbsp;</td></tr><tr><td>2</td><td>br-int on compute&nbsp;</td><td>Packet enters OVN logical switch&nbsp;</td></tr><tr><td>3</td><td>Logical switch&nbsp;</td><td>Layer 2 forwarding or ARP resolution&nbsp;</td></tr><tr><td>4</td><td>Logical router&nbsp;</td><td>Routing, TTL decrement, MAC rewrite&nbsp;</td></tr><tr><td>5</td><td>Gateway chassis (or local compute with DVR)&nbsp;</td><td>SNAT/DNAT for Floating IPs&nbsp;</td></tr><tr><td>6</td><td>br-ex on gateway&nbsp;</td><td>Encapsulation stripped, egress to physical network&nbsp;</td></tr><tr><td>7</td><td>Return path&nbsp;</td><td>Connection tracking reverses NAT, tunnel back to compute&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<p>Understanding this flow makes it much easier to diagnose where a packet might be dropped — whether at the logical switch level (port binding issues), the router level (missing routes or incorrect NAT), or the physical egress level (bridge mapping problems).</p>
+
+
+
+<h2><strong>Final Thoughts</strong></h2>
+
+
+
+<p>This guide has walked through OVN&#8217;s architecture, the Neutron-to-OVN mapping, packet flow mechanics, and practical troubleshooting scenarios. By now, the underlying pattern should be second nature:</p>
+
+
+
+<p><strong>Neutron API calls</strong> → OVN Northbound DB (logical intent and configuration)<br><strong>ovn-northd </strong>→ OVN Southbound DB (physical realization and binding)<br><strong>ovn-controller on each hypervisor </strong>→ OpenFlow rules in OVS (actual data plane enforcement)</p>
+
+
+
+<p>This three-tier transformation is the heart of OVN&#8217;s power — and, occasionally, its complexity. When an OpenStack network isn&#8217;t working as expected, resist the urge to jump straight to packet captures. Instead, adopt a disciplined, top-down approach: start at the Southbound DB to see what OVN believes should be happening on the wire. Then verify the Northbound DB to confirm what Neutron originally requested. Compare the two. In most cases, the root cause lives in the gap between intent and realization — a duplicate chassis, stale binding, an unprocessed logical flow, or a misapplied ACL.</p>
+
+
+
+<p>Beyond the core flow, remember to check the <em>Chassis</em> table for node liveness, the <em>Binding</em> table for port ownership, and the <em>Logical_Flow</em> table for pipeline ordering. Tools like ovn-trace are invaluable for simulating packet paths without touching production traffic, while the DB sync tool can help you reconcile state when the control plane and data plane fall out of alignment.</p>
+
+
+
+<p>Let the commands and workflows featured here — from ovn-nbctl find to ovn-sbctl lflow-list to the trace utility, become trusted companions in your OVN debugging.<br><br>To learn more about <a href="https://cloudification.io/cloud-blog/ovn-traffic-flow-troubleshooting-in-openstack/">OVN</a>, <a href="https://cloudification.io/cloud-blog/category/openstack/">OpenStack</a> and other technologies visit Cloudification <a href="https://cloudification.io/cloud-blog/">Blog</a>.</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"><span class="tags-title">Tags:</span> <a href="https://www.openstack.org/blog/tag/networking/" rel="tag">networking</a> <a href="https://www.openstack.org/blog/tag/open-vswitch/" rel="tag">Open vSwitch</a> <a href="https://www.openstack.org/blog/tag/ovn/" rel="tag">ovn</a> <a href="https://www.openstack.org/blog/tag/ovs/" rel="tag">ovs</a></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9930" class="clearfix post-9930 post type-post status-publish format-standard hentry category-community category-openstack-update" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/april-2026-ptg-recap-the-road-from-gazpacho-to-hibiscus/" rel="bookmark" title="Permanent Link to April 2026 PTG Recap: The Road from Gazpacho to Hibiscus">April 2026 PTG Recap: The Road from Gazpacho to Hibiscus</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/diablo_rojo/" title="Posts by Kendall Nelson" rel="author">Kendall Nelson</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">May 5, 2026</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<h2></h2>
+
+
+
+<p class="lead">Following the tradition of our previous Project Teams Gathering (PTG) summaries, the April 2026 PTG brought together over 35 teams and hundreds of contributors, operators, and open-source enthusiasts for a week of virtual collaboration. On the OpenStack side, the community was coming off the launch of the 2026.1 “Gazpacho” release of OpenStack and spent the week diving straight into the 2026.2 “Hibiscus” cycle.&nbsp;</p>
+
+
+
+<h3><strong>Planting the Seeds for “Hibiscus”</strong></h3>
+
+
+
+<p>With the Hibiscus cycle now underway, the OpenStack service teams were buzzing post “Gazpacho” release! You can find OpenStack team summaries below.&nbsp;</p>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/AEMEEJXQY6ETSBRWQVGBA6WY2T5EBRPG/">Cinder Summary by Jon Bernard</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/MBE5DX4IQTD4SQOTSWNTDBBHTN5BSCPE/">Cyborg Summary by Sean Mooney</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/EL65IPFTH3IHXVBWKB2Z4CW3HQ6PZQX3/">Glance Summary by Cyril Roelandt</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/O2WXGLUB35UI4RBYKOJSMMB4LBCFBWP7/">Horizon Summary by Tatiana Ovchinnikova</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/N7N3RRQ5JGOOLRGRWK5TG3EXR5JNRYHQ/">Magnum Summary by Michal Nasiadka</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/WCVINC7MRKGBUNEJLGOVRI72EZBDGU2G/">Manila Summary by Carlos Silva</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/6T2GX5DD4PZRUUAIPDWI7W6VTN7FBUIA/">Neutron Summary by Brian Haley</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/FNJ5U25TLZSQIGYGGUSTAPDXWD6XBZUJ/">Nova Summary by Rene Ribaud</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/VOYCEDDXJGDV6DINJLKYPRBDBRQK7V4B/">Tacker Summary by Yasufumi Ogawa</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/FVV7K7T5FITK7QNPJLJN7P4FJL2WQJ4A/">Watcher Summary by Douglas Viroel</a></li></ul>
+
+
+
+<h3><strong>OpenStack Community and Strategy</strong></h3>
+
+
+
+<p>Other OpenStack community teams were filled with discussions on broader topics. Check out their discussion summaries!</p>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/CIKLAGYX23SQTKOSNAOITEVVR6KTWHNQ/">Eventlet Removal Summary by Herve Beraud</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/AY7VJVW34WIW3XTM5OQKHTOKVL7G3ZOY/">OpenStack i18n by Ian Choi</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/3KUT5OPGE7PYS4V25APCW63JGJ7PNVLE/">OpenStack Ops Radio Hour Summary by Ildiko Vancsa</a></li><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/message/XYXFYV4GAVNHHDWFEBYFITZAAYPQQS6K/">OpenStack Technical Committee Summary by Goutham Pacha Ravi</a>&nbsp;</li></ul>
+
+
+
+<h3><strong>Until Next Time!&nbsp;</strong></h3>
+
+
+
+<p>Every PTG reminds me why this community works: the <a href="https://openinfra.org/four-opens/">Four Opens</a>. Whether we were debating technical specs, or troubleshooting niche use cases, the focus is on open collaboration and our global community working together to make open software.</p>
+
+
+
+<p>If you couldn&#8217;t make it a session, I highly recommend checking out <a href="https://wiki.openstack.org/wiki/PTG/April2026PTG/Etherpads">the team etherpads</a>. These etherpads are full of the details that made this PTG a success.</p>
+
+
+
+<p>The next PTG will be taking place after the “Hibiscus” release, October 12-16! <a href="https://openinfra.org/ptg/">Keep an eye on the website for registration details and team sign ups!</a></p>
+
+
+
+<p>Are we missing your team’s summary in this post? Reach out to <a href="/cdn-cgi/l/email-protection#60101407200f10050e090e0612014e0f1207"><span class="__cf_email__" data-cfemail="6b1b1f0c2b041b0e0502050d190a4504190c">[email&#160;protected]</span></a> and let us know!</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9927" class="clearfix post-9927 post type-post status-publish format-standard hentry category-uncategorized" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/openstack-gazpacho-built-by-a-global-community-designed-for-real-world-infrastructure/" rel="bookmark" title="Permanent Link to OpenStack Gazpacho: Built by a Global Community, Designed for Real-World Infrastructure">OpenStack Gazpacho: Built by a Global Community, Designed for Real-World Infrastructure</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/allison-price/" title="Posts by Allison Price" rel="author">Allison Price</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">April 1, 2026</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<h1></h1>
+
+
+
+<p class="lead">Today, the OpenStack community is proud to announce the release of <a href="https://www.openstack.org/software/openstack-gazpacho/">OpenStack 2026.1 Gazpacho</a>, the 33rd release of the world’s most widely deployed open source cloud infrastructure software. But beyond the features and improvements, Gazpacho tells a deeper story: one of a global community continuing to come together to solve real infrastructure challenges through open collaboration.</p>
+
+
+
+<p>Every OpenStack release is the result of thousands of contributions, countless hours of collaboration, and a shared commitment to building open infrastructure that works in production. Gazpacho is no exception.</p>
+
+
+
+<h2>A Community Driving Momentum</h2>
+
+
+
+<p>The Gazpacho cycle reflects growing momentum across the OpenStack ecosystem. Over the past six months, around 500 contributors from 100 organizations worked together to deliver more than 9,000 code changes across OpenStack services, an increase in activity compared to the recent OpenStack 2025.1 Flamingo release. </p>
+
+
+
+<p>Behind those numbers are developers, operators, users, and organizations from across the globe collaborating in the open to build software that powers private clouds, edge environments, and increasingly, AI infrastructure.</p>
+
+
+
+<p>The scale of collaboration doesn’t stop at code. OpenDev’s <a href="http://zuulci.org">Zuul CI system</a> continues to run more than one million jobs per release cycle, ensuring that every contribution is tested, validated, and production-ready before it reaches users.</p>
+
+
+
+<p>This level of rigor and transparency is what makes OpenStack unique. It’s not just about shipping features, it’s about building trust.</p>
+
+
+
+<h2>Open Collaboration, Global Impact</h2>
+
+
+
+<p>One of the most powerful aspects of the OpenStack community is its global nature. Contributors span hundreds of organizations and nearly every region of the world, bringing diverse perspectives and real-world requirements into the project.</p>
+
+
+
+<p>In the Gazpacho release, 40% of contributions came from European contributors highlighting how regional priorities like digital sovereignty are shaping the future of open infrastructure.</p>
+
+
+
+<p>This is the strength of open source: the ability to reflect the needs of different industries, geographies, and use cases, all within a shared codebase. Whether it’s telecom operators optimizing for performance, enterprises migrating off proprietary platforms, or governments building sovereign cloud infrastructure, those needs show up directly in the software.</p>
+
+
+
+<h2>Solving Operator Challenges Together</h2>
+
+
+
+<p>At its core, OpenStack has always been driven by operators and Gazpacho continues that tradition.</p>
+
+
+
+<p>This release focuses heavily on simplifying operations, improving workload mobility, and enabling infrastructure to run consistently across increasingly complex environments. These priorities don’t emerge in isolation; they come directly from community feedback, real-world deployments, and ongoing collaboration between users and contributors.</p>
+
+
+
+<p>For example, enhancements in Ironic introduce more intelligent automation, reducing the need for manual configuration and making it easier to manage bare metal infrastructure at scale. Features like autodetect deployment interfaces and automatic protocol detection reflect a broader goal: letting operators focus less on configuration and more on outcomes.</p>
+
+
+
+<p>Similarly, improvements in workload migration, such as enhanced cross-zone strategies and live migration support for sensitive workloads, address one of the most urgent challenges facing infrastructure teams today. As organizations accelerate migration from proprietary platforms, seamless mobility across environments is no longer optional; it’s essential.</p>
+
+
+
+<h2>Performance and Flexibility for Modern Workloads</h2>
+
+
+
+<p>The Gazpacho release also brings significant improvements in performance and responsiveness, shaped by the needs of operators running at scale.</p>
+
+
+
+<p>Enhancements like parallel live migrations, asynchronous APIs, and better I/O handling in Nova are direct responses to real-world demands for faster, more efficient infrastructure. At the same time, expanded hardware support, from GPUs to FPGAs and beyond, ensures OpenStack can support the growing diversity of modern workloads, including AI and data-intensive applications.</p>
+
+
+
+<p>These improvements are not built in isolation. They are the result of collaboration across projects—Nova, Neutron, Ironic, Manila, Cyborg—and across contributors who understand that infrastructure is a system, not a set of silos.</p>
+
+
+
+<h2>A Platform That Evolves with Its Community</h2>
+
+
+
+<p>Thirty-three releases in, OpenStack continues to evolve, not by chasing trends, but by responding to the needs of the operators running the software in production. As of October 2025, the global OpenStack footprint exceeds 55 million compute cores. </p>
+
+
+
+<p>The introduction of the SLURP (Skip Level Upgrade Release Process) model is a perfect example. Designed with operators in mind, SLURP allows for annual upgrades instead of every six months, reducing operational burden while maintaining a predictable release cadence.</p>
+
+
+
+<p>It’s a reminder that innovation in OpenStack isn’t just about features; it’s also about how the software is delivered, maintained, and operated over time.</p>
+
+
+
+<h2>Looking Ahead</h2>
+
+
+
+<p>Gazpacho represents more than a release. It’s a snapshot of a community in motion, growing, adapting, and continuing to build infrastructure that meets the needs of today while preparing for what comes next.</p>
+
+
+
+<p>From enabling workload migration at scale to supporting AI-driven infrastructure and advancing digital sovereignty, the direction of OpenStack is clear: open collaboration remains the foundation.</p>
+
+
+
+<p>And that foundation is only as strong as the people behind it.</p>
+
+
+
+<p>To everyone who contributed to the Gazpacho release—code, documentation, testing, feedback, and beyond—thank you. This is your release.</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9838" class="clearfix post-9838 post type-post status-publish format-standard hentry category-summit-2 tag-openinfra-summit tag-openstack tag-vmware-migration" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/exploring-openstack-at-openinfra-summit-europe-2025/" rel="bookmark" title="Permanent Link to Exploring OpenStack at OpenInfra Summit Europe 2025">Exploring OpenStack at OpenInfra Summit Europe 2025</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/allison-price/" title="Posts by Allison Price" rel="author">Allison Price</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">July 1, 2025</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">Mark your calendars for <strong>October 17–19, 2025</strong>, when the OpenInfra community converges on École Polytechnique in Paris‑Saclay for the much‑anticipated <a href="https://summit2025.openinfra.org/">OpenInfra Summit Europe</a>. The <a href="https://summit2025.openinfra.org/a/schedule">schedule</a> was just published today, and among the open infrastructure focused tracks, OpenStack remains central—featuring in core presentations, Forum discussions, workshops, and keynotes.</p>
+
+
+
+<p>The OpenInfra Summit schedule is curated by experts from the global community who volunteer their time to make the content as engaging and representative as possible. Some highlights among the <a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;tags=4649">80+ OpenStack sessions include</a>:&nbsp;</p>
+
+
+
+<ul><li><a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;tags=4649&amp;title=From%20Zero%20to%20Code%20-%20How%20to%20get%20started%20in%20OpenStack">From Zero to Code &#8211; How to get started in OpenStack</a></li><li><a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;tags=4649&amp;title=Multi-Arch%20OpenStack%20in%20Production%3A%20ARM64%2Fx86%20Bare%20Metal%20and%20Hypervisors%20with%20Kolla-Ansible">Multi-Arch OpenStack in Production: ARM64/x86 Bare Metal and Hypervisors with Kolla-Ansible</a></li><li><a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;tags=4649&amp;speakers=10326">Talking with Your Infrastructure: AI Agents for OpenStack and Kubernetes Infra</a></li><li><a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;tags=4649&amp;title=All%20aboard%20the%20Release%20Train%3A%20Lessons%20from%20our%20last%20100%20OpenStack%20upgrades">All aboard the Release Train: Lessons from our last 100 OpenStack upgrades</a></li><li><a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;tags=4649&amp;title=OpenStack%20at%20Scale%3A%20Operating%20a%20bare%20metal%20cloud%20for%20quant%20research">OpenStack at Scale: Operating a bare metal cloud for quant research</a></li></ul>
+
+
+
+<p>Keynote attendees will see a <a href="https://summit2025.openinfra.org/a/schedule#view=calendar&amp;title=OpenInfra%20Summit%20Europe%20Keynotes">multi-participant, simultaneous demo</a> highlighting the variety of paths organizations can take to migrate workloads from VMware to OpenStack. Participants currently include Canonical, Rackspace and ZConverter.&nbsp;</p>
+
+
+
+<p>Attending OpenStack sessions at OpenInfra Summit Europe offers a chance to:</p>
+
+
+
+<ul><li>Gain early access to Flamingo roadmap discussions</li><li>Learn from migration success stories and production use-cases</li><li>Network with contributors, team leads, and users worldwide</li><li>Influence the future direction of OpenStack through Forum collaboration (The <a href="https://summit2025.openinfra.org/cfp/">Forum CFP</a> is open until 8 July!)&nbsp;</li></ul>
+
+
+
+<p>If you&#8217;re passionate about hybrid clouds, open infrastructure, and cutting-edge OpenStack innovation, these sessions are unmissable. <a href="https://summit2025.openinfra.org/a/schedule">Check out the full agenda</a>—and don&#8217;t miss your chance to engage, learn, and contribute at the <a href="https://summit2025.openinfra.org/">OpenInfra Summit Europe</a> this October!</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"><span class="tags-title">Tags:</span> <a href="https://www.openstack.org/blog/tag/openinfra-summit/" rel="tag">OpenInfra Summit</a> <a href="https://www.openstack.org/blog/tag/openstack/" rel="tag">OpenStack</a> <a href="https://www.openstack.org/blog/tag/vmware-migration/" rel="tag">VMware migration</a></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9829" class="clearfix post-9829 post type-post status-publish format-standard hentry category-community" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/openstack-resurgence-how-vmwares-licensing-rugpull-is-encouraging-a-second-look/" rel="bookmark" title="Permanent Link to OpenStack Resurgence: How VMware&#8217;s Licensing Rugpull is Encouraging a Second Look">OpenStack Resurgence: How VMware&#8217;s Licensing Rugpull is Encouraging a Second Look</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/diablo_rojo/" title="Posts by Kendall Nelson" rel="author">Kendall Nelson</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">June 18, 2025</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">In the wake of Broadcom’s 2023 acquisition of VMware, the enterprise IT world found itself at a crossroads. Rapid, unexpected changes to VMware’s licensing model sent shockwaves through thousands of organizations, forcing a stark choice: stay and absorb dramatic cost increases—or seek out an alternative platform capable of handling mission-critical workloads.</p>
+
+
+
+<p><strong>Enter OpenStack </strong></p>
+
+
+
+<p>For many organizations, OpenStack was that cloud they looked into 10 years ago and decided that it wasn’t the right platform for them at the time. Since then, thanks to thousands of contributors and hundreds of organizations, OpenStack has matured significantly into a stable platform trusted to handle any workload. It has simplified and addressed feedback from users. It has been adopted and evolved by thousands of developers at hundreds of organizations all around the globe. OpenStack has evolved to support complex, large-scale infrastructure with power and flexibility.</p>
+
+
+
+<p>With a second look, organizations around the world are discovering just how much <a href="https://www.openstack.org/marketplace/">the OpenStack marketplace</a> has grown in the last decade. There have been 21 releases since 2015 and with each one there have been numerous upgrades and advancements. These organizations have a lot of questions though; namely, how does a migration from VMware to OpenStack work?&nbsp;</p>
+
+
+
+<p><strong>Available Today: A Comprehensive VMware-to-OpenStack Migration Guide</strong></p>
+
+
+
+<p>Last year, the OpenInfra Member community collaborated to create <a href="https://www.openstack.org/vmware-migration-to-openstack-white-paper">the VMware Migration Whitepaper</a> to start a public dialogue positioning OpenStack as an option in this quest for a virtualization alternative. It helped educate this market on the <em>why </em>of the situation &#8211; why OpenStack could be a strategic, cost saving alternative. As a result, questions are now focused on the <em>how.</em></p>
+
+
+
+<p>Today, I am proud to introduce <a href="https://www.openstack.org/vmware-migration-to-openstack/vmware-to-openstack-migration-guide">the VMware Migration Guide</a>, which answers these questions. The idea behind the guide is to build on the foundation that last year&#8217;s white paper began. The Guide’s aim is to prime the organizations for making the move to OpenStack by helping with the planning stages, the candid assessment of the existing stack, and setting up a mindset for modernizing infrastructure and the operating model.&nbsp;&nbsp;</p>
+
+
+
+<p>The Guide was created by a group of OpenInfra community members with experience and knowledge in this space and includes: </p>
+
+
+
+<ul><li>Case Studies of real world workload migration </li><li>Reference architectures to show how an OpenStack cloud offering might be laid out and how that can serve the workload that is currently on VMware </li><li>Considerations, comparisons and the clear benefits of moving to OpenStack to avoid vendor lock-in and capitalize on all that comes with leveraging an open source solution&nbsp;</li></ul>
+
+
+
+<p><strong>How OpenStack Introduces Benefits of Open Source to a Previously Locked In Crowd</strong></p>
+
+
+
+<p>As organizations consider the move from a proprietary solution like VMware to an open source based product, the benefits are not limited to a reduction in licensing costs. The most impactful benefit is actually the dissolution of vendor lock-in; you are no longer bound to the decisions or product roadmap of a single vendor. The <a href="http://openstack.org/marketplace">OpenStack Marketplace</a> proves there is an entire ecosystem for you to explore and interoperability you can leverage until you find the right partner.&nbsp;</p>
+
+
+
+<p>Beyond the Marketplace, OpenStack is backed by a global community openly developing code that is better tested and more robust. Now is the time for your organization to take another look at OpenStack. Learn more about the benefits and challenges of VMware to OpenStack Migration and join this global movement.</p>
+
+
+
+<p></p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9819" class="clearfix post-9819 post type-post status-publish format-standard hentry category-community category-students-of-openstack" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/students-of-openstack-meet-oria-weng/" rel="bookmark" title="Permanent Link to Students of OpenStack: Meet Oria Weng!">Students of OpenStack: Meet Oria Weng!</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/diablo_rojo/" title="Posts by Kendall Nelson" rel="author">Kendall Nelson</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">June 2, 2025</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">Oria Weng is a third-year honors student studying computer science at Oregon State University, working at the Oregon State University Open Source Lab (OSUOSL).</p>
+
+
+
+<h3><strong>What Open Infrastructure project are you working with, and what made you interested in that project, as opposed to some of the other options? What was the hardest part about getting started?</strong></h3>
+
+
+
+<p>I believe it was Kendall Nelson who connected the OSUOSL with the internship program; I joined work on OpenStack Client (python-openstackclient), the command line client, after Antonia Gaete, another past intern, had started working on it. It made sense logistically for us to work under the same mentors (Stephen Finucane and Artem Goncharov) and on the same project, but I did like specifically working on identity because things like users, projects, etc. were things I had to use pretty often in my own usage of OpenStack. Plus, it was a good opportunity to learn more about security concepts like authorization and authentication. Later, Artem introduced us to his API schema work on Keystone, the identity service, and invited us to help with that. I&#8217;ve really enjoyed working with APIs in the past, so this sounded like a fun opportunity. I especially liked the idea that enforcing a strict API schema could (potentially) make it easier to find inconsistencies and bugs, as well as improve the understandability and documentation of Keystone.</p>
+
+
+
+<h3><strong>What was the hardest part about getting started?</strong></h3>
+
+
+
+<p>This was my first time working on a big open-source project at this scale, so the hardest part for me was understanding how the codebase fit together and figuring out which of the moving parts I should change to accomplish something. What helped me the most was to look at examples of other changes &#8211; for example, I studied Antonia&#8217;s changes as I was starting out, since she had started at OpenStack earlier than me and was doing similar work. It also helped a lot to have mentors who knew the codebase inside and out and were willing to answer any questions that came up.</p>
+
+
+
+<h3><strong>What could have made the getting-started process easier?</strong></h3>
+
+
+
+<p>I think the docs were pretty overwhelming for me as I was starting out &#8211; each project has different categories of references and guides as well as multiple project versions; there are also both contributor guides for individual projects and ones for OpenStack overall. Fortunately, I had help from mentors like Kendall, Stephen, and Artem to figure things out, but I think a short guide for total beginners on how to navigate the projects and their docs would be helpful. 🙂</p>
+
+
+
+<h3><strong>How have you contributed to the community?</strong></h3>
+
+
+
+<p>For OpenStack, I&#8217;ve primarily been helping to migrate OpenStack Client commands to use the OpenStack SDK (to move away from keystoneclient) as well as adding API schema validators to Keystone. In terms of the open source community in general, this is my third year working at the OSUOSL, where we provide hosting and other services to over 160 open source projects. I think that&#8217;s pretty cool!</p>
+
+
+
+<h3><strong>What’s the biggest benefit from your involvement? (hard or soft skills, connections, etc)</strong></h3>
+
+
+
+<p>One of the biggest benefits for me was just getting used to development on a big open source project. Before going in, I didn&#8217;t really have a good idea of how open source development really worked; I learned a lot about best practices and how to communicate.</p>
+
+
+
+<h3><strong>What advice do you have for students who want to get started with open source?</strong></h3>
+
+
+
+<p>Don&#8217;t be afraid to ask questions! As I was starting out, I probably looked even sillier pretending I knew what was going on when I didn&#8217;t, than I would have if I&#8217;d just asked an &#8220;obvious&#8221; question.</p>
+
+
+
+<p><a href="https://review.opendev.org/q/owner:oweng@osuosl.org">Check out Oria Weng&#8217;s OpenStack contributions</a> </p>
+
+
+
+<p><a href="https://github.com/ArtofBugs">Check out Oria Weng&#8217;s other projects on GitHub</a></p>
+
+
+
+<p></p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9811" class="clearfix post-9811 post type-post status-publish format-standard hentry category-community category-students-of-openstack" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/students-of-openstack-meet-boosung-kim/" rel="bookmark" title="Permanent Link to Students of OpenStack: Meet Boosung Kim!">Students of OpenStack: Meet Boosung Kim!</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/diablo_rojo/" title="Posts by Kendall Nelson" rel="author">Kendall Nelson</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">May 14, 2025</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">As the academic year wraps up, seniors at Dickinson College have completed their capstone course, where they learned a lot during the past year, including new concepts, how OpenInfra works, working with the Swift core team, and we getting to attend the Project Teams Gathering (PTG).</p>
+
+
+
+<p>This year, James Nguyễn, Nathan Nguyễn, and Boosung Kim were among the fortunate few who had the chance to work with OpenStack. In a recent interview with one of the students, <a href="https://www.linkedin.com/in/boosungk/">Boosung Kim</a> shared insights into how he became acquainted with OpenStack, what surprised him the most, the challenges he encountered, and the advice he&#8217;d offer to future students.</p>
+
+
+
+<p>Boosung is a senior double majoring in Computer Science and Math, graduating this year. He is currently wrapping up his final semester while contributing to OpenStack Swift. Outside of school, he enjoys attending hackathons and swimming!</p>
+
+
+
+<h3><strong>What Open Infrastructure project are you working with and what made you interested in that project, as opposed to some of the other options?</strong></h3>
+
+
+
+<p>I’m working with OpenStack Swift. I was drawn to it because of my interest in large-scale systems and backend infrastructure. Swift stood out from other projects due to its clean design, active community, and relevance to the kind of distributed systems I want to build professionally.</p>
+
+
+
+<h3>How did you get started? What was the hardest part?</h3>
+
+
+
+<p>I got started by joining Dickinson College&#8217;s seminar focused on open source development, where I chose Swift for a technical deep dive. I began by exploring the codebase, setting up a dev environment, and meeting the Swift team during the 2024 PTG.</p>
+
+
+
+<p>The hardest part was grasping new concepts like race conditions, erasure coding, and heartbeats. These were outside the scope of my usual coursework, so it took extra time to understand how they fit into a distributed system like Swift.</p>
+
+
+
+<h3>What could have made the getting started process easier?</h3>
+
+
+
+<p>Clearer beginner-focused documentation on core concepts like consistency, replication, and concurrency in Swift would have helped. But the dev team was willing to hop on a call to explain these concepts in-depth, so everything worked out regardless.</p>
+
+
+
+<h3>How have you contributed to the community?</h3>
+
+
+
+<p>I’ve contributed code patches to the Swift project, participated in review discussions, and gave a tech talk at my college to introduce others to OpenStack and Swift. I hope that my contributions can be of help to Swift users and that more students from my college will work with OpenStack.</p>
+
+
+
+<h3>What’s the biggest benefit from your involvement?&nbsp;</h3>
+
+
+
+<p>The biggest benefit has been learning how real-world distributed systems are built and maintained. I also gained experience navigating large codebases, writing production-level code, and communicating effectively in an open-source community.</p>
+
+
+
+<h3>What advice do you have for students who want to get started with open source?</h3>
+
+
+
+<p>Don&#8217;t try to perfect your patches before submitting for review like I did. Aim for quick, purposeful iterations so that you can get reviews fast and ship fast.</p>
+
+
+
+<h3>Want to connect with Boosung Kim? <a href="https://www.linkedin.com/in/boosungk/">Find him on LinkedIn</a>!</h3>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9797" class="clearfix post-9797 post type-post status-publish format-standard hentry category-uncategorized tag-cinder tag-glance tag-ironic tag-manila tag-nova tag-openstack tag-openstackansible tag-ptg tag-tacker tag-technical-committee tag-watcher" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/openstack-at-the-april-2025-ptg-all-things-epoxy-flamingo/" rel="bookmark" title="Permanent Link to OpenStack at the April 2025 PTG: All Things &#8216;Epoxy&#8217; &amp; &#8216;Flamingo&#8217;">OpenStack at the April 2025 PTG: All Things &#8216;Epoxy&#8217; &amp; &#8216;Flamingo&#8217;</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/diablo_rojo/" title="Posts by Kendall Nelson" rel="author">Kendall Nelson</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">April 22, 2025</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">The OpenInfra Project Team Gathering took place April 7 to 11, earlier this month. A variety of OpenStack teams, covering the basic OpenStack services, pop up working groups, among other more horizontal view teams met to have technical discussions throughout the week. Discussions ranged from ongoing feature work, to reviewing feedback on the most recent Epoxy release, to planning for the future and everything in between. </p>
+
+
+
+<p>Some highlights were the revival of interest in Watcher which has been rejuvenated by a number of organizations looking to migrate from VMware and OpenStack being well poised as an alternative. The technical committee held a community leaders forum to bubble up issues affecting teams and reignite awareness about the Vulnerability Management Team and ongoing community goals. Also this PTG, OpenStack Operators and community members gathered to discuss how to better engage with people in operations roles and re-frame the way they collaborate as a group and participate in the larger community.&nbsp;</p>
+
+
+
+<p>For more information about discussions that went on at the PTG, you can find find a list of the team summaries that have been published below.</p>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/BX2GM4ESUY3RJVRT5TZXKP3HL7QT2YDP/">Cinder By: Jon Bernard</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/WABAAUVUOHEWCBXAYM53EAGJ6EF6JUTG/">Eventlet Removal WG By: Herve Beraud</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/XBEYBGUDCPEQVDVLWWWGVRKQO6JZXL56/">Glance By: Cyril Roelandt</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/Q3IJ2QGL5ANVPTEIXW622UCRMMHZC637/">Heat By: Takashi Kajinami</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/ASXEDMRKOSBPN3YL7NYOSIGBAOMWMD4B/">Horizon By Tatiana Ovchinnikova</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/S3ACT4HKWQQAZFS62HBQMWZX3RGT2WQX/">Ironic By: Julia Kreger</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/LZYVJKTELNOHGN6CB4SXV33H7CHM4SMN/">Manila By: Carlos da Silva</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/T6CLTKTGQM7KPV3GXATC4DJ4SUTOBM6N/">Nova By: Rene Ribaud</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/YLWX4RCPZ3UZ22RX2JWMQM7JUND4KW3S/">OpenStack Ansible By: Dmitriy Rabotyagov</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/X46FCYP446WAEZELIBRM4D6C56KZBF7F/">Tacker By: Yasufumi Ogawa</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/AR623LRF7OADOJ4T3ETQW73QFOZ3F37U/">Technical Committee By: Goutham Pacha Ravi</a></li></ul>
+
+
+
+<ul><li><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/JJGOTIERMNE2ABAWTE7KP2I7HT7PDNQZ/">Watcher By: Douglas Viroel</a></li></ul>
+
+
+
+<p></p>
+
+
+
+<p>Thank you to everyone that participated in this PTG! If there are any summaries missing from this list, please reach out to <a href="/cdn-cgi/l/email-protection#71010516311e01141f181f1703105f151407"><span class="__cf_email__" data-cfemail="8ffffbe8cfe0ffeae1e6e1e9fdeea1ebeaf9">[email&#160;protected]</span></a> to get them added here.&nbsp;</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"><span class="tags-title">Tags:</span> <a href="https://www.openstack.org/blog/tag/cinder/" rel="tag">cinder</a> <a href="https://www.openstack.org/blog/tag/glance/" rel="tag">Glance</a> <a href="https://www.openstack.org/blog/tag/ironic/" rel="tag">Ironic</a> <a href="https://www.openstack.org/blog/tag/manila/" rel="tag">Manila</a> <a href="https://www.openstack.org/blog/tag/nova/" rel="tag">Nova</a> <a href="https://www.openstack.org/blog/tag/openstack/" rel="tag">OpenStack</a> <a href="https://www.openstack.org/blog/tag/openstackansible/" rel="tag">OpenStackAnsible</a> <a href="https://www.openstack.org/blog/tag/ptg/" rel="tag">PTG</a> <a href="https://www.openstack.org/blog/tag/tacker/" rel="tag">tacker</a> <a href="https://www.openstack.org/blog/tag/technical-committee/" rel="tag">technical committee</a> <a href="https://www.openstack.org/blog/tag/watcher/" rel="tag">watcher</a></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+										
+					<article id="post-9787" class="clearfix post-9787 post type-post status-publish format-standard hentry category-uncategorized" role="article">
+						
+					<h2><a href="https://www.openstack.org/blog/openstack-2025-1-epoxy-strengthening-openstacks-position-as-a-vmware-alternative-and-enhancing-security-and-hardware-enablement/" rel="bookmark" title="Permanent Link to OpenStack 2025.1 Epoxy: Strengthening OpenStack&#8217;s Position as a VMware Alternative and Enhancing Security and Hardware Enablement">OpenStack 2025.1 Epoxy: Strengthening OpenStack&#8217;s Position as a VMware Alternative and Enhancing Security and Hardware Enablement</a></h2>
+
+					<div class="post-byline row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="name"><a href="https://www.openstack.org/blog/author/allison-price/" title="Posts by Allison Price" rel="author">Allison Price</a>&nbsp;</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<p class="postDate">April 2, 2025</p>
+						</div>
+					</div>
+					
+						<section class="post_content clearfix">
+							
+<p class="lead">The OpenStack community’s latest release, <a href="https://www.openstack.org/software/openstack-epoxy">2025.1 Epoxy</a>, marks an important milestone in the project&#8217;s evolution. With the release of OpenStack Epoxy, the project continues to improve its capabilities, positioning itself as a more viable alternative to proprietary solutions like VMware. Packed with a range of new features, security enhancements, and hardware enablement improvements, Epoxy is poised to support more complex and demanding workloads while offering more efficient management tools for cloud administrators.</p>
+
+
+
+<p>OpenStack’s adoption is on the rise, and this release demonstrates the community&#8217;s commitment to its growth and evolution in the face of industry trends and opportunities. The 31st release of OpenStack is the result of contributions from around 450 developers from leading organizations such as BBC R&amp;D, Blizzard Entertainment, Canonical, Ericsson, Mirantis, NVIDIA, and others. Together, they’ve delivered more than 7,600 changes, including new features and significant maintenance updates. This release also comes as the OpenStack community celebrates its 15th anniversary, a testament to its continued relevance and importance in the cloud computing world.</p>
+
+
+
+<h3>Strengthening OpenStack’s Position as a VMware Alternative</h3>
+
+
+
+<p>Broadcom’s acquisition of VMware and subsequent licensing changes have incentivized organizations around the world to re-evaluate their virtualization strategy. <a href="https://www.openstack.org/vmware-migration-to-openstack">OpenStack has emerged as a leading VMware alternative</a>, and the upstream community is evolving OpenStack to address this market opportunity. One of the standout features of OpenStack Epoxy is the enhanced VMware migration capabilities, especially through the integration of Prometheus within the Watcher project. Watcher is a component of OpenStack designed to optimize resource allocation. With the addition of a Prometheus data source, OpenStack can now more effectively monitor existing VMware infrastructures, making it easier to track performance and detect bottlenecks during migration. This feature is invaluable for businesses looking to migrate from VMware to OpenStack, as it ensures a smooth transition without performance degradation.</p>
+
+
+
+<p>Additionally, Epoxy introduces improved support for a range of storage solutions through the Cinder project. Cinder, OpenStack’s block storage service, now includes updates for many supported hardware drivers, such as NetApp, Pure Storage, and Hitachi. These improvements help organizations that rely on specific storage solutions to migrate their workloads to OpenStack more easily. After migration, the compatibility between OpenStack and existing storage infrastructures ensures seamless data access, reducing the risks associated with switching to a new platform.</p>
+
+
+
+<h3>Enhancing Security Features</h3>
+
+
+
+<p>Security remains a top priority in the Epoxy release. A significant upgrade comes to Manila, OpenStack’s shared file system service. In Epoxy, Manila users can now modify the access level of share access rules, switching from &#8220;read-only&#8221; to &#8220;read-write&#8221; or vice versa. This gives administrators greater control over who can modify and access shared data, improving the overall security of the cloud environment by reducing the risk of unauthorized changes.</p>
+
+
+
+<p>Additionally, Manila users can now set and modify share server characteristics through share network subnet metadata. This feature allows administrators to define permissible modifications through a configuration option called <code>driver_updatable_subnet_metadata</code>. The result is improved network isolation and segmentation, reducing the risk of lateral movement in case of a security breach. By ensuring that different data sets are isolated on separate subnets, the security of the network is significantly enhanced.</p>
+
+
+
+<p>Another noteworthy security feature comes to Octavia, OpenStack&#8217;s load balancing service. In this release, Octavia now supports custom neutron security groups for load balancer VIP (Virtual IP) ports. By associating specific security groups with VIP ports, administrators can ensure that only approved traffic types are allowed to access the load balancer, further reducing the risk of unauthorized access.</p>
+
+
+
+<h3>Improving Hardware Enablement</h3>
+
+
+
+<p>OpenStack Epoxy also brings important hardware enablement updates, particularly in support of AI and machine learning workloads. One of the key improvements is the addition of a new interface in Ironic, OpenStack&#8217;s bare-metal provisioning service. This interface allows for the deployment of bootable container images directly to a host without intermediate steps, simplifying the deployment process for operators and users alike.</p>
+
+
+
+<p>Another significant update comes in Nova, OpenStack&#8217;s compute service, with improvements to PCI passthrough. PCI passthrough allows virtual machines to access physical hardware devices directly, and the Epoxy release expands support for the vfio-PCI variant drivers, including Nvidia GRID on Ubuntu 24.04. This enhancement ensures that OpenStack can more effectively support AI workloads by allowing for the direct use of GPUs and other specialized hardware in virtualized environments. Additionally, this update enables live migration of instances using these PCI devices, further improving the flexibility and scalability of OpenStack environments.</p>
+
+
+
+<h3>Simplifying OpenStack Upgrades</h3>
+
+
+
+<p>The OpenStack community continues to focus on simplifying the upgrade process for users. The <a href="https://docs.openstack.org/project-team-guide/release-cadence-adjustment.html">Skip Level Upgrade Release Process (SLURP)</a>, introduced in 2022, allows users to upgrade to the next major release every year rather than every six months. This release cycle simplifies the process for administrators, reducing the frequency of major updates while still delivering new features and security patches. The Epoxy release (2025.1) follows the previous SLURP release (2024.1 Caracal), making it easy for organizations to upgrade directly from one release to the next without worrying about incremental updates.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://releases.openstack.org/"><img loading="lazy" width="1024" height="516" src="https://www.openstack.org/blog/wp-content/uploads/2025/04/image-1024x516.png" alt="" class="wp-image-9789" srcset="https://www.openstack.org/blog/wp-content/uploads/2025/04/image-1024x516.png 1024w, https://www.openstack.org/blog/wp-content/uploads/2025/04/image-300x151.png 300w, https://www.openstack.org/blog/wp-content/uploads/2025/04/image-768x387.png 768w, https://www.openstack.org/blog/wp-content/uploads/2025/04/image-1536x774.png 1536w, https://www.openstack.org/blog/wp-content/uploads/2025/04/image.png 1584w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+
+
+<p>With enhanced migration tools, improved hardware support, and robust security features, OpenStack continues to evolve to meet the needs of modern cloud environments. The contributions from hundreds of developers and the continued growth of the OpenStack community underscore its importance in the future of cloud computing. Whether you are migrating from VMware or seeking to enhance the security and flexibility of your cloud infrastructure, OpenStack Epoxy is a release worth exploring.</p>
+						</section> <!-- end article section -->
+						
+						<div>
+			
+							<p class="tags"></p>
+							
+						</div> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+						
+					
+											
+						<ul class="pagination"><li class="disabled"><a href="#">&larr; Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="https://www.openstack.org/blog/page/2/">2</a></li><li><a href="https://www.openstack.org/blog/page/3/">3</a></li><li><a href="https://www.openstack.org/blog/page/4/">4</a></li><li><a href="https://www.openstack.org/blog/page/5/">5</a></li><li><a href="https://www.openstack.org/blog/page/6/">6</a></li><li><a href="https://www.openstack.org/blog/page/7/">7</a></li><li class=""><a href="https://www.openstack.org/blog/page/2/" >Next &rarr;</a></li><li class="next"><a href="https://www.openstack.org/blog/page/94/" title="Last">&raquo;</a></li></ul>						
+							
+					
+								
+				</div> <!-- end #main -->
+    
+							<div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
+				<div id="sidebar1" role="complementary">
+<div id="sidebar">
+
+	<h3>Stay Involved</h3>
+	
+	<div class="socialMedia">
+
+                            <div class="LinkedIn">
+
+                            <p><a href="https://www.linkedin.com/company/openstack">LinkedIn</a></p>
+
+                        </div>
+
+                        <div class="X">
+
+                            <p><a href="http://x.com/openstack/">X</a></p>
+
+                        </div>
+
+                            <div class="Bluesky">
+
+                            <p><a href="https://bsky.app/profile/openstack.org">Bluesky</a></p>
+
+                        </div>
+
+                            <div class="Mastadon">
+
+                            <p><a href="https://social.openinfra.dev/@OpenStack">Mastodon</a></p>
+
+                        </div>
+
+				    <div class="ML">
+					<h4><a href="https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/">OpenStack-discuss Mailing List </a></h4>
+				    </div>
+				    
+		<div class="irc">
+			<h4><a href="https://docs.openstack.org/contributors/common/irc.html">IRC Channel Info</a></h4>
+		</div>
+				    
+	</div>
+
+
+					
+					
+
+
+					<h3>New Entries</h3>
+										<ul>
+						<li><a href='https://www.openstack.org/blog/open-source-for-the-ai-era-openstack-sessions-you-cant-miss-at-kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china-2026/'>Open Source for the AI Era: OpenStack Sessions You Can&#8217;t Miss at KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China 2026</a></li><li><a href='https://www.openstack.org/blog/ovs-and-ovn-explained-the-networking-stack-behind-openstack/'>OVS and OVN Explained: The Networking Stack Behind OpenStack</a></li><li><a href='https://www.openstack.org/blog/april-2026-ptg-recap-the-road-from-gazpacho-to-hibiscus/'>April 2026 PTG Recap: The Road from Gazpacho to Hibiscus</a></li><li><a href='https://www.openstack.org/blog/openstack-gazpacho-built-by-a-global-community-designed-for-real-world-infrastructure/'>OpenStack Gazpacho: Built by a Global Community, Designed for Real-World Infrastructure</a></li><li><a href='https://www.openstack.org/blog/exploring-openstack-at-openinfra-summit-europe-2025/'>Exploring OpenStack at OpenInfra Summit Europe 2025</a></li><li><a href='https://www.openstack.org/blog/openstack-resurgence-how-vmwares-licensing-rugpull-is-encouraging-a-second-look/'>OpenStack Resurgence: How VMware&#8217;s Licensing Rugpull is Encouraging a Second Look</a></li><li><a href='https://www.openstack.org/blog/students-of-openstack-meet-oria-weng/'>Students of OpenStack: Meet Oria Weng!</a></li><li><a href='https://www.openstack.org/blog/students-of-openstack-meet-boosung-kim/'>Students of OpenStack: Meet Boosung Kim!</a></li><li><a href='https://www.openstack.org/blog/openstack-at-the-april-2025-ptg-all-things-epoxy-flamingo/'>OpenStack at the April 2025 PTG: All Things &#8216;Epoxy&#8217; &amp; &#8216;Flamingo&#8217;</a></li><li><a href='https://www.openstack.org/blog/openstack-2025-1-epoxy-strengthening-openstacks-position-as-a-vmware-alternative-and-enhancing-security-and-hardware-enablement/'>OpenStack 2025.1 Epoxy: Strengthening OpenStack&#8217;s Position as a VMware Alternative and Enhancing Security and Hardware Enablement</a></li>					</ul>
+
+				
+
+				<h3>Categories</h3>
+				<ul>
+						<li class="cat-item cat-item-223"><a href="https://www.openstack.org/blog/category/awards/">Awards</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://www.openstack.org/blog/category/communication/">Communication</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://www.openstack.org/blog/category/community/">community</a>
+</li>
+	<li class="cat-item cat-item-234"><a href="https://www.openstack.org/blog/category/contest/">Contest</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://www.openstack.org/blog/category/development/">Development</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://www.openstack.org/blog/category/documentation/">Documentation</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="https://www.openstack.org/blog/category/event/">Event</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://www.openstack.org/blog/category/governance/">Governance</a>
+</li>
+	<li class="cat-item cat-item-65"><a href="https://www.openstack.org/blog/category/measurement/">Measurement</a>
+</li>
+	<li class="cat-item cat-item-59"><a href="https://www.openstack.org/blog/category/meetup/">Meetup</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.openstack.org/blog/category/newsletter/">Newsletter</a>
+</li>
+	<li class="cat-item cat-item-474"><a href="https://www.openstack.org/blog/category/open-mic/">Open Mic</a>
+</li>
+	<li class="cat-item cat-item-435"><a href="https://www.openstack.org/blog/category/openstack-update/">OpenStack Update</a>
+</li>
+	<li class="cat-item cat-item-60"><a href="https://www.openstack.org/blog/category/partner/">Partner</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://www.openstack.org/blog/category/press-release/">Press Release</a>
+</li>
+	<li class="cat-item cat-item-564"><a href="https://www.openstack.org/blog/category/community/students-of-openstack/">Students of OpenStack</a>
+</li>
+	<li class="cat-item cat-item-450"><a href="https://www.openstack.org/blog/category/summit-2/">Summit</a>
+</li>
+	<li class="cat-item cat-item-508"><a href="https://www.openstack.org/blog/category/technical-committee-updates/">Technical Committee Updates</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.openstack.org/blog/category/tools/">Tools</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.openstack.org/blog/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://www.openstack.org/blog/category/video/">Video</a>
+</li>
+	<li class="cat-item cat-item-162"><a href="https://www.openstack.org/blog/category/webinar/">Webinar</a>
+</li>
+	<li class="cat-item cat-item-258"><a href="https://www.openstack.org/blog/category/website/">Website</a>
+</li>
+	<li class="cat-item cat-item-445"><a href="https://www.openstack.org/blog/category/women-of-openstack/">Women of OpenStack</a>
+</li>
+				</ul>
+
+				<h3>Syndication (RSS)</h3>
+				<ul>
+					<li><a href="https://www.openstack.org/blog/feed/">RSS 2.0 Entries</a></li>
+				</ul>
+
+					<div class="creative-commons">
+						<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+							<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"/>
+						</a>
+						<br/>The OpenStack blog is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons 3.0 License</a>.
+		            </div>
+
+				
+
+
+				
+				</div>
+			</div>
+    
+			</div> <!-- end #content -->
+
+    </div>
+    <!-- Footer -->
+    <!-- Photo Row -->
+    <div class="photo-row-wrapper">
+        <div class="photo-container">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo1.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo3.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo2.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo4.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo5.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo6.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo7.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo8.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo1.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo3.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo2.jpg">
+            <img src="https://www.openstack.org/blog/wp-content/themes/wordpress-bootstrap-master/images/photo-row/photo1.jpg">
+        </div>
+    </div>
+
+        <footer>
+        <div class="container">
+            <div class="row footer-links">
+                <div class="col-lg-2 col-sm-2">
+                    <h3>OpenStack</h3>
+                    <ul>
+                        <li><a href="//openstack.org/software/project-navigator/">Projects</a></li>
+			<li><a href="//security.openstack.org/">Security</a></li>
+                        <li><a href="//openstack.org/software/">Software</a></li>
+                        <li><a href="http://openstack.org/blog/">Blog</a></li>
+                        <li><a href="//openstack.org/news/">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://www.meetup.com/pro/openinfradev/">User Groups</a></li>
+                        <li><a href="//openstack.org/community/events/">Events</a></li>
+                        <li><a href="//openstack.org/community/jobs/">Jobs</a></li>
+                        <li><a href="//openstack.org/foundation/companies/">Companies</a></li>
+                        <li><a href="http://docs.openstack.org/infra/manual/developers.html">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="http://docs.openstack.org">OpenStack Manuals</a></li>
+                        <li><a href="//openstack.org/software/start/">Getting Started</a></li>
+                        <li><a href="http://developer.openstack.org">API Documentation</a></li>
+                        <li><a href="https://wiki.openstack.org">Wiki</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h3>Branding & Legal</h3>
+                    <ul>
+                        <li><a href="//openstack.org/legal/">Legal Docs</a></li>
+                        <li><a href="//openstack.org/brand/">Logos & Guidelines</a></li>
+                        <li><a href="//openstack.org/brand/openstack-trademark-policy/">Trademark Policy</a></li>
+                        <li><a href="//openstack.org/privacy/">Privacy Policy</a></li>
+                        <li><a href="https://docs.openstack.org/contributors/common/setup-gerrit.html#individual-contributor-license-agreement">OpenStack CLA</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    <h3>Stay In Touch</h3>
+                    <a href="https://twitter.com/OpenStack" target="_blank"><i class="fa fa-twitter-square" style="font-size: 36px;color:#eaeaea;padding-right:10px;"></i></a>
+                    <a href="https://www.facebook.com/openinfradev/" target="_blank"><i class="fa fa-facebook-square" style="font-size: 36px;color:#eaeaea;padding-right:10px;"></i></a>
+                    <a href="https://www.linkedin.com/groups/3239106/" target="_blank"><i class="fa fa-linkedin" style="font-size: 36px;color:#eaeaea;padding-right:10px;"></i></a>
+                    <a href="https://www.youtube.com/user/OpenStackFoundation" target="_blank"><i class="fa fa-youtube-square" style="font-size: 36px;color:#eaeaea;padding-right:10px;"></i></a>
+                    <a href="" data-toggle="modal" data-target="#wechat-modal"><i style="font-size: 36px;color:#eaeaea;padding-right:10px;" class="fa fa-weixin"></i></a>
+                    <p class="fine-print">
+                        The OpenStack project is provided under the Apache 2.0 license. The project is supported by the <a href="https://openinfra.dev">Open Infrastructure Foundation (OpenInfra Foundation)</a>. Openstack.org is powered by <a href="https://vexxhost.com" target="_blank">VEXXHOST</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <form class="form-inline">
+              <div class="form-group">
+                <div>
+<!--                   <input class="feedback-input" type="input" placeholder="Give Us Your Feedback On This Page">
+                  <button type="submit" class="feedback-btn">Submit</button> -->
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+</html>

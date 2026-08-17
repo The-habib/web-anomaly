@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Nim programming language is a concise, fast programming language that compiles to C, C++ and JavaScript.">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/assets/img/logo_bw.png" />
+
+  
+  <title>Nim version 2.2.10 released - Nim Blog</title>
+  
+  <link rel="stylesheet" href="/assets/css/pure.min.css">
+  <link rel="stylesheet" href="/assets/css/pure-grids-responsive.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+  <link rel="stylesheet" href="/assets/css/highlight/github.css">
+  
+
+  <link rel="stylesheet" href="/assets/css/google-fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css?t=1777026017762506934">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48159761-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script defer data-domain="nim-lang.org" src="https://plausible.io/js/plausible.js"></script>
+
+  <meta name="twitter:title" content="Nim version 2.2.10 released">
+
+  
+  <meta name="twitter:description" content="The Nim Team is happy to announce version 2.2.10, the fifth patch release for our stable release, Nim 2.2.">
+  <meta property="og:description" content="The Nim Team is happy to announce version 2.2.10, the fifth patch release for our stable release, Nim 2.2.">
+  
+
+  <meta name="twitter:site" content="@nim_lang">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nim-lang.org/assets/img/twitter_banner.png">
+
+  <meta property="og:title" content="Nim version 2.2.10 released" />
+  <meta property="og:site_name" content="Nim Programming Language" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nim-lang.org/assets/img/twitter_banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:alt" content="Nim Programming Language" />
+</head>
+
+  <body class="site">
+    <header>
+  <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+    <div class="nav-content">
+      <a href="/" class="pure-menu-heading pure-menu-link site-logo-container">
+        <img class="site-logo" src="/assets/img/logo.svg" height="28" alt="Nim">
+      </a>
+      <ul class="pure-menu-list">
+        
+        <li class="pure-menu-item">
+          <a href="/blog.html"
+             class="pure-menu-link current">
+            Blog
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/features.html"
+             class="pure-menu-link ">
+            Features
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/install.html"
+             class="pure-menu-link ">
+            Download
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/documentation.html"
+             class="pure-menu-link ">
+            Documentation
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="https://forum.nim-lang.org"
+             class="pure-menu-link ">
+            Forum
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/donate.html"
+             class="pure-menu-link ">
+            Donate
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://github.com/nim-lang/Nim">Source</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-fade"></div>
+  </nav>
+</header>
+
+    <div class="site-content post-page">
+      <div class="content">
+        <div class="width-reduced">
+          <h1 class="post-title">
+            Nim version 2.2.10 released
+          </h1>
+          <h3 class="post-meta">
+            <span>
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              24 April 2026
+            </span>
+            
+            <span>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              The Nim Team
+            </span>
+            
+          </h3>
+          <p>The Nim Team is happy to announce version 2.2.10, the fifth patch release for our stable release, Nim 2.2.</p>
+
+<p>It comes two months after the 2.2.8 release and it contains <a href="https://github.com/nim-lang/Nim/compare/v2.2.8...v2.2.10">76 commits</a>, bringing bugfixes and improvements.</p>
+
+<p>If you’re still on Nim 1.6, take a look at the <a href="https://nim-lang.org/blog/2023/08/01/nim-v20-released.html">version 2.0 release article</a> to see all the features you’re missing.
+If you’ve been using Nim 2.0, the <a href="https://nim-lang.org/blog/2024/10/02/nim-220-2010.html">version 2.2 release article</a> shows the improvements available in Nim 2.2.</p>
+
+<p>The Nim 2.2.10 changelog is available <a href="https://github.com/nim-lang/Nim/blob/v2.2.10/changelog.md">here</a>.</p>
+
+<h2 id="nimconf-2026">NimConf 2026</h2>
+
+<p>We would like to remind you about <a href="https://conf.nim-lang.org">NimConf 2026</a>.
+If you have anything you would like to share with the Nim community, you have two more weeks (until May 10th) to <a href="https://forms.gle/iw3hkBKkhuP2d4Dt8">submit your talk proposal</a>.
+More details available <a href="https://nim-lang.org/blog/2026/04/07/nimconf-2026.html">here</a>.</p>
+
+<h2 id="installing-nim-2210">Installing Nim 2.2.10</h2>
+
+<p>Check out if the package manager of your OS already ships version 2.2.10 or
+install it as described <a href="https://nim-lang.org/install.html">here</a>.</p>
+
+<p>If you have installed a previous version of Nim using <code class="highlighter-rouge">choosenim</code>,
+getting Nim 2.2.10 is as easy as:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>choosenim update self
+<span class="gp">$ </span>choosenim update stable
+</code></pre>
+</div>
+
+<p><strong>NOTE:</strong> We recommend that you install and use the latest version of <code class="highlighter-rouge">choosenim</code>, v0.8.16, available in <a href="https://github.com/nim-lang/choosenim">our choosenim repo</a>.</p>
+
+<p>Alternatively, you can download Nim 2.2.10 from
+<a href="https://github.com/nim-lang/nightlies/releases/tag/2026-04-24-version-2-2-bfeb3146d1638b39f69007a4ae5a23e23ae4e5ef">our nightlies builds</a>.</p>
+
+<h2 id="bugfixes">Bugfixes</h2>
+
+<ul>
+  <li>Fixed “<code class="highlighter-rouge">new</code> doesn’t work with <code class="highlighter-rouge">ref object</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25005">#25005</a>)</li>
+  <li>Fixed “Switch default mangling back to cpp”
+(<a href="https://github.com/nim-lang/Nim/issues/25338">#25338</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">unhandled exception: field 'sym' is not accessible</code> with <code class="highlighter-rouge">type W[N] = seq[tuple[b: N]]</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25509">#25509</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">proc f(x: static[auto])</code> doesn’t treat <code class="highlighter-rouge">x</code> as <code class="highlighter-rouge">static</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/21281">#21281</a>)</li>
+  <li>Fixed “Invalid codegen for accessing tuple in array”
+(<a href="https://github.com/nim-lang/Nim/issues/25553">#25553</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">proc v[T: typedesc]() = discard</code> / <code class="highlighter-rouge">v[0]()</code> compiles even though <code class="highlighter-rouge">0</code> isn’t a <code class="highlighter-rouge">typedesc</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25262">#25262</a>)</li>
+  <li>Fixed “ICE evaluating closure iter with object conversion”
+(<a href="https://github.com/nim-lang/Nim/issues/25572">#25572</a>)</li>
+  <li>Fixed “Regression from v2.2.6 to v2.2.8 and also <code class="highlighter-rouge">devel</code> in refc <code class="highlighter-rouge"><span class="p">{</span><span class="err">.align.</span><span class="p">}</span></code> pragma where each 16-byte-aligned heap objects gets its own page”
+(<a href="https://github.com/nim-lang/Nim/issues/25566">#25566</a>)</li>
+  <li>Fixed “Nim v2.2.x ORC adds extra <code class="highlighter-rouge">nimZeroMem</code>/<code class="highlighter-rouge">nimCopyMem</code>/stack usage over refc”
+(<a href="https://github.com/nim-lang/Nim/issues/25552">#25552</a>)</li>
+  <li>Fixed “Regression from 2.0 to <code class="highlighter-rouge">version-2-2</code>/<code class="highlighter-rouge">devel</code> with <code class="highlighter-rouge">refc</code>, LTO and <code class="highlighter-rouge">-fstack-usage</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/24746">#24746</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">internal error: getTypeDescAux(tyVoid)</code> with either <code class="highlighter-rouge">discard default(tuple[b: void])</code> or <code class="highlighter-rouge">discard default((void,))</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25508">#25508</a>)</li>
+  <li>Fixed “parseFloat/parseBiggestFloat lose sign of <code class="highlighter-rouge">-NaN</code> (signbit is negative)”
+(<a href="https://github.com/nim-lang/Nim/issues/25597">#25597</a>)</li>
+  <li>Fixed “ARC/ORC SIGSEGV with captured variables and closure iterators in <code class="highlighter-rouge">reset</code>/<code class="highlighter-rouge">nimDecRefIsLastCyclicStatic</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25596">#25596</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">discard mapIt([0], 0)</code> results in <code class="highlighter-rouge">lib/pure/collections/sequtils.nim(1095, 11) Hint: 'it' is declared but not used [XDeclaredButNotUsed]</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25626">#25626</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">proc r(_: typedesc, _: static uint | static int) = discard; r(uint, 0)</code> causes <code class="highlighter-rouge">cannot generate code for: mStatic</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25642">#25642</a>)</li>
+  <li>Fixed “two overflowed <code class="highlighter-rouge">*=</code> causes program deadloop <code class="highlighter-rouge">sysFatal</code> on –exceptions:goto”
+(<a href="https://github.com/nim-lang/Nim/issues/25658">#25658</a>)</li>
+  <li>Fixed “commands: –maxLoopIterationsVM validation used wrong condition (not/bind precedence)”
+(<a href="https://github.com/nim-lang/Nim/issues/25671">#25671</a>)</li>
+  <li>Fixed “docgen: cmpDecimalsIgnoreCase uses wrong index in max() for digit window”
+(<a href="https://github.com/nim-lang/Nim/issues/25670">#25670</a>)</li>
+  <li>Fixed “parsecfg: IndexDefect in replace() when value ends with ‘\c’”
+(<a href="https://github.com/nim-lang/Nim/issues/25674">#25674</a>)</li>
+  <li>Fixed “Regression: object with self-referential lent proc field fails to compile”
+(<a href="https://github.com/nim-lang/Nim/issues/25677">#25677</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">proc g() {.exportc, error: "".} = (; let a = 0)</code> causes <code class="highlighter-rouge">Error: internal error: expr(nkIdent); unknown node kind</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25632">#25632</a>)</li>
+  <li>Fixed “Doc comment makes nimvm ignore assignment through template”
+(<a href="https://github.com/nim-lang/Nim/issues/25682">#25682</a>)</li>
+  <li>Fixed “orc: seq assignment slow”
+(<a href="https://github.com/nim-lang/Nim/issues/25687">#25687</a>)</li>
+  <li>Fixed “Regression from v2.2.6 to v2.2.8 and also <code class="highlighter-rouge">devel</code> in refc <code class="highlighter-rouge"><span class="p">{</span><span class="err">.align.</span><span class="p">}</span></code> pragma where each 32-byte-aligned heap objects gets its own page”
+(<a href="https://github.com/nim-lang/Nim/issues/25577">#25577</a>)</li>
+  <li>Fixed “nimsuggest –v3 and –v4 “outline” output does not list methods”
+(<a href="https://github.com/nim-lang/Nim/issues/25710">#25710</a>)</li>
+  <li>Fixed “{.borrow.} on iterator for distinct seq triggers internal error”
+(<a href="https://github.com/nim-lang/Nim/issues/25697">#25697</a>)</li>
+  <li>Fixed “template with overload redefines proc”
+(<a href="https://github.com/nim-lang/Nim/issues/25290">#25290</a>)</li>
+  <li>Fixed “Invalid C code generation with <code class="highlighter-rouge">iterator</code>/<code class="highlighter-rouge">nimvm</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25724">#25724</a>)</li>
+  <li>Fixed “std/parseopt no longer support <code class="highlighter-rouge">-</code> when shortNoVal is given”
+(<a href="https://github.com/nim-lang/Nim/issues/25738">#25738</a>)</li>
+  <li>Fixed “Using sum types with module specifiers typechecks inconsistently”
+(<a href="https://github.com/nim-lang/Nim/issues/18095">#18095</a>)</li>
+  <li>Fixed “Conversion from distinct in <code class="highlighter-rouge">for</code> forces a copy of underlying instance”
+(<a href="https://github.com/nim-lang/Nim/issues/25469">#25469</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">static: (for f in [0]: discard a.b == f)</code> causes <code class="highlighter-rouge">nim check</code> <code class="highlighter-rouge">unhandled exception: field 'intVal' is not accessible for type 'TFullReg' using 'kind = rkNone' [FieldDefect]</code>”
+(<a href="https://github.com/nim-lang/Nim/issues/25732">#25732</a>)</li>
+  <li>Fixed “JS backend crashes when returning Option[T] with custom =destroy”
+(<a href="https://github.com/nim-lang/Nim/issues/25751">#25751</a>)</li>
+  <li>Fixed “<code class="highlighter-rouge">setLenUnit</code> slow, actually initializes seq (refc)”
+(<a href="https://github.com/nim-lang/Nim/issues/25718">#25718</a>)</li>
+  <li>Fixed “Stack overflow/materialization-based segfault in refc and ORC with large object initialization and heap assignment”
+(<a href="https://github.com/nim-lang/Nim/issues/25695">#25695</a>)</li>
+</ul>
+
+<p>The complete list of changes is available <a href="https://github.com/nim-lang/Nim/compare/v2.2.8...v2.2.10">here</a>.</p>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+  <section class="content">
+    <div class="pure-g">
+      <div class="copyright pure-u-2-3">
+        <p>
+          Unless otherwise stated, the content of this page is
+          licensed under the
+          <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
+          license.
+          Code displayed on this website is MIT licensed.
+        </p>
+        <p>
+          This website is available on
+          <a href="https://github.com/nim-lang/website">GitHub</a>
+          and contributions are welcome.
+          Original website design by
+          <a href="https://github.com/dom96">Dominik Picheta</a> and
+          <a href="https://github.com/Calinou">Hugo Locurcio</a>.
+          Logo by <a href="https://github.com/josephwecker">Joseph Wecker</a>.
+        </p>
+      </div>
+      <div class="pure-u-1-3 right-center">
+        <a href="https://m.do.co/c/637ab907c7f4"><img src="/assets/img/do.png"/></a>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<script>
+    (function(){
+      function setTracking(a) {
+        var url = a.href;
+        a.onclick = function() {
+          if (typeof(ga) !== "undefined") {
+            ga('send', 'event', 'outbound', 'click', url, {
+              'transport': 'beacon',
+              'hitCallback': function(){document.location = url;}
+            });
+          }
+        };
+      }
+
+      var a = document.getElementsByTagName("a");
+      for (var i = 0; i < a.length; ++i) {
+        if (a[i].hostname != location.hostname &&
+            a[i].getAttribute("target") !== "_blank"
+        ) {
+          setTracking(a[i])
+        }
+      }
+    })();
+</script>
+
+  </div>
+  </body>
+</html>

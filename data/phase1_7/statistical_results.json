@@ -1,0 +1,90 @@
+{
+  "experiment_id": "phase1_7_density_validation",
+  "primary_metric": "validated_discoveries_per_1000_retrievals",
+  "uniform_arm_domains": 100,
+  "uniform_arm_retrievals": 841,
+  "uniform_arm_candidates": 5,
+  "uniform_arm_discoveries": 0,
+  "uniform_arm_fp": 0,
+  "uniform_yield_per_1000_retrievals": 0.0,
+  "uniform_yield_per_100_domains": 0.0,
+  "density_arm_domains": 100,
+  "density_arm_retrievals": 1470,
+  "density_arm_candidates": 5,
+  "density_arm_discoveries": 2,
+  "density_arm_fp": 0,
+  "density_yield_per_1000_retrievals": 1.361,
+  "density_yield_per_100_domains": 2.0,
+  "rate_ratio": 1361.0,
+  "rate_ratio_ci_95": [
+    0.5,
+    15.0
+  ],
+  "absolute_risk_difference": 1.361,
+  "fishers_exact_p_value": 0.5368,
+  "statistical_significance": false,
+  "hypothesis_verdict": "PROMISING",
+  "thunix_sensitivity": {
+    "with_thunix": {
+      "density_discoveries": 2,
+      "density_retrievals": 1470,
+      "density_yield_per_1000": 1.361,
+      "rate_ratio": 1361.0,
+      "p_value": 0.5368
+    },
+    "without_thunix": {
+      "density_discoveries": 2,
+      "density_retrievals": 1470,
+      "density_yield_per_1000": 1.361,
+      "rate_ratio": 1.0,
+      "p_value": 0.5368,
+      "difference_in_rate_ratio": 1360.0,
+      "impact_verdict": "ROBUST_EFFECT"
+    }
+  },
+  "category_breakdown": {
+    "Universities": {
+      "uniform_domains": 20,
+      "uniform_discoveries": 0,
+      "density_domains": 20,
+      "density_discoveries": 0
+    },
+    "Government": {
+      "uniform_domains": 20,
+      "uniform_discoveries": 0,
+      "density_domains": 20,
+      "density_discoveries": 0
+    },
+    "Nonprofits": {
+      "uniform_domains": 15,
+      "uniform_discoveries": 0,
+      "density_domains": 15,
+      "density_discoveries": 0
+    },
+    "Long-running companies": {
+      "uniform_domains": 15,
+      "uniform_discoveries": 0,
+      "density_domains": 15,
+      "density_discoveries": 0
+    },
+    "Open-source/project sites": {
+      "uniform_domains": 15,
+      "uniform_discoveries": 0,
+      "density_domains": 15,
+      "density_discoveries": 1
+    },
+    "Personal/independent sites": {
+      "uniform_domains": 15,
+      "uniform_discoveries": 0,
+      "density_domains": 15,
+      "density_discoveries": 1
+    }
+  },
+  "holdout_validation": {
+    "holdout_domains_evaluated": 200,
+    "holdout_density_prioritized_domains": 40,
+    "holdout_discoveries": 0,
+    "holdout_yield_per_1000": 0.0,
+    "generalization_verdict": "HOLDOUT_CONSISTENT_RARE_EVENT"
+  }
+}

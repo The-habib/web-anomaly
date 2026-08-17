@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SSI: CSS+JS inline for speed -->
+  <!-- INLINED-HEAD-BEGIN -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #aaa;
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popovers-popover-box-shadow-color: #aaa;
+
+    --GW-popovers-popover-title-bar-background-color: #fff;
+    --GW-popovers-popover-title-bar-button-color: #777;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #ccc;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #999;
+
+    --GW-popovers-popover-stack-counter-text-color: #fff;
+    --GW-popovers-popover-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #7c7c7c;
+    --GW-popovers-popover-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popovers-popover-box-shadow-color: #7c7c7c;
+
+    --GW-popovers-popover-title-bar-background-color: #000;
+    --GW-popovers-popover-title-bar-button-color: #a6a6a6;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #5c5c5c;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popovers-popover-stack-counter-text-color: #000;
+    --GW-popovers-popover-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popovers-popover-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+.poem span.caesura-mark {
+	opacity: 0.30;
+}
+@media all and (max-width: 649px) {
+	.poem span.caesura-mark {
+		opacity: 0.35;
+	}
+}
+
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1786427108">
+<script src="/static/js/head.js?v=1786427108"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1785906347" as="image">
+
+  <!-- INLINED-HEAD-END -->
+
+  
+  <!-- Google Webmaster requires this tag, but only on the index/homepage -->
+  <meta name="google-site-verification" content="BOhOQI1uMfsqu_DopVApovk1mJD5ZBLfan0s9go3phk">
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="‘Johan Bjorksten (aging)’ directory">
+  <meta name="citation_title" content="‘Johan Bjorksten (aging)’ directory">
+  <meta name="og:title" content="‘Johan Bjorksten (aging)’ directory">
+  <meta name="twitter:title" content="‘Johan Bjorksten (aging)’ directory">
+  <meta name="generator" content="Hakyll">
+  <link rel="repository" href="https://github.com/gwern/gwern.net/">
+  <link rel="bug-tracker" href="https://github.com/gwern/gwern.net/issues">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="Bibliography for directory 𝚕𝚘𝚗𝚐𝚎𝚟𝚒𝚝𝚢/𝚓𝚘𝚑𝚊𝚗-𝚋𝚓𝚘𝚛𝚔𝚜𝚝𝚎𝚗, most recent first: 28 annotations &amp; 2 links (parent).">
+  <meta name="og:description" content="Bibliography for directory 𝚕𝚘𝚗𝚐𝚎𝚟𝚒𝚝𝚢/𝚓𝚘𝚑𝚊𝚗-𝚋𝚓𝚘𝚛𝚔𝚜𝚝𝚎𝚗, most recent first: 28 annotations &amp; 2 links (parent).">
+  <!-- <meta name="description-raw" content="Bibliography for directory <code>longevity/johan-bjorksten</code>, most recent first: 28 <a class='icon-not' href='/doc/longevity/johan-bjorksten/index#links'>annotations</a> &amp; 2 <a class='icon-not' href='/doc/longevity/johan-bjorksten/index#miscellaneous'>links</a> (<a href='/doc/longevity/index' class='link-page link-tag directory-indexes-upwards link-annotated' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to parent directory'>parent</a>)."> -->
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="">
+  <meta name="dc.date.issued" content="2020-03-17">
+  
+  <meta name="citation_publication_date" content="2020-03-17">
+  <meta name="dcterms.modified" content="2025-01-27">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/doc/longevity/johan-bjorksten/index">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/doc/longevity/johan-bjorksten/index">
+  <meta name="og:url" content="https://gwern.net/doc/longevity/johan-bjorksten/index">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/doc/longevity/johan-bjorksten/index.md" title="Markdown source of ‘‘Johan Bjorksten (aging)’ directory’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-doc-longevity-johan-bjorksten-index dropcaps-not">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>‘Johan Bjorksten (aging)’ directory · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+</head>
+
+<body class="page-doc-longevity-johan-bjorksten-index dropcaps-not">
+  <!-- SSI: Inlined asset links -->
+  <!-- INLINED-ASSET-LINKS-BEGIN-->
+  <link rel="stylesheet" href="/static/css/style.css?v=1786427108">
+<script src="/static/js/script.js?v=1786427108" defer></script>
+
+  <!-- INLINED-ASSET-LINKS-END -->
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <noscript>
+    <style>
+      #navbar { margin-top: 7em; }
+      @media all and (max-width: 649px) { #navbar { margin-top: 10em; } }
+    </style>
+    <div id="noscript-warning-header" class="markdownBody noscript-container">
+      <details open>
+        <summary><wbr></summary>
+        <div class="admonition error colors-invert">
+          <div class="admonition-title">
+            <p><strong>Warning:</strong> JavaScript Disabled!</p>
+          </div>
+          <p>For support of key <a href="/design" title="About: Gwern.net Design: principles, features, links, tricks">website features</a> (link annotation popups/popovers & transclusions, collapsible sections, backlinks, tablesorting, image zooming, <a href="/sidenote">sidenotes</a> etc.), you must enable JavaScript.</p>
+        </div>
+      </details>
+    </div>
+    </noscript>
+
+    <!-- SSI: Navbar -->
+    <!-- NAVBAR-BEGIN-->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="me link-page link-annotated" href="/me" title="Who am I online, what have I done, what am I like? Contact information; sites I use; things I've worked on" rel="author">Me</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/doc/newest/index" title="Most recent link annotations">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+    <!-- NAVBAR-END -->
+
+    <article>
+
+      <header>
+        <h1>‘Johan Bjorksten (aging)’ directory</h1>
+      </header>
+
+       
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#see-also" id="toc-see-also">See Also</a></li>
+<li><a href="#links" id="toc-links">Links</a>
+<ul>
+<li><a href="#dean-2014-section" id="toc-dean-2014-section">“Dr Ward Dean Q&amp;A [On Johan Bjorksten]”, Dean 2014</a></li>
+<li><a href="#darwin-2013-section" id="toc-darwin-2013-section">“[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [Historical Background on Johan Bjorksten]”, Darwin 2013</a></li>
+<li><a href="#bjorksten-tenhu-1990-section" id="toc-bjorksten-tenhu-1990-section">“The Crosslinking Theory of Aging—Added Evidence”, Bjorksten & Tenhu 1990</a></li>
+<li><a href="#bjorksten-1989-section" id="toc-bjorksten-1989-section">“The Role of Aluminum and Age-Dependent Decline”, Bjorksten 1989</a></li>
+<li><a href="#bjorksten-1987-section" id="toc-bjorksten-1987-section">“Longevity 2: Past, Present, Future”, Bjorksten 1987</a></li>
+<li><a href="#klonowska-klonowski-1986-section" id="toc-klonowska-klonowski-1986-section">“Aging, Alzheimer’s Disease and Protein Crosslinking”, Klonowska & Klonowski 1986</a></li>
+<li><a href="#bjorksten-et-al-1984-section" id="toc-bjorksten-et-al-1984-section">“Aging, Crosslinking and Alzheimer’s Disease”, Bjorksten et al 1984</a></li>
+<li><a href="#bjorksten-1982b-section" id="toc-bjorksten-1982b-section">“Aluminum As a Cause of Senile Dementia”, Bjorksten 1982b</a></li>
+<li><a href="#bjorksten-1982-section" id="toc-bjorksten-1982-section">“Dietary Aluminum and Alzheimer’s Disease”, Bjorksten 1982</a></li>
+<li><a href="#bjorksten-1981-1-section" id="toc-bjorksten-1981-1-section">“Selenium In Nutrition”, Bjorksten 1981</a></li>
+<li><a href="#bjorksten-1981-2-section" id="toc-bjorksten-1981-2-section">“Longevity: A Quest”, Bjorksten 1981</a></li>
+<li><a href="#bjorksten-1978-section" id="toc-bjorksten-1978-section">“A Unifying Concept for Degenerative Diseases”, Bjorksten 1978</a></li>
+<li><a href="#bjorksten-1977b-section" id="toc-bjorksten-1977b-section">“Pathways to the Decisive Extension of the Human Specific Lifespan”, Bjorksten 1977b</a></li>
+<li><a href="#bjorksten-1977-section" id="toc-bjorksten-1977-section">“Some Therapeutic Implications Of The Crosslinkage Theory Of Aging”, Bjorksten 1977</a></li>
+<li><a href="#bjorksten-1976-section" id="toc-bjorksten-1976-section">“The Crosslinkage Theory of Aging: Clinical Implications”, Bjorksten 1976</a></li>
+<li><a href="#bjorksten-et-al-1972-section" id="toc-bjorksten-et-al-1972-section">“Enzymatic Lysis in Vitro of Hyalin Deposits in Human Kidney”, Bjorksten et al 1972</a></li>
+<li><a href="#bjorksten-et-al-1971-section" id="toc-bjorksten-et-al-1971-section">“Gerogenic Fractions In The Tritiated Rat”, Bjorksten et al 1971</a></li>
+<li><a href="#bjorksten-1971b-section" id="toc-bjorksten-1971b-section">“Approaches And Prospects For The Control Of Age-Dependent Deterioration”, Bjorksten 1971b</a></li>
+<li><a href="#bjorksten-ashman-1970-section" id="toc-bjorksten-ashman-1970-section">“Nitrogenous Compounds Immobilized In An Aged Rat”, Bjorksten & Ashman 1970</a></li>
+<li><a href="#bjorksten-1968-section" id="toc-bjorksten-1968-section">“The Crosslinkage Theory Of Aging”, Bjorksten 1968</a></li>
+<li><a href="#andrews-et-al-1965-section" id="toc-andrews-et-al-1965-section">“The Reaction of an Autoxidized Lipid With Proteins”, Andrews et al 1965</a></li>
+<li><a href="#andrews-et-al-1965b-section" id="toc-andrews-et-al-1965b-section">“Chemical Composition Of Enzyme-Fractionated Aged Heart Tissue”, Andrews et al 1965b</a></li>
+<li><a href="#bjorksten-andrews-1960-section" id="toc-bjorksten-andrews-1960-section">“Fundamentals Of Aging: A Comparison Of The Mortality Curve For Humans With A Viscosity Curve Of Gelatin During The Cross-Linking Reaction”, Bjorksten & Andrews 1960</a></li>
+<li><a href="#bjorksten-1958-section" id="toc-bjorksten-1958-section">“A Common Molecular Basis For The Aging Syndrome”, Bjorksten 1958</a></li>
+<li><a href="#bjorksten-et-al-1956-section" id="toc-bjorksten-et-al-1956-section"><em>Polyesters and Their Applications</em>, Bjorksten et al 1956</a></li>
+<li><a href="#bjorksten-1951-section" id="toc-bjorksten-1951-section">“Cross Linkages in Protein Chemistry”, Bjorksten 1951</a></li>
+<li><a href="#bjorksten-1942-section" id="toc-bjorksten-1942-section">“The Chemistry of Duplication”, Bjorksten 1942</a></li>
+<li><a href="#_WiKwZ2KI-section" id="toc-_WiKwZ2KI-section">“Hectograph Printing, Duplication, Copying”</a></li>
+<li><a href="#sort-by-magic" id="toc-sort-by-magic">Sort By Magic</a>
+<ul>
+<li><a href="#nutritional-research" id="toc-nutritional-research"><code>nutritional-research</code></a></li>
+<li><a href="#aging-research" id="toc-aging-research"><code>aging-research</code></a></li>
+<li><a href="#crosslinking" id="toc-crosslinking"><code>crosslinking</code></a></li>
+</ul></li>
+<li><a href="#titled-links-wikipedia" id="toc-titled-links-wikipedia">Wikipedia (4)</a></li>
+</ul></li>
+<li><a href="#miscellaneous" id="toc-miscellaneous">Miscellaneous</a></li>
+<li><a href="#link-bibliography-section" id="toc-link-bibliography-section">Bibliography</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><section id="see-also" class="level1">
+<h1><a href="#see-also" title="Link to section: § &#39;See Also&#39;">See Also</a></h1>
+<div id="see-alsos" class="directory-indexes columns">
+<ul>
+<li><p><a href="/doc/longevity/index" id="_gDe1X0aE" class="prefetch-not link-page link-annotated link-tag directory-indexes-upwards" data-link-icon="arrow-up-left" data-link-icon-type="svg" rel="tag" title="Link to parent directory &#39;doc/longevity/&#39; (ascending)">Parent (‘<em>longevity</em>’ tag)</a></p></li>
+</ul>
+</div>
+</section>
+<section id="links" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#links" title="Link to section: § &#39;Links&#39;">Links</a></h1>
+<section id="dean-2014-section" class="level2">
+<h2><a href="#dean-2014-section" title="Link to section: § &#39;“Dr Ward Dean Q&amp;amp;A [On Johan Bjorksten]”, Dean 2014&#39;">“Dr Ward Dean Q&amp;A [On Johan Bjorksten]”, Dean 2014</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/2014-dean.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Dr Ward Dean Q&amp;A [on Johan Bjorksten]&#39;, Dean 2014">Dr Ward Dean Q&amp;A [on Johan Bjorksten]</a></strong></p>
+</section>
+<section id="darwin-2013-section" class="level2">
+<h2><a href="#darwin-2013-section" title="Link to section: § &#39;“[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [Historical Background on Johan Bjorksten]”, Darwin 2013&#39;">“[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [Historical Background on Johan Bjorksten]”, Darwin 2013</a></h2>
+<p><strong><a href="/doc/www/lists.extropy.org/45dceb8f1a4b3dd32d73b7f9e8c91e51e2325ee3.html" class="link-live link-annotated id-not include-annotation" data-url-archive="/doc/www/lists.extropy.org/45dceb8f1a4b3dd32d73b7f9e8c91e51e2325ee3.html" data-url-original="https://lists.extropy.org/pipermail/extropy-chat/2013-June/077787.html" title="&#39;[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [historical background on Johan Bjorksten]&#39;, Darwin 2013">[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [historical background on Johan Bjorksten]</a></strong></p>
+</section>
+<section id="bjorksten-tenhu-1990-section" class="level2">
+<h2><a href="#bjorksten-tenhu-1990-section" title="Link to section: § &#39;“The Crosslinking Theory of Aging—Added Evidence”, Bjorksten &amp; Tenhu 1990&#39;">“The Crosslinking Theory of Aging—Added Evidence”, Bjorksten & Tenhu 1990</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1990-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The crosslinking theory of aging—Added evidence&#39;, Bjorksten &amp; Tenhu 1990">The crosslinking theory of aging—Added evidence</a></strong></p>
+</section>
+<section id="bjorksten-1989-section" class="level2">
+<h2><a href="#bjorksten-1989-section" title="Link to section: § &#39;“The Role of Aluminum and Age-Dependent Decline”, Bjorksten 1989&#39;">“The Role of Aluminum and Age-Dependent Decline”, Bjorksten 1989</a></h2>
+<p><strong><a href="https://ehp.niehs.nih.gov/doi/pdf/10.1289/ehp.8981241" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The role of aluminum and age-dependent decline&#39;, Bjorksten 1989">The role of aluminum and age-dependent decline</a></strong></p>
+</section>
+<section id="bjorksten-1987-section" class="level2">
+<h2><a href="#bjorksten-1987-section" title="Link to section: § &#39;“Longevity 2: Past, Present, Future”, Bjorksten 1987&#39;">“Longevity 2: Past, Present, Future”, Bjorksten 1987</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1987-bjorksten-longevity2pastpresentfuture.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Longevity 2: Past, Present, Future&#39;, Bjorksten 1987">Longevity 2: Past, Present, Future</a></strong></p>
+</section>
+<section id="klonowska-klonowski-1986-section" class="level2">
+<h2><a href="#klonowska-klonowski-1986-section" title="Link to section: § &#39;“Aging, Alzheimer’s Disease and Protein Crosslinking”, Klonowska &amp; Klonowski 1986&#39;">“Aging, Alzheimer’s Disease and Protein Crosslinking”, Klonowska & Klonowski 1986</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1986-klonowska.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Aging, Alzheimer’s Disease and Protein Crosslinking&#39;, Klonowska &amp; Klonowski 1986">Aging, Alzheimer’s Disease and Protein Crosslinking</a></strong></p>
+</section>
+<section id="bjorksten-et-al-1984-section" class="level2">
+<h2><a href="#bjorksten-et-al-1984-section" title="Link to section: § &#39;“Aging, Crosslinking and Alzheimer’s Disease”, Bjorksten et al 1984&#39;">“Aging, Crosslinking and Alzheimer’s Disease”, Bjorksten et al 1984</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1984-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Aging, crosslinking and Alzheimer’s disease&#39;, Bjorksten et al 1984">Aging, crosslinking and Alzheimer’s disease</a></strong></p>
+</section>
+<section id="bjorksten-1982b-section" class="level2">
+<h2><a href="#bjorksten-1982b-section" title="Link to section: § &#39;“Aluminum As a Cause of Senile Dementia”, Bjorksten 1982b&#39;">“Aluminum As a Cause of Senile Dementia”, Bjorksten 1982b</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1982-bjorksten-2.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Aluminum as a Cause of Senile Dementia&#39;, Bjorksten 1982b">Aluminum as a Cause of Senile Dementia</a></strong></p>
+</section>
+<section id="bjorksten-1982-section" class="level2">
+<h2><a href="#bjorksten-1982-section" title="Link to section: § &#39;“Dietary Aluminum and Alzheimer’s Disease”, Bjorksten 1982&#39;">“Dietary Aluminum and Alzheimer’s Disease”, Bjorksten 1982</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1982-bjorksten.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Dietary aluminum and Alzheimer’s disease&#39;, Bjorksten 1982">Dietary aluminum and Alzheimer’s disease</a></strong></p>
+</section>
+<section id="bjorksten-1981-1-section" class="level2">
+<h2><a href="#bjorksten-1981-1-section" title="Link to section: § &#39;“Selenium In Nutrition”, Bjorksten 1981&#39;">“Selenium In Nutrition”, Bjorksten 1981</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1981-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Selenium In Nutrition&#39;, Bjorksten 1981">Selenium In Nutrition</a></strong></p>
+</section>
+<section id="bjorksten-1981-2-section" class="level2">
+<h2><a href="#bjorksten-1981-2-section" title="Link to section: § &#39;“Longevity: A Quest”, Bjorksten 1981&#39;">“Longevity: A Quest”, Bjorksten 1981</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1981-bjorksten-longevityaquest.pdf" class="prefetch-not link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Longevity: A Quest&#39;, Bjorksten 1981">Longevity: A Quest</a></strong></p>
+</section>
+<section id="bjorksten-1978-section" class="level2">
+<h2><a href="#bjorksten-1978-section" title="Link to section: § &#39;“A Unifying Concept for Degenerative Diseases”, Bjorksten 1978&#39;">“A Unifying Concept for Degenerative Diseases”, Bjorksten 1978</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1978-bjorksten.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;A Unifying Concept for Degenerative Diseases&#39;, Bjorksten 1978">A Unifying Concept for Degenerative Diseases</a></strong></p>
+</section>
+<section id="bjorksten-1977b-section" class="level2">
+<h2><a href="#bjorksten-1977b-section" title="Link to section: § &#39;“Pathways to the Decisive Extension of the Human Specific Lifespan”, Bjorksten 1977b&#39;">“Pathways to the Decisive Extension of the Human Specific Lifespan”, Bjorksten 1977b</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1977-bjorksten-2.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Pathways to the Decisive Extension of the Human Specific Lifespan&#39;, Bjorksten 1977b">Pathways to the Decisive Extension of the Human Specific Lifespan</a></strong></p>
+</section>
+<section id="bjorksten-1977-section" class="level2">
+<h2><a href="#bjorksten-1977-section" title="Link to section: § &#39;“Some Therapeutic Implications Of The Crosslinkage Theory Of Aging”, Bjorksten 1977&#39;">“Some Therapeutic Implications Of The Crosslinkage Theory Of Aging”, Bjorksten 1977</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1977-bjorksten.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Some Therapeutic Implications Of The Crosslinkage Theory Of Aging&#39;, Bjorksten 1977">Some Therapeutic Implications Of The Crosslinkage Theory Of Aging</a></strong></p>
+</section>
+<section id="bjorksten-1976-section" class="level2">
+<h2><a href="#bjorksten-1976-section" title="Link to section: § &#39;“The Crosslinkage Theory of Aging: Clinical Implications”, Bjorksten 1976&#39;">“The Crosslinkage Theory of Aging: Clinical Implications”, Bjorksten 1976</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1976-bjorksten.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The Crosslinkage Theory of Aging: Clinical Implications&#39;, Bjorksten 1976">The Crosslinkage Theory of Aging: Clinical Implications</a></strong></p>
+</section>
+<section id="bjorksten-et-al-1972-section" class="level2">
+<h2><a href="#bjorksten-et-al-1972-section" title="Link to section: § &#39;“Enzymatic Lysis in Vitro of Hyalin Deposits in Human Kidney”, Bjorksten et al 1972&#39;">“Enzymatic Lysis in Vitro of Hyalin Deposits in Human Kidney”, Bjorksten et al 1972</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1972-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Enzymatic Lysis in Vitro of Hyalin Deposits in Human Kidney&#39;, Bjorksten et al 1972">Enzymatic Lysis in Vitro of Hyalin Deposits in Human Kidney</a></strong></p>
+</section>
+<section id="bjorksten-et-al-1971-section" class="level2">
+<h2><a href="#bjorksten-et-al-1971-section" title="Link to section: § &#39;“Gerogenic Fractions In The Tritiated Rat”, Bjorksten et al 1971&#39;">“Gerogenic Fractions In The Tritiated Rat”, Bjorksten et al 1971</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1971-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Gerogenic Fractions In The Tritiated Rat&#39;, Bjorksten et al 1971">Gerogenic Fractions In The Tritiated Rat</a></strong></p>
+</section>
+<section id="bjorksten-1971b-section" class="level2">
+<h2><a href="#bjorksten-1971b-section" title="Link to section: § &#39;“Approaches And Prospects For The Control Of Age-Dependent Deterioration”, Bjorksten 1971b&#39;">“Approaches And Prospects For The Control Of Age-Dependent Deterioration”, Bjorksten 1971b</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1971-bjorksten-2.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Approaches And Prospects For The Control Of Age-Dependent Deterioration&#39;, Bjorksten 1971b">Approaches And Prospects For The Control Of Age-Dependent Deterioration</a></strong></p>
+</section>
+<section id="bjorksten-ashman-1970-section" class="level2">
+<h2><a href="#bjorksten-ashman-1970-section" title="Link to section: § &#39;“Nitrogenous Compounds Immobilized In An Aged Rat”, Bjorksten &amp; Ashman 1970&#39;">“Nitrogenous Compounds Immobilized In An Aged Rat”, Bjorksten & Ashman 1970</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1970-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Nitrogenous Compounds Immobilized In An Aged Rat&#39;, Bjorksten &amp; Ashman 1970">Nitrogenous Compounds Immobilized In An Aged Rat</a></strong></p>
+</section>
+<section id="bjorksten-1968-section" class="level2">
+<h2><a href="#bjorksten-1968-section" title="Link to section: § &#39;“The Crosslinkage Theory Of Aging”, Bjorksten 1968&#39;">“The Crosslinkage Theory Of Aging”, Bjorksten 1968</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1968-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The Crosslinkage Theory Of Aging&#39;, Bjorksten 1968">The Crosslinkage Theory Of Aging</a></strong></p>
+</section>
+<section id="andrews-et-al-1965-section" class="level2">
+<h2><a href="#andrews-et-al-1965-section" title="Link to section: § &#39;“The Reaction of an Autoxidized Lipid With Proteins”, Andrews et al 1965&#39;">“The Reaction of an Autoxidized Lipid With Proteins”, Andrews et al 1965</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1965-andrews.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The reaction of an autoxidized lipid with proteins&#39;, Andrews et al 1965">The reaction of an autoxidized lipid with proteins</a></strong></p>
+</section>
+<section id="andrews-et-al-1965b-section" class="level2">
+<h2><a href="#andrews-et-al-1965b-section" title="Link to section: § &#39;“Chemical Composition Of Enzyme-Fractionated Aged Heart Tissue”, Andrews et al 1965b&#39;">“Chemical Composition Of Enzyme-Fractionated Aged Heart Tissue”, Andrews et al 1965b</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1965-andrews-2.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Chemical Composition Of Enzyme-Fractionated Aged Heart Tissue&#39;, Andrews et al 1965b">Chemical Composition Of Enzyme-Fractionated Aged Heart Tissue</a></strong></p>
+</section>
+<section id="bjorksten-andrews-1960-section" class="level2">
+<h2><a href="#bjorksten-andrews-1960-section" title="Link to section: § &#39;“Fundamentals Of Aging: A Comparison Of The Mortality Curve For Humans With A Viscosity Curve Of Gelatin During The Cross-Linking Reaction”, Bjorksten &amp; Andrews 1960&#39;">“Fundamentals Of Aging: A Comparison Of The Mortality Curve For Humans With A Viscosity Curve Of Gelatin During The Cross-Linking Reaction”, Bjorksten & Andrews 1960</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1960-bjorksten.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Fundamentals Of Aging: A Comparison Of The Mortality Curve For Humans With A Viscosity Curve Of Gelatin During The Cross-Linking Reaction&#39;, Bjorksten &amp; Andrews 1960">Fundamentals Of Aging: A Comparison Of The Mortality Curve For Humans With A Viscosity Curve Of Gelatin During The Cross-Linking Reaction</a></strong></p>
+</section>
+<section id="bjorksten-1958-section" class="level2">
+<h2><a href="#bjorksten-1958-section" title="Link to section: § &#39;“A Common Molecular Basis For The Aging Syndrome”, Bjorksten 1958&#39;">“A Common Molecular Basis For The Aging Syndrome”, Bjorksten 1958</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1958-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;A Common Molecular Basis For The Aging Syndrome&#39;, Bjorksten 1958">A Common Molecular Basis For The Aging Syndrome</a></strong></p>
+</section>
+<section id="bjorksten-et-al-1956-section" class="level2">
+<h2><a href="#bjorksten-et-al-1956-section" title="Link to section: § &#39;Polyesters and Their Applications, Bjorksten et al 1956&#39;"><em>Polyesters and Their Applications</em>, Bjorksten et al 1956</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1956-bjorksten-polyestersandtheirapplications.pdf" class="prefetch-not link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;&lt;em&gt;Polyesters and their applications&lt;/em&gt;&#39;, Bjorksten et al 1956"><em>Polyesters and their applications</em></a></strong></p>
+</section>
+<section id="bjorksten-1951-section" class="level2">
+<h2><a href="#bjorksten-1951-section" title="Link to section: § &#39;“Cross Linkages in Protein Chemistry”, Bjorksten 1951&#39;">“Cross Linkages in Protein Chemistry”, Bjorksten 1951</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1951-bjorksten.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Cross Linkages in Protein Chemistry&#39;, Bjorksten 1951">Cross Linkages in Protein Chemistry</a></strong></p>
+</section>
+<section id="bjorksten-1942-section" class="level2">
+<h2><a href="#bjorksten-1942-section" title="Link to section: § &#39;“The Chemistry of Duplication”, Bjorksten 1942&#39;">“The Chemistry of Duplication”, Bjorksten 1942</a></h2>
+<p><strong><a href="/doc/longevity/johan-bjorksten/1942-bjorksten.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The Chemistry of Duplication&#39;, Bjorksten 1942">The Chemistry of Duplication</a></strong></p>
+</section>
+<section id="_WiKwZ2KI-section" class="level2">
+<h2><a href="#_WiKwZ2KI-section" title="Link to section: § &#39;“Hectograph Printing, Duplication, Copying”&#39;">“Hectograph Printing, Duplication, Copying”</a></h2>
+<p><strong><a href="/doc/www/www.britannica.com/1413f75cf0a9e0e646b6b127a58509fb66c997e8.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.britannica.com/1413f75cf0a9e0e646b6b127a58509fb66c997e8.html" data-url-original="https://www.britannica.com/technology/hectograph" title="Hectograph Printing, Duplication, Copying">Hectograph Printing, Duplication, Copying</a></strong></p>
+</section>
+<section id="sort-by-magic" class="level2">
+<h2><a href="#sort-by-magic" title="Link to section: § &#39;Sort By Magic&#39;">Sort By Magic</a></h2>
+<div data-demo-type="sort-by-magic-preface">
+<p>Annotations sorted by machine learning into <a href="/design#future-tag-features" id="gwern-design--future-tag-features" class="prefetch-not link-page link-annotated-partial">inferred 'tags'</a>. This provides an alternative way to browse: instead of by <em>date</em> order, one can browse in <em>topic</em> order. The 'sorted' list has been automatically clustered into multiple sections &amp; auto-labeled for easier browsing.</p>
+<p>Beginning with the newest annotation, it uses the embedding of each annotation to attempt to create a list of nearest-neighbor annotations, creating a progression of topics. For more details, see the link.</p>
+</div>
+<section id="nutritional-research" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#nutritional-research" title="Link to section: § &#39;nutritional-research&#39;"><code>nutritional-research</code></a></h3>
+<p><a href="#bjorksten-et-al-1972-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-1981-1-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+<section id="aging-research" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#aging-research" title="Link to section: § &#39;aging-research&#39;"><code>aging-research</code></a></h3>
+<p><a href="#bjorksten-1977b-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-1958-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#darwin-2013-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-et-al-1971-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-ashman-1970-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#andrews-et-al-1965b-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#andrews-et-al-1965-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+<section id="crosslinking" class="level3 collapse" title="Machine-generated tag name for the following cluster of links.">
+<h3 class="collapse" title="Machine-generated tag name for the following cluster of links."><a href="#crosslinking" title="Link to section: § &#39;crosslinking&#39;"><code>crosslinking</code></a></h3>
+<p><a href="#bjorksten-1951-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-1968-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-tenhu-1990-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-et-al-1984-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#klonowska-klonowski-1986-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-1989-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+<p><a href="#bjorksten-1982b-section" class="include include-even-when-collapsed">[see previous entry]</a></p>
+</section>
+</section>
+<section id="titled-links-wikipedia" class="level2 collapse">
+<h2 class="collapse"><a href="#titled-links-wikipedia" title="Link to section: § &#39;Wikipedia (4)&#39;">Wikipedia (4)</a></h2>
+<ol type="1">
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Bacillus_cereus" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Bacillus_cereus#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Bacillus cereus">Bacillus cereus</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Bacillus_cereus" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bacillus_cereus#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Bacillus cereus"><code>https://en.wikipedia.org/wiki/Bacillus_cereus</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Lipofuscin" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Lipofuscin#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Lipofuscin">Lipofuscin</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Mike_Darwin" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Mike_Darwin#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Mike Darwin">Mike Darwin</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Trypsin" class="link-live id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Trypsin#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Trypsin">Trypsin</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Trypsin" class="link-live id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Trypsin#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Trypsin"><code>https://en.wikipedia.org/wiki/Trypsin</code></a></p>
+</div></li>
+</ol>
+</section>
+</section>
+<section id="miscellaneous" class="level1">
+<h1><a href="#miscellaneous" title="Link to section: § &#39;Miscellaneous&#39;">Miscellaneous</a></h1>
+<ul>
+<li><p><strong><a href="https://www.google.com/patents?id=4qxmAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" class="id-not include-annotation" data-link-icon="alphabet" data-link-icon-color="#4285f4" data-link-icon-type="svg"><code>https://www.google.com/patents?id=4qxmAAAAEBAJ&printsec=abstract&zoom=4#v=onepage&q&f=false</code></a></strong></p></li>
+<li><p><strong><a href="/doc/www/www.quantamagazine.org/3523ac0f986e2a460aeba024673b14d86d85dfe6.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.quantamagazine.org/3523ac0f986e2a460aeba024673b14d86d85dfe6.html" data-url-original="https://www.quantamagazine.org/protein-blobs-linked-to-alzheimers-affect-aging-in-all-cells-20220628/" data-link-icon="quanta" data-link-icon-color="#ff8600" data-link-icon-type="svg"><code>https://www.quantamagazine.org/protein-blobs-linked-to-alzheimers-affect-aging-in-all-cells-20220628/</code></a></strong></p></li>
+</ul>
+</section>
+<section id="link-bibliography-section" class="level1">
+<h1><a href="#link-bibliography-section" title="Link to section: § &#39;Bibliography&#39;">Bibliography</a></h1>
+<ol type="1">
+<li><p><code>https://lists.extropy.org/pipermail/extropy-chat/2013-June/077787.html</code>: <a href="/doc/www/lists.extropy.org/45dceb8f1a4b3dd32d73b7f9e8c91e51e2325ee3.html" id="darwin-2013" class="link-live link-annotated" data-url-archive="/doc/www/lists.extropy.org/45dceb8f1a4b3dd32d73b7f9e8c91e51e2325ee3.html" data-url-original="https://lists.extropy.org/pipermail/extropy-chat/2013-June/077787.html" title="&#39;[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [historical background on Johan Bjorksten]&#39;, Darwin 2013">“[ExI] [CCM-L] CCM-L Digest, Vol 47, Issue 62 [Historical Background on Johan Bjorksten]”</a>, <span class="author cite-author"><a href="https://en.wikipedia.org/wiki/Mike_Darwin" class="link-live link-annotated-partial id-not" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mike_Darwin#bodyContent" title="Mike Darwin">Mike Darwin</a></span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/https%253A%252F%252Flists.extropy.org%252Fpipermail%252Fextropy-chat%252F2013-June%252F077787.html.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link https://lists.extropy.org/pipermail/extropy-chat/2013-June/077787.html">link-bibliography</a></span></p></li>
+</ol>
+</section>
+
+       
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" rel="nofollow" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

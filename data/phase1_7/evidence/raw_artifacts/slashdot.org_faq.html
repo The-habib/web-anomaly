@@ -1,0 +1,2214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+	#fix .smack-refactor > .col_2 {
+	  width: auto !important;
+	  float: none !important;
+	}
+	.faq-listing a {
+		text-decoration: underline;
+	}
+</style>
+<title>FAQ - Slashdot</title>
+<!-- html-header type=current begin -->
+	
+	
+		<meta property="fb:admins" content="100000696822412">
+		<meta property="fb:page_id" content="267995220856">
+	
+		<meta name="viewport" content="width=1000, user-scalable=yes, minimum-scale=0, maximum-scale=10.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="//a.fsdn.com/sd/classic.css?fc755fff6459136e" >
+		<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen, projection" href="//a.fsdn.com/sd/ie8-classic.css?fc755fff6459136e" ><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen, projection" href="//a.fsdn.com/sd/ie7-classic.css?fc755fff6459136e" ><![endif]-->
+	
+	
+	
+
+
+
+	
+	<!--  -->
+
+	
+	
+
+	
+	<!-- SMACKS: NEW CSS -->
+	<link rel="stylesheet" href="//a.fsdn.com/sd/css/app.css?fc755fff6459136e">
+
+	<script src="//a.fsdn.com/con/js/sftheme/cmp-slashdot.js?2026-08-11b"></script>
+	<script>// country.js converted to inline by CF Snippet
+   window.is_euro_union = 0;
+   window.country_code2 = "IN";
+   window.region = "MH";
+   window.prebidOptions = {uids: {ip: "4.240.39.198" }};</script>
+	<script>
+		window.bizx.cmp.init({
+			cmp_id: 12126,
+			geo: window,
+			gam_gdpr_technical_delivery: true,
+			
+		});
+		bizx.uids.gather();
+		window.prebidOptions = window.prebidOptions || {};
+		window.prebidOptions.uids = window.prebidOptions.uids || {};
+		window.prebidOptions.uids.hem = bizx.uids.getHem();
+	</script>
+	<link rel="stylesheet" href="//a.fsdn.com/con/css/sftheme/sandiego/cmp.css?2026-08-11b" type="text/css">
+
+	<script type='text/javascript'>
+var _gaq = _gaq || [];
+</script>
+
+
+<script>
+window.SD = {};
+window.SD.Ads = {};
+var googletag = window.googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+
+
+
+
+<!-- AdBlock Check -->
+<script>
+var sdAdBlockActive = true; var sdUboActive = true;
+</script>
+<script src="//a.fsdn.com/sd/js/scripts/admanager.js?fc755fff6459136e"></script>
+<script src="//a.fsdn.com/sd/js/scripts/asg_embed.js?fc755fff6459136e"></script>
+
+</head>
+
+<body class="anon misc ">
+
+	
+	<script src="//a.fsdn.com/sd/all-minified.js?fc755fff6459136e" type="text/javascript"></script>
+	
+	
+	<script type="text/javascript">
+(function(){
+var regexp=/\s*(?:\d+|many)\s+more\s*/i;
+
+	
+	var auto_more_count = 1;
+
+	function auto_more(){
+		var $more_link = $('#more-experiment a');
+		$more_link.each(function(){
+			var $lastitem = $('#firehoselist>article.fhitem:visible:last');
+			if ( Bounds.intersect(window, $lastitem) ) {
+			
+			
+				!--auto_more_count && (auto_more=undefined);
+				// don't allow a call till the next paginate gets built and |more_possible|
+				$(document).unbind('scroll', call_auto_more);
+			}
+		});
+	};
+
+	function call_auto_more(){ auto_more && auto_more(); }
+	
+
+$('#more-experiment a').
+	live('more-possible', function( event ){
+		var $more_link=$(this);
+		if ( regexp.test($more_link.text()) ) {
+		
+			$(document).bind('scroll', call_auto_more);
+		} else {
+			$(document).unbind('scroll', call_auto_more);
+		
+		}
+	});
+})();
+</script>
+	<!--[if lt IE 9]><script src="//a.fsdn.com/sd/html5.js"></script><![endif]-->
+	
+	
+	<!-- index2_variant ||-->
+		<!-- html-header type=current end -->
+<!-- header type=current begin -->
+	
+	
+	
+	<link rel="top"       title="News for nerds, stuff that matters" href="//slashdot.org/" >
+<link rel="search"    title="Search Slashdot" href="//slashdot.org/search.pl">
+<link rel="alternate" title="Slashdot RSS" href="https://rss.slashdot.org/Slashdot/slashdotMain" type="application/rss+xml">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	
+		<div id="top_parent"></div>
+		<a name="topothepage"></a>
+		
+		<div class="container">
+			<div class="nav-wrap">
+				<nav class="nav-primary" role="navigation" aria-label="Global Navigation">
+					<h2 class="logo">
+	<a href="//slashdot.org"><span>Slashdot</span></a>
+</h2>
+
+<ul class="nav-site">
+	<li><a href="//slashdot.org"><i class="icon-book" title="Stories"></i><span>Stories</span></a></li>
+	<li>
+		<ul class="filter-firehose">
+			<li class="nav-label">Firehose <i class="icon-angle-right"></i></li>
+			<li><a href="//slashdot.org/recent">All</a></li>
+			<li><a href="//slashdot.org/popular">Popular</a></li>
+		</ul>
+	</li>
+	<li><a href="//slashdot.org/polls"><i class="icon-chart-bar" title="Polls"></i><span>Polls</span></a></li>
+
+	<!--
+	<li><a href="//ask.slashdot.org"><i class="icon-question-circle"></i><span>Ask</span></a></li>
+	
+	<li><a href="//events.slashdot.org"><i class="icon-calendar"></i><span>Events</span></a></li>
+	-->
+	<li><a href="https://slashdot.org/software/"><i class="sd-mini"></i> <span>Software</span></a></li>
+        <li><a href="//slashdot.org/content/"><span>Thought Leadership</span></a></li>
+</ul>
+<a href="//slashdot.org/submission" class="btn btn-success">Submit</a>
+				</nav>
+				<nav class="nav-user" role="navigation" aria-label="user access and account controls">
+					<div id="main-top-nav-wrapper">
+<form id="search" class="form-inline nav-search-form" method="get" action="//slashdot.org/index2.pl">
+<!-- //slashdot.org/index2.pl" -->
+	<div class="form-group">
+		<label class="sr-only" for="sitesearch">Search Slashdot</label>
+		<div class="input-group">
+			<input type="text" id="" class="" name="fhfilter" value="" placeholder="Search">
+		</div>
+	</div>
+	<button type="submit" class="btn icon-search"></button>
+</form>
+<ul class="user-access">
+	
+		
+			<li >
+				<a href="//slashdot.org/my/login"  onclick="show_login_box(); return false;"><i class="icon-login"></i><span> Login</span></a>
+				
+			</li>
+		
+	
+		
+			<li class="nav-label">or</li>
+		
+	
+		
+			<li >
+				<a href="//slashdot.org/my/newuser"  ><i class="icon-user-add"></i><span> Sign up</span></a>
+				
+			</li>
+		
+	
+</ul>
+				</nav>
+			</div>
+			<div class="nav-secondary-wrap">
+				<nav class="nav-secondary" role="secondary-navigation">
+	<ul>
+		<li class="nav-label">Topics: </li>
+		<li><a href="//devices.slashdot.org">Devices</a></li>
+		<li><a href="//build.slashdot.org">Build</a></li>
+		<li><a href="//entertainment.slashdot.org">Entertainment</a></li>
+		<li><a href="//technology.slashdot.org">Technology</a></li>
+		<li><a href="//slashdot.org/?fhfilter=opensource">Open Source</a></li>
+		<li><a href="//science.slashdot.org">Science</a></li>
+		<li><a href="//yro.slashdot.org">YRO</a></li>
+		<!-- <li><a href="//slashdot.org/topics.pl">more...</a></li> -->
+	</ul>
+</nav>
+<nav class="nav-social" role="social navigation">
+	<ul>
+		<li class="nav-label">Follow us:</li>
+		<li><a href="https://rss.slashdot.org/Slashdot/slashdotMain" target="_blank" rel="nofollow"><i class="icon-rss-squared"></i><span class="sr-only">RSS</span></a></li>
+		<li><a href="https://www.facebook.com/slashdot" target="_blank" rel="nofollow"><i class="icon-facebook-squared"></i><span class="sr-only">Facebook</span></a></li>
+		<li><a href="https://www.linkedin.com/company/slashdot" target="_blank" rel="nofollow"><i class="icon-linkedin-squared"></i><span class="sr-only">LinkedIn</span></a></li>
+		<li><a href="https://x.com/slashdot" target="_blank" rel="nofollow"><i><svg style="height:20px;width:20px;margin: 3px 4px 0 4px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><g><path fill="#000000" d="M486,392.599C486,443.97,443.97,486,392.599,486H119.401C68.03,486,26,443.97,26,392.599V119.401   C26,68.031,68.03,26,119.401,26h273.198C443.97,26,486,68.031,486,119.401V392.599z"/><path fill="#F0F0F1" d="M290.425,233.064l110.65-137.91h-32.05l-94.62,117.94l-94.63-117.94H74.125l147.45,183.78l-110.66,137.92   h32.05l94.63-117.95l94.64,117.95h105.65L290.425,233.064z M126.225,120.153h41.55l218,271.7h-41.55L126.225,120.153z"/></g></svg></i><span class="sr-only">Twitter</span></a></li>
+		<li><a href="https://www.youtube.com/channel/UCsW36751Gy-EAbHQwe9WBNw" target="_blank" rel="nofollow"><i class="icon-youtube-squared">
+                    <!-- width="1792" height="1792" -->
+                    <svg viewBox="0 260 1792 1260" xmlns="http://www.w3.org/2000/svg"><path d="M711 1128l484-250-484-253v503zm185-862q168 0 324.5 4.5t229.5 9.5l73 4q1 0 17 1.5t23 3 23.5 4.5 28.5 8 28 13 31 19.5 29 26.5q6 6 15.5 18.5t29 58.5 26.5 101q8 64 12.5 136.5t5.5 113.5v176q1 145-18 290-7 55-25 99.5t-32 61.5l-14 17q-14 15-29 26.5t-31 19-28 12.5-28.5 8-24 4.5-23 3-16.5 1.5q-251 19-627 19-207-2-359.5-6.5t-200.5-7.5l-49-4-36-4q-36-5-54.5-10t-51-21-56.5-41q-6-6-15.5-18.5t-29-58.5-26.5-101q-8-64-12.5-136.5t-5.5-113.5v-176q-1-145 18-290 7-55 25-99.5t32-61.5l14-17q14-15 29-26.5t31-19.5 28-13 28.5-8 23.5-4.5 23-3 17-1.5q251-18 627-18z"/></svg>
+                </i><span class="sr-only">Youtube</span></a></li>
+		<li><a href="https://mastodon.cloud/@slashdot" target="_blank" rel="me nofollow"><i class="icon-mastodon-squared">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+				</i><span class="sr-only">Mastodon</span></a></li>
+		<li><a href="https://bsky.app/profile/slashdot.org" target="_blank" rel="nofollow"><i><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" id="Bluesky--Streamline-Simple-Icons.svg" height="20" width="20" style="margin: 3px 4px 0 4px;"><title>Bluesky</title><path d="M12 10.8c-1.087 -2.114 -4.046 -6.053 -6.798 -7.995C2.566 0.944 1.561 1.266 0.902 1.565 0.139 1.908 0 3.08 0 3.768c0 0.69 0.378 5.65 0.624 6.479 0.815 2.736 3.713 3.66 6.383 3.364 0.136 -0.02 0.275 -0.039 0.415 -0.056 -0.138 0.022 -0.276 0.04 -0.415 0.056 -3.912 0.58 -7.387 2.005 -2.83 7.078 5.013 5.19 6.87 -1.113 7.823 -4.308 0.953 3.195 2.05 9.271 7.733 4.308 4.267 -4.308 1.172 -6.498 -2.74 -7.078a8.741 8.741 0 0 1 -0.415 -0.056c0.14 0.017 0.279 0.036 0.415 0.056 2.67 0.297 5.568 -0.628 6.383 -3.364 0.246 -0.828 0.624 -5.79 0.624 -6.478 0 -0.69 -0.139 -1.861 -0.902 -2.206 -0.659 -0.298 -1.664 -0.62 -4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z" fill="rgb(17, 133, 254)" stroke-width="1"/></svg></i><span class="sr-only">Bluesky</span></a></li>
+	</ul>
+</nav>
+			</div>
+		</div>
+
+		<section>
+		
+                <!--
+			<div class="message-bar" id="firehose-message-tray">
+				<span class="icon-quote-left"></span>
+				<p>
+					
+						
+						Become a fan of Slashdot on <a href="http://www.facebook.com/pages/Slashdotorg/267995220856">Facebook</a>
+					
+				</p>
+			</div>
+                -->
+		
+		
+			<div id='embbeded_login_modal' class="hide">
+<form action="https://slashdot.org/my/login" method="post" onsubmit="if (global_returnto) { this.returnto.value = global_returnto }" class="embedded"><fieldset style="-webkit-border-radius:10px 10px 0 0;border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0">
+<div style='height:25px;'>&nbsp;</div>
+    <input type="hidden" name="returnto" value="">
+    <input type="hidden" name="op" value="userlogin">
+    <p>
+        <label class="fleft" for="unickname">Nickname:</label>
+        <input type="text" name="unickname" value="">
+    </p>
+    <p>
+        <label class="fleft" for="upasswd">Password:</label>
+        <input type="password" name="upasswd">
+    </p>
+    <label class="checkbox"><input type="checkbox" name="login_temp" value="yes"> Public Terminal</label>
+    <br>
+    <hr>
+    <input type="submit" name="userlogin" value="Log In" class="fno"> <a href="//slashdot.org/my/mailpassword" class="btn link" onclick="getModalPrefs('sendPasswdModal', 'Retrieve Password', 1); return false;">Forgot your password?</a>
+</fieldset></form>
+
+<div class="actions">
+ <a class="ico close" onclick="hide_login_slider();" href=""><span>Close</span></a>
+</div>
+</div>
+		
+		<div class="banner-wrapper"></div>
+		
+		<div id="top-banner-placeholder"></div>
+		
+		
+		<a name="main-articles"></a>
+	
+	<!-- header type=current end -->
+<div class="container">
+	<div class="row row-faq">
+		<a name="top" id="top"></a>
+		<header class="faq-header">
+			<h1>Frequently Asked Questions</h1>
+		</header>
+	</div>
+	<div class="row row-faq">
+		<div class="units-4">
+			<ul id="accordion" class="faq-menu">
+				<li>
+					<a href="#" class="item" rel="about"><h2>About Slashdot</h2></a>
+					<ul>
+						<a href="#about1"><li>What is this?</li></a>
+						<a href="#about2"><li>Who does this?</li></a>
+						<a href="#about3"><li>What does the name "Slashdot" mean?</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Editorial&mdash;Story Submissions, etc.</h2></a>
+					<ul>
+						<a href="#submissions1"><li>How do I submit a story? What about corrections or updates?</li></a>
+						<a href="#submissions2"><li>How do I Ask Slashdot?</li></a>
+						<a href="#submissions3"><li>Why did you change my submission?</li></a>
+						<a href="#submissions4"><li>Could you explain why my submission was declined?</li></a>
+						<a href="#submissions5"><li>Can I submit a story anonymously?</li></a>
+						<a href="#submissions6"><li>Where do I submit press releases?</li></a>
+						<a href="#submissions7"><li>Can I submit a story anonymously?</li></a>
+						<a href="#submissions8"><li>I submitted a similar submission before the one you actually ran!</li></a>
+						<a href="#submissions9"><li>I want to write a book review. What should I do?!</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Slashdot Interviews</h2></a>
+					<ul>
+						<a href="#interviews1"><li>How many questions can I ask?</li></a>
+						<a href="#interviews2"><li>I asked nearly the same question as one you selected to pass on; why?</li></a>
+						<a href="#interviews3"><li>Hey, that eleventh question wasn't even highly moderated!</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Tags</h2></a>
+					<ul>
+						<a href="#tags1"><li>What are tags?</li></a>
+						<a href="#tags2"><li>What syntax do tags require?</li></a>
+						<a href="#tags3"><li>What tags are defined?</li></a>
+						<a href="#tags4"><li>How can I see what others are tagging?</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Accounts</h2></a>
+					<ul>
+						<a href="#accounts1"><li>Why should I log in?</li></a>
+						<a href="#accounts2"><li>Can I change my nickname?</li></a>
+						<a href="#accounts3"><li>How can I delete my account?</li></a>
+						<a href="#accounts4"><li>I forgot / can't get my password!</li></a>
+						<a href="#accounts5"><li>I'm having trouble logging in.</li></a>
+						<a href="#accounts6"><li>What are login sessions?</li></a>
+						<a href="#accounts7"><li>What are slashboxes?</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Moderation and Metamoderation</h2></a>
+					<ul>
+						<a href="#meta1"><li>I just got moderator access. What do I do?</li></a>
+						<a href="#meta2"><li>How should I spend my moderation points?</li></a>
+						<a href="#meta3"><li>What do the choices in the moderation drop-down boxes mean?</li></a>
+						<a href="#meta4"><li>What is metamoderation?</li></a>
+						<a href="#meta5"><li>What do "M1" and "M2" mean?</li></a>
+						<a href="#meta6"><li>Who can metamoderate?</li></a>
+						<a href="#meta7"><li>Why am I asked to metamoderate the same comment more than once?</li></a>
+						<a href="#meta8"><li>How should I M2 if the moderator called it "Insightful" and I think it should be "Informative"?</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Karma, Thresholds, Abuse, etc.</h2></a>
+					<ul>
+						<a href="#karma1"><li>What are thresholds?</li></a>
+						<a href="#karma2"><li>How do I change thresholds?</li></a>
+						<a href="#karma3"><li>Someone is posting under a false or misleading identity!</li></a>
+						<a href="#karma4"><li>Why did that comment disappear?</li></a>
+						<a href="#karma5"><li>How do I report abuse? </li></a>
+						<a href="#karma6"><li>"You can't post to this page"&mdash;Why not?</li></a>
+						<a href="#karma7"><li>Do you ban people from Slashdot?</li></a>
+						<a href="#karma8"><li>Why is my IP banned?</li></a>
+						<a href="#karma9"><li>How do I get an IP unbanned?</li></a>
+						<a href="#karma10"><li>What is karma?</li></a>
+						<a href="#karma11"><li>Are there anti-troll filters?</li></a>
+						<a href="#karma12"><li>A comment I posted shows a different score on my user page than in the comments page. Why?</li></a>
+					</ul>
+				</li>	
+				<li>
+					<a href="#" class="item" rel="about"><h2>The Firehose</h2></a>
+					<ul>
+						<a href="#fire1"><li>What is the Firehose?</li></a>
+						<a href="#fire2"><li>How can I filter the Firehose?</li></a>
+						<a href="#fire3"><li>What do the colors mean?</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>The Friends and Foes System</h2></a>
+					<ul>
+						<a href="#friends1"><li>How do I add users to my friends / foes list (or remove them)?</li></a>
+						<a href="#friends2"><li>Where can I see my friends / foes?</li></a>
+						<a href="#friends3"><li>Can I see other people's friends and foes?</li></a>
+						<a href="#friends4"><li>Where can I see my friends / foes?</li></a>
+						<a href="#friends5"><li>What are fans / freaks?</li></a>
+						<a href="#friends5"><li>What are comment modifiers, and how do they work?</li></a>
+					</ul>
+				</li>
+				<li>
+				<a href="#" class="item" rel="about"><h2>Journals</h2></a>
+					<ul>
+						<a href="#journals1"><li>Where is my journal?</li></a>
+						<a href="#journals2"><li>What can I use my journal for? Can Slashdot censor my journal?</li></a>
+						<a href="#journals3"><li>Who can read my journal? Can I read anyone else's journal?</li></a>
+						<a href="#journals4"><li>Can I ban people from reading my journal?</li></a>
+					</ul>
+				</li>
+				<li>
+				<a href="#" class="item" rel="about"><h2>Tech</h2></a>
+				<ul>
+					<a href="#tech1"><li>What kind of logging does Slashdot do?</li></a>
+					<a href="#tech2"><li>Why do I see 'loading from slashcdn.com' when I'm reading Slashdot?</li></a>
+					<a href="#tech3"><li>Where is my journal?</li></a>
+					<a href="#tech4"><li>I use NoScript; what should I know?</li></a>
+				</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Mobile Site</h2></a>
+					<ul>
+						<a href="#mobile1"><li>How do I access the mobile site?</li></a>
+						<a href="#mobile2"><li>What devices are supported?</li></a>
+						<a href="#mobile3"><li>I'm having a problem with your mobile site; what should I do?</li></a>
+						<a href="#mobile4"><li>What powers the mobile site?</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Feeds</h2></a>
+					<ul>
+						<a href="#feeds1"><li>Where can I get Slashdot's main feed?</li></a>
+						<a href="#feeds2"><li>What other feeds are available?</li></a>
+						<a href="#feeds3"><li>How do I set up a custom feed?</li></a>
+						<a href="#feeds4"><li>My RSS headline reader says I was banned!</li></a>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="item" rel="about"><h2>Miscellaneous</h2></a>
+					<ul>
+						<a href="#native-ads"><li>What are the posts on Slashdot that say "Paid Post"?</li></a>
+						<a href="#misc1"><li>What is that funny right-facing angle bracket next to the comment I'm reading?</li></a>
+						<a href="#misc2"><li>An ad is screwing up my browser!</li></a>
+						<a href="#misc3"><li>What are Slashdot achievements?</li></a>
+						<a href="#misc4"><li>Can I direct readers of my own site to suggest it to Slashdot?</li></a>
+						<a href="#misc6"><li>I have found a bug on Slashdot; whom do I contact?</li></a>
+						<a href="#misc7"><li>This document doesn't answer my question!</li></a>
+					</ul>
+				</li>	
+			</ul>
+		</div>
+		<div class="units-8 faq-listing">
+			<div>
+				<a name="about" id="about"></a>
+				<h1>About Slashdot</h1>
+				<a name="about1" id="about1"></a>
+				<h2>What is this?</h2>
+				<p>
+				This is Slashdot, a website based on and running the
+				<a href="https://sourceforge.net/p/slashcode/git/ci/live/tree/">Slashdot-Like Automated Story-Telling Homepage</a>
+				software. You're reading
+				<a href="/faq">the FAQ</a>.
+				Slashdot is the oldest tech news and discussion site on the web. Slashdot is also one of the largest <a href="https://slashdot.org/software/">business software comparison</a> and review websites in the world, with over 100,000 business software products. Millions of people visit Slashdot every month to find and compare the best business software.
+				</p>
+				<a name="about2" id="about2"></a>
+				<h2>Who does this?</h3>
+				<p>
+				Slashdot was created in 1997 by Rob "CmdrTaco" Malda. Today it's owned by Slashdot Media. Slashdot is run primarily by a handful of editors and coders, with the help of many others. The editors are Beau ("BeauHD") Hamilton, Manish ("manishs") Singh, David ("EditorDavid"), and Logan ("whipslash") Abbott.
+
+				</p>
+				<a name="about3" id="about3"></a>
+				<h2>What does the name "Slashdot" mean?</h2>
+				<p>
+					"Slashdot" is an intentionally obnoxious URL.
+					When Rob registered the domain
+					<a href="http://slashdot.org">http://slashdot.org</a>,
+					he wanted a URL that was confusing when read aloud.
+					(Try it!)
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="submissions" id="submissions"></a>
+
+				<h1>Editorial&mdash;Story Submissions, etc.</h1>
+				<a name="submissions1" id="submissions1"></a>
+				<h2>How do I submit a story? What about corrections or updates?</h2>
+				<p>
+					To submit stories, corrections, or updates, please use
+					the
+					<a href="/submission">submissions form</a>.
+					Submit corrections or updates just as if you were
+					submitting any other news item, by using the
+					<a href="/submission">web submission form</a>.
+					Please include a link to the story you're updating or
+					correcting, and explain what the trouble is.
+				</p>
+				<a name="submissions2" id="submissions2"></a>
+				<h2>How do I Ask Slashdot?</h2>
+				<p>
+				Use the same
+				<a href="/submission">submissions form</a>;
+				just make clear that you're asking a question.
+				(A good way is to title your submission starting with
+				"Ask Slashdot.")
+				</p>
+				<a name="submissions3" id="submissions3"></a>
+				<h2>Why did you change my submission? </h2>
+
+				<p>
+				We often edit submissions for reasons of spelling,
+				grammar, or clarity, or to format them for visual
+				consistency. We're happy when a story submission comes
+				in with no changes needed, but most stories get at
+				least a tweak or two. Sometimes we'll shorten a
+				submission to emphasize its key points or points,
+				remove links not relevant or central to the story
+				posted, swap anchor text to make links easier to read,
+				or substitute a better link for one that may be broken,
+				expired or paywalled (or not the best link for some
+				other reason). When two submissions offer different
+				sources, we may combine them into a single story.
+				Sometimes, too, we may fold links to relevant previous
+				Slashdot stories into the text, or add these links
+				separately. Though we do so in good faith, we apologize
+				in advance and strive to correct any errors that this
+				tweaking introduces.
+				</p>
+				<a name="submissions4" id="submissions4"></a>
+				<h2>Could you explain why my submission was declined?</h2>
+
+				<p>
+				This is harder than it sounds. We try to select the
+				most interesting, timely, and relevant submissions, but
+				can only run a fraction of those submitted; there are
+				probably as many reasons for stories to get declined as
+				there are stories. Think positive: read our
+				<a href="/faq/submissions.shtml">submissions guidelines</a>
+				for some hints about increasing the chances that we'll
+				run yours.
+				</p>
+				<a name="submissions5" id="submissions5"></a>
+				<h2>Can I submit a story anonymously?</h2>
+				<p>
+				Yes. If you log in, though, the editors can follow up
+				with questions if for some reason we'd otherwise like
+				to run your story but some crucial word or link is
+				missing.
+				</p>
+				<a name="submissions6" id="submissions6"></a>
+				<h2>Where do I submit press releases?</h2>
+				<p>
+				We'd rather you didn't submit press releases&mdash;at
+				least not ones that sound like press releases! But if
+				you're going to submit one,
+				<a href="/submission">please use the submission form</a>.
+				</p>
+				<a name="submissions7" id="submissions7"></a>
+				<h2>Can I email a story submission?</h2>
+				<p>
+				In short, No. If you email one of the editors directly,
+				the others won't see your submission. (And your mail
+				might hit someone who's on vacation, sleeping, or has a
+				downed network connection.) Assume that any emailed
+				story submission is likely to go unread; please
+				<a href="/submission">use the submission form</a>
+				instead.
+				</p>
+				<a name="submissions8" id="submissions8"></a>
+				<h2>I submitted a similar submission before the one you actually ran!</h2>
+				<p>
+				Sometimes we post a later submission rather than an
+				earlier one. There are a variety of factors: the
+				personality of the post, the quality of the submission,
+				or even the quantity of stories already posted when
+				your submission entered the queue&mdash;and sometimes,
+				we just mess up.
+				</p>
+				<a name="submissions9" id="submissions9"></a>
+				<h2>I want to write a book review. What should I do?</h2>
+				<p>
+				Be sure to read our
+				<a href="/faq/bookreviews.shtml">book review guidelines</a>
+				so you know what we're looking for. When you're ready
+				to submit it, you can do so on our submissions page.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="interviews" id="interviews"></a>
+				<h1>Slashdot Interviews</h1>
+				<a name="interviews1" id="interviews1"></a>
+				<h2>How many questions can I ask?</h2>
+				<p>
+				Ask as many questions as you'd like! Just don't ask
+				unrelated questions in the same comment; instead, ask
+				separately, so they can be moderated separately. (More
+				chances to win!)
+				</p>
+				<a name="interviews2" id="interviews2"></a>
+				<h2>I asked nearly the same question as one you selected to pass on; why?</h2>
+				<p>
+				Often several readers ask similar questions. If yours
+				is the one Slashdot editors believe represents that
+				"group" of questions best, it's the one that gets
+				picked. We tend to pick questions that have meaningful
+				subject lines, and we prefer questions that are short
+				and pithy to long, wandering ones.
+				</p>
+				<a name="interviews3" id="interviews3"></a>
+				<h2>Hey, that eleventh question wasn't even highly moderated!</h2>
+				<p>
+				It's a human factor. Moderation helps us decide which
+				questions to send along, but often there are
+				interesting ones which haven't been modded up as much.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="tags" id="tags"></a>
+				<h1>Tags</h1>
+				<a name="tags1" id="tags1"></a>
+				<h2>What are tags?</h2>
+				<p>
+				Tags are text labels you can add to a story that help
+				categorize stories by content or category.  Clicking
+				the tag icon will open a text field  for tagging. Type
+				in a tag, then press the space bar. Repeat for all tags
+				you'd like to add to the story.
+				</p>
+				<p>
+				<b>Note:</b> Adding the same tag more than once does
+				not increase its weight; once is enough.  You might,
+				though, tag a story about Western Digital hard drives
+				"wd," "westerndigital," and "storage," or a story about
+				an MIT programming contest "programming,"
+				"competition," and "mit." Tags help sort stories, and
+				help you search for related ones. More tags help!
+				</p>
+				<p>
+				Everyone can see them! Tags are public and flexible
+				(rather than private and permanent). So one day, we
+				might consolidate and change all "canine" tags to
+				"dog," say, or define new system tags and usurp more
+				namespace. (Don't say we didn't warn you!) Because tags
+				on Slashdot are public, and are used to inform the
+				moderation system, tag abuse can hurt your karma.
+				Please tag in good faith.
+				</p>
+				<a name="tags2" id="tags2"></a>
+				<h2>What syntax do tags require?</h2>
+				<ul>
+					<li>
+					Tags should be all-lowercase; leave out
+					punctuation and spaces&mdash;a space is used to
+					enter multiple tags. So use "bigbrother," not
+					"big brother."
+					</li>
+					<li>
+					Numbers can appear but can't be first. Smoosh
+					them together: "usb3," not "usb 3."
+					</li>
+					<li>
+					For the opposite of a tag, prefix it with "!,"
+					e.g. "!funny" means "not funny."
+					</li>
+					<li>
+					Keep your tags brief (64 characters max).
+					</li>
+				</ul>
+				<a name="tags3" id="tags3"></a>
+				<h2>What tags are defined?</h2>
+				<p>
+				Certain tags trigger alerts to the editors, which means
+				there are a few cases where we poach the namespace a
+				bit. Just a few, for now:
+				</p>
+				<dl>
+					<dt>Dupe</dt>
+					<dd>
+					Use "dupe" when a Slashdot story is an actual
+					duplicate of a previous story, offering no new
+					information. This alerts the editors, but is
+					generally only useful when the story is in The
+					Mysterious Future.
+					</dd>
+					<dt>Typo</dt>
+					<dd>
+					Use "typo" when a story writeup has spelling or
+					grammatical errors, or bad HTML (like a
+					malformed link).
+					</dd>
+				</dl>
+				<a name="tags4" id="tags4"></a>
+				<h2>How can I see what others are tagging?</h2>
+				<p>
+				You can see some of the most popular tags at
+				<a href="//slashdot.org/tags">slashdot.org/tags</a>.
+				(You can see your own tags by visiting
+				<a href="//slashdot.org/my/tags">slashdot.org/my/tags</a>.)
+				</p>
+				<a name="tags5" id="tags5"></a>
+				<h2>How can I see stories that have been tagged with "gadget"? Or "stevejobs"?</h2>
+				<p>
+				For any tag, you can see the stories it's been applied
+				to by going to
+				<a href="//slashdot.org/tag/$tag">slashdot.org/tag/$tag</a>
+				(replace "$tag" with the term you're curious about).
+				It's fun just to poke around!
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="accounts" id="accounts"></a>
+				<h1>Accounts</h1>
+				<h2>Why should I log in?</h2>
+				<a name="accounts1" id="accounts1"></a>
+				<p>
+					Logging in lets you save preferences, and gives you access
+					to features that anonymous readers don't have, including a
+					journal, the Friends & Foes system, and comment moderation.
+				</p>
+				<h2>Can I change my nickname?</h2>
+				<a name="accounts2" id="accounts2"></a>
+				<p>
+				Sorry, but No. It's just too prone to abuse.
+				</p>
+				<h2>How do I change my password or email address?</h2>
+				<p>
+				<a href="/my/login">Log in</a>,
+				then use the form on your
+				<a href="/my/userinfo">User Info</a>
+				page.
+				</p>
+				<h2>How can I delete my account?</h2>
+				<a name="accounts3" id="accounts3"></a>
+				<p>
+				You can <a href="https://privacyportal.onetrust.com/webform/611e70e2-1994-43ff-b07b-646df870db4b/9ad95852-20dd-4d96-ac36-46ecaf788217" rel="nofollow">delete your account using this form</a>.
+				</p>
+				<a name="accounts4" id="accounts4"></a>
+				<h2>I forgot / can't get my password!</h2>
+				<p>
+				Hit
+				"<a href="/my/login">Log In</a>"
+				anyhow, then click
+				"<a href="/my/mailpassword">Forgot your password?</a>"
+				Still have trouble? Email
+				<a href="mailto:feedback@slashdot.org">feedback@slashdot.org</a>
+				for help.
+				</p>
+				<a name="accounts5" id="accounts5"></a>
+				<h2>I'm having trouble logging in.</h2>
+				<p>
+					Make sure you have cookies turned on, and that your computer's date
+					and time are correct. If you've turned cookies on, and still have trouble,
+					email <a href="mailto:feedback@slashdot.org">feedback@slashdot.org</a> for help.
+				</p>
+				<a name="accounts6" id="accounts6"></a>
+				<h2>What are login sessions?</h2>
+				<p>
+				A login session is a glorified cookie; to provide some
+				added security, you can determine the duration and
+				location for your session. The duration options should
+				be self-explanatory: "Lasts Forever," or "Closes With
+				Browser." The former is good if you're the only person
+				using your computer. If you're slightly paranoid, or
+				often log in from remote terminals, choose "Closes With
+				Browser" instead.
+				</p>
+				<p>
+				The second decision is your location. The first choice
+				is "Never Moves," appropriate it you have a static IP
+				and you never log out of Slashdot or share your
+				computer. "Moves within Subnet" is useful if you have a
+				desktop and never log out, but your ISP sometimes
+				changes your IP. "Follows me Everywhere" is the right
+				choice for machines that move from network to network.
+				This option is the least secure, but oh-so-convenient,
+				and it's also the default.
+				</p>
+				<a name="accounts7" id="accounts7"></a>
+				<h2>What are slashboxes?</h2>
+				<p>
+				Slashboxes are configurable mini-feeds that appear on
+				the right-hand side of the page. If you're logged in,
+				they're configurable: you can select which Slashboxes
+				(from dozens of choices) show up on your
+				page&mdash;everything from single-source news feeds to
+				webcomics to recent tags, etc.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="meta" id="meta"></a>
+				<h1>Moderation and Metamoderation</h1>
+				<a name="meta1" id="meta1"></a>
+				<h2>I just got moderator access. What do I do?</h2>
+				<p>
+				Moderate! Read comments (preferably at a low threshold)
+				and when you see comments that are very insightful, or
+				perhaps just plain off topic, select the appropriate
+				option from the drop down list. When you're done, hit
+				the 'Moderate' button. That's it! Moderation is like
+				jury duty: You never know when you'll be selected, and
+				when you get it, you only do it for a little bit.
+				</p>
+				<a name="meta2" id="meta2"></a>
+				<h2>How should I spend my moderation points?</h2>
+				<p>
+				Concentrate more on promoting than on demoting. Try to
+				be impartial about this; simply disagreeing with a
+				comment is not a valid reason to mark it down. The goal
+				here is to share ideas, to sift through the haystack
+				and find needles, and to keep spammers and griefers in
+				check.
+				</p>
+				<a name="meta3" id="meta3"></a>
+				<h2>I found a comment that was unfairly moderated!</h2>
+				<p>
+				For every moderator out there pushing an agenda, there
+				are usually several good ones making sure that everyone
+				is getting a fair say. To counter unfair moderation,
+				though, we've come up with a system of
+				meta-moderation (moderating the moderation).
+				</p>
+				<a name="meta4" id="meta4"></a>
+				<h2>What do the choices in the moderation drop-down boxes mean?</h3>
+				<dl>
+					<dt>Normal</dt>
+					<dd>
+					The default setting attached to every comment
+					when you have moderation privileges.
+					</dd>
+					<dt>Offtopic</dt>
+					<dd>
+						A comment which has nothing to do with the
+						story it's linked to (song lyrics, obscene
+						ascii art, etc).
+					</dd>
+					<dt>Flamebait</dt>
+					<dd>
+						Comments whose sole purpose is to insult and
+						enrage.
+					</dd>
+					<dt>Troll</dt>
+					<dd>
+						A Troll is similar to Flamebait, but slightly
+						more refined. This is a prank comment intended
+						to provoke indignant (or just confused)
+						responses.
+					</dd>
+					<dt>Redundant</dt>
+					<dd>
+						Redundant posts add no new information; they
+						take up space with information either in the
+						original post, the attached links, or lots of
+						previous comments.
+					</dd>
+					<dt>Insightful</dt>
+					<dd>
+						An Insightful comment makes you think, or puts
+						a new spin on a given story. Examples: an
+						analogy you hadn't thought of, or a telling
+						counterexample.
+					</dd>
+					<dt>Interesting</dt>
+					<dd>
+						If you believe a comment to be Interesting (and
+						on-topic), it is.
+					</dd>
+					<dt>Informative</dt>
+					<dd>
+						Informative comments add new information to
+						explain the circumstances hinted at by a
+						particular story, fill in "The Other Side" of
+						an argument, etc.
+					</dd>
+					<dt>Funny</dt>
+					<dd>
+						Choose "Funny" if you think the comment is
+						<em>actually</em> funny, not just because it seems
+						intended to be.
+					</dd>
+					<dt>Overrated</dt>
+					<dd>
+						Sometimes comments are disproportionately
+						up-moderated&mdash;this probably means several
+						moderators saw it at nearly the same time, and
+						their cumulative scores exaggerated its merit.
+						(Example: A knock-knock joke at +5, Funny.)
+						Such a comment is Overrated.
+					</dd>
+					<dt>Underrated</dt>
+					<dd>
+						Likewise, some comments get smashed lower than
+						they might deserve. Choosing "Underrated" means
+						you think it should be read by more people.
+					</dd>
+				</dl>
+				<a name="meta5" id="meta5"></a>
+				<h2>What is metamoderation?</h2>
+				<p>
+				Metamoderation is a second layer of moderation. It
+				seeks to increase fairness by letting logged-in users
+				"rate the rating" of randomly selected comment posts.
+				</p>
+				<a name="meta6" id="meta6"></a>
+				<h2>What do "M1" and "M2" mean?</h2>
+				<p>
+				M1 and M2 are Slashdot shorthand for "moderation" and
+				"metamoderation," respectively. We also use these with
+				suffixes For example, if you see the term "M2ed," it
+				means "metamoderated." Likewise, the term "M1er" means
+				"Moderator."</p>
+				<a name="meta7" id="meta7"></a>
+				<h2>Who can metamoderate?</h2>
+				<p>
+				In order to metamoderate, your account must be among
+				the oldest 92.5% accounts on the system.
+				</p>
+				<a name="meta8" id="meta8"></a>
+				<h2>Why am I asked to metamoderate the same comment more than once?</h2>
+				<p>
+				Remember, M2 rates the moderations, not the comments.
+				If the same comment was moderated more than once, it
+				may appear several times to a meta-moderator, too.
+				</p>
+				<a name="meta9" id="meta9"></a>
+				<h2>How should I M2 if the moderator called it "Insightful" and I think it should be "Informative"?</h2>
+				<p>
+				Don't sweat the small stuff&mdash;both have a +1 effect on
+				the comment. Rate the moderation "Fair" and move on.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="karma" id="karma"></a>
+				<h1>Karma, Thresholds, Abuse, etc.</h1>
+				<a name="karma1" id="karma1"></a>
+				<h2>What are thresholds?</h2>
+				<p>
+					Your "threshold" is the minimum score of the comments
+					displayed to you. Comments are scored from -1 to 5, and
+					you can set your threshold to any score within that range.
+					If you set your threshold to 2, only comments rated 2 or
+					above would be displayed. Setting your threshold at -1 will
+					display all comments. 0 is almost all comments. Higher
+					threshold settings reduce the number of comments you see,
+					but (in theory, anyway) increase the quality of the posts
+					you see.
+				</p>
+				<a name="karma2" id="karma2"></a>
+				<h2>How do I change thresholds?</h2>
+				<p>
+				A widget attached to each story's comments contains two
+				sliders; these allow you to control the score threshold
+				at which comments are displayed. You can drag and drop
+				them and adjust your preferences to find the balance of
+				score and comment text you want.
+				</p>
+				<a name="karma3" id="karma3"></a>
+				<h2>Someone is posting under a false or misleading identity!</h2>
+				<p>
+				We've tried to make this difficult (for example, the
+				system won't let you create an account named 'CmdrTaco'
+				because one already exists) but that doesn't prevent
+				ninnies from doing what ninnies do. Read cautiously.
+				</p>
+				<a name="karma4" id="karma4"></a>
+				<h2>Why did that comment disappear?</h2>
+				<p>
+				The Slashdot editors are also readers; we have
+				unlimited mod points, and have no problem using them to
+				highlight good comments, or to moderate down abusive
+				comments of which we become aware. (Hey, get your own
+				sandbox! And get off my lawn!) Abusive comments make it
+				less pleasant for people to read the site. Not to
+				mention, we'd like people to be able to read Slashdot
+				behind ham-handed filtering systems that would block
+				the entire site. If you're posting in good faith, this
+				will probably never affect you. (And if you want to
+				read all the comments, set your threshold to -1.)
+				</p>
+				<a name="karma5" id="karma5"></a>
+				<h2>How do I report abuse? </h2>
+				<p>
+				Below and to the right of each comment is a small
+				"Anti" symbol; click on this, and (optionally) explain
+				why you consider the comment abusive. (Slashdot
+				discussions are and should be robust; only cry "Abuse!"
+				for comments that are utterly without redeeming value
+				-- spam, racist ranting, etc. For everything else, use
+				the other moderation options.) Reported comments will
+				be reviewed and moderated by the editors, if
+				appropriate.
+				</p>
+
+				<a name="karma5" id="karma5"></a>
+				<h2>"You can't post to this page"&mdash;Why not?</h2>
+				<p>
+				This probably means you're reading from behind a web
+				proxy that allows connections from any host. This
+				functionality has been abused. Comments can't be posted
+				from this address until the proxy is better secured.
+				Please notify your Proxy Admin.
+				</p>
+				<a name="karma6" id="karma6"></a>
+				<h2>Do you ban people from Slashdot?</h2>
+				<p>
+				Occasionally we ban IPs from which we see abuse, or
+				disallow accounts from specific actions (such as
+				posting or submitting stories) in response to spam,
+				persistent flamebait, etc. If this happens unfairly to
+				you, please read
+				<a href="#how_ip_unbanned">How do I get an IP Unbanned</a>.
+				These bans are relatively rare, but necessary when
+				specific users or IPs disrupt service for others.
+				</p>
+				<a name="karma7" id="karma7"></a>
+				<h2>Why is my IP banned?</h2>
+				<p>
+				If your IP is banned, it's probably because one of
+				these is true:
+				</p>
+				<ul>
+					<li>
+						Your IP has been used to perform a denial of
+						service attack (or the accidental equivalent)
+						against Slashdot.
+					</li>
+					<li>
+						Your IP was used to post comments that break
+						Slashdot's rendering.
+					</li>
+					<li>
+						You're using a proxy server used by someone who
+						did one of those things.
+					</li>
+				</ul>
+				<a name="karma8" id="karma8"></a>
+				<h2>How do I get an IP unbanned?</h2>
+				<p>
+				Email
+				<a href="mailto:banned@slashdot.org">banned@slashdot.org</a>.
+				Be sure to specify the IP itself, your user ID, and any
+				other pertinent information. (If you're connecting
+				through a proxy server, you might need to have the
+				admin contact us instead.)
+				</p>
+				<a name="karma9" id="karma9"></a>
+				<h2>What is karma?</h2>
+				<p>
+				Your karma is a reference that primarily represents how
+				your comments have been moderated. Karma is used to
+				determine who moderates and who doesn't. You can
+				improve your karma by posting intelligent, funny,
+				informative or comments generally impressive to your
+				fellow readers.
+				</p>
+				<p>
+				Karma is structured on the following scale "Terrible,
+				Bad, Neutral, Positive, Good, and Excellent." If a
+				comment you post is moderated up, your karma will rise.
+				Conversely,  bad karma usually indicates a user account
+				used to spam or otherwise hurt the discussion.
+				</p>
+				<p>
+				Factors besides moderation also affect karma. Having a
+				story submission accepted raises your karma. Also,
+				metamoderation can cause your karma to change. This
+				encourages good moderators, and ideally removes
+				moderator access from bad ones. Don't worry too much
+				about it; it's just an integer in a database.
+				</p>
+				<a name="karma10" id="karma10"></a>
+				<h2>Are there anti-troll filters?</h2>
+				<p>
+				A handful of filters have been put into place to try to
+				make sure that people don't abuse the system. For
+				instance, the same person can't post more than once
+				every 120 seconds. Also, if a single user is moderated
+				down several times in a short span, a temporary ban
+				will be imposed on that user ... a cooling off period,
+				if you will.
+				</p>
+				<p>
+				If you believe you've been unfairly banned, let us
+				know, so we can fix it.
+				</p>
+				<a name="karma11" id="karma11"></a>
+				<h2>A comment I posted shows a different score on my user page than in the comments page. Why?</h2>
+				<p>
+					Your user page displays the comment's "Natural" score.
+					That reflects things like moderations up or down, default
+					posting bonus, and so forth. When you see the same comment
+					in a discussion, though, its score reflects bonuses or
+					penalties associated with your own user preferences. (You
+					can choose to tailor the comments you read, for instance,
+					by bumping up comments that others have rated "Insightful”)
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="fire" id="fire"></a>
+				<h1>The Firehose</h1>
+				<a name="fire1" id="fire1"></a>
+				<h2>What is the Firehose?</h2>
+				<p>
+				The Firehose is powerful viewing tool for Slashdot
+				content, from comments and journal entries to RSS feeds
+				and story submissions. You can filter and interact with
+				the Firehose in a number of ways. The plus/minus box on
+				the left side of each Firehose entry lets you vote on
+				that item. A context menu will appear when you click on
+				the plus or minus, giving you the option of adding
+				certain tags. You can also expand the submission if
+				you'd like to add other tags, such as "northdakota" or
+				"spaceflight." Voting and tagging are helpful; they
+				inform other Firehose users, and help the editors
+				decide which ones make it to the front page.
+				</p>
+				<a name="fire2" id="fire2"></a>
+				<h2>How can I filter the Firehose?</h2>
+				<p>
+				You can enter filter terms in the text field at the top
+				of the firehose page. Sort for any particular type of
+				entry by entering its type into the field and hitting
+				enter. For example, entering "journal" there would sort
+				for journal entries. You can also sort for story,
+				comment, feed, bookmark, and submission. Putting a "-"
+				in front of a type will exclude that type. For example:
+				"-feed" would exclude all RSS feeds. You can also sort
+				for things like "linux," "openbsd," or "riaa" to see
+				stories with those tags or comments and submissions
+				that mention them.
+				</p>
+				<a name="fire3" id="fire3"></a>
+				<h2>What do the colors mean?</h2>
+				<p>
+				The colors serve as a rough quality rating for entries
+				in the firehose. You can sort for colors by using the
+				color-picker next to the filter field. Red is the most
+				popular, black is the least popular, and story
+				submissions enter the firehose at blue. Your nods and
+				nixes affect this, so the more often you vote, the more
+				useful color sorting becomes. The lower your color
+				threshold, the more content you'll see.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="friends" id="friends"></a>
+				<h1>The Friends and Foes System</h1>
+				<a name="friends1" id="friends1"></a>
+				<h2>How do I add users to my friends / foes list (or remove them)?</h2>
+				<p>
+				Search for the user. Click. Add the user as your friend
+				or foe.
+				</p>
+				<p>
+				You'll find those symbols on users' comments as well,
+				and elsewhere on the site. Basically, anywhere you see
+				the following symbol  you can decide to add a user as
+				friend or foe.
+				</p>
+				<p>
+				To remove a friend or foe, click on their friend/foe
+				symbol and change them back to Neutral.
+				</p>
+				<h2>Where can I see my friends / foes?</h2>
+				<p>
+				<a href="http://slashdot.org/my/friends">http://slashdot.org/my/friends</a>
+				and
+				<a href="http://slashdot.org/my/foes">http://slashdot.org/my/foes</a>,
+				respectively.
+				</p>
+				<a name="friends2" id="friends2"></a>
+				<h2>Can I see other people's friends and foes?</h2>
+				<p>
+				Sure. It's similar to checking your own friends or foes
+				list
+				(<a href="http://slashdot.org/my/friends">http://slashdot.org/my/friends</a>);
+				simply replace
+				<samp>/my/friends</samp>
+				with
+				<samp>/~username/friends</samp>.
+				Follow the same pattern for checking other users' foes
+				list.
+				</p>
+				<a name="friends3" id="friends3"></a>
+				<h2>What are fans / freaks?</h2>
+				<p>
+				When you select someone as a friend, it makes you that
+				user's fan. To see people who have chosen you as a
+				friend (your fans):
+				<a href="http://slashdot.org/my/fans">http://slashdot.org/my/fans</a>.
+				To see other users' fans, replace
+				<samp>/my/fans</samp>
+				with
+				<samp>/~username/fans</samp>.
+				</p>
+				<p>
+				"Freaks" are people who name you as a foe:
+				<a href="http://slashdot.org/my/freaks">http://slashdot.org/my/freaks</a>.
+				</p>
+				<h2>What are comment modifiers, and how do they work?</h2>
+				<p>
+				Comment modifiers (see
+				<a href="http://slashdot.org/my/comments">http://slashdot.org/my/comments</a>)
+				let you filter comments in a story. There are many
+				comment modifier options. For instance, you can attach
+				a comment modifier to a friend, foe, fan, freak, friend
+				of friend, or foe of friend.
+				</p>
+				<p>
+				The reason this is cool: let's say you want to be able
+				to read all your friends comments, but many of their
+				comments lie at the threshold of 1, and you read at a
+				threshold of 2. If you go to your comment preferences,
+				you can make all of your friends' comments appear at a
+				score of 5.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="journals" id="journals"></a>
+				<h1>Journals</h1>
+				<a name="journals1" id="journals1"></a>
+				<h2>Where is my journal?</h2>
+				<p>
+				Your journal can be found at
+				<a href="http://slashdot.org/my/journal">http://slashdot.org/my/journal</a>.
+				</p>
+				<a name="journals2" id="journals2"></a>
+				<h2>What can I use my journal for? Can Slashdot censor my journal?</h2>
+				<p>
+				Use it for whatever you'd like! we don't care (much).
+				We reserve the right to moderate down abusive journal
+				entries (including spam), just as with comments.
+				</p>
+				<a name="journals3" id="journals3"></a>
+				<h2>Who can read my journal? Can I read anyone else's journal?</h2>
+				<p>
+				Anyone can read your journal. (And you can read anyone
+				else's journal, too.)
+				</p>
+				<a name="journals4" id="journals4"></a>
+				<h2>Can I ban people from reading my journal?</h2>
+				<p>
+				Nope&mdash;Sorry.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+			</div>
+			<div>
+				<a name="tech" id="tech"></a>
+				<h1>Tech</h1>
+				<a name="tech1" id="tech1"></a>
+				<h2>What kind of logging does Slashdot do?</h2>
+				<p>
+				We log the usual stuff (IP, page, time, user, page
+				views, moderation, and comment posting, mainly), and a
+				few other bits, too. The data is used mostly to make
+				moderation possible.
+				</p>
+				<a name="tech2" id="tech2"></a>
+				<h2>Why do I see 'loading from a.fsdn.com' when I'm reading Slashdot?</h2>
+				<p>
+				That's our image server; if you block it, you'll miss
+				all the graphic violence.
+				</p>
+
+				<h2>I use NoScript; what should I know?</h2>
+
+				<p>
+				Whitelisting
+				<a href="//slashdot.org/">slashdot.org</a>
+				is necessary for the fancier parts of the site to
+				function. You'll need to whitelist
+				<a href="//slashcdn.com">a.fsdn.com</a>
+				too; that's our CDN, and if you block it, many things
+				may break.
+				</p>
+				<a href="#top"><i class="icon-angle-up">Top</i></a>
+				</div>
+				<div class="faq-listing">
+					<a name="mobile" id="mobile"></a>
+					<h1>Mobile Site</h1>
+					<h2>How do I access the mobile site?</h2>
+					<p>
+					The mobile site can be accessed at
+					<a href="http://m.slashdot.org/">http://m.slashdot.org/</a>
+					from your mobile device (smartphone or tablet). Note
+					that if you attempt to access this from your desktop,
+					you will not be able to click on items. For proper
+					Android support, all actions must be registered as
+					touch events, which aren't in desktop browsers.
+					</p>
+					<a name="mobile1" id="mobile1"></a>
+					<h2>What devices are supported?</h2>
+					<p>
+					The Slashdot mobile website uses the latest
+					technologies to deliver a clean mobile experience. Due
+					to the wide variety of mobile devices, we cannot
+					support every combination. Therefore, below is a list
+					of recommended configurations.
+					</p>
+					<p>
+						We recommend:
+					</p>
+						<ol>
+							<li>
+								An iOS device running iOS 5 or newer.
+							</li>
+							<li>
+								An Android device running Android 4.0 or newer.
+							</li>
+						</ol>
+					<p>
+					<b>Note:</b>
+					</p>
+					<ul>
+						<li>
+							We strongly recommend the latest Chrome
+							browser, not the browser that came packaged
+							with your phone.
+						</li>
+						<li>
+							JavaScript must be enabled.
+						</li>
+					</ul>
+					<p>
+						We support:
+					</p>
+					<ol>
+						<li>
+							All iOS devices running iOS 5 or newer.
+						</li>
+						<li>
+							All Android devices running Android 2.3 or newer.
+						</li>
+					</ol>
+					<a name="mobile2" id="mobile2"></a>
+					<h2>I'm having a problem with your mobile site; what should I do?</h2>
+
+						<p>
+							If you're having trouble viewing our mobile site,
+							please view the
+							<a href="#mobile_supported_devices">Supported</a>
+							area above and ensure that your device meets these
+							requirements. Also, ensure that JavaScript is enabled.
+						</p>
+						<p>
+							If you are still having trouble with our mobile site,
+							please email
+							<a href="mailto:feedback@slashdot.org">feedback@slashdot.org</a>
+							with:
+						</p>
+						<ul>
+							<li>
+								The device you are using
+							</li>
+							<li>
+								The OS version
+							</li>
+							<li>
+								The browser name and version
+							</li>
+							<li>
+								The problem you are experiencing
+							</li>
+						</ul>
+
+						<h2>What powers the mobile site?</h2>
+
+						<p>
+							We're using a delightful potpourri of
+							<a href="http://backbonejs.org/">Backbone</a>,
+							<a href="http://zeptojs.com/">Zepto</a>,
+							<a href="http://underscorejs.org/">Underscore</a>,
+							<a href="http://hamstache.herokuapp.com/">Hamstache</a>,
+							<a href="http://pivotal.github.com/jasmine/">Jasmine</a>,
+							and
+							<a href="http://sass-lang.com/">Sass</a>.
+							<a href="http://httpd.apache.org/">Apache</a>
+							&amp;
+							<a href="http://perl.apache.org/">mod_perl</a>
+							serve up the framework.
+						</p>
+						<a href="#top"><i class="icon-angle-up">Top</i></a>
+					</div>
+					<div>
+						<a name="feeds" id="feeds"></a>
+						<h1>Feeds</h1>
+						<a name="feeds1" id="feeds1"></a>
+						<h2>Where can I get Slashdot's main feed?</h2>
+						<p>
+							The syndication feed for the Slashdot front page is
+							available in RSS 0.9, RSS 1.0, and Atom 1.0 formats.
+							Please don't request feeds more than once every 30
+							minutes.
+						</p>
+						<h2>What other feeds are available?</h2>
+						<p>
+							On most pages, if there is feed content available, it
+							will be noted in the <code>&lt;HEAD&gt;</code> of the
+							page.
+						</p>
+						<p>
+							Wherever you see rss below, you can also substitute
+							with atom to get an Atom 1.0 feed, such as
+							<samp>content_type=atom</samp> and
+							<samp>journal/atom</samp>, or append <samp>atom</samp>
+							to the end of the <a href="">rss.slashdot.org</a> URLs,
+							like <samp>slashdotGamesatom</samp>
+							(although some feeds, like Zoo and some search results,
+							need some more work for Atom).
+						</p>
+						<p>
+							Where you see <samp>$username</samp> below, substitute
+							the URI-encoded username of the user in question (such
+							as <samp>Clifton+Wood<samp>).
+						</p>
+						<p>
+							Where you see <samp>$logtoken</samp>, you must include
+							a token so the server knows you're you, in lieu of a
+							cookie, as most newsreaders can't handle cookies well
+							(you can find it in the <code>&lt;HEAD&gt;</code> of
+							the page, if you're a logged in, and a subscriber).
+							NOTE: your logtoken is subject to change when you log
+							out or change your login preferences. See the
+							<a href="#what_are_login_sessions">Accounts FAQ</a>
+							for more information.
+						</p>
+						<ul>
+							<li>
+								<p>
+									Append the section name to the index
+									link for individual section feeds. For
+									example:
+								</p>
+								<ul>
+									<li>
+										<a href="http://rss.slashdot.org/Slashdot/slashdotGames">http://rss.slashdot.org/Slashdot/slashdotGames</a>
+									</li>
+									<li>
+										<a href="http://rss.slashdot.org/Slashdot/slashdotAskSlashdot">http://rss.slashdot.org/Slashdot/slashdotAskSlashdot</a>
+									</li>
+									<li>
+										<a href="http://rss.slashdot.org/Slashdot/slashdotYourRightsOnline">http://rss.slashdot.org/Slashdot/slashdotYourRightsOnline</a>
+									</li>
+									<li>
+										<a href="http://rss.slashdot.org/Slashdot/slashdotPolitics">http://rss.slashdot.org/Slashdot/slashdotPolitics</a>
+									</li>
+									<li>
+										<a href="http://rss.slashdot.org/Slashdot/slashdotLinux">http://rss.slashdot.org/Slashdot/slashdotLinux</a>
+									</li>
+									<li>
+										<a href="http://rss.slashdot.org/Slashdot/slashdotDevelopers">http://rss.slashdot.org/Slashdot/slashdotDevelopers</a>
+									</li>
+									<li>
+										<a href="http://slashdot.org/index.pl?content_type=rss&logtoken=$logtoken">http://slashdot.org/index.pl?content_type=rss&logtoken=$logtoken</a>
+										(this special subscriber
+										version will respect your user
+										homepage prefs; including which
+										stories appear from which
+										sections; to get only a
+										specific section, replace the
+										hostname, such as
+										"<a href="">apple.slashdot.org</a>")
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+									Journals (add "<samp>/$logtoken</samp>" if you're a subscriber, to get full HTML in the feed)
+								</p>
+								<ul>
+									<li>
+										<a href="http://slashdot.org/~$username/journal/rss">http://slashdot.org/~$username/journal/rss</a>
+									</li>
+									<li>
+										<a href="http://slashdot.org/~$username/journal/friends/rss">http://slashdot.org/~$username/journal/friends/rss</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+									Messages
+								</p>
+								<ul>
+									<li>
+										<a href="http://slashdot.org/my/inbox/rss/$logtoken">http://slashdot.org/my/inbox/rss/$logtoken</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+									Search Results
+								</p>
+								<ul>
+									<li>
+										Merely add <samp>&content_type=rss</samp> to the query string
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<a name="feeds2" id="feeds2"></a>
+						<h2>How do I set up a custom feed?</h2>
+						<p>
+							Use the filter field to sort for whatever type of
+							content you like. On the section menu, you'll see an
+							"untitled" section, which you can use to save those
+							settings. Once that's done, hitting the edit button
+							again will bring up an RSS icon, which you can use to
+							subscribe to the custom feed.
+						</p>
+						<h2>My RSS headline reader says I was banned!</h2>
+
+						<p>
+							Our policy is to allow one request every 30 minutes.
+							We'll allow a few more before you'll get banned, and we
+							are more flexible still with proxy servers. You should
+							still be able to access the rest of the site, just not
+							the .rss, .rdf, and .xml pages.
+						</p>
+						<p>
+							If you're still banned after 72 hours, please email
+							<a href="mailto:banned@slashdot.org">banned@slashdot.org</a>
+							for help. Include the approximate time of the ban, the
+							srcid hex string from the ban message, and what you
+							think your IP number is. If you're connecting through a
+							proxy server (or think you might be), please mention
+							that, too; you might need the proxy server's admin to
+							contact us.
+						</p>
+						<a href="#top"><i class="icon-angle-up">Top</i></a>
+					</div>
+					<div>
+						<a name="misc" id="misc"></a>
+						<h1>Miscellaneous</h1>
+						<a name="native-ads" id="native-ads"></a>
+						<h2>What are the posts on Slashdot that say "Paid Post"?</h2>
+						<p>
+						These are advertisements; that's what the label means. Just as with the advertisements on the page, the content of these advertisements is not created by the Slashdot editorial team. You're free to ignore their content, of course, but advertising is what allows Slashdot to exist. If you spot any advertisements that are not clearly labeled, that's a bug: please <a href="mailto:feedback@slashdot.org">email us</a> to let us know.
+						</p>
+
+						<a name="misc1" id="misc1"></a>
+						<h2>What is that funny right-facing angle bracket next to the comment I'm reading?</h2>
+						<p>
+							This marks the current comment for the purpose of
+							key-stroke discussion navigation. You can navigate the
+							discussion with your WASD keys&mdash;no mouse required!
+						</p>
+						<a name="misc2" id="misc2"></a>
+						<h2>An ad is screwing up my browser!</h2>
+
+						<p>
+							We have rules meant to keep our advertisements sanely
+							polite, but occasionally one slips by that breaks them.
+							If you see a 500k banner, or one that is launching
+							Java, say, please complain to
+							<a href="mailto:feedback@slashdot.org">feedback@slashdot.org</a>.
+						</p>
+
+						<a name="misc3" id="misc3"></a>
+						<h2>What are Slashdot achievements?</h2>
+
+						<p>
+							The achievements system began as an April Fool's Day
+							joke in 2009, but the system itself is real. You can
+							view your own accomplishments (or others') by visiting
+							<a href="//slashdot.org/my/achievements">slashdot.org/~${your_username}/achievements</a>.
+						</p>
+						<a name="misc4" id="misc4"></a>
+						<h2>Can I direct readers of my own site to suggest it to Slashdot?</h2>
+
+						<p>
+							You can add a badge or link to your page (or for a
+							blog, to your page template, to get one on every page)
+							to easily allow your readers to submit it to Slashdot
+							for consideration; and once submitted, take them to the
+							discussion.
+						</p>
+						<p>
+							A Slashdot badge is an easy, powerful tool to do this.
+							Add a badge to your page by including this snippet of
+							HTML:
+						</p>
+						<pre><code>&lt;script src="https://slashdot.org/slashdot-it.js" type="text/javascript"&gt;
+						&lt;/script&gt;
+						</code></pre>
+						<a name="misc6" id="misc6"></a>
+						<h2>I have found a bug on Slashdot; whom do I contact?</h2>
+
+						<p>
+							Please email
+							<a href="mailto:feedback@slashdot.org">feedback@slashdot.org</a>
+							with as much relevant detail as you can. (When? What
+							browser, and what version, under what OS? Did you get
+							an error message, and if so what was it? Screenshots
+							are great, too. We appreciate it!)
+						</p>
+
+						<a name="misc7" id="misc7"></a>
+
+						<h2>This document doesn't answer my question! </h2>
+
+						<p>
+							Like most FAQs, this one usually needs pruning and
+							watering. If you have a burning question, please send
+							it to
+							<a href="mailto:feedback@slashdot.org">feedback@slashdot.org</a>
+							with "FAQ suggestion" in the subject line so we can
+							consider including it.
+						</p>
+						<a href="#top"><i class="icon-angle-up">Top</i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+		$('#accordion a.item').click(function () {
+	
+			/* FIRST SECTION */
+		
+			//slideup or hide all the Submenu
+			$('#accordion li').children('ul').slideUp('400');	
+			
+			//remove all the "Over" class, so that the background color resets to default
+			$('#accordion a.item').each(function () {
+				if ($(this).attr('rel')!='') {
+					$(this).removeClass($(this).attr('rel') + 'Over');	
+				}
+			});
+			
+			/* SECOND SECTION */		
+			
+			//show the selected submenu
+			$(this).siblings('ul').slideDown('400');
+			
+			//add "Over" class, so that the background color changes
+			$(this).addClass($(this).attr('rel') + 'Over');			
+		
+			return false;
+	
+		});
+	
+	});
+	
+			
+</script> 
+<!-- footer type=current begin -->
+
+	
+	</section>
+	
+	
+
+
+	<footer id="fhft" class="grid_24 nf">
+		<div id="logo_nf" class="fleft">
+			<a href="//slashdot.org"><span>Slashdot</span></a>
+		</div>
+		<nav role="firehose footer">
+			
+
+			
+			<ul class="fright submitstory">
+					<li class="fright">
+						<a href="/submit">Submit<span class="opt"> Story</span></a>
+					</li>
+			</ul>
+		</nav>
+		
+
+
+	</footer>
+	<section class="bq">
+		<blockquote class="msg grid_24" cite="https://slashdot.org">
+			<p>To stay youthful, stay useful.</p>
+			<span class="slant"></span>
+		</blockquote>
+	</section>
+	<footer id="ft" class="grid_24">
+		<nav class="grid_10" role="footer">
+			<ul>
+				<li><a href="//slashdot.org/faq">FAQ</a></li>
+				<li><a href="//slashdot.org/archive.pl">Story Archive</a></li>
+				<li><a href="//slashdot.org/hof.shtml">Hall of Fame</a></li>
+				<li><a href="https://slashdotmedia.com/advertising-and-marketing-services/" rel="nofollow">Advertising</a></li>
+				<li><a href="https://slashdotmedia.com/terms-of-use/" rel="nofollow">Terms</a></li>
+				<li><a href="https://slashdotmedia.com/privacy-statement/" rel="nofollow">Privacy Statement</a></li>
+				<li><a href="//slashdot.org/faq/slashmeta.shtml">About</a></li>
+				<li><a href="mailto:feedback@slashdot.org">Feedback</a></li>
+				<li><a href="#" onclick="set_mobile_pref('mobile',1);return false;">Mobile View</a></li>
+				<li><a href="//slashdot.org/blog">Blog</a></li>
+				<li><a href="#" id="opt-out-link"></a></li>
+				<li><button class="btn opt-out" id="opt-out-button" style="display:none">
+					<img src="//a.fsdn.com/sd/ccpa-optout.png" alt="Icon">
+					Do Not Sell or Share My Personal Information</button></li>
+
+			</ul>
+		</nav>
+		<br>
+		
+		<div class="grid_14 tright tm"><span class="nobr">Copyright &copy; 2026 Slashdot Media. All Rights Reserved.</span></div>
+
+	<div class="modal-custom overlay-custom" id="ccpa-modal" style="max-width:100%">
+		<div class="modal-content modal-content-ccpa">
+	    	<span class="close" id="modal-close">&times;</span>
+			<div class="modal-header" id="ccpa-modal-content-destination"></div>
+		</div>
+	</div>
+
+	</footer>
+	
+	<div class="overlay"></div>
+<div class="modal-box">
+    <a href="#" id="close-modal">Close</a>
+    <article class="modal-content">
+    </article>
+    <footer>
+</div>
+
+
+
+
+<div id="modal_cover" class="hide" onclick="hide_modal_box(); return false;"></div>
+<div id="modal_box" class="hide">
+      <div id="modal_box_content"></div>
+      <header class="n">
+                  <span class="fadeout"></span>
+                  <span class="fadeoutfade"></span>
+		  <span class="pf"><a class="ico close" onclick="hide_modal_box(); return false;" href="#"><span>Close</span></a></span>
+		  <h3 class="pf"><div id="logo"><a href="//slashdot.org">Slashdot</a></div><span id="preference_title"></span></h3>
+      </header>
+</div>
+	
+	<script type="text/javascript">
+window.google_analytics_uacct = "UA-199823890-2";
+
+var _gaq = _gaq || [];
+
+
+
+
+
+  _gaq.push(['_setAccount', 'UA-199823890-2']);
+  _gaq.push(['_setDomainName', '.slashdot.org']);
+
+	
+		_gaq.push(['_addIgnoredRef', 'slashdot.org']);
+	
+
+
+  _gaq.push(['_setCustomVar', 1, 'User Type',  'Anon', 3]);
+	
+	_gaq.push(['_setCustomVar', 2, 'Page','misc', 3]);
+
+	
+
+
+
+// track beta behavior for user
+var betamatches = document.cookie.match(/betagroup=(-?\d+)/);
+
+if(betamatches && betamatches[1]) {
+  if(betamatches[1] == -1) {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','opt-out', 3]);
+  } else {
+    _gaq.push(['_setCustomVar', 3, 'Beta-Usage','unredirected', 3]);
+  }
+}
+
+
+
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+
+bizx.cmp.ifConsent({purposes: ['storage', 'measurement'], vendors: 'google-analytics'}, function () {
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+});
+</script>
+
+<!-- CCM GA Push -->
+<script>
+    if (typeof _ml !== 'undefined' && _ml.us) {
+        if (_ml.us.tp && _ml.us.tp.length > 0) {
+            ga('set', 'dimension2', _ml.us.tp[0]);
+        }
+        if (_ml.us.pc && _ml.us.pc.length > 0) {
+            ga('set', 'dimension7', _ml.us.pc[0]);
+        }
+        ga('set', 'dimension3', _ml.us.ind);
+        ga('set', 'dimension4', _ml.us.cr);
+        ga('set', 'dimension5', _ml.us.cs);
+        ga('set', 'dimension6', _ml.us.dm);
+        ga('set', 'dimension8', _ml.us.sn);
+    }
+</script>
+
+<!-- Sticky Ads -->
+<script type="text/javascript">
+var topBannerViewed = false;
+function initSticky(){
+    if (SD?.Ads?.acceptable_ads_active) {
+        return;
+    }
+        
+    if($('#div-gpt-ad-728x90_a').length > 0 && $('#div-gpt-ad-300x250_a').length > 0 && window.outerWidth >= 1070 && !sdAdBlockActive){
+        $(window).scroll(function(){
+			var y = $(document).scrollTop();
+			var z =  y + window.outerHeight;
+			var navOffset = 0;
+			var offset = [
+				$('.nav-wrap').outerHeight(true),
+				$('.nav-secondary-wrap').outerHeight(true)
+			];
+			for(row in offset){
+				if(offset[row]) navOffset = navOffset + parseInt(offset[row]);
+			}
+			$('.adwrap-unviewed').each(function(){
+				var cls = 'adwrap-sticky';
+				var toggleCls = 'adwrap';
+				
+				if($(this).hasClass('railad')) {
+					if(topBannerViewed){
+						var topPixels = $(this).offset().top;
+						navOffset += $('.adwrap').outerHeight();
+						if(y >= topPixels && y >= navOffset){
+							$('#slashboxes').css('top', 0).css('position','sticky').css('right',13);
+						} else {
+							$('#slashboxes').removeAttr('style');
+						}
+					}
+					return;
+				}
+				var topPixels = $(this).offset().top;
+				if(y >= topPixels && y >= navOffset){
+					$(this).addClass(cls);
+					$(this).removeClass('adwrap');
+					if(cls == 'adwrap-sticky') { //top banner
+						topBannerViewed = false;
+						$('#slashboxes').css('top',$(this).outerHeight() || 0).css('position','sticky').css('right',13);
+					}
+					if(topBannerViewed) {
+						
+						$('#slashboxes').css('top', 0).css('position','sticky').css('right',13);
+					}
+				}else{
+					
+					$(this).removeClass(cls);
+					$(this).addClass(toggleCls);
+					$('#slashboxes').removeAttr('style');
+				}
+			});
+			if($('.adwrap-viewed-banner').length > 0){
+				
+				topBannerViewed = true;
+				$('.adwrap-viewed-banner').removeClass('adwrap-unviewed').removeClass('adwrap-sticky').addClass('adwrap');
+			}
+			if($('.adwrap-viewed-railad').length > 0){
+				
+            	$('.adwrap-viewed-railad').removeClass('adwrap-unviewed').removeClass('adwrap-railad-sticky');
+                $('#slashboxes').removeAttr('style');
+            }
+        });
+    }
+}
+bizx.cmp.ifConsent({purposes: 'all', vendors: 'google-ads'}, function () {
+	if (!sdAdBlockActive) {
+		initSticky();
+	}
+	if (SD?.Ads?.acceptable_ads_active) {
+		// similar to remove* code above in initSticky
+		$('.adwrap-unviewed').removeClass('adwrap-unviewed').removeClass('adwrap-sticky').addClass('adwrap').removeClass('adwrap-railad-sticky');
+		$('#slashboxes').removeAttr('style');
+	}
+});
+</script>
+
+<style>
+#slashboxes .ntv-preview-img-wrapper {
+    display: block;
+    margin: 0 auto !important;
+    width: 100%;
+    float: none;
+    text-align: center;
+}
+#slashboxes strong {
+    margin-bottom: -5px;
+    display: block;
+}
+#slashboxes .ntv-preview-img-wrapper {background: #F7F7F7;}
+#slashboxes .nel-image {
+    float: none;
+    margin-top: 10px;
+}
+#slashboxes .p.ntv-body {
+    text-align: left;
+    border-top: 1px solid #CCCCCC;
+}
+
+#slashboxes .p.ntv-body strong {
+    display: block;
+}
+
+#slashboxes .p.ntv-body .nel-button {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    padding: 8px;
+}
+
+#slashboxes .p.ntv-body {
+    background: #fff;
+    margin: 0;
+    padding: 10px 10px 1px 10px;
+}
+#slashboxes article:first-child {
+    border-radius: 0px !important;
+    padding-top: 1;
+}
+#slashboxes article:first-child header {
+    border-radius: 0px !important;
+}
+#slashboxes article:first-child h2.story {
+    padding-left: 10px;
+    background: #6D4634;
+}
+
+#slashboxes .details {
+    display: none;
+}
+#slashboxes .ntv-sponsored-disclaimer {
+    position: relative;
+    top: 0;
+    background: #6D4634;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 0;
+}
+#slashboxes .ntv-sponsored-disclaimer:before {
+    display: none;
+}
+#slashboxes .ntv-sponsored-question {
+    display: none;
+}
+#slashboxes .ntv-sponsored-disclaimer a {
+    float: none;
+    text-transform: uppercase;
+}
+</style>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setCookieDomain", "*.slashdot.org"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+function initPiwik() {
+  (function() {
+    var u="//analytics.slashdotmedia.com/";
+    _paq.push(['setTrackerUrl', u+'sd.php']);
+    _paq.push(['setSiteId', 40]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'sd.js'; s.parentNode.insertBefore(g,s);
+  })();
+}
+
+function initNels() {
+
+    if(window.location.pathname == '/'){
+        var nelId = (location.search.split('nel_id=')[1] || '').split('&')[0];
+        var url = '/ajax.pl?op=nel';
+        if(nelId){
+            url += '&nel_id='+nelId;
+        }
+        $.ajax({
+            url: url,
+            type: 'POST',
+            success: function(html){
+                $('#firehoselist article').eq(1).after(html);
+            }
+        });
+    }
+
+    function showVerticalNEL() {
+        let res = false;
+        if(window.location.pathname.indexOf('/story/') >= 0){ // story
+            res = true;
+        }
+        if(window.location.pathname.indexOf('/recent') >= 0 ||
+            window.location.pathname.indexOf('/popular') >= 0 ||
+            window.location.pathname.indexOf('/submission/') >= 0){ // submissions
+            res = true;
+        }
+        if(window.location.pathname === '/'){ // home
+            res = true;
+        }
+        return res;
+    }
+    if (showVerticalNEL()) {
+        var nelId = (location.search.split('nel_id=')[1] || '').split('&')[0];
+        var url = '/ajax.pl?op=nel';
+        if(nelId){
+            url += '&nel_id='+nelId;
+        }
+        $.ajax({
+            url: url,
+            type: 'POST',
+            success: function(html){
+                $('#slashboxes').eq(0).prepend(html);
+                $('#slashboxes .ntv-sponsored-disclaimer a span:first-child').html('Featured Content');
+            }
+        });
+    }
+    //announcement NEL
+    if(document.getElementById('announcementText')){
+      $('#announcementText').hide();
+      var hlUrl = '/ajax.pl?op=hl_nel';
+      if(nelId){
+        hlUrl += '&nel_id='+nelId;
+      }
+      $.ajax({
+        url: hlUrl,
+        type: 'POST',
+        success: function(html){
+          if(html.length < 10){
+            $('#announcementText').show();
+            return;
+          }
+          $('#announcementText').html(html).show();
+        },
+        error: function () {
+          $('#announcementText').show();
+        }
+      });
+    }
+    document.addEventListener('click', (e) => {
+      const el = e.target.closest('[data-dest]');
+      if (!el) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const url = el.dataset.dest;
+      const target = el.dataset.target || '_self';
+      if (target === '_blank') {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }
+    });
+}
+let tracking = false;
+bizx.cmp.ifConsent({purposes: ['storage', 'measurement'], vendors: 'sdm'}, initPiwik);
+initNels();
+function trackNelImpressions() {
+  const nelimps = document.querySelectorAll('img[data-name="nel-impression"]:not([data-nel-processed])');
+  nelimps.forEach((imp) => {
+    imp.setAttribute('data-nel-processed', '1'); // prevent re-processing
+    const imp_url = imp.getAttribute('data-source');
+    if (!imp_url) {
+        return;
+    }
+    imp.src = imp_url;
+  });
+}
+function startTracking(){
+    if (tracking) return;
+    tracking = true;
+    trackNelImpressions();
+}
+const observer = new MutationObserver(function(mutations) {
+  if (!tracking) return;
+  for (const m of mutations) {
+    for (const node of m.addedNodes) {
+      if (node.nodeType !== 1) continue; // element only
+      trackNelImpressions(node);
+    }
+  }
+});
+observer.observe(document.body, { childList: true, subtree: true });
+
+bizx.cmp.ifConsent({purposes: ['storage', 'measurement', 'ads'], vendors: 'sdm'}, function(){
+    startTracking();
+});
+
+<!-- 6sense -->
+bizx.cmp.ifConsent({purposes: 'all', vendors: '6sense'}, async() => {
+    (function(){
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;b.defer=true;b.id='6senseWebTag';
+    b.src = "https://j.6sc.co/j/58729049-be80-466a-9abf-b3911430bbd8.js";
+    s.parentNode.insertBefore(b, s);
+    })();
+})
+</script>
+
+
+
+<script src="//a.fsdn.com/con/js/sandiego/maxnav.js?2026-08-11b"></script>
+<script data-source="slashdot" src="//a.fsdn.com/con/js/sandiego/floating-unit.js?2026-08-11b"></script>
+	<script id="after-content" type="text/javascript">
+(function( $, fn, console ){
+	$ && fn && $(function(){ fn($, console); });
+})(window.jQuery, window.pageload_done, window.console);
+</script>
+	
+	<script type='text/javascript'>
+	if(!document.location.href.match(/source=autorefresh/)) {
+		document.write('<img src="//slashdot.org/images/js.gif?153">');
+	}
+</script>
+<noscript>
+	<img src="//slashdot.org/images/njs.gif?106">
+</noscript>
+	<div class="busy genericspinner hide"><span>Working...</span></div>
+
+	    <script>
+            var regular_opt_out_link = true;
+
+            if (bizx.cmp.show_do_not_sell()) {
+                regular_opt_out_link = false;
+                 document.getElementById('opt-out-button').setAttribute('style', 'display:inline');
+            }
+
+            if (window.is_euro_union === 1) {
+                regular_opt_out_link = false;
+                var elem = '<a href="#" title="Privacy Choices" onclick="bizx.cmp.promptConsent(); return false;">Privacy Choices</a>';
+                document.getElementById('opt-out-link').innerHTML = elem;
+            }
+
+            if (regular_opt_out_link == true) {
+                var elem = '<a href="https://slashdotmedia.com/opt-out-choices" title="Opt Out" rel="nofollow">Opt Out</a>';
+                document.getElementById('opt-out-link').innerHTML = elem;
+            }
+            var cmp_modal = document.getElementById('ccpa-modal');
+            var btn = document.getElementById('opt-out-button');
+            var span = document.getElementById('modal-close');
+
+            btn.onclick = function() {
+            	cmp_modal.style.display = 'block';
+            };
+
+            span.onclick = function() {
+            	cmp_modal.style.display = 'none';
+            };
+
+         </script>
+
+	<script>
+		if(typeof(Storage)!=="undefined"){
+			window.scrollTo(0,sessionStorage.scrollPos);
+				$(window).scroll(function () {
+				//You've scrolled this much:
+				sessionStorage.scrollPos = $(window).scrollTop();
+			});
+		}
+		$(function(){
+			$('a').click(function(){
+				delete sessionStorage.scrollPos;
+			})
+		});
+		// window.onbeforeunload = function () {
+		// 	console.log('bakc button clicked');
+		// 	delete sessionStorage.scrollPos;
+		// }
+		window.onpopstate=function() {
+			delete sessionStorage.scrollPos;
+		}
+	</script>
+	
+
+	
+    <script>
+    var current_time = (new Date()).getTime();
+    var image_url = 'https://io.narrative.io/?companyId=2440&id=site_name:slashdot.org&id=url:' + window.location.pathname + '&rand=' + current_time;
+    let hem = bizx.uids.getHem();
+    if (hem) {
+        image_url += '&id=hem:' + hem;
+    }
+    function naLoad() {
+        var image = new Image()
+        image.src = image_url;
+        image.style.display = "none";
+        image.style.height = 0;
+        image.style.width = 0;
+        document.body.appendChild(image)
+      }
+    bizx.cmp.ifConsent({ purposes: 'all', vendors: 'narrative'}, naLoad);
+
+    bizx.cmp.ifConsent({ purposes: 'all', vendors: 'xandr'}, function() {
+        <!-- xandr !-->
+        !function(e,i){if(!e.pixie){var n=e.pixie=function(e,i,a){n.actionQueue.push({action:e,actionValue:i,params:a})};n.actionQueue=[];var a=i.createElement("script");a.async=!0,a.src="//acdn.adnxs.com/dmp/up/pixie.js";var t=i.getElementsByTagName("head")[0];t.insertBefore(a,t.firstChild)}}(window,document);
+        pixie('init', '44bba44a-d920-4ad6-ad5c-6142072898f3' );
+        pixie('event', 'PageView');
+    })
+	</script>
+	<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2cc4ee948b70f3f',t:'MTc4NzAwNzc2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+	</html>
+
+
+	<!-- footer type=current end -->

@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Stevey's Blog Rants: June 2006</title>
+
+  <script type="text/javascript">(function() { (function(){function b(g){this.t={};this.tick=function(h,m,f){var n=f!=void 0?f:(new Date).getTime();this.t[h]=[n,m];if(f==void 0)try{window.console.timeStamp("CSI/"+h)}catch(q){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var e=(a=window.performance.timing)&&a.responseStart;var p=e>0?new b(e):new b;window.jstiming={Timer:b,load:p};if(a){var c=a.navigationStart;c>0&&e>=c&&(window.jstiming.srt=e-c)}if(a){var d=window.jstiming.load;
+c>0&&e>=c&&(d.tick("_wtsrt",void 0,c),d.tick("wtsrt_","_wtsrt",e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&c>0&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",c))),a==null&&window.gtbExternal&&(a=window.gtbExternal.pageT()),a==null&&window.external&&(a=window.external.pageT,d&&c>0&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();window.tickAboveFold=function(b){var a=0;if(b.offsetParent){do a+=b.offsetTop;while(b=b.offsetParent)}b=a;b<=750&&window.jstiming.load.tick("aft")};var k=!1;function l(){k||(k=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",l,!1):window.attachEvent("onscroll",l);
+ })();</script><script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return c[1].search("(^|&)m=")>=0?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(d.indexOf("Mobile")!=-1&&d.indexOf("WebKit")!=-1&&d.indexOf("iPad")==-1||d.indexOf("Opera Mini")!=-1||d.indexOf("IEMobile")!=-1){var e=a();e&&window.location.replace(e)};
+</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Stevey&#39;s Blog Rants - RSS" href="https://steve-yegge.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://www.blogger.com/feeds/13674163/posts/default" />
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/static/v1/v-css/1601750677-blog_controls.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=13674163&zx=e1765c07-d2d0-4d69-bd1c-c9e888df1350"/>
+
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#fff;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Georgia,Serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+a:link {
+  color:#58a;
+  text-decoration:none;
+  }
+a:visited {
+  color:#969;
+  text-decoration:none;
+  }
+a:hover {
+  color:#c60;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Header
+----------------------------------------------- */
+@media all {
+  #header {
+    width:660px;
+    margin:0 auto 10px;
+    border:1px solid #ccc;
+    }
+  }
+@media handheld {
+  #header {
+    width:90%;
+    }
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #eee;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #eee;
+  border-width:0 1px 1px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:760px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:510px;
+    float:left;
+    }
+  #sidebar {
+    width:220px;
+    float:right;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font: "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  /*color:#999;*/
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#c60;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+/* styles I added for code examples, etc. */
+re {color: #4169E1;}
+code {color: #2E8B57;}
+unix {color: #9370DB;}
+span.question {color: #B22222; font-style: italic;}
+
+/* emacs font-lock faces */
+.blue-violet { color: #8a2be2; }
+.constant { color: #696969; }
+.firebrick { color: #b22222; }
+.function-name { color: #b22222; }
+.keyword { color: #0000cd; }
+.string { color: #4169e1; }
+.type { color: #4682b4; }
+.variable-name { color: #2e8b57; }
+
+/* from htmlize.el */
+.comment {
+  /* font-lock-comment-face */
+  color: #006400;
+}
+.comment-delimiter {
+}
+.function-name {
+  /* font-lock-function-name-face */
+  color: #cd2626;
+}
+.keyword {
+  /* font-lock-keyword-face */
+  color: #0000cd;
+}
+.string {
+  /* font-lock-string-face */
+  color: #4169e1;
+}
+.variable-name {
+  /* font-lock-variable-name-face */
+  color: #2e8b57;
+}
+
+</style>
+
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<!-- data-ad-client=ca-pub-1448465482748307 -->
+<!-- --><style type="text/css">@import url(//www.blogger.com/static/v1/v-css/navbar/3334278262-classic.css);
+div.b-mobile {display:none;}
+</style>
+
+</head>
+
+<body><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar/13674163?origin\x3dhttps://steve-yegge.blogspot.com',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+
+<div id="header">
+
+  <h1 id="blog-title">
+    
+	Stevey's Blog Rants
+	
+  </h1>
+  <p id="description">Random whining and stuff.</p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+<div class='adsense' style='text-align:center; padding: 0px 3px 0.5em 3px;'>
+<script type="text/javascript"><!--
+google_ad_client="ca-pub-1448465482748307";
+google_ad_host = "pub-1556223355139109";
+google_ad_width=468;
+google_ad_height=60;
+google_ad_format="468x60_as";
+google_ad_type="text";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="CC6600";
+google_color_url="CC6600";
+google_color_text="999999";
+//--></script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+
+    
+  <h2 class="date-header">Saturday, June 10, 2006</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="115000747586870522"></a>
+         
+    <h3 class="post-title">
+	 
+	 Shiny and New:  Emacs 22
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <div style="clear:both;"></div>I finally upgraded to Emacs 22 a few weeks ago, and now I'm wishing I'd braved it sooner.  Technically it's not released yet; I'm working from a build of a cvs snapshot from a month or so ago.  But the Emacs dev team works pretty hard to make sure it has problem-free builds on a whole slew of platforms, so just following their instructions has a pretty good chance of working for you.<br /><br />It's worth the effort.  Truly.  Reading through its NEWS file, there's just tons and tons of new functionality.  It's going to take me some time, maybe a few weekends, just to absorb it all.<br /><br />Personally, though, I think there are two features that by themselves justify the entire effort of upgrading:  the Unicode and UTF-8 support, and the enhanced <code>replace-regexp</code> command.<br /><h3><a name="unicode">International At Last</a></h3>It's been a <em>very</em> long wait for Unicode and UTF-8 support, and now that I have it, I could never go back.  There isn't much to say about it, except that it works.  Seamlessly.  It used to be hard to get international characters into and out of Emacs, because it had its own custom way of dealing with them.  Now it's a snap.<br /><br />In fact &mdash; here, I'll show ya.  If you type <code>C-h h</code>, it brings up the HELLO file, which contains greetings in a variety of languages.  Here's some Chinese:  中文,普通话,汉语.  Here's some Korean:  안녕하세요, 안녕하십니까.  Here's some Russian:  Здравствуйте!<br /><br />I'm not doing anything special; I'm just copying the strings out of the HELLO buffer and into my html buffer, and saving the file.   I added the content-type header line in this HTML file, and all the characters just show up effortlessly in Firefox.<br /><br />If you can't see them in your browser, well... Firefox is <a href="http://www.mozilla.com/firefox">free</a>.  Or it might be a font problem on your system.  As far as I'm concerned, any problems you may have in viewing them is no longer the fault of my Emacs session, which makes me Happy.  Speaking as a developer who needs to internationalize every program I write, I can't begin to tell you how useful it's been to have seamless editing of utf-8 encoded files for the past month.<br /><br />Right there, that feature alone is worth the upgrade.<br /><br />But wait, there's more... Even though Emacs 22 has a <em>bunch</em> of noteworthy and exciting new features, blah blah blah, I'm going to blithely ignore them all today and focus with single-minded zeal on just one feature.  It has a teeny tiny entry in the NEWS file; it's barely mentioned, really.  I'm sure it was a thousand times less work than the UTF-8 support, but even so, it might well be strong enough on its own to justify the (moderate) pain of upgrading from Emacs 21.<br /><br />Take a look at my examples and see if you agree!<br /><h3><a name="replace">Replacement Super-Powers</a></h3>Emacs 22 sports an amazing new editing feature that's had me drooling in anticipation since I first heard about it, maybe six or eight months ago.  As you can well imagine, that's a lot of drool.<br /><br />And what might the feature be, you ask?  Well, they've enhanced <code>M-x {query-}replace-regxp</code> to accept lisp expressions to be evaluated in the replacement string.<br /><br />That might not seem like a big deal, so let's run through some examples, from simple to very fancy.<br /><h4>Example:  Changing Case in Replacement Strings</h4>Have you ever wanted to change the case of certain letters in the replacement string for <code>M-x replace-regexp</code>?  It used to be a real pain; you either had to write a Lisp function or fix them all by hand.  Now it's trivial.<br /><br />As a simple demonstration, let's say you have a list of names that you need capitalized, like so:<br /><br /><pre>bob<br />sue<br />ralph<br />alice<br />jimmy<br />preston<br />billy joe jim bob</pre><br />It's a contrived example, since Emacs already has <code>M-x capitalize-region</code>.  Or you could use <code>C-u 10 M-x capitalize-word</code>.  But let's try it with the new <code>replace-regexp</code> evaluation feature to see how it works.<br /><br />It's just like a normal <code>M-x {query-}replace-regexp</code>, but you'll prefix any lisp expressions in the replacement string with the sequence `<font face="fixed"><b>\,</b></font>' (i.e., a backslash and a comma).  In this case, we match the whole word, and invoke the Emacs-Lisp function `<code>capitalize</code>' to capitalize the word we just matched:<br /><br /><pre>M-x replace-regexp<br />  Replace regexp:  <b>\(\w+\)</b><br />  Replace regexp with:  <b>\,(capitalize \1)</b></pre><br />and we wind up with each word capitalized, just like we wanted:<br /><br /><pre>Bob<br />Sue<br />Ralph<br />Alice<br />Jimmy<br />Preston<br />Billy Joe Jim Bob<br /></pre><br />Unlike the <code>capitalize-{word/region}</code> commands, which have hardwired behavior, the <code>{query-}replace-regexp</code> commands give us tremendous flexibility.  For instance, we could have capitalized the last letters of the names instead, by splitting each word into two regexps, with the second regexp matching just the last character.  Then it's a simple matter to reconstruct the word with the last letter capitalized:<br /><br /><pre>M-x replace-regexp<br />  Replace regexp:  <b>\(\w+\)\(\w\)</b><br />  Replace regexp with:  <b>\1\,(capitalize \2)</b></pre><br />..to get the reverse capitalization we wanted:<br /><br /><pre>boB<br />suE<br />ralpH<br />alicE<br />jimmY<br />prestoN<br />billY joE jiM boB</pre><br />For a somewhat more realistic example, let's say you've defined some "getter" functions in a Java class, like so:<br /><pre>  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">father</span>() { <span class="keyword">return</span> <span class="constant">this</span>.father; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">mother</span>() { <span class="keyword">return</span> <span class="constant">this</span>.mother; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">sister</span>() { <span class="keyword">return</span> <span class="constant">this</span>.sister; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">brother</span>() { <span class="keyword">return</span> <span class="constant">this</span>.brother; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">auntie</span>() { <span class="keyword">return</span> <span class="constant">this</span>.auntie; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">uncle</span>() { <span class="keyword">return</span> <span class="constant">this</span>.uncle; }<br />  ...</pre> and your code reviewer wants you prepend the word "get" to each of them.<br /><br />Well, this is a classic refactoring situation ("rename method"), but you're going to have to invoke the refactoring manually for each method, and you may have hundreds of them.<br /><br />If these methods have been around a while, and they're being referenced by many external callers, then you're safest using a refactoring tool.  You may even consider writing a one-off refactoring script, perhaps in <a href="http://www.jython.org">Jython</a> or <a href="http://www.mozilla.org/rhino">Mozilla Rhino</a>, that makes programmatic use of either your IDE's refactoring APIs or a lower-level tool such as <a href="http://www.antlr.org">ANTLR</a> or <a href="http://javacc.dev.java.net">JavaCC</a>.<br /><br />Whew!  That's going to be a lot of work, no matter how you slice it.  And if you've published your APIs externally, then you're screwed; all you can do is <code>@deprecate</code> the old names and hope people stop using them someday.<br /><br />But that's why you get your code reviews done early, right?  In many real-world situations, you're performing a rename-method on a new class that has no external callers yet.  And in those situations, Emacs 22 will get the job done far faster than a refactoring IDE can.<br /><br />In this case, we'd just do a straightforward replacement with capitalization, similar to the one in our last example, like so:<br /><pre>M-x replace-regexp<br />  Replace regexp: <b>\(public Relative \)\(\w\)\(\w+\)</b><br />  Replace regexp with: <b>\1get\,(capitalize \2)\3</b></pre> <table nowrap="nowrap" width="100%"><tr><td>Et voilà:</td><td align="right">&nbsp;<small>&lt;-- (p.s.: C-x 8 ` a gives you that neat 'à' character.)</small></td></tr></table><pre>  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">getFather</span>() { <span class="keyword">return</span> <span class="constant">this</span>.father; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">getMother</span>() { <span class="keyword">return</span> <span class="constant">this</span>.mother; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">getSister</span>() { <span class="keyword">return</span> <span class="constant">this</span>.sister; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">getBrother</span>() { <span class="keyword">return</span> <span class="constant">this</span>.brother; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">getAuntie</span>() { <span class="keyword">return</span> <span class="constant">this</span>.auntie; }<br />  <span class="type">public</span> <span class="type">Relative</span> <span class="function-name">getUncle</span>() { <span class="keyword">return</span> <span class="constant">this</span>.uncle; }<br />  ...</pre> Even if you do most of your coding in the comfy confines of a visual IDE, it can be awfully handy to keep Emacs around for your fine-grained text surgery.<br /><br />Now we can move on to some more interesting examples, so you can feel you got your money's worth out of today's blog entry.  But first...<br /><h4>A Note About Emacs Regexps</h4>Emacs regular expression syntax is very old, predating Perl 5's fancier regex syntax by almost a decade.  Perl's regexp enhancements are the defacto standard, supported in virtually all major programming languages.  Unfortunately, nobody has ever seen fit to retrofit poor Emacs with an alternate Perl-compatible regexp syntax, so Emacs regexps are now nonstandard and a bit awkward.  Here are a few of the noteworthy differences:<br /><ul> <li>You have to escape the <b>(</b>, <b>)</b>, <b>{</b>, <b>}</b>, and <b>|</b> metacharacters.  That is, they're not metacharacters by default &mdash; without the backslash, they match themselves.</li><br />       <li>There's no <re>'\d'</re> shortcut for the <re>[0-9]</re> character class.</li><br />              <li>There are no lookahead or lookbehind assertions.</li><br />                     <li>There are no direct equivalents for Perl's <re>{n}?</re>, <re>{n,}?</re>, <re>{n,m}?</re>, <re>/i</re>, <re>/m</re>, <re>/s</re>, <re>/x</re>, <re>\G</re>, or <re>(?# ...)</re> constructs.</ul> But Emacs still supports some of the constructs you've come to expect:<br />                     <ul> <li>You can specify exactly N repetitions with <re>`\{N\}'</re>, and between N and M repetitions (inclusive) with <re>`\{N,M\}'</re>.  E.g. <re>[0-9]\{3\}-[0-9]\{4\}</re> matches a 7-digit phone-number in the format xxx-xxxx.</li><br />                            <li>You can have backreferences to previously matched groups in the regular expression.  E.g. <re>\(re\).*\1</re> matches words with "re" appearing at least twice, like ca<b>re</b>f<b>re</b>e and p<b>re</b>miè<b>re</b>.</li><br />                                   <li>You can specify "shy" groups that don't record the match with <re>\(?: ... \)</re>.</li></ul> There are also some Emacs-specific enhancements, such as matchers for entries in the mode-specific syntax tables.  The Info pages have more details on Emacs regular expressions.<br /><br />                                   If you plan to be more than a casual Emacs user, you should study the regexp syntax carefully, because there are many useful commands in Emacs that operate on regular expression matches.  The better you know the Emacs-specific syntax, the more productive you'll be.<br /><br />                                   I suppose before we move on to the next example, I should preemptively answer one of the most frequently asked questions about Emacs regexps.<br /><br />                                   <span class="question"><b>Q:</b> How do I embed a newline in a regexp I'm typing into the minibuffer?</span><br /><br />                                   <b>A:</b> You use the key sequence <code>C-q C-j</code>.  The C-q invokes the Emacs `<code>quoted-insert</code>' command, which basically says "insert the next character literally, without invoking any commands with it."  C-j (i.e., control-j) is how a newline character is represented in Emacs.<br /><br />                                   <code>C-q</code> is a useful general-purpose Emacs command.  Whenever you want to insert a character (in the minibuffer or a regular buffer), and it's just refusing to go in, <code>C-q &lt;char&gt;</code> will almost always do the trick.<br />                                   <h4>Example:  Numbering Lists</h4>With our new replacement-with-evaluation feature, it becomes straightforward to create numbered lists.  Emacs 22 has introduced a new backreferencing metacharacter, `<b>\#</b>', which counts the number of replacements we've done so far in the current command.  So even without using any Lisp, we already have one way to make numbered lists.<br /><br />                                   Let's see... we'll need a short list of words as an example.  How about all the words in <unix>/usr/share/dict/words</unix> that <em>don't</em> end in [a-z]?  Easy enough to find out.  We <code>M-x find-file /usr/share/dict/words</code> (only if you're on a Unix system, of course, and the location varies), and then <code>M-x list-match [^a-z]$</code>.  Ah, perfect &mdash; our <code>*Occur*</code> buffer shows 32 matches:<br /><br /><pre>   1987:Bogotá<br />   5243:Fabergé<br />   9772:Mallarmé<br />  12044:Paraná<br />  12499:Poincaré<br />  16956:abbé<br />  19923:appliqué<br />  20932:attaché<br />  23704:blasé<br />  26223:café<br />  26511:canapé<br />  29314:cliché<br />  31431:consommé<br />  38981:décolleté<br />  42995:fiancé<br />  43623:flambé<br />  44996:frappé<br />  48317:habitué<br />  58328:macramé<br />  58898:manqué<br />  62514:naiveté<br />  65243:outré<br />  66710:passé<br />  71609:protégé<br />  73675:recherché<br />  76387:risqué<br />  76847:roué<br />  77811:sauté<br />  82455:soufflé<br />  89055:touché<br />  96268:émigré<br />  96274:études</pre><br />They're prefixed by their line number, but we can make that disappear during the replacement.  Let's turn them into a numbered list.  First copy the matches into a new, writable buffer, then <code>M-C-&lt;</code> to go to the top of the list, and then:<br /><pre>M-x replace-regexp<br />  Replace regexp: <b>\(.+:\)</b><br />  Replace regexp with <b>\#.&nbsp;</b></pre>  Boom!<br /><pre>0. Bogotá<br />1. Fabergé<br />2. Mallarmé<br />3. Paraná<br />4. Poincaré<br />5. abbé<br />6. appliqué<br />7. attaché<br />8. blasé<br />9. café<br />10. canapé<br />11. cliché<br />12. consommé<br />13. décolleté<br />14. fiancé<br />15. flambé<br />16. frappé<br />17. habitué<br />18. macramé<br />19. manqué<br />20. naiveté<br />21. outré<br />22. passé<br />23. protégé<br />24. recherché<br />25. risqué<br />26. roué<br />27. sauté<br />28. soufflé<br />29. touché<br />30. émigré<br />31. études</pre><br />Oooh, but only Computer Science students like lists numbered from zero. So let's <code>M-x undo</code> (using <b>C-/</b> of course &mdash; everyone uses <b>C-x C-u</b>, but that's way too many keystrokes for something as common as Undo!) and use a tiny bit of Lisp to start the numbering at 1.<br /><br />It so happens that Emacs-Lisp defines a function called <code>1+</code>, which increments a number.  So we can just wrap the <re>`\#'</re> in our replacement string with that function, like so:<br /><br /><table nowrap="nowrap" width="100%"><tr><td>\,(1+ \#).&nbsp;</td><td align="right">&nbsp;<small>&lt;-- (There's a trailing space after the ".")</small></td></tr></table><br />The result is just what we wanted:<br /><pre>1. Bogotá<br />2. Fabergé<br />3. Mallarmé<br />4. Paraná<br />5. Poincaré<br />6. abbé<br />7. appliqué<br />8. attaché<br />9. blasé<br />...</pre><br />The lisp <code>1+</code> function operates on numbers, not strings, so you might have expected it to barf with a <code>wrong-type-argument</code> error.  Our example works because the <b>\#</b> metacharacter returns a <em>count</em> of matches so far, which is a number, not a string value.  In our next example, we'll have to do the conversion ourselves.<br /><h4>Example:  Re-numbering Lists</h4>We can use Lisp-code snippet similar to our previous one to renumber an existing list.  Let's say we want to insert a word in a numbered list, like so:<br /><pre>1. Bogotá<br />2. Fabergé<br /><em>3. Flambé</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>&lt;-- (We inserted this one.  Nice word, eh?)</small><br />3. Mallarmé<br />4. Paraná<br />5. Poincaré<br />6. abbé<br />7. appliqué<br />8. attaché<br />9. blasé<br />...</pre><br />Easy to fix in Emacs22:  place the cursor just after the word we inserted, and <code>M-x replace-regexp</code> `<re>^\([0-9]+\)</re>' with `<re>\,(1+ (string-to-int \1))</re>'.  The result:<br /><pre>1. Bogotá<br />2. Fabergé<br />3. Flambé<br />4. Mallarmé<br />5. Paraná<br />6. Poincaré<br />7. abbé<br />8. appliqué<br />9. attaché<br />10. blasé<br />...</pre><br />This time we used a numbered backreference (<b>\1</b>), which always returns a string.  Don't be fooled by the fact that we appear to be matching a number:  the regexp `<re>^\([0-9]+\)</re>' matches a string containing numeric digits, and we have to do a type conversion (using the Emacs-Lisp builtin function <code>string-to-int</code>) if we want to increment it.<br /><br />I hope by now you're beginning to suspect that knowing a little Emacs-Lisp can help you <em>immensely</em> with your editing tasks.  Believe it!  (Not surprisingly, knowing a lot of Emacs-Lisp helps even more.)<br /><h4>Example:  Alphabetically Numbered Lists</h4>Let's say we have a list of 26 or fewer items, and we want to "number" it with A, B, and C rather than 1, 2, and 3.<br /><br />Well, shoot.  The list we've been using has 32 items.  I'd prefer a list of 26 (or so) for this example.<br /><br />Let's see... we can write a wee Lisp function to group the words in <unix>/usr/share/dict/words</unix> by their ending letters a-z:<br /><pre>(cl-prettyprint<br /> (<span class="keyword">save-excursion</span><br />   (set-buffer <span class="string">"words"</span>)<br />   (<span class="keyword">loop</span> <span class="variable-name">for</span> c <span class="variable-name">from</span> ?a <span class="variable-name">to</span> ?z<br />         <span class="variable-name">collect</span> (<span class="keyword">let</span> ((i 0)<br />                       (tail (string c)))<br />                   (beginning-of-buffer)<br />                   (<span class="keyword">while</span> (re-search-forward (<span class="keyword">concat</span> tail <span class="string">"$"</span>) nil t)<br />                     (<span class="firebrick">incf</span> i))<br />                   (<span class="keyword">cons</span> tail i)))))</pre><br />We just evaluate this snippet in our <code>*scratch*</code> buffer (by typing <code>C-j</code> after the last paren).  It crunches the <code>words</code> buffer and produces:<br /><pre>((<span class="string">"a"</span> . 1625)<br /> (<span class="string">"b"</span> . 167)<br /> (<span class="string">"c"</span> . 772)<br /> (<span class="string">"d"</span> . 8331)<br /> (<span class="string">"e"</span> . 7190)<br /> (<span class="string">"f"</span> . 191)<br /> (<span class="string">"g"</span> . 7401)<br /> (<span class="string">"h"</span> . 991)<br /> (<span class="string">"i"</span> . 457)<br /> (<span class="string">"j"</span> . 4)<br /> (<span class="string">"k"</span> . 784)<br /> (<span class="string">"l"</span> . 2041)<br /> (<span class="string">"m"</span> . 920)<br /> (<span class="string">"n"</span> . 4347)<br /> (<span class="string">"o"</span> . 718)<br /> (<span class="string">"p"</span> . 450)<br /> (<span class="string">"q"</span> . 5)<br /> (<span class="string">"r"</span> . 4279)<br /> (<span class="string">"s"</span> . 44857)<br /> (<span class="string">"t"</span> . 4454)<br /> (<span class="string">"u"</span> . 140)<br /> (<span class="string">"v"</span> . 46)<br /> (<span class="string">"w"</span> . 247)<br /> (<span class="string">"x"</span> . 182)<br /> (<span class="string">"y"</span> . 5519)<br /> (<span class="string">"z"</span> . 124))</pre><br />Hmmm... nothing really promising.  We only get 9 words if we combine the ones ending in "q" and "j".  A minor tweak to our search function will show us words ending with a doubled letter:<br /><pre>(cl-prettyprint<br /> (<span class="keyword">save-excursion</span><br />   (set-buffer <span class="string">"words"</span>)<br />   (<span class="keyword">loop</span> <span class="variable-name">for</span> c <span class="variable-name">from</span> ?a <span class="variable-name">to</span> ?z<br />         <span class="variable-name">collect</span> (<span class="keyword">let</span> ((i 0)<br />                       (tail (<span class="keyword">concat</span> (string c) (string c))))<br />                   (beginning-of-buffer)<br />                   (<span class="keyword">while</span> (re-search-forward (<span class="keyword">concat</span> tail <span class="string">"$"</span>) nil t)<br />                     (<span class="firebrick">incf</span> i))<br />                   (<span class="keyword">cons</span> tail i)))))</pre><br />Evaluating it gives us:<br /><pre>((<span class="string">"aa"</span> . 2)<br /> (<span class="string">"bb"</span> . 3)<br /> (<span class="string">"cc"</span> . 1)<br /> (<span class="string">"dd"</span> . 5)<br /> (<span class="string">"ee"</span> . 136)<br /> (<span class="string">"ff"</span> . 75)<br /> (<span class="string">"gg"</span> . 4)<br /> (<span class="string">"hh"</span> . 0)<br /> (<span class="string">"ii"</span> . 4)<br /> (<span class="string">"jj"</span> . 0)<br /> (<span class="string">"kk"</span> . 0)<br /> (<span class="string">"ll"</span> . 291)<br /> (<span class="string">"mm"</span> . 2)<br /> (<span class="string">"nn"</span> . 38)<br /> (<span class="string">"oo"</span> . 30)<br /> (<span class="string">"pp"</span> . 4)<br /> (<span class="string">"qq"</span> . 0)<br /> (<span class="string">"rr"</span> . 13)<br /> (<span class="string">"ss"</span> . 1276)<br /> (<span class="string">"tt"</span> . 58)<br /> (<span class="string">"uu"</span> . 1)<br /> (<span class="string">"vv"</span> . 0)<br /> (<span class="string">"ww"</span> . 0)<br /> (<span class="string">"xx"</span> . 0)<br /> (<span class="string">"yy"</span> . 0)<br /> (<span class="string">"zz"</span> . 9))</pre><br />Looks like we have more options with this list.  Maybe if we just take the ones with a count of 5 or less... looks like 26 of them.  Perfect!<br /><br />We could write a little more code to extract the words matching our criteria, but it's clearly going to be fastest to eyeball it.  So we call <code>M-x list-matching-lines</code> with the regexp <re><small>\(aa\|bb\|cc\|dd\|gg\|ii\|mm\|pp\|uu\)$</small></re>, and we get our list of 26 words:<br /><pre>   2145:Bragg<br />   3436:Cobb<br />   5662:Fromm<br />   6284:Gregg<br />   6317:Grimm<br />   6675:Hawaii<br />   8025:Judd<br />   8290:Kellogg<br />   8411:Kidd<br />   8509:Knapp<br />   8645:Krupp<br />   8689:Kwanzaa<br />   8804:Lapp<br />  12549:Pompeii<br />  15425:Todd<br />  16257:Webb<br />  16641:Yacc<br />  17702:add<br />  21427:baa<br />  39145:ebb<br />  39372:egg<br />  46305:genii<br />  62411:muumuu<br />  64283:odd<br />  72801:radii<br />  78139:schlepp</pre><br />And what a fine bunch of words they are.  Just <em>try</em> doing that exercise in Java or C++ sometime.<br /><br />In any case, now we have a list for our example, and we want to number it alphabetically.  So we need to replace all the cruft up through each ':' with a counter converted to an alphabet character.<br /><br />As we saw in our little function that produced this word list, Emacs uses `?c' syntax to represent characters, and internally they're just ints.  So we just add the character `?a' to our `\#' counter this time, to loop through the characters 'a' to 'z':<br /><pre>M-x replace-regexp<br />  Replace regexp:  <b>^\(.+:\)</b><br />  Replace regexp with:  <b>\,(+ ?a \#)) </b></pre><br />And, ladies and gentlemen... behold!<br /><pre>97) Bragg<br />98) Cobb<br />99) Fromm<br />100) Gregg<br />101) Grimm<br />102) Hawaii<br />103) Judd<br />104) Kellogg<br />105) Kidd<br />106) Knapp<br />107) Krupp<br />108) Kwanzaa<br />109) Lapp<br />110) Pompeii<br />111) Todd<br />112) Webb<br />113) Yacc<br />114) add<br />115) baa<br />116) ebb<br />117) egg<br />118) genii<br />119) muumuu<br />120) odd<br />121) radii<br />122) schlepp</pre><br />D'oh!!!!  I forgot to convert the counter back to a character.  Haha.  Oops.<br /><br />After a quick C-/ to undo the operation, we can just change the replacement regexp to `<re>\,(string (+ ?a \#))) </re>', and we finally have our alphabetically-enumerated word list:<br /><pre>a) Bragg<br />b) Cobb<br />c) Fromm<br />d) Gregg<br />e) Grimm<br />f) Hawaii<br />g) Judd<br />h) Kellogg<br />i) Kidd<br />j) Knapp<br />k) Krupp<br />l) Kwanzaa<br />m) Lapp<br />n) Pompeii<br />o) Todd<br />p) Webb<br />q) Yacc<br />r) add<br />s) baa<br />t) ebb<br />u) egg<br />v) genii<br />w) muumuu<br />x) odd<br />y) radii<br />z) schlepp</pre><br />Or we could get capital letters by using <re>`\,(upcase (string (+ ?a \#)))) '</re> instead.<br /><br />Note that <code>M-x replace-regexp</code> has its own command history list, so you can just use up-arrow to fetch old regexps you've entered, and tweak them in place.  Easier than re-entering them from scratch every time.<br /><h4>Some Even Snazzier Examples</h4>So far we've used this amazing little new feature to generate (and renumber) various lists, and to change the capitalization of the replacement text on the fly (in two different ways).  Both very practical and useful transformations.<br /><br />In our next example, we'll assume you're working on a Java-based Web application, because your company is too lame to let you use <a href="http://www.rubyonrails.org">Ruby on Rails</a>.  Hypothetically speaking, of course.<br /><br />Suppose you have some JSP files containing references to various static images, e.g. &lt;img src=<span class="string">"images/foo_bar.gif"</span>&gt;, and you decide you want to change them to calls into Java code to fetch the image URLs as the page is composed.  So <span class="string">"images/foo_bar.gif"</span> needs to change to (say) <small>&lt;%= StaticImageManager.FOO_BAR_GIF.getUrl()%&gt;</small>.<br /><br />Well, clearly no fancy-pants refactoring IDE on the planet is going to be able to help you with this.  If you're an Eclipse or IntelliJ or Visual Studio user, get ready for some carpal tunnel while you manually change every instance.<br /><br />However, if you've followed the examples so far, you know it's trivial in Emacs 22:<br /><pre>M-x replace-regexp<br />  Replace regexp:  <re>"images/\([a-z_]+\)\.\(gif\|jpg\)"</re><br />  Replace regexp with: <re>&lt;%= StaticImageManager.\,(upcase (concat \1 "_" \2)).getUrl() %&gt;</re></pre><br /> and they're all fixed in the blink of an eye.<br /><br />But you knew that by now.  This example wasn't more complex than the others, just a little longer.<br /><br />It starts to get even more interesting if you permit side effects in your lisp expressions.  That is to say, persistent changes to the world, whether it's Emacs variables, your buffer configuration, or even your filesystem.  You have to be a bit more careful, but you can use the new <code>replace-regexp</code> eval feature as a powerful interactive scripting engine.<br /><br />Our last example will be opening files.  Often you'll find yourself looking for files using the Unix `find' command in a shell.  But what if you want to open the files it turned up?<br /><br />Again, it's a slightly contrived example, because it's already possible to use Unix shell commands and the "emacsclient" program to instruct Emacs to open the files you find.  But it should suffice to show you what we mean by "side-effecting replacements".<br /><br />A simple example should work.  Let's go to our installed emacs lisp directory.  Mine's <unix>/usr/share/emacs/22.0.50/lisp</unix>, which I found by looking at my <code>`load-path'</code> variable in my <code>*scratch*</code> buffer.  There are various subdirectories, including <unix>textmodes/</unix>, <unix>progmodes/</unix>, and others.<br /><br />To have Emacs open (say) all the elisp files beginning with the letter `x', we <code>M-x shell</code>, cd to <unix>/usr/share/emacs/22.0.50/lisp</unix>, and use the `find' command:<br /><pre><font color=#0000cdcd>/usr/share/emacs/22.0.50/lisp</font>&gt;<font color=#cdcd26262626>find . -name "x*.el"</font><br />./progmodes/xscheme.<font color=#00646400>el</font><br />./term/x-win.<font color=#00646400>el</font><br />./term/xterm.<font color=#00646400>el</font><br />./obsolete/x-apollo.<font color=#00646400>el</font><br />./obsolete/x-menu.<font color=#00646400>el</font><br />./x-dnd.<font color=#00646400>el</font><br />./xml.<font color=#00646400>el</font><br />./xt-mouse.<font color=#00646400>el</font></pre><br />If you select the lines naming the 8 files above, then <code>M-x replace-regexp</code> will operate just in the selected region.  Opening the selected files is then one easy command:<br /><pre>M-x replace-regexp<br />  Replace regexp:  <b>.+</b><br />  Replace regexp with:  <b>\,(find-file-noselect \&amp;)</b></pre><br />The files are silently opened in the background when you execute this "replacement" command.  We could alternately have used <code>`find-file'</code> to watch them opened noisily in the foreground, but when opening lots of files I personally prefer to open them in the background.  (This also makes them appear at the bottom of your buffer-list.)<br /><br />Note that we used a new metacharacter here, `<b>\&amp;</b>', which grabs the entire string that matched.  That means we were able to omit the grouping parens.  We also relied on the fact that Emacs regexps are, by default, anchored to the beginning and end of the line, so `<re>.+</re>' matches exactly one line, not counting the newline character.  Pretty convenient!<br /><br />After the replacement, the lines in your <code>*shell*</code> buffer are replaced with the return values of the calls to <code>`find-file{-noselect}'</code>, which in this case is just the name of the file.  But we don't really care, since it's a shell buffer; we were doing it purely for the side effect and not for the replacement.<br /><br />Armed with your new-found knowledge, <code>replace-regexp</code> and <code>query-replace-regexp</code> should become some of the most powerful tools in your editing toolchest.  The more experience you have with Emacs regular expressions, and with Emacs Lisp, the more bang for your buck you'll get out of this enhancement.<br /><h4>Example:  Heading-Tag Promotion/Demotion</h4> Oh, OK, fine.  One <em>laaaaaast</em> example, because I just ran into it as I was putting in my final edits.  You know how most browsers like to render &lt;h1&gt; tags in 10-foot tall letters?  So we all start with &lt;h2&gt; or even &lt;h3&gt; tags and work down from there?  (Those of us too lazy to muck with CSS overly much, that is.  Which is most of us.)<br /><br />Well, I started my blog entry today with &lt;h1&gt; tags, and decided to bump them all up a number (and thus down in size.)<br /><br />I used to do this operation with N successive replacements, with N ranging from 2 to 5.  You replace the &lt;h5&gt;'s with &lt;h6&gt;, then the &lt;h4&gt;'s with &lt;h5&gt;, and so on.  No more of that hooey for me!  I can renumber them all with a single replacement.  You guessed it:<br /><pre>M-x replace-regexp<br />  Replace regexp:  <b><\(/?\)h\([0-9]\)></b><br />  Replace regexp with:  <b><\1h\,(1+ (string-to-int \2))></b></pre> Zoom, zoom, zoom!  All fixed in one swell foop.  That's just awesome.<br /><br />There's also a new <code>query-replace-regexp-eval</code> function, but it's not all that different from what we've talked about here, so you can read about it when you upgrade.<br /><br />You <em>are</em> going to upgrade now, right?  Well, it's your choice, it's your time.  Gotta spend time to save time, as the old saying (almost) goes.<br /><br />But I think it was worth it.<br /><br /><h3>How do I learn this Emacs-Lisp doohickey, anyway?</h3>It's really not too hard.  Honest.  Especially since I'm going to tell you some things that will make it much easier on you, because Emacs Lisp is pretty different from other languages you're used to.  If you keep these points firmly in mind, learning it will be a snap, really.  They're all things I wish someone had told me when I started learning elisp.<br /><h4>It'll Always be Useful</h4>First, recognize that Emacs Lisp isn't going anywhere.  Emacs is not going to magically become programmable in Python or Ruby or JavaScript or Perl overnight.  (Or, God save us, Java or C++ or C# &mdash; all fine languages, to be sure, but they all suck at scripting.)<br /><br />And judging from the last decade's pace of innovation in editing and coding environments, it will be many years before any editor begins to approach Emacs in the things Emacs does well.  [The one noteworthy exception is <a href="http://www.vim.org">VIM</a>, which is also very powerful by all accounts, though I have no experience with it. If you have already developed a preference for vi over emacs, then you may experience greater happiness pursuing expertise with VIM.  Psh.]<br /><br />There do, in fact, exist packages that make it possible to write Emacs extensions in Python (<a href="http://www.emacswiki.org/cgi-bin/wiki?PyMacs">PyMacs</a>), Ruby (<a href="http://www.rubyist.net/~rubikitch/computer/el4r/index.en.html">El4r</a>), and Perl (<a href="http://search.cpan.org/~jtobey/Emacs-EPL-0.7/lib/Emacs/Lisp.pm">EPL</a>).  But they're far from seamless:  they're hard to install and they're hard to learn.  They will only appeal to you (maybe) if you're a truly die-hard programmer in one of those languages, <em>and</em> you already know a fair amount of emacs-lisp, because they're closely tied to the elisp programming model.  You will still need to know about buffers, overlays, markers, plists, symbols, and all the other Emacs-Lisp abstractions.  And you'll have to deal with the sometimes complex mapping between language X and Emacs-Lisp.<br /><br />Plus, if you want to share your extensions with your friends, they'll have to go through the install process as well.  I just wouldn't go there, not if you're trying to learn how to get better with Emacs.  If you're an expert in both languages, then sure.  The package authors could use your help.<br /><br />In the meantime, Emacs isn't going anywhere, and Emacs-Lisp isn't going anywhere, not for several decades at least, so it <em>will</em> benefit you to learn them deeply.  It will never be obsolete knowledge.  You might as well start learning it now, and reap the benefits now.<br /><h4>It's Kinda Like XML</h4>You can think of Emacs Lisp as being very much like XML.  There are some differences that will become apparent as you use it, but thinking of it as XML will help a <em>lot</em>.<br /><br />In most programming languages, it's good style to avoid deeply indented code.  With XML, indentation depth is entirely a function of your data domain; you don't generally think about restructuring it to avoid indentation.  (Think of XHTML, for instance, in which the nesting can become arbitrarily deep.)  With XML, you're building a tree structure, and it's easy to see it that way.  Your XML processing tools help you manage navigating your way around complex documents.<br /><br />With Lisp, you're also building an explicit tree structure.  That means it's going to be indented very differently from your C/Java/Perl/Python code.  The indentation is less something you decide, and more something that's decided for you based on the approach you take to the problem.<br /><br />The perpetual indentation used to drive me nuts, but I've come to appreciate its advantages.  I won't go into them here, but given what you know about XML, I'm sure you can imagine a few benefits without too much effort.<br /><h4>It Gets Better With Practice</h4>If you do it enough, eventually you'll enjoy programming in Emacs-Lisp, no matter how much you hate it initially.  You'll probably never love it, and you'll pine for a more powerful Lisp dialect, and for features from other languages you know.  But like any other programming language, it becomes way more fun as you go from beginner to expert.<br /><br />Programmers really hate new syntax.  Most people find it harder to learn new syntax than to learn new Design Patterns or APIs or frameworks.  So you'll initially dislike Emacs-Lisp's syntax; it's virtually guaranteed.  Fortunately, it doesn't really have much in the way of syntax; almost everything follows the exact same s-expression form.  So you should get past the syntax pretty quickly, and in a few weeks you'll start liking it just fine.<br /><h4>It's Oddly "Zippy"</h4>Emacs-Lisp uses a radically different programming model from other languages.  There's a strong (nearly 1:1) correspondence between what you can do in the editor and what you can do in the language.  Writing elisp code is very much like scripting your actions in the editor.<br /><br />For instance, to get the length of the current line (assuming the function doesn't exist), your code will <em>remember</em> where you are, then <em>move</em> the cursor to the beginning of the line, get the buffer position, <em>jump</em> the cursor to the end of the line, get the buffer position there, subtract the two buffer positions, <em>return</em> the cursor to where you were, and then finally return the value.  That's a lot of moving around!  [You can also use <code>point-at-bol</code> and <code>point-at-eol</code>, but in general, you still zip around a lot.]<br /><br />As another example, if you wanted to determine whether any lines in the buffer started with a particular regexp, then you'd go look at them!  You don't call a function that returns a list of lines in the buffer (though you could write one).  You just save your position, go to the beginning of the buffer, and call <code>next-line</code> and <code>looking-at</code> to check each line against the regexp.  It's like you've got a little worker-bee version of yourself, doing automatically what you could have done by hand (albeit much more slowly) using editor commands.<br /><br />Over the years, they've piled up thousands of shortcut functions, and much of the time you wind up programming "normally" by invoking functions on data structures, like in other languages.  But it really helps to remember that little worker bee that zips around like Feynman's lonely electron.  Your coding will go more smoothly if you keep it in mind.<br /><h4>You can Learn From its Peers</h4>Lastly, it's useful to know that Emacs-Lisp has a lot in common with two other famous Lisp dialects:  <a href="http://www.cliki.net/index">Common Lisp</a> and <a href="http://www.schemers.org">Scheme</a>.  It's arguably closer to Common Lisp, and in many ways it's inferior to both of them, but learning a little about Common Lisp or Scheme will improve your Emacs-Lisp coding dramatically.  And, as it happens, there are far more books published about Common Lisp and Scheme than there are about Emacs Lisp.  I'll list a few of my favorites here.<h4>Emacs-Lisp Books</h4>You should start with Richard M. Stallman's book.  He wrote Emacs, and he wrote the <a href="http://www.amazon.com/o/asin/188211485X">Gnu Emacs Manual</a>.  It's a classic, and probably remains the best book on Emacs to date.  It's a good idea to read it just to get an overview of all the things Emacs can do out of the box.  Otherwise it'll be hard to know what kinds of Emacs-Lisp programs you can write.<br /><br />Next, you'll want the all-time classic, <a href="http://www.amazon.com/o/asin/0596002890">Mastering Regular Expressions</a>, by Jeffrey Friedl.  Don't leave home without it.<br /><br />Starting with Emacs 22, the Emacs-Lisp Reference Manual comes bundled with the distribution.  I don't know if it's sold in hardcopy anymore, but it's chock-full of critically important information, so you'd do well to read it.  (And re-read it periodically.  It's a lot of information.)<br /><br />I do have a couple of books on Emacs Lisp:<br /><br /><a href="http://www.amazon.com/o/asin/1882114566">An Introduction to Programming in Emacs Lisp</a> (Robert Chassell)<br /><a href="http://www.amazon.com/o/asin/1565922611">Writing GNU Emacs Extensions</a> (Bob Glickstein)<br /><br />They're not bad, but I honestly never got much from them.  However, your mileage may vary.  Go to Amazon, peek through them a bit, and decide for yourself whether they'll be helpful.<br /><h4>Common Lisp Books</h4>There are lots &mdash; lots and lots &mdash; but these are the ones I personally found most directly relevant to helping me learn Emacs-Lisp:<br /><br /><a href="http://www.amazon.com/o/asin/0133708756">ANSI Common Lisp</a> (Paul Graham)<br /><a href="http://www.paulgraham.com/onlisp.html">On Lisp</a> (Paul Graham) &mdash; out of print, but available as a PDF.  I printed it out and bound it at FedEx/Kinko's.<br /><br />I own (and have read) essentially all of the other books on Common Lisp in print today, and the two above got me the furthest towards Emacs-Lisp proficiency.  I'm not counting Peter Norvig's <a href="http://www.amazon.com/o/asin/1558601910">AI</a> <a href="http://www.amazon.com/o/asin/0137903952">books</a>, since their focus is AI, not Lisp.  They're awesome books, though; I recommend them both highly.<br /><br />And if you're actually trying to learn Common Lisp to <em>use</em> it (as opposed to applying what you can of it to Emacs), then you'd better get a copy of <a href="http://www.amazon.com/o/asin/1590592395">Peter Siebel's Book</a>.  It's essential.<br /><h4>Scheme Books</h4>Again, lots to choose from, and Scheme books tend to be more didactic, so I found they had a bigger impact in terms of ingraining the core ideas of Lisp.  Listed in decreasing order of mind-opening wow-ness:<br /><br /><a href="http://www.amazon.com/o/asin/0262011530">Structure and Interpretation of Computer Programs</a> &mdash; a good candidate for the "Best Computer Science Book Ever" award.<br /><br /><a href="http://www.amazon.com/o/asin/0262560992">The Little Schemer</a> &mdash; I worked through every single exercise twice:  once in Scheme, once in Emacs-Lisp.  Ditto for the sequel, <a href="http://www.amazon.com/o/asin/026256100X">The Seasoned Schemer</a>, and I just started on the brand-new third volume, <a href="http://www.amazon.com/o/asin/0262562146">The Reasoned Schemer</a>.<br /><br /><a href="http://www.amazon.com/o/asin/0262541483">The Scheme Programming Language</a> &mdash; good book, though a bit heavy going, as it's long on concepts and short on explanations.  I found it well worth wrestling through, though.<br /><br />Scheme is a wonderful language, and worth learning in its own right.<br /><h4>Caveats</h4>If Emacs 22 goes on a horrible disk-eating rampage, don't blame me.<br /><br />As one might expect of alpha software, it's got some bugs and glitches.  I've never had anything really scary happen.  It hasn't corrupted my data so far, and it has only crashed once or twice (i.e., far less often than the supposedly "stable" releases of XEmacs).  But it occasionally does surprising things, like minimizing the entire frame if I try to 'q' (quit) certain read-only windows, or suddenly bringing up a completions buffer when I'm typing along in fundamental mode.  They're rare enough not to have bothered me much.<br /><br />They've also broken backwards-compatibility with several in-house functions and modes, so I've had to do some work to rewrite them.  If you rely on proprietary Emacs-Lisp software as part of your job, and you're not proficient with elisp yourself, then you should make sure you have a local guru available before you upgrade to Emacs 22, or some stuff may stop working for you.<br /><br />This blog entry consists, as usual, of only my very own whimsical opinions.  I don't speak for my employer, nor for anyone else's employer, nor for any of the authors cited here, nor for the most excellent development teams working on Emacs, XEmacs, VIM, Eclipse, IntelliJ, Visual Studio, Firefox, and Ruby on Rails.  I just speak for me.<br /><br />If you didn't like this article, please be sure to run over to Reddit and call me stupid there.  I'm sure people would hate to miss an opportunity to hear how you've taken such a boldly prominent and decisive stand on some random guy's personal blog.<br /><br />And if you did like the article &mdash; well, go play with <a href="http://savannah.gnu.org/projects/emacs/">Emacs 22</a>!<div style="clear:both; padding-bottom:0.25em"></div>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Steve Yegge at <a href="http://steve-yegge.blogspot.com/2006/06/shiny-and-new-emacs-22.html" title="permanent link">9:34 PM</a></em>
+      
+
+         <a class="comment-link" href="https://www.blogger.com/comment/fullpage/post/13674163/115000747586870522"location.href=https://www.blogger.com/comment/fullpage/post/13674163/115000747586870522;>17 comments</a>
+
+      
+  <span class="item-control blog-admin pid-1139049968"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=13674163&postID=115000747586870522&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://resources.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
+<dl class="profile-datablock"><dt class="profile-img"><a href="https://www.blogger.com/profile/14812997485690838920"><img src="//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8lMplUBvgDts4l0lod1nWJ71okMnRPkuOiZXzCG3lFp7UqiY4MymxpbZIyAtcosW8amfQNznW4wye0IIOOdBe0egaGFj0jnAopXvqmJVikZPc6QPO9WiBG1rVHYOy2t8/s220/stevey-6-21-07.jpg" width="80" height="59" alt="My Photo"></a></dt>
+<dd class="profile-data"><strong>Name:</strong> <a rel="author" href="https://www.blogger.com/profile/14812997485690838920"> Steve Yegge </a></dd>
+<dd class="profile-data"><strong>Location:</strong>  Kirkland, Washington, United States </dd></dl>
+
+<p class="profile-link"><a rel="author" href="https://www.blogger.com/profile/14812997485690838920">View my complete profile</a></p></div>
+   
+  <!-- End #profile -->
+    
+  
+
+  <h2 class="sidebar-title">Feeds</h2>
+    <ul>
+    	<li><a href="http://steve-yegge.blogspot.com/atom.xml">Atom</a></li>
+    	<li><a href="http://feeds.feedburner.com/SteveysBlogRants">FeedBurner</a></li>
+    </ul>
+
+  <h2 class="sidebar-title">My Sites</h2>
+    <ul>
+    	<li><a href="http://steve.yegge.googlepages.com/blog-rants">Stevey's Drunken Blog Rants<sup>TM</sup></a></li>
+    	<li><a href="http://www.cabochon.com/">Wyvern</a> (my extensible game)</li>
+    	<li><a href="http://www.cabochon.com/~stevey/sokoban">Stevey's JVM Soko-Shootout</a></li>
+    	<li><a href="http://www.oreillynet.com/ruby">O'Reilly Ruby</a> <em>(guest blogger)</em></li>
+    </ul>
+
+  <h2 class="sidebar-title">Some Favorite Languages</h2>
+    <ul>
+    	<li><a href="http://www.ruby-lang.org">Ruby</a></li>
+    	<li><a href="http://www.digitalmars.com/d/index.html">D language</a></li>
+    	<li><a href="http://www.iolanguage.com">Io language</a></li>
+    	<li><a href="http://www.jython.org">Jython</a></li>
+    	<li><a href="http://www.gigamonkeys.com/book/">Common Lisp</a></li>
+    	<li><a href="http://www.schemers.org">Scheme</a></li>
+    	<li><a href="http://jruby.sourceforge.net">JRuby</a></li>
+    	<li><a href="http://nice.sourceforge.net">The Nice language</a></li>
+    	<li><a href="http://www.haskell.org/haskellwiki/Haskell">Haskell</a></li>
+    	<li><a href="http://caml.inria.fr">Objective Caml</a></li>
+  </ul>
+  
+
+  
+  <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://steve-yegge.blogspot.com/2018/01/why-i-left-google-to-join-grab.html">Why I left Google to join Grab</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2017/05/why-kotlin-is-better-than-whatever-dumb.html">Why Kotlin Is Better Than Whatever Dumb Language Y...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2016/11/the-monkey-and-apple.html">The Monkey and the Apple</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2012/10/the-borderlands-2-gun-discarders-club.html">The Borderlands 2 Gun Discarders Club</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2012/03/borderlands-gun-collectors-club.html">The Borderlands Gun Collector&#39;s Club</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2011/07/hacker-news-fires-steve-yegge.html">Hacker News Fires Steve Yegge</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2011/07/ebay-patents-10-click-checkout.html">eBay Patents 10-Click Checkout</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2010/12/haskell-researchers-announce-discovery.html">Haskell Researchers Announce Discovery of Industry...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/wikileaks-to-leak-5000-open-source-java.html">Wikileaks To Leak 5000 Open Source Java Projects W...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/blogger-finger.html">Blogger Finger</a></li>
+     
+  </ul>
+    
+
+  <h2 class="sidebar-title">Archives</h2>
+    <ul class="archive-list">
+   	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/03/">March 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/04/">April 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/05/">May 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/06/">June 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/07/">July 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/08/">August 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/09/">September 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/10/">October 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2006/12/">December 2006</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2007/01/">January 2007</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2007/02/">February 2007</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2007/06/">June 2007</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2007/08/">August 2007</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2007/09/">September 2007</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2007/12/">December 2007</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/01/">January 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/02/">February 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/03/">March 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/04/">April 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/05/">May 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/06/">June 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/08/">August 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/09/">September 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/10/">October 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/11/">November 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2008/12/">December 2008</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2009/03/">March 2009</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2009/04/">April 2009</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2009/05/">May 2009</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2010/07/">July 2010</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2010/12/">December 2010</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2011/07/">July 2011</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2012/03/">March 2012</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2012/10/">October 2012</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2016/11/">November 2016</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2017/05/">May 2017</a></li>
+	  
+    	<li><a href="http://steve-yegge.blogspot.com/2018/01/">January 2018</a></li>
+	  
+
+  </ul>
+  
+
+      <p id="powered-by"><a href="//www.blogger.com"><img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tkSp8-68tdzh-Lglx-c9GxvAepqHW8gobeBSOvQ0LscFvJ1tLuFNaYEJVCB-dwkHcf5I8oA9bwdWsJirbc8BmkiYqa9VJgv2Ny_Qm87U3o=s0-d" alt="Powered by Blogger"></a></p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+</div>
+<!-- End #footer -->
+
+
+<script src="//www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-238999-1";
+urchinTracker();
+</script>
+</body>
+</html>

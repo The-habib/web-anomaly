@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="tilde.team unix group">
+        <meta name="author" content="~aewens">
+        <meta name="theme-color" content="#778899">
+        <title>~aewens of tilde.team</title>
+        <link rel="stylesheet" type="text/css" href="pwacss.css">
+        <link rel="stylesheet" type="text/css" href="nord.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id="wrapper" class="markdown">
+                <header>
+                  <div id="hero">
+                    <span id="austin">austin</span>
+                    <img src="https://en.gravatar.com/userimage/68304899/b5323991c3c9a860ff69bdf812bef64c.png" alt="logo">
+                    <span id="ewens">ewens</span>
+                  </div>
+                  <nav>
+                    <ul>
+                      <li class="active">Home</li>
+                      <li><a href="articles.php">Articles</a></li>
+                    </ul>
+                  </nav>
+                </header>
+                <main>
+                  <div id="pinned" class="">
+                    <article class="plain">
+                      <p><a href="https://tilde.team"
+                      >&lt;- back to tilde.team</a></p>
+                    </article>
+                    <!--article>
+                      <h1>Projects</h1>
+                      <p>Repositories: <span>{{ repos }}</span></p>
+                      <p>Commits:</p>
+                      <ul>
+                        <li>Today: {{ commits.day }}</li>
+                        <li>Week: {{ commits.week }}</li>
+                        <li>Month: {{ commits.month }}</li>
+                        <li>Year: {{ commits.year }}</li>
+                      </ul>
+                      <p>Working on:</p>
+                      <ul>
+                        <li v-for="repo in activeRepos">
+                          <span :private="repo.private">{{ repo.name }}</span>
+                        </li>
+                      </ul>
+                    </article-->
+                  </div>
+                  <div id="articles">
+                    <article>
+                        <p>
+                            A bit about me: I am a systems engineer, software
+                            developer, and graphics designer. On the IRC I am 
+                            one of the operators as well as the original creator
+                            of the 
+                            <a href="https://tilde.chat/wiki/?page=chaos"
+                            >#chaos</a> 
+                            channel. I also wrote a <a href="manifesto/"
+                            >manifesto</a> on Internet security and designed the
+                            logos for the following tilde sites:
+                            <ul>
+                                <li>
+                                    <a href="https://tildeverse.org"
+                                    >Tildeverse</a>
+                                </li>
+                                <li>
+                                    <a href="https://tilderadio.org"
+                                    >Tilderadio</a>
+                                </li>
+                                <li>
+                                    <a href="https://tilde.news"
+                                    >Tilde News</a>
+                                </li>
+                                <li>
+                                    <a href="https://tilde.zone"
+                                    >Tilde Zone</a>
+                                </li>
+                                <li>
+                                    <a href="https://tilde.team"
+                                    >Tilde Team</a>
+                                </li>
+                                <li>
+                                    <a href="https://mail.tilde.team"
+                                    >Tilde Team Mail</a>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            You can find more information about me 
+                            <a href="https://aewens.com">here</a>.
+                        </p>
+                        <p>Some other things I've done on ~team:</p>
+                        <ul>
+                            <li>
+                                <a href="blog">tildeblog</a>: Various ramblings
+                            </li>
+                            <li>
+                                <a href="tilde_corpus.txt"
+                                >Tilde Chat Corpus (raw)</a>: A few months of
+                                raw IRC messages
+                            </li>
+                            <li>
+                                <a href="tilde_corpus_messages.txt"
+                                >Tilde Chat Corpus (messages only)</a>: Same as 
+                                above, but only actual messages from users (e.g.
+                                no join, part, or mode messages)
+                            </li>
+                            <li>
+                                <a href="stats.json"
+                                >BitBot Coins Module Stats</a>: A few weeks 
+                                worth of statistics from the BitCoin coins
+                                module
+                            </li>
+                        </ul>
+                    </article>
+                    <article>
+                      <p>Other places you can find me:</p>
+                      <ul>
+                        <li>
+                            Mastodon: 
+                            <a href="https://tilde.zone/@aewens" rel="me"
+                            >@aewens@tilde.zone</a>
+                        </li>
+                        <li>
+                            Github: 
+                            <a href="https://github.com/aewens" rel="me"
+                            >@aewens</a>
+                        </li>
+                        <li>
+                            DEV: 
+                            <a href="https://dev.to/aewens" rel="me"
+                            >@aewens</a>
+                        </li>
+                        <li>
+                            IRC: aewens
+                        </li>
+                        <li>
+                            Email&#58;
+                            <span>email</span>&#64;<span>aewens.com</span>
+                        </li>  
+                      </ul>
+                    </article>
+                  </div>
+                </main>
+                <aside>
+                  <button onclick="toggleMarkdown()">
+                    Toggle Markdown
+                  </button>
+                  <footer>
+                    &copy; 2020 Austin Ewens. All rights reserved.
+                  </footer>
+                </aside>
+              </div>
+            </div>
+        </div>
+        <script>
+            var toggleMarkdown = function() {
+                var wrapper = document.querySelector("#wrapper");
+                wrapper.classList.toggle("markdown");
+            };
+
+            var articles = document.querySelector("#articles");
+            if (articles.children.length == 1) {
+                articles.classList.add("single");
+            }
+
+            var navs = document.querySelector("nav ul").children;
+            for (var i = 0; i < navs.length; i++) {
+                var li = navs[i];
+                if (li.children.length > 0) {
+                    li.addEventListener("click", function(e) {
+                        window.location.href = e.target.children[0].href;
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
+

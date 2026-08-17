@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Subscribe to  Panix </title>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+
+
+<!-- after updating, run      cat header-readable.html | tr "\n" " " > header-oneline.html  -->    <!-- OFFICE -->             <!-- FD MAIL -->   <!-- MAILBOX -->            <!-- MLIST -->      <!-- SHELL -->                     <!-- PPP -->    <!-- MYSQL -->      <!--  WEB -->                                                                  <!-- COLO -->                                   <!-- V-COLO -->                                                                                                                                                                        <!-- CONSULT -->    <!-- LEASED LINE IPs --> <!--set var="LLipExtraTo32" value="32 total"--> <!--set var="LLipExtraTo64" value="64 total"--> <!--set var="LLipExtraTo128" value="128 total"--> <!--set var="LLipExtraTo256" value="256 total"--> <!--set var="LLipTo32Price" value="\$25/month"--> <!--set var="LLipTo64Price" value="\$50/month"--> <!--set var="LLipTo128Price" value="\$75/month"--> <!--set var="LLipTo256Price" value="\$100/month"-->  <!--set var="fracT3-3Price" value="\$600/month"--> <!--set var="fracT3-6Price" value="\$1,000/month"--> <!--set var="fracT3-10Price" value="\$1,400/month"--> <!--set var="fracT3-15Price" value="\$1,800/month"--> <!--set var="fracT3-22Price" value="\$2,100/month"--> <!--set var="fracT3-30Price" value="\$2,400/month"-->  <!--set var="T3primDNSPrice" value="\$50/year per additional domain"--> <!--set var="T3secDNSPrice" value="\$25/year per additional domain"-->  <!--set var="burstT3-5Price" value="\$1,000/month"--> <!--set var="burstT3-5-5To20Price" value="\$95/mbps/month"--> <!--set var="burstT3-5-20To30" value="\$75/mbps/month"--> <!--set var="burstT3-5-over30Price" value="\$55/mbps/month"-->  <!--set var="burstT3-20Price" value="\$2,100/month"--> <!--set var="burstT3-20-20To30Price" value="\$75/month"--> <!--set var="burstT3-20-over30Price" value="\$55/month"-->  <!--set var="t1Install" value="\$450"--> <!--set var="t1-1-5Price" value="\$395/month"--> <!--set var="t1-768Price" value="\$350/month"--> <!--set var="t1-384Price" value="\$295/month"--> <!--set var="t1-taxFCC" value="\$48.20/month"--> <!--set var="t1-Netopia" value="FREE! (Normally \$599)"--> <!--set var="t1-Cisco" value="\$499 (Normally \$899)"--> <!--set var="t1-Samsung" value="\$199"-->       <!-- CURRENT AND LATEST CGI-LANG VERSIONS -->    <link href="/INC/panix.css" rel="stylesheet" type="text/css" /> 
+<style type="text/css" >
+
+
+/*  menu is open */
+
+li#servPrice  {
+        list-style-image: url("/images/openList.gif");
+}
+
+li#geninfo,li#shell,li#email,li#conn,li#vc,li#helpstuff,li#consult    {
+        list-style-image: url("/images/closedList.gif");
+}
+
+/* these items shouldn't have triangles at all, but if I can't get rid of them I'll
+   close them */
+ 
+li#colo,li#consult,li#gcs,li#web {
+        list-style-image: url("/images/foobar.gif");
+}
+
+/* Unhide our submenu and menu item alternatives. */
+.leftmenu ul.servPrice {
+        display: block;
+}
+
+
+
+
+/* Invert our current menu choice */
+a#servPriceA {
+        color: #ffffff;
+        background: #8c0039;
+        font-weight: bold;
+        margin-right: 10px;
+        text-decoration: none;
+        z-index:-2;
+}
+
+.rowhead {
+font-size: 115%;  
+font-family: sans-serif;
+font-weight: bold;
+color: #8c0039; 
+}       
+
+a.imagelink:link  { color: #f3fff5; }
+a.imagelink:hover  { color: #f3fff5; }
+a.imagelink:visited  { color: #f3fff5; }
+
+.readbox {
+   margin-left: 1em;
+   padding-left: 1em; 
+   background-color: #edf0f4;
+   background-color: #dfe8f0;
+}
+
+.alterodd {
+   background-color: #edf0f4;
+}
+
+<!-- ######## -->
+
+</style>
+</head>
+
+
+<body class="container">
+<div class="banner">
+ <a href="/" target="_top">
+  <img src="/images/0smpanix.gif" 
+   alt="Panix - Pioneering Internet Services Since 1989"
+   title="Panix - Home Page"
+   style="border:0; float:left" />
+ </a>
+
+ <a href="/general/howsub.html" target="_top">             
+  <img src="/images/signUpNow.jpg" width="86" height="50"
+   style="border:0; float:right; margin-top:17px" 
+   alt="Sign Up Now!" title="Sign Up Now!" />
+ </a>
+</div>
+
+<div class="leftmenu">
+
+<ul style="display: block;">
+  <li id="geninfo" class="sub"><span class="title">
+    <a id="panixInfoA" href="/general/">Panix Information</a></span>
+
+<ul class="info">
+
+ <li class="leaf" id="x1"> <a id="genHowSub"
+           href="/general/howsub.html">How to subscribe</a>   </li>
+
+ <li id="rules" class="sub"> <a id="userrules"
+              href="/general/userrules.html">Rules for users</a>
+     <ul class="genPolA">
+      <li class="leaf"> <a id="genPolAA"
+              href="/general/rules.html"> The Rules</a></li>
+      <li class="leaf"> <a id="genPolAB" 
+               href="/general/onlyyou.html">Shell account restrictions</a></li>
+      <li class="leaf"><a id="cron" 
+                    href="/general/cronpol.html"> Using "cron" and "at"</a></li>
+      <li class="leaf"><a id="screen" href="/general/screen.html"> 
+                    Using "screen", "tmux", and "mosh"</a></li>
+     </ul></li>
+
+          <li id="panpol" class="sub"><a id="polB" 
+                  href="/general/panpol.html">Panix policies </a>
+           <ul class="genPolB">
+            <li class="leaf"> <a id="sec" href="/general/security.html">
+                    Promoting Internet Security</a></li>
+            <li class="leaf">
+             <a id="priv" href="/general/privacy.html" >Panix and your privacy </a> </li>
+            <li class="leaf">
+             <a id="block" href="/general/pol-mailblock.html"> Mail 
+                        blocking at Panix </a> </li>
+            <li class="leaf">
+             <a id="fwd" href="/general/fwdpol.html">Restrictions on 
+                       forwarding </a> </li>
+            <li class="leaf">
+             <a id="sust" href="/general/sustained.html">Sustained traffic: 
+                      billing </a> </li>
+            <li class="leaf">         
+             <a id="news1" href="/general/newsgroups.html">Newsgroups</a> </li> 
+             </ul> </li> 
+
+ <li id="genCom" class="sub"> <a id="genAP"
+            href="/general/about.html">The Panix Community</a>
+     <ul class="genCom"> 
+      <li class="leaf"><a id="staff" href="/general/staff.html"> Staff</a>   </li>
+      <li class="leaf"> <a id="pgroups" href="/general/pgroups.html">Our 
+              Newsgroups</a></li>
+     </ul> </li>
+
+ <li class="leaf"> <a id="genRefRew" href="/general/ref.html">Referral rewards </a> </li>
+
+      </ul> </li>
+
+
+ <li id="servPrice" class="sub"><span class="title">
+  <a id="servPriceA" href="/general/howsub.html">Services and Prices</a></span>
+
+<ul class="servPrice"> 
+ <li id="email" class="sub">
+  <a id="emailA" href="/email/"> Email Services </a>
+  <ul class="email">
+   <li class="leaf">
+	<a id="emailMbox" href="/email/mbox.html"> Mailboxes </a></li>
+   <li class="leaf">
+	<a id="emailFd" href="/email/fd.html"> Forwarded Domain </a></li>
+   <li class="leaf">
+	<a id="emailMlist" href="/email/mlist.html"> Mailing Lists </a></li>
+  </ul>
+ </li>
+
+ <li id="shell" class="sub">
+  <a id="shellA" href="/shell/"> Shell Services </a>
+  <ul class="shell">
+   <li class="leaf">
+	<a id="shellPrices" href="/shell/prices.html"> Prices </a></li>
+   <li class="leaf">
+	<a id="shellAdd" href="/shell/addons.html"> Add-ons </a></li>
+   <li id="shellTech" class="sub">
+	<a id="shellTechA" href="/shell/shelltech.html"> Technical Details </a>
+    <ul class="shellTech">
+     <li class="leaf">
+	<a id="shellTechCmd" href="/shell/commands.html"> Shell Commands </a></li>
+     <li class="leaf">
+	<a id="shellTechPkg" href="/shell/packages.html"> Packages </a></li>
+     <li class="leaf">
+	<a id="shellTechDisk" href="/shell/disk.html"> Disk Info </a></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+
+ <li id="conn" class="sub">
+  <a id="connA" href="/netserv/"> Internet Access</a>
+  <ul class="conn">
+   <li class="leaf">
+	<a id="connDial" href="/netserv/dialup.html"> Dialup / Modem </a></li>
+
+  </ul>
+ </li>
+
+ <li id="web" class="bigleaf">
+  <a id="webA" href="/web/"> Web Hosting Services</a>
+ </li>
+
+ <li id="vc" class="sub">
+  <a id="vcA" href="/v-colo/"> Panix V-Colo VPS </a>
+  <ul class="vc">
+   <li class="leaf">
+	<a id="vcWcp" href="/v-colo/vmembers.html">Web Control Panel</a></li>
+   <li class="leaf">
+	<a id="vcShared" href="/v-colo/plans.html">Plans and Prices</a></li>
+   <li class="leaf">
+	<a id="vcSup" href="/v-colo/support.html">Support</a></li>
+   <li class="leaf">
+	<a id="contact" href="/general/index.html#contact">Contact</a></li>
+  </ul>
+ </li>
+
+ <li id="colo" class="bigleaf"> 
+  <a id="coloA" href="/colo/"> Colocation Services</a>
+ </li>
+
+ <li id="consult" >
+  <a id="consultA" href="/consult/"> Consulting </a>
+ </li>
+
+
+</ul>
+ </li>
+
+
+ <li class="bigleaf" id="x2"><span class="title"> <a id="dial" 
+             href="/dialup/">Dialup Lines</a> </span> </li>
+
+<li id="helpstuff" class="sub"><span class="title">
+   <a id="helpA" href="/help/">Help </a></span>
+    <ul class="helplist">
+      <li class="sub" id="geninfoid"><a id="hgeninfo" href="/general/">General Information</a></li>
+      <li class="leaf" id="acclist"><a id="acc1" href="/help/accindex.html">Billing Help</a></li>
+      <li class="leaf" id="secid"><a id="sec1" href="/help/secindex.html">Security Help</a></li>
+      <li class="leaf" id="mailid"><a id="mail1" href="/help/mailindex.html">Email/Spam Help</a></li>
+      <li class="leaf" id="connid"><a id="conn1" href="/help/connected.html">Help Connecting</a></li>
+      <li class="leaf" id="webid"><a id="web1" href="/help/webpage.html">Web Site Help</a></li>
+      <li class="leaf" id="shellid"><a id="shell1" href="/help/shellindex.html">Unix Help</a></li>
+      <li class="leaf" id="appsid"><a id="apps1" href="/help/app-pages/">Software Apps</a></li>
+      <li class="leaf" id="newsid"><a id="news01" href="/help/netnews.html">Netnews Help</a></li>
+      <li class="leaf" id="glossaryid"><a id="glossary01" href="/help/glossary.html">Glossary</a></li>
+    </ul>
+</li>
+
+ <li id="custServ" class="sub"><span class="title">
+  <a id="custServ" 
+      href="/general/servacc.html">Access&nbsp;Your&nbsp;Services</a>
+   </span>
+      <ul class="custServ" >
+        <li class="leaf"> 
+           <a href="https://mail.panix.com"> Check email</a> </li>
+
+        <li class="leaf"> <a href="https://config.panix.com/shell">
+              Manage your shell account </a></li>
+        <li class="leaf"> <a href="https://config.panix.com/vc">
+              Manage your V-Colo </a></li>
+        <li class="leaf"> <a href="https://config.panix.com">
+              Manage your domain, mailboxes, aliases </a></li>
+        <li class="leaf"> <a href="https://shell.panix.com">
+              Log into shell</a>  </li>
+
+        <li class="leaf"> <a href="https://lists.panix.com/cgi-bin/majordomo">
+              Manage your Majordomo mailing list</a></li>
+        <li class="leaf"> <a href="/motd/"> 
+        <li class="leaf"> <a href="https://mailman.panix.com">
+              Manage your Mailman mailing list</a></li>
+              See system bulletins</a></li>
+      </ul>
+</li>
+
+
+<li id="home" class="leaf"><span class="title">
+  <a id="homepage" href="/">Home</a></span> </li>
+
+</ul>
+
+</div>
+
+
+<div class="main">
+<!-- ##### -->
+<!-- ##### -->
+<!-- ##### -->
+
+<h4>Purchase Panix Services</h4>
+
+<table border="0">
+<tr><td></td> </tr> 
+<tr >
+    <td class="rowhead"><a href="/shell/">Shell&nbsp;Services</a></td> 
+    <td class="readbox"> <a href="/shell/" class="ablink">Shell services
+info pages</a></td>
+    <td class="readbox"><a href="https://config.panix.com/order/shell" 
+         class="glink">Order Shell now</a></td> 
+</tr> 
+<tr> <td></td></tr> <tr class="interstrip"> <td colspan="4"></td>
+</tr> <tr><td></td></tr>
+<tr>
+    <td class="rowhead"><a href="/v-colo/">V-Colo
+       (VPS) Services</a></td> 
+    <td class="readbox"> <a href="/v-colo/" class="ablink">Panix V-Colo 
+       VPS info pages </a></td>
+    <td class="readbox"><a href="https://config.panix.com/vc/signup"
+         class="glink">Order V-Colo now</a></td> 
+</tr> 
+
+<tr><td></td> </tr> 
+<tr><td></td> </tr> <tr class="interstrip"> <td colspan="4"></td> </tr> 
+<tr >
+<td class="rowhead"><a href="/web">Web Service</a> </td>
+    <td class="readbox"> <a href="/web" class="ablink">
+     Cheap-web service info pages</a></td>
+    <td class="readbox"><a href="https://config.panix.com/order/web" 
+      class="glink">Order Cheap-web now</a></td> </tr>
+
+<!--
+<tr ><td> </td>
+      <td class="readbox"> <a href="/web/stdweb.html" class="ablink">
+         Standard Web info pages</a></td>
+      <td class="readbox"><a href="https://config.panix.com/order/web" 
+        class="glink"> Order Standard Web now</a></td> 
+
+</tr><tr > <td></td>
+      <td class="readbox"> <a href="/web/advweb.html" class="ablink">
+         Advanced Web info pages</a></td>
+      <td class="readbox"><a href="https://config.panix.com/order/web" 
+         class="glink">Order Advanced Web now</a></td> 
+</tr><tr > <td></td>
+      <td class="readbox"> <a href="/web/devweb.html" class="ablink">
+         Developer Web info pages</a></td>
+      <td class="readbox"><a href="https://config.panix.com/order/web" 
+        class="glink"> Order Developer Web now</a></td> 
+     
+</tr><tr > <td></td>
+      <td class="readbox"> <a href="/web/dedweb.html" class="ablink">
+         Dedicated Web info pages</a></td> 
+      <td class="readbox"><a href="https://config.panix.com/order/web" 
+          class="glink"> Order Dedicated Web now</a></td>
+</tr> 
+-->
+<tr><td></td> </tr> 
+<tr><td></td> </tr> 
+<tr class="interstrip"> <td colspan="4"></td>
+</tr><tr>
+<td class="rowhead"><a href="/netserv/">Internet Access</a> </td>
+<td class="readbox"> <a href="/netserv/t3.html" class="ablink">
+    Panix T3 (and fractional T3) info pages</a></td>
+
+<td class="readbox"><a href="mailto:staff@panix.com?subject=T3 
+     query" class="glink"> Order T3 Now</a></td> 
+
+</tr> <tr><td></td>
+</tr> <tr><td> </td>
+<td class="readbox"> <a href="/netserv/t1.html" class="ablink">
+      Panix T1 (and fractional T1) info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/order/t1" 
+     class="glink">Order T1 now </a></td> 
+
+</tr> <tr><td></td>
+</tr> <tr>
+<td> </td>
+
+<!--
+<td valign="top" class="readbox"> <a href="/netserv/sdsl.html" 
+    class="ablink">Panix Business Express SDSL info pages</a></td>
+<td valign="top" class="readbox"><a href="https://config.panix.com/order/dsl"
+     class="glink">Order SDSL now</a></td> 
+</tr><tr>
+ <td> </td>
+  <td class="readbox"> <a href="/netserv/adsl.html" class="ablink">
+     Panix Consumer ADSL info pages</a> </td>
+<td valign="top" class="readbox"><a href="https://config.panix.com/order/dsl"
+     class="glink">Order ADSL now</a></td> 
+-->
+
+</tr> <tr>
+<td> </td>
+<td class="readbox"> <a href="/netserv/dialup.html" class="ablink">
+     Panix On-demand info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/order/shell"
+     class="glink">Order On-demand now</a></td> 
+</tr> 
+
+<tr><td></td> </tr> 
+<tr><td></td> </tr> 
+<tr class="interstrip"> <td colspan="4"></td> </tr> 
+
+<tr>
+<td class="rowhead"><a href="/colo/"> Colocation Services</a> </td>
+<td class="readbox"> <a href="/colo/" class="ablink">Colocation 
+     service info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/order/colo"
+     class="glink"> Order Colocation now</a></td> 
+</tr> <tr><td></td>
+</tr> <tr>
+<td> </td>
+<td class="readbox"> <a href="/v-colo/" class="ablink">Panix 
+        V-Colo info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/vc/signup" class="glink">
+      Order V-Colo now</a></td> 
+</tr> 
+
+<tr><td></td> </tr> 
+<tr><td></td> </tr> 
+<tr class="interstrip"> <td colspan="4"></td> </tr>
+
+<tr>
+<td class="rowhead"> <a href="/email/">Email Services</a> </td>
+<td class="readbox"><a href="/email/fd.html" class="ablink">Domain
+     Email info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/order/mail"
+      class="glink">Order Domain Email now</a></td>
+</tr>
+
+<tr> <td></td></tr>
+<tr>
+<td> </td>
+<td class="readbox"> <a href="/email/mbox.html" class="ablink"> 
+     Mailbox info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/order/mailbox"
+        class="glink">Order Mailboxes now</a></td> 
+
+</tr> <tr>
+<td> </td>
+<td class="readbox"> <a href="/email/mlist.html" class="ablink">
+      Mailing list info pages</a></td>
+<td class="readbox"><a href="https://config.panix.com/order/mlist"
+     class="glink">Order Mailing list now</a></td> 
+
+</tr> <tr class="interstrip"> <td colspan="4"></td> </tr> 
+<tr> <td></td></tr>
+<tr> <td></td></tr>
+
+<tr>
+<td class="rowhead"> Specialized Services </td>
+<td class="readbox"> <a href="/consult/" class="ablink">Panix Consulting 
+   info pages</a></td>
+<td class="readbox">
+     <a href="mailto:staff@panix.com?subject=Consulting query" 
+     class="glink">Order Consulting services now </a></td> 
+
+</tr> <tr><td></td>
+</tr> <tr><td></td></tr>
+
+</table>
+
+
+<br />
+<hr style="margin-bottom: -5px" />
+<p class="lastMod">
+Last Modified:Wednesday, 15-Feb-2023 11:48:33 EST
+<br />
+&#169; Copyright 2006-2021
+Public Access Networks Corporation
+</p>
+<br />
+
+</div> 
+</body>
+</html>
+

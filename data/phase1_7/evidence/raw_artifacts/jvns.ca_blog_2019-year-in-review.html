@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>2019: Year in review</title>
+<meta name="author" content="Julia Evans">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="description" content="2019: Year in review">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content='2019: Year in review'>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jvns.ca/blog/2019-year-in-review/" />
+<meta property="og:site_name" content="Julia Evans" />
+
+<link rel="canonical" href="https://jvns.ca/blog/2019-year-in-review/">
+<link href="/favicon.ico" rel="icon">
+
+<link href="/stylesheets/screen.css" rel="preload" type="text/css" as="style">
+
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+<link href="/atom.xml" rel="alternate" title="Julia Evans" type="application/atom+xml">
+
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+<script defer data-domain="jvns.ca" src="https://plausible.io/js/script.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+<script defer type="text/javascript">   
+window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};   
+heap.load("2242143965"); 
+</script> 
+</head>
+<body>
+<div id="skiptocontent">
+  <a href="#main">Skip to main content</a>
+</div>
+<div id="wrap">
+<header role="banner">
+<hgroup>
+<h1><a href="/">Julia Evans</a></h1>
+</hgroup>
+<ul class="header-links">
+<li><a href="/about">About</a></li>
+<li><a href="/talks">Talks</a></li>
+<li><a href="/projects/">Projects</a></li>
+<li><a rel="me" href="https://social.jvns.ca/@b0rk">Mastodon</a></li>
+<li><a href="https://bsky.app/profile/b0rk.jvns.ca">Bluesky</a></li>
+<li><a href="https://github.com/jvns">Github</a></li>
+</ul>
+</header>
+<nav role="navigation" class="header-nav"><ul class="main-navigation">
+<li><a href="/categories/favorite/">Favorites</a></li>
+<li><a href="/til/">TIL</a></li>
+<li><a href="https://wizardzines.com">Zines</a></li>
+<li class="subscription" data-subscription="rss"><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="main">
+<div id="content">
+
+
+<div>
+<article class="hentry" role="article">
+<header>
+<h1 class="entry-title">2019: Year in review</h1>
+
+<div class="post-tags">
+  
+</div>
+<p class="meta sans">
+<time class="date" datetime="2019-12-27T21:21:43" pubdate data-updated="true">
+
+  December 27, 2019
+  
+</time>
+</p>
+</header>
+<main>
+     <p>It&rsquo;s the end of the year again! Here are a few things that happened in 2019.
+I wrote these in <a href="https://jvns.ca/blog/2015/12/26/2015-year-in-review/">2015</a>,
+<a href="https://jvns.ca/blog/2016/12/21/2016--year-in-review/">2016</a>,
+<a href="https://jvns.ca/blog/2017/12/31/2017--year-in-review/">2017</a>, and <a href="https://jvns.ca/blog/2018/12/23/2018--year-in-review/">2018</a> too.</p>
+<h3 id="i-have-a-business-instead-of-a-job" class="post-heading">
+    <a href="#i-have-a-business-instead-of-a-job">
+      I have a business instead of a job!
+    </a>
+</h3>
+<p>The biggest change this year is that I left my job in August after working
+there for 5.5 years and now I don&rsquo;t have a job! Now I have a
+<a href="https://jvns.ca/blog/2019/10/01/zine-revenue-2019/">business</a> (wizard zines).</p>
+<p>This has been exciting (I can do anything I want with my time! No rules! Wow!)
+and also disorienting (I can do anything I&hellip; want? Wait, what do I want to do
+exactly?). Obviously this is a good problem to have but it&rsquo;s a big adjustment
+from the structure I had when I had a job.</p>
+<p>My plan for now is to give myself a year (until August 2020) to see how this
+new way of existing goes and then reevaluate.</p>
+<p>I wanted to write some reflections on my 5 years at Stripe here but it&rsquo;s been
+such a huge part of my life for so long that I couldn&rsquo;t figure out how to
+summarize it. I was in a much worse place in my career 6 years ago before I
+started working there and it really changed everything for me.</p>
+<h3 id="con" class="post-heading">
+    <a href="#con">
+      !!Con
+    </a>
+</h3>
+<p>2019 was <a href="https://bangbangcon.com">!!Con</a>&rsquo;s 6th year! It&rsquo;s a conference about
+the joy, excitement, and surprise of programming. And !!Con also expanded to
+the <a href="https://bangbangcon.com/west">west coast</a>!! I wasn&rsquo;t part of organizing the
+west coast conference at all but I got to attend and it was wonderful.</p>
+<p>Running a conference is a ton of work and I feel really lucky to get to do it
+with such great co-organizers &ndash; there have been at least 20 people involved in
+organizing over the years and I only do a small part (right now I organize
+sponsorships for the east coast conference).</p>
+<p>This year we also incorporated the <a href="https://exclamation.foundation/">Exclamation Foundation</a> which is the official entity which
+runs both conferences which is going to make organizing money things a lot easier.</p>
+<h3 id="i-understand-how-the-business-works-a-little-better" class="post-heading">
+    <a href="#i-understand-how-the-business-works-a-little-better">
+      I understand how the business works a little better
+    </a>
+</h3>
+<p>Earlier this year I signed up for a business course called
+<a href="https://30x500.com/academy/">30x500</a> by Amy Hoy and Alex Hillman. They&rsquo;ve
+influenced me a lot this year. Basically I signed up for it because I had a
+business that had made $100,000 in revenue already but I didn&rsquo;t really
+understand how the business <em>worked</em> and it felt like it could just evaporate
+at any point. So $2000 (the cost at the time of 30x500) was worth it to help me
+understand what was going on.</p>
+<p>Amy and Alex both just the other day wrote 100-tweet threads that have some of
+the ideas that I learned this year in them: <a href="https://twitter.com/alexhillman/status/1209252239501647874">Alex on creating sustainable
+businesses</a> and
+<a href="https://twitter.com/amyhoy/status/1209693440872603651">Amy on design</a>.</p>
+<p>I was hoping to build a system for selling printed zines in 2019 and I didn&rsquo;t
+get to it &ndash; that&rsquo;s probably my one concrete business goal for 2020. I tried
+out Lulu for printing in the hopes that I could experiment with print-on-demand
+but the quality was awful so it&rsquo;s going to be a bit more work.</p>
+<h3 id="blog-posts-and-things" class="post-heading">
+    <a href="#blog-posts-and-things">
+      blog posts and things
+    </a>
+</h3>
+<p>In 2019 I:</p>
+<ul>
+<li>wrote 29 blog posts</li>
+<li>did some experiments in interactive SQL/server exercises, which I&rsquo;m excited about but are sort of on the back burner right now. Maybe I&rsquo;ll go back to them in 2020!</li>
+<li>gave 0 talks (which was a goal of mine)</li>
+</ul>
+<p>The blog post I&rsquo;m happiest to have published this year is definitely <a href="https://jvns.ca/blog/brag-documents/">Get your
+work recognized: write a brag document</a>.
+I&rsquo;ve seen quite a few people saying that it helped them track their work and it
+makes me really happy. A bunch of people at my old job adopted it and it&rsquo;s one
+of the non-engineering projects I&rsquo;m most proud of having done there.</p>
+<p>Publishing this post about my <a href="https://jvns.ca/blog/2019/10/01/zine-revenue-2019/">business revenue</a> was also important
+to me &ndash; in the past I loved blogging, but I didn&rsquo;t think it was possible to
+make a living by explaining computer things online. And I was totally wrong! It
+is possible! So I think it&rsquo;s important to tell other people that it&rsquo;s a possibility.</p>
+<h3 id="zines" class="post-heading">
+    <a href="#zines">
+      zines
+    </a>
+</h3>
+<p>I published 2 <a href="https://wizardzines.com">zines</a>: Bite Size Networking and HTTP:
+Learn Your Browser&rsquo;s Language. And wrote most of a third zine about SQL which
+should be out in January.</p>
+<p>I made the same business <a href="https://jvns.ca/blog/2019/10/01/zine-revenue-2019/">revenue</a> as in 2018 (which I was thrilled about).</p>
+<h3 id="published-a-box-set-of-my-free-zines" class="post-heading">
+    <a href="#published-a-box-set-of-my-free-zines">
+      published a box set of my free zines
+    </a>
+</h3>
+<p>In August I published a box set of all my free zines with No Starch Press (<a href="https://jvns.ca/blog/2019/10/21/print-collection-of-my-first-7-zines/">Your Linux
+Toolbox</a>,
+it&rsquo;s in Real Physical Bookstores!!) They did a fantastic job printing it: the
+quality is really really good. I&rsquo;m very happy with how it turned out. (and if
+you do buy it and like it, leaving an <a href="https://www.amazon.com/gp/product/1593279779/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1593279779&amp;linkCode=as2&amp;tag=juliaevans-20&amp;linkId=b83eb6a6f5c57c2cbbbe72b1f8b5e46e#customerReviews">amazon review</a>
+helps me a lot).</p>
+<p>And No Starch just told me last week they&rsquo;ve sold 4000 copies so far and are
+looking to do a second printing!</p>
+<p>Having a Real Traditionally Published Thing out is really cool, I could not
+have imagined <a href="https://jvns.ca/blog/2015/04/14/strace-zine/">4 years ago</a> that
+I could go to an actual bookstore and buy the little 16-page zine I wrote about
+how much I love strace.</p>
+<p>The business aspect of it is interesting &ndash; because I&rsquo;m so used to running a
+business where I sell my own zines, getting 10% in royalties instead of 100%
+feels strange. But printing and distribution are complicated! And it&rsquo;s really
+cool that I can say &ldquo;yeah, go to Barnes &amp; Noble, they&rsquo;ll have it&rdquo;! And No
+Starch helped me a lot with picking a good title and cover art! And basically
+the whole traditional publishing ecosystem just works in a completely different
+way from what I&rsquo;m used to :)</p>
+<p>I think I&rsquo;ll have a better sense for how to think about traditional publishing
+from a business perspective in a year or so after the book has been out for
+longer.</p>
+<p>A big thing I learned from this project is that having zines that are
+printed in a higher quality way (not just on a home printer) is really nice.</p>
+<h3 id="what-went-well" class="post-heading">
+    <a href="#what-went-well">
+      what went well
+    </a>
+</h3>
+<p>some things that were good this year:</p>
+<ul>
+<li>spending time understanding why the business works the way it does instead of
+just guessing</li>
+<li>collaborating with many great people on !!Con to do a big thing together</li>
+<li>publishing the box set!</li>
+<li>I&rsquo;m happy to have given myself the time/space to do whatever it is I want,
+even though it&rsquo;s a big adjustment</li>
+<li>writing things that help people a little bit with their careers (the brag
+documents post) is nice</li>
+</ul>
+<p>some things that are harder:</p>
+<ul>
+<li>I used to have a lot of really amazing coworkers at my job, and right now I&rsquo;m
+working much more by myself. I definitely miss having so many great people
+right there to talk to all the time.</li>
+</ul>
+
+</main>
+
+<footer>
+
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; display: inline;}
+  #mc_embed_signup  {
+    display: inline;
+  }
+  #mc_embed_signup input.button {
+    background: #ff5e00;
+    display: inline;
+    color: white;
+    padding: 6px 12px;
+  }
+</style>
+<div class="sharing">
+
+<style>
+    .form-inline {
+        display:flex; flex-flow: row wrap; justify-content: center;
+    }
+    .form-inline input, .form-inline span {
+        padding: 10px;
+    }
+    .form-inline input {
+        display:inline;
+        max-width:30%; 
+        margin: 0 10px 0 0; 
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    button {
+        background-color: #f50;
+        box-shadow: none;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 10px;
+    }
+    @media (max-width: 800px) {
+        .form-inline input {
+            margin: 10px 0;
+            max-width:100% !important;
+        }
+        .form-inline {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+</style>
+
+<div align="center">
+    <form class="form-inline" action="https://app.convertkit.com/forms/1052396/subscriptions" method="post" data-uid="8884355abb" data-format="inline" data-version="5">
+        <span> Want a weekly digest of this blog?</span>
+        <input name="email_address" type="text" placeholder="Email address" /> 
+        <button type="submit" data-element="submit">Subscribe</button>
+    </form>
+</div>
+
+
+</div>
+
+<p class="meta">
+  
+    <a class="basic-alignment left" href="https://jvns.ca/blog/2019/12/26/whats-a-server/" title="Previous Post: &#34;server&#34; is hard to define">&#34;server&#34; is hard to define</a>
+  
+  
+    <a class="basic-alignment right" href="https://jvns.ca/blog/2020/01/05/paperwm/" title="Next Post: PaperWM: tiled window management for GNOME">PaperWM: tiled window management for GNOME</a>
+  
+</p>
+</footer>
+
+</article>
+</div>
+
+</div>
+</div>
+<nav role="navigation" class="footer-nav"> <a href="/">Archives</a>
+</nav>
+<footer role="contentinfo"><span class="credit">&copy; Julia Evans. </span>
+  <span>If you like this, you may like <a href="https://web.archive.org/web/20181228051203/http://www.uliaea.ca/">Ulia Ea</a> or, more seriously, this list of <a href="https://jvns.ca/blogroll">blogs I love</a> or some <a href="https://jvns.ca/bookshelf">books I've read</a>. <br> 
+<p class="rc-scout__text"><i class="rc-scout__logo"></i>
+You might also like the <a class="rc-scout__link" href="https://www.recurse.com/scout/click?t=546ea46360584b522270b8c3e5d830f8">Recurse Center</a>, my very favorite programming community <a href="/categories/hackerschool/">(my posts about it)</a></p>
+</span>
+<style class="rc-scout__style" type="text/css">.rc-scout{display:block;padding:0;border:0;margin:0;}.rc-scout__text{display:block;padding:0;border:0;margin:0;height:100%;font-size:100%;}.rc-scout__logo{display:inline-block;padding:0;border:0;margin:0;width:0.85em;height:0.85em;background:no-repeat center url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2015%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2212%22%20height%3D%2210%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2210%22%20height%3D%228%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%228%22%20height%3D%226%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%222%22%20y%3D%223%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%224%22%20y%3D%223%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%226%22%20y%3D%223%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%223%22%20y%3D%225%22%20width%3D%222%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%226%22%20y%3D%225%22%20width%3D%222%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%224%22%20y%3D%229%22%20width%3D%224%22%20height%3D%223%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%221%22%20y%3D%2211%22%20width%3D%2210%22%20height%3D%224%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%220%22%20y%3D%2212%22%20width%3D%2212%22%20height%3D%223%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%222%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%223%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%224%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%225%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%226%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%227%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%228%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%229%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3C%2Fsvg%3E');}.rc-scout__link:link,.rc-scout__link:visited{color:#61ae24;text-decoration:underline;}.rc-scout__link:hover,.rc-scout__link:active{color:#4e8b1d;}</style>
+</footer>
+<script type="text/rocketscript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,1296 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="fr" moznomarginboxes mozdisallowselectionprint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    
+
+
+
+
+
+
+    <script>
+        var _mtm = window._mtm || [];
+        var _paq = window._paq || [];
+        _mtm.push({ 'mtm.startTime': (new Date().getTime()), event: 'mtm.Start' });
+        _paq.push(['setCustomDimension', 1, 'WEB4G']);
+        _paq.push(['HeatmapSessionRecording::disable']);
+        (function() {
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src='https://cdn.matomo.cloud/insee.matomo.cloud/container_j86K86K5.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+
+
+    
+        
+            
+                <title data-i18n="sources.liste-sources.titre">Présentation des sources | Insee</title>
+            
+            
+            
+        
+    
+
+    
+
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/application.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/featherlight/featherlight.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/swiper/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/dateTimePicker/jquery.datetimepicker.css">
+    <script type="text/javascript">
+        var contextPath="";
+        var langue="fr";
+        var numOnglet="2";
+    </script>
+
+    <script type="text/javascript" charset="UTF-8" defer="defer" src="
+
+
+/static/js/svg/graphsvg.js
+"></script>
+    <script type="text/javascript" charset="UTF-8" defer="defer" src="
+
+
+/static/js/application-lib.min.js
+"></script>
+    <script src="/static/build/highcharts.js"></script>
+    <script src="/static/build/highcharts-insee.js"></script>
+    <script charset="UTF-8" defer="defer" src="
+
+
+/static/build/application.js
+"></script>
+    <script>
+        var contextPath="";
+        var langue="fr";
+        var numOnglet="2";
+    </script>
+    <!--[if lte IE 8]>
+        <script type="text/javascript" charset="UTF-8" defer="defer" src="
+
+
+/static/js/polyfills/css3-mediaqueries.min.js
+"></script>
+        <![endif]-->
+    <script type="text/javascript">
+var inseeConfig = {
+
+        
+    };
+</script>
+
+    <script type="text/javascript">
+var features = {
+'rmesSource': 'true',
+};
+</script>
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="icon" type="image/png" href="
+
+
+/static/img/favicon-96x96.png
+" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="
+
+
+/static/img/favicon.svg
+" />
+    <link rel="shortcut icon" href="
+
+
+/static/img/favicon.ico
+" />
+    <link rel="apple-touch-icon" sizes="180x180" href="
+
+
+/static/img/apple-touch-icon.png
+" />
+
+    <script async src="/static/build/htmx.min.js"></script>
+</head>
+
+<body>
+<!-- Lightbox -->
+<span id="isLightbox" class="hide">true</span>
+
+<span class="controller-param hidden" id="urlAlternative" aria-hidden="true">false</span>
+<span class="controller-param hidden" id="urlCible" aria-hidden="true">https://www.sphinxonline.com/surveyserver/s/ccpesatisf/EnqUtilisateurs2026/questionnaire.htm</span>
+<span class="controller-param hidden" id="urlCibleAlternative" aria-hidden="true"></span>
+
+
+    <span id="lightbox-dateFin" class="hide">2026-08-19 00:00:00.0</span>
+    <span id="lightbox-id" class="hide">9028126</span>
+    <span id="lightbox-temps-latence" class="hide"></span>
+    <div id="lightbox-information" class="lightbox hide" role="dialog" aria-labelledby="modal-heading"
+         aria-modal="true">
+        <div id="titre-lightbox-avertissement" class="titre" id="modal-heading"><p style="text-align: center;">Votre avis nous intéresse !</p></div>
+        <div class="corps">
+            <div class="message"><p style="text-align: center;">Bonjour et bienvenue sur le site de l'Insee</p>
+<p><strong>Après votre visite</strong>, vous pourrez donner votre avis sur le site de l’Insee en répondant à un court questionnaire.</p>
+<p>En cliquant sur oui, vous aurez accès à l’<strong>onglet Insee.fr</strong> et au <strong>questionnaire</strong>. Merci de répondre une fois votre visite terminée.</p>
+<p>Si vous ne souhaitez pas répondre, cliquez sur non.</p> <p>L'Insee vous remercie et vous souhaite une bonne visite.<p></div>
+            <div class="buttons">
+                <div class="lightbox-entrer">
+                    <a id="lightbox-visiter" href="blaba" target="_blank">Oui</a>
+                </div>
+                <div class="lightbox-annuler">
+                    <a id="lightbox-partir" href="#" target="_blank">Non</a>
+                </div>
+            </div>
+            <div class="note"><p style="font-style: italic;">Afin de ne pas vous solliciter de nouveau lors de vos prochaines visites sur le site, un fichier texte (cookie) est déposé temporairement sur votre ordinateur ; il sera supprimé dès la fin de cette enquête.</p>
+<p style="font-style: italic;">En revanche, si vous avez désactivé les cookies sur votre ordinateur, la fenêtre concernant l’enquête s’ouvrira à chacune de vos connexions sur insee.fr.</p></div>
+        </div>
+    </div>
+
+
+
+
+
+<div id="wait" class="wait-off"><img src="
+
+
+/static/img/preloader.gif
+" alt="Veuillez-patienter..."/>
+</div>
+<div id="fond-transparent-body" class="fond-transparent-off"></div>
+
+<header class="header" role="banner">
+    <span style="height: 0;display: inline-block;">&nbsp;</span>
+    <a class="evitement" href="#contenu" data-i18n="header.evitement.contenu">Aller au contenu</a>
+    
+        
+        
+            
+
+
+
+
+
+<div id="banniere" class="banniere">
+	<div class="bandeau">
+		<div class="liens-aide-responsive">
+			<a id="lien-aide-responsive" data-i18n="header.recherche.aide-du-haut-court" href="
+
+
+/fr/information/2411108
+">Aide</a>
+			
+				<a id="lien-acceo-responsive" href="
+
+
+/fr/information/5894637
+" title="Accès sourds et malentendants" ><img id="picto-acceo-responsive" alt="Accès sourds et malentendants" src="/static/img/pictooreille.svg" height="20px"/></a>
+			
+		</div>
+		<div class="liens-themes-responsive">
+			
+				
+				
+					<a href="
+
+
+/fr/information/8491408
+" data-i18n="header.recherche.themes" class="liens-themes-responsive">Thèmes</a>
+				
+			
+		</div>
+		<div class="loupe" tabindex="-1">
+			<a href="#" id="afficher-recherche" tabindex="-1">
+				<span class="loupe-span">
+					<br/>
+					<span data-i18n="header.responsive.recherche-loupe" class="style">Recherche</span>
+				</span>
+			</a>
+		</div>
+		
+		
+
+
+
+
+
+
+
+
+	
+	
+		<a  href="
+
+
+/fr/accueil
+" id="logo" >
+			<img class="logo logo-accueil lien-logo" src="/static/img/logoInseeFr.svg" height="75px" data-i18n="[alt]header.logo.alt" alt="Insee - Institut national de la statistique et des études économiques - Mesurer pour comprendre - Accueil" />
+			<img class="logo logo-accueil lien-logo-responsive" src="/static/img/logoInseeFr.svg" height="75px" data-i18n="[alt]header.logo.alt" alt="Insee - Institut national de la statistique et des études économiques - Mesurer pour comprendre - Accueil" />
+		</a>
+	
+
+
+		<div class="langue-responsive">
+			
+				
+				
+					<a id="lien-changement-langue-responsive" href="/langue/en" lang="en">English</a>
+				
+			
+		</div>
+		<div class="presse-responsive">
+			<a id="lien-presse-responsive" data-i18n="header.recherche.espace-presse" href="
+
+
+/fr/information/2008400
+">Presse</a>
+		</div>
+		<div class="hamburger">
+			<a href="#" id="afficher-menu" tabindex="-1">
+				<span class="hamburger-menu">
+					<br/>
+					<span data-i18n="header.responsive.menu-hamburger" class="style">Menu</span>
+				</span>
+			</a>
+		</div>
+	
+		
+		<div id="recherche-header" class="recherche-header recherche">
+			<div id="liens-acces">
+				<ul class="liste-lien-acces">
+					
+						<li class="lien-evitement"><a data-i18n="header.recherche.menu" href="#menu">Menu</a></li>
+						<li><a href="https://blog.insee.fr/" target="_blank" target="_blank" rel="noopener noreferrer">Blog</a></li>
+						<li><a data-i18n="header.recherche.espace-presse" href="
+
+
+/fr/information/2008400
+">Presse</a></li>
+						<li><a data-i18n="header.recherche.aide-du-haut" href="
+
+
+/fr/information/2411108
+">Aide</a></li>
+						
+							<li><a href="
+
+
+/fr/information/5894637
+" title="Accès sourds et malentendants" ><img id="picto-acceo" alt="Accès sourds et malentendants" src="/static/img/pictooreille.svg" height="20px"/></a></li>
+ 						
+ 						
+							
+							
+								<li><a id="lien-changement-langue" href="/langue/en" lang="en">English</a></li>
+							
+						
+				</ul>
+			</div>
+			<div id="searchbar-header" class="searchbar-header" role="search">
+				<span id="search-waiting" class="waiting-off"><img alt="Veuillez-patienter..." src="/static/img/preloader.gif"></span>
+				<input data-i18n="[placeholder]header.recherche.barre-recherche-placeholder;[title]header.recherche.barre-recherche-title" type="search" class="ui-autocomplete-input"
+					id="barre-recherche" autocomplete="off" tabindex="0" title="Rechercher sur le site" placeholder="Rechercher" />
+				<button data-i18n="[title]header.recherche.loupe-title" id="bouton-recherche" class="searchbar-icon" tabindex="0" title="rechercher">
+					<span class="hidden-accessibilite" data-i18n="[title]header.recherche.loupe-title-icon">Lancer la recherche sur le site</span>
+				</button>
+				
+					
+					
+						<a href="
+
+
+/fr/information/8491408
+" data-i18n="header.recherche.themes" class="searchbar-theme" tabindex="0">Thèmes</a>
+					
+				
+				<span id="start-terms" class="hidden"></span>
+			</div>
+		</div>
+	
+</div>
+	<!-- Attention : les commentaires en fin de ligne ont un rôle important ! -->
+	<nav id="menu" role="navigation" aria-hidden="false" >
+		<ul class="menu">
+			<li><a class="lien maison" href="
+
+
+/fr/accueil
+" title="accueil" ></a></li><!--
+			--><li><a data-i18n="[html]menu.statistiques.titre" class="lien" href="
+
+
+/fr/statistiques
+" >Statistiques et études</a>
+				<div class="menu-deroulant">
+					<div data-i18n="[html]menu.statistiques.en-tete" class="menu-deroulant-en-tete">
+						Cherchez vos statistiques par&hellip;
+					</div>
+					<ul>
+						<li>
+							<a class="deroulement" href="#"></a><a data-i18n="menu.statistiques.themes" class="lien titre-categorie" href="
+
+
+/fr/statistiques?idfacette=1
+">Thèmes</a>
+							<ul>
+								<li><a data-i18n="menu.statistiques.economie" class="lien" href="
+
+
+/fr/statistiques?theme=27
+">Économie - conjoncture - comptes nationaux</a></li>
+								<li><a data-i18n="menu.statistiques.demographie" class="lien" href="
+
+
+/fr/statistiques?theme=0
+">Démographie</a></li>
+								<li><a data-i18n="menu.statistiques.entreprises" class="lien" href="
+
+
+/fr/statistiques?theme=37
+">Entreprises</a></li>
+								<li><a data-i18n="[html]menu.statistiques.plus-de-themes" class="lien plusDe" href="
+
+
+/fr/statistiques?idfacette=1
+">Plus de thèmes&hellip;</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="deroulement" href="#"></a><a data-i18n="menu.statistiques.niveau-geographique" class="lien titre-categorie" href="
+
+
+/fr/statistiques?idfacette=3
+">Niveaux géographiques</a>
+							<ul>
+								<li><a class="lien" href="
+
+
+/fr/statistiques?debut=0&geo=FRANCE-1&idfacette=3
+">France</a></li>
+								<li><a data-i18n="menu.statistiques.comparaisons-reg-dep" class="lien" href="
+
+
+/fr/statistiques?debut=0&geo=COMPRD-1&idfacette=3
+">Toutes les régions ou tous les départements</a></li>
+								<li><a data-i18n="menu.statistiques.toutes-communes" class="lien" href="
+
+
+/fr/statistiques?debut=0&geo=TOUTES_COMMUNE-1
+">Toutes les communes</a></li>
+								<li><a data-i18n="[html]menu.statistiques.plus-de-niveau-geographique" class="lien plusDe" href="
+
+
+/fr/statistiques?idfacette=3
+">Plus de niveaux géographiques&hellip;</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="deroulement" href="#"></a><a data-i18n="menu.statistiques.categorie-produit" class="lien titre-categorie" href="
+
+
+/fr/statistiques?idfacette=4
+">Catégories</a>
+							<ul>
+								<li><a data-i18n="menu.statistiques.donnees" class="lien" href="
+
+
+/fr/statistiques?categorie=1
+">Données</a></li>
+								<li><a data-i18n="menu.statistiques.publications" class="lien" href="
+
+
+/fr/statistiques?categorie=2
+">Publications</a></li>
+								<li><a data-i18n="[html]menu.statistiques.plus-de-categories" class="lien plusDe" href="
+
+
+/fr/statistiques?idfacette=4
+">Plus de catégories&hellip;</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="deroulement" href="#"></a><a data-i18n="menu.statistiques.collections" class="lien titre-categorie" href="
+
+
+/fr/statistiques?idfacette=5
+">Collections</a>
+							<ul>
+								<li><a class="lien" href="
+
+
+/fr/statistiques?collection=116
+">Insee Première</a></li>
+								<li><a class="lien" href="
+
+
+/fr/statistiques?collection=119
+">Notes et points de conjoncture</a></li>
+								<li><a data-i18n="[html]menu.statistiques.plus-de-collections" class="lien plusDe" href="
+
+
+/fr/statistiques?idfacette=5
+">Plus de collections&hellip;</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li><!--
+			--><li><a class="deroulement" href="#"></a><a class="lien" href="/fr/information/2016815">Définitions, méthodes et qualité</a><div class="menu-deroulant"><ul><li><a class="lien titre-categorie" href="/fr/metadonnees/definitions">Définitions</a><ul></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2407637">Sources statistiques et indicateurs</a><ul><li><a class="lien" href="/fr/metadonnees/sources">Liste des sources statistiques</a></li><li><a class="lien" href="/fr/metadonnees/indicateurs">Liste des indicateurs</a></li><li><a class="lien" href="/fr/information/2383410">Documentation complémentaire sur le recensement</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/4138839">La qualité dans le Service statistique public (SSP)</a><ul><li><a class="lien" href="/fr/information/4137822">Le cadre de référence</a></li><li><a class="lien" href="/fr/information/4137865">La gouvernance</a></li><li><a class="lien" href="/fr/information/6688640">La politique et la stratégie qualité du SSP</a></li><li><a class="lien" href="/fr/information/4138814">Les engagements européens</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2016811">Nomenclatures</a><ul><li><a class="lien" href="/fr/information/2406147">Nomenclature d’activités française</a></li><li><a class="lien" href="/fr/information/2493969">Nomenclature agrégée - NA, 2008</a></li><li><a class="lien" href="/fr/information/2493496">Classification des produits française</a></li><li><a class="lien" href="/fr/information/2493507">Classification des fonctions de consommation des ménages</a></li><li><a class="lien" href="/fr/information/2028129">Catégories juridiques</a></li><li><a class="lien" href="/fr/information/2406153">Nomenclatures des professions et catégories socioprofessionnelles</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/8391822">Géographie administrative et d'étude</a><ul><li><a class="lien" href="/fr/recherche/recherche-geographique">Recherche sur une zone géographique</a></li><li><a class="lien" href="/fr/information/7672015">Téléchargement de fichiers</a></li><li><a class="lien" href="/fr/metadonnees/historique-commune">Historique des communes</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2022002">Modèles, méthodes et outils statistiques</a><ul><li><a class="lien" href="/fr/information/2021959">Les modèles statistiques</a></li><li><a class="lien" href="/fr/information/2021908">Les outils statistiques</a></li><li><a class="lien" href="/fr/information/2414816">Méthodologie statistique</a></li></ul></li><li><a class="lien titre-categorie" href="/fr/information/3622502">Courrier des statistiques</a><ul></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2410988">Offre de données ouvertes</a><ul><li><a class="lien" href="/fr/information/8184173">Le catalogue des données de l'Insee</a></li><li><a class="lien" href="/fr/information/8184146">Le catalogue des API de l'Insee</a></li><li><a class="lien" href="/fr/information/8184150">L'offre de données au travers de nos produits de diffusion</a></li><li><a class="lien" href="/fr/information/2410909">Les formats de mise à disposition des données</a></li><li><a class="lien" href="/fr/information/8184148">Nos données disponibles sur d'autres plateformes</a></li></ul></li></ul></div></li><li><a class="deroulement" href="#"></a><a class="lien" href="/fr/information/1302181">Services</a><div class="menu-deroulant"><ul><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302157">Réviser une pension, un loyer, bail ou contrat</a><ul><li><a class="lien" href="/fr/information/1300608">Réviser une pension alimentaire</a></li><li><a class="lien" href="/fr/information/1300612">Réviser un loyer d'habitation</a></li><li><a class="lien" href="/fr/information/1300602">Réviser un bail commercial ou professionnel</a></li><li><a class="lien" href="/fr/information/1300606">Indexer un contrat</a></li><li><a class="lien" href="/fr/information/2417794">Convertisseur franc-euro</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2411675">Consulter les indices et séries chronologiques</a><ul><li><a class="lien" href="/fr/information/2862832">Actualités des indices et séries chronologiques</a></li><li><a class="lien" href="/fr/information/2860802">Accès des séries et indices chronologiques par thème</a></li><li><a class="lien" href="/fr/information/3128533">Recherche par identifiant ou par mot-clé</a></li><li><a class="lien" href="/fr/information/2862759">Service web SDMX</a></li><li><a class="lien" href="/fr/information/2862863">Tables de passage</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/6675111">Sirene</a><ul><li><a class="lien" href="https://avis-situation-sirene.insee.fr/">Obtenir un avis de situation au répertoire Sirene</a></li><li><a class="lien" href="/fr/information/7456564">Demander la modification de son statut de diffusion</a></li><li><a class="lien" href="/fr/information/7614104">Demander la modification du code APE</a></li><li><a class="lien" href="/fr/information/1401387">Immatriculation, cessation ou modification des données au répertoire Sirene </a></li><li><a class="lien" href="/fr/information/1730869">Obtenir sa catégorie d'entreprise</a></li><li><a class="lien" href="/fr/information/3591226">Consulter et télécharger la base  Sirene</a></li><li><a class="lien" href="/fr/information/1730867">Identifiant unique des intervenants sur les marchés financiers (LEI)</a></li><li><a class="lien" href="/fr/information/6790269">Réponses à vos questions sur le répertoire Sirene</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2021852">Découvrir, apprendre, enseigner</a><ul><li><a class="lien" href="/fr/information/7745315">Pour commencer...</a></li><li><a class="lien" href="/fr/information/7743494">Visualiser les données</a></li><li><a class="lien" href="/fr/information/4495976">La Compétition européenne de statistiques</a></li><li><a class="lien" href="/fr/information/7747175">Pour approfondir...</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302175">Répondre à une enquête de l'Insee</a><ul><li><a class="lien" href="/fr/information/2387311">Enquêtes auprès des particuliers</a></li><li><a class="lien" href="/fr/information/1401986">Enquêtes auprès des entreprises</a></li><li><a class="lien" href="/fr/information/2008477">Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ?</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302152">S’informer sur l’actualité de notre diffusion</a><ul><li><a class="lien" href="/fr/information/1405540">Agenda de diffusion des indicateurs économiques </a></li><li><a class="lien" href="/fr/information/2416834">Dernières publications de l’Insee</a></li><li><a class="lien" href="/fr/information/7752988">Dernières publications des Services statistiques ministériels</a></li><li><a class="lien" href="/fr/information/2544197">Évènements annoncés à la Une du site</a></li><li><a class="lien" href="/fr/information/7702293">Thèmes d'actualité</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302179">Gérer les répertoires des personnes physiques</a><ul><li><a class="lien" href="/fr/information/1303477">Recueil des données d'état civil</a></li><li><a class="lien" href="/fr/information/3539086">Le Répertoire électoral unique</a></li><li><a class="lien" href="/fr/information/1303515">Dématérialisation des échanges de données</a></li><li><a class="lien" href="/fr/information/4470857">Nombre de décès quotidiens par département</a></li><li><a class="lien" href="/fr/information/4190491">Fichiers des personnes décédées depuis 1970</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302154">Bibliothèque de l’Insee Alain Desrosières</a><ul><li><a class="lien" href="/fr/information/1303573">Portail documentaire et catalogue</a></li><li><a class="lien" href="/fr/information/1303569">La Bibliothèque numérique de la statistique publique</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302171">Commander une prestation, acheter une publication</a><ul><li><a class="lien" href="/fr/information/1303438">Diffusion sur mesure</a></li><li><a class="lien" href="/fr/information/2537715">Acheter nos publications</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302177">Nous suivre</a><ul><li><a class="lien" href="/fr/information/1405553">Lettres d'information</a></li><li><a class="lien" href="/fr/information/1405555">Abonnements aux lettres d'information et aux avis de parution</a></li><li><a class="lien" href="/fr/information/2381941">Abonnement aux flux RSS</a></li><li><a class="lien" href="/fr/information/3127332">L'Insee sur les médias sociaux</a></li><li><a class="lien" href="/fr/information/5407494">Insee Mobile</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2411108">Aide et contacts</a><ul><li><a class="lien" href="/fr/information/1302169">Réponses à vos questions</a></li><li><a class="lien" href="/fr/information/8390985">Obtenir des informations par téléphone</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/2008400">Espace presse</a><ul><li><a class="lien" href="/fr/information/5234985">Événements presse</a></li><li><a class="lien" href="/fr/information/5235017">Calendrier des publications</a></li><li><a class="lien" href="/fr/information/2117832?debut=0&amp;region=FRANCE1&amp;familleId=1010&amp;facetteReg=false">Communiqués de presse nationaux</a></li><li><a class="lien" href="/fr/information/2117832?debut=0&amp;region=REG84+REG27+REG53+REG24+REG94+REG44+REG01+REG32+REG11+REG03+REG76+REG52+REG75+REG93+REG06+REG28+REG02+REG04">Communiqués de presse régionaux</a></li><li><a class="lien" href="/fr/information/8618264">Nominations</a></li></ul></li></ul></div></li><li><a class="deroulement" href="#"></a><a class="lien" href="/fr/information/1302230">L'Insee et la statistique publique</a><div class="menu-deroulant"><ul><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302198">L'Insee</a><ul><li><a class="lien" href="/fr/information/1300620">Connaître l'Insee</a></li><li><a class="lien" href="/fr/information/9010344">L’Insee en toute confiance</a></li><li><a class="lien" href="/fr/information/1300628">Travailler à l'Insee</a></li><li><a class="lien" href="/fr/information/1892983">Événements et colloques</a></li><li><a class="lien" href="/fr/information/1300622">Un peu d'histoire</a></li><li><a class="lien" href="/fr/information/4130132">Rapports d'activité</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302194">Les activités de l'Insee</a><ul><li><a class="lien" href="/fr/information/1303532">Suivre l’économie française</a></li><li><a class="lien" href="/fr/information/1303536">Connaître les entreprises</a></li><li><a class="lien" href="/fr/information/1303538">Observer l'évolution de la société</a></li><li><a class="lien" href="/fr/information/1303540">Réaliser le recensement de la population</a></li><li><a class="lien" href="/fr/information/1303542">Décrire et analyser les régions et les territoires</a></li><li><a class="lien" href="/fr/information/1303544">Gérer des grands répertoires</a></li><li><a class="lien" href="/fr/information/1303546">Diffuser et valoriser ses productions</a></li><li><a class="lien" href="/fr/information/1303548">Perfectionner ses méthodes et évaluer la qualité</a></li><li><a class="lien" href="/fr/information/4246608">Contribuer à la construction de la statistique européenne et internationale</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302208">La statistique publique</a><ul><li><a class="lien" href="/fr/information/1300616">Cadre juridique et institutionnel</a></li><li><a class="lien" href="/fr/information/1302192">Le service statistique public</a></li><li><a class="lien" href="/fr/information/1300624">Secret statistique</a></li><li><a class="lien" href="/fr/information/3719162">Protection des données personnelles</a></li><li><a class="lien" href="/fr/information/1300614">Règles de diffusion du SSP</a></li><li><a class="lien" href="/fr/information/5209792">Accès aux documents administratifs</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/1302196">La construction de la statistique européenne</a><ul><li><a class="lien" href="/fr/information/4246567">Les producteurs de statistiques européennes en France</a></li><li><a class="lien" href="/fr/information/2046339">Textes juridiques de la gouvernance statistique européenne</a></li><li><a class="lien" href="/fr/information/4246551">Les règlements cadres et sectoriels</a></li></ul></li><li><a class="deroulement" href="#"></a><a class="lien titre-categorie" href="/fr/information/4248413">Mesure de la qualité de service</a><ul><li><a class="lien" href="/fr/information/4248405">Les indicateurs de qualité du programme Transparence</a></li><li><a class="lien" href="/fr/information/2129030">Résultats des enquêtes de satisfaction</a></li></ul></li><li><a class="lien titre-categorie" href="/fr/information/5413276">Services Publics+ : un service public plus proche, plus simple, plus efficace</a><ul></ul></li></ul></div></li>
+		</ul>
+	</nav>
+</div>
+<div class="clear"></div>
+        
+    
+</header>
+
+<main id="contenu" class="main" role="main">
+    
+    
+<nav class="breadcrum">
+   <div class="container">
+      <ol class="fil-ariane">
+         <li><a data-i18n="breadcrum.accueil" href="/fr/accueil">Accueil</a></li>
+         <li><a href="/fr/information/2016815">Définitions, méthodes et&nbsp;qualité</a></li>
+         <li><a href="/fr/information/2407637">Sources statistiques et&nbsp;indicateurs</a></li>
+         <li data-i18n="sources.liste-sources.titre">Présentation des sources</li>
+      </ol>
+   </div>
+</nav><section>
+   <div class="titre-page publication   ">
+      <div class="titre">
+         <h1 class="titre-principal                                  " data-i18n="sources.liste-sources.titre"><span class="titre-titre">Présentation des sources</span></h1>
+         <p class="auteurs hidden-template-impression"></p>
+         <div class="chapeau"></div>
+      </div>
+      <div class="details hidden-template-impression">
+         <div>
+            <div class="categorie">Sources</div>
+            <div class="famille-numero"></div>
+            <div class="date-diffusion hidden-impression-information-rapide"><span id="libelle-details" class="hidden-template-impression"><span data-i18n="[html]produit.bandeau-bleu.paru-le">Paru le :</span></span><span id="libelle-details" class="impression-seulement hidden-impression-information-rapide"><span data-i18n="[html]produit.bandeau-bleu.paru-le-impression">Paru le</span></span>17/08/2026</div>
+            <div class="lien-details"><a data-i18n="produit.bandeau-bleu.imprimer" href="#" class="bouton-imprimante">Imprimer</a></div>
+         </div>
+         <div class="donnees-telechargeables"></div>
+      </div>
+      <div class="auteurs hidden-impression-information-rapide impression-seulement"></div>
+      <div class="date-diffusion hidden-impression-information-rapide impression-seulement"></div>
+   </div>
+   <div class="contenu   " id="contenu">
+      <div id="partage-reseaux-sociaux">
+         <div class="contenu-reseaux-sociaux"><a data-i18n="[title]reseaux-sociaux.publication.lien-bluesky" href="https://bsky.app/intent/compose?text=Pr%C3%A9sentation des sources https://insee.fr/fr/metadonnees//sources" title="Bluesky" target="_blank"><img class="cercle-bluesky" src="/static/img/logo-bluesky.svg" alt=""><span data-i18n="reseaux-sociaux.publication.lien-bluesky" class="hidden-accessibilite"></span></a><div class="cercle-linkedin"><a data-i18n="[title]reseaux-sociaux.publication.lien-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://insee.fr/fr/metadonnees//sources&amp;title=Pr%C3%A9sentation des sources" class="btn btn-link" title="LinkedIn" target="_blank"><span class="icone-linkedin"><span data-i18n="reseaux-sociaux.publication.lien-linkedin" class="hidden-accessibilite"></span></span></a></div>
+            <div class="cercle-twitter"><a data-i18n="[title]reseaux-sociaux.publication.lien-twitter" href="https://x.com/intent/tweet?url=https://insee.fr/fr/metadonnees//sources&amp;text=Pr%C3%A9sentation des sources" title="X" target="_blank"><span class="icone-twitter"><span data-i18n="reseaux-sociaux.publication.lien-twitter" class="hidden-accessibilite"></span></span></a></div>
+         </div>
+      </div>
+      <div class="bloc avertissement"><img class="image-avertissement" src="/static/img/attention.svg" alt=""><div class="titre-avertissement titre" data-i18n="documentation.avertissements-methodologiques">Avertissement</div>
+         <div class="contenu-avertissement">
+            <div class="bloc paragraphes ">
+               <p class="paragraphe   " data-i18n="sources.liste-sources.avertissement">Sauf indications contraires, les données ou documents que peuvent citer ou mentionner
+                  les descriptifs des sources listées ci-dessous, s'ils ne sont pas disponibles sur
+                  le site Insee.fr par ailleurs, sont confidentiels et couverts par le secret statistique
+                  ou le secret professionnel de façon générale, et ne sont pas communicables sauf conditions
+                  particulières.</p>
+            </div>
+         </div>
+      </div>
+      <div class="contenu">
+         <div id="consulter" class="courant publication" tabindex="0">
+            <div class="corps-publication">
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-1">Activité, production et chiffre d'affaires</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1284">Élaboration des indicateurs d'activité et de chiffre d'affaires / ICA</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1222">Enquête mensuelle sur l'activité des grandes surfaces alimentaires / Emagsa</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1006">Enquêtes mensuelles de branche / EMB</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1044">Enquête sur l'impact de la crise sanitaire sur l'organisation et l'activité des entreprises</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-3">Associations</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1326">Enquête Associations</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-5">Budget de famille</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1194">Enquête Budget de famille / BDF</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-7">Cadre de vie et sécurité</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1278">Enquête de victimation - cadre de vie et sécurité / CVS</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-9">Compétences</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1247">Enquête information et vie quotidienne / IVQ</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1257">Programme pour l'évaluation internationale des compétences des adultes / PIAAC</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-11">Comptabilité démographique</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1169">Estimations de population</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-13">Comptes nationaux</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2144">Comptes nationaux annuels (base 2020)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2162">Comptes nationaux annuels du commerce (base 2020)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1185">Comptes nationaux trimestriels</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2196">Comptes régionaux (base 2020)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2161">Consommation des ménages (base 2020)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1035">Enquête Achats des entreprises / Achats</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1217">Enquête annuelle crédit-bail / ECB</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-15">Conditions de vie des seniors</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1178">Enquête Capacités, aides et ressources des seniors en ménages / Care Ménages</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1266">Enquête sur la santé, le vieillissement et la retraite en Europe depuis 2004 / Share</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1279">Enquête Vie quotidienne et santé / VQS</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-17">Contour des groupes</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1038">Liaisons financières, le répertoire français sur les groupes / Lifi</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1259">Répertoire des entreprises contrôlées majoritairement par l'État / Recme</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-19">Création d'entreprises</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1271">Système d'information sur les nouvelles entreprises / Sine</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-21">Déplacements</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1277">Enquête nationale transports et déplacements / ENTD</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-23">Données démographiques longitudinales</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1166">Échantillon démographique permanent / EDP</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1018">Mortalité des adultes - Échantillon longitudinal</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-25">Données fiscales et sociales sur les logements et les individus</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2191">Base de la propriété foncière / BPF</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1019">Fichiers démographiques sur les logements et les individus / Fidéli</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-27">Emploi du temps</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1224">Enquête Emploi du temps / EDT</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-29">Employeurs, salariés et indépendants</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1037">Base non-salariés</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1998">Base Tous salariés / BTS</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1042">Fichier localisé des rémunérations et de l'emploi salarié / Flores</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2249">Panel Non-salariés / PNS</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2214">Panel Tous Actifs</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1047">Panel Tous Salariés</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1173">Particuliers-Employeurs / PE</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1322">Système d'information sur les agents des services publics / Siasp</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-31">Enquête Emploi</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1223">Enquête emploi en continu / EEC</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-33">Enquêtes qualitatives de conjoncture</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1204">Enquête bimestrielle de conjoncture dans le commerce de gros</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1208">Enquête mensuelle de conjoncture auprès des ménages / Camme</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1205">Enquête mensuelle de conjoncture dans l'industrie</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1206">Enquête mensuelle de conjoncture dans l'industrie du bâtiment</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1203">Enquête mensuelle de conjoncture dans le commerce de détail et le commerce et la réparation
+                        automobiles</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1210">Enquête mensuelle de conjoncture dans les services</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1212">Enquête semestrielle sur la situation de trésorerie dans l'industrie</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1202">Enquête trimestrielle de conjoncture dans l'artisanat du bâtiment</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1209">Enquête trimestrielle de conjoncture dans la promotion immobilière</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1211">Enquête trimestrielle de conjoncture dans les travaux publics</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1207">Enquête trimestrielle sur les investissements dans l'industrie</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-35">Entreprises et développement durable</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1258">Enquête sur la production de déchets non dangereux dans l'industrie</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1219">Enquête sur la production de déchets non dangereux dans le commerce</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2030">Enquête sur la production de déchets non dangereux dans les services</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1040">Enquête sur la production et la gestion des déchets dans le secteur tertiaire en Hauts-de-France</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1214">Enquête sur les consommations d'énergie dans l'industrie / EACEI</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1215">Enquête sur les consommations d'énergie dans le secteur tertiaire / ECET</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1213">Enquête sur les consommations d'énergie et les investissements antipollution dans
+                        les petits établissements de moins de 20 salariés / ECEI-PE</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1227">Enquête sur les entreprises et le développement durable / EnDD</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1232">Enquête sur les investissements dans l'industrie pour protéger l'environnement / Antipol</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-37">Familles</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1233">Enquête Famille</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1260">Enquête sur les relations familiales et intergénérationnelles / Erfi</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-39">Filières industrielles</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1235">Enquête auprès de la filière automobile du Nord-Pas-de-Calais</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1045">Enquête Impact des Activités Spatiales en Guyane / IAS</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2145">Enquête sur la filière aéronautique et spatiale / FAS</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1234">Enquête sur la filière aéronautique et spatiale dans le grand Sud-Ouest</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2157">Enquête sur la filière conception et fabrication de véhicules automobiles</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2295">Enquête sur la filière du médicament</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-41">Financement des PME</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1160">Enquête sur l'accès au financement des PME employant au moins 10 personnes</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-43">Flux touristiques dans les DOM</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1238">Flux touristique à Mayotte (enquête auprès des voyageurs au départ de l’aéroport de
+                        Dzaoudzi)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1239">Flux touristiques à La Réunion (enquête auprès des voyageurs au départ des aéroports
+                        Roland Garros et Saint-Pierre Pierrefonds)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1236">Flux touristiques en Guadeloupe (enquête auprès des voyageurs au départ de l'aéroport
+                        Pôle Caraïbes)</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1237">Flux touristiques en Guyane (enquête auprès des voyageurs au départ de l'aéroport
+                        Cayenne-Rochambeau)</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-45">Formation des adultes</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1240">Enquête Formation et qualification professionnelle / FQP</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2088">Enquête Formation tout au long de la vie / FLV</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1192">Enquête sur la formation des adultes / AES</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-47">Grande pauvreté</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1002">Enquête auprès des personnes fréquentant des services d'aide / Enquête Sans Domicile</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2016">Enquête auprès des personnes fréquentant les lieux de distribution d'aide alimentaire</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-49">Handicap-Santé</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1244">Enquête Handicap-santé - volet institutions / HSI</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1245">Enquête Handicap-santé - volet ménages / HSM</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-51">Indicateurs sur le marché du travail</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1283">Élaboration des Estimations d'emploi</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2107">Taux de chômage localisés</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-53">Indices de référence des loyers</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1029">Élaboration des indices de référence des loyers</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-55">Innovation</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1001">Enquête innovation / CIS</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-57">Insertion professionnelle</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1226">Enquête sur l'entrée dans la vie adulte / EVA</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-59">Logement</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1028">Élaboration des indices de prix des logements</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1004">Enquête Logement</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1350">Estimations annuelles du parc de logements / EAPL</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-61">Mondialisation</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1190">Enquête européenne sur l'activité des filiales étrangères des groupes français / Ofats</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1201">Enquête sur la compétitivité de «l'Entreprise-France» et des entreprises françaises
+                        dans la mondialisation</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2058">Enquête sur la sous-traitance dans les entreprises</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1195">Enquête sur les chaînes d'activité mondiales / CAM</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1371">Enquête sur les chaînes d’activité mondiales des PME / CAM-PME</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1011">Enquête sur les échanges internationaux intragroupe / EIIG</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-63">Mouvements de main-d'œuvre</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1165">Déclaration mensuelle des mouvements de main-d'œuvre / DMMO</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-65">Participation électorale</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1255">Enquête sur la participation électorale</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-67">Patrimoine</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1005">Enquête Patrimoine</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-69">Prix à la consommation</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1007">Élaboration de l'indice des prix à la consommation (IPC) et de l’indice des prix à
+                        la consommation harmonisé (IPCH) / IPC et IPCH</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1252">Enquête conjoncturelle sur les loyers auprès des bailleurs sociaux</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1200">Enquête de comparaison spatiale des niveaux de prix à la consommation entre territoires
+                        français</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1253">Enquête Loyers et charges</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1270">Enquête sur les services de télécommunications</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-71">Prix et coûts de production</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1032">Élaboration des index BT/TP et divers et des indices de coûts de production dans la
+                        construction</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1027">Élaboration des indicateurs de prix dans le secteur de l'agriculture</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1353">Enquête observation des prix de l'industrie et des services / Opise</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1025">Enquête sur le prix de revient des logements neufs / Enquête ICC-PRLN</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-73">Projections démographiques</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1317">Projections de ménages</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1316">Projections de population</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1318">Projections de population active</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-75">Qualité de vie</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1348">Enquête sur la qualité de vie</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-77">Recensement de la population</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2108">Enquêtes Annuelles de Recensement / EAR</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1321">Recensement de la population / RP</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-79">Recensement des équipements</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1161">Base permanente des équipements / BPE</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-81">Répertoire d'entreprises</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1043">Répertoire des Entreprises Fournisseurs de la Défense / REFD</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1020">Système d'identification du répertoire des entreprises / Sirene</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2120">Système d'information sur la démographie d'entreprises / SIDE</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1024">Système d’immatriculation au répertoire des unités statistiques / Sirus</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-83">Répertoires de personnes physiques</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2236">Élaboration du fichier des prénoms / Fichier des prénoms</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1170">État civil</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1046">Répertoire électoral unique / REU</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-85">Répertoires géographiques</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2084">Code officiel géographique / COG</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-87">Réseaux d'entreprises</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1216">Enquête sur les réseaux d'enseigne du commerce de détail et des services</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-89">Ressources et conditions de vie</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1225">Enquête sur les Ressources et conditions de vie des Jeunes / ENRJ</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1220">Statistiques sur les ressources et conditions de vie / SRCV</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-91">Revenus fiscaux et sociaux</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1231">Enquête revenus fiscaux et sociaux / ERFS</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-93">Revenus localisés</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1172">Revenus localisés sociaux et fiscaux / Filosofi</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-95">Salaires, coût du travail</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1263">Enquête auprès des salariés de l’État / FPE</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1189">Enquêtes sur l'activité et les conditions d'emploi de la main-d'œuvre / Acemo</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1221">Enquête sur le coût de la main-d'œuvre et la structure des salaires / Ecmoss</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1050">Recensement des Agents de l'Etat Gendarmes / RAE_G</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1999">Recensement des Agents de l'État Militaires des armées / RAE_M</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-97">Santé</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1264">Enquête Santé</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1265">Enquête Santé et itinéraire professionnel / SIP</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-99">Services pour l'industrie</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1012">Enquête moyens et modes de gestion de l'immatériel / IMMATERIEL 2004</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1016">Enquête sur le recours aux services par l’industrie / Services</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-101">Statistique annuelle d'entreprises</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2147">Dispositif Points de vente / PDV</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1188">Élaboration des statistiques annuelles d'entreprises / Ésane</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1193">Enquête annuelle de production / EAP</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1269">Enquête sectorielle annuelle / ESA</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2055">Enquête sur les entreprises des industries de défense / EID</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1254">Enquête sur les marges commerciales</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-103">Technologies de l'information et de la communication</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2250">Enquêtes sur les usages du numérique</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1274">Enquête sur l'usage de l'informatique, des technologies de la communication et le
+                        commerce électronique dans les entreprises de moins de 10 personnes occupées / TIC-TPE</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1273">Enquête sur les technologies de l'information et de la communication dans les entreprises
+                        / TIC-entreprises</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-105">Tourisme</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1049">Enquête de fréquentation des lieux de mémoire / EFLM</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1039">Enquête mensuelle de fréquentation dans les hébergements collectifs de tourisme /
+                        EFHCT</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s2302">Enquête Voyages professionnels et personnels / VPP</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-107">Trajectoires et origines</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1246">Enquête Histoire de vie / HDV</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1031">Enquête migration, famille, vieillissement / MVF</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1003">Trajectoires et origines / TeO</a></li>
+               </ul>
+               <h2 class="bloc  intertitre-impression " id="titre-bloc-109">Voir également</h2>
+               <ul class="bloc liste">
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1034">Autres indicateurs</a></li>
+                  <li class="item"><a class="renvoi" data-i18n="" href="/fr/metadonnees/source/serie/s1033">Système d’information et de traitement automatisé des données élémentaires sur les
+                        logements et les locaux / Sitadel2</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section><section>
+   <div class="module-transverse pour-en-savoir-plus   ">
+      <div class="module-transverse-container">
+         <h2 class="module-transverse-titre" data-i18n="produit.pour-en-savoir-plus.titre"></h2>
+         <div class="module-transverse-contenu">
+            <p class="paragraphe   "><a class="renvoi" data-i18n="sources.liste-sources.psp-secret" href="/fr/information/1300624">Secret statistique</a></p>
+         </div>
+      </div>
+   </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+    
+        
+        
+            
+
+
+
+<div class="footer-mobile">
+	<div class="liens-reseaux-sociaux-mobile">
+		<a href="https://bsky.app/profile/insee.fr" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-bluesky" title="Bluesky"><span class="icone-bluesky"><span data-i18n="reseaux-sociaux.footer.lien-bluesky" class="hidden-accessibilite"></span></span></a>
+		<a href="https://www.instagram.com/insee_fr/" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-instagram" title="Instagram"><span class="icone-instagram"><span data-i18n="reseaux-sociaux.footer.lien-instagram" class="hidden-accessibilite"></span></span></a>
+		<a href="https://www.linkedin.com/company/insee" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-linkedin" title="LinkedIn"><span class="icone-linkedin"><span data-i18n="reseaux-sociaux.footer.lien-linkedin" class="hidden-accessibilite"></span></span></a>
+		
+			
+			
+				<a href="https://x.com/InseeFr" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-twitter" title="X"><span class="icone-twitter"><span data-i18n="reseaux-sociaux.footer.lien-twitter" class="hidden-accessibilite"></span></span></a>
+			
+		
+		<a href="https://www.youtube.com/@Insee_Fr" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-youtube" title="Youtube"><span class="icone-youtube"><span data-i18n="reseaux-sociaux.footer.lien-youtube" class="hidden-accessibilite"></span></span></a>
+		<a href="https://blog.insee.fr/" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-blog" title="Blog"><span class="icone-blog"><span data-i18n="reseaux-sociaux.footer.lien-blog" class="hidden-accessibilite"></span></span></a>
+		<a href="
+
+
+/fr/information/2381941
+" data-i18n="[title]reseaux-sociaux.footer.lien-rss" title="Rss"><span class="icone-rss"><span data-i18n="reseaux-sociaux.footer.lien-rss" class="hidden-accessibilite"></span></span></a>
+	</div>
+	<div class="liens-partenaires-mobile">
+		<ul class="menu-liens-partenaires-mobile" role="menu">
+			
+				
+				
+					<li class="lien"><span data-i18n="footer.menu-footer.partenaires">Nos sites partenaires</span></li>
+					<ul class="menu-deroulant-partenaires-mobile" role="menu">
+						<li role="menuitem">
+							<a class="lien" href="http://ec.europa.eu/eurostat/web/european-statistical-system/overview?locale=fr" target="_blank" data-i18n="[title]footer.images.sse">Système Statistique Européen</a>
+						</li>
+						<li role="menuitem">
+							<a class="lien" href="http://www.reseau-quetelet.cnrs.fr/spip/" target="_blank" data-i18n="[title]footer.images.quetelet">Réseau Quetelet</a>
+						</li>
+						<li role="menuitem">
+							<a class="lien" href="https://casd.eu/" target="_blank" data-i18n="[title]footer.images.casd">Centre d'Accès Sécurisé Distant aux données (CASD)</a>
+						</li>
+						<li role="menuitem">
+							<a class="lien" href="http://www.data.gouv.fr/fr/" target="_blank" data-i18n="[title]footer.images.data">site data.gouv</a>
+						</li>
+						<li role="menuitem">
+							<a class="lien" href="https://www.plus.transformation.gouv.fr/" target="_blank" data-i18n="[title]footer.images.services">Services Publics +</a>
+						</li>
+					
+				
+			</ul>
+		</ul>
+	</div>
+</div>
+<div class="footer">
+	<div class="container-bloc-1">
+		<nav class="bloc-1" aria-label="bloc-1">
+			<div class="abonnement">
+				<h2 class="titre-footer" data-i18n="footer.abonnez-vous">Abonnez-vous</h2>
+				<div class="contenu-abonnement">
+					<div class="lettre"></div>
+					<a href="
+
+
+/fr/information/1405555
+" class="lien-footer avis-parution" data-i18n="footer.avis-parution">Avis de parution</a>
+				</div>
+			</div>
+			<div class="reseaux-sociaux">
+				<h2 class="titre-footer" data-i18n="footer.reseaux-sociaux">Nous suivre</h2>
+				<div class="contenu-reseaux-sociaux">
+					<a href="https://bsky.app/profile/insee.fr" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-bluesky" title="Bluesky"><img class="cercle-bluesky" alt="" src="
+
+
+/static/img/logo-bluesky.svg
+"/><span data-i18n="reseaux-sociaux.footer.lien-bluesky" class="hidden-accessibilite"></span></a>
+					<a href="https://www.instagram.com/insee_fr/" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-instagram" title="Instagram"><img class="cercle-instagram" alt="" src="
+
+
+/static/img/logo-instagram-small.png
+"/><span data-i18n="reseaux-sociaux.footer.lien-instagram" class="hidden-accessibilite"></span></a>
+					<div class="cercle-linkedin">
+						<a href="https://www.linkedin.com/company/insee" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-linkedin" title="LinkedIn"><span class="icone-linkedin"><span data-i18n="reseaux-sociaux.footer.lien-linkedin" class="hidden-accessibilite"></span></span></a>
+					</div>
+					<div class="cercle-twitter">
+						
+							
+							
+								<a href="https://x.com/InseeFr" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-twitter" title="X"><span class="icone-twitter"><span data-i18n="reseaux-sociaux.footer.lien-twitter" class="hidden-accessibilite"></span></span></a>
+							
+						
+					</div>
+					<div class="cercle-youtube">
+						<a href="https://www.youtube.com/@Insee_Fr" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-youtube" title="Youtube"><span class="icone-youtube"><span data-i18n="reseaux-sociaux.footer.lien-youtube" class="hidden-accessibilite"></span></span></a>
+					</div>
+					<div class="cercle-blog">
+						<a href="https://blog.insee.fr/" target="_blank" rel="noopener" data-i18n="[title]reseaux-sociaux.footer.lien-blog" title="Blog"><span class="icone-blog"><span data-i18n="reseaux-sociaux.footer.lien-blog" class="hidden-accessibilite"></span></span></a>
+					</div>
+					<div class="cercle-rss">
+						<a href="
+
+
+/fr/information/2381941
+" data-i18n="[title]reseaux-sociaux.footer.lien-rss" title="Rss"><span class="icone-rss"><span data-i18n="reseaux-sociaux.footer.lien-rss" class="hidden-accessibilite"></span></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="contact-aide">
+				<h2 class="titre-footer" data-i18n="footer.contact">Contact</h2>
+				<div class="contenu-contact-aide">
+					<a href="
+
+
+/fr/information/2411108
+" class="lien-footer" data-i18n="footer.aide">Aide et contact</a>
+				</div>
+			</div>
+			
+		</nav>
+	</div>
+	<div class="container-bloc-2">
+		<div class="bloc-2"><ul>
+   <div class="colonne-1">
+      <li class="liste-niveau-1">
+         <div class="titre-liste-niveau-1"><a class="lien" href="/fr/statistiques" data-i18n="menu.statistiques.titre">Statistiques et études</a></div>
+      </li>
+      <li class="liste-niveau-1">
+         <div class="titre-liste-niveau-1"><a class="lien" href="/fr/information/2016815">Définitions, méthodes et qualité</a></div>
+         <ul>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/metadonnees/definitions">Définitions</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2407637">Sources statistiques et indicateurs</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/4138839">La qualité dans le Service statistique public (SSP)</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2016811">Nomenclatures</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/8391822">Géographie administrative et d'étude</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2022002">Modèles, méthodes et outils statistiques</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/3622502">Courrier des statistiques</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2410988">Offre de données ouvertes</a></div>
+            </li>
+         </ul>
+      </li>
+   </div>
+   <div class="colonne-2">
+      <li class="liste-niveau-1">
+         <div class="titre-liste-niveau-1"><a class="lien" href="/fr/information/1302181">Services</a></div>
+         <ul>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302157">Réviser une pension, un loyer, bail ou contrat</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2411675">Consulter les indices et séries chronologiques</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/6675111">Sirene</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2021852">Découvrir, apprendre, enseigner</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302175">Répondre à une enquête de l'Insee</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302152">S’informer sur l’actualité de notre diffusion</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302179">Gérer les répertoires des personnes physiques</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302154">Bibliothèque de l’Insee Alain Desrosières</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302171">Commander une prestation, acheter une publication</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302177">Nous suivre</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2411108">Aide et contacts</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/2008400">Espace presse</a></div>
+            </li>
+         </ul>
+      </li>
+      <li class="liste-niveau-1">
+         <div class="titre-liste-niveau-1"><a class="lien" href="/fr/information/1302230">L'Insee et la statistique publique</a></div>
+         <ul>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302198">L'Insee</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302194">Les activités de l'Insee</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302208">La statistique publique</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/1302196">La construction de la statistique européenne</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/4248413">Mesure de la qualité de service</a></div>
+            </li>
+            <li class="liste-niveau-2">
+               <div class="titre-liste-niveau-2"><a class="lien titre-categorie" href="/fr/information/5413276">Services Publics+ : un service public plus proche, plus simple, plus efficace</a></div>
+            </li>
+         </ul>
+      </li>
+   </div>
+</ul></div>
+	</div>
+	<nav class="container-bloc-3" aria-label="container-bloc-3">
+		<div class="bloc-3">
+			<ul class="images-footer">
+				
+					
+					
+						<li class="image-footer">
+							<a class="lien-footer-image" href="http://ec.europa.eu/eurostat/web/european-statistical-system/overview?locale=fr" target="_blank" data-i18n="[title]footer.images.sse">
+								<img src="
+
+
+/static/img/footer/sse.png
+" alt="Système Statistique Européen" title="Système Statistique Européen" />
+							</a>
+						</li>
+						<li class="image-footer">
+							<a class="lien-footer-image" href="http://www.reseau-quetelet.cnrs.fr/spip/" target="_blank" data-i18n="[title]footer.images.quetelet">
+								<img src="
+
+
+/static/img/footer/Reseau_quetelet.png
+" alt="Réseau Quetelet" title="Réseau Quetelet" />
+							</a>
+						</li>
+						<li class="image-footer">
+							<a class="lien-footer-image" href="https://casd.eu/" target="_blank" data-i18n="[title]footer.images.casd">
+								<img src="
+
+
+/static/img/footer/CASD.png
+" alt="Centre d'Accès Sécurisé Distant aux données (CASD)" title="Centre d'Accès Sécurisé Distant aux données (CASD)" />
+							</a>
+						</li>
+						<li class="image-footer">
+							<a class="lien-footer-image" href="http://www.data.gouv.fr/fr/" target="_blank" data-i18n="[title]footer.images.data">
+								<img src="
+
+
+/static/img/footer/data.gouv.png
+" alt="site data.gouv" title="site data.gouv" />
+							</a>
+						</li>
+						<li class="image-footer">
+							<a class="lien-footer-image" href="https://www.plus.transformation.gouv.fr/" target="_blank" data-i18n="[title]footer.images.services">
+								<img src="
+
+
+/static/img/footer/Service_public.png
+" alt="Services Publics +" title="Services Publics +" />
+							</a>
+						</li>
+					
+				
+			</ul>
+		</div>
+	</nav>
+	<nav class="container-bloc-4" aria-label="container-bloc-4">
+		<div class="bloc-4">
+			<ul class="liens-footer">
+				
+					
+					
+						<li class="lien-footer">
+							<a href="
+
+
+/fr/information/2008466
+" data-i18n="footer.liens.mentions">Mentions légales et crédits</a>
+						</li>
+						<li class="lien-footer">
+							<a href="
+
+
+/fr/information/2386135
+" data-i18n="footer.liens.accessibilite">Accessibilité : partiellement conforme</a>
+						</li>
+						<li class="lien-footer ">
+							<a href="
+
+
+/fr/information/5894637
+">Accès sourds et malentendants</a>
+						</li>
+						<li class="lien-footer">
+							<a href="
+
+
+/fr/information/2381939
+" data-i18n="footer.liens.securite">Sécurité</a>
+						</li>
+						<li class="lien-footer">
+							<a href="
+
+
+/fr/plan-du-site
+" data-i18n="footer.liens.plan">Plan du site</a>
+						</li>
+					
+				
+			</ul>
+		</div>
+	</nav>
+</div>
+
+        
+    
+</footer>
+
+<a href="#" class="sticky-top"><span data-i18n="footer.sticky-top.texte" class="sticky-text">Haut de page</span></a>
+
+
+<script>
+    window.addEventListener("load", async function () {
+        const isFrench = document.documentElement.lang !== "en";
+        Highcharts.setOptions({
+            lang: {
+                thousandsSep: "\u00A0",
+                numericSymbols: undefined, // disable 100k, 1M, etc
+                decimalPoint: isFrench ? "," : ".",
+            },
+        });
+
+        const bimester = isFrench
+            ? { label: "bimestre", abbr: "bim." }
+            : { label: "bimester", abbr: "bim." };
+        const quarter = isFrench
+            ? { label: "trimestre", abbr: "trim." }
+            : { label: "quarter", abbr: "qtr." };
+
+        const getBimester = (date) => {
+            return Math.floor(date.getUTCMonth() / 2) + 1;
+        };
+        const getQuarter = (date) => {
+            return Math.floor(date.getUTCMonth() / 3) + 1;
+        };
+
+        const addSuffix = function (pos) {
+            switch (pos) {
+                case 1:
+                    return pos + (isFrench ? "er " : "st ");
+                case 2:
+                    return pos + (isFrench ? "e " : "nd ");
+                case 3:
+                    return pos + (isFrench ? "e " : "rd ");
+                default:
+                    return pos + (isFrench ? "e " : "th ");
+            }
+        };
+
+        Highcharts.dateFormats.clib = function (timestamp) {
+            const date = new Date(timestamp);
+            return addSuffix(getBimester(date)) + bimester.abbr;
+        };
+        Highcharts.dateFormats.Clib = function (timestamp) {
+            const date = new Date(timestamp);
+            return addSuffix(getBimester(date)) + bimester.label;
+        };
+        Highcharts.dateFormats.t = function (timestamp) {
+            const date = new Date(timestamp);
+            return getQuarter(date) + "";
+        };
+        Highcharts.dateFormats.qlib = function (timestamp) {
+            const date = new Date(timestamp);
+            return addSuffix(getQuarter(date)) + quarter.abbr;
+        };
+        Highcharts.dateFormats.Qlib = function (timestamp) {
+            const date = new Date(timestamp);
+            return addSuffix(getQuarter(date)) + quarter.label;
+        };
+
+        const graphs = document.querySelectorAll("[id^='highchart']");
+        for (const graph of graphs) {
+            const response = await fetch(graph.getAttribute("data-graphique"));
+            const xml = await response.text();
+            const options = await generateChartOptions(xml);
+
+            if (options?.chart.type === 'map') {
+                Highcharts.mapChart(graph.getAttribute("id"), options);
+            } else {
+                Highcharts.chart(graph.getAttribute("id"), options);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+

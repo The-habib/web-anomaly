@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Allow pinning of website on windows -->
+    <meta name="application-name" content="Erlang.org">
+    <meta name="msapplication-tooltip" content="The official home of the Erlang Programming Language">
+    <meta name="msapplication-starturl" content="/" >
+
+    <!-- Make the site look nicer on facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Erlang.org">
+    <meta property="og:title" content="Erlang/OTP 29 Highlights - Erlang/OTP">
+    <meta property="og:description" content="The official home of the Erlang Programming Language">
+    <meta property="og:image" content="https://www.erlang.org/assets/img/erlang-228x200.png">
+    <meta property="og:image:secure_url" content="https://www.erlang.org/assets/img/erlang-228x200.png">
+    <meta property="og:url" content="https://www.erlang.org/">
+
+    <!-- Rich data for google search -->
+    <script type="application/ld+json">
+{"@type":"WebSite","url":"https://erlang.org/","headline":"Erlang/OTP 29 Highlights - Erlang/OTP","name":"Erlang.org","sameAs":["https://github.com/erlang/otp"],"@context":"https://schema.org"}</script>
+
+    <title>Erlang/OTP 29 Highlights - Erlang/OTP</title>
+
+    
+    <script>
+      (function() {
+        try {
+          var s = JSON.parse(localStorage.getItem("ex_doc:settings") || "{}");
+          var t = s.theme;
+          var dark = t === "dark" || (t !== "light" && window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+          if (dark) {
+            document.documentElement.classList.add("dark");
+            document.documentElement.setAttribute("data-bs-theme", "dark");
+          }
+        } catch (e) { /* localStorage may be unavailable; just skip */ }
+      })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- tells iOS browsers to not show telephone numbers as links -->
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="application-name" content="Erlang.org">
+    <meta name="description" content="The official home of the Erlang Programming Language">
+    <!-- https://www.rssboard.org/rss-autodiscovery -->
+    <link rel="alternate" type="application/atom+xml" title="News Atom Feed" href="https://www.erlang.org/news.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Blog Atom Feed" href="https://www.erlang.org/blog.xml" />
+    <link rel="icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header class="navbar navbar-expand-lg navbar-light bg-body">
+        <nav class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img
+                    src="/assets/img/erlang-logo.svg" width="60" alt="Erlang.org main page"/></a>
+            <div class="collapse navbar-collapse fw-bold" id="navbarSupportedContent">
+                <ul class="navbar-nav text-uppercase me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/downloads">Download</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/docs">Documentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/community">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/security">Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/eep">EEP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                </ul>
+                <form class="d-flex" role="search" method="get" action="https://duckduckgo.com/">
+                    <input type="hidden" name="sites" value="erlang.org">
+                    <input class="form-control me-2" id="searchfield" name="q" type="search" placeholder="Search erlang.org"
+                        aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="flex-shrink-0 border-top-dark">
+        <div class="container border-top-light pt-4">
+    <div class="row-lg">
+        <div class="col-lg-8 offset-lg-2">
+            
+<article class="card mb-4">
+    <div class="card-header">
+        <h3><a href="/blog/highlights-otp-29/">Erlang/OTP 29 Highlights</a></h3>
+        <div class="date">May 18, 2026
+             · by Björn Gustavsson
+        </div>
+    </div>
+
+    <div class="card-body">
+        
+        
+        <p>Erlang/OTP 29 is finally here. This blog post introduces the new
+features that we are most excited about.</p>
+
+<p>A list of all changes can be found in <a href="https://erlang.org/patches/OTP-29.0">Erlang/OTP 29
+Readme</a>. Or, as always, look at
+the release notes of the application you are interested in. For
+instance: <a href="https://www.erlang.org/doc/apps/erts/notes.html#erts-17-0">Erlang/OTP 29 - Erts Release Notes - Version
+17.0</a>.</p>
+
+<p>This year’s highlights mentioned in this blog post are:</p>
+
+<ul>
+  <li><a href="#native-records">Native Records</a></li>
+  <li><a href="#security">Security</a>
+    <ul>
+      <li><a href="#secure-coding-guidelines">Secure Coding Guidelines</a></li>
+      <li><a href="#warnings-for-unsafe-functions-and-potentially-unsafe-functions">Warnings for Unsafe Functions and Potentially Unsafe Functions</a></li>
+      <li><a href="#xref-improvements">Xref Improvements</a></li>
+      <li><a href="#safer-default-code-path">Safer Default Code Path</a></li>
+    </ul>
+  </li>
+  <li><a href="#new-compiler-warnings">New Compiler Warnings</a>
+    <ul>
+      <li><a href="#old-style-catch">Old-Style <code>catch</code></a></li>
+      <li><a href="#using-the-and-and-or-operators">Using the <code>and</code> and <code>or</code> Operators</a></li>
+      <li><a href="#exporting-variables-out-of-a-subexpression">Exporting Variables Out of a Subexpression</a></li>
+      <li><a href="#unifying-constructors">Unifying Constructors</a></li>
+    </ul>
+  </li>
+  <li><a href="#new-language-features">New Language Features</a>
+    <ul>
+      <li><a href="#new-guard-bif-is_integer3">New Guard BIF <code>is_integer/3</code></a></li>
+      <li><a href="#assignment-in-comprehensions">Assignment in Comprehensions</a></li>
+      <li><a href="#multi-valued-comprehensions">Multi-Valued Comprehensions</a></li>
+    </ul>
+  </li>
+  <li><a href="#new-functionality-in-stdlib">New Functionality in STDLIB</a>
+    <ul>
+      <li><a href="#array-module-updates"><code>array</code> Module Updates</a></li>
+      <li><a href="#iteration-order-of-maps">Iteration Order of Maps</a></li>
+      <li><a href="#shuffling-lists">Shuffling Lists</a></li>
+      <li><a href="#io_ansi-controlling-colors-and-style"><code>io_ansi</code>: Controlling Colors and Style</a></li>
+      <li><a href="#new-safeguards-in-gb_trees-and-gb_sets">New Safeguards in <code>gb_trees</code> and <code>gb_sets</code></a></li>
+      <li><a href="#graph-functional-digraphs"><code>graph</code>: Functional digraphs</a></li>
+      <li><a href="#erl_tar-improvements"><code>erl_tar</code> Improvements</a></li>
+    </ul>
+  </li>
+  <li><a href="#ssl-and-ssh-security-improvements">SSL and SSH Security Improvements</a>
+    <ul>
+      <li><a href="#more-secure-defaults-for-ssl-and-ssh">More Secure Defaults for SSL and SSH</a></li>
+      <li><a href="#safer-ssh-daemon-by-default">Safer SSH Daemon By Default</a></li>
+    </ul>
+  </li>
+  <li><a href="#hardening-guides">Hardening Guides</a></li>
+</ul>
+      <h1 id="native-records">
+        
+        
+          Native Records <a href="#native-records">#</a>
+        
+        
+      </h1>
+    
+
+<p>A native record is a data structure similar to traditional tuple-based
+records, except that it is a true data type, natively supported by the
+runtime system.</p>
+
+<p>A native record is defined with a slightly different syntax compared
+to a tuple-based record. As an example, consider the definition of a
+tuple-based record with no elements:</p>
+
+<pre><code class="language-erlang">-record(empty, {}).
+</code></pre>
+
+<p>To instead make that a native record, the following syntax is used:</p>
+
+<pre><code class="language-erlang">-record #empty{}.
+</code></pre>
+
+<p>To create, update, match, and access individual elements, the same
+syntax is used as for tuple-based records.</p>
+
+<p>Here is an example:</p>
+
+<pre><code class="language-erlang">-module(geom).
+-export([make_vec/2]).
+-record #vec{x=0.0, y=0.0}.
+
+make_vec(X, Y) -&gt;
+    #vec{x=X, y=Y}.
+</code></pre>
+
+<p>Given this module, a record can be created by calling <code>geom:make_vec/2</code>:</p>
+
+<pre><code class="language-erlang">1&gt; geom:make_vec(10.0, 20.0).
+#geom:vec{x = 10.0,y = 20.0}
+</code></pre>
+
+<p>When a native record is printed, its name is prefixed with the module
+where the record definition is located.</p>
+
+<p>By default, a native record definition is private to the containing
+module. Attempting to use the record from other modules will fail.
+For example:</p>
+
+<pre><code class="language-erlang">-module(example).
+-export([create/2, match/1]).
+
+create(X, Y) -&gt;
+    #geom:vec{x=X, y=Y}.
+
+match(#geom:vec{x=X, y=Y}) -&gt;
+    {X, Y}.
+</code></pre>
+
+<p>Given this module, we can try to call it:</p>
+
+<pre><code class="language-erlang">1&gt; example:create(1.0, 2.0).
+** exception error: {badrecord,{geom,vec}}
+     in function  example:create/2 (example.erl:5)
+2&gt; Vec = geom:make_vec(1.0, 2.0).
+#geom:vec{x = 1.0,y = 2.0}
+3&gt; example:match(Vec).
+** exception error: no function clause matching example:match(#geom:vec{x = 1.0,y = 2.0})
+</code></pre>
+
+<p>However, matching only on the module name and record name will work.
+For example:</p>
+
+<pre><code class="language-erlang">is_vec(#geom:vec{}) -&gt; true;
+is_vec(_) -&gt; false.
+</code></pre>
+
+<p>To make a record accessible from other modules, it must be exported
+using <code>-export_record()</code>. For example:</p>
+
+<pre><code class="language-erlang">-module(geom).
+-export([make_vec/2]).
+-export_record([vec]).
+-record #vec{x=0.0, y=0.0}.
+
+make_vec(X, Y) -&gt;
+    #vec{x=X, y=Y}.
+</code></pre>
+
+<p>With the record exported, the call to <code>example</code> will now work:</p>
+
+<pre><code class="language-erlang">1&gt; V = example:create(1.0, 2.0).
+#geom:vec{x = 1.0,y = 2.0}
+2&gt; example:match(V).
+{1.0,2.0}
+</code></pre>
+
+<p>Native records are considered experimental in Erlang/OTP 29, and possibly also
+in Erlang/OTP 30, meaning that their behavior may change, potentially
+requiring updates to applications that use them.</p>
+
+<p>For more information, see
+<a href="https://www.erlang.org/doc/system/ref_man_native_records.html">Native Records</a>
+and <a href="https://www.erlang.org/eeps/eep-0079">EEP-79</a>.</p>
+      <h1 id="security">
+        
+        
+          Security <a href="#security">#</a>
+        
+        
+      </h1>
+    
+      <h2 id="secure-coding-guidelines">
+        
+        
+          Secure Coding Guidelines <a href="#secure-coding-guidelines">#</a>
+        
+        
+      </h2>
+    
+
+<p>The Erlang/OTP 28.5 patch release includes <a href="https://www.erlang.org/doc/system/secure_coding.html">Secure Coding
+Guidelines</a>
+(found under the <a href="https://www.erlang.org/doc/system/design_principles.html">Design
+Principles</a>
+header). It provides guidelines for writing secure Erlang code,
+describing common pitfalls and weaknesses best avoided, including a
+section with concrete secure coding rules.</p>
+      <h2 id="warnings-for-unsafe-functions-and-potentially-unsafe-functions">
+        
+        
+          Warnings for Unsafe Functions and Potentially Unsafe Functions <a href="#warnings-for-unsafe-functions-and-potentially-unsafe-functions">#</a>
+        
+        
+      </h2>
+    
+
+<p>As a complement to the Secure Coding Guidelines, the compiler can now
+warn about always unsafe and potentially unsafe functions. For example,
+when compiling a module containing this function:</p>
+
+<pre><code class="language-erlang">unsafe(CipherText, Key) -&gt;
+    public_key:decrypt_public(CipherText, Key).
+</code></pre>
+<p>the compiler will emit the following warning:</p>
+
+<pre><code class="language-erlang">some_module.erl:5:5: Warning: public_key:decrypt_public/2 is unsafe; see the documentation for details
+%    5|     public_key:decrypt_public(CipherText, Key).
+%     |     ^
+</code></pre>
+
+<p><code>public_key:decrypt_public/2</code> is one of the functions that is always
+considered unsafe.</p>
+
+<p>It is also possible to enable warnings for potentially unsafe
+functions. For example, when compiling a module containing this
+function with the <code>warn_possibly_unsafe_function</code> option:</p>
+
+<pre><code class="language-erlang">potentially_unsafe(L) -&gt;
+    list_to_atom(L).
+</code></pre>
+
+<p>the compiler will emit the following warning:</p>
+
+<pre><code>% erlc +warn_possibly_unsafe_function some_module.erl
+some_module.erl:8:5: Warning: erlang:list_to_atom/1 is unsafe; however, it is possible to use it safely under some conditions. See the documentation for details
+%    8|     list_to_atom(L).
+%     |     ^
+</code></pre>
+
+<p>Functions that can create new atoms are considered potentially unsafe.
+For more information, see <a href="https://www.erlang.org/doc/system/secure_coding.html#rule-dsg-003">Do Not Abuse
+Atoms</a>.</p>
+      <h2 id="xref-improvements">
+        
+        
+          Xref Improvements <a href="#xref-improvements">#</a>
+        
+        
+      </h2>
+    
+
+<p><a href="https://www.erlang.org/doc/apps/tools/xref.html"><code>xref</code></a> will now
+recognize <code>-unsafe</code> attributes, which are used to mark functions as
+unsafe.</p>
+
+<p>The following new pre-defined analyses have been added:</p>
+
+<ul>
+  <li>
+    <p><code>xref:analyze(S, unsafe_function_calls)</code> – find calls to functions
+marked with the <code>-unsafe</code> attribute.</p>
+  </li>
+  <li>
+    <p><code>xref:analyze(S, undocumented_function_calls)</code> – find calls to
+functions in another application that lack a <code>-doc</code> attribute.</p>
+  </li>
+  <li>
+    <p><code>xref:analyze(S, private_function_calls)</code> – find calls to
+functions in another application that are marked as private
+(the <code>-doc</code> attribute is either <code>false</code> or <code>hidden</code>).</p>
+  </li>
+</ul>
+      <h2 id="safer-default-code-path">
+        
+        
+          Safer Default Code Path <a href="#safer-default-code-path">#</a>
+        
+        
+      </h2>
+    
+
+<p>Before Erlang/OTP 29, the code server had the current working
+directory (<code>.</code>) as the first item in the code path. That means that
+the code server would search for modules to load first in the current
+working directory, then in OTP or the application being run.</p>
+
+<p>That was problematic, because if a corrupt BEAM file with the same
+name as a module in OTP was placed in the current working directory,
+the system could fail to start.</p>
+
+<p>For example, if we created an empty BEAM file named <code>global.beam</code>,
+Erlang/OTP 28 would not start:</p>
+
+<pre><code>% touch global.beam
+% erl
+2026-04-27 09:09:57.704408 ~s~n
+	"beam/beam_load.c(146): Error loading module global:\n  corrupt file header\n"
+=SUPERVISOR REPORT==== 27-Apr-2026::09:09:57.704431 ===
+    supervisor: {local,kernel_sup}
+    errorContext: start_error
+    reason: {'EXIT',
+                {undef,
+                    [{global,start_link,[],[]},
+                     {supervisor,do_start_child_i,3,
+                         [{file,"supervisor.erl"},{line,996}]},
+                     {supervisor,do_start_child,3,
+                         [{file,"supervisor.erl"},{line,982}]},
+                     {supervisor,'-start_children/2-fun-0-',3,
+                         [{file,"supervisor.erl"},{line,966}]},
+                     {supervisor,children_map,4,
+                         [{file,"supervisor.erl"},{line,1891}]},
+                     {supervisor,init_children,2,
+                         [{file,"supervisor.erl"},{line,932}]},
+                     {gen_server,init_it,2,
+                         [{file,"gen_server.erl"},{line,2276}]},
+                     {gen_server,init_it,6,
+                         [{file,"gen_server.erl"},{line,2236}]}]}}
+    offender: [{pid,undefined},
+               {id,global_name_server},
+               {mfargs,{global,start_link,[]}},
+               {restart_type,permanent},
+               {significant,false},
+               {shutdown,2000},
+               {child_type,worker}]
+
+    .
+    .
+    .
+
+Crash dump is being written to: erl_crash.dump...done
+</code></pre>
+
+<p>Even worse, if a modified or out-of-date version of a BEAM file were
+placed in the current working directory, either deliberately or
+accidentally, the system could misbehave in subtle ways.</p>
+
+<p>To eliminate this attack vector, in Erlang/OTP 29 the current working
+directory is added as the last item in the code path.</p>
+
+<p>BEAM files having the same name as a BEAM file in OTP will no longer be loaded:</p>
+
+<pre><code>% touch global.beam
+% erl
+Erlang/OTP 29 . . .
+
+Eshell V17.0 (press Ctrl+G to abort, type help(). for help)
+1&gt;
+</code></pre>
+      <h1 id="new-compiler-warnings">
+        
+        
+          New Compiler Warnings <a href="#new-compiler-warnings">#</a>
+        
+        
+      </h1>
+    
+
+<p>There are several new warnings for old language constructs that are
+problematic from a security and/or maintainability perspective.</p>
+      <h2 id="old-style-catch">
+        
+        
+          Old-Style <code>catch</code> <a href="#old-style-catch">#</a>
+        
+        
+      </h2>
+    
+
+<p>The <a href="https://www.erlang.org/doc/system/secure_coding.html">Secure Coding
+Guidelines</a> discourage
+the use of the old-style <code>catch</code>;
+see <a href="https://www.erlang.org/doc/system/secure_coding.html#rule-lng-002">Do not use <code>catch</code></a>.</p>
+
+<p>The compiler will now emit a warning when the old-style <code>catch</code> is
+used. It is recommended to instead use <code>try</code>…<code>catch</code>…<code>end</code>.</p>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/10421">open-source contribution</a>
+by Richard Carlsson.</p>
+      <h2 id="using-the-and-and-or-operators">
+        
+        
+          Using the <code>and</code> and <code>or</code> Operators <a href="#using-the-and-and-or-operators">#</a>
+        
+        
+      </h2>
+    
+
+<p>The Secure Coding Guidelines discourage the use of the <code>and</code> and <code>or</code>
+operators (see <a href="https://www.erlang.org/doc/system/secure_coding.html#rule-lng-003">Do not use <code>and</code> and
+<code>or</code></a>).</p>
+
+<p>When compiling with the option <code>warn_obsolete_bool_op</code>, the compiler will emit
+warnings for use of <code>and</code> and <code>or</code>. This option will probably become default
+in a future release.</p>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/9115">open-source contribution</a>
+by Richard Carlsson.</p>
+      <h2 id="exporting-variables-out-of-a-subexpression">
+        
+        
+          Exporting Variables Out of a Subexpression <a href="#exporting-variables-out-of-a-subexpression">#</a>
+        
+        
+      </h2>
+    
+
+<p>Binding a variable in a subexpression and then using it later is often
+confusing. Therefore, the compiler will now warn about such code.</p>
+
+<p>For example:</p>
+
+<pre><code class="language-erlang">case file:open(File, AllOpts = [write,{encoding,utf8}]) of
+   {ok,Fd} -&gt;
+       {Fd,AllOpts}
+end
+</code></pre>
+
+<p>This can be written more clearly like so:</p>
+
+<pre><code class="language-erlang">AllOpts = [write,{encoding,utf8}],
+case file:open(File, AllOpts) of
+    {ok,Fd} -&gt;
+        {Fd,AllOpts}
+end
+</code></pre>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/9134">open-source contribution</a>
+by Richard Carlsson.</p>
+      <h2 id="unifying-constructors">
+        
+        
+          Unifying Constructors <a href="#unifying-constructors">#</a>
+        
+        
+      </h2>
+    
+
+<p>The compiler will now warn about matches that unify constructors, such
+as the following:</p>
+
+<pre><code class="language-erlang">m({a,B} = {Y,Z}) -&gt; . . .
+</code></pre>
+
+<p>Such a match can be rewritten as:</p>
+
+<pre><code class="language-erlang">m({a=Y,B=Z}) -&gt; . . .
+</code></pre>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/10433">open-source contribution</a>
+by Richard Carlsson.</p>
+      <h1 id="new-language-features">
+        
+        
+          New Language Features <a href="#new-language-features">#</a>
+        
+        
+      </h1>
+    
+      <h2 id="new-guard-bif-is_integer3">
+        
+        
+          New Guard BIF <code>is_integer/3</code> <a href="#new-guard-bif-is_integer3">#</a>
+        
+        
+      </h2>
+    
+
+<p>When writing ranges checks for integer or characters, it’s easy to
+write the check in a way that will let floats slip through. For
+example:</p>
+
+<pre><code class="language-erlang">is_digit(C) -&gt;
+    $0 =&lt; C andalso C =&lt; $9.
+</code></pre>
+
+<p><code>is_digit/1</code> is supposed to test whether the given character is a digit,
+but it will also return <code>true</code> for some floats:</p>
+
+<pre><code class="language-erlang">1&gt; some_module:is_digit($1).
+true
+1&gt; some_module:is_digit($1 + 0.5).
+true
+</code></pre>
+
+<p>To exclude floats, one must add an <code>is_integer/1</code> test:</p>
+
+<pre><code class="language-erlang">is_digit(C) -&gt;
+    is_integer(C) andalso $0 =&lt; C andalso C =&lt; $9.
+</code></pre>
+
+<p>Using the new guard BIF <code>is_integer/3</code>, the expression can be
+simplified:</p>
+
+<pre><code class="language-erlang">is_digit(C) -&gt;
+    is_integer(C, $0, $9).
+</code></pre>
+      <h2 id="assignment-in-comprehensions">
+        
+        
+          Assignment in Comprehensions <a href="#assignment-in-comprehensions">#</a>
+        
+        
+      </h2>
+    
+
+<p>Sometimes one might want to evaluate an expression in a comprehension
+and use it more than once, for example to first use the value in a
+filter and also include in the result.</p>
+
+<p>Just as an example, say we want to calculate the hash value and only
+keep hash values that can be evenly divided by 10. The most obvious
+way to do it is probably to calculate the hash value twice:</p>
+
+<pre><code class="language-erlang">1&gt; fh(List) -&gt;
+    [erlang:phash2(E) || E &lt;- List,
+                         erlang:phash2(E) rem 10 =:= 0].
+ok
+2&gt; fh(lists:seq(1, 10)).
+[2614250]
+</code></pre>
+
+<p>This feels clumsy, and is unnecessarily slow particularly if the terms
+in the list are large. A somewhat better way to do it is to utilize a
+single-element list generator:</p>
+
+<pre><code class="language-erlang">1&gt; fh(List) -&gt; [H || E &lt;- List,
+                     H &lt;- [erlang:phash2(E)], H rem 10 =:= 0].
+ok
+2&gt; fh(lists:seq(1, 10)).
+[2614250]
+</code></pre>
+
+<p>That certainly works, and in Erlang/OTP 29 the compiler will optimize
+the single-element list generator to avoid actually building the list,
+but it still feels clumsy.</p>
+
+<p>In Erlang/OTP 29, there is a more elegant way to do it using the
+<code>compr_assign</code> feature:</p>
+
+<pre><code class="language-erlang">$ erl -enable-feature compr_assign
+. . .
+1&gt; fh(List) -&gt; [H || E &lt;- List,
+                     H = erlang:phash2(E), H rem 10 =:= 0].
+ok
+2&gt; fh(lists:seq(1, 10)).
+[2614250]
+</code></pre>
+
+<p>Note the command line option for <code>erl</code>. This is necessary to allow
+the <code>compr_assign</code> feature to be used in the shell.</p>
+
+<p>The reason this doesn’t work out of the box is that the syntax was
+accepted before Erlang/OTP 29, but the behavior was totally useless.
+The <code>H = erlang:phash2(E)</code> expression was seen as an illegal filter
+(since it didn’t evaluate to a boolean).</p>
+
+<pre><code class="language-erlang">Erlang/OTP 28 . . .
+$ erl
+1&gt; fh(List) -&gt; [H || E &lt;- List, H = erlang:phash2(E), H rem 10 =:= 0].
+ok
+2&gt; fh(lists:seq(1, 10)).
+* exception error: bad filter 2614250
+</code></pre>
+
+<p>In Erlang/OTP 29, this comprehension will not compile if the
+<code>compr_assign</code> feature is not enabled:</p>
+
+<pre><code>%% Erlang/OTP 29
+$ erl
+Erlang/OTP 29 . . .
+1&gt; fh(List) -&gt; [H || E &lt;- List, H = erlang:phash2(E), H rem 10 =:= 0].
+* 5:14: matches using '=' are not allowed in comprehension qualifiers
+unless the experimental 'compr_assign' language feature is enabled.
+With 'compr_assign' enabled, a match 'P = E' will behave as a
+strict generator 'P &lt;-:- [E]'."
+</code></pre>
+
+<p>It is expected that the <code>compr_assign</code> feature will be enabled by
+default in Erlang/OTP 30.</p>
+
+<p>Let’s look at another example:</p>
+
+<pre><code class="language-erlang">-module(example).
+-feature(compr_assign, enable).
+-export([cat/1]).
+
+cat(Files) -&gt;
+	[Char || F &lt;- Files,
+			 {ok, Bin} = file:read_file(F),
+			 Char &lt;- unicode:characters_to_list(Bin)].
+</code></pre>
+
+<p>This feature is described in <a href="https://www.erlang.org/eeps/eep-0077">EEP 77: Assignment in
+Comprehensions</a>.</p>
+
+<p>The implementation is an <a href="https://github.com/erlang/otp/pull/9153">open-source
+contribution</a> by Richard
+Carlsson.</p>
+      <h2 id="multi-valued-comprehensions">
+        
+        
+          Multi-Valued Comprehensions <a href="#multi-valued-comprehensions">#</a>
+        
+        
+      </h2>
+    
+
+<p>Suppose one needs to generate a list where each positive integer is
+followed by the negative value of that same integer (perhaps in a test
+case). Thus:</p>
+
+<pre><code class="language-erlang">[1,-1,2,-2,3,-3,4,-4,5,-5]
+</code></pre>
+
+<p>That can be done using list comprehensions in a few different ways.
+For example:</p>
+
+<pre><code class="language-erlang">1&gt; lists:append([[I, -I] || I &lt;- lists:seq(1, 5)]).
+[1,-1,2,-2,3,-3,4,-4,5,-5]
+2&gt; [I || N &lt;- lists:seq(1, 5), I &lt;- [N,-N]]
+[1,-1,2,-2,3,-3,4,-4,5,-5]
+</code></pre>
+
+<p>This works, but extra two-element lists are allocated, and it is not
+that clear what exactly is being generated.</p>
+
+<p>Multi-valued comprehensions as described in <a href="https://www.erlang.org/eeps/eep-0078">EEP
+78</a> allow us to generate
+the list in a more elegant way:</p>
+
+<pre><code class="language-erlang">1&gt; [I, -I || I &lt;- lists:seq(1, 5)].
+[1,-1,2,-2,3,-3,4,-4,5,-5]
+</code></pre>
+
+<p>As another example, let’s say that for testing we’ll need to generate
+a list of powers of 2 as well as the integer before and after each
+power of 2.</p>
+
+<p>Combining multi-valued comprehensions with the <code>compr_assign</code> feature
+allows us to implement that in a single list comprehension:</p>
+
+<pre><code class="language-erlang">$ erl -enable-feature compr_assign
+Erlang/OTP 29 . . .
+
+Eshell V17.0 (press Ctrl+G to abort, type help(). for help)
+1&gt; [B-1, B, B+1 || P &lt;- lists:seq(2, 5), B = 1 bsl P].
+[3,4,5,7,8,9,15,16,17,31,32,33]
+</code></pre>
+
+<p>So the <code>P</code> variable is bound to each 2, 3, 4, and 5 in turn. <code>B</code>
+is then bound to the corresponding power of 2 (4, 8, 16, and 32).
+Finally, <code>B-1, B, B+1</code> creates three values out of each <code>B</code>.</p>
+
+<p>The implementation is an <a href="https://github.com/erlang/otp/pull/9374">open-source
+contribution</a> by Michał
+Muskała.</p>
+      <h1 id="new-functionality-in-stdlib">
+        
+        
+          New Functionality in STDLIB <a href="#new-functionality-in-stdlib">#</a>
+        
+        
+      </h1>
+    
+      <h2 id="array-module-updates">
+        
+        
+          <code>array</code> Module Updates <a href="#array-module-updates">#</a>
+        
+        
+      </h2>
+    
+
+<p>The <code>array</code> module now has a write cache, which can make sequential
+writes up to three times faster.</p>
+
+<p>Many new functions have been added:</p>
+
+<ul>
+  <li>
+    <p><code>prepend/2</code> and <code>append/2</code> for prepending or appending a single element
+to an array.</p>
+  </li>
+  <li>
+    <p><code>concat/1</code> and <code>concat/2</code> for concatenating arrays.</p>
+  </li>
+  <li>
+    <p><code>slice/3</code> for extracting part of an array.</p>
+  </li>
+  <li>
+    <p><code>shift/2</code> for shifting an array left or right. Shifting it left drops
+elements from the beginning of the array, and shifting it right adds
+space in the beginning.</p>
+  </li>
+  <li>
+    <p><code>from/2</code> and <code>from/3</code> for creating an array by repeatedly calling
+a fun. For example, that makes it possible to create an array from
+a binary without first converting it to a list.</p>
+  </li>
+  <li>
+    <p>New traversal functions that also take a lower and an upper index
+to limit the part of the array being traversed. For example, in
+addition to the existing <code>foldl(Fun, Init, Array)</code> there is now also
+<code>foldl(Low, High, Fun, Init, Array)</code>.</p>
+  </li>
+  <li>
+    <p>A new family of <code>mapfold</code> functions, for example <code>mapfoldl/3</code> and
+<code>sparse_mapfoldr/5</code>.</p>
+  </li>
+</ul>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/10578">open-source contribution</a>
+by Richard Carlsson.</p>
+      <h2 id="iteration-order-of-maps">
+        
+        
+          Iteration Order of Maps <a href="#iteration-order-of-maps">#</a>
+        
+        
+      </h2>
+    
+
+<p>The order of the keys in a map is undefined. On my computer, at the
+time of writing, I get the following order:</p>
+
+<pre><code>1&gt; maps:keys(#{q =&gt; 1, w =&gt; 2, x =&gt; 3, y =&gt; 4}).
+[x,y,q,w]
+</code></pre>
+
+<p>An annoying thing in OTP 28 and earlier is that the order of keys
+would be different depending on how one extracted the keys. For example,
+let’s create a map with 33 elements:</p>
+
+<pre><code>1&gt; M = #{I =&gt; I * I || I &lt;- lists:seq(0, 32)}.
+#{18 =&gt; 324,4 =&gt; 16,12 =&gt; 144,19 =&gt; 361,29 =&gt; 841,13 =&gt; 169,
+  2 =&gt; 4,7 =&gt; 49,31 =&gt; 961,8 =&gt; 64,10 =&gt; 100,23 =&gt; 529,
+  9 =&gt; 81,15 =&gt; 225,32 =&gt; 1024,1 =&gt; 1,25 =&gt; 625,28 =&gt; 784,
+  20 =&gt; 400,6 =&gt; 36,11 =&gt; 121,17 =&gt; 289,24 =&gt; 576,14 =&gt; 196,
+  3 =&gt; 9,16 =&gt; 256,30 =&gt; 900,21 =&gt; 441,5 =&gt; 25,...}
+</code></pre>
+
+<p>One would expect that extracting the keys with <code>maps:keys/1</code> and using
+a list comprehension with a map generator would yield the same result,
+but alas, no:</p>
+
+<pre><code>%% Erlang/OTP 28
+2&gt; maps:keys(M).
+[22,26,27,0,5,21,30,16,3,14,24,17,11,6,20,28,25,1,32,15,9,
+ 23,10,8,31,7,2,13,29|...]
+3&gt; [K || K := _ &lt;- M].
+[18,4,12,19,29,13,2,7,31,8,10,23,9,15,32,1,25,28,20,6,11,17,
+ 24,14,3,16,30,21,5|...]
+4&gt; lists:reverse(maps:keys(M)) =:= [K || K := _ &lt;- M].
+true
+</code></pre>
+
+<p>In Erlang/OTP 29, it is guaranteed that all ways of iterating over
+maps generate the elements in the same order.</p>
+
+<pre><code>%% Erlang/OTP 29
+2&gt; maps:keys(M).
+[18,4,12,19,29,13,2,7,31,8,10,23,9,15,32,1,25,28,20,6,11,17,
+ 24,14,3,16,30,21,5|...]
+3&gt; [K || K := _ &lt;- M].
+[18,4,12,19,29,13,2,7,31,8,10,23,9,15,32,1,25,28,20,6,11,17,
+ 24,14,3,16,30,21,5|...]
+4&gt; hd(maps:to_list(M)).
+{18,324}
+5&gt; hd(maps:to_list(maps:iterator(M))).
+{18,324}
+</code></pre>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/10626">open-source contribution</a>
+by Michał Muskała.</p>
+      <h2 id="shuffling-lists">
+        
+        
+          Shuffling Lists <a href="#shuffling-lists">#</a>
+        
+        
+      </h2>
+    
+
+<p>The <code>rand</code> module can now shuffle the contents of a list. For example:</p>
+
+<pre><code>1&gt; rand:shuffle(lists:seq(1, 10)).
+[6,8,4,2,9,5,10,3,1,7]
+2&gt; rand:shuffle(lists:seq(1, 10)).
+[8,2,7,5,6,3,9,4,1,10]
+</code></pre>
+
+<p>Here is a recipe for generating a random poker hand:</p>
+
+<pre><code>3&gt; lists:sublist(rand:shuffle([{Suit,Rank} ||
+                       Suit &lt;- [clubs,diamonds,hearts,spades],
+                       Rank &lt;- lists:seq(1, 13)]), 5).
+[{hearts,12},
+ {hearts,5},
+ {diamonds,1},
+ {diamonds,8},
+ {hearts,4}]
+</code></pre>
+      <h2 id="io_ansi-controlling-colors-and-style">
+        
+        
+          <code>io_ansi</code>: Controlling Colors and Style <a href="#io_ansi-controlling-colors-and-style">#</a>
+        
+        
+      </h2>
+    
+
+<p>The new <a href="https://www.erlang.org/doc/apps/stdlib/io_ansi.html"><code>io_ansi</code></a>
+module lets you emit ANSI (Virtual Terminal) sequences
+to the terminal, enabling colored/styled text and fully-fledged
+terminal applications.</p>
+
+<p>For example, the following call creates the ANSI sequences necessary
+to output the “wrong answer: 99” in red and bold text:</p>
+
+<pre><code class="language-erlang">1&gt; io_ansi:format([bold, red, "wrong answer: ", "~p\n"], [99]).
+&lt;&lt;"\e[1m\e[31mwrong answer: 99\n\e(B\e[m"&gt;&gt;
+</code></pre>
+
+<p>To print the text directly to the terminal, call <code>io_ansi:fwrite/2</code>
+with the same arguments.</p>
+      <h2 id="new-safeguards-in-gb_trees-and-gb_sets">
+        
+        
+          New Safeguards in <code>gb_trees</code> and <code>gb_sets</code> <a href="#new-safeguards-in-gb_trees-and-gb_sets">#</a>
+        
+        
+      </h2>
+    
+
+<p><code>gb_sets:from_ordset/1</code> creates a <em>gb_set</em> from an already ordered
+list of elements and is therefore more efficient than
+<code>gb_sets:from_list/1</code>, which needs to sort the elements before
+creating the <em>gb_set</em>.</p>
+
+<p>However, if we happen to give <code>gb_sets:from_ordset/1</code> a list that is
+unordered, the created <em>gb_set</em> would be invalid and anything could
+happen. For example:</p>
+
+<pre><code>%% Erlang/OTP 28
+1&gt; S = gb_sets:from_ordset([3,2,1]).
+{3,{2,{3,nil,nil},{1,nil,nil}}}
+2&gt; gb_sets:is_element(1, S).
+false
+3&gt; gb_sets:is_element(2, S).
+true
+4&gt; gb_sets:is_element(3, S).
+false
+</code></pre>
+
+<p>In this particular case, <code>gb_sets:is_element/2</code> would not consider
+the integers 1 and 3 to be members of the set.</p>
+
+<p>In Erlang/OTP 29, <code>gb_sets:from_ordset/1</code> will verify that the
+elements are ordered while building the <em>gb_set</em>. This will still be
+faster than <code>gb_sets:from_list/1</code> that will need to sort the input
+list before building the <em>gb_set</em>.</p>
+
+<pre><code class="language-erlang">%% Erlang/OTP 29
+1&gt; S = gb_sets:from_ordset([3,2,1]).
+** exception error: bad argument: not_ordset
+     in function  gb_sets:balance_list_checked_1/2 (gb_sets.erl:432)
+     in call from gb_sets:balance_list_checked_1/2 (gb_sets.erl:422)
+     in call from gb_sets:balance_list_checked/2 (gb_sets.erl:417)
+     in call from gb_sets:from_ordset/1 (gb_sets.erl:515)
+%% Oops!
+2&gt; S = gb_sets:from_ordset([1,2,3]).
+{3,{2,{1,nil,nil},{3,nil,nil}}}
+3&gt; gb_sets:is_element(1, S).
+true
+</code></pre>
+
+<p>The same safeguards have been added to <code>gb_trees:from_orddict/1</code>.</p>
+
+<p>For convenience, there is also a new <code>gb_trees:from_list/1</code> function
+for directly creating a <em>gb_tree</em> from a list.</p>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/10910">open-source contribution</a>
+by Maria Scott and Jan Uhlig.</p>
+      <h2 id="graph-functional-digraphs">
+        
+        
+          <code>graph</code>: Functional digraphs <a href="#graph-functional-digraphs">#</a>
+        
+        
+      </h2>
+    
+
+<p>The new <a href="https://www.erlang.org/doc/apps/stdlib/graph.html"><code>graph</code></a>
+module is a functional equivalent of the
+<a href="https://www.erlang.org/doc/apps/stdlib/digraph.html"><code>digraph</code></a> and
+<a href="https://www.erlang.org/doc/apps/stdlib/digraph_utils.html"><code>digraph_utils</code></a>
+modules.</p>
+
+<p>To compare the APIs of <code>graph</code> and <code>digraph</code>, let’s create a simple
+digraph with a single edge. First, here is how to do it with <code>digraph</code>:</p>
+
+<pre><code class="language-erlang">1&gt; G = digraph:new().
+{digraph,#Ref&lt;0.2128870979.1452670981.25546&gt;,
+         #Ref&lt;0.2128870979.1452670981.25547&gt;,
+         #Ref&lt;0.2128870979.1452670981.25548&gt;,true}
+2&gt; digraph:add_vertex(G, a).
+a
+3&gt; digraph:add_vertex(G, b).
+b
+4&gt; digraph:add_edge(G, a, b).
+['$e'|0]
+</code></pre>
+
+<p>Here is how to create the same graph using <code>graph</code>:</p>
+
+<pre><code class="language-erlang">1&gt; G0 = graph:new().
+{graph,#{},#{},#{},true,0}
+2&gt; G1 = graph:add_vertex(G0, a).
+{graph,#{a =&gt; []},#{},#{},true,0}
+3&gt; G2 = graph:add_vertex(G1, b).
+{graph,#{a =&gt; [],b =&gt; []},#{},#{},true,0}
+4&gt; G3 = graph:add_edge(G2, a, b).
+{graph,#{a =&gt; [],b =&gt; []},
+       #{b =&gt; [{a,b,[]}]},
+       #{a =&gt; [{a,b,[]}]},
+       true,0}
+</code></pre>
+
+<p>Since the API for <code>graph</code> is functional, every operation that updates
+the graph returns the new graph.</p>
+
+<p>For some use cases, a functional representation of a graph is much
+more convenient because one can easily revert to a previous state of
+the graph, for example in
+<a href="https://github.com/erlang/otp/blob/2f659dedef2cdd0740b7f0f9152ff696cd90b52f/lib/compiler/src/beam_ssa_bool.erl#L831-L842">compiler optimizations</a>.</p>
+
+<p>This is an <a href="https://github.com/erlang/otp/pull/10532">open-source contribution</a>
+by Richard Carlsson.</p>
+      <h2 id="erl_tar-improvements">
+        
+        
+          <code>erl_tar</code> Improvements <a href="#erl_tar-improvements">#</a>
+        
+        
+      </h2>
+    
+
+<p><a href="https://www.erlang.org/doc/apps/stdlib/erl_tar.html"><code>erl_tar</code></a>
+will use less memory when extracting large tar entries to
+disk. Instead of reading each tar entry into memory, <code>erl_tar</code> now
+streams data in chunks of 64 KB. The chunk size can be configured using
+the new <code>{chunks,ChunkSize}</code> option. This is an <a href="https://github.com/erlang/otp/pull/10818">open-source
+contribution</a> by Eric
+Meadows-Jönsson.</p>
+
+<p>The new <code>{max_size,Size}</code> option will set a limit on the total size of
+extracted data to protect against filling up the disk. This is an
+<a href="https://github.com/erlang/otp/pull/10821">open-source contribution</a>
+by Eric Meadows-Jönsson.</p>
+
+<p>Symlink checking has been improved. Some symlinks that were safe (such
+as <code>dir/link -&gt; ../file</code>) used to be rejected. This is an <a href="https://github.com/erlang/otp/pull/10814">open-source
+contribution</a> by Eric
+Meadows-Jönsson.</p>
+      <h1 id="ssl-and-ssh-security-improvements">
+        
+        
+          SSL and SSH Security Improvements <a href="#ssl-and-ssh-security-improvements">#</a>
+        
+        
+      </h1>
+    
+      <h2 id="more-secure-defaults-for-ssl-and-ssh">
+        
+        
+          More Secure Defaults for SSL and SSH <a href="#more-secure-defaults-for-ssl-and-ssh">#</a>
+        
+        
+      </h2>
+    
+
+<p>For both the <code>ssl</code> and <code>ssh</code> applications, by default the most
+preferred key exchange algorithm is now a hybrid quantum-resistant
+algorithm combining <a href="https://en.wikipedia.org/wiki/ML-KEM">ML-KEM-768</a>
+with <a href="https://en.wikipedia.org/wiki/Curve25519">X25519</a>. This provides
+protection against both classical and quantum computer attacks while
+maintaining backward compatibility through automatic fallback to other
+algorithms when peers don’t support it.</p>
+      <h2 id="safer-ssh-daemon-by-default">
+        
+        
+          Safer SSH Daemon By Default <a href="#safer-ssh-daemon-by-default">#</a>
+        
+        
+      </h2>
+    
+
+<p>The SSH daemon now has more secure defaults, in that the shell, exec
+services, and the SFTP subsystem are no longer enabled by default.
+This shrinks the attack surface. Applications that need these services
+must explicitly enable them.</p>
+
+<p>The Erlang shell is enabled like this:</p>
+
+<pre><code class="language-erlang">ssh:daemon(Port, [{shell, {shell, start, []}} | Options])
+</code></pre>
+
+<p>Erlang term evaluation is enabled like this:</p>
+
+<pre><code class="language-erlang">ssh:daemon(Port, [{exec, erlang_eval} | Options])
+</code></pre>
+
+<p>The SFTP subsystem is enabled like this:</p>
+
+<pre><code class="language-erlang">ssh:daemon(Port, [{subsystems, [ssh_sftpd:subsystem_spec([])]} | Options])
+</code></pre>
+
+<p>All services can also be enabled in one call:</p>
+
+<pre><code class="language-erlang">ssh:daemon(Port, [{shell, {shell, start, []}},
+                  {exec, erlang_eval},
+                  {subsystems, [ssh_sftpd:subsystem_spec([])]}
+                  | Options])
+</code></pre>
+      <h1 id="hardening-guides">
+        
+        
+          Hardening Guides <a href="#hardening-guides">#</a>
+        
+        
+      </h1>
+    
+
+<p>The <code>ssl</code> application has a new <a href="https://www.erlang.org/doc/apps/ssl/ssl_hardening.html">TLS Hardening
+Guide</a> with
+guidelines on how to make TLS connections harder to attack.</p>
+
+<p>The <code>inets</code> application also has a new
+<a href="https://www.erlang.org/doc/apps/inets/hardening.html">Hardening</a> guide.</p>
+
+<p>The existing
+<a href="https://www.erlang.org/doc/apps/ssh/hardening.html">Hardening</a>
+guide for the <code>ssh</code> application has been updated for Erlang/OTP 29.</p>
+
+        
+    </div>
+</article>
+
+        </div>
+    </div>
+</div>
+<script src="/assets/js/prismjs/prism.js"></script>
+<script src="/assets/js/prismjs/components/prism-erlang.js"></script>
+<script src="/assets/js/prismjs/components/prism-nasm.js"></script>
+<script src="/assets/js/prismjs/components/prism-armasm.js"></script>
+<script src="/assets/js/prismjs/components/prism-c.js"></script>
+<script src="/assets/js/prismjs/components/prism-bash.js"></script>
+
+    </div>
+    <footer class="container-fluid footer mt-auto text-center border-top border-bottom">
+        <div>
+            <a href="/downloads.html" title="DOWNLOAD">
+                <svg width="36" height="24" role="img">
+    
+        <title>Download Erlang/OTP</title>
+    
+    <use xlink:href="#download-cloud"></use>
+</svg>
+
+            </a>
+        </div>
+        <div>
+            <a href="http://www.github.com/erlang/otp">
+                <svg width="32" height="32" role="img">
+    
+        <title>Erlang/OTP on Github</title>
+    
+    <use xlink:href="#github"></use>
+</svg>
+
+            </a>
+        </div>
+        
+        <div>
+            <button type="button" id="theme-toggle" class="theme-toggle"
+                    aria-label="Toggle theme" title="Toggle theme (light / dark / system)">
+                <svg width="20" height="20"  class="icon-theme-light">
+    
+    <use xlink:href="#theme-light"></use>
+</svg>
+
+                <svg width="20" height="20"  class="icon-theme-dark">
+    
+    <use xlink:href="#theme-dark"></use>
+</svg>
+
+                <svg width="20" height="20"  class="icon-theme-system">
+    
+    <use xlink:href="#theme-system"></use>
+</svg>
+
+            </button>
+        </div>
+    </footer>
+    <!-- SVG icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+        <symbol id="download-cloud" viewBox="0 0 36 24">
+            <path fill="currentColor" d="M30.096 10.54S30.76 1.59 22.56.568c-7.03-.718-9.168 5.814-9.168 5.814s-2.117-2.035-4.99-.372c-2.57 1.587-2.116 4.492-2.116 4.492s-5.709 1.11-5.709 6.93c.128 5.812 6.2 5.87 6.2 5.87h11.621l-5.12-5.119h3.072V12.04h4.096v6.143h3.071l-5.119 5.12h10.716s5.652.005 6.446-5.524c.377-6.047-5.464-7.239-5.464-7.239Z"/>
+        </symbol>
+        <symbol id="download" viewBox="0 0 20 20">
+            <path fill="currentColor" d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
+            <path fill="currentColor" d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 20 20">
+            <path fill="currentColor" fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="theme-light" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 2a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 17a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1ZM2 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm17 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM4.93 4.93a1 1 0 0 1 1.41 0l1.42 1.42A1 1 0 1 1 6.34 7.76L4.93 6.34a1 1 0 0 1 0-1.41Zm11.31 11.31a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.41 1.41l-1.42-1.42a1 1 0 0 1 0-1.41ZM19.07 4.93a1 1 0 0 1 0 1.41l-1.42 1.42a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0ZM7.76 16.24a1 1 0 0 1 0 1.41l-1.42 1.42a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0Z"/>
+        </symbol>
+        <symbol id="theme-dark" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M20 14.6A8 8 0 0 1 9.4 4a8.001 8.001 0 1 0 10.6 10.6Z"/>
+        </symbol>
+        <symbol id="theme-system" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 16V5a7 7 0 0 1 0 14Z" clip-rule="evenodd"/>
+        </symbol>
+        <symbol id="github" viewBox="0 0 32 32">
+            <path fill="currentColor" fill-rule="evenodd" d="M16 0c8.837 0 16 7.344 16 16.405 0 7.246-4.58 13.393-10.933 15.565-.811.161-1.099-.35-1.099-.788 0-.54.02-2.307.02-4.502 0-1.53-.513-2.528-1.087-3.037 3.563-.406 7.307-1.793 7.307-8.094 0-1.792-.62-3.255-1.648-4.403.166-.415.715-2.084-.157-4.343 0 0-1.34-.44-4.395 1.682A15.034 15.034 0 0 0 16 7.933a15 15 0 0 0-4.005.552C8.938 6.363 7.594 6.803 7.594 6.803c-.87 2.26-.32 3.928-.156 4.343-1.022 1.148-1.648 2.61-1.648 4.403 0 6.285 3.736 7.693 7.29 8.107-.458.41-.872 1.133-1.016 2.194-.912.419-3.229 1.144-4.656-1.364 0 0-.846-1.576-2.453-1.69 0 0-1.56-.022-.109.996 0 0 1.048.504 1.776 2.4 0 0 .94 2.928 5.39 1.936.009 1.371.023 2.664.023 3.054 0 .434-.294.941-1.093.79C4.584 29.802 0 23.651 0 16.404 0 7.344 7.165 0 16 0Z" clip-rule="evenodd"/>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 32 27">
+            <path fill="#00AAEC" fill-rule="evenodd" d="M32 3.157a12.822 12.822 0 0 1-3.77 1.06A6.717 6.717 0 0 0 31.115.493a12.93 12.93 0 0 1-4.171 1.632A6.472 6.472 0 0 0 22.153 0c-3.623 0-6.562 3.014-6.562 6.732 0 .527.056 1.04.169 1.533-5.457-.282-10.294-2.958-13.534-7.037a6.854 6.854 0 0 0-.887 3.389 6.778 6.778 0 0 0 2.92 5.603 6.446 6.446 0 0 1-2.974-.84v.083c0 3.262 2.263 5.984 5.268 6.6-.562.16-1.145.24-1.73.238-.422 0-.836-.041-1.236-.12.836 2.673 3.259 4.621 6.133 4.673a12.963 12.963 0 0 1-8.153 2.883c-.53 0-1.054-.031-1.567-.092a18.278 18.278 0 0 0 10.063 3.022c12.077 0 18.68-10.257 18.68-19.154 0-.292-.006-.585-.018-.872 1.29-.957 2.4-2.137 3.274-3.484Z" clip-rule="evenodd"/>
+        </symbol>
+    </svg>
+    <script src="/assets/js/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Theme toggle: cycles light -> dark -> system. Persists into the
+      // same `ex_doc:settings` localStorage entry that ExDoc uses, so
+      // the choice flows between Jekyll-rendered pages and the
+      // ExDoc-generated docs without a separate switch.
+      (function () {
+        var KEY = "ex_doc:settings";
+        var btn = document.getElementById("theme-toggle");
+        if (!btn) return;
+
+        function loadSettings() {
+          try { return JSON.parse(localStorage.getItem(KEY) || "{}"); }
+          catch (_) { return {}; }
+        }
+        function saveSettings(s) {
+          try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (_) {}
+        }
+        function effectiveDark(theme) {
+          if (theme === "dark") return true;
+          if (theme === "light") return false;
+          return window.matchMedia &&
+                 window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        function apply(theme) {
+          var dark = effectiveDark(theme);
+          document.documentElement.classList.toggle("dark", dark);
+          document.documentElement.setAttribute(
+            "data-bs-theme", dark ? "dark" : "light");
+          btn.setAttribute("data-theme", theme || "system");
+        }
+
+        // Initial: reflect the current saved choice on the button.
+        var current = loadSettings().theme || "system";
+        apply(current);
+
+        btn.addEventListener("click", function () {
+          var order = ["light", "dark", "system"];
+          var next = order[(order.indexOf(current) + 1) % order.length];
+          current = next;
+          var s = loadSettings();
+          if (next === "system") delete s.theme; else s.theme = next;
+          saveSettings(s);
+          apply(next);
+        });
+
+        // When in system mode, react to OS theme changes live.
+        if (window.matchMedia) {
+          var mq = window.matchMedia("(prefers-color-scheme: dark)");
+          var listener = function () { if (current === "system") apply("system"); };
+          if (mq.addEventListener) mq.addEventListener("change", listener);
+          else if (mq.addListener) mq.addListener(listener);  // Safari < 14
+        }
+      })();
+    </script>
+</body>
+
+</html>

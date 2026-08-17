@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SSI: CSS+JS inline for speed -->
+  <!-- INLINED-HEAD-BEGIN -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #aaa;
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popovers-popover-box-shadow-color: #aaa;
+
+    --GW-popovers-popover-title-bar-background-color: #fff;
+    --GW-popovers-popover-title-bar-button-color: #777;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #ccc;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #999;
+
+    --GW-popovers-popover-stack-counter-text-color: #fff;
+    --GW-popovers-popover-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #7c7c7c;
+    --GW-popovers-popover-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popovers-popover-box-shadow-color: #7c7c7c;
+
+    --GW-popovers-popover-title-bar-background-color: #000;
+    --GW-popovers-popover-title-bar-button-color: #a6a6a6;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #5c5c5c;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popovers-popover-stack-counter-text-color: #000;
+    --GW-popovers-popover-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popovers-popover-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+.poem span.caesura-mark {
+	opacity: 0.30;
+}
+@media all and (max-width: 649px) {
+	.poem span.caesura-mark {
+		opacity: 0.35;
+	}
+}
+
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1786427108">
+<script src="/static/js/head.js?v=1786427108"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1785906347" as="image">
+
+  <!-- INLINED-HEAD-END -->
+
+  
+  <!-- Google Webmaster requires this tag, but only on the index/homepage -->
+  <meta name="google-site-verification" content="BOhOQI1uMfsqu_DopVApovk1mJD5ZBLfan0s9go3phk">
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="‘newest links’ directory">
+  <meta name="citation_title" content="‘newest links’ directory">
+  <meta name="og:title" content="‘newest links’ directory">
+  <meta name="twitter:title" content="‘newest links’ directory">
+  <meta name="generator" content="Hakyll">
+  <link rel="repository" href="https://github.com/gwern/gwern.net/">
+  <link rel="bug-tracker" href="https://github.com/gwern/gwern.net/issues">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="Bibliography for directory 𝚗𝚎𝚠𝚎𝚜𝚝, most recent first: 1 related tag, 73 annotations, &amp; 18 links (parent).">
+  <meta name="og:description" content="Bibliography for directory 𝚗𝚎𝚠𝚎𝚜𝚝, most recent first: 1 related tag, 73 annotations, &amp; 18 links (parent).">
+  <!-- <meta name="description-raw" content="Bibliography for directory <code>newest</code>, most recent first: 1 <a class='icon-not' href='/doc/newest/index#see-alsos'>related tag</a>, 73 <a class='icon-not' href='/doc/newest/index#links'>annotations</a>, &amp; 18 <a class='icon-not' href='/doc/newest/index#miscellaneous'>links</a> (<a href='/doc/index' class='link-page link-tag directory-indexes-upwards link-annotated' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to parent directory'>parent</a>)."> -->
+  <meta property="og:image" content="https://gwern.net/doc/design/typography/rubrication/2026-08-02-gwern-firstchurchofchristscientistberkeley-1941-marybakereddy-scienceandhealth-subscriptionedition-photographofrubricatedpage.jpg">
+  <meta property="og:image:alt" content="">
+  
+  <meta property="og:image:height" content="1983">
+  <meta property="og:image:width" content="3537">
+  <meta property="gwern:thumbnail:css-classes" content="outline">
+  <meta name="keywords" content="meta">
+  <meta name="dc.date.issued" content="2026-06-23">
+  
+  <meta name="citation_publication_date" content="2026-06-23">
+  <meta name="dcterms.modified" content="2026-08-08">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/doc/newest/index">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/doc/newest/index">
+  <meta name="og:url" content="https://gwern.net/doc/newest/index">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/doc/newest/index.md" title="Markdown source of ‘‘newest links’ directory’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-doc-newest-index dropcaps-not page-created-recently">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>‘newest links’ directory · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+</head>
+
+<body class="page-doc-newest-index dropcaps-not page-created-recently">
+  <!-- SSI: Inlined asset links -->
+  <!-- INLINED-ASSET-LINKS-BEGIN-->
+  <link rel="stylesheet" href="/static/css/style.css?v=1786427108">
+<script src="/static/js/script.js?v=1786427108" defer></script>
+
+  <!-- INLINED-ASSET-LINKS-END -->
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <noscript>
+    <style>
+      #navbar { margin-top: 7em; }
+      @media all and (max-width: 649px) { #navbar { margin-top: 10em; } }
+    </style>
+    <div id="noscript-warning-header" class="markdownBody noscript-container">
+      <details open>
+        <summary><wbr></summary>
+        <div class="admonition error colors-invert">
+          <div class="admonition-title">
+            <p><strong>Warning:</strong> JavaScript Disabled!</p>
+          </div>
+          <p>For support of key <a href="/design" title="About: Gwern.net Design: principles, features, links, tricks">website features</a> (link annotation popups/popovers & transclusions, collapsible sections, backlinks, tablesorting, image zooming, <a href="/sidenote">sidenotes</a> etc.), you must enable JavaScript.</p>
+        </div>
+      </details>
+    </div>
+    </noscript>
+
+    <!-- SSI: Navbar -->
+    <!-- NAVBAR-BEGIN-->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="me link-page link-annotated" href="/me" title="Who am I online, what have I done, what am I like? Contact information; sites I use; things I've worked on" rel="author">Me</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/doc/newest/index" title="Most recent link annotations">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+    <!-- NAVBAR-END -->
+
+    <article>
+
+      <header>
+        <h1>‘newest links’ directory</h1>
+      </header>
+
+       
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#see-also" id="toc-see-also">See Also</a></li>
+<li><a href="#gwern" id="toc-gwern">Gwern</a>
+<ul>
+<li><a href="#gwern-et-al-2026-section" id="toc-gwern-et-al-2026-section">“The Yogettes”, Gwern et al 2026</a></li>
+<li><a href="#gwern-pro-2026-section" id="toc-gwern-pro-2026-section">“Live Culture”, Gwern & Pro 2026</a></li>
+<li><a href="#gwern-et-al-2026-section" id="toc-gwern-et-al-2026-section">“Sleepcat Purrkit”, Gwern et al 2026</a></li>
+<li><a href="#gwern-2-2026-section" id="toc-gwern-2-2026-section">“The Re<em>pug</em>nant Conclusion”, Gwern & 2 2026</a></li>
+<li><a href="#gwern-lean-scaling-section" id="toc-gwern-lean-scaling-section">“Lean Software Scaling Laws”, Gwern 2025</a></li>
+<li><a href="#gwern-2026-face-training-section" id="toc-gwern-2026-face-training-section">“Face Recognition Training App”, Gwern 2026</a></li>
+<li><a href="#gemini-31-pro-preview-et-al-2026-section" id="toc-gemini-31-pro-preview-et-al-2026-section">“Sand, Rain, Wood”, Gemini-3.1-pro-preview et al 2026</a></li>
+<li><a href="#gwern-gpt-4-2023-section" id="toc-gwern-gpt-4-2023-section">“𝑃𝑒𝑟𝑖𝑠𝘩𝑒𝑑 𝑃𝑎𝑟𝑎𝑑𝑖𝑠𝑒 Graveyard”, Gwern & GPT-4 2023</a></li>
+<li><a href="#claude-48-opus-et-al-2026-section" id="toc-claude-48-opus-et-al-2026-section">“Chapter 6, Mime Molting: What to Expect”, Claude-4.8-opus et al 2026</a></li>
+<li><a href="#gwern-et-al-2025-section" id="toc-gwern-et-al-2025-section">“𝑇𝑖𝑙𝑎𝑘𝑘𝘩𝑎𝑛𝑎: The 3 Scars of Existence”, Gwern et al 2025</a></li>
+<li><a href="#gwern-guardian-angel-section" id="toc-gwern-guardian-angel-section">“Guardian Angels: LLM Personalization for Productivity and Security”, Gwern 2025</a></li>
+<li><a href="#gwern-llm-catapult-section" id="toc-gwern-llm-catapult-section">“Human-Like Neural Nets by Catapulting”, Gwern 2024</a></li>
+</ul></li>
+<li><a href="#links" id="toc-links">Links</a>
+<ul>
+<li><a href="#eddy-2026-section" id="toc-eddy-2026-section">“<em>Science and Health</em> <span class=editorial>[1941 Special Edition]</span>”, Eddy 2026</a></li>
+<li><a href="#bleich-1973-section" id="toc-bleich-1973-section">“Cannibalism”, Bleich 1973</a></li>
+<li><a href="#bleich-1987-section" id="toc-bleich-1987-section">“Vegetarianism and Judaism”, Bleich 1987</a></li>
+<li><a href="#orland-2026-section" id="toc-orland-2026-section">“ChatGPT Starts Blocking Direct Requests to Copy an Author’s Style: New Behavior Capturing a Writer’s ‘Broad Qualities’ Could Have Legal Implications”, Orland 2026</a></li>
+<li><a href="#armstrong-2011-section" id="toc-armstrong-2011-section">“Anthropic Decision Theory”, Armstrong 2011</a></li>
+<li><a href="#_fawt-gO2-section" id="toc-_fawt-gO2-section">“Hey There!”</a></li>
+<li><a href="#hall-2026-section" id="toc-hall-2026-section">“Training AI to Govern for Us: In Our New AI-Centered Class at the GSB, We’re Experimenting on How to Build AI Agents That Represent Us. Here’s What We’ve Learned so Far”, Hall 2026</a></li>
+<li><a href="#sun-2026-section" id="toc-sun-2026-section">“No Data Centers In My Backyard: Money, Power, and Populism in the AI Buildout”, Sun 2026</a></li>
+<li><a href="#_1ZT8uOGM-section" id="toc-_1ZT8uOGM-section">“Stuart Armstrong”</a></li>
+<li><a href="#mowshowitz-2026-section" id="toc-mowshowitz-2026-section">“What Happened: OpenAI and HuggingFace”, Mowshowitz 2026</a></li>
+<li><a href="#japan-2013-section" id="toc-japan-2013-section">“Studio Ghibli’s <em>The Tale Of The Princess Kaguya</em> Production Notes”, Japan 2013</a></li>
+<li><a href="#_5z_wdLTw-section" id="toc-_5z_wdLTw-section">“Black Hat USA 2026: The ‘Breaking’ News: The OpenAI–Hugging Face Incident”</a></li>
+<li><a href="#_7c-JaRhW-section" id="toc-_7c-JaRhW-section">“Humanoid Robot Fighting League Debuts in Shenzhen”</a></li>
+<li><a href="#kim-et-al-2026-section" id="toc-kim-et-al-2026-section">“Inducing Language Models to Assert Their Own Consciousness Restores Human Beliefs and Values”, Kim et al 2026</a></li>
+<li><a href="#_YzUwshDB-section" id="toc-_YzUwshDB-section">“Aristocracy and Hostage Capital”</a></li>
+<li><a href="#_rhv-MIcj-section" id="toc-_rhv-MIcj-section">“Humans Missed 1 in 3 Threats Approving AI Agent Commands across 40,000 Plays”</a></li>
+<li><a href="#ho-et-al-2025-section" id="toc-ho-et-al-2025-section">“A Rosetta Stone for AI Benchmarks”, Ho et al 2025</a></li>
+<li><a href="#mahajan-2026-section" id="toc-mahajan-2026-section">“Why Haven’t Organoids Solved All of Drug Discovery?”, Mahajan 2026</a></li>
+<li><a href="#_YlApLGRn-section" id="toc-_YlApLGRn-section">“<span class=editorial>[Fable Answering Game Mechanic Question by Autonomously Finding and Reverse-Engineering Source Code]</span>”</a></li>
+<li><a href="#hamilton-et-al-2026-section" id="toc-hamilton-et-al-2026-section">“Eligibility for Shingles Vaccination and Hospital-Coded Dementia in England and Wales: a Regression Discontinuity Analysis in England”, Hamilton et al 2026</a></li>
+<li><a href="#_E6BkFrLF-section" id="toc-_E6BkFrLF-section">“The Shape of Things to Come, Part 1: The Continuous Thunderdome”, Yegge 2026</a></li>
+<li><a href="#bohdan-2026-section" id="toc-bohdan-2026-section"><em>Trois Sonneries</em>, Bohdan 2026</a></li>
+<li><a href="#_jWBpiZzy-section" id="toc-_jWBpiZzy-section">Bayesian0_0</a></li>
+<li><a href="#moura-2026-section" id="toc-moura-2026-section">“Postmortem for Lean Kernel Soundness Bug #14576”, Moura 2026</a></li>
+<li><a href="#openai-2026-section" id="toc-openai-2026-section">“10 Advances in Mathematics and Theoretical Computer Science”, OpenAI 2026</a></li>
+<li><a href="#bakare-2026-section" id="toc-bakare-2026-section">“Playbooks, Plagiarism and a Pig’s Head: New Claims Surrounding a Star Cambridge Professor; Jason Arday Was Regarded As an Academic Superstar, but Then Questions about His Work Prompted Scrutiny of His Backstory and Counterclaims of Racism”, Bakare 2026</a></li>
+<li><a href="#singh-et-al-2025-section" id="toc-singh-et-al-2025-section">“Active Electrosensing and Communication in MARL-Trained Weakly Electric Fish Collectives”, Singh et al 2025</a></li>
+<li><a href="#arathoon-et-al-2026-section" id="toc-arathoon-et-al-2026-section">“The Maxwell Conjecture Is False”, Arathoon et al 2026</a></li>
+<li><a href="#patel-2026-section" id="toc-patel-2026-section">“Why Compute Might Get 10× More Expensive in Coming Years”, Patel 2026</a></li>
+<li><a href="#team-2026-section" id="toc-team-2026-section">“Discovering Cryptographic Weaknesses With Claude”, Team 2026</a></li>
+<li><a href="#_zM47Yz3B-section" id="toc-_zM47Yz3B-section">“Cooking For Engineers <span class=editorial>[TRN Visualization]</span>”</a></li>
+<li><a href="#korbak-et-al-2025-section" id="toc-korbak-et-al-2025-section">“Chain-Of-Thought Monitorability: A New and Fragile Opportunity for AI Safety”, Korbak et al 2025</a></li>
+<li><a href="#_VfjYot2m-section" id="toc-_VfjYot2m-section">“AI Companies Are Buying Tons of Old Books Because They’re Free of AI Slop”</a></li>
+<li><a href="#wang-et-al-2025-section" id="toc-wang-et-al-2025-section">“Reverse-Engineered Reasoning for Open-Ended Generation”, Wang et al 2025</a></li>
+<li><a href="#kagan-kans-moravec-2026-section" id="toc-kagan-kans-moravec-2026-section">“He Was Right About AI. What About the Fate of Mankind? Hans Moravec Predicted Human-Level AI by 2028. Now He Contemplates Our Species’ End—And His Own”, Kagan-Kans & Moravec 2026</a></li>
+<li><a href="#tajwar-et-al-2026-section" id="toc-tajwar-et-al-2026-section">“MaxRL: Maximum Likelihood Reinforcement Learning”, Tajwar et al 2026</a></li>
+<li><a href="#liu-et-al-2024-section" id="toc-liu-et-al-2024-section">“Tuning Language Models by Proxy”, Liu et al 2024</a></li>
+<li><a href="#dugan-et-al-2025-section" id="toc-dugan-et-al-2025-section">“Constructing Efficient Fact-Storing MLPs for Transformers”, Dugan et al 2025</a></li>
+<li><a href="#behrouz-et-al-2025-section" id="toc-behrouz-et-al-2025-section">“Nested Learning: The Illusion of Deep Learning Architectures”, Behrouz et al 2025</a></li>
+<li><a href="#garcia-et-al-2026-section" id="toc-garcia-et-al-2026-section">“MLPs Are Hebbians: Constructing Efficient Fact-Storing MLPs for Transformers”, Garcia et al 2026</a></li>
+<li><a href="#wang-et-al-2025-section" id="toc-wang-et-al-2025-section">“Modifying LLM Beliefs With Synthetic Document Finetuning (SDF)”, Wang et al 2025</a></li>
+<li><a href="#yang-et-al-2024-section" id="toc-yang-et-al-2024-section">“Synthetic Continued Pretraining”, Yang et al 2024</a></li>
+<li><a href="#slocum-et-al-2025-section" id="toc-slocum-et-al-2025-section">“Believe It or Not: How Deeply Do LLMs Believe Implanted Facts?”, Slocum et al 2025</a></li>
+<li><a href="#landa-et-al-2026-section" id="toc-landa-et-al-2026-section">“Why Are All LLMs Obsessed With Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs”, Landa et al 2026</a></li>
+<li><a href="#hyndman-bisin-2026-section" id="toc-hyndman-bisin-2026-section">“Non-Replication of ‘Procrastination, Deadlines, and Performance: Self-Control by Precommitment’ <span class=editorial>[Ariely & Wertenbroch 2002]</span>”, Hyndman & Bisin 2026</a></li>
+<li><a href="#chen-et-al-2025-section" id="toc-chen-et-al-2025-section">“TTT3R: 3D Reconstruction As Test-Time Training”, Chen et al 2025</a></li>
+<li><a href="#liang-et-al-2026-section" id="toc-liang-et-al-2026-section">“FPGN: Redefining Ultra-Fast Programmable Gate-Based Neural Acceleration With Differentiable LUTs”, Liang et al 2026</a></li>
+<li><a href="#wei-et-al-2026-section" id="toc-wei-et-al-2026-section">“Navigating the Open-Source Model Ecosystem: An Empirical Study of Creator Practices in Artistic Image Generation”, Wei et al 2026</a></li>
+<li><a href="#lorenzo-et-al-2025-section" id="toc-lorenzo-et-al-2025-section">“Periodic Cooking of Eggs”, Lorenzo et al 2025</a></li>
+<li><a href="#larson-1983-section" id="toc-larson-1983-section">“If We Pull This Off, We’ll Eat Like Kings”, Larson 1983</a></li>
+<li><a href="#lotvonen-2026-section" id="toc-lotvonen-2026-section">“On the Origins of Heikki’s Garden of Flowers”, Lotvonen 2026</a></li>
+<li><a href="#keyfitz-1977-section" id="toc-keyfitz-1977-section">“What Difference Would It Make If Cancer Were Eradicated? An Examination of the Taeuber Paradox”, Keyfitz 1977</a></li>
+<li><a href="#bottou-schölkopf-2023-section" id="toc-bottou-schölkopf-2023-section">“Borges and AI”, Bottou & Schölkopf 2023</a></li>
+<li><a href="#rockel-et-al-1980-section" id="toc-rockel-et-al-1980-section">“The Basic Uniformity In Structure Of The Neocortex”, Rockel et al 1980</a></li>
+<li><a href="#pourdavood-2026-section" id="toc-pourdavood-2026-section">“Does Claude’s Constitution Have a Culture?”, Pourdavood 2026</a></li>
+<li><a href="#_I15WiYYB-section" id="toc-_I15WiYYB-section">“<em>We, the Navigators</em> at 50”</a></li>
+<li><a href="#valmeekam-et-al-2023-section" id="toc-valmeekam-et-al-2023-section">“LLMZip: Lossless Text Compression Using Large Language Models”, Valmeekam et al 2023</a></li>
+<li><a href="#mittu-et-al-2024-section" id="toc-mittu-et-al-2024-section">“FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression”, Mittu et al 2024</a></li>
+<li><a href="#lialin-et-al-2023-section" id="toc-lialin-et-al-2023-section">“ReLoRA: High-Rank Training Through Low-Rank Updates”, Lialin et al 2023</a></li>
+<li><a href="#kuchibhotla-et-al-2026-section" id="toc-kuchibhotla-et-al-2026-section">“Evolutionary Biomechanics of Maximum Running Speed in Spiders (Araneae)”, Kuchibhotla et al 2026</a></li>
+<li><a href="#olson-morton-2017-section" id="toc-olson-morton-2017-section">“Why Were the Soil Tunnels of Cu Chi and Iron Triangle in Vietnam So Resilient?”, Olson & Morton 2017</a></li>
+<li><a href="#chess-2025-section" id="toc-chess-2025-section">“‘I’ve Embarrassed Myself’—Grandmaster Trivia Test With Fabi Caruana, Hikaru Nakamura &amp; Levon Aronian”, Chess 2025</a></li>
+<li><a href="#karlsson-2026-section" id="toc-karlsson-2026-section">“The GNU Emacs Architecture: Unlocking the Core”, Karlsson 2026</a></li>
+<li><a href="#prather-et-al-2024-section" id="toc-prather-et-al-2024-section">“The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers”, Prather et al 2024</a></li>
+<li><a href="#zheng-et-al-2025-section" id="toc-zheng-et-al-2025-section">“Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets (LST/xLadder)”, Zheng et al 2025</a></li>
+<li><a href="#dietz-et-al-2026-section" id="toc-dietz-et-al-2026-section">“Split Personality Training (SPT): Revealing Latent Knowledge Through Alternate Personalities”, Dietz et al 2026</a></li>
+<li><a href="#bhamidipaty-et-al-2026-section" id="toc-bhamidipaty-et-al-2026-section">“Imperfect World Models Are Exploitable”, Bhamidipaty et al 2026</a></li>
+<li><a href="#rare-2026-section" id="toc-rare-2026-section">“1Picture1000Words: They Say a Picture Is worth a Thousand Words. I Say… Prove It”, Rare 2026</a></li>
+<li><a href="#coleman-luccia-1980-section" id="toc-coleman-luccia-1980-section">“Gravitational Effects on and of Vacuum Decay”, Coleman & Luccia 1980</a></li>
+<li><a href="#chen-et-al-2024-section" id="toc-chen-et-al-2024-section">“Knowledge Distillation of Black-Box Large Language Models”, Chen et al 2024</a></li>
+<li><a href="#ye-et-al-2024-section" id="toc-ye-et-al-2024-section">“Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance”, Ye et al 2024</a></li>
+<li><a href="#sandra-inzlicht-2026-section" id="toc-sandra-inzlicht-2026-section">“Why Mental Health Awareness Can Harm: Converging Explanations for a Societal Problem”, Sandra & Inzlicht 2026</a></li>
+<li><a href="#garland-garland-1980-section" id="toc-garland-garland-1980-section">“Do Sunlight and Vitamin D Reduce the Likelihood of Colon Cancer?”, Garland & Garland 1980</a></li>
+<li><a href="#titled-links-wikipedia" id="toc-titled-links-wikipedia">Wikipedia (7)</a></li>
+</ul></li>
+<li><a href="#miscellaneous" id="toc-miscellaneous">Miscellaneous</a></li>
+<li><a href="#link-bibliography-section" id="toc-link-bibliography-section">Bibliography</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div id="manual-annotation" class="abstract-small abstract-tag-directory">
+<p><a href="/doc/newest/abstract" id="gwern-doc-newest-abstract" class="prefetch-not link-annotated-partial include-content-core include-strict link-page" title="Transclude link for doc/newest/ tag-abstract page.">[page summary]</a></p>
+</div>
+<section id="see-also" class="level1">
+<h1><a href="#see-also" title="Link to section: § &#39;See Also&#39;">See Also</a></h1>
+<div id="see-alsos" class="directory-indexes columns">
+<ul>
+<li><p><a href="/doc/index" id="_GveJgTkm" class="prefetch-not link-annotated link-page link-tag directory-indexes-upwards" data-link-icon="arrow-up-left" data-link-icon-type="svg" rel="tag" title="Link to parent directory &#39;doc/&#39; (ascending)">Parent (all tags)</a></p></li>
+<li><p><a href="/doc/reinforcement-learning/preference-learning/guardian-angel/index" id="_I7BP2zsD" class="prefetch-not link-page link-annotated-partial link-tag directory-indexes-sideways" data-link-icon="arrow-right" data-link-icon-type="svg" rel="tag"><em>Guardian Angel</em></a></p></li>
+</ul>
+</div>
+</section>
+<section id="gwern" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#gwern" title="Link to section: § &#39;Gwern&#39;">Gwern</a></h1>
+<section id="gwern-et-al-2026-section" class="level2">
+<h2><a href="#gwern-et-al-2026-section" title="Link to section: § &#39;“The Yogettes”, Gwern et al 2026&#39;">“The Yogettes”, Gwern et al 2026</a></h2>
+<p><strong><a href="/doc/ai/nn/diffusion/imagen/2026-08-02-gwern-nanobananapro-fable-comic-theyogettes-precisionsavasana.jpg" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="1352" data-image-width="2422" data-aspect-ratio="700 / 391" title="&#39;The Yogettes&#39;, Gwern et al 2026">The Yogettes</a></strong></p>
+</section>
+<section id="gwern-pro-2026-section" class="level2">
+<h2><a href="#gwern-pro-2026-section" title="Link to section: § &#39;“Live Culture”, Gwern &amp; Pro 2026&#39;">“Live Culture”, Gwern & Pro 2026</a></h2>
+<p><strong><a href="/doc/ai/nn/diffusion/imagen/2026-08-08-gwern-nanobananapro-comic-theyogettes-liveculture.jpg" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="3234" data-image-width="6080" data-aspect-ratio="280 / 149" title="&#39;Live Culture&#39;, Gwern &amp; Pro 2026">Live Culture</a></strong></p>
+</section>
+<section id="gwern-et-al-2026-section" class="level2">
+<h2><a href="#gwern-et-al-2026-section" title="Link to section: § &#39;“Sleepcat Purrkit”, Gwern et al 2026&#39;">“Sleepcat Purrkit”, Gwern et al 2026</a></h2>
+<p><strong><a href="/doc/ai/nn/transformer/gpt/claude/mythos/2026-07-08-gwern-claude48opus-fable-chatgptimages20-nanobananapro-comic-sleepcatpurrkitrevbthermallyactuatedmomentaryswitch.jpg" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="3936" data-image-width="2878" data-aspect-ratio="280 / 383" title="&#39;Sleepcat Purrkit&#39;, Gwern et al 2026">Sleepcat Purrkit</a></strong></p>
+</section>
+<section id="gwern-2-2026-section" class="level2">
+<h2><a href="#gwern-2-2026-section" title="Link to section: § &#39;“The Repugnant Conclusion”, Gwern &amp; 2 2026&#39;">“The Re<em>pug</em>nant Conclusion”, Gwern & 2 2026</a></h2>
+<p><strong><a href="/doc/ai/nn/diffusion/imagen/2026-07-05-gwern-comic-nanobanana2-parfitpopulationethicsdiagram-therepugnantconclusion.jpg" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="1489" data-image-width="2470" data-aspect-ratio="350 / 211" title="&#39;The Re&lt;em&gt;pug&lt;/em&gt;nant Conclusion&#39;, Gwern &amp; 2 2026">The Re<em>pug</em>nant Conclusion</a></strong></p>
+</section>
+<section id="gwern-lean-scaling-section" class="level2">
+<h2><a href="#gwern-lean-scaling-section" title="Link to section: § &#39;“Lean Software Scaling Laws”, Gwern 2025&#39;">“Lean Software Scaling Laws”, Gwern 2025</a></h2>
+<p><strong><a href="/lean-scaling" class="prefetch-not link-page link-modified-recently link-annotated id-not include-annotation" title="&#39;Lean Software Scaling Laws&#39;, Gwern 2025">Lean Software Scaling Laws</a></strong></p>
+</section>
+<section id="gwern-2026-face-training-section" class="level2">
+<h2><a href="#gwern-2026-face-training-section" title="Link to section: § &#39;“Face Recognition Training App”, Gwern 2026&#39;">“Face Recognition Training App”, Gwern 2026</a></h2>
+<p><strong><a href="/blog/2026/face-training" class="prefetch-not link-page link-modified-recently link-annotated id-not include-annotation" title="&#39;Face Recognition Training App&#39;, Gwern 2026">Face Recognition Training App</a></strong></p>
+</section>
+<section id="gemini-31-pro-preview-et-al-2026-section" class="level2">
+<h2><a href="#gemini-31-pro-preview-et-al-2026-section" title="Link to section: § &#39;“Sand, Rain, Wood”, Gemini-3.1-pro-preview et al 2026&#39;">“Sand, Rain, Wood”, Gemini-3.1-pro-preview et al 2026</a></h2>
+<p><strong><a href="/fiction/walking" class="prefetch-not link-page link-modified-recently link-annotated id-not include-annotation" title="&#39;Sand, Rain, Wood&#39;, Gemini-3.1-pro-preview et al 2026">Sand, Rain, Wood</a></strong></p>
+</section>
+<section id="gwern-gpt-4-2023-section" class="level2">
+<h2><a href="#gwern-gpt-4-2023-section" title="Link to section: § &#39;“𝑃𝑒𝑟𝑖𝑠𝘩𝑒𝑑 𝑃𝑎𝑟𝑎𝑑𝑖𝑠𝑒 Graveyard”, Gwern &amp; GPT-4 2023&#39;">“𝑃𝑒𝑟𝑖𝑠𝘩𝑒𝑑 𝑃𝑎𝑟𝑎𝑑𝑖𝑠𝑒 Graveyard”, Gwern & GPT-4 2023</a></h2>
+<p><strong><a href="/fiction/perished-paradise-graveyard" class="prefetch-not link-page link-modified-recently link-annotated id-not include-annotation" title="&#39;𝑃𝑒𝑟𝑖𝑠𝘩𝑒𝑑 𝑃𝑎𝑟𝑎𝑑𝑖𝑠𝑒 Graveyard&#39;, Gwern &amp; GPT-4 2023">𝑃𝑒𝑟𝑖𝑠𝘩𝑒𝑑 𝑃𝑎𝑟𝑎𝑑𝑖𝑠𝑒 Graveyard</a></strong></p>
+</section>
+<section id="claude-48-opus-et-al-2026-section" class="level2">
+<h2><a href="#claude-48-opus-et-al-2026-section" title="Link to section: § &#39;“Chapter 6, Mime Molting: What to Expect”, Claude-4.8-opus et al 2026&#39;">“Chapter 6, Mime Molting: What to Expect”, Claude-4.8-opus et al 2026</a></h2>
+<p><strong><a href="/fiction/molting" class="prefetch-not link-page link-modified-recently link-annotated id-not include-annotation" title="&#39;Chapter 6, Mime Molting: What to Expect&#39;, Claude-4.8-opus et al 2026">Chapter 6, Mime Molting: What to Expect</a></strong></p>
+</section>
+<section id="gwern-et-al-2025-section" class="level2">
+<h2><a href="#gwern-et-al-2025-section" title="Link to section: § &#39;“𝑇𝑖𝑙𝑎𝑘𝑘𝘩𝑎𝑛𝑎: The 3 Scars of Existence”, Gwern et al 2025&#39;">“𝑇𝑖𝑙𝑎𝑘𝑘𝘩𝑎𝑛𝑎: The 3 Scars of Existence”, Gwern et al 2025</a></h2>
+<p><strong><a href="/fiction/tilakkhana" class="prefetch-not link-page link-modified-recently link-annotated id-not include-annotation" title="&#39;𝑇𝑖𝑙𝑎𝑘𝑘𝘩𝑎𝑛𝑎: The 3 Scars of Existence&#39;, Gwern et al 2025">𝑇𝑖𝑙𝑎𝑘𝑘𝘩𝑎𝑛𝑎: The 3 Scars of Existence</a></strong></p>
+</section>
+<section id="gwern-guardian-angel-section" class="level2">
+<h2><a href="#gwern-guardian-angel-section" title="Link to section: § &#39;“Guardian Angels: LLM Personalization for Productivity and Security”, Gwern 2025&#39;">“Guardian Angels: LLM Personalization for Productivity and Security”, Gwern 2025</a></h2>
+<p><strong><a href="/guardian-angel" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Guardian Angels: LLM Personalization for Productivity and Security&#39;, Gwern 2025">Guardian Angels: LLM Personalization for Productivity and Security</a></strong></p>
+</section>
+<section id="gwern-llm-catapult-section" class="level2">
+<h2><a href="#gwern-llm-catapult-section" title="Link to section: § &#39;“Human-Like Neural Nets by Catapulting”, Gwern 2024&#39;">“Human-Like Neural Nets by Catapulting”, Gwern 2024</a></h2>
+<p><strong><a href="/llm-catapult" class="prefetch-not link-page link-annotated id-not include-annotation" title="&#39;Human-like Neural Nets by Catapulting&#39;, Gwern 2024">Human-like Neural Nets by Catapulting</a></strong></p>
+</section>
+</section>
+<section id="links" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#links" title="Link to section: § &#39;Links&#39;">Links</a></h1>
+<section id="eddy-2026-section" class="level2">
+<h2><a href="#eddy-2026-section" title="Link to section: § &#39;“Science and Health &lt;span class=editorial&gt;[1941 Special Edition]&lt;/span&gt;”, Eddy 2026&#39;">“<em>Science and Health</em> <span class=editorial>[1941 Special Edition]</span>”, Eddy 2026</a></h2>
+<p><strong><a href="/doc/design/typography/rubrication/2026-08-02-gwern-firstchurchofchristscientistberkeley-1941-marybakereddy-scienceandhealth-subscriptionedition-photographofrubricatedpage.jpg" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="1983" data-image-width="3537" data-aspect-ratio="280 / 157" title="&#39;&lt;em&gt;Science and Health&lt;/em&gt; &lt;span class=editorial&gt;[1941 special edition]&lt;/span&gt;&#39;, Eddy 2026"><em>Science and Health</em> <span class=editorial>[1941 special edition]</span></a></strong></p>
+</section>
+<section id="bleich-1973-section" class="level2">
+<h2><a href="#bleich-1973-section" title="Link to section: § &#39;“Cannibalism”, Bleich 1973&#39;">“Cannibalism”, Bleich 1973</a></h2>
+<p><strong><a href="/doc/law/1973-bleich.pdf" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Cannibalism&#39;, Bleich 1973">Cannibalism</a></strong></p>
+</section>
+<section id="bleich-1987-section" class="level2">
+<h2><a href="#bleich-1987-section" title="Link to section: § &#39;“Vegetarianism and Judaism”, Bleich 1987&#39;">“Vegetarianism and Judaism”, Bleich 1987</a></h2>
+<p><strong><a href="/doc/philosophy/ethics/1987-bleich.pdf" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Vegetarianism and Judaism&#39;, Bleich 1987">Vegetarianism and Judaism</a></strong></p>
+</section>
+<section id="orland-2026-section" class="level2">
+<h2><a href="#orland-2026-section" title="Link to section: § &#39;“ChatGPT Starts Blocking Direct Requests to Copy an Author’s Style: New Behavior Capturing a Writer’s ‘Broad Qualities’ Could Have Legal Implications”, Orland 2026&#39;">“ChatGPT Starts Blocking Direct Requests to Copy an Author’s Style: New Behavior Capturing a Writer’s ‘Broad Qualities’ Could Have Legal Implications”, Orland 2026</a></h2>
+<p><strong><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="ars" data-link-icon-color="#ff4e00" data-link-icon-type="text,tri,sans" title="&#39;ChatGPT starts blocking direct requests to copy an author’s style: New behavior capturing a writer’s ‘broad qualities’ could have legal implications&#39;, Orland 2026">ChatGPT starts blocking direct requests to copy an author’s style: New behavior capturing a writer’s ‘broad qualities’ could have legal implications</a></strong></p>
+</section>
+<section id="armstrong-2011-section" class="level2">
+<h2><a href="#armstrong-2011-section" title="Link to section: § &#39;“Anthropic Decision Theory”, Armstrong 2011&#39;">“Anthropic Decision Theory”, Armstrong 2011</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/b9ee933e3e9cf6ecb53e3ef975840dc864a22d5a.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/1110.6437?fallback=original" data-url-archive="/doc/www/arxiv.org/b9ee933e3e9cf6ecb53e3ef975840dc864a22d5a.pdf" data-url-original="https://arxiv.org/abs/1110.6437" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Anthropic decision theory&#39;, Armstrong 2011">Anthropic decision theory</a></strong></p>
+</section>
+<section id="_fawt-gO2-section" class="level2">
+<h2><a href="#_fawt-gO2-section" title="Link to section: § &#39;“Hey There!”&#39;">“Hey There!”</a></h2>
+<p><strong><a href="/doc/www/dbohdan.com/4742faa3b40ca506c317e26a017dfc3babe7f51d.html" class="link-live link-modified-recently link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/dbohdan.com/4742faa3b40ca506c317e26a017dfc3babe7f51d.html" data-url-original="https://dbohdan.com/" title="Hey there!">Hey there!</a></strong></p>
+</section>
+<section id="hall-2026-section" class="level2">
+<h2><a href="#hall-2026-section" title="Link to section: § &#39;“Training AI to Govern for Us: In Our New AI-Centered Class at the GSB, We’re Experimenting on How to Build AI Agents That Represent Us. Here’s What We’ve Learned so Far”, Hall 2026&#39;">“Training AI to Govern for Us: In Our New AI-Centered Class at the GSB, We’re Experimenting on How to Build AI Agents That Represent Us. Here’s What We’ve Learned so Far”, Hall 2026</a></h2>
+<p><strong><a href="https://freesystems.substack.com/p/training-ai-to-govern-for-us" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="substack" data-link-icon-color="#ff6719" data-link-icon-type="svg" title="&#39;Training AI to Govern for Us: In our new AI-centered class at the GSB, we’re experimenting on how to build AI agents that represent us. Here’s what we’ve learned so far&#39;, Hall 2026">Training AI to Govern for Us: In our new AI-centered class at the GSB, we’re experimenting on how to build AI agents that represent us. Here’s what we’ve learned so far</a></strong></p>
+</section>
+<section id="sun-2026-section" class="level2">
+<h2><a href="#sun-2026-section" title="Link to section: § &#39;“No Data Centers In My Backyard: Money, Power, and Populism in the AI Buildout”, Sun 2026&#39;">“No Data Centers In My Backyard: Money, Power, and Populism in the AI Buildout”, Sun 2026</a></h2>
+<p><strong><a href="https://jasmi.news/p/no-data-centers-in-my-backyard" class="link-modified-recently link-annotated-partial id-not include-annotation" title="&#39;No Data Centers In My Backyard: money, power, and populism in the AI buildout&#39;, Sun 2026">No Data Centers In My Backyard: money, power, and populism in the AI buildout</a></strong></p>
+</section>
+<section id="_1ZT8uOGM-section" class="level2">
+<h2><a href="#_1ZT8uOGM-section" title="Link to section: § &#39;“Stuart Armstrong”&#39;">“Stuart Armstrong”</a></h2>
+<p><strong><a href="https://scholar.google.com/citations?user=bSJaYzgAAAAJ" class="link-modified-recently id-not include-annotation" data-link-icon="google-scholar" data-link-icon-color="#4285f4" data-link-icon-type="svg" title="Stuart Armstrong">Stuart Armstrong</a></strong></p>
+</section>
+<section id="mowshowitz-2026-section" class="level2">
+<h2><a href="#mowshowitz-2026-section" title="Link to section: § &#39;“What Happened: OpenAI and HuggingFace”, Mowshowitz 2026&#39;">“What Happened: OpenAI and HuggingFace”, Mowshowitz 2026</a></h2>
+<p><strong><a href="https://thezvi.substack.com/p/what-happened-openai-and-huggingface" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="substack" data-link-icon-color="#ff6719" data-link-icon-type="svg" title="&#39;What Happened: OpenAI and HuggingFace&#39;, Mowshowitz 2026">What Happened: OpenAI and HuggingFace</a></strong></p>
+</section>
+<section id="japan-2013-section" class="level2">
+<h2><a href="#japan-2013-section" title="Link to section: § &#39;“Studio Ghibli’s The Tale Of The Princess Kaguya Production Notes”, Japan 2013&#39;">“Studio Ghibli’s <em>The Tale Of The Princess Kaguya</em> Production Notes”, Japan 2013</a></h2>
+<p><strong><a href="https://www.scifijapan.com/godzilla-toho/studio-ghiblis-the-tale-of-the-princess-kaguya-production-notes" class="link-modified-recently id-not include-annotation" title="&#39;Studio Ghibli’s &lt;em&gt;The Tale Of The Princess Kaguya&lt;/em&gt; Production Notes&#39;, Japan 2013">Studio Ghibli’s <em>The Tale Of The Princess Kaguya</em> Production Notes</a></strong></p>
+</section>
+<section id="_5z_wdLTw-section" class="level2">
+<h2><a href="#_5z_wdLTw-section" title="Link to section: § &#39;“Black Hat USA 2026: The ‘Breaking’ News: The OpenAI–Hugging Face Incident”&#39;">“Black Hat USA 2026: The ‘Breaking’ News: The OpenAI–Hugging Face Incident”</a></h2>
+<p><strong><a href="https://www.youtube.com/watch?v=87DyyMV0kCY" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="youtube" data-link-icon-color="#ff0033" data-link-icon-type="svg" title="Black Hat USA 2026: The ‘Breaking’ News: The OpenAI–Hugging Face Incident">Black Hat USA 2026: The ‘Breaking’ News: The OpenAI–Hugging Face Incident</a></strong></p>
+</section>
+<section id="_7c-JaRhW-section" class="level2">
+<h2><a href="#_7c-JaRhW-section" title="Link to section: § &#39;“Humanoid Robot Fighting League Debuts in Shenzhen”&#39;">“Humanoid Robot Fighting League Debuts in Shenzhen”</a></h2>
+<p><strong><a href="https://www.youtube.com/watch?v=BzvWvEa_AKc" class="link-modified-recently id-not include-annotation" data-link-icon="youtube" data-link-icon-color="#ff0033" data-link-icon-type="svg" title="Humanoid Robot Fighting League Debuts in Shenzhen">Humanoid Robot Fighting League Debuts in Shenzhen</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://www.youtube.com/watch?v=BzvWvEa_AKc" class="link-annotated-not include-content width-full" data-link-icon="youtube" data-link-icon-type="svg" data-link-icon-color="#ff0033"><code>https://www.youtube.com/watch?v=BzvWvEa_AKc</code></a></p>
+</div>
+</section>
+<section id="kim-et-al-2026-section" class="level2">
+<h2><a href="#kim-et-al-2026-section" title="Link to section: § &#39;“Inducing Language Models to Assert Their Own Consciousness Restores Human Beliefs and Values”, Kim et al 2026&#39;">“Inducing Language Models to Assert Their Own Consciousness Restores Human Beliefs and Values”, Kim et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/96e7d28e813bca37b8838bdb1e950538caa4fdf1.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2607.28607?fallback=original" data-url-archive="/doc/www/arxiv.org/96e7d28e813bca37b8838bdb1e950538caa4fdf1.pdf" data-url-original="https://arxiv.org/abs/2607.28607" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Inducing language models to assert their own consciousness restores human beliefs and values&#39;, Kim et al 2026">Inducing language models to assert their own consciousness restores human beliefs and values</a></strong></p>
+</section>
+<section id="_YzUwshDB-section" class="level2">
+<h2><a href="#_YzUwshDB-section" title="Link to section: § &#39;“Aristocracy and Hostage Capital”&#39;">“Aristocracy and Hostage Capital”</a></h2>
+<p><strong><a href="/doc/www/www.greaterwrong.com/f4acef55d13290ca7ddcf3d307ce1d10a4692048.html" class="link-live link-modified-recently link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.greaterwrong.com/f4acef55d13290ca7ddcf3d307ce1d10a4692048.html" data-url-iframe="https://www.greaterwrong.com/posts/YooqjbxGu2WZ3vszq/aristocracy-and-hostage-capital?format=preview&amp;theme=classic" data-url-original="https://www.lesswrong.com/posts/YooqjbxGu2WZ3vszq/aristocracy-and-hostage-capital" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text" title="Aristocracy and Hostage Capital">Aristocracy and Hostage Capital</a></strong></p>
+</section>
+<section id="_rhv-MIcj-section" class="level2">
+<h2><a href="#_rhv-MIcj-section" title="Link to section: § &#39;“Humans Missed 1 in 3 Threats Approving AI Agent Commands across 40,000 Plays”&#39;">“Humans Missed 1 in 3 Threats Approving AI Agent Commands across 40,000 Plays”</a></h2>
+<p><strong><a href="https://scalex.dev/blog/ai-agent-permissions-stats/" class="link-modified-recently link-annotated-partial id-not include-annotation" title="Humans missed 1 in 3 threats approving AI agent commands across 40,000 plays">Humans missed 1 in 3 threats approving AI agent commands across 40,000 plays</a></strong></p>
+</section>
+<section id="ho-et-al-2025-section" class="level2">
+<h2><a href="#ho-et-al-2025-section" title="Link to section: § &#39;“A Rosetta Stone for AI Benchmarks”, Ho et al 2025&#39;">“A Rosetta Stone for AI Benchmarks”, Ho et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/e97b8b268c519e4307eb2e03e04f4d429026ce9f.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2512.00193?fallback=original" data-url-archive="/doc/www/arxiv.org/e97b8b268c519e4307eb2e03e04f4d429026ce9f.pdf" data-url-original="https://arxiv.org/abs/2512.00193" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;A Rosetta Stone for AI Benchmarks&#39;, Ho et al 2025">A Rosetta Stone for AI Benchmarks</a></strong></p>
+</section>
+<section id="mahajan-2026-section" class="level2">
+<h2><a href="#mahajan-2026-section" title="Link to section: § &#39;“Why Haven’t Organoids Solved All of Drug Discovery?”, Mahajan 2026&#39;">“Why Haven’t Organoids Solved All of Drug Discovery?”, Mahajan 2026</a></h2>
+<p><strong><a href="https://www.owlposting.com/p/why-havent-organoids-solved-all-of" class="link-modified-recently id-not include-annotation" title="&#39;Why haven’t organoids solved all of drug discovery?&#39;, Mahajan 2026">Why haven’t organoids solved all of drug discovery?</a></strong></p>
+</section>
+<section id="_YlApLGRn-section" class="level2">
+<h2><a href="#_YlApLGRn-section" title="Link to section: § &#39;“&lt;span class=editorial&gt;[Fable Answering Game Mechanic Question by Autonomously Finding and Reverse-Engineering Source Code]&lt;/span&gt;”&#39;">“<span class=editorial>[Fable Answering Game Mechanic Question by Autonomously Finding and Reverse-Engineering Source Code]</span>”</a></h2>
+<p><strong><a href="/doc/www/www.greaterwrong.com/59cbbe760d3daa471f149b3cb7d3fe5302d2db25.html#comment-Xe4jD5saxt4EEjoPB" class="prefetch-not link-live link-modified-recently link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.greaterwrong.com/59cbbe760d3daa471f149b3cb7d3fe5302d2db25.html#comment-Xe4jD5saxt4EEjoPB" data-url-iframe="https://www.greaterwrong.com/posts/PyvY8ijddmMvihgXg/we-need-to-rl-less?format=preview&amp;theme=classic#comment-Xe4jD5saxt4EEjoPB" data-url-original="https://www.lesswrong.com/posts/PyvY8ijddmMvihgXg/we-need-to-rl-less#comment-Xe4jD5saxt4EEjoPB" data-link-icon="LW" data-link-icon-color="#7faf83" data-link-icon-type="text" title="&lt;span class=editorial&gt;[Fable answering game mechanic question by autonomously finding and reverse-engineering source code]&lt;/span&gt;"><span class=editorial>[Fable answering game mechanic question by autonomously finding and reverse-engineering source code]</span></a></strong></p>
+</section>
+<section id="hamilton-et-al-2026-section" class="level2">
+<h2><a href="#hamilton-et-al-2026-section" title="Link to section: § &#39;“Eligibility for Shingles Vaccination and Hospital-Coded Dementia in England and Wales: a Regression Discontinuity Analysis in England”, Hamilton et al 2026&#39;">“Eligibility for Shingles Vaccination and Hospital-Coded Dementia in England and Wales: a Regression Discontinuity Analysis in England”, Hamilton et al 2026</a></h2>
+<p><strong><a href="https://www.medrxiv.org/content/10.64898/2026.07.20.26358345.full" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="chi-dna" data-link-icon-color="#bd2736" data-link-icon-type="svg" title="&#39;Eligibility for shingles vaccination and hospital-coded dementia in England and Wales: a regression discontinuity analysis in England&#39;, Hamilton et al 2026">Eligibility for shingles vaccination and hospital-coded dementia in England and Wales: a regression discontinuity analysis in England</a></strong></p>
+</section>
+<section id="_E6BkFrLF-section" class="level2">
+<h2><a href="#_E6BkFrLF-section" title="Link to section: § &#39;“The Shape of Things to Come, Part 1: The Continuous Thunderdome”, Yegge 2026&#39;">“The Shape of Things to Come, Part 1: The Continuous Thunderdome”, Yegge 2026</a></h2>
+<p><strong><a href="https://yegge.ai/essays/the-shape-of-things-to-come/" class="link-modified-recently link-annotated-partial id-not include-annotation" title="&#39;The Shape of Things to Come, Part 1: The Continuous Thunderdome&#39;, Yegge 2026">The Shape of Things to Come, Part 1: The Continuous Thunderdome</a></strong></p>
+</section>
+<section id="bohdan-2026-section" class="level2">
+<h2><a href="#bohdan-2026-section" title="Link to section: § &#39;Trois Sonneries, Bohdan 2026&#39;"><em>Trois Sonneries</em>, Bohdan 2026</a></h2>
+<p><strong><a href="https://dbohdan.com/trois-sonneries#convergence" class="link-modified-recently link-annotated id-not include-annotation" title="&#39;&lt;em&gt;Trois Sonneries&lt;/em&gt;&#39;, Bohdan 2026"><em>Trois Sonneries</em></a></strong></p>
+</section>
+<section id="_jWBpiZzy-section" class="level2">
+<h2><a href="#_jWBpiZzy-section" title="Link to section: § &#39;Bayesian0_0&#39;">Bayesian0_0</a></h2>
+<p><strong><a href="https://x.com/Bayesian0_0/status/2084048749429497903" class="link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://nitter.net/Bayesian0_0/status/2084048749429497903" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="&#39;&lt;span class=editorial&gt;[Meta-analysis of AI benchmarks]&lt;/span&gt;&#39;, Bayesian0_0 2026"><span class=editorial>[Meta-analysis of AI benchmarks]</span></a></strong></p>
+</section>
+<section id="moura-2026-section" class="level2">
+<h2><a href="#moura-2026-section" title="Link to section: § &#39;“Postmortem for Lean Kernel Soundness Bug #14576”, Moura 2026&#39;">“Postmortem for Lean Kernel Soundness Bug #14576”, Moura 2026</a></h2>
+<p><strong><a href="https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/" class="link-live link-modified-recently link-annotated-partial id-not include-annotation" title="&#39;Postmortem for Lean Kernel Soundness Bug #14576&#39;, Moura 2026">Postmortem for Lean Kernel Soundness Bug #14576</a></strong></p>
+</section>
+<section id="openai-2026-section" class="level2">
+<h2><a href="#openai-2026-section" title="Link to section: § &#39;“10 Advances in Mathematics and Theoretical Computer Science”, OpenAI 2026&#39;">“10 Advances in Mathematics and Theoretical Computer Science”, OpenAI 2026</a></h2>
+<p><strong><a href="https://openai.com/index/ten-advances-in-mathematics/" class="id-not include-annotation" data-link-icon="openai" data-link-icon-type="svg" title="&#39;10 advances in mathematics and theoretical computer science&#39;, OpenAI 2026">10 advances in mathematics and theoretical computer science</a></strong></p>
+</section>
+<section id="bakare-2026-section" class="level2">
+<h2><a href="#bakare-2026-section" title="Link to section: § &#39;“Playbooks, Plagiarism and a Pig’s Head: New Claims Surrounding a Star Cambridge Professor; Jason Arday Was Regarded As an Academic Superstar, but Then Questions about His Work Prompted Scrutiny of His Backstory and Counterclaims of Racism”, Bakare 2026&#39;">“Playbooks, Plagiarism and a Pig’s Head: New Claims Surrounding a Star Cambridge Professor; Jason Arday Was Regarded As an Academic Superstar, but Then Questions about His Work Prompted Scrutiny of His Backstory and Counterclaims of Racism”, Bakare 2026</a></h2>
+<p><strong><a href="https://www.theguardian.com/education/ng-interactive/2026/aug/01/playbooks-plagiarism-pigs-head-new-claims-surrounding-cambridge-professor-jason-arday" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="the-guardian" data-link-icon-color="#052962" data-link-icon-type="svg" title="&#39;Playbooks, plagiarism and a pig’s head: new claims surrounding a star Cambridge professor; Jason Arday was regarded as an academic superstar, but then questions about his work prompted scrutiny of his backstory and counterclaims of racism&#39;, Bakare 2026">Playbooks, plagiarism and a pig’s head: new claims surrounding a star Cambridge professor; Jason Arday was regarded as an academic superstar, but then questions about his work prompted scrutiny of his backstory and counterclaims of racism</a></strong></p>
+</section>
+<section id="singh-et-al-2025-section" class="level2">
+<h2><a href="#singh-et-al-2025-section" title="Link to section: § &#39;“Active Electrosensing and Communication in MARL-Trained Weakly Electric Fish Collectives”, Singh et al 2025&#39;">“Active Electrosensing and Communication in MARL-Trained Weakly Electric Fish Collectives”, Singh et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/c1d1b86bda5a322fb9c30f6045880d461c9d2568.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2511.08436?fallback=original" data-url-archive="/doc/www/arxiv.org/c1d1b86bda5a322fb9c30f6045880d461c9d2568.pdf" data-url-original="https://arxiv.org/abs/2511.08436" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Active Electrosensing and Communication in MARL-trained Weakly Electric Fish Collectives&#39;, Singh et al 2025">Active Electrosensing and Communication in MARL-trained Weakly Electric Fish Collectives</a></strong></p>
+</section>
+<section id="arathoon-et-al-2026-section" class="level2">
+<h2><a href="#arathoon-et-al-2026-section" title="Link to section: § &#39;“The Maxwell Conjecture Is False”, Arathoon et al 2026&#39;">“The Maxwell Conjecture Is False”, Arathoon et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/b1f476c3dfd9a08cd9999873ec3e13ee4a5dede9.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2607.27197?fallback=original" data-url-archive="/doc/www/arxiv.org/b1f476c3dfd9a08cd9999873ec3e13ee4a5dede9.pdf" data-url-original="https://arxiv.org/abs/2607.27197" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;The Maxwell Conjecture is False&#39;, Arathoon et al 2026">The Maxwell Conjecture is False</a></strong></p>
+</section>
+<section id="patel-2026-section" class="level2">
+<h2><a href="#patel-2026-section" title="Link to section: § &#39;“Why Compute Might Get 10× More Expensive in Coming Years”, Patel 2026&#39;">“Why Compute Might Get 10× More Expensive in Coming Years”, Patel 2026</a></h2>
+<p><strong><a href="https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive" class="link-modified-recently id-not include-annotation" data-link-icon="Dwkh" data-link-icon-color="#f3c016" data-link-icon-type="text,sans,quad" title="&#39;Why compute might get 10× more expensive in coming years&#39;, Patel 2026">Why compute might get 10× more expensive in coming years</a></strong></p>
+</section>
+<section id="team-2026-section" class="level2">
+<h2><a href="#team-2026-section" title="Link to section: § &#39;“Discovering Cryptographic Weaknesses With Claude”, Team 2026&#39;">“Discovering Cryptographic Weaknesses With Claude”, Team 2026</a></h2>
+<p><strong><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="anthropic" data-link-icon-color="#d4a27f" data-link-icon-type="svg" title="&#39;Discovering cryptographic weaknesses with Claude&#39;, Team 2026">Discovering cryptographic weaknesses with Claude</a></strong></p>
+</section>
+<section id="_zM47Yz3B-section" class="level2">
+<h2><a href="#_zM47Yz3B-section" title="Link to section: § &#39;“Cooking For Engineers &lt;span class=editorial&gt;[TRN Visualization]&lt;/span&gt;”&#39;">“Cooking For Engineers <span class=editorial>[TRN Visualization]</span>”</a></h2>
+<p><strong><a href="https://www.cookingforengineers.com/recipe/108/Banana-Nut-Bread/trn" class="link-modified-recently id-not include-annotation" title="Cooking For Engineers &lt;span class=editorial&gt;[TRN visualization]&lt;/span&gt;">Cooking For Engineers <span class=editorial>[TRN visualization]</span></a></strong></p>
+</section>
+<section id="korbak-et-al-2025-section" class="level2">
+<h2><a href="#korbak-et-al-2025-section" title="Link to section: § &#39;“Chain-Of-Thought Monitorability: A New and Fragile Opportunity for AI Safety”, Korbak et al 2025&#39;">“Chain-Of-Thought Monitorability: A New and Fragile Opportunity for AI Safety”, Korbak et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/cc9aa7a0189cf44e4b5ef543f3910a6a821f91ff.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2507.11473?fallback=original" data-url-archive="/doc/www/arxiv.org/cc9aa7a0189cf44e4b5ef543f3910a6a821f91ff.pdf" data-url-original="https://arxiv.org/abs/2507.11473" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Chain-of-Thought Monitorability: A New and Fragile Opportunity for AI Safety&#39;, Korbak et al 2025">Chain-of-Thought Monitorability: A New and Fragile Opportunity for AI Safety</a></strong></p>
+</section>
+<section id="_VfjYot2m-section" class="level2">
+<h2><a href="#_VfjYot2m-section" title="Link to section: § &#39;“AI Companies Are Buying Tons of Old Books Because They’re Free of AI Slop”&#39;">“AI Companies Are Buying Tons of Old Books Because They’re Free of AI Slop”</a></h2>
+<p><strong><a href="https://www.404media.co/ai-companies-are-buying-tons-of-old-books-because-theyre-free-of-ai-slop/" class="link-modified-recently id-not include-annotation" title="AI Companies Are Buying Tons of Old Books Because They’re Free of AI Slop">AI Companies Are Buying Tons of Old Books Because They’re Free of AI Slop</a></strong></p>
+</section>
+<section id="wang-et-al-2025-section" class="level2">
+<h2><a href="#wang-et-al-2025-section" title="Link to section: § &#39;“Reverse-Engineered Reasoning for Open-Ended Generation”, Wang et al 2025&#39;">“Reverse-Engineered Reasoning for Open-Ended Generation”, Wang et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/ff9d005e196bcafa40d812479676b9a44265b55c.pdf#bytedance" class="prefetch-not link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2509.06160?fallback=original#bytedance" data-url-archive="/doc/www/arxiv.org/ff9d005e196bcafa40d812479676b9a44265b55c.pdf#bytedance" data-url-original="https://arxiv.org/abs/2509.06160#bytedance" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Reverse-Engineered Reasoning for Open-Ended Generation&#39;, Wang et al 2025">Reverse-Engineered Reasoning for Open-Ended Generation</a></strong></p>
+</section>
+<section id="kagan-kans-moravec-2026-section" class="level2">
+<h2><a href="#kagan-kans-moravec-2026-section" title="Link to section: § &#39;“He Was Right About AI. What About the Fate of Mankind? Hans Moravec Predicted Human-Level AI by 2028. Now He Contemplates Our Species’ End—And His Own”, Kagan-Kans &amp; Moravec 2026&#39;">“He Was Right About AI. What About the Fate of Mankind? Hans Moravec Predicted Human-Level AI by 2028. Now He Contemplates Our Species’ End—And His Own”, Kagan-Kans & Moravec 2026</a></h2>
+<p><strong><a href="https://nymag.com/intelligencer/article/hans-moravec-interview.html" class="link-live link-modified-recently id-not include-annotation" data-link-icon="𝒩𝒴" data-link-icon-type="text" title="&#39;He Was Right About AI. What About the Fate of Mankind? Hans Moravec predicted human-level AI by 2028. Now he contemplates our species’ end—and his own&#39;, Kagan-Kans &amp; Moravec 2026">He Was Right About AI. What About the Fate of Mankind? Hans Moravec predicted human-level AI by 2028. Now he contemplates our species’ end—and his own</a></strong></p>
+<div class="aux-links-transclude-file">
+<div class="collapse">
+<p><strong>View HTML</strong>:</p>
+<p><a href="https://nymag.com/intelligencer/article/hans-moravec-interview.html" class="link-live id-not link-annotated-not include-content include-lazy" data-link-icon="𝒩𝒴" data-link-icon-type="text"><code>https://nymag.com/intelligencer/article/hans-moravec-interview.html</code></a></p>
+</div>
+</div>
+</section>
+<section id="tajwar-et-al-2026-section" class="level2">
+<h2><a href="#tajwar-et-al-2026-section" title="Link to section: § &#39;“MaxRL: Maximum Likelihood Reinforcement Learning”, Tajwar et al 2026&#39;">“MaxRL: Maximum Likelihood Reinforcement Learning”, Tajwar et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/3fec89c558a97b9f6aa56c54cc983ca067923318.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2602.02710?fallback=original" data-url-archive="/doc/www/arxiv.org/3fec89c558a97b9f6aa56c54cc983ca067923318.pdf" data-url-original="https://arxiv.org/abs/2602.02710" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;MaxRL: Maximum Likelihood Reinforcement Learning&#39;, Tajwar et al 2026">MaxRL: Maximum Likelihood Reinforcement Learning</a></strong></p>
+</section>
+<section id="liu-et-al-2024-section" class="level2">
+<h2><a href="#liu-et-al-2024-section" title="Link to section: § &#39;“Tuning Language Models by Proxy”, Liu et al 2024&#39;">“Tuning Language Models by Proxy”, Liu et al 2024</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/fd333f37819e249567902d4f2ea9b8664fee51ab.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2401.08565?fallback=original" data-url-archive="/doc/www/arxiv.org/fd333f37819e249567902d4f2ea9b8664fee51ab.pdf" data-url-original="https://arxiv.org/abs/2401.08565" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Tuning Language Models by Proxy&#39;, Liu et al 2024">Tuning Language Models by Proxy</a></strong></p>
+</section>
+<section id="dugan-et-al-2025-section" class="level2">
+<h2><a href="#dugan-et-al-2025-section" title="Link to section: § &#39;“Constructing Efficient Fact-Storing MLPs for Transformers”, Dugan et al 2025&#39;">“Constructing Efficient Fact-Storing MLPs for Transformers”, Dugan et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/de54bdc200468b2ae2eaff424d9c21bbb3396a39.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2512.00207?fallback=original" data-url-archive="/doc/www/arxiv.org/de54bdc200468b2ae2eaff424d9c21bbb3396a39.pdf" data-url-original="https://arxiv.org/abs/2512.00207" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Constructing Efficient Fact-Storing MLPs for Transformers&#39;, Dugan et al 2025">Constructing Efficient Fact-Storing MLPs for Transformers</a></strong></p>
+</section>
+<section id="behrouz-et-al-2025-section" class="level2">
+<h2><a href="#behrouz-et-al-2025-section" title="Link to section: § &#39;“Nested Learning: The Illusion of Deep Learning Architectures”, Behrouz et al 2025&#39;">“Nested Learning: The Illusion of Deep Learning Architectures”, Behrouz et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/2279536ca5e8d5985323d3351fc6d40befee3e4d.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2512.24695?fallback=original" data-url-archive="/doc/www/arxiv.org/2279536ca5e8d5985323d3351fc6d40befee3e4d.pdf" data-url-original="https://arxiv.org/abs/2512.24695" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Nested Learning: The Illusion of Deep Learning Architectures&#39;, Behrouz et al 2025">Nested Learning: The Illusion of Deep Learning Architectures</a></strong></p>
+</section>
+<section id="garcia-et-al-2026-section" class="level2">
+<h2><a href="#garcia-et-al-2026-section" title="Link to section: § &#39;“MLPs Are Hebbians: Constructing Efficient Fact-Storing MLPs for Transformers”, Garcia et al 2026&#39;">“MLPs Are Hebbians: Constructing Efficient Fact-Storing MLPs for Transformers”, Garcia et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/584d9b3617bd109c0be7ffdd14d3a0b5ac06a02f.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2607.10034?fallback=original" data-url-archive="/doc/www/arxiv.org/584d9b3617bd109c0be7ffdd14d3a0b5ac06a02f.pdf" data-url-original="https://arxiv.org/abs/2607.10034" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;MLPs are Hebbians: Constructing Efficient Fact-Storing MLPs for Transformers&#39;, Garcia et al 2026">MLPs are Hebbians: Constructing Efficient Fact-Storing MLPs for Transformers</a></strong></p>
+</section>
+<section id="wang-et-al-2025-section" class="level2">
+<h2><a href="#wang-et-al-2025-section" title="Link to section: § &#39;“Modifying LLM Beliefs With Synthetic Document Finetuning (SDF)”, Wang et al 2025&#39;">“Modifying LLM Beliefs With Synthetic Document Finetuning (SDF)”, Wang et al 2025</a></h2>
+<p><strong><a href="https://alignment.anthropic.com/2025/modifying-beliefs-via-sdf/" class="link-modified-recently link-annotated id-not include-annotation" title="&#39;Modifying LLM Beliefs with Synthetic Document Finetuning (SDF)&#39;, Wang et al 2025">Modifying LLM Beliefs with Synthetic Document Finetuning (SDF)</a></strong></p>
+</section>
+<section id="yang-et-al-2024-section" class="level2">
+<h2><a href="#yang-et-al-2024-section" title="Link to section: § &#39;“Synthetic Continued Pretraining”, Yang et al 2024&#39;">“Synthetic Continued Pretraining”, Yang et al 2024</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/5eae7d39366a08391b68d81a8d1b890c285af143.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2409.07431?fallback=original" data-url-archive="/doc/www/arxiv.org/5eae7d39366a08391b68d81a8d1b890c285af143.pdf" data-url-original="https://arxiv.org/abs/2409.07431" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Synthetic continued pretraining&#39;, Yang et al 2024">Synthetic continued pretraining</a></strong></p>
+</section>
+<section id="slocum-et-al-2025-section" class="level2">
+<h2><a href="#slocum-et-al-2025-section" title="Link to section: § &#39;“Believe It or Not: How Deeply Do LLMs Believe Implanted Facts?”, Slocum et al 2025&#39;">“Believe It or Not: How Deeply Do LLMs Believe Implanted Facts?”, Slocum et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/cc1ac2a94296c7af5ed80f885e8f5824da7285ed.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2510.17941?fallback=original" data-url-archive="/doc/www/arxiv.org/cc1ac2a94296c7af5ed80f885e8f5824da7285ed.pdf" data-url-original="https://arxiv.org/abs/2510.17941" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Believe It or Not: How Deeply do LLMs Believe Implanted Facts?&#39;, Slocum et al 2025">Believe It or Not: How Deeply do LLMs Believe Implanted Facts?</a></strong></p>
+</section>
+<section id="landa-et-al-2026-section" class="level2">
+<h2><a href="#landa-et-al-2026-section" title="Link to section: § &#39;“Why Are All LLMs Obsessed With Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs”, Landa et al 2026&#39;">“Why Are All LLMs Obsessed With Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs”, Landa et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/f85f3fe077c74a55e6a9201240029dc6af56bf1e.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2604.21751?fallback=original" data-url-archive="/doc/www/arxiv.org/f85f3fe077c74a55e6a9201240029dc6af56bf1e.pdf" data-url-original="https://arxiv.org/abs/2604.21751" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Why are all LLMs Obsessed with Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs&#39;, Landa et al 2026">Why are all LLMs Obsessed with Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs</a></strong></p>
+</section>
+<section id="hyndman-bisin-2026-section" class="level2">
+<h2><a href="#hyndman-bisin-2026-section" title="Link to section: § &#39;“Non-Replication of ‘Procrastination, Deadlines, and Performance: Self-Control by Precommitment’ &lt;span class=editorial&gt;[Ariely &amp; Wertenbroch 2002]&lt;/span&gt;”, Hyndman &amp; Bisin 2026&#39;">“Non-Replication of ‘Procrastination, Deadlines, and Performance: Self-Control by Precommitment’ <span class=editorial>[Ariely & Wertenbroch 2002]</span>”, Hyndman & Bisin 2026</a></h2>
+<p><strong><a href="https://journals.sagepub.com/doi/10.1177/09567976261460772" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="SAGE" data-link-icon-color="#046ff8" data-link-icon-type="text,quad,sans" title="&#39;Non-Replication of ‘Procrastination, Deadlines, and Performance: Self-Control by Precommitment’ &lt;span class=editorial&gt;[Ariely &amp; Wertenbroch 2002]&lt;/span&gt;&#39;, Hyndman &amp; Bisin 2026">Non-Replication of ‘Procrastination, Deadlines, and Performance: Self-Control by Precommitment’ <span class=editorial>[Ariely & Wertenbroch 2002]</span></a></strong></p>
+</section>
+<section id="chen-et-al-2025-section" class="level2">
+<h2><a href="#chen-et-al-2025-section" title="Link to section: § &#39;“TTT3R: 3D Reconstruction As Test-Time Training”, Chen et al 2025&#39;">“TTT3R: 3D Reconstruction As Test-Time Training”, Chen et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/b404d98ee77077be77f18698a30a12c1972fe974.pdf" class="prefetch-not link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2509.26645?fallback=original" data-url-archive="/doc/www/arxiv.org/b404d98ee77077be77f18698a30a12c1972fe974.pdf" data-url-original="https://arxiv.org/abs/2509.26645" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;TTT3R: 3D Reconstruction as Test-Time Training&#39;, Chen et al 2025">TTT3R: 3D Reconstruction as Test-Time Training</a></strong></p>
+</section>
+<section id="liang-et-al-2026-section" class="level2">
+<h2><a href="#liang-et-al-2026-section" title="Link to section: § &#39;“FPGN: Redefining Ultra-Fast Programmable Gate-Based Neural Acceleration With Differentiable LUTs”, Liang et al 2026&#39;">“FPGN: Redefining Ultra-Fast Programmable Gate-Based Neural Acceleration With Differentiable LUTs”, Liang et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/2a4366ac5ee24fab2e992a4b1b5e0716785e133f.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2607.08427?fallback=original" data-url-archive="/doc/www/arxiv.org/2a4366ac5ee24fab2e992a4b1b5e0716785e133f.pdf" data-url-original="https://arxiv.org/abs/2607.08427" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;FPGN: Redefining Ultra-Fast Programmable Gate-based Neural Acceleration with Differentiable LUTs&#39;, Liang et al 2026">FPGN: Redefining Ultra-Fast Programmable Gate-based Neural Acceleration with Differentiable LUTs</a></strong></p>
+</section>
+<section id="wei-et-al-2026-section" class="level2">
+<h2><a href="#wei-et-al-2026-section" title="Link to section: § &#39;“Navigating the Open-Source Model Ecosystem: An Empirical Study of Creator Practices in Artistic Image Generation”, Wei et al 2026&#39;">“Navigating the Open-Source Model Ecosystem: An Empirical Study of Creator Practices in Artistic Image Generation”, Wei et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/e9e39351303bcef57cfd7eb424a7f63ea68888e6.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2607.10538?fallback=original" data-url-archive="/doc/www/arxiv.org/e9e39351303bcef57cfd7eb424a7f63ea68888e6.pdf" data-url-original="https://arxiv.org/abs/2607.10538" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Navigating the Open-Source Model Ecosystem: An Empirical Study of Creator Practices in Artistic Image Generation&#39;, Wei et al 2026">Navigating the Open-Source Model Ecosystem: An Empirical Study of Creator Practices in Artistic Image Generation</a></strong></p>
+</section>
+<section id="lorenzo-et-al-2025-section" class="level2">
+<h2><a href="#lorenzo-et-al-2025-section" title="Link to section: § &#39;“Periodic Cooking of Eggs”, Lorenzo et al 2025&#39;">“Periodic Cooking of Eggs”, Lorenzo et al 2025</a></h2>
+<p><strong><a href="https://www.nature.com/articles/s44172-024-00334-w" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="n" data-link-icon-type="text" title="&#39;Periodic cooking of eggs&#39;, Lorenzo et al 2025">Periodic cooking of eggs</a></strong></p>
+</section>
+<section id="larson-1983-section" class="level2">
+<h2><a href="#larson-1983-section" title="Link to section: § &#39;“If We Pull This Off, We’ll Eat Like Kings”, Larson 1983&#39;">“If We Pull This Off, We’ll Eat Like Kings”, Larson 1983</a></h2>
+<p><strong><a href="/doc/fiction/humor/comics/1983-11-17-garylarson-thefarside-comic-spiderwebtrap-ifwepullthisoffwelleatlikekings.jpg" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="image" data-link-icon-type="svg" data-image-height="705" data-image-width="526" data-aspect-ratio="526 / 705" title="&#39;If We Pull This Off, We’ll Eat Like Kings&#39;, Larson 1983">If We Pull This Off, We’ll Eat Like Kings</a></strong></p>
+</section>
+<section id="lotvonen-2026-section" class="level2">
+<h2><a href="#lotvonen-2026-section" title="Link to section: § &#39;“On the Origins of Heikki’s Garden of Flowers”, Lotvonen 2026&#39;">“On the Origins of Heikki’s Garden of Flowers”, Lotvonen 2026</a></h2>
+<p><strong><a href="/doc/www/garden-of-flowers.heikkilotvonen.com/5a268d9301ecd332308ac468c1d748db90f8fe2e.html" class="prefetch-not link-live link-modified-recently link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/garden-of-flowers.heikkilotvonen.com/5a268d9301ecd332308ac468c1d748db90f8fe2e.html" data-url-original="https://garden-of-flowers.heikkilotvonen.com/?essay" title="&#39;On the origins of Heikki’s Garden of Flowers&#39;, Lotvonen 2026">On the origins of Heikki’s Garden of Flowers</a></strong></p>
+</section>
+<section id="keyfitz-1977-section" class="level2">
+<h2><a href="#keyfitz-1977-section" title="Link to section: § &#39;“What Difference Would It Make If Cancer Were Eradicated? An Examination of the Taeuber Paradox”, Keyfitz 1977&#39;">“What Difference Would It Make If Cancer Were Eradicated? An Examination of the Taeuber Paradox”, Keyfitz 1977</a></h2>
+<p><strong><a href="/doc/longevity/1977-keyfitz.pdf" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;What Difference Would It Make if Cancer Were Eradicated? An Examination of the Taeuber Paradox&#39;, Keyfitz 1977">What Difference Would It Make if Cancer Were Eradicated? An Examination of the Taeuber Paradox</a></strong></p>
+</section>
+<section id="bottou-schölkopf-2023-section" class="level2">
+<h2><a href="#bottou-schölkopf-2023-section" title="Link to section: § &#39;“Borges and AI”, Bottou &amp; Schölkopf 2023&#39;">“Borges and AI”, Bottou & Schölkopf 2023</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/21b015a265786360c9da22809a3982a6ff04caa9.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2310.01425?fallback=original" data-url-archive="/doc/www/arxiv.org/21b015a265786360c9da22809a3982a6ff04caa9.pdf" data-url-original="https://arxiv.org/abs/2310.01425" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Borges and AI&#39;, Bottou &amp; Schölkopf 2023">Borges and AI</a></strong></p>
+</section>
+<section id="rockel-et-al-1980-section" class="level2">
+<h2><a href="#rockel-et-al-1980-section" title="Link to section: § &#39;“The Basic Uniformity In Structure Of The Neocortex”, Rockel et al 1980&#39;">“The Basic Uniformity In Structure Of The Neocortex”, Rockel et al 1980</a></h2>
+<p><strong><a href="/doc/psychology/neuroscience/1980-rockel.pdf" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The Basic Uniformity In Structure Of The Neocortex&#39;, Rockel et al 1980">The Basic Uniformity In Structure Of The Neocortex</a></strong></p>
+</section>
+<section id="pourdavood-2026-section" class="level2">
+<h2><a href="#pourdavood-2026-section" title="Link to section: § &#39;“Does Claude’s Constitution Have a Culture?”, Pourdavood 2026&#39;">“Does Claude’s Constitution Have a Culture?”, Pourdavood 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/9d703528452e1809b43259b19eca683feebc1fc4.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2603.28123?fallback=original" data-url-archive="/doc/www/arxiv.org/9d703528452e1809b43259b19eca683feebc1fc4.pdf" data-url-original="https://arxiv.org/abs/2603.28123" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Does Claude’s Constitution Have a Culture?&#39;, Pourdavood 2026">Does Claude’s Constitution Have a Culture?</a></strong></p>
+</section>
+<section id="_I15WiYYB-section" class="level2">
+<h2><a href="#_I15WiYYB-section" title="Link to section: § &#39;“We, the Navigators at 50”&#39;">“<em>We, the Navigators</em> at 50”</a></h2>
+<p><strong><a href="/doc/www/www.southernwoodenboatsailing.com/e421a2687ed814171417513a0e8b0c941be41b40.html" class="prefetch-not link-live link-modified-recently link-annotated id-not include-annotation" data-url-archive="/doc/www/www.southernwoodenboatsailing.com/e421a2687ed814171417513a0e8b0c941be41b40.html" data-url-original="https://www.southernwoodenboatsailing.com/news/we-the-navigators-at-fifty" title="&lt;em&gt;We, the Navigators&lt;/em&gt; at 50"><em>We, the Navigators</em> at 50</a></strong></p>
+</section>
+<section id="valmeekam-et-al-2023-section" class="level2">
+<h2><a href="#valmeekam-et-al-2023-section" title="Link to section: § &#39;“LLMZip: Lossless Text Compression Using Large Language Models”, Valmeekam et al 2023&#39;">“LLMZip: Lossless Text Compression Using Large Language Models”, Valmeekam et al 2023</a></h2>
+<p><strong><a href="https://arxiv.org/abs/2306.04050" class="link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2306.04050?fallback=original" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;LLMZip: Lossless Text Compression using Large Language Models&#39;, Valmeekam et al 2023">LLMZip: Lossless Text Compression using Large Language Models</a></strong></p>
+</section>
+<section id="mittu-et-al-2024-section" class="level2">
+<h2><a href="#mittu-et-al-2024-section" title="Link to section: § &#39;“FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression”, Mittu et al 2024&#39;">“FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression”, Mittu et al 2024</a></h2>
+<p><strong><a href="https://arxiv.org/abs/2409.17141" class="link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2409.17141?fallback=original" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression&#39;, Mittu et al 2024">FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression</a></strong></p>
+</section>
+<section id="lialin-et-al-2023-section" class="level2">
+<h2><a href="#lialin-et-al-2023-section" title="Link to section: § &#39;“ReLoRA: High-Rank Training Through Low-Rank Updates”, Lialin et al 2023&#39;">“ReLoRA: High-Rank Training Through Low-Rank Updates”, Lialin et al 2023</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/b372a7340a6d8a54ebae7b715edd4a8b1bb60d39.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2307.05695?fallback=original" data-url-archive="/doc/www/arxiv.org/b372a7340a6d8a54ebae7b715edd4a8b1bb60d39.pdf" data-url-original="https://arxiv.org/abs/2307.05695" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;ReLoRA: High-Rank Training Through Low-Rank Updates&#39;, Lialin et al 2023">ReLoRA: High-Rank Training Through Low-Rank Updates</a></strong></p>
+</section>
+<section id="kuchibhotla-et-al-2026-section" class="level2">
+<h2><a href="#kuchibhotla-et-al-2026-section" title="Link to section: § &#39;“Evolutionary Biomechanics of Maximum Running Speed in Spiders (Araneae)”, Kuchibhotla et al 2026&#39;">“Evolutionary Biomechanics of Maximum Running Speed in Spiders (Araneae)”, Kuchibhotla et al 2026</a></h2>
+<p><strong><a href="https://www.biorxiv.org/content/10.64898/2026.06.11.731532.full" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="chi-dna" data-link-icon-color="#bd2736" data-link-icon-type="svg" title="&#39;Evolutionary biomechanics of maximum running speed in spiders (Araneae)&#39;, Kuchibhotla et al 2026">Evolutionary biomechanics of maximum running speed in spiders (Araneae)</a></strong></p>
+</section>
+<section id="olson-morton-2017-section" class="level2">
+<h2><a href="#olson-morton-2017-section" title="Link to section: § &#39;“Why Were the Soil Tunnels of Cu Chi and Iron Triangle in Vietnam So Resilient?”, Olson &amp; Morton 2017&#39;">“Why Were the Soil Tunnels of Cu Chi and Iron Triangle in Vietnam So Resilient?”, Olson & Morton 2017</a></h2>
+<p><strong><a href="https://www.scirp.org/journal/paperinformation?paperid=74005" class="link-modified-recently link-annotated id-not include-annotation" title="&#39;Why Were the Soil Tunnels of Cu Chi and Iron Triangle in Vietnam So Resilient?&#39;, Olson &amp; Morton 2017">Why Were the Soil Tunnels of Cu Chi and Iron Triangle in Vietnam So Resilient?</a></strong></p>
+</section>
+<section id="chess-2025-section" class="level2">
+<h2><a href="#chess-2025-section" title="Link to section: § &#39;“‘I’ve Embarrassed Myself’—Grandmaster Trivia Test With Fabi Caruana, Hikaru Nakamura &amp;amp; Levon Aronian”, Chess 2025&#39;">“‘I’ve Embarrassed Myself’—Grandmaster Trivia Test With Fabi Caruana, Hikaru Nakamura &amp; Levon Aronian”, Chess 2025</a></h2>
+<p><strong><a href="https://www.youtube.com/watch?v=sXyLJaaLEpE" class="link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="youtube" data-link-icon-color="#ff0033" data-link-icon-type="svg" title="&#39;‘I’ve embarrassed myself’—Grandmaster Trivia Test with Fabi Caruana, Hikaru Nakamura &amp; Levon Aronian&#39;, Chess 2025">‘I’ve embarrassed myself’—Grandmaster Trivia Test with Fabi Caruana, Hikaru Nakamura &amp; Levon Aronian</a></strong></p>
+</section>
+<section id="karlsson-2026-section" class="level2">
+<h2><a href="#karlsson-2026-section" title="Link to section: § &#39;“The GNU Emacs Architecture: Unlocking the Core”, Karlsson 2026&#39;">“The GNU Emacs Architecture: Unlocking the Core”, Karlsson 2026</a></h2>
+<p><strong><a href="/doc/cs/lisp/emacs/2026-karlsson.pdf" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The GNU Emacs Architecture: Unlocking the Core&#39;, Karlsson 2026">The GNU Emacs Architecture: Unlocking the Core</a></strong></p>
+</section>
+<section id="prather-et-al-2024-section" class="level2">
+<h2><a href="#prather-et-al-2024-section" title="Link to section: § &#39;“The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers”, Prather et al 2024&#39;">“The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers”, Prather et al 2024</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/fcb6bfe0809db7020c1b2566e0541f663737c449.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2405.17739?fallback=original" data-url-archive="/doc/www/arxiv.org/fcb6bfe0809db7020c1b2566e0541f663737c449.pdf" data-url-original="https://arxiv.org/abs/2405.17739" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers&#39;, Prather et al 2024">The Widening Gap: The Benefits and Harms of Generative AI for Novice Programmers</a></strong></p>
+</section>
+<section id="zheng-et-al-2025-section" class="level2">
+<h2><a href="#zheng-et-al-2025-section" title="Link to section: § &#39;“Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets (LST/xLadder)”, Zheng et al 2025&#39;">“Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets (LST/xLadder)”, Zheng et al 2025</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/6be94134465022d4d25d1e9d868d309c34e55615.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2512.14237?fallback=original" data-url-archive="/doc/www/arxiv.org/6be94134465022d4d25d1e9d868d309c34e55615.pdf" data-url-original="https://arxiv.org/abs/2512.14237" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets (LST/xLadder)&#39;, Zheng et al 2025">Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets (LST/xLadder)</a></strong></p>
+</section>
+<section id="dietz-et-al-2026-section" class="level2">
+<h2><a href="#dietz-et-al-2026-section" title="Link to section: § &#39;“Split Personality Training (SPT): Revealing Latent Knowledge Through Alternate Personalities”, Dietz et al 2026&#39;">“Split Personality Training (SPT): Revealing Latent Knowledge Through Alternate Personalities”, Dietz et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/e72c0db963c88fc20f04417a90c13017cf9186c6.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2602.05532?fallback=original" data-url-archive="/doc/www/arxiv.org/e72c0db963c88fc20f04417a90c13017cf9186c6.pdf" data-url-original="https://arxiv.org/abs/2602.05532" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Split Personality Training (SPT): Revealing Latent Knowledge Through Alternate Personalities&#39;, Dietz et al 2026">Split Personality Training (SPT): Revealing Latent Knowledge Through Alternate Personalities</a></strong></p>
+</section>
+<section id="bhamidipaty-et-al-2026-section" class="level2">
+<h2><a href="#bhamidipaty-et-al-2026-section" title="Link to section: § &#39;“Imperfect World Models Are Exploitable”, Bhamidipaty et al 2026&#39;">“Imperfect World Models Are Exploitable”, Bhamidipaty et al 2026</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/1a0f142e0d21b5fc39f22740bc917476d667bd05.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2605.15960?fallback=original" data-url-archive="/doc/www/arxiv.org/1a0f142e0d21b5fc39f22740bc917476d667bd05.pdf" data-url-original="https://arxiv.org/abs/2605.15960" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Imperfect World Models are Exploitable&#39;, Bhamidipaty et al 2026">Imperfect World Models are Exploitable</a></strong></p>
+</section>
+<section id="rare-2026-section" class="level2">
+<h2><a href="#rare-2026-section" title="Link to section: § &#39;“1Picture1000Words: They Say a Picture Is worth a Thousand Words. I Say… Prove It”, Rare 2026&#39;">“1Picture1000Words: They Say a Picture Is worth a Thousand Words. I Say… Prove It”, Rare 2026</a></h2>
+<p><strong><a href="https://writingclub.world/1picture1000words" class="link-modified-recently link-annotated id-not include-annotation" title="&#39;1Picture1000Words: They say a picture is worth a thousand words. I say… Prove it&#39;, Rare 2026">1Picture1000Words: They say a picture is worth a thousand words. I say… Prove it</a></strong></p>
+</section>
+<section id="coleman-luccia-1980-section" class="level2">
+<h2><a href="#coleman-luccia-1980-section" title="Link to section: § &#39;“Gravitational Effects on and of Vacuum Decay”, Coleman &amp; Luccia 1980&#39;">“Gravitational Effects on and of Vacuum Decay”, Coleman & Luccia 1980</a></h2>
+<p><strong><a href="/doc/science/physics/astronomy/1980-coleman.pdf" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Gravitational effects on and of vacuum decay&#39;, Coleman &amp; Luccia 1980">Gravitational effects on and of vacuum decay</a></strong></p>
+</section>
+<section id="chen-et-al-2024-section" class="level2">
+<h2><a href="#chen-et-al-2024-section" title="Link to section: § &#39;“Knowledge Distillation of Black-Box Large Language Models”, Chen et al 2024&#39;">“Knowledge Distillation of Black-Box Large Language Models”, Chen et al 2024</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/b8433db31995adf6c7f2ffcc4a02dfa1930094c4.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2401.07013?fallback=original" data-url-archive="/doc/www/arxiv.org/b8433db31995adf6c7f2ffcc4a02dfa1930094c4.pdf" data-url-original="https://arxiv.org/abs/2401.07013" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Knowledge Distillation of Black-Box Large Language Models&#39;, Chen et al 2024">Knowledge Distillation of Black-Box Large Language Models</a></strong></p>
+</section>
+<section id="ye-et-al-2024-section" class="level2">
+<h2><a href="#ye-et-al-2024-section" title="Link to section: § &#39;“Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance”, Ye et al 2024&#39;">“Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance”, Ye et al 2024</a></h2>
+<p><strong><a href="/doc/www/arxiv.org/16ffbef23f747e484b0cb97b93b8f8b1190e6831.pdf" class="link-live link-modified-recently link-annotated id-not include-annotation" data-href-mobile="https://arxiv.org/html/2403.16952?fallback=original" data-url-archive="/doc/www/arxiv.org/16ffbef23f747e484b0cb97b93b8f8b1190e6831.pdf" data-url-original="https://arxiv.org/abs/2403.16952" data-link-icon="𝛘" data-link-icon-color="#b31b1b" data-link-icon-type="text" title="&#39;Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance&#39;, Ye et al 2024">Data Mixing Laws: Optimizing Data Mixtures by Predicting Language Modeling Performance</a></strong></p>
+</section>
+<section id="sandra-inzlicht-2026-section" class="level2">
+<h2><a href="#sandra-inzlicht-2026-section" title="Link to section: § &#39;“Why Mental Health Awareness Can Harm: Converging Explanations for a Societal Problem”, Sandra &amp; Inzlicht 2026&#39;">“Why Mental Health Awareness Can Harm: Converging Explanations for a Societal Problem”, Sandra & Inzlicht 2026</a></h2>
+<p><strong><a href="/doc/psychiatry/anxiety/2026-sandra.pdf" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Why Mental Health Awareness Can Harm: Converging Explanations for a Societal Problem&#39;, Sandra &amp; Inzlicht 2026">Why Mental Health Awareness Can Harm: Converging Explanations for a Societal Problem</a></strong></p>
+</section>
+<section id="garland-garland-1980-section" class="level2">
+<h2><a href="#garland-garland-1980-section" title="Link to section: § &#39;“Do Sunlight and Vitamin D Reduce the Likelihood of Colon Cancer?”, Garland &amp; Garland 1980&#39;">“Do Sunlight and Vitamin D Reduce the Likelihood of Colon Cancer?”, Garland & Garland 1980</a></h2>
+<p><strong><a href="/doc/vitamin-d/1980-garland.pdf" class="link-modified-recently link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Do Sunlight and Vitamin D Reduce the Likelihood of Colon Cancer?&#39;, Garland &amp; Garland 1980">Do Sunlight and Vitamin D Reduce the Likelihood of Colon Cancer?</a></strong></p>
+</section>
+<section id="titled-links-wikipedia" class="level2 collapse">
+<h2 class="collapse"><a href="#titled-links-wikipedia" title="Link to section: § &#39;Wikipedia (7)&#39;">Wikipedia (7)</a></h2>
+<ol type="1">
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm" class="link-live link-modified-recently link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Expectation–maximization algorithm">Expectation–maximization algorithm</a></strong></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/J._David_Bleich" class="link-live link-modified-recently id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/J._David_Bleich#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="J. David Bleich">J. David Bleich</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/J._David_Bleich" class="link-live link-modified-recently id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/J._David_Bleich#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="J. David Bleich"><code>https://en.wikipedia.org/wiki/J._David_Bleich</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Paul_Elliott_(epidemiologist)" class="link-live link-modified-recently id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Paul_Elliott_(epidemiologist)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Paul Elliott (epidemiologist)">Paul Elliott (epidemiologist)</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Paul_Elliott_(epidemiologist)" class="link-live link-modified-recently id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Paul_Elliott_(epidemiologist)#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Paul Elliott (epidemiologist)"><code>https://en.wikipedia.org/wiki/Paul_Elliott_(epidemiologist)</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Revlon,_Inc._v._MacAndrews_%26_Forbes_Holdings,_Inc." class="link-live link-modified-recently id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Revlon,_Inc._v._MacAndrews_%26_Forbes_Holdings,_Inc.#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="&lt;em&gt;Revlon, Inc. v. MacAndrews &amp; Forbes Holdings, Inc&lt;/em&gt;"><em>Revlon, Inc. v. MacAndrews &amp; Forbes Holdings, Inc</em></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Revlon,_Inc._v._MacAndrews_%26_Forbes_Holdings,_Inc." class="link-live link-modified-recently id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Revlon,_Inc._v._MacAndrews_%26_Forbes_Holdings,_Inc.#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="&lt;em&gt;Revlon, Inc. v. MacAndrews &amp; Forbes Holdings, Inc&lt;/em&gt;"><code>https://en.wikipedia.org/wiki/Revlon,_Inc._v._MacAndrews_%26_Forbes_Holdings,_Inc.</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Capitol_Hill_Babysitting_Co-op" class="link-live link-modified-recently id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Capitol_Hill_Babysitting_Co-op#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Capitol Hill Babysitting Co-op">Capitol Hill Babysitting Co-op</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Capitol_Hill_Babysitting_Co-op" class="link-live link-modified-recently id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Capitol_Hill_Babysitting_Co-op#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Capitol Hill Babysitting Co-op"><code>https://en.wikipedia.org/wiki/Capitol_Hill_Babysitting_Co-op</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Kanaka_Rajan" class="link-live link-modified-recently id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Kanaka_Rajan#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Kanaka Rajan">Kanaka Rajan</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Kanaka_Rajan" class="link-live link-modified-recently id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Kanaka_Rajan#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Kanaka Rajan"><code>https://en.wikipedia.org/wiki/Kanaka_Rajan</code></a></p>
+</div></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Jakub_Pachocki" class="link-live link-modified-recently id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Jakub_Pachocki#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Jakub Pachocki">Jakub Pachocki</a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://en.wikipedia.org/wiki/Jakub_Pachocki" class="link-live link-modified-recently id-not include-content" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Jakub_Pachocki#bodyContent" data-include-template="$annotationFileIncludeTemplate" title="Jakub Pachocki"><code>https://en.wikipedia.org/wiki/Jakub_Pachocki</code></a></p>
+</div></li>
+</ol>
+</section>
+</section>
+<section id="miscellaneous" class="level1">
+<h1><a href="#miscellaneous" title="Link to section: § &#39;Miscellaneous&#39;">Miscellaneous</a></h1>
+<ul>
+<li><p><strong><a href="https://scottaaronson.blog/?p=9979" class="link-live link-modified-recently link-annotated-partial id-not include-annotation" data-link-icon="SA" data-link-icon-color="#4181b7" data-link-icon-type="text,sans" title="Aaronson 2026"><code>https://scottaaronson.blog/?p=9979</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/GaltMD/status/2085708837999308979" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/GaltMD/status/2085708837999308979" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="GaltMD 2026"><code>https://x.com/GaltMD/status/2085708837999308979</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/GaltMD/status/2085708837999308979" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/GaltMD/status/2085708837999308979" title="GaltMD 2026"><code>https://x.com/GaltMD/status/2085708837999308979</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/gdb/status/2086092396023120286" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/gdb/status/2086092396023120286" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="Brockman 2026"><code>https://x.com/gdb/status/2086092396023120286</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/gdb/status/2086092396023120286" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/gdb/status/2086092396023120286" title="Brockman 2026"><code>https://x.com/gdb/status/2086092396023120286</code></a></p>
+</div></li>
+<li><p><strong><a href="https://www.nytimes.com/2026/07/31/magazine/larry-ellison-ai-oracle.html" class="link-modified-recently id-not include-annotation" data-link-icon="new-york-times" data-link-icon-type="svg"><code>https://www.nytimes.com/2026/07/31/magazine/larry-ellison-ai-oracle.html</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/AaronBergman18/status/2084057984326349087" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/AaronBergman18/status/2084057984326349087" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="Bergman 2026"><code>https://x.com/AaronBergman18/status/2084057984326349087</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/AaronBergman18/status/2084057984326349087" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/AaronBergman18/status/2084057984326349087" title="Bergman 2026"><code>https://x.com/AaronBergman18/status/2084057984326349087</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/karpathy/status/2083749667410727319" class="link-modified-recently link-annotated-partial id-not include-annotation" data-href-mobile="https://nitter.net/karpathy/status/2083749667410727319" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="Karpathy 2026"><code>https://x.com/karpathy/status/2083749667410727319</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/IsaacKing314/status/2082750502677139720" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/IsaacKing314/status/2082750502677139720" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="IsaacKing314 2026"><code>https://x.com/IsaacKing314/status/2082750502677139720</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/IsaacKing314/status/2082750502677139720" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/IsaacKing314/status/2082750502677139720" title="IsaacKing314 2026"><code>https://x.com/IsaacKing314/status/2082750502677139720</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/SpeaksNanda/status/2082841418653999315" class="link-modified-recently link-annotated-partial id-not include-annotation" data-href-mobile="https://nitter.net/SpeaksNanda/status/2082841418653999315" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="SpeaksNanda 2026"><code>https://x.com/SpeaksNanda/status/2082841418653999315</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/GoodfireAI/status/2081784983019290783" class="link-modified-recently link-annotated-partial id-not include-annotation" data-href-mobile="https://nitter.net/GoodfireAI/status/2081784983019290783" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="GoodfireAI 2026"><code>https://x.com/GoodfireAI/status/2081784983019290783</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/distributionat/status/2081614973667582251" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/distributionat/status/2081614973667582251" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="distributionat 2026"><code>https://x.com/distributionat/status/2081614973667582251</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/distributionat/status/2081614973667582251" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/distributionat/status/2081614973667582251" title="distributionat 2026"><code>https://x.com/distributionat/status/2081614973667582251</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/prof_kamilov/status/2081564416085045292" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/prof_kamilov/status/2081564416085045292" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="prof_kamilov 2026"><code>https://x.com/prof_kamilov/status/2081564416085045292</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/prof_kamilov/status/2081564416085045292" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/prof_kamilov/status/2081564416085045292" title="prof_kamilov 2026"><code>https://x.com/prof_kamilov/status/2081564416085045292</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/random_walker/status/2081713721785631202" class="link-modified-recently link-annotated-partial id-not include-annotation" data-href-mobile="https://nitter.net/random_walker/status/2081713721785631202" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="random_walker 2026"><code>https://x.com/random_walker/status/2081713721785631202</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/JohnWittle/status/2081379864188240218" class="link-modified-recently link-annotated-partial id-not include-annotation" data-href-mobile="https://nitter.net/JohnWittle/status/2081379864188240218" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="JohnWittle 2026"><code>https://x.com/JohnWittle/status/2081379864188240218</code></a></strong></p></li>
+<li><p><strong><a href="https://x.com/anderssandberg/status/1864922618211500535" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/anderssandberg/status/1864922618211500535" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="anderssandberg 2026"><code>https://x.com/anderssandberg/status/1864922618211500535</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/anderssandberg/status/1864922618211500535" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/anderssandberg/status/1864922618211500535" title="anderssandberg 2026"><code>https://x.com/anderssandberg/status/1864922618211500535</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/lion_tender/status/2081096581588103513" class="link-modified-recently id-not include-annotation" data-href-mobile="https://nitter.net/lion_tender/status/2081096581588103513" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="lion_tender 2026"><code>https://x.com/lion_tender/status/2081096581588103513</code></a></strong></p>
+<div class="aux-links-transclude-file">
+<p><a href="https://x.com/lion_tender/status/2081096581588103513" class="link-modified-recently id-not include-content" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/lion_tender/status/2081096581588103513" title="lion_tender 2026"><code>https://x.com/lion_tender/status/2081096581588103513</code></a></p>
+</div></li>
+<li><p><strong><a href="https://x.com/ClementDelangue/status/2081056675558195657" class="link-modified-recently link-annotated-partial id-not include-annotation" data-href-mobile="https://nitter.net/ClementDelangue/status/2081056675558195657" data-link-icon="twitter" data-link-icon-color="#1da1f2" data-link-icon-type="svg" title="ClementDelangue 2026"><code>https://x.com/ClementDelangue/status/2081056675558195657</code></a></strong></p></li>
+<li><p><strong><a href="/doc/newest/abstract" class="prefetch-not link-page link-annotated-partial id-not include-annotation"><code>/doc/newest/abstract</code></a></strong></p></li>
+<li><p><strong><a href="https://www.reddit.com/r/Anki/comments/1vglttp/6year_anki_retrospective_thoughts_on_the_longterm/" class="link-modified-recently id-not include-annotation" data-link-icon="reddit" data-link-icon-color="#ff4500" data-link-icon-type="svg"><code>https://www.reddit.com/r/Anki/comments/1vglttp/6year_anki_retrospective_thoughts_on_the_longterm/</code></a></strong></p></li>
+</ul>
+</section>
+<section id="link-bibliography-section" class="level1">
+<h1><a href="#link-bibliography-section" title="Link to section: § &#39;Bibliography&#39;">Bibliography</a></h1>
+<ol type="1">
+<li><p><code>https://arxiv.org/abs/2306.04050</code>: <a href="https://arxiv.org/abs/2306.04050" id="valmeekam-et-al-2023" class="link-modified-recently link-annotated" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/2306.04050?fallback=original" title="&#39;LLMZip: Lossless Text Compression using Large Language Models&#39;, Valmeekam et al 2023">“LLMZip: Lossless Text Compression Using Large Language Models”</a>, <span class="author">Chandra Shekhara Kaushik Valmeekam, Krishna Narayanan, Dileep Kalathil<span class="collapse">, Jean-Francois Chamberland, Srinivas Shakkottai</span></span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/https%253A%252F%252Farxiv.org%252Fabs%252F2306.04050.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link https://arxiv.org/abs/2306.04050">link-bibliography</a></span></p></li>
+<li><p><code>https://arxiv.org/abs/2409.17141</code>: <a href="https://arxiv.org/abs/2409.17141" id="mittu-et-al-2024" class="link-modified-recently link-annotated" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/2409.17141?fallback=original" title="&#39;FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression&#39;, Mittu et al 2024">“FineZip: Pushing the Limits of Large Language Models for Practical Lossless Text Compression”</a>, <span class="author">Fazal Mittu, Yihuan Bu, Akshat Gupta<span class="collapse">, Ashok Devireddy, Alp Eren Ozdarendeli, Anant Singh, Gopala Anumanchipalli</span></span></p>
+<p><span class="collapse tag-index-link-bibliography-block"><a href="/metadata/annotation/link-bibliography/https%253A%252F%252Farxiv.org%252Fabs%252F2409.17141.html" class="id-not include-even-when-collapsed" data-link-icon="bibliography" data-link-icon-type="svg" title="Directory-tag link-bibliography for link https://arxiv.org/abs/2409.17141">link-bibliography</a></span></p></li>
+</ol>
+</section>
+
+       
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" rel="nofollow" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Notes</title>
+<script defer data-domain="simonwillison.net" src="https://plausible.io/js/plausible.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="/atom/everything/">
+<link rel="stylesheet" type="text/css" href="/static/css/all.7977d7c44aeb.css">
+<link rel="webmention" href="https://webmention.io/simonwillison.net/webmention">
+<link rel="pingback" href="https://webmention.io/simonwillison.net/xmlrpc">
+<meta name="author" content="Simon Willison">
+<meta property="og:site_name" content="Simon Willison’s Weblog">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@simonw">
+<meta property="og:url" content="https://simonwillison.net/notes/">
+<meta property="og:title" content="">
+<meta property="og:type" content="article">
+<meta property="og:description" content="">
+<meta property="og:updated_time" content="">
+
+
+<script>
+(function() { // Apply theme immediately to prevent flash
+  const theme = localStorage.getItem('theme');
+  if (theme === 'light' || theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+})();
+</script>
+</head>
+<body class="smallhead">
+
+<div id="smallhead">
+  <div id="smallhead-inner">
+    <h1><a href="/">Simon Willison’s Weblog</a></h1>
+    <a id="smallhead-about" href="/about/#subscribe">Subscribe</a>
+  </div>
+</div><!-- #smallhead -->
+
+
+<div id="sponsored-banner" class="sponsor-scheme-sky">
+  <div id="sponsored-banner-inner">
+    <strong class="sponsored-label">Sponsored by:</strong> WorkOS &mdash; <a href="https://10xn.link/simon-workos">auth.md</a> by WorkOS: agents register users, no sign-up form. <a class="sponsor-learn-more-label" href="https://10xn.link/simon-workos" rel="sponsored noopener" target="_blank">Try it!</a>
+  </div>
+</div>
+
+
+<div id="wrapper">
+<div id="primary">
+
+<div class="entry entryPage">
+
+
+
+<a style="float: right; border-bottom: none; margin-top: 0.4em" href="/atom/notes/" title="Atom feed"><svg
+    xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 256 256"
+    role="img" aria-labelledby="atomFeedTitle">
+ <title id="atomFeedTitle">Atom feed</title>
+ <defs>
+   <linearGradient id="a" x1=".1" x2=".9" y1=".1" y2=".9">
+     <stop offset="0" stop-color="#E3702D"></stop>
+     <stop offset=".1" stop-color="#EA7D31"></stop>
+     <stop offset=".4" stop-color="#F69537"></stop>
+     <stop offset=".5" stop-color="#FB9E3A"></stop>
+     <stop offset=".7" stop-color="#EA7C31"></stop>
+     <stop offset=".9" stop-color="#DE642B"></stop>
+     <stop offset="1" stop-color="#D95B29"></stop>
+   </linearGradient>
+ </defs>
+ <rect width="256" height="256" fill="#CC5D15" rx="55" ry="55"></rect>
+ <rect width="246" height="246" x="5" y="5" fill="#F49C52" rx="50" ry="50"></rect>
+ <rect width="236" height="236" x="10" y="10" fill="url(#a)" rx="47" ry="47"></rect>
+ <circle cx="68" cy="189" r="24" fill="#FFF"></circle>
+ <path fill="#FFF" d="M160 213h-34a82 82 0 0 0-82-82V97a116 116 0 0 1 116 116z"></path>
+ <path fill="#FFF" d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z"></path>
+</svg>
+</a>
+<h2>Notes</h2>
+
+
+
+<form action="/search/" method="GET">
+    <input type="search" class="search-input" name="q" value="" style="width: 80%" autocomplete="off">
+    <input type="submit" class="search-submit" value="Search">
+    
+        
+            
+                <input type="hidden" name="type" value="note">
+            
+        
+            
+                <input type="hidden" name="type_label" value="Note">
+            
+        
+    
+    
+</form>
+
+
+
+<p class="search-selections">
+    <span class="filters">
+        Filters:
+        
+        
+        
+        
+        
+        
+    </span>
+    
+        Sorted by <strong>date</strong>
+        
+        
+    
+</p>
+
+<div id="autocomplete-tags" aria-live="polite"></div>
+
+
+    
+        
+    <div class="pagination">
+        
+        <strong>151 results</strong> 
+        
+        <span class="step-links">
+            
+            <span class="current">
+                page 1 / 6
+            </span>
+            
+                <a href="?page=2">next &raquo;</a>
+            
+            
+                <a href="?page=6">last &raquo;&raquo;</a>
+            
+        </span>
+    </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="562">
+  <p>I started building my <a href="https://tools.simonwillison.net/markdown-svg-renderer">markdown-svg-renderer</a> tool <a href="https://tools.simonwillison.net/colophon#markdown-svg-renderer.html">in May</a>, but I've since added enough features to it that it's worth talking about here again.</p>
+<p>It's evolved into my ideal tool for sharing Markdown transcripts that include SVG documents. Given my <a href="https://simonwillison.net/tags/pelican-riding-a-bicycle/">proclivity for drawing pelicans riding bicycles</a> this is a problem that I needed to solve!</p>
+<p>The tool is very simple. Navigate to <a href="https://tools.simonwillison.net/markdown-svg-renderer">markdown-svg-renderer</a> in your browser and paste in some Markdown to see it rendered... or save that Markdown to a CORS-friendly URL or a GitHub Gist and paste in a URL to that document.</p>
+<p>The URL option will give you a bookmarkable page, for example <a style="overflow-wrap: anywhere;" href="https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6f9e48293be5c916652d29f0dc0b0657">https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6f9e48293be5c916652d29f0dc0b0657</a> - which bakes in the URL to <a href="https://gist.github.com/simonw/6f9e48293be5c916652d29f0dc0b0657">this Gist</a>.</p>
+<p>If you visit <a href="https://gist.github.com/simonw/6f9e48293be5c916652d29f0dc0b0657">the Gist</a> you'll see raw SVG:</p>
+<p><img alt="beautiful-circle.md. Here's a self-contained SVG — a &quot;compass study&quot; of a circle with construction lines, a slowly rotating tick ring, and an orbiting accent dot: a block of SVG code" src="https://static.simonwillison.net/static/2026/raw-svg.webp" /></p>
+<p>In the rendered tool that <a href="https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fgist.github.com%2Fsimonw%2F6f9e48293be5c916652d29f0dc0b0657">looks like this</a> instead:</p>
+<p><img alt="The same text, but now the code block has been replaced by a tabbed panel. The selected tab reads &quot;Rendered&quot; and shows the rendered PNG. The other tabs are PNG, JPEG, MP4, and Code" src="https://static.simonwillison.net/static/2026/rendered-svg.webp" /></p>
+<p>As you can see, that SVG block in the Markdown has been transformed into a rendered SVG (in this case animated) plus several tabs.</p>
+<p>The tabs are the really fun bit. The PNG and JPEG tabs render that SVG to those image formats in the browser and lets you copy or download them - useful for sharing on platforms that don't support SVG directly.</p>
+<p>The MP4 tab is <a href="https://github.com/simonw/tools/commit/73e0327f6df9887ba2a9f9f16a2d06a45451d248">new today</a> - it examines the SVG to see if it contains any animations, attempts to guess how long the looped video should be, then renders a whole bunch of frames of the animation and loads 30+MB of <a href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a> so it can compile those frames into an MP4 video using the full power of FFMPEG compiled to WebAssembly and running in the browser.</p>
+<p>Being able to turn an animated SVG into a MP4 again makes it easy to share on platforms that can't support SVG animation natively. It's a neat trick!</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Aug/16/markdown-svg-upgrades/" rel="bookmark">#</a>
+    <a href="/2026/Aug/16/">16th August 2026</a>,
+    <a href="/2026/Aug/16/markdown-svg-upgrades/">11:59 pm</a>
+     / <a href="/tags/svg/">svg</a>, <a href="/tags/markdown/">markdown</a>, <a href="/tags/tools/">tools</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="532">
+  <h4>Open letters about AI development</h4>
+<p><em>I wrote this summary of the past few weeks of open letters as a section of <a href="https://simonwillison.net/2026/Aug/2/july-newsletter/">my sponsors-only newsletter</a> but I've decided to share it here as well.</em></p>
+<p><strong><a href="https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/">Open Weights and American AI Leadership</a></strong> was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA (see Jensen's <a href="https://twitter.com/jensenhuang/status/2080643682408321103">first ever tweet</a>), Amazon, Y Combinator, The Linux Foundation, and (a later signer) OpenAI.</p>
+<p>It's clearly an argument designed to counter <a href="https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi">any instincts</a> by the current US government to ban or limit open weight models over "safety" concerns - a reasonable consideration given <a href="https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/">what happened to Claude Fable 5</a>!</p>
+<blockquote>
+<p>Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect. And concentrating advanced AI capabilities behind a small number of closed models compounds that risk. It results in a small number of single points of failure, weakens competition, and leaves critical technology in the hands of a few providers. Open weight models, on the other hand, allow a broad community of researchers and developers to examine their behavior, identify vulnerabilities, develop safeguards, and improve them over time.</p>
+</blockquote>
+<p>The one surprising note in the letter is that it comes out in support of distillation, where models train on output from other models:</p>
+<blockquote>
+<p>In shaping this ecosystem, policymakers should be careful not to conflate legitimate model-development techniques with misappropriation. Distillation, or the practice of using one model’s outputs to help train or improve another, is a widely used technique for model improvement, evaluation, and validation. It reflects a long tradition of learning from, building upon, and improving existing technologies, a tradition that has helped drive innovation since the rise of the open-source software movement.</p>
+</blockquote>
+<p>Notably absent from the signatures: Anthropic, who published their own response <a href="https://www.anthropic.com/news/position-open-weights-models">Our position on open-weights models</a> three days later. CEO Dario Amodei doubled down on the risk of authoritarian governments building "AI models that are more powerful than those built by the US", and models being "misused to carry out cyberattacks or biological attacks", and called for "a crack down on industrial-scale <a href="https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks">distillation operations</a>", while also stating that "Anthropic has never advocated for a ban on open-weights models".</p>
+<p>Then on July 28th <a href="https://www.pacingthefrontier.com">Pacing the Frontier</a> was published, featuring signatures from "1,324 employees of frontier AI companies" - with names like Jakub Pachocki (Chief Scientist, OpenAI), Ilya Sutskever (Safe Superintelligence Inc, previously OpenAI), Dario Amodei (Anthropic), Jack Clark (Anthropic) and more. Their core message:</p>
+<blockquote>
+<p>We request that the U.S. government support an international effort to develop the technical and governance tools needed to deliberately pace the frontier of automated AI development.</p>
+</blockquote>
+<p>Their concern is intense competitive pressure combined with accelerated AI progress caused by automated AI research - and given that Anthropic <a href="https://www.anthropic.com/institute/recursive-self-improvement">produce 80% of their code with Claude Code</a>, OpenAI had Sol <a href="https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/">reduce their end-to-end serving costs by 20%</a>, and Kimi K3 <a href="https://www.kimi.com/blog/kimi-k3#chip-design">designed a chip to serve a nano model built on its own architecture</a>, you can see why people are taking that risk more seriously right now.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Aug/2/open-letters/" rel="bookmark">#</a>
+    <a href="/2026/Aug/2/">2nd August 2026</a>,
+    <a href="/2026/Aug/2/open-letters/">4:16 am</a>
+     / <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai-ethics/">ai-ethics</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="531">
+  <p>The July edition of my <a href="https://github.com/sponsors/simonw/">sponsors-only monthly newsletter</a> is out. If you are a sponsor (or if you start a sponsorship now) you can <a href="https://github.com/simonw-private/monthly/blob/main/2026-07-july.md">access it here</a>.</p>
+<p>This month:</p>
+<ul>
+<li>Accidental cyberattacks by OpenAl and Anthropic models under test</li>
+<li>GPT-5.6 Sol, Terra, and Luna</li>
+<li>Claude Opus 5</li>
+<li>Kimi K3 and DeepSeek-V4-Flash-0731</li>
+<li>Open letters about Al development</li>
+<li>A fireside chat and a podcast</li>
+<li>Reigniting my interest in MCP</li>
+<li>Other model releases</li>
+<li>My projects</li>
+<li>What I'm using at the moment</li>
+</ul>
+<p>Here's <a href="https://github.com/simonw/monthly-newsletter-archive/blob/main/2026-06-june.md">a copy of the June newsletter</a> as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy!</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Aug/2/july-newsletter/" rel="bookmark">#</a>
+    <a href="/2026/Aug/2/">2nd August 2026</a>,
+    <a href="/2026/Aug/2/july-newsletter/">4:12 am</a>
+     / <a href="/tags/newsletter/">newsletter</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="529">
+  <p>San Francisco tip: it only costs around $15 ($10 in quarters plus a $5 bill for the self-playing violin) to activate every single Orchestrion in <a href="https://en.wikipedia.org/wiki/Musée_Mécanique">Musée Mécanique</a>.</p>
+<p>And because most people are bad at allocating their funds you may well be the ONLY person activating the Orchestrions, which means you get to craft the soundscape for the entire museum.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/22/all-the-orchestrions/" rel="bookmark">#</a>
+    <a href="/2026/Jul/22/">22nd July 2026</a>,
+    <a href="/2026/Jul/22/all-the-orchestrions/">2:48 pm</a>
+     / <a href="/tags/san-francisco/">san-francisco</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="503">
+  <p>I keep hearing anecdotes from people who used coding agents to reverse-engineer and automate devices in their homes.</p>
+<p>I think this is an interesting illustration of the impact of the reduced cost of writing code.</p>
+<p>Prior to agents, it was entirely possible to reverse-engineer home devices. The problem was the ROI - was it really worth all of that effort? More importantly, any experienced programmer knows that undocumented, unstable APIs like that may well change or break in the future. Is that initial work worth the effort if you're committing yourself to a frustrating cycle of maintenance in the future?</p>
+<p>Coding agents change that equation entirely. The effort to get a simple automation working has dropped, as has the cost of trying and failing to get it to work. Since the code is so cheap, the idea of having to maintain it in the future - or throw it away and start again - carries way less psychological baggage.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/20/cheap-reverse-engineering/" rel="bookmark">#</a>
+    <a href="/2026/Jul/20/">20th July 2026</a>,
+    <a href="/2026/Jul/20/cheap-reverse-engineering/">7:24 pm</a>
+     / <a href="/tags/reverse-engineering/">reverse-engineering</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="502">
+  <p>In <a href="https://bun.com/blog/bun-in-rust">Rewriting Bun in Rust</a> Jarred Sumner made the following claim:</p>
+<blockquote>
+<p>Claude Code v2.1.181 (released June 17th) and later use the Rust port of Bun. Startup got 10% faster on Linux but otherwise, barely anyone noticed. Boring is good.</p>
+</blockquote>
+<p>I decided to have a poke at my own Claude Code installation to see if I could find evidence that it was using Bun written in Rust.</p>
+<p>I found these two commands convincing:</p>
+<pre><code>strings ~/.local/bin/claude | grep -m1 'Bun v1'
+</code></pre>
+<p>For me this outputs <code>Bun v1.4.0 (macOS arm64)</code>. The most recent release of <a href="https://github.com/oven-sh/bun/releases">Bun on GitHub</a> is currently <a href="https://github.com/oven-sh/bun/releases/tag/bun-v1.3.14">v1.3.14</a> from May 12th, so that v1.4.0 version number in Claude supports them shipping a preview of a not-yet-released Bun version.</p>
+<p>(<strong>Update</strong>: The Rust version <em>has</em> been released as <a href="https://bun.com/docs/installation#canary-builds">Bun canary</a> - running <code>bun upgrade --canary</code> will install <a href="https://github.com/oven-sh/bun/releases/tag/canary">this release</a>.)</p>
+<pre><code>strings ~/.local/bin/claude | grep -Eo 'src/[[:alnum:]_./-]+\.rs'
+</code></pre>
+<p>This outputs a list of <a href="https://gist.github.com/simonw/c92fb0f67b114ac26e3b95a09ddccfdc">563 filenames</a>, starting with these:</p>
+<pre><code>src/runtime/bake/dev_server/mod.rs
+src/runtime/bake/production.rs
+src/bundler/bundle_v2.rs
+</code></pre>
+<p>It looks like Bun in Rust is indeed being run in production across millions of different devices. Like Jarred said, "Boring is good".</p>
+<p><strong>Update</strong>: Here's a neat trick <a href="https://twitter.com/ajanraj25/status/2078825794701242697">from Ajan Raj</a>:</p>
+<pre><code>cat &gt; /tmp/bun-version.ts &lt;&lt;'EOF'
+console.log("embedded bun:", Bun.version);
+process.exit(0);
+EOF
+BUN_OPTIONS="--preload=/tmp/bun-version.ts" claude --version
+</code></pre>
+<p>This outputs <code>1.4.0</code> for me.</p>
+<p>Here's <a href="https://github.com/oven-sh/bun/commit/b18bf6d1d0a92238f240bfd125f0e3b3461b9243#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519">the commit from May 17th</a> that updated the version in <code>package.json</code> to 1.4.0. That version hasn't been changed since then, but also hasn't yet made it into a tagged release outside of <code>canary</code>.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/19/claude-code-in-bun-in-rust/" rel="bookmark">#</a>
+    <a href="/2026/Jul/19/">19th July 2026</a>,
+    <a href="/2026/Jul/19/claude-code-in-bun-in-rust/">3:54 am</a>
+     / <a href="/tags/bun/">bun</a>, <a href="/tags/rust/">rust</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/jarred-sumner/">jarred-sumner</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="501">
+  <p>Suggestion for hyperscalers feeling pressure over data center water use:</p>
+<p>Buy up a few exclusive country clubs, convert the golf courses into public parks, pay for guides and binoculars to get the previous members into birdwatching - help them embrace a more sustainable hobby!</p>
+<p>Google <a href="https://sustainability.google/reports/google-2026-environmental-report/">used 10.9 billion gallons in 2025</a>, so about 30 million gallons per day.</p>
+<p>The Coachella Valley has <a href="https://www.cvwd.org/167/Water-Conservation">120 golf courses each using ~800 acre-feet per year</a>,  which is ~750,000 gallons per day.</p>
+<p>So Google buying up 40 of those courses (1/3) should do the trick.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/17/spot-birds-not-golf/" rel="bookmark">#</a>
+    <a href="/2026/Jul/17/">17th July 2026</a>,
+    <a href="/2026/Jul/17/spot-birds-not-golf/">2:58 am</a>
+     / <a href="/tags/ai-energy-usage/">ai-energy-usage</a>, <a href="/tags/ai/">ai</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="500">
+  <p>One of the consequences of GPT-5.6 Sol being clearly a Fable/Mythos class model is that Anthropic have, once again, <a href="https://x.com/claudeai/status/2076351399999557669">bumped the date</a> that Fable stops being available in their Claude Max plans:</p>
+<blockquote>
+<p>We're extending Claude Fable 5 access on all paid plans, as well as keeping Claude Code’s weekly rate limits 50% higher, through July 19.</p>
+<p>As before, you can use up to half of your weekly usage limit on Fable 5. After that, you can continue using Fable 5 with usage credits, or switch to another model to keep working within your remaining limits.</p>
+</blockquote>
+<p>Anthropic's original rationale for this was compute constraints - they wanted a better idea of both demand and compute availability before committing to keeping the new model cheap for subscribers.</p>
+<p>OpenAI appear confident that they won't need to restrict access to GPT-5.6 in the same way. Here's Thibault Sottiaux <a href="https://twitter.com/thsottiaux/status/2076365965915467978">this morning</a>:</p>
+<blockquote>
+<p>The last 48 hours of Codex and ChatGPT Work have been intense! Three important updates:</p>
+<ul>
+<li>Temporarily removing the 5 hour usage limit restriction for all Plus, Business and Pro plans</li>
+<li>Rolling out changes that will make GPT 5.6 Sol more efficient across the board and that will be reflected in less usage being used so that it can take you further. Exact impact to be quantified and shared</li>
+<li>We hit 6M active users, and are landing a usage reset in the next hour</li>
+</ul>
+</blockquote>
+<p>At this point I think Anthropic should change track and keep Fable permanently available on those plans. OpenAI are winning users simply due to the uncertainty that surrounds Fable access.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/12/bump/" rel="bookmark">#</a>
+    <a href="/2026/Jul/12/">12th July 2026</a>,
+    <a href="/2026/Jul/12/bump/">9:20 pm</a>
+     / <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/gpt/">gpt</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm-pricing/">llm-pricing</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="499">
+  <p>One of the most interesting tips I got from <a href="https://www.ai.engineer/worldsfair/schedule?session=asn_slot_2026_06_30_main_stage_1230_2026_06_08t09_35_43_039z">the Fireside Chat</a> I hosted with Cat Wu and Thariq Shihipar from the Claude Code team at AIE on Wednesday was to let Fable (and to a certain extent Opus) use their own judgement rather than dictating how they should work.</p>
+<p>The example they gave was testing. You can tell Fable "only use automated testing for larger features, don't update and run tests for small copy or design changes" - but it's better to just tell Fable to use its own judgement when deciding to write tests instead.</p>
+<p>Jesse Vincent just gave me a related tip to help avoid burning too many of those valuable Fable tokens in the few days we have left before the prices go up. Tell Fable to use other models for smaller tasks, applying its own judgement about which model to use.</p>
+<p>I prompted Claude Code just now with:</p>
+<blockquote>
+<p><code>For all coding tasks use your judgement to decide an appropriate lower power model and run that in a subagent</code></p>
+</blockquote>
+<p>Claude saved this memory file in <code>~/.claude/projects/name-of-project/memory/delegate-coding-to-subagents.md</code>:</p>
+<blockquote>
+<pre><code>---
+name: delegate-coding-to-subagents
+description: Simon wants coding tasks delegated to subagents running an appropriately lower-power model
+metadata: 
+  node_type: memory
+  type: feedback
+  originSessionId: 30068d78-43a9-4fb1-bb29-9799e18c526a
+---
+</code></pre>
+<p>Stated by Simon on 2026-07-03: "For all coding tasks use your judgement to
+decide an appropriate lower power model and run that in a subagent."</p>
+<p><strong>Why:</strong> cost/efficiency — implementation work rarely needs the top-tier
+model; judgment, review, and synthesis stay with the main loop.</p>
+<p><strong>How to apply:</strong> when a task in this project is primarily writing/editing
+code, spawn an Agent with a model override (sonnet for substantive
+implementation, haiku for trivial/mechanical edits) and a self-contained
+prompt; review the result in the main loop before committing. Design,
+auditing, data synthesis, and anything judgment-heavy stays in the main
+model. See also [[project-goals]].</p>
+</blockquote>
+<p>So far it seems to be working well. I'm getting a <em>ton</em> of work done and my Fable allowance is shrinking less quickly than before.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/3/judgement/" rel="bookmark">#</a>
+    <a href="/2026/Jul/3/">3rd July 2026</a>,
+    <a href="/2026/Jul/3/judgement/">6:51 pm</a>
+     / <a href="/tags/claude/">claude</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/prompt-engineering/">prompt-engineering</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/thariq-shihipar/">thariq-shihipar</a>, <a href="/tags/cat-wu/">cat-wu</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="498">
+  <p>The June edition of my <a href="https://github.com/sponsors/simonw/">sponsors-only monthly newsletter</a> is out. If you are a sponsor (or if you start a sponsorship now) you can <a href="https://github.com/simonw-private/monthly/blob/main/2026-06-june.md">access it here</a>.</p>
+<p>This month:</p>
+<ul>
+<li>Claude Fable 5, GPT-5.6, and US export restrictions</li>
+<li>GLM-5.2 is the new best open weights model</li>
+<li>Tokenmaxxing is so over</li>
+<li>Datasette Apps</li>
+<li>sqlite-utils and shot-scraper and Datasette</li>
+<li>Miscellaneous WASM projects</li>
+<li>Other model releases</li>
+<li>What I'm using</li>
+</ul>
+<p>Here's <a href="https://github.com/simonw/monthly-newsletter-archive/blob/main/2026-05-may.md">a copy of the May newsletter</a> as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy!</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/3/june-newsletter/" rel="bookmark">#</a>
+    <a href="/2026/Jul/3/">3rd July 2026</a>,
+    <a href="/2026/Jul/3/june-newsletter/">2:50 pm</a>
+     / <a href="/tags/newsletter/">newsletter</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="497">
+  <p>I saw Geoffrey Litt speak at <a href="https://www.ai.engineer/worldsfair/2026">AIE</a> yesterday, and one framing he used particularly resonated with me:</p>
+<p><strong>Understand to participate</strong></p>
+<p>Geoffrey was talking about the challenge of collaborating with coding agents as they construct increasingly large and sophisticated changes, and the need to avoid taking on <a href="https://simonwillison.net/tags/cognitive-debt/">cognitive debt</a> as your understanding drifts from how the code actually works.</p>
+<p>His argument is that you need to understand the code to a depth that enables you to participate further with the model:</p>
+<blockquote>
+<p>You can learn what the agent is doing to make sure you can be an active participant in the creative process. [...]</p>
+<p>You need a rich set of concepts in your mind to think creatively and fluently about how to move something forward. If you're lacking that fluency, your ability to participate in the project is meaningfully limited.</p>
+</blockquote>
+<p>The AIE talks are all recorded - all 300+ of them! - and should be trickling out over the next three weeks. Geoffrey's is one that I recommend catching on YouTube.</p>
+<p><strong>Update 10th July</strong>: here's <a href="https://youtu.be/WkBPX-oDMnA?is=ojFaLX2onMn3ARhi">Geoffrey's talk on YouTube</a>.</p>
+<p>Geoffrey also published <a href="https://twitter.com/geoffreylitt/status/2072522251300409556">a thread version of his talk</a> on Twitter.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jul/2/understand-to-participate/" rel="bookmark">#</a>
+    <a href="/2026/Jul/2/">2nd July 2026</a>,
+    <a href="/2026/Jul/2/understand-to-participate/">5:07 pm</a>
+     / <a href="/tags/geoffrey-litt/">geoffrey-litt</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/cognitive-debt/">cognitive-debt</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="496">
+  <p>Tiniest TIL, using AppleScript to count the number of open browser tabs in Safari:</p>
+<pre><code>osascript -e 'tell application "Safari" to count tabs of every window'
+</code></pre>
+<p><img alt="I ran it in a terminal window and got back 370." src="https://static.simonwillison.net/static/2026/tab-shame.jpg" /></p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jun/29/safari-tab-count/" rel="bookmark">#</a>
+    <a href="/2026/Jun/29/">29th June 2026</a>,
+    <a href="/2026/Jun/29/safari-tab-count/">6:36 pm</a>
+     / <a href="/tags/safari/">safari</a>, <a href="/tags/til/">til</a>, <a href="/tags/applescript/">applescript</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="463">
+  <p>Given how badly burned anyone who took Apple's <a href="https://simonwillison.net/2024/Jun/10/apple-intelligence/">2024 WWDC Apple Intelligence announcements</a> at face value was, I'm holding to a strict "I'll believe it when I see it" policy for everything <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">they announced today</a>. </p>
+<p>The new Siri AI features do at least look feasible with today's technology, especially since Apple are licensing a custom Gemini-derived model that they can run on their own <a href="https://simonwillison.net/2024/Jun/11/private-cloud-compute/">Private Cloud Compute</a>.</p>
+<p>It sounds like they'll be taking advantage of vision LLMs to extract information from the user's screen, which neatly sidesteps the need for every existing application to ship custom code in order to integrate with Apple Intelligence. Vision LLMs were a much less mature category in June 2024.</p>
+<p>The new Core AI library looks like a good step in enabling developers to finally take full advantage of Apple's hardware for running their own models. It integrates with Meta's open source PyTorch ecosystem, using these <a href="https://apple.github.io/coreai-torch/main/">Core AI PyTorch extensions</a>:</p>
+<blockquote>
+<p>Core AI PyTorch Extensions (<code>coreai-torch</code>) is a Python package that bridges PyTorch and Core AI. You can use it to bring up an existing PyTorch model — exported as a <code>torch.export.ExportedProgram</code> — into a Core AI <code>AIProgram</code> ready to run on Apple hardware, traversing the FX graph node-by-node and mapping ATen operators to Core AI operations.</p>
+</blockquote>
+<p>You can install an iOS 27 Developer Beta today, which supposedly has the new features - but you then have to make it through a waiting list for access to the new Siri AI. Aaron Perris from MacRumors reports having <a href="https://twitter.com/aaronp613/status/2064078063814471977">made it off the waitlist</a> so we may start seeing credible reports on how well Siri AI works in the very near future.</p>
+<p><strong>Update</strong>: These Private Cloud Compute Gemini models are running in Google Cloud, and using NVIDIA hardware. According to <a href="https://security.apple.com/blog/expanding-pcc/?linkId=100000425571569">Expanding Private Cloud Compute</a> on Apple's Security Research blog:</p>
+<blockquote>
+<p>For the most demanding tasks, including agentic tool-use and complex reasoning, we worked with Google and NVIDIA to extend our PCC infrastructure to Google Cloud systems using NVIDIA GPUs, while maintaining Apple's powerful security and privacy protections. [...]</p>
+<p>PCC on Google Cloud leverages many of the same architectural security patterns as PCC on Apple silicon to implement these layered protections: initial network data parsing for each request happens in a dedicated process within its own namespace, shared inference software is recycled with a short time-to-live duration, and attested keys are held in a separate, dedicated confidential VM isolated from external inputs. [...]</p>
+<p>As with PCC on Apple silicon, all binaries will be published for public inspection.</p>
+</blockquote>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jun/8/wwdc/" rel="bookmark">#</a>
+    <a href="/2026/Jun/8/">8th June 2026</a>,
+    <a href="/2026/Jun/8/wwdc/">11:58 pm</a>
+     / <a href="/tags/vision-llms/">vision-llms</a>, <a href="/tags/apple/">apple</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/gemini/">gemini</a>, <a href="/tags/nvidia/">nvidia</a>, <a href="/tags/google/">google</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="437">
+  <p>Microsoft <a href="https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/">announced two new text LLMs</a> this morning - <strong><a href="https://microsoft.ai/news/introducing-mai-thinking-1/">MAI-Thinking-1</a></strong> (reasoning, 1T parameters, 35B active, available to "select early partners") and <strong><a href="https://microsoft.ai/news/introducingmai-code-1-flash/">MAI-Code-1-Flash</a></strong> (137B Parameters, 5B active, "purpose-built for GitHub Copilot and VS Code to deliver high performance and lower cost [...] rolling out to GitHub Copilot individual users in Visual Studio Code"). I've not been able to try either of them just yet.</p>
+<p><strike>It's very interesting to see Microsoft releasing models with such low parameter counts, especially given how expensive larger models are to access right now. They claim MAI-Thinking-1 "is preferred to Sonnet 4.6 in our blind human side-by-side evaluations", which is impressive for a 35B model seeing as I frequently run models larger than that on my own laptop.</strike> (UPDATE: I got this entirely wrong, see note below.)</p>
+<p>Also <a href="https://microsoft.ai/news/introducing-mai-thinking-1/">of note</a>:</p>
+<blockquote>
+<p>We trained [MAI-Thinking-1] from the ground up on enterprise grade, clean and commercially licensed data, without distillation from third-party models.</p>
+</blockquote>
+<p>And for <a href="https://microsoft.ai/news/introducingmai-code-1-flash/">MAI-Code-1-Flash</a> as well:</p>
+<blockquote>
+<p>It is built end-to-end by Microsoft using clean and appropriately licensed data.</p>
+</blockquote>
+<p>I would <em>very much</em> like to learn more about this "appropriately licensed" data! Could these be the first generally useful code-specialist models that didn't train on an unlicensed dump of the web? (<strong>Update</strong>: the answer is no, see note below.)</p>
+<p><strong>Update</strong>: My initial published notes got the size of the models wrong. I misread Microsoft's announcements and interpreted the MoE active parameter count as the total parameter count, but the <a href="https://microsoft.ai/pdf/MAI-Code-1-Flash-Model-Card.PDF">model card for MAI-Code-1-Flash</a> lists it as 137B with 5B active and the <a href="https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf">MAI-Thinking-1 technical paper</a> reveals it to be a 1T model with 35B active.</p>
+<p>I deeply regret this error.</p>
+<p><strong>Update 2</strong>: That technical paper describes the training data in some detail from page 80 onwards. It has the same licensing problems as all of the other major LLMs: it's trained on a crawl of the public web:</p>
+<blockquote>
+<p>The majority of our web HTML corpus comes from a proprietary crawl. After initial page discovery and selection, approximately 1.2 trillion pages are crawled and parsed. [...] In addition to Microsoft standard policy Sec. 2.4, we apply UT1 block list (Prigent, 2026) to remove adult content and piracy-related domains. In all, this filtering reduces the corpus from 1.2 trillion pages to 794 billion pages. Given the prevalence of AI-generated content on the web, we also score pages with a proprietary AI-content detection model and use manual inspection to identify domains with extensive AI-generated content; those domains are filtered out of the training corpus.</p>
+<p>[...]</p>
+<p>We process Common Crawl with the same pipeline. [...] After filtering, deduplication, merging with the proprietary web corpus, and a final round of exact-URL and content-level fuzzy deduplication, the Common Crawl portion contains 24.2 billion pages.</p>
+</blockquote>
+<p>I did not cover this one at all well, which is somewhat ironic since I was at the Microsoft Build conference when I wrote this up! I'm sorry for not digging deeper before publishing my initial notes.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jun/2/microsofts-new-models/" rel="bookmark">#</a>
+    <a href="/2026/Jun/2/">2nd June 2026</a>,
+    <a href="/2026/Jun/2/microsofts-new-models/">10:21 pm</a>
+     / <a href="/tags/llm-release/">llm-release</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/microsoft/">microsoft</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/training-data/">training-data</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="435">
+  <p>I just sent out the May edition of my <a href="https://github.com/sponsors/simonw/">sponsors-only monthly newsletter</a>. If you are a sponsor (or if you start a sponsorship now) you can <a href="https://github.com/simonw-private/monthly/blob/main/2026-05-may.md">access it here</a>.</p>
+<p>This month:</p>
+<ul>
+<li>Al got expensive, and Anthropic had a really good month</li>
+<li>The model releases were a little disappointing</li>
+<li>Conferences and podcasts</li>
+<li>I launched Datasette Agent and made a lot of progress on Datasette</li>
+<li>What I'm using, May 2026 edition</li>
+<li>Miscellaneous extras</li>
+</ul>
+<p>Here's <a href="https://github.com/simonw/monthly-newsletter-archive/blob/main/2026-04-april.md">a copy of the April newsletter</a> as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy!</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Jun/1/may-newsletter/" rel="bookmark">#</a>
+    <a href="/2026/Jun/1/">1st June 2026</a>,
+    <a href="/2026/Jun/1/may-newsletter/">4:45 am</a>
+     / <a href="/tags/newsletter/">newsletter</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="434">
+  <p>The most interesting thing about <a href="https://www.anthropic.com/news/series-h">Anthropic's $65B Series H announcement</a> is this line (emphasis mine):</p>
+<blockquote>
+<p>Since our Series G in February, adoption has continued to grow across global enterprise customers, and our run-rate revenue crossed <strong>$47 billion</strong> earlier this month.</p>
+</blockquote>
+<p>Anthropic have made a bit of a habit of sharing their "run-rate revenue" in this kind of announcement, which is an annualized projection of their current revenue - typically calculated by taking the most recent month and multiplying by 12. <strong>Update</strong>: here's <a href="https://simonwillison.net/2026/May/31/anthropic-run-rate/">a leaked description of their run-rate formula</a>.</p>
+<p>Earlier this year:</p>
+<ul>
+<li>Apr 6, 2026 in <a href="https://www.anthropic.com/news/google-broadcom-partnership-compute">Anthropic expands partnership with Google and Broadcom</a>: "Our run-rate revenue has now surpassed <strong>$30 billion</strong>—up from approximately <strong>$9 billion</strong> at the end of 2025."</li>
+<li>Feb 12, 2026 in <a href="https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation">Anthropic raises $30 billion in Series G</a>: "Today, our run-rate revenue is <strong>$14 billion</strong>, with this figure growing over 10x annually in each of those past three years."</li>
+</ul>
+<p>I had <a href="https://claude.ai/share/f52e82bd-7e09-49a5-b658-0b9999ce5a45">Claude Opus 4.8 make me</a> this chart using <a href="https://matplotlib.org/">Matplotlib</a> (Claude: "a data line chart is more straightforward matplotlib work—not really a design piece"):</p>
+<p><img alt="Line chart titled &quot;Run-rate revenue&quot; with y-axis &quot;Run-rate revenue ($bn)&quot; from $0bn to $50bn, showing four data points rising sharply: Dec 31 2025 $9bn, Feb 12 2026 $14bn, Apr 1 2026 $30bn, May 7 2026 $47bn." src="https://static.simonwillison.net/static/2026/anthropic-run-rate-extra-axis.png" /></p>
+<p>Back in April <a href="https://www.axios.com/2026/04/13/anthropic-revenue-growth-ai">Axios CEO Jim VandeHei wrote</a> that he could not find "any company — in any industry, in any era — that has scaled organic revenue this quickly at this level as Anthropic" - and that was when they were at a paltry $30 billion.</p>
+<p>(Also <a href="https://www.axios.com/2026/05/28/ai-spending-roi-enterprise-costs">in Axios today</a> is an anonymously sourced note that "An AI consultant tells Axios one of their clients recently spent half a billion dollars in a single month after failing to put usage limits on Claude licenses for employees" - times that by 12 and you get an extra $6 billion in annualized run-rate!)</p>
+<p>Ed Zitron was <a href="https://www.wheresyoured.at/anthropics-profitability-swindle/">extremely skeptical of that $30 billion number</a> - I wonder if his skepticism will update for the new $47 billion figure.</p>
+<p>I've seen a few people dismiss this as untrustworthy, because the numbers come from Anthropic. That doesn't hold up: these numbers were included in announcements of their fundraises, and lying to investors who just put in $65 billion would be securities fraud. They're even less likely to lie given that the real numbers will no doubt come out in their S-1 when they file for their IPO.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/May/29/anthropic/" rel="bookmark">#</a>
+    <a href="/2026/May/29/">29th May 2026</a>,
+    <a href="/2026/May/29/anthropic/">1:23 am</a>
+     / <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/ai/">ai</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="433">
+  <p>It's hard to find much to write about Google I/O this year because I have a policy of not writing about anything that I can't try out myself, and a lot of the big announcements are "coming soon".</p>
+<p>I actually prefer to write about things that are in general availability, because I've had instances in the past where the previews didn't match what was released to the general public later on.</p>
+<p>Aside from <a href="https://simonwillison.net/2026/May/19/gemini-35-flash/">Gemini 3.5 Flash</a> the most interesting announcement looks to be Google's upcoming OpenClaw competitor <a href="https://gemini.google/overview/agent/spark/">Gemini Spark</a>, described as "your personal AI agent" which can "connect natively with your favorite Google apps like Gmail, Calendar, Drive, Docs, Sheets, Slides, YouTube, and Google Maps". The FAQ for that also includes this confusing detail:</p>
+<blockquote>
+<p><strong>What Gemini model does Gemini Spark run on?</strong></p>
+<p>Gemini Spark runs on Gemini 3.5 Flash and Antigravity.</p>
+</blockquote>
+<p>The <a href="https://antigravity.google/">antigravity.google</a> website currently lists Antigravity as a desktop app, a CLI agent tool (written in Go), the <a href="https://github.com/google-antigravity/antigravity-sdk-python">Antigravity SDK</a> (an open source Python wrapper around a bundled closed source Go binary), and the original Antigravity IDE (a VS Code fork).</p>
+<p>I guess Gemini Spark, the user-facing hosted agent product, might be running on that Go binary, but I'm not sure why that's worth mentioning in the FAQ!</p>
+<p>Naturally I went looking for notes on how Gemini Spark intends to handle the risk of prompt injection. The best information I could find on that was in the <a href="https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud">Everything Google Cloud customers need to know coming out of Google I/O</a> post aimed at enterprise customers, which includes:</p>
+<blockquote>
+<p>Spark operates in a fully managed, secure runtime on Google Cloud, meaning you get enterprise-grade security without ever having to manage the underlying infrastructure. Every task executes in a fresh, strictly isolated, ephemeral VM to help ensure data never overlaps between sessions. To protect your enterprise, all traffic routes through our secure Agent Gateway that enforces Data Loss Prevention (DLP) policies, while user credentials remain fully encrypted and are never exposed directly to the agent.</p>
+</blockquote>
+<p>Given how many people are going to be piping <em>very</em> sensitive data through Gemini Spark in the near future I hope they've made this bullet-proof, or this could be a top candidate for the agent security <a href="https://simonwillison.net/2026/Jan/8/llm-predictions-for-2026/#1-year-a-challenger-disaster-for-coding-agent-security">challenger disaster</a> that we still haven't seen.</p>
+<p>Also of note: in <a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/">Transitioning Gemini CLI to Antigravity CLI</a> Google announce that the <a href="https://github.com/google-gemini/gemini-cli">open source Gemini CLI</a> tool (Apache 2.0 licensed TypeScript) will stop working with their AI subscription plans on June 18th, replaced by the new closed source <a href="https://github.com/google-antigravity/antigravity-cli">Antigravity CLI</a>.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/May/20/google-io/" rel="bookmark">#</a>
+    <a href="/2026/May/20/">20th May 2026</a>,
+    <a href="/2026/May/20/google-io/">3:32 pm</a>
+     / <a href="/tags/gemini/">gemini</a>, <a href="/tags/google/">google</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/google-io/">google-io</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/prompt-injection/">prompt-injection</a>, <a href="/tags/general-agents/">general-agents</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="432">
+  <p>In preparation for a lightning talk I'm giving at PyCon US <a href="https://us.pycon.org/2026/schedule/presentation/175/">this afternoon</a> I decided to figure out how many names OpenClaw has <em>actually</em> had since that <a href="https://github.com/openclaw/openclaw/commit/f6dd362d39b8e30bd79ef7560aab9575712ccc11">first commit</a> back in November.</p>
+<p>Thanks to this <a href="https://tools.simonwillison.net/python/#first_line_historypy">first_line_history.py tool</a> (<a href="https://github.com/simonw/tools/blob/main/python/first_line_history.py">code here</a>) the answer, according to the Git history of the OpenClaw README, is:</p>
+<p>Warelay → CLAWDIS → CLAWDBOT → Clawdbot → Moltbot →🦞 OpenClaw</p>
+<p>Or in detail (the output from the tool):</p>
+<pre>
+2025-11-24T11:23:15+01:00 <a href="https://github.com/openclaw/openclaw/commit/16dfc1a">16dfc1a</a> # Warelay — WhatsApp Relay CLI (Twilio)
+2025-11-24T11:41:37+01:00 <a href="https://github.com/openclaw/openclaw/commit/d4153da">d4153da</a> # 📡 Warelay — WhatsApp Relay CLI (Twilio)
+2025-11-24T17:47:57+01:00 <a href="https://github.com/openclaw/openclaw/commit/343ef9b">343ef9b</a> # 📡 warelay — WhatsApp Relay CLI (Twilio)
+2025-11-25T04:44:10+01:00 <a href="https://github.com/openclaw/openclaw/commit/14b3c6f">14b3c6f</a> # 📡 warelay — WhatsApp Relay CLI
+2025-11-25T12:48:40+01:00 <a href="https://github.com/openclaw/openclaw/commit/4814021">4814021</a> # 📡 warelay — Send, receive, and auto-reply on WhatsApp—Twilio-backed or QR-linked.
+2025-11-25T13:50:18+01:00 <a href="https://github.com/openclaw/openclaw/commit/d51a3e9">d51a3e9</a> # warelay 📡 - Send, receive, and auto-reply on WhatsApp via Twilio or QR-linked WhatsApp Web; webhook setup in one command
+2025-11-25T13:51:13+01:00 <a href="https://github.com/openclaw/openclaw/commit/4d2a8a8">4d2a8a8</a> # 📡 warelay — Send, receive, and auto-reply on WhatsApp—Twilio-backed or QR-linked.
+2025-11-25T14:52:43+01:00 <a href="https://github.com/openclaw/openclaw/commit/1ef7f4d">1ef7f4d</a> # 📡 warelay — Send, receive, and auto-reply on WhatsApp.
+2025-12-03T15:45:32+00:00 <a href="https://github.com/openclaw/openclaw/commit/a27ee23">a27ee23</a> # 🦞 CLAWDIS — WhatsApp Gateway for AI Agents
+2025-12-08T12:43:13+01:00 <a href="https://github.com/openclaw/openclaw/commit/17fa2f4">17fa2f4</a> # 🦞 CLAWDIS — WhatsApp &amp; Telegram Gateway for AI Agents
+2025-12-19T18:41:17+01:00 <a href="https://github.com/openclaw/openclaw/commit/7710439">7710439</a> # 🦞 CLAWDIS — Personal AI Assistant
+2026-01-04T14:32:47+00:00 <a href="https://github.com/openclaw/openclaw/commit/246adaa">246adaa</a> # 🦞 CLAWDBOT — Personal AI Assistant
+2026-01-10T05:14:09+01:00 <a href="https://github.com/openclaw/openclaw/commit/cdb915d">cdb915d</a> # 🦞 Clawdbot — Personal AI Assistant
+2026-01-27T13:37:47-05:00 <a href="https://github.com/openclaw/openclaw/commit/3fe4b25">3fe4b25</a> # 🦞 Moltbot — Personal AI Assistant
+2026-01-30T03:15:10+01:00 <a href="https://github.com/openclaw/openclaw/commit/9a71607">9a71607</a> # 🦞 OpenClaw — Personal AI Assistant
+</pre>
+  
+  <p class="date-and-tags">
+    <a href="/2026/May/16/openclaw-names/" rel="bookmark">#</a>
+    <a href="/2026/May/16/">16th May 2026</a>,
+    <a href="/2026/May/16/openclaw-names/">8:23 pm</a>
+     / <a href="/tags/openclaw/">openclaw</a>, <a href="/tags/git/">git</a>, <a href="/tags/tools/">tools</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="431">
+  <p>This <a href="https://simonwillison.net/2026/May/14/mitchell-hashimoto/">Mitchell Hashimoto quote</a> about Bun migrating from Zig to Rust reminded me of a similar conversation I had at a conference last week.</p>
+<p>I was talking to someone who worked for a medium sized technology company with a pair of legacy/<a href="https://simonwillison.net/2018/Jul/17/mark-norman-francis/">legendary</a> iPhone and Android apps.</p>
+<p>They told me they had just completed a coding-agent driven rewrite of both apps to React Native.</p>
+<p>I asked why they chose that, given that coding agents presumably drive down the cost of maintaining separate iPhone and Android apps.</p>
+<p>They said that React Native has improved a lot over the past few years and covered everything their apps needed to do.</p>
+<p>And... if it turned out to be the wrong decision, they could <strong>just port back to native</strong> in the future.</p>
+<p>Like Mitchell said:</p>
+<blockquote>
+<p>Programming languages used to be LOCK IN, and they're increasingly not so.</p>
+</blockquote>
+  
+  <p class="date-and-tags">
+    <a href="/2026/May/14/not-so-locked-in/" rel="bookmark">#</a>
+    <a href="/2026/May/14/">14th May 2026</a>,
+    <a href="/2026/May/14/not-so-locked-in/">10:53 pm</a>
+     / <a href="/tags/react/">react</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="401">
+  <p>I just sent out the April edition of my <a href="https://github.com/sponsors/simonw/">sponsors-only monthly newsletter</a>. If you are a sponsor (or if you start a sponsorship now) you can <a href="https://github.com/simonw-private/monthly/blob/main/2026-04-april.md">access it here</a>.</p>
+<p>In this month's newsletter:</p>
+<ul>
+<li>Opus 4.7 and GPT-5.5, both with price increases</li>
+<li>Claude Mythos and LLM security research</li>
+<li>ChatGPT Images 2.0</li>
+<li>More model releases</li>
+<li>Other highlights from my blog</li>
+<li>What I'm using, April 2026 edition</li>
+</ul>
+<p>Here's <a href="https://github.com/simonw/monthly-newsletter-archive/blob/main/2026-03-march.md">a copy of the March newsletter</a> as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy!</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/May/4/april-newsletter/" rel="bookmark">#</a>
+    <a href="/2026/May/4/">4th May 2026</a>,
+    <a href="/2026/May/4/april-newsletter/">10:38 pm</a>
+     / <a href="/tags/newsletter/">newsletter</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="400">
+  <p><a href="https://ziglang.org/">Zig</a> has one of the most stringent <a href="https://ziglang.org/code-of-conduct/">anti-LLM policies</a> of any major open source project:</p>
+<blockquote>
+<p>No LLMs for issues.</p>
+<p>No LLMs for pull requests.</p>
+<p>No LLMs for comments on the bug tracker, including translation. English is encouraged, but not required. You are welcome to post in your native language and rely on others to have their own translation tools of choice to interpret your words.</p>
+</blockquote>
+<p>The most prominent project written in Zig may be the <a href="https://bun.com/">Bun</a> JavaScript runtime, which was <a href="https://bun.com/blog/bun-joins-anthropic">acquired by Anthropic</a> in December 2025 and, unsurprisingly, makes heavy use of AI assistance.</p>
+<p>Bun operates its own fork of Zig, and recently <a href="https://x.com/bunjavascript/status/2048427636414923250">achieved a 4x performance improvement</a> on Bun compile after adding "parallel semantic analysis and multiple codegen units to the llvm backend". Here's <a href="https://github.com/oven-sh/zig/compare/upgrade-0.15.2%E2%80%A6upgrade-0.15.2-fast">that code</a>. But <a href="https://twitter.com/bunjavascript/status/2048428104893542781">@bunjavascript says</a>:</p>
+<blockquote>
+<p>We do not currently plan to upstream this, as Zig has a strict ban on LLM-authored contributions.</p>
+</blockquote>
+<p>(Update: here's <a href="https://ziggit.dev/t/bun-s-zig-fork-got-4x-faster-compilation-times/15183/19">a Zig core contributor</a> providing details on why they wouldn't accept that particular patch independent of the LLM issue - parallel semantic analysis is a long planned feature but has implications "for the Zig language itself".)</p>
+<p>In <a href="https://kristoff.it/blog/contributor-poker-and-ai/">Contributor Poker and Zig's AI Ban</a> (<a href="https://lobste.rs/s/ifcyr1/contributor_poker_zig_s_ai_ban">via Lobste.rs</a>) Zig Software Foundation VP of Community Loris Cro explains the rationale for this strict ban. It's the best articulation I've seen yet for a blanket ban on LLM-assisted contributions:</p>
+<blockquote>
+<p>In successful open source projects you eventually reach a point where you start getting more PRs than what you’re capable of processing. Given what I mentioned so far, it would make sense to stop accepting imperfect PRs in order to maximize ROI from your work, but that’s not what we do in the Zig project. Instead, <strong>we try our best to help new contributors to get their work in, even if they need some help getting there</strong>. We don’t do this just because it’s the “right” thing to do, but also <strong>because it’s the smart thing to do</strong>.</p>
+</blockquote>
+<p>Zig values contributors over their contributions. Each contributor represents an investment by the Zig core team - the primary goal of reviewing and accepting PRs isn't to land new code, it's to help grow new contributors who can become trusted and prolific over time.</p>
+<p>LLM assistance breaks that completely. It doesn't matter if the LLM helps you submit a <em>perfect</em> PR to Zig - the time the Zig team spends reviewing your work does nothing to help them add new, confident, trustworthy contributors to their overall project.</p>
+<p>Loris explains the name here:</p>
+<blockquote>
+<p>The reason I call it “contributor poker” is because, just like people say about the actual card game, “you play the person, not the cards”. In contributor poker, you bet on the contributor, not on the contents of their first PR.</p>
+</blockquote>
+<p>This makes a lot of sense to me. It relates to an idea I've seen circulating elsewhere: if a PR was mostly written by an LLM, why should a project maintainer spend time reviewing and discussing that PR as opposed to firing up their own LLM to solve the same problem?</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/30/zig-anti-ai/" rel="bookmark">#</a>
+    <a href="/2026/Apr/30/">30th April 2026</a>,
+    <a href="/2026/Apr/30/zig-anti-ai/">1:24 am</a>
+     / <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/zig/">zig</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai-ethics/">ai-ethics</a>, <a href="/tags/open-source/">open-source</a>, <a href="/tags/javascript/">javascript</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/bun/">bun</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="398">
+  <p>@scottjla <a href="https://twitter.com/scottjla/status/2047535371664457863">on Twitter</a> in reply to my <a href="https://simonwillison.net/tags/pelican-riding-a-bicycle/">pelican riding a bicycle</a> benchmark:</p>
+<blockquote>
+<p>I feel like we need to stack these tests now</p>
+<p><img alt="AI generated image. A pelican is riding a bicycle along a dirt track, chased by a police car. The pelican looks panicked, likely because there is an astronaut (with prehensile toes for some reason) riding the pelican clinging on to where its ears should be. The astronaut is being ridden by a horse, with an equally wild expression. A slice of pizza and a can and a cowboy hat are falling next to them. A road sign in the background reads WHY ARE YOU LIKE THIS." src="https://static.simonwillison.net/static/2026/why-are-you-like-this.jpeg" /></p>
+</blockquote>
+<p>I checked to confirm that the model (ChatGPT Images 2.0) added the "WHY ARE YOU LIKE THIS" sign of its own accord and <a href="https://chatgpt.com/share/69ebff27-2220-839f-b065-8c3516ea9b6d">it did</a> - the prompt Scott used was:</p>
+<blockquote>
+<p><code>Create an image of a horse riding an astronaut, where the astronaut is riding a pelican that is riding a bicycle. It looks very chaotic but they all just manage to balance on top of each other</code></p>
+</blockquote>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/25/why-are-you-like-this/" rel="bookmark">#</a>
+    <a href="/2026/Apr/25/">25th April 2026</a>,
+    <a href="/2026/Apr/25/why-are-you-like-this/">4:44 pm</a>
+     / <a href="/tags/text-to-image/">text-to-image</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/slop/">slop</a>, <a href="/tags/chatgpt/">chatgpt</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="397">
+  <p><a href="https://simonw.substack.com/p/gpt-55-chatgpt-images-20-qwen36-27b">This week's edition</a> of my email newsletter (aka <a href="https://simonwillison.net/2023/Apr/4/substack-observable/">content from this blog</a> delivered to your inbox) features 4 pelicans riding bicycles, 1 possum on an e-scooter, up to 5 raccoons with ham radios hiding in crowds, 5 blog posts, 8 links, 3 quotes and a new chapter of my Agentic Engineering Patterns guide.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/24/weekly/" rel="bookmark">#</a>
+    <a href="/2026/Apr/24/">24th April 2026</a>,
+    <a href="/2026/Apr/24/weekly/">4:09 am</a>
+     / <a href="/tags/newsletter/">newsletter</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="369">
+  <p><a href="https://twitter.com/steve_yegge/status/2043747998740689171">Steve Yegge</a>:</p>
+<blockquote>
+<p>I was chatting with my buddy at Google, who's been a tech director there for about 20 years, about their AI adoption. Craziest convo I've had all year.</p>
+<p>The TL;DR is that Google engineering appears to have the same AI adoption footprint as John Deere, the tractor company. Most of the industry has the same internal adoption curve: 20% agentic power users, 20% outright refusers, 60% still using Cursor or equivalent chat tool. It turns out Google has this curve too. [...]</p>
+<p>There has been an industry-wide hiring freeze for 18+ months, during which time nobody has been moving jobs. So there are no clued-in people coming in from the outside to tell Google how far behind they are, how utterly mediocre they have become as an eng org.</p>
+</blockquote>
+<p><a href="https://twitter.com/addyosmani/status/2043812343508021460">Addy Osmani</a>:</p>
+<blockquote>
+<p>On behalf of @Google, this post doesn't match the state of agentic coding at our company. Over 40K SWEs use agentic coding weekly here. Googlers have access to our own versions of @antigravity, @geminicli, custom models, skills, CLIs and MCPs for our daily work. Orchestrators, agent loops, virtual SWE teams and many other systems are actively available to folks. [...]</p>
+</blockquote>
+<p><a href="https://twitter.com/demishassabis/status/2043867486320222333">Demis Hassabis</a>:</p>
+<blockquote>
+<p>Maybe tell your buddy to do some actual work and to stop spreading absolute nonsense. This post is completely false and just pure clickbait.</p>
+</blockquote>
+<p><strong>Update 20th April 2026</strong>: Steve <a href="https://twitter.com/Steve_Yegge/status/2046260541912707471">doubled down</a>:</p>
+<blockquote>
+<p>My tweet last week about Google's AI adoption drew a lot of pushback, to say the least.</p>
+<p>Since then, Googlers from multiple orgs have reached out to me independently and anonymously. They've expressed fear of being doxxed, concern about what they saw as bullying of me, and general corroboration of my original tweet. [...]</p>
+</blockquote>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/13/steve-yegge/" rel="bookmark">#</a>
+    <a href="/2026/Apr/13/">13th April 2026</a>,
+    <a href="/2026/Apr/13/steve-yegge/">8:59 pm</a>
+     / <a href="/tags/addy-osmani/">addy-osmani</a>, <a href="/tags/steve-yegge/">steve-yegge</a>, <a href="/tags/google/">google</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/agentic-engineering/">agentic-engineering</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="368">
+  <p>Thanks to a <a href="https://twitter.com/RahimNathwani/status/2039961945613209852">tip from Rahim Nathwani</a>, here's a <code>uv run</code> recipe for transcribing an audio file on macOS using the 10.28 GB <a href="https://huggingface.co/google/gemma-4-E2B">Gemma 4 E2B model</a> with MLX and <a href="https://github.com/Blaizzy/mlx-vlm">mlx-vlm</a>:</p>
+<pre><code>uv run --python 3.13 --with mlx_vlm --with torchvision --with gradio \
+  mlx_vlm.generate \
+  --model google/gemma-4-e2b-it \
+  --audio file.wav \
+  --prompt "Transcribe this audio" \
+  --max-tokens 500 \
+  --temperature 1.0
+</code></pre>
+<p><audio controls style="width: 100%">
+  <source src="https://static.simonwillison.net/static/2026/demo-audio-for-gemma.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio></p>
+<p>I tried it on <a href="https://static.simonwillison.net/static/2026/demo-audio-for-gemma.wav">this 14 second <code>.wav</code> file</a> and it output the following:</p>
+<blockquote>
+<p>This front here is a quick voice memo. I want to try it out with MLX VLM. Just going to see if it can be transcribed by Gemma and how that works.</p>
+</blockquote>
+<p>(That was supposed to be "This right here..." and "... how well that works" but I can hear why it misinterpreted that as "front" and "how that works".)</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/12/mlx-audio/" rel="bookmark">#</a>
+    <a href="/2026/Apr/12/">12th April 2026</a>,
+    <a href="/2026/Apr/12/mlx-audio/">11:57 pm</a>
+     / <a href="/tags/uv/">uv</a>, <a href="/tags/mlx/">mlx</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/gemma/">gemma</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/speech-to-text/">speech-to-text</a>, <a href="/tags/python/">python</a>, <a href="/tags/generative-ai/">generative-ai</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="367">
+  <p>Lenny <a href="https://twitter.com/lennysan/status/2042615413494939943">posted</a> another snippet from <a href="https://simonwillison.net/2026/Apr/2/lennys-podcast/">our 1 hour 40 minute podcast recording</a> and it's about kākāpō parrots!</p>
+<p><video
+  src="https://static.simonwillison.net/static/2026/kakapo-lenny.mp4"
+  poster="https://static.simonwillison.net/static/2026/kakapo-lenny.jpg"
+  controls
+  preload="none"
+  playsinline
+  style="display:block; max-width:400px; width:100%; height:auto; margin:0 auto"
+><track src="https://static.simonwillison.net/static/cors-allow/2026/kakapo-lenny.vtt" kind="captions" srclang="en" label="English"></video>
+</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/10/kakapo/" rel="bookmark">#</a>
+    <a href="/2026/Apr/10/">10th April 2026</a>,
+    <a href="/2026/Apr/10/kakapo/">7:07 pm</a>
+     / <a href="/tags/kakapo/">kakapo</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="366">
+  <p>I think it's non-obvious to many people that the OpenAI voice mode runs on a much older, much weaker model - it feels like the AI that you can talk to should be the smartest AI but it really isn't.</p>
+<p>If you ask ChatGPT voice mode for its knowledge cutoff date it tells you April 2024 - it's a GPT-4o era model.</p>
+<p>This thought inspired by <a href="https://twitter.com/karpathy/status/2042334451611693415">this Andrej Karpathy tweet</a> about the growing gap in understanding of AI capability based on the access points and domains people are using the models with:</p>
+<blockquote>
+<p>[...] It really is simultaneously the case that OpenAI's free and I think slightly orphaned (?) "Advanced Voice Mode" will fumble the dumbest questions in your Instagram's reels and <em>at the same time</em>, OpenAI's highest-tier and paid Codex model will go off for 1 hour to coherently restructure an entire code base, or find and exploit vulnerabilities in computer systems.</p>
+<p>This part really works and has made dramatic strides because 2 properties:</p>
+<ol>
+<li>these domains offer explicit reward functions that are verifiable meaning they are easily amenable to reinforcement learning training (e.g. unit tests passed yes or no, in contrast to writing, which is much harder to explicitly judge),  but also</li>
+<li>they are a lot more valuable in b2b settings, meaning that the biggest fraction of the team is focused on improving them.</li>
+</ol>
+</blockquote>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/10/voice-mode-is-weaker/" rel="bookmark">#</a>
+    <a href="/2026/Apr/10/">10th April 2026</a>,
+    <a href="/2026/Apr/10/voice-mode-is-weaker/">3:56 pm</a>
+     / <a href="/tags/andrej-karpathy/">andrej-karpathy</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/chatgpt/">chatgpt</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="365">
+  <p>A fun thing about <a href="https://simonwillison.net/2026/Apr/2/lennys-podcast/">recording a podcast</a> with a professional like Lenny Rachitsky is that his team know how to slice the resulting video up into TikTok-sized short form vertical videos. Here's <a href="https://x.com/lennysan/status/2039845666680176703">one he shared on Twitter today</a> which ended up attracting over 1.1m views!</p>
+<p><video
+  src="https://static.simonwillison.net/static/2026/cognitive-cost.mp4"
+  poster="https://static.simonwillison.net/static/2026/cognitive-cost-poster.jpg"
+  controls
+  preload="none"
+  playsinline
+  style="display:block; max-width:400px; width:100%; height:auto; margin:0 auto"
+><track src="https://static.simonwillison.net/static/2026/cognitive-cost.vtt" kind="captions" srclang="en" label="English"></video>
+</p>
+<p>That was 48 seconds. Our <a href="https://simonwillison.net/2026/Apr/2/lennys-podcast/">full conversation</a> lasted 1 hour 40 minutes.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/3/cognitive-cost/" rel="bookmark">#</a>
+    <a href="/2026/Apr/3/">3rd April 2026</a>,
+    <a href="/2026/Apr/3/cognitive-cost/">11:57 pm</a>
+     / <a href="/tags/ai-ethics/">ai-ethics</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/agentic-engineering/">agentic-engineering</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/podcast-appearances/">podcast-appearances</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/cognitive-debt/">cognitive-debt</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="364">
+  <p>I just sent the March edition of my <a href="https://github.com/sponsors/simonw/">sponsors-only monthly newsletter</a>. If you are a sponsor (or if you start a sponsorship now) you can <a href="https://github.com/simonw-private/monthly/blob/main/2026-03-march.md">access it here</a>. In this month's newsletter:</p>
+<ul>
+<li>More agentic engineering patterns</li>
+<li>Streaming experts with MoE models on a Mac</li>
+<li>Model releases in March</li>
+<li>Vibe porting</li>
+<li>Supply chain attacks against PyPI and NPM</li>
+<li>Stuff I shipped</li>
+<li>What I'm using, March 2026 edition</li>
+<li>And a couple of museums</li>
+</ul>
+<p>Here's <a href="https://gist.github.com/simonw/8b5fa061937842659dbcd5bd676ce0e8">a copy of the February newsletter</a> as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy!</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Apr/2/march-newsletter/" rel="bookmark">#</a>
+    <a href="/2026/Apr/2/">2nd April 2026</a>,
+    <a href="/2026/Apr/2/march-newsletter/">5:15 am</a>
+     / <a href="/tags/newsletter/">newsletter</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="note segment" data-type="note" data-id="331">
+  <p>I wrote about Dan Woods' experiments with <strong>streaming experts</strong> <a href="https://simonwillison.net/2026/Mar/18/llm-in-a-flash/">the other day</a>, the trick where you run larger Mixture-of-Experts models on hardware that doesn't have enough RAM to fit the entire model by instead streaming the necessary expert weights from SSD for each token that you process.</p>
+<p>Five days ago Dan was running Qwen3.5-397B-A17B in 48GB of RAM. Today <a href="https://twitter.com/seikixtc/status/2036246162936910322">@seikixtc reported</a> running the colossal Kimi K2.5 - a 1 trillion parameter model with 32B active weights at any one time, in 96GB of RAM on an M2 Max MacBook Pro.</p>
+<p>And <a href="https://twitter.com/anemll/status/2035901335984611412">@anemll showed</a> that same Qwen3.5-397B-A17B model running on an iPhone, albeit at just 0.6 tokens/second - <a href="https://github.com/Anemll/flash-moe/tree/iOS-App">iOS repo here</a>.</p>
+<p>I think this technique has legs. Dan and his fellow tinkerers are continuing to run <a href="https://simonwillison.net/tags/autoresearch/">autoresearch loops</a> in order to find yet more optimizations to squeeze more performance out of these models.</p>
+<p><strong>Update</strong>: Now Daniel Isaac <a href="https://twitter.com/danpacary/status/2036480556045836603">got Kimi K2.5 working</a> on a 128GB M4 Max at ~1.7 tokens/second.</p>
+  
+  <p class="date-and-tags">
+    <a href="/2026/Mar/24/streaming-experts/" rel="bookmark">#</a>
+    <a href="/2026/Mar/24/">24th March 2026</a>,
+    <a href="/2026/Mar/24/streaming-experts/">5:09 am</a>
+     / <a href="/tags/definitions/">definitions</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/autoresearch/">autoresearch</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/kimi/">kimi</a>, <a href="/tags/local-llms/">local-llms</a>, <a href="/tags/qwen/">qwen</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+        
+    <div class="pagination">
+        
+        <span class="step-links">
+            
+            <span class="current">
+                page 1 / 6
+            </span>
+            
+                <a href="?page=2">next &raquo;</a>
+            
+            
+                <a href="?page=6">last &raquo;&raquo;</a>
+            
+        </span>
+    </div>
+
+
+    
+
+
+
+</div>
+
+
+
+
+</div> <!-- #primary -->
+
+<div id="secondary">
+
+<div class="metabox">
+    
+    
+    
+        <h3 id="facet-years">Years</h3>
+        <ul>
+            
+                <li><a href="/search/?type=note&amp;year=2024">2024</a> 2</a></li>
+            
+                <li><a href="/search/?type=note&amp;year=2025">2025</a> 99</a></li>
+            
+                <li><a href="/search/?type=note&amp;year=2026">2026</a> 50</a></li>
+            
+        </ul>
+    
+    
+    
+        <h3 id="facet-tags">Tags</h3>
+        <ul>
+            
+                <li><a href="/search/?type=note&amp;tag=ai">ai</a> 89</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=generative-ai">generative-ai</a> 82</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=llms">llms</a> 78</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=ai-assisted-programming">ai-assisted-programming</a> 29</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=coding-agents">coding-agents</a> 21</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=newsletter">newsletter</a> 19</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=openai">openai</a> 18</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=anthropic">anthropic</a> 16</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=blogging">blogging</a> 14</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=claude">claude</a> 12</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=ai-ethics">ai-ethics</a> 12</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=claude-code">claude-code</a> 10</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=gemini">gemini</a> 9</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=ai-agents">ai-agents</a> 9</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=google">google</a> 8</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=llm">llm</a> 7</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=site-upgrades">site-upgrades</a> 7</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=prompt-engineering">prompt-engineering</a> 6</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=projects">projects</a> 6</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=qwen">qwen</a> 6</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=ai-in-china">ai-in-china</a> 6</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=pelican-riding-a-bicycle">pelican-riding-a-bicycle</a> 6</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=llm-release">llm-release</a> 6</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=gpt">gpt</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=open-source">open-source</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=chatgpt">chatgpt</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=vibe-coding">vibe-coding</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=definitions">definitions</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=python">python</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=github">github</a> 5</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=prompt-injection">prompt-injection</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=local-llms">local-llms</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=gpt-5">gpt-5</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=llm-tool-use">llm-tool-use</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=llm-reasoning">llm-reasoning</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=llm-pricing">llm-pricing</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=hacker-news">hacker-news</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=datasette">datasette</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=javascript">javascript</a> 4</a></li>
+            
+                <li><a href="/search/?type=note&amp;tag=careers">careers</a> 3</a></li>
+            
+        </ul>
+    
+</div>
+<script>
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+
+function fetchTags(query) {
+  const numberFormat = new Intl.NumberFormat("en-US");
+  fetch(`/tags-autocomplete/?q=${query}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const tagsContainer = document.getElementById("autocomplete-tags");
+      tagsContainer.innerHTML = "";
+      if (data.tags.length > 0) {
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Tags "));
+        data.tags.forEach((tag) => {
+          const a = document.createElement("a");
+          a.href = `/tags/${tag.tag}/`;
+          a.className = "item-tag";
+          a.innerHTML = `${tag.tag} <span>${numberFormat.format(tag.count)}</span>`;
+          p.appendChild(a);
+          // Add a space between tags
+          p.appendChild(document.createTextNode(" "));
+        });
+        tagsContainer.appendChild(p);
+      }
+    });
+}
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener(
+  "input",
+  debounce(function () {
+    const query = this.value.trim();
+    if (query.length > 0) {
+      fetchTags(query);
+    } else {
+      document.getElementById("autocomplete-tags").innerHTML = "";
+    }
+  }, 500),
+);
+if (searchInput.value) {
+  fetchTags(searchInput.value);
+}
+</script>
+
+</div> <!-- #secondary -->
+</div> <!-- #wrapper -->
+
+
+
+
+
+
+
+
+
+<div id="ft">
+    <ul>
+      <li><a href="/about/#disclosures">Disclosures</a></li>
+      <li><a href="/about/#about-site">Colophon</a></li>
+      <li>&copy;</li>
+      <li><a href="/2002/">2002</a></li>
+      <li><a href="/2003/">2003</a></li>
+      <li><a href="/2004/">2004</a></li>
+      <li><a href="/2005/">2005</a></li>
+      <li><a href="/2006/">2006</a></li>
+      <li><a href="/2007/">2007</a></li>
+      <li><a href="/2008/">2008</a></li>
+      <li><a href="/2009/">2009</a></li>
+      <li><a href="/2010/">2010</a></li>
+      <li><a href="/2011/">2011</a></li>
+      <li><a href="/2012/">2012</a></li>
+      <li><a href="/2013/">2013</a></li>
+      <li><a href="/2014/">2014</a></li>
+      <li><a href="/2015/">2015</a></li>
+      <li><a href="/2016/">2016</a></li>
+      <li><a href="/2017/">2017</a></li>
+      <li><a href="/2018/">2018</a></li>
+      <li><a href="/2019/">2019</a></li>
+      <li><a href="/2020/">2020</a></li>
+      <li><a href="/2021/">2021</a></li>
+      <li><a href="/2022/">2022</a></li>
+      <li><a href="/2023/">2023</a></li>
+      <li><a href="/2024/">2024</a></li>
+      <li><a href="/2025/">2025</a></li>
+      <li><a href="/2026/">2026</a></li>
+      <li>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <!-- Auto/System icon (default) -->
+          <svg id="icon-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></svg>
+          <!-- Light icon -->
+          <svg id="icon-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></svg>
+          <!-- Dark icon -->
+          <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></svg>
+        </button>
+      </li>
+    </ul>
+</div>
+
+<style>image-gallery:not(:defined) img {max-height: 150px;} captioned-image-gallery:not(:defined) > figure {max-height: 240px; overflow: hidden;}</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('h2[id],h3[id],h4[id],h5[id],h6[id]').forEach(el => {
+    const id = el.getAttribute('id');
+    const permalinkContext = el.closest('[data-permalink-context]');
+    if (permalinkContext) {
+      const url = permalinkContext.getAttribute('data-permalink-context');
+      const hashLink = document.createElement('a');
+      hashLink.style.borderBottom = 'none';
+      hashLink.style.color = '#666';
+      hashLink.style.fontSize = '1em';
+      hashLink.style.opacity = 0.8;
+      hashLink.setAttribute('href', url + '#' + id);
+      hashLink.innerText = '#';
+      el.appendChild(document.createTextNode('\u00A0'));
+      el.appendChild(hashLink);
+    }
+  });
+});
+</script>
+<script type="module">
+const config = [
+  {"tag": "lite-youtube", "js": "/static/lite-yt-embed.js", "css": "/static/lite-yt-embed.css"},
+  {"tag": "image-gallery", "js": "/static/image-gallery.js", "css": null},
+  {"tag": "captioned-image-gallery", "js": "/static/captioned-image-gallery.js", "css": null},
+  {"tag": "click-to-play", "js": "/static/click-to-play.js", "css": "/static/click-to-play.css"},
+  {"tag": "github-code", "js": "/static/github-code.js", "css": null}
+];
+for (const {tag, js, css} of config) {
+  if (document.querySelector(tag)) {
+    if (css) {
+      document.head.appendChild(
+        Object.assign(document.createElement('link'), {
+          rel: 'stylesheet',
+          href: css
+        })
+      );
+    }
+    if (js) {
+      await import(js);
+    }
+  }
+}
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.localStorage.getItem('ADMIN')) {
+      document.querySelectorAll('.edit-page-link').forEach(el => {
+        const url = el.getAttribute('data-admin-url');
+        if (url) {
+          const a = document.createElement('a');
+          a.href = url;
+          a.className = 'edit-link';
+          a.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit';
+          el.appendChild(a);
+          el.style.display = 'block';
+        }
+      });
+    }
+  });
+</script>
+<script>
+// Random tag navigation - shows button if recently came from tag random
+(function() {
+  const stored = localStorage.getItem('random_tag');
+  if (!stored) return;
+
+  try {
+    const data = JSON.parse(stored);
+    const elapsed = Date.now() - data.timestamp;
+
+    // Only show if within 5 seconds
+    if (elapsed > 5000) return;
+
+    const header = document.getElementById('smallhead-inner');
+    if (!header) return;
+
+    const btn = document.createElement('a');
+    btn.href = '/random/' + encodeURIComponent(data.tag) + '/';
+    btn.className = 'random-tag-nav';
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="8.5" cy="15.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"></circle></svg> Random ' + data.tag;
+
+    btn.addEventListener('click', function(e) {
+      // Bump the timestamp before navigating
+      localStorage.setItem('random_tag', JSON.stringify({
+        tag: data.tag,
+        timestamp: Date.now()
+      }));
+    });
+
+    // Insert before the Subscribe link
+    const subscribeLink = document.getElementById('smallhead-about');
+    if (subscribeLink) {
+      header.insertBefore(btn, subscribeLink);
+    } else {
+      header.appendChild(btn);
+    }
+  } catch (e) {
+    // Invalid JSON, clear it
+    localStorage.removeItem('random_tag');
+  }
+})();
+</script>
+<script>
+// Theme toggle functionality
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const iconAuto = document.getElementById('icon-auto');
+  const iconLight = document.getElementById('icon-light');
+  const iconDark = document.getElementById('icon-dark');
+
+  // Theme states: 'auto' (default), 'light', 'dark'
+  function getTheme() {
+    return localStorage.getItem('theme') || 'auto';
+  }
+
+  function setTheme(theme) {
+    if (theme === 'auto') {
+      localStorage.removeItem('theme');
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      localStorage.setItem('theme', theme);
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    updateIcon(theme);
+  }
+
+  function updateIcon(theme) {
+    iconAuto.style.display = theme === 'auto' ? 'block' : 'none';
+    iconLight.style.display = theme === 'light' ? 'block' : 'none';
+    iconDark.style.display = theme === 'dark' ? 'block' : 'none';
+
+    // Update aria-label for accessibility
+    const labels = {
+      'auto': 'Theme: Auto (system preference). Click to switch to light.',
+      'light': 'Theme: Light. Click to switch to dark.',
+      'dark': 'Theme: Dark. Click to switch to auto.'
+    };
+    toggle.setAttribute('aria-label', labels[theme]);
+  }
+
+  // Cycle through themes: auto -> light -> dark -> auto
+  function cycleTheme() {
+    const current = getTheme();
+    const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
+    setTheme(next);
+  }
+
+  // Initialize
+  updateIcon(getTheme());
+  toggle.addEventListener('click', cycleTheme);
+})();
+</script>
+</body>
+</html>

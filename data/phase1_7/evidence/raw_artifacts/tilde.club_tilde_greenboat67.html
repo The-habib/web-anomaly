@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark" data-skin="cyberpunk" data-accent="toxic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Dashboard 2030</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-brand">BadBird</div>
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="tab-anim" data-i18n="nav_anim" type="button">Игры & Анимации</button>
+            <button class="tab-btn" data-tab="tab-net" data-i18n="nav_net" type="button">Сеть & Прокси</button>
+            <button class="tab-btn" data-tab="tab-chat" data-i18n="nav_chat" type="button">Чат</button>
+        </div>
+        <div class="nav-settings">
+            <button id="settings-btn" type="button">⚙️</button>
+        </div>
+    </nav>
+
+    <div id="settings-panel" class="hidden">
+        <h3 data-i18n="settings_title">Настройки UI</h3>
+        <label><span data-i18n="lang">Язык:</span>
+            <select id="lang-select">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+        </label>
+        <label><span data-i18n="theme">Тема:</span>
+            <select id="theme-select">
+                <option value="auto">Auto</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="oled">OLED (High Contrast)</option>
+                <option value="sepia">Sepia (Eye Care)</option>
+                <option value="dracula">Dracula</option>
+                <option value="nord">Nord</option>
+                <option value="matrix">Matrix</option>
+                <option value="synthwave">Synthwave</option>
+                <option value="ocean">Ocean</option>
+                <option value="forest">Forest</option>
+                <option value="sunset">Sunset</option>
+                <option value="monochrome">Monochrome</option>
+                <option value="tokyo-night">Tokyo Night</option>
+                <option value="solarized">Solarized Dark</option>
+                <option value="vampire">Vampire</option>
+                <option value="gold">Luxury Gold</option>
+                <option value="terminal-amber">Terminal Amber</option>
+            </select>
+        </label>
+        <label><span data-i18n="skin">Стиль:</span>
+            <select id="skin-select">
+                <option value="cyberpunk">Cyberpunk Neon</option>
+                <option value="glass">Glassmorphism</option>
+                <option value="terminal">Terminal</option>
+                <option value="hacker">Hacker Classic</option>
+                <option value="minimal">Minimalist</option>
+                <option value="retro">Retro 80s</option>
+                <option value="brutalist">Brutalist</option>
+                <option value="neumorphism">Neumorphism</option>
+                <option value="skeuomorphic">Skeuomorphic</option>
+                <option value="flat">Flat Design</option>
+                <option value="material">Material Design</option>
+                <option value="ios">iOS Style</option>
+                <option value="windows95">Windows 95</option>
+                <option value="claymorphism">Claymorphism</option>
+                <option value="aurora">Aurora</option>
+                <option value="pixel">Pixel Art</option>
+            </select>
+        </label>
+        <label><span data-i18n="accent">Цвет:</span>
+            <select id="accent-select">
+                <option value="toxic">Toxic Green</option>
+                <option value="synthwave">Synthwave Purple</option>
+                <option value="ocean">Ocean Blue</option>
+                <option value="crimson">Crimson</option>
+            </select>
+        </label>
+    </div>
+
+    <main class="content">
+        <!-- Tab 1 -->
+        <section id="tab-anim" class="tab-content active">
+            <h2 data-i18n="tab1_title">Игры & Визуализации</h2>
+            
+            <div class="games-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div class="anim-card" id="snake-container">
+                    <h3>Змейка <button type="button" class="fs-btn" data-target="snake-container">⛶</button></h3>
+                    <canvas id="snake-canvas" width="400" height="400" style="background: #111; border: 1px solid var(--border); max-width: 100%; height: auto;"></canvas>
+                    <button id="snake-start" type="button" style="margin-top: 10px;">Старт / Рестарт</button>
+                </div>
+                
+                <div class="anim-card" id="ttt-container">
+                    <h3>Крестики-Нолики (P2P) <button type="button" class="fs-btn" data-target="ttt-container">⛶</button></h3>
+                    <input type="text" id="ttt-room" placeholder="Пароль комнаты">
+                    <button id="ttt-connect" type="button" style="margin-top: 5px;">Connect / Host</button>
+                    <div id="ttt-status" style="margin: 10px 0; font-size: 0.9rem; color: var(--accent);">Ожидание...</div>
+                    <div id="ttt-board" class="ttt-board disabled"></div>
+                </div>
+
+                <div class="anim-card" id="bs-container">
+                    <h3>Морской Бой (P2P) <button type="button" class="fs-btn" data-target="bs-container">⛶</button></h3>
+                    <input type="text" id="bs-room" placeholder="Пароль комнаты">
+                    <button id="bs-connect" type="button" style="margin-top: 5px;">Connect / Host</button>
+                    <div id="bs-status" style="margin: 10px 0; font-size: 0.9rem; color: var(--accent);">Ожидание...</div>
+                    <div class="bs-container">
+                        <div>
+                            <div style="font-size: 0.7rem; text-align: center; margin-bottom: 5px;">Мой флот (Выбери 5)</div>
+                            <div id="bs-my-board" class="bs-board"></div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.7rem; text-align: center; margin-bottom: 5px;">Враг</div>
+                            <div id="bs-enemy-board" class="bs-board disabled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 2rem;">Анимации</h2>
+            <div class="anim-grid">
+                <div class="anim-card">
+                    <h3>Hypnotic Spinner</h3>
+                    <div class="spinner"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Pulsing Radar</h3>
+                    <div class="radar"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Digital Rain</h3>
+                    <canvas id="matrix-canvas" width="300" height="200"></canvas>
+                </div>
+                <div class="anim-card">
+                    <h3>DNA Helix</h3>
+                    <div class="dna-loader">
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Audio Visualizer</h3>
+                    <div class="audio-bars">
+                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Floating Cube</h3>
+                    <div class="cube-container">
+                        <div class="cube">
+                            <div class="face front"></div>
+                            <div class="face back"></div>
+                            <div class="face right"></div>
+                            <div class="face left"></div>
+                            <div class="face top"></div>
+                            <div class="face bottom"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Neon Pulse</h3>
+                    <div class="neon-pulse"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Quantum Loader</h3>
+                    <div class="quantum-loader">
+                        <div class="ring ring1"></div>
+                        <div class="ring ring2"></div>
+                        <div class="ring ring3"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Glitch Text</h3>
+                    <div class="glitch-text" data-text="BADBIRD">BADBIRD</div>
+                </div>
+                <!-- 6 New Animations -->
+                <div class="anim-card">
+                    <h3>Solar System</h3>
+                    <div class="solar-system">
+                        <div class="sun"></div>
+                        <div class="orbit"><div class="planet"></div></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Pendulum</h3>
+                    <div class="pendulum">
+                        <div class="pendulum-dot left"></div>
+                        <div class="pendulum-dot"></div>
+                        <div class="pendulum-dot right"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Heartbeat</h3>
+                    <div class="heartbeat"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Infinity Loop</h3>
+                    <div class="infinity">
+                        <div class="inf-circle left"></div>
+                        <div class="inf-circle right"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Ripple Effect</h3>
+                    <div class="ripple-loader">
+                        <div></div><div></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Bouncing Balls</h3>
+                    <div class="bouncing-balls">
+                        <div></div><div></div><div></div>
+                    </div>
+                </div>
+                <!-- 6 MORE Animations -->
+                <div class="anim-card">
+                    <h3>Cyber Hexagons</h3>
+                    <div class="hex-grid">
+                        <div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Plasma Wave</h3>
+                    <div class="plasma-wave">
+                        <div></div><div></div><div></div><div></div><div></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Laser Grid</h3>
+                    <div class="laser-grid">
+                        <div class="laser-grid-inner"></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Particle Swarm</h3>
+                    <div class="particle-swarm">
+                        <div></div><div></div><div></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Neon Spinner</h3>
+                    <div class="neon-spinner"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Holo Globe</h3>
+                    <div class="holo-globe"></div>
+                </div>
+                <!-- 6 MORE Animations (Batch 3) -->
+                <div class="anim-card">
+                    <h3>Cube Wave</h3>
+                    <div class="cube-wave">
+                        <div></div><div></div><div></div><div></div><div></div>
+                    </div>
+                </div>
+                <div class="anim-card">
+                    <h3>Neon Hexagon</h3>
+                    <div class="neon-hexagon"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Starfield</h3>
+                    <div class="starfield"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Radar Sweep</h3>
+                    <div class="radar-sweep"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Liquid Blob</h3>
+                    <div class="liquid-blob"></div>
+                </div>
+                <div class="anim-card">
+                    <h3>Cyber Circuit</h3>
+                    <div class="cyber-circuit"></div>
+                </div>
+                <!-- 15 MORE Animations (Batch 4) -->
+                <div class="anim-card"><h3>Quantum Field</h3><div class="quantum-field"></div></div>
+                <div class="anim-card"><h3>Data Stream</h3><div class="data-stream"></div></div>
+                <div class="anim-card"><h3>Glitch Storm</h3><div class="glitch-storm"></div></div>
+                <div class="anim-card"><h3>Neon Ripple</h3><div class="neon-ripple"></div></div>
+                <div class="anim-card"><h3>Cyber Grid</h3><div class="cyber-grid"></div></div>
+                <div class="anim-card"><h3>Fractal Zoom</h3><div class="fractal-zoom"></div></div>
+                <div class="anim-card"><h3>Digital Snow</h3><div class="digital-snow"></div></div>
+                <div class="anim-card"><h3>Plasma Orb</h3><div class="plasma-orb"></div></div>
+                <div class="anim-card"><h3>Hyperspace</h3><div class="hyperspace"></div></div>
+                <div class="anim-card"><h3>Pulse Ring</h3><div class="pulse-ring"></div></div>
+                <div class="anim-card"><h3>Wireframe Tunnel</h3><div class="wireframe-tunnel"></div></div>
+                <div class="anim-card"><h3>Energy Beam</h3><div class="energy-beam"></div></div>
+                <div class="anim-card"><h3>Magnetic Field</h3><div class="magnetic-field"></div></div>
+                <div class="anim-card"><h3>Sonar Ping</h3><div class="sonar-ping"></div></div>
+                <div class="anim-card"><h3>Matrix Cube</h3><div class="matrix-cube"></div></div>
+            </div>
+        </section>
+
+        <!-- Tab 2 -->
+        <section id="tab-net" class="tab-content hidden">
+            <h2 data-i18n="tab2_title">Сеть & Прокси</h2>
+            <div class="net-tools">
+                <div class="tool-card">
+                    <h3 data-i18n="site_opener_title">Site Opener</h3>
+                    <select id="site-mode">
+                        <option value="normal" data-i18n="site_opener_mode_normal">Обычный</option>
+                        <option value="proxy" data-i18n="site_opener_mode_proxy">Прокси (Обход X-Frame)</option>
+                    </select>
+                    <input type="text" id="site-url" data-i18n="site_url_ph" placeholder="URL (e.g. youtube.com/watch?v=...)">
+                    <button id="open-site-btn" data-i18n="site_opener_btn" type="button">Открыть</button>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">
+                        * Если сайт не открывается (ошибка X-Frame-Options), используйте режим "Прокси". Если и это не помогает, установите расширение браузера "Ignore X-Frame Headers".
+                    </div>
+                    <iframe id="site-frame" class="hidden"></iframe>
+                </div>
+                <div class="tool-card">
+                    <h3 data-i18n="torrent_title">Torrent Конвертер</h3>
+                    <input type="file" id="torrent-file" accept=".torrent" class="hidden">
+                    <button id="torrent-btn" data-i18n="torrent_btn" type="button">Выбрать .torrent</button>
+                    <div id="torrent-output" class="terminal-output hidden" style="word-break: break-all;"></div>
+                </div>
+                <div class="tool-card">
+                    <h3>QR Code Generator</h3>
+                    <input type="text" id="qr-text" placeholder="Текст или URL">
+                    <button id="qr-btn" type="button">Генерировать</button>
+                    <div id="qr-output" style="margin-top: 10px; background: white; padding: 10px; border-radius: 4px;" class="hidden"></div>
+                </div>
+                <div class="tool-card" style="width: 100%;">
+                    <h3>Aeza Terminator (10 min VPS)</h3>
+                    <iframe src="https://terminator.aeza.net" width="100%" height="400px" style="border: 1px solid var(--accent); border-radius: var(--radius);"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3 -->
+        <section id="tab-chat" class="tab-content hidden">
+            <h2 data-i18n="tab3_title">Secure P2P Chat</h2>
+            <div class="chat-setup">
+                <div style="margin-bottom: 10px; font-size: 0.9rem; color: var(--text-muted);">
+                    Введите ник и пароль комнаты. Сервер автоматически создаст защищенную P2P комнату.
+                </div>
+                <input type="text" id="chat-nick" data-i18n="chat_nick_ph" placeholder="Nickname">
+                <input type="password" id="chat-pass" data-i18n="chat_pass_ph" placeholder="Room Password">
+                <button id="chat-connect-btn" data-i18n="chat_connect" type="button">Connect / Host</button>
+            </div>
+            <div class="chat-interface hidden">
+                <div id="chat-messages" class="chat-messages"></div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" data-i18n="chat_input_ph" placeholder="Message...">
+                    <button id="chat-send-btn" data-i18n="chat_send" type="button">Send</button>
+                </div>
+                <div class="chat-actions">
+                    <button id="chat-export-btn" data-i18n="chat_export" type="button">Сохранить сессию</button>
+                    <input type="file" id="chat-import-file" accept=".json" class="hidden">
+                    <button id="chat-import-btn" data-i18n="chat_import" type="button">Загрузить сессию</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

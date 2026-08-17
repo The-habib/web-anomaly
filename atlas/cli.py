@@ -443,6 +443,30 @@ def cmd_phase1_6(args):
         if not passed:
             sys.exit(1)
 
+def cmd_phase1_7(args):
+    print_banner()
+    from atlas.research.release_gate_phase1_7 import run_phase1_7_release_check
+    from atlas.density.evaluator import run_phase1_7_pipeline
+    if args.p17_action == "release-check":
+        print("[*] Executing Phase 1.7 Scientific Release Gate Audit...")
+        passed, report = run_phase1_7_release_check()
+        print("\nPHASE 1.7 SCIENTIFIC RELEASE GATE RESULTS:")
+        print("-" * 55)
+        for check_name, status in report["checks"].items():
+            print(f"{check_name:<36}: {status}")
+        print("-" * 55)
+        print(f"HYPOTHESIS VERDICT:   {report['hypothesis_verdict']}")
+        print(f"SCIENTIFIC RELEASE:   {report['scientific_release']}\n")
+        if not passed:
+            sys.exit(1)
+    elif args.p17_action in ("pipeline", "run", "survey"):
+        print("[*] Executing Phase 1.7 Path Density Validation Pipeline...")
+        res = run_phase1_7_pipeline()
+        print("\n[+] Phase 1.7 Pipeline Execution Complete.")
+        print(f"    Population Surveyed: {res['survey_count']} domains")
+        print(f"    Assignments Count:   {res['assignments_count']} domains")
+        print(f"    Hypothesis Verdict:  {res['statistical_results']['hypothesis_verdict']}\n")
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -509,6 +533,10 @@ def main():
     p16_parser = subparsers.add_parser("phase1_6", help="Phase 1.6 Independent Scientific Audit & Reconciliation Subsystem")
     p16_parser.add_argument("p16_action", choices=["release-check", "audit"], help="Phase 1.6 action")
 
+    # phase1_7 (Phase 1.7 Path Density Validation)
+    p17_parser = subparsers.add_parser("phase1_7", help="Phase 1.7 Path Density Hypothesis Validation Subsystem")
+    p17_parser.add_argument("p17_action", choices=["release-check", "pipeline", "run", "survey"], help="Phase 1.7 action")
+
     args = parser.parse_args()
 
     if args.command == "scan":
@@ -546,6 +574,8 @@ def main():
         cmd_phase1_5(args)
     elif args.command == "phase1_6":
         cmd_phase1_6(args)
+    elif args.command == "phase1_7":
+        cmd_phase1_7(args)
     else:
         print_banner()
         parser.print_help()

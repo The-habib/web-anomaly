@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>UH Map</title>
+<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+<!-- Marketing -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;family=League+Gothic&amp;family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&amp;display=swap" rel="stylesheet" />
+
+    <link href="https://uh.edu/_resources/css/vendor/bootstrap-5.3.3.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <script defer src="https://uh.edu/_resources/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <script src="https://uh.edu/_resources/js/vendor/jquery.js"></script>
+   
+   
+    <link href="https://uh.edu/_resources/css/global.css?v=04112024" rel="stylesheet" />
+    <script src="https://uh.edu/_resources/js/global.js"></script>
+
+    <link rel="stylesheet" href="https://uh.edu/_resources/css/snippet.css" />
+
+
+		<script src="/maps/js/routes.js?c=20251006"></script>
+    <script src='/cdn/map/map.js?c=20251013'></script>
+
+    <style>
+    body{
+      max-width: 100% !important;
+    }
+
+		@media (max-width: 800px) {
+			body>header,
+			footer.uh-footer{
+				display:none;
+				height: 0px;
+			}
+			
+		}
+
+		
+		#map-canvas .choices[data-type*="select-one"] .choices__input {
+			border: 3px solid #C8102E;
+		}
+    </style>
+		
+
+</head>
+<body>
+
+	<noscript>
+	        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-M76VPMR" style="display:none;visibility:hidden" width="0"></iframe>
+	    </noscript><header>
+<div class="site-navigation"><a class="skipToContent visually-hidden" tabindex="1" href="#main-content">Skip to main content</a><nav class="nav-main d-none d-sm-block">
+<div class="container"><a href="/"><img class="main-logo" src="/_resources/images/uh-secondary.svg" alt="University of Houston" /></a>
+<ul class="nav-main-list-items">
+<li class="search-bar"><form id="globalSearch" class="global-search" role="search" action="https://www.uh.edu/search" method="get">
+<div class="container-search-bar"><label class="sr-only" for="globalSearchField">Search Field</label><input id="globalSearchField" class="search-field" name="q" type="text" placeholder="" /><img class="magnifying-glass" src="/_resources/images/magnifying-glass-solid.svg" alt="Magnifying-glass icon" /><button class="search-submit" type="submit" aria-label="Submit search"></button></div>
+</form></li>
+<li class="nav-main-item nav-item"><a class="nav-link ga-mm" href="/undergraduate-admissions/explore-campus/">Visit</a></li>
+<li class="nav-main-item nav-item"><a class="nav-link ga-mm" href="/undergraduate-admissions/apply/">Apply</a></li>
+<li class="nav-main-item nav-item"><a class="nav-link ga-mm" href="https://giving.uh.edu/gift">Give</a></li>
+</ul>
+</div>
+</nav><nav id="nav-mobile" class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header"><a class="navbar-brand" href="/"><img src="/_resources/images/uh-secondary.svg" alt="University of Houston" /></a><button class="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+<div class="navbar-collapse collapse">
+<div id="accordion" class="panel-group" role="tablist" aria-multiselectable="true">
+<div class="nav-main">
+<div class="container-fluid-mobile">
+<ul class="nav-main-list-items">
+<li class="search-bar"><form id="globalSearch" class="global-search" role="search" action="https://www.uh.edu/search" method="get">
+<div class="container-search-bar"><input id="globalSearchField" class="search-field" name="q" type="text" placeholder="" /><img class="magnifying-glass" src="/_resources/images/magnifying-glass-solid.svg" alt="Magnifying-glass icon" /><button class="search-submit" type="submit" aria-label="Submit"></button></div>
+</form></li>
+</ul>
+<div class="mobile-nav-main-items">
+<div class="flex-container">
+<ul class="nav-main-items">
+<li class="nav-main-item nav-item"><a class="nav-link ga-mm" href="/undergraduate-admissions/explore-campus/">Visit</a></li>
+<li class="nav-main-item nav-item"><a class="nav-link ga-mm" href="/undergraduate-admissions/apply/">Apply</a></li>
+<li class="nav-main-item nav-item"><a class="nav-link ga-mm" href="https://giving.uh.edu/gift">Give</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div class="uh-header uh-header-secondary"><nav class="site-nav navbar-collapse collapse">
+<div class="container"></div>
+</nav></div>
+</div>
+</header>    <div class="map-area" style="width: 100vw; overflow: hidden">
+        
+
+<div id="map-canvas"></div>
+
+
+    </div>
+	<footer class="uh-footer uh-footer-main"><nav class="global-footer" aria-label="Global Footer">
+<div class="container">
+<p class="copyright">&copy;2026 University of Houston. All rights reserved.</p>
+<ul class="nav-required">
+<li class="nav-item-highlighted"><a href="/web-update/report-a-problem/">Report a problem with this page</a></li>
+<li><a href="https://www.texas.gov/" target="_blank" rel="noopener">Texas.gov</a></li>
+<li><a href="https://gov.texas.gov/organization/hsgd" target="_blank" rel="noopener">Texas Homeland Security</a></li>
+<li><a href="https://www.tsl.texas.gov/trail/index.html" target="_blank" rel="noopener">TRAIL</a></li>
+<li><a href="https://sao.fraud.texas.gov/ReportFraud/" target="_blank" rel="noopener">Fraud Reporting</a></li>
+<li><a href="https://www.uhsystem.edu/fraud-non-compliance/" target="_blank" rel="noopener">Fraud &amp; Non-Compliance Hotline</a></li>
+<li><a href="https://www.sos.state.tx.us/linkpolicy.shtml" target="_blank" rel="noopener">Linking Notice</a></li>
+<li><a href="http://uhsystem.edu/privacy-notice/" target="_blank" rel="noopener">Privacy Notice</a></li>
+<li><a href="https://uhsystem.edu/offices/legal-affairs/general-counsel/public-information-act/" target="_blank" rel="noopener">Open Records/Public Information Act</a></li>
+<li><a href="https://apps.highered.texas.gov/resumes/">Institutional R&eacute;sum&eacute;</a></li>
+<li><a href="/office-of-finance/required-reports/">Required Reports</a></li>
+<li><a href="/equal-opportunity/eir-accessibility/">Electronic &amp; Information Resources Accessibility</a></li>
+<li><a href="/sexual-misconduct-reporting-form/">Discrimination and Sexual Misconduct Reporting and Awareness</a></li>
+<li><a href="/policies/">University Policies</a></li>
+</ul>
+</div>
+</nav></footer>
+</body>
+</html>
+

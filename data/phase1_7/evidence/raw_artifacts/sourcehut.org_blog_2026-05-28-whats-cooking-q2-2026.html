@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <title>What&#39;s cooking on SourceHut? Q2 2026</title>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+  content="sourcehut is a network of useful open source tools for software project maintainers and collaborators, including git repos, bug tracking, continuous integration, and mailing lists." />
+<link href="/logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="/logo.png" rel="icon" sizes="any" type="image/png"/>
+
+<link rel="stylesheet" href="/main.min.6aac2e6e8f22393df8147bdefc69df266b64b8c9cc261f99140a9845b3969183.css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/index.xml">
+
+  </head>
+  <body>
+    <div>
+  <nav>
+    <span class="brand">
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"/></svg>
+      </span>
+      <a href="/">
+        sourcehut
+      </a>
+    </span>
+    <a href="/blog">blog</a>
+    <a href="/pricing">pricing</a>
+    <a href="/community">community</a>
+    <a href="https://www.hellotux.com/sourcehut">merchandise</a>
+    
+    <a href="https://sr.ht" class="btn pull-right hidden-small">
+      Go to sr.ht
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+
+      </span>
+    </a>
+  </nav>
+</div>
+
+    <main>
+      <header>
+        <div class="heading">
+          <div class="info">
+            <div class="content">
+              May 28, 2026
+              by Drew DeVault &amp; Conrad Hoffmann
+            </div>
+          </div>
+          <div class="content">
+            <h1>
+              What&#39;s cooking on SourceHut? Q2 2026
+            </h1>
+          </div>
+        </div>
+      </header>
+      <article class="content">
+        <p>Hello everyone! It&rsquo;s time for another quarterly update, keeping you up to date
+on what we&rsquo;re cooking up here at SourceHut.</p>
+<h2 id="drews-update">Drew&rsquo;s update</h2>
+<p>This past quarter I found myself mostly focused on &ldquo;invisible&rdquo; labor for
+SourceHut, which will make for a boring update from me this time. Most of my
+time was spent preparing a grant proposal, jointly with some other open source
+forges and related partners, to apply for funding from the EU. We&rsquo;ll learn how
+that went sometime next quarter!</p>
+<p>Otherwise I&rsquo;ve been focused on greasing the wheels and keeping the lights on &ndash;
+doing code reviews, fixing little bugs here and there, handling user support,
+mitigating rolling DDoS attacks (Conrad will elaborate on these in a moment),
+dealing with the finances (it&rsquo;s tax season), and enjoying some rest after
+dealing with all of the above.</p>
+<p>In the coming quarter, I plan to write our annual financial report, and to
+invest more time in user-visible improvements. There&rsquo;s a lot of work going into
+our GraphQL APIs now (led by Simon Martin!) which I want to build on. With this
+momentum I also plan to look into anonymous API access and more standardized and
+uniform GraphQL API designs, such as support for the connections specification
+for resource enumeration.</p>
+<p>We&rsquo;ll leverage these API improvements to facilitate some long-awaited features,
+such as linking resource pages (e.g. git repos) back to the projects they belong
+to on the project hub. I also plan on doing some more work on the billing
+system, to finalize the migration to the EU, so if this works out all customers
+will be moved into the EU billing system soon enough.</p>
+<h2 id="conrads-update">Conrad&rsquo;s update</h2>
+<p>While I did get good deal done this quarter, some of that work was certainly of
+the kind I wish I wouldn&rsquo;t have to do in the first place. Let&rsquo;s start with the
+elephant in the room: the DDoS. We still remain cautious about sharing too many
+details, but we wanted to at least offer a little glimpse into what we were
+facing. The below graph was provided by our network provider. For scale, note
+that the <em>baseline</em> traffic you can make out is not just ours - it&rsquo;s us plus
+other customers. The visible spikes, however, were unfortunately directed at us
+alone&hellip;</p>
+<p><img src="https://redacted.moe/f/d1923bdf.png" alt="Screenshot of a network bandwidth graph"></p>
+<p>The graph is from some time ago. A few more waves came in after that. We are
+still on alert and of course discussing what if any mitigations we can put in
+place for such events in the future.</p>
+<p>There is a small silver lining to this. The DDoS came in several waves of
+different traffic patterns, but it was mostly aimed at network resource
+exhaustion. This &ldquo;helped&rdquo; us identify several places where internal network
+traffic (such as inter-service requests) was still routed over public (that is,
+saturated) interfaces. Those were all fixed and we were happy to see that
+afterwards those few requests that made it to our servers could successfully be
+handled.</p>
+<p>Hot on the heels of the DDoS we were targeted by another huge wave of spam
+sign-ups. These are accounts that get created solely for link farming. They
+basically get an advertisement with one or more links in their bio and never
+get used again. This time around, there seems to have been a serious campaign
+going on, creating over 300 accounts in a single month. We&rsquo;ve seen such
+campaigns before, but we were mostly able to stall them by blocking the email
+domains they were using, which often seemed to be from obscure, hijacked relays
+or such. Unfortunately, by now, the main offender for fake accounts has become:
+Gmail&hellip; <em>sad trombone</em></p>
+<p>So we had to resort to other means, and I added a keyword capability to our
+abuse detection system. All profile updates are now checked against certain
+keywords, and if there are a certain number of matching keywords the account is
+suspended right away. We will be <em>very</em> careful with the keywords we add to
+this to avoid false positives. The kind of crap we are dealing with is
+fortunately pretty easy to detect with 100% accuracy.</p>
+<p>Let&rsquo;s talk about more interesting stuff. My favorite this quarter is of course
+that I managed just right on time to finish git.sr.ht deploy keys! In the
+&ldquo;Access&rdquo; tab of your repository settings, you can now add SSH keys which will
+be able to access only this very repository, either read-write or read-only.
+This is intended for keys used for example in CI or similar automation.</p>
+<p>This work was preceded by a clean-up of the meta.sr.ht SSH key handling, with
+the user-visible side effect that finally SHA256 fingerprints are used
+everywhere as opposed to the legacy MD5 fingerprints.</p>
+<p>Besides the few fixes here and there I also floated a first patch to replace
+the builds.sr.ht shell (currently Python) with a Go implementation. It might
+need a few fix-ups, but it already went through an RFC phase, so I think it&rsquo;s
+fair to mention this now and call it a day.</p>
+<h2 id="everyone-else">Everyone else</h2>
+<p>SourceHut is 100% free and open source software, and the community is invited to
+participate in its development. Let’s take a moment to acknowledge the work of
+the volunteers who use and depend on SourceHut and sent along patches to improve
+it over the past few months.</p>
+<p><a href="https://simartin.dev/">Simon Martin</a> has been back at it again this quarter, writing many patches
+to improve the project hub. Thanks to Simon, the project hub now has a writable
+GraphQL API, allowing you to manage projects and project resources via the API.
+He has a few more patches queued up to improve the API further and reduce our
+Python footprint there. Simon also added some improvements for lists.sr.ht&rsquo;s
+patch review view, associating new patchset revisions with their previous
+versions and adding a UI for navigating between different versions of a patch.
+Thanks for these and many other patches, Simon!</p>
+<p>Other community-led improvements include <a href="https://cismon.net/">CismonX</a>&rsquo;s
+improvemnts to PGP keys, allowing one to update an existing PGP key, for
+example, to bump its expiry date or update subkeys, and some other smaller
+improvements as well. Our volunteer build image maintainers have also been
+quietly keeping your build images up to date this month &ndash; CismonX was back to
+update FreeBSD to 14.4 and drop the EOL 13.x branch, and some small improvements
+for Debian were put forth by Michael Forney and Andrew Oberstar. Haowen Liu
+began the work to ship Ubuntu 25.10 and 26.04, which still has some growing
+pains for us to sort out.</p>
+<p>Big thanks to everyone who contributed to SourceHut this quarter!</p>
+
+      </article>
+      <div class="next-prev">
+        <div class="prev">
+          
+          <a href="https://sourcehut.org/blog/2026-02-18-whats-cooking-q1-2026/?ref=footer">« What&#39;s cooking on SourceHut? Q1 2026</a>
+          
+        </div>
+        <div class="next">
+          
+        </div>
+      </div>
+    </main>
+    <footer>
+  <div class="box">
+    <div class="content index-grid">
+      <div class="left">
+        <p>
+          <strong>Welcome to sourcehut!</strong> This suite of open source tools is
+          the software development platform you've been waiting for.
+        </p>
+        <ul>
+          <li>
+            Git and Mercurial hosting, mailing lists, bug tracking, continuous
+            integration, and more
+          </li>
+          <li>Absolutely no tracking or advertising</li>
+          <li>All features work without JavaScript</li>
+          <li>No AI features whatsoever</li>
+          <li>
+            <a href="https://sr.ht/~sircmpwn/sourcehut" rel="noopener">
+              100% free and open source software
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <a class="btn btn-primary" href="https://meta.sr.ht/register">
+          Register for sr.ht
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+          </span>
+        </a>
+        or <a href="/">
+          learn more
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <span>
+      &copy; 2026 sourcehut
+    </span>
+    <a
+      href="https://man.sr.ht/privacy.md"
+      rel="noopener"
+    >Privacy Policy</a>
+    <a
+      href="https://man.sr.ht/terms.md"
+      rel="noopener"
+    >Terms of Use</a>
+    <a
+      href="/logo"
+      rel="noopener"
+    >Logo &amp; Media resources</a>
+    <span>
+      <a
+        href="https://sr.ht/~sircmpwn/sourcehut/"
+        rel="noopener"
+      >Source Code</a>
+      <small class="text-muted">(AGPL, BSD et al)</small>
+    </span>
+  </div>
+  <blockquote>
+    We are here to make free software better. We will be honest, transparent,
+    and empathetic. We care for our users, and we will not exploit them, and
+    we hope that they will reward our care and diligence with success.
+  </blockquote>
+  <blockquote class="correspondence">
+    SourceHut<br />
+    Postbus 3068<br />
+    1620GB Hoorn<br />
+    Netherlands<br />
+    KVK-nummer: 84165251<br />
+    BTW-nummer: NL003921490B16<br />
+    <a href="mailto:~sircmpwn/sr.ht-support@lists.sr.ht">sr.ht-support</a>
+  </blockquote>
+</footer>
+
+  </body>
+</html>

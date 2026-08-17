@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SSI: CSS+JS inline for speed -->
+  <!-- INLINED-HEAD-BEGIN -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #aaa;
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popovers-popover-box-shadow-color: #aaa;
+
+    --GW-popovers-popover-title-bar-background-color: #fff;
+    --GW-popovers-popover-title-bar-button-color: #777;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #ccc;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #999;
+
+    --GW-popovers-popover-stack-counter-text-color: #fff;
+    --GW-popovers-popover-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popovers).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popovers.
+     */
+    --GW-popovers-popover-background-color: var(--GW-body-background-color);
+
+    --GW-popovers-popover-border-color: #7c7c7c;
+    --GW-popovers-popover-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popovers-popover-box-shadow-color: #7c7c7c;
+
+    --GW-popovers-popover-title-bar-background-color: #000;
+    --GW-popovers-popover-title-bar-button-color: #a6a6a6;
+
+    --GW-popovers-popover-scrollbar-thumb-color: #5c5c5c;
+    --GW-popovers-popover-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popovers-popover-stack-counter-text-color: #000;
+    --GW-popovers-popover-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popovers-popover-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popovers-popover-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+.poem span.caesura-mark {
+	opacity: 0.30;
+}
+@media all and (max-width: 649px) {
+	.poem span.caesura-mark {
+		opacity: 0.35;
+	}
+}
+
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1786427108">
+<script src="/static/js/head.js?v=1786427108"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1785906347" as="image">
+
+  <!-- INLINED-HEAD-END -->
+
+  
+  <!-- Google Webmaster requires this tag, but only on the index/homepage -->
+  <meta name="google-site-verification" content="BOhOQI1uMfsqu_DopVApovk1mJD5ZBLfan0s9go3phk">
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="‘Frank Ramsey’ directory">
+  <meta name="citation_title" content="‘Frank Ramsey’ directory">
+  <meta name="og:title" content="‘Frank Ramsey’ directory">
+  <meta name="twitter:title" content="‘Frank Ramsey’ directory">
+  <meta name="generator" content="Hakyll">
+  <link rel="repository" href="https://github.com/gwern/gwern.net/">
+  <link rel="bug-tracker" href="https://github.com/gwern/gwern.net/issues">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="Bibliography for directory 𝚙𝚑𝚒𝚕𝚘𝚜𝚘𝚙𝚑𝚢/𝚏𝚛𝚊𝚗𝚔-𝚛𝚊𝚖𝚜𝚎𝚢, most recent first: 19 annotations &amp; 3 links (parent).">
+  <meta name="og:description" content="Bibliography for directory 𝚙𝚑𝚒𝚕𝚘𝚜𝚘𝚙𝚑𝚢/𝚏𝚛𝚊𝚗𝚔-𝚛𝚊𝚖𝚜𝚎𝚢, most recent first: 19 annotations &amp; 3 links (parent).">
+  <!-- <meta name="description-raw" content="Bibliography for directory <code>philosophy/frank-ramsey</code>, most recent first: 19 <a class='icon-not' href='/doc/philosophy/frank-ramsey/index#links'>annotations</a> &amp; 3 <a class='icon-not' href='/doc/philosophy/frank-ramsey/index#miscellaneous'>links</a> (<a href='/doc/philosophy/index' class='link-page link-tag directory-indexes-upwards link-annotated' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to parent directory'>parent</a>)."> -->
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="economics, philosophy, statistics/bayes, statistics/decision">
+  <meta name="dc.date.issued" content="2019-01-24">
+  
+  <meta name="citation_publication_date" content="2019-01-24">
+  <meta name="dcterms.modified" content="2025-03-23">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/doc/philosophy/frank-ramsey/index">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/doc/philosophy/frank-ramsey/index">
+  <meta name="og:url" content="https://gwern.net/doc/philosophy/frank-ramsey/index">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/doc/philosophy/frank-ramsey/index.md" title="Markdown source of ‘‘Frank Ramsey’ directory’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-doc-philosophy-frank-ramsey-index dropcaps-not">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>‘Frank Ramsey’ directory · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+</head>
+
+<body class="page-doc-philosophy-frank-ramsey-index dropcaps-not">
+  <!-- SSI: Inlined asset links -->
+  <!-- INLINED-ASSET-LINKS-BEGIN-->
+  <link rel="stylesheet" href="/static/css/style.css?v=1786427108">
+<script src="/static/js/script.js?v=1786427108" defer></script>
+
+  <!-- INLINED-ASSET-LINKS-END -->
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <noscript>
+    <style>
+      #navbar { margin-top: 7em; }
+      @media all and (max-width: 649px) { #navbar { margin-top: 10em; } }
+    </style>
+    <div id="noscript-warning-header" class="markdownBody noscript-container">
+      <details open>
+        <summary><wbr></summary>
+        <div class="admonition error colors-invert">
+          <div class="admonition-title">
+            <p><strong>Warning:</strong> JavaScript Disabled!</p>
+          </div>
+          <p>For support of key <a href="/design" title="About: Gwern.net Design: principles, features, links, tricks">website features</a> (link annotation popups/popovers & transclusions, collapsible sections, backlinks, tablesorting, image zooming, <a href="/sidenote">sidenotes</a> etc.), you must enable JavaScript.</p>
+        </div>
+      </details>
+    </div>
+    </noscript>
+
+    <!-- SSI: Navbar -->
+    <!-- NAVBAR-BEGIN-->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="me link-page link-annotated" href="/me" title="Who am I online, what have I done, what am I like? Contact information; sites I use; things I've worked on" rel="author">Me</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/doc/newest/index" title="Most recent link annotations">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+    <!-- NAVBAR-END -->
+
+    <article>
+
+      <header>
+        <h1>‘Frank Ramsey’ directory</h1>
+      </header>
+
+       
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#see-also" id="toc-see-also">See Also</a></li>
+<li><a href="#links" id="toc-links">Links</a>
+<ul>
+<li><a href="#gwern-doc-philosophy-frank-ramsey-abstract-section" id="toc-gwern-doc-philosophy-frank-ramsey-abstract-section">“Frank P. Ramsey Bibliography”, Gwern 2019</a></li>
+<li><a href="#monk-2016-section" id="toc-monk-2016-section">“‘One of the Great Intellects of His Time': Review of <em>Frank Ramsey (1903–1930): A Sister’s Memoir</em>: by Margaret Paul”, Monk 2016</a></li>
+<li><a href="#ramsey-duarte-2009-section" id="toc-ramsey-duarte-2009-section">“Frank Ramsey’s Notes on Saving and Taxation”, Ramsey & Duarte 2009</a></li>
+<li><a href="#mellor-1995-section" id="toc-mellor-1995-section">“Cambridge Philosophers I: F. P. Ramsey”, Mellor 1995</a></li>
+<li><a href="#ramsey-mellor-1990-section" id="toc-ramsey-mellor-1990-section"><em>F. P. Ramsey: Philosophical Papers</em>, Ramsey & Mellor 1990</a></li>
+<li><a href="#ramsey-1990-section" id="toc-ramsey-1990-section">“Weight or the Value of Knowledge”, Ramsey 1990</a></li>
+<li><a href="#mellor-1983-section" id="toc-mellor-1983-section">“The Eponymous F. P. Ramsey”, Mellor 1983</a></li>
+<li><a href="#arrow-1980-section" id="toc-arrow-1980-section">“Foundations: Essays in Philosophy, Logic, Mathematics and Economics. F. P. Ramsey, D. H. Mellor”, Arrow 1980</a></li>
+<li><a href="#keynes-1930-section" id="toc-keynes-1930-section">“F. P. Ramsey <span class="editorial">[Obituary]</span>”, Keynes 1930</a></li>
+<li><a href="#ramsey-1930-section" id="toc-ramsey-1930-section">“On a Problem of Formal Logic”, Ramsey 1930</a></li>
+<li><a href="#ramsey-1928-section" id="toc-ramsey-1928-section">“A Mathematical Theory of Saving”, Ramsey 1928</a></li>
+<li><a href="#ramsey-1927b-section" id="toc-ramsey-1927b-section">“A Contribution to the Theory of Taxation”, Ramsey 1927b</a></li>
+<li><a href="#ramsey-moore-1927-section" id="toc-ramsey-moore-1927-section">“Symposium: Facts and Propositions”, Ramsey & Moore 1927</a></li>
+<li><a href="#ramsey-1926b-section" id="toc-ramsey-1926b-section">“The Foundations of Mathematics”, Ramsey 1926b</a></li>
+<li><a href="#joseph-et-al-1926-section" id="toc-joseph-et-al-1926-section">“Symposium: Universals and the ‘Method of Analysis’”, Joseph et al 1926</a></li>
+<li><a href="#ramsey-1926-section" id="toc-ramsey-1926-section">“Truth and Probability [1999 Electronic Edition]”, Ramsey 1926</a></li>
+<li><a href="#ramsey-1925-section" id="toc-ramsey-1925-section">“Universals”, Ramsey 1925</a></li>
+<li><a href="#ramsey-1923-section" id="toc-ramsey-1923-section">“Review of <em>Tractatus Logico-Philosophicus</em> by Ludwig Wittgenstein”, Ramsey 1923</a></li>
+<li><a href="#ramsey-1922-section" id="toc-ramsey-1922-section">“Mr Keynes on Probability [Review of J. M. Keynes, <em>A Treatise on Probability</em>, 1921]”, Ramsey 1922</a></li>
+<li><a href="#titled-links-wikipedia" id="toc-titled-links-wikipedia">Wikipedia (1)</a></li>
+</ul></li>
+<li><a href="#miscellaneous" id="toc-miscellaneous">Miscellaneous</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div id="manual-annotation" class="abstract-small abstract-tag-directory">
+<p><a href="/doc/philosophy/frank-ramsey/abstract" id="gwern-doc-philosophy-frank-ramsey-abstract" class="prefetch-not link-annotated-partial include-content-core include-strict link-page" title="Transclude link for doc/philosophy/frank-ramsey/ tag-abstract page.">[page summary]</a></p>
+</div>
+<section id="see-also" class="level1">
+<h1><a href="#see-also" title="Link to section: § &#39;See Also&#39;">See Also</a></h1>
+<div id="see-alsos" class="directory-indexes columns">
+<ul>
+<li><p><a href="/doc/philosophy/index" id="_eU_-QFL2" class="prefetch-not link-page link-annotated link-tag directory-indexes-upwards" data-link-icon="arrow-up-left" data-link-icon-type="svg" rel="tag" title="Link to parent directory &#39;doc/philosophy/&#39; (ascending)">Parent (‘<em>philosophy</em>’ tag)</a></p></li>
+</ul>
+</div>
+</section>
+<section id="links" class="level1 display-pop-not">
+<h1 class="display-pop-not"><a href="#links" title="Link to section: § &#39;Links&#39;">Links</a></h1>
+<section id="gwern-doc-philosophy-frank-ramsey-abstract-section" class="level2">
+<h2><a href="#gwern-doc-philosophy-frank-ramsey-abstract-section" title="Link to section: § &#39;“Frank P. Ramsey Bibliography”, Gwern 2019&#39;">“Frank P. Ramsey Bibliography”, Gwern 2019</a></h2>
+<p><strong><a href="/doc/philosophy/frank-ramsey/abstract" class="prefetch-not link-page link-annotated-partial id-not include-annotation" title="&#39;Frank P. Ramsey bibliography&#39;, Gwern 2019">Frank P. Ramsey bibliography</a></strong></p>
+</section>
+<section id="monk-2016-section" class="level2">
+<h2><a href="#monk-2016-section" title="Link to section: § &#39;“‘One of the Great Intellects of His Time&#39;: Review of Frank Ramsey (1903–1930): A Sister’s Memoir: by Margaret Paul”, Monk 2016&#39;">“‘One of the Great Intellects of His Time': Review of <em>Frank Ramsey (1903–1930): A Sister’s Memoir</em>: by Margaret Paul”, Monk 2016</a></h2>
+<p><strong><a href="/doc/philosophy/frank-ramsey/2016-monk.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;‘One of the Great Intellects of His Time&#39;: review of &lt;em&gt;Frank Ramsey (1903–1930): A Sister’s Memoir&lt;/em&gt;: by Margaret Paul&#39;, Monk 2016">‘One of the Great Intellects of His Time': review of <em>Frank Ramsey (1903–1930): A Sister’s Memoir</em>: by Margaret Paul</a></strong></p>
+</section>
+<section id="ramsey-duarte-2009-section" class="level2">
+<h2><a href="#ramsey-duarte-2009-section" title="Link to section: § &#39;“Frank Ramsey’s Notes on Saving and Taxation”, Ramsey &amp; Duarte 2009&#39;">“Frank Ramsey’s Notes on Saving and Taxation”, Ramsey & Duarte 2009</a></h2>
+<p><strong><a href="/doc/economics/2009-duarte.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Frank Ramsey’s Notes on Saving and Taxation&#39;, Ramsey &amp; Duarte 2009">Frank Ramsey’s Notes on Saving and Taxation</a></strong></p>
+</section>
+<section id="mellor-1995-section" class="level2">
+<h2><a href="#mellor-1995-section" title="Link to section: § &#39;“Cambridge Philosophers I: F. P. Ramsey”, Mellor 1995&#39;">“Cambridge Philosophers I: F. P. Ramsey”, Mellor 1995</a></h2>
+<p><strong><a href="/doc/philosophy/frank-ramsey/1995-mellor.pdf" class="link-annotated id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Cambridge Philosophers I: F. P. Ramsey&#39;, Mellor 1995">Cambridge Philosophers I: F. P. Ramsey</a></strong></p>
+</section>
+<section id="ramsey-mellor-1990-section" class="level2">
+<h2><a href="#ramsey-mellor-1990-section" title="Link to section: § &#39;F. P. Ramsey: Philosophical Papers, Ramsey &amp; Mellor 1990&#39;"><em>F. P. Ramsey: Philosophical Papers</em>, Ramsey & Mellor 1990</a></h2>
+<p><strong><a href="/doc/statistics/decision/1990-mellor-frankramseyphilosophicalpapers.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;&lt;em&gt;F. P. Ramsey: Philosophical Papers&lt;/em&gt;&#39;, Ramsey &amp; Mellor 1990"><em>F. P. Ramsey: Philosophical Papers</em></a></strong></p>
+</section>
+<section id="ramsey-1990-section" class="level2">
+<h2><a href="#ramsey-1990-section" title="Link to section: § &#39;“Weight or the Value of Knowledge”, Ramsey 1990&#39;">“Weight or the Value of Knowledge”, Ramsey 1990</a></h2>
+<p><strong><a href="/doc/statistics/decision/1990-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Weight or the Value of Knowledge&#39;, Ramsey 1990">Weight or the Value of Knowledge</a></strong></p>
+</section>
+<section id="mellor-1983-section" class="level2">
+<h2><a href="#mellor-1983-section" title="Link to section: § &#39;“The Eponymous F. P. Ramsey”, Mellor 1983&#39;">“The Eponymous F. P. Ramsey”, Mellor 1983</a></h2>
+<p><strong><a href="/doc/philosophy/frank-ramsey/1983-mellor.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The eponymous F. P. Ramsey&#39;, Mellor 1983">The eponymous F. P. Ramsey</a></strong></p>
+</section>
+<section id="arrow-1980-section" class="level2">
+<h2><a href="#arrow-1980-section" title="Link to section: § &#39;“Foundations: Essays in Philosophy, Logic, Mathematics and Economics. F. P. Ramsey, D. H. Mellor”, Arrow 1980&#39;">“Foundations: Essays in Philosophy, Logic, Mathematics and Economics. F. P. Ramsey, D. H. Mellor”, Arrow 1980</a></h2>
+<p><strong><a href="/doc/philosophy/frank-ramsey/1980-arrow.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Foundations: Essays in Philosophy, Logic, Mathematics and Economics. F. P. Ramsey, D. H. Mellor&#39;, Arrow 1980">Foundations: Essays in Philosophy, Logic, Mathematics and Economics. F. P. Ramsey, D. H. Mellor</a></strong></p>
+</section>
+<section id="keynes-1930-section" class="level2">
+<h2><a href="#keynes-1930-section" title="Link to section: § &#39;“F. P. Ramsey &lt;span class=&quot;editorial&quot;&gt;[Obituary]&lt;/span&gt;”, Keynes 1930&#39;">“F. P. Ramsey <span class="editorial">[Obituary]</span>”, Keynes 1930</a></h2>
+<p><strong><a href="/doc/economics/1930-keynes.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;F. P. Ramsey &lt;span class=&quot;editorial&quot;&gt;[obituary]&lt;/span&gt;&#39;, Keynes 1930">F. P. Ramsey <span class="editorial">[obituary]</span></a></strong></p>
+</section>
+<section id="ramsey-1930-section" class="level2">
+<h2><a href="#ramsey-1930-section" title="Link to section: § &#39;“On a Problem of Formal Logic”, Ramsey 1930&#39;">“On a Problem of Formal Logic”, Ramsey 1930</a></h2>
+<p><strong><a href="/doc/math/1930-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;On a Problem of Formal Logic&#39;, Ramsey 1930">On a Problem of Formal Logic</a></strong></p>
+</section>
+<section id="ramsey-1928-section" class="level2">
+<h2><a href="#ramsey-1928-section" title="Link to section: § &#39;“A Mathematical Theory of Saving”, Ramsey 1928&#39;">“A Mathematical Theory of Saving”, Ramsey 1928</a></h2>
+<p><strong><a href="/doc/economics/1928-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;A Mathematical Theory of Saving&#39;, Ramsey 1928">A Mathematical Theory of Saving</a></strong></p>
+</section>
+<section id="ramsey-1927b-section" class="level2">
+<h2><a href="#ramsey-1927b-section" title="Link to section: § &#39;“A Contribution to the Theory of Taxation”, Ramsey 1927b&#39;">“A Contribution to the Theory of Taxation”, Ramsey 1927b</a></h2>
+<p><strong><a href="/doc/economics/1927-ramsey-2.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;A Contribution to the Theory of Taxation&#39;, Ramsey 1927b">A Contribution to the Theory of Taxation</a></strong></p>
+</section>
+<section id="ramsey-moore-1927-section" class="level2">
+<h2><a href="#ramsey-moore-1927-section" title="Link to section: § &#39;“Symposium: Facts and Propositions”, Ramsey &amp; Moore 1927&#39;">“Symposium: Facts and Propositions”, Ramsey & Moore 1927</a></h2>
+<p><strong><a href="/doc/philosophy/logic/1927-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Symposium: Facts and Propositions&#39;, Ramsey &amp; Moore 1927">Symposium: Facts and Propositions</a></strong></p>
+</section>
+<section id="ramsey-1926b-section" class="level2">
+<h2><a href="#ramsey-1926b-section" title="Link to section: § &#39;“The Foundations of Mathematics”, Ramsey 1926b&#39;">“The Foundations of Mathematics”, Ramsey 1926b</a></h2>
+<p><strong><a href="/doc/math/1926-ramsey-2.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;The Foundations of Mathematics&#39;, Ramsey 1926b">The Foundations of Mathematics</a></strong></p>
+</section>
+<section id="joseph-et-al-1926-section" class="level2">
+<h2><a href="#joseph-et-al-1926-section" title="Link to section: § &#39;“Symposium: Universals and the ‘Method of Analysis’”, Joseph et al 1926&#39;">“Symposium: Universals and the ‘Method of Analysis’”, Joseph et al 1926</a></h2>
+<p><strong><a href="/doc/philosophy/ontology/1926-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Symposium: Universals and the ‘Method of Analysis’&#39;, Joseph et al 1926">Symposium: Universals and the ‘Method of Analysis’</a></strong></p>
+</section>
+<section id="ramsey-1926-section" class="level2">
+<h2><a href="#ramsey-1926-section" title="Link to section: § &#39;“Truth and Probability [1999 Electronic Edition]”, Ramsey 1926&#39;">“Truth and Probability [1999 Electronic Edition]”, Ramsey 1926</a></h2>
+<p><strong><a href="/doc/www/fitelson.org/02e9fdaed1b5f0306eca3c9dbf5b925b8e2f3b70.pdf" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/fitelson.org/02e9fdaed1b5f0306eca3c9dbf5b925b8e2f3b70.pdf" data-url-original="https://fitelson.org/probability/ramsey.pdf" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Truth and Probability [1999 electronic edition]&#39;, Ramsey 1926">Truth and Probability [1999 electronic edition]</a></strong></p>
+</section>
+<section id="ramsey-1925-section" class="level2">
+<h2><a href="#ramsey-1925-section" title="Link to section: § &#39;“Universals”, Ramsey 1925&#39;">“Universals”, Ramsey 1925</a></h2>
+<p><strong><a href="/doc/philosophy/ontology/1925-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Universals&#39;, Ramsey 1925">Universals</a></strong></p>
+</section>
+<section id="ramsey-1923-section" class="level2">
+<h2><a href="#ramsey-1923-section" title="Link to section: § &#39;“Review of Tractatus Logico-Philosophicus by Ludwig Wittgenstein”, Ramsey 1923&#39;">“Review of <em>Tractatus Logico-Philosophicus</em> by Ludwig Wittgenstein”, Ramsey 1923</a></h2>
+<p><strong><a href="/doc/philosophy/epistemology/1923-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Review of &lt;em&gt;Tractatus Logico-Philosophicus&lt;/em&gt; by Ludwig Wittgenstein&#39;, Ramsey 1923">Review of <em>Tractatus Logico-Philosophicus</em> by Ludwig Wittgenstein</a></strong></p>
+</section>
+<section id="ramsey-1922-section" class="level2">
+<h2><a href="#ramsey-1922-section" title="Link to section: § &#39;“Mr Keynes on Probability [Review of J. M. Keynes, A Treatise on Probability, 1921]”, Ramsey 1922&#39;">“Mr Keynes on Probability [Review of J. M. Keynes, <em>A Treatise on Probability</em>, 1921]”, Ramsey 1922</a></h2>
+<p><strong><a href="/doc/statistics/bayes/1922-ramsey.pdf" class="link-annotated-partial id-not include-annotation" data-link-icon="pdf" data-link-icon-color="#f40f02" data-link-icon-type="svg" title="&#39;Mr Keynes on Probability [review of J. M. Keynes, &lt;em&gt;A Treatise on Probability&lt;/em&gt;, 1921]&#39;, Ramsey 1922">Mr Keynes on Probability [review of J. M. Keynes, <em>A Treatise on Probability</em>, 1921]</a></strong></p>
+</section>
+<section id="titled-links-wikipedia" class="level2 collapse">
+<h2 class="collapse"><a href="#titled-links-wikipedia" title="Link to section: § &#39;Wikipedia (1)&#39;">Wikipedia (1)</a></h2>
+<ol type="1">
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Turnpike_theory" class="link-live link-annotated-partial id-not include-annotation" data-url-iframe="https://en.m.wikipedia.org/wiki/Turnpike_theory#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Turnpike theory">Turnpike theory</a></strong></p></li>
+</ol>
+</section>
+</section>
+<section id="miscellaneous" class="level1">
+<h1><a href="#miscellaneous" title="Link to section: § &#39;Miscellaneous&#39;">Miscellaneous</a></h1>
+<ul>
+<li><p><strong><a href="/doc/math/1931-ramsey-foundationsofmathematicsandotherlogicalessays.epub" class="prefetch-not link-annotated-partial id-not include-annotation" data-link-icon="EPUB" data-link-icon-color="#87ba11" data-link-icon-type="text,quad,sans"><code>/doc/math/1931-ramsey-foundationsofmathematicsandotherlogicalessays.epub</code></a></strong></p></li>
+<li><p><strong><a href="https://www.gleech.org/frank" class="id-not include-annotation"><code>https://www.gleech.org/frank</code></a></strong></p></li>
+<li><p><strong><a href="/doc/www/www.hnn.us/25197c1cd777d0090a1988b07741e54f5c69fcba.html" class="link-live link-annotated-partial id-not include-annotation" data-url-archive="/doc/www/www.hnn.us/25197c1cd777d0090a1988b07741e54f5c69fcba.html" data-url-original="https://www.hnn.us/article/frank-ramsey-a-genius-by-all-tests-for-genius"><code>https://www.hnn.us/article/frank-ramsey-a-genius-by-all-tests-for-genius</code></a></strong></p></li>
+</ul>
+</section>
+
+       
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" rel="nofollow" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

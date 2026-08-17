@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Entries</title>
+<script defer data-domain="simonwillison.net" src="https://plausible.io/js/plausible.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="/atom/everything/">
+<link rel="stylesheet" type="text/css" href="/static/css/all.7977d7c44aeb.css">
+<link rel="webmention" href="https://webmention.io/simonwillison.net/webmention">
+<link rel="pingback" href="https://webmention.io/simonwillison.net/xmlrpc">
+<meta name="author" content="Simon Willison">
+<meta property="og:site_name" content="Simon Willison’s Weblog">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@simonw">
+<meta property="og:url" content="https://simonwillison.net/entries/">
+<meta property="og:title" content="">
+<meta property="og:type" content="article">
+<meta property="og:description" content="">
+<meta property="og:updated_time" content="">
+
+
+<script>
+(function() { // Apply theme immediately to prevent flash
+  const theme = localStorage.getItem('theme');
+  if (theme === 'light' || theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+})();
+</script>
+</head>
+<body class="smallhead">
+
+<div id="smallhead">
+  <div id="smallhead-inner">
+    <h1><a href="/">Simon Willison’s Weblog</a></h1>
+    <a id="smallhead-about" href="/about/#subscribe">Subscribe</a>
+  </div>
+</div><!-- #smallhead -->
+
+
+<div id="sponsored-banner" class="sponsor-scheme-sky">
+  <div id="sponsored-banner-inner">
+    <strong class="sponsored-label">Sponsored by:</strong> WorkOS &mdash; <a href="https://10xn.link/simon-workos">auth.md</a> by WorkOS: agents register users, no sign-up form. <a class="sponsor-learn-more-label" href="https://10xn.link/simon-workos" rel="sponsored noopener" target="_blank">Try it!</a>
+  </div>
+</div>
+
+
+<div id="wrapper">
+<div id="primary">
+
+<div class="entry entryPage">
+
+
+
+<a style="float: right; border-bottom: none; margin-top: 0.4em" href="/atom/entries/" title="Atom feed"><svg
+    xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 256 256"
+    role="img" aria-labelledby="atomFeedTitle">
+ <title id="atomFeedTitle">Atom feed</title>
+ <defs>
+   <linearGradient id="a" x1=".1" x2=".9" y1=".1" y2=".9">
+     <stop offset="0" stop-color="#E3702D"></stop>
+     <stop offset=".1" stop-color="#EA7D31"></stop>
+     <stop offset=".4" stop-color="#F69537"></stop>
+     <stop offset=".5" stop-color="#FB9E3A"></stop>
+     <stop offset=".7" stop-color="#EA7C31"></stop>
+     <stop offset=".9" stop-color="#DE642B"></stop>
+     <stop offset="1" stop-color="#D95B29"></stop>
+   </linearGradient>
+ </defs>
+ <rect width="256" height="256" fill="#CC5D15" rx="55" ry="55"></rect>
+ <rect width="246" height="246" x="5" y="5" fill="#F49C52" rx="50" ry="50"></rect>
+ <rect width="236" height="236" x="10" y="10" fill="url(#a)" rx="47" ry="47"></rect>
+ <circle cx="68" cy="189" r="24" fill="#FFF"></circle>
+ <path fill="#FFF" d="M160 213h-34a82 82 0 0 0-82-82V97a116 116 0 0 1 116 116z"></path>
+ <path fill="#FFF" d="M184 213A140 140 0 0 0 44 73V38a175 175 0 0 1 175 175z"></path>
+</svg>
+</a>
+<h2>Entries</h2>
+
+
+
+<form action="/search/" method="GET">
+    <input type="search" class="search-input" name="q" value="" style="width: 80%" autocomplete="off">
+    <input type="submit" class="search-submit" value="Search">
+    
+        
+            
+                <input type="hidden" name="type" value="entry">
+            
+        
+            
+                <input type="hidden" name="type_label" value="Entry">
+            
+        
+    
+    
+</form>
+
+
+
+<p class="search-selections">
+    <span class="filters">
+        Filters:
+        
+        
+        
+        
+        
+        
+    </span>
+    
+        Sorted by <strong>date</strong>
+        
+        
+    
+</p>
+
+<div id="autocomplete-tags" aria-live="polite"></div>
+
+
+    
+        
+    <div class="pagination">
+        
+        <strong>3,323 results</strong> 
+        
+        <span class="step-links">
+            
+            <span class="current">
+                page 1 / 111
+            </span>
+            
+                <a href="?page=2">next &raquo;</a>
+            
+            
+                <a href="?page=111">last &raquo;&raquo;</a>
+            
+        </span>
+    </div>
+
+
+        
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9436">
+  <h3><a href="/2026/Aug/16/qwen-38-27b/" rel="bookmark">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Aug/16/qwen-38-27b/"><img src="https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg" alt="Visit Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things"></a>
+    </div>
+  
+  <p>
+    <p>Friday’s big release was <a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen 3.8 27B</a>, an Apache 2 licensed 27B parameter vision-capable LLM from Alibaba’s Qwen research lab. I’ve been looking forward to this one: 27B is an excellent size for running a model on a reasonably specced laptop, and its predecessor <a href="https://simonwillison.net/2026/Apr/22/qwen36-27b/">Qwen 3.6 27B</a> was impressive.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Aug/16/qwen-38-27b/">2,543 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Aug/16/qwen-38-27b/" title="Permalink for &quot;Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things&quot;">10 pm</a> / <a href="/2026/Aug/16/">16th August 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/local-llms/">local-llms</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/qwen/">qwen</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-reasoning/">llm-reasoning</a>, <a href="/tags/llama-cpp/">llama-cpp</a>, <a href="/tags/llm-release/">llm-release</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/lm-studio/">lm-studio</a>, <a href="/tags/ai-in-china/">ai-in-china</a>, <a href="/tags/nvidia-spark/">nvidia-spark</a>, <a href="/tags/pi/">pi</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9408">
+  <h3><a href="/2026/Aug/7/openai-timeline/" rel="bookmark">Now we have a timeline of the OpenAI accidental attack against Hugging Face</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Aug/7/openai-timeline/"><img src="https://img.youtube.com/vi/87DyyMV0kCY/maxresdefault.jpg" alt="Visit Now we have a timeline of the OpenAI accidental attack against Hugging Face"></a>
+    </div>
+  
+  <p>
+    <p>OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about “the Hugging Face Incident” (<a href="https://simonwillison.net/2026/Jul/22/openai-cyberattack/">previously</a> on this blog). <a href="https://www.youtube.com/watch?v=87DyyMV0kCY">The video</a> was published yesterday. It’s short and information dense and well worth watching, in particular because it provides full details of what happened and how things played out inside OpenAI. I’ve used the video to construct the timeline below.</p>
+
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Aug/7/openai-timeline/">916 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Aug/7/openai-timeline/" title="Permalink for &quot;Now we have a timeline of the OpenAI accidental attack against Hugging Face&quot;">11:55 pm</a> / <a href="/2026/Aug/7/">7th August 2026</a> / <a href="/tags/security/">security</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/hugging-face/">hugging-face</a>, <a href="/tags/ai-security-research/">ai-security-research</a>, <a href="/tags/openai-hugging-face-incident/">openai-hugging-face-incident</a>, <a href="/tags/accidental-cyberattacks/">accidental-cyberattacks</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9407">
+  <h3><a href="/2026/Aug/5/raccoon-heist/" rel="bookmark">One-shotting a Raccoon Heist game using Claude Fable 5</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Aug/5/raccoon-heist/"><img src="https://static.simonwillison.net/static/2026/shot-dog.png" alt="Visit One-shotting a Raccoon Heist game using Claude Fable 5"></a>
+    </div>
+  
+  <p>
+    <p>Back in 2022 <a href="https://twitter.com/simonw/status/1555626060384911360">I tweeted</a> screenshots of a game concept generated by GPT-3 and some concept “art” created using DALL-E. Today, on the fourth anniversary of that tweet, I decided to see if Claude Fable 5 (running in <a href="https://code.claude.com/docs/en/claude-code-on-the-web">Claude Code for web</a>) could build the entire game from the content of that tweet. It did a pretty good job of it!</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Aug/5/raccoon-heist/">3,479 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Aug/5/raccoon-heist/" title="Permalink for &quot;One-shotting a Raccoon Heist game using Claude Fable 5&quot;">7:42 pm</a> / <a href="/2026/Aug/5/">5th August 2026</a> / <a href="/tags/game-design/">game-design</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/prompt-engineering/">prompt-engineering</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude/">claude</a>, <a href="/tags/text-to-image/">text-to-image</a>, <a href="/tags/vibe-coding/">vibe-coding</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9406">
+  <h3><a href="/2026/Aug/4/new-release-of-llm/" rel="bookmark">New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Aug/4/new-release-of-llm/"><img src="https://static.simonwillison.net/static/2026/best-thing-pelicans-card.jpg" alt="Visit New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging"></a>
+    </div>
+  
+  <p>
+    <p>I released <a href="https://llm.datasette.io/en/stable/changelog.html#v0-32">LLM 0.32</a> this morning, the most significant new version of LLM since the initial launch of the project. The new version includes support for visible reasoning traces, server-side provider tools, redesigned content-addressable SQLite logs, new models, and new features enabled by the OpenAI Responses API. I also released a new version of the <a href="https://github.com/simonw/llm-anthropic">llm-anthropic plugin</a> with substantial updates of its own.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Aug/4/new-release-of-llm/">1,230 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Aug/4/new-release-of-llm/" title="Permalink for &quot;New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging&quot;">11:58 pm</a> / <a href="/2026/Aug/4/">4th August 2026</a> / <a href="/tags/projects/">projects</a>, <a href="/tags/releases/">releases</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm/">llm</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/llm-tool-use/">llm-tool-use</a>, <a href="/tags/llm-reasoning/">llm-reasoning</a>, <a href="/tags/model-context-protocol/">model-context-protocol</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9405">
+  <h3><a href="/2026/Jul/31/stateless-mcp/" rel="bookmark">Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jul/31/stateless-mcp/"><img src="https://raw.githubusercontent.com/simonw/til/refs/heads/main/llms/claude-add-custom-connector-dialog.webp" alt="Visit Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)"></a>
+    </div>
+  
+  <p>
+    <p>Tuesday was <a href="https://x.com/ade_oshineye/status/2082129440943866149">Stateless MCP day</a>—the rollout of MCP 2.0, or <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">the 2026-07-28 Model Context Protocol specification</a> to use the more formal but less memorable name. This is the most significant change to the MCP spec since it first launched, and has also served to reignite my personal interest in the protocol.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/31/stateless-mcp/">1,316 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/31/stateless-mcp/" title="Permalink for &quot;Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)&quot;">11:13 pm</a> / <a href="/2026/Jul/31/">31st July 2026</a> / <a href="/tags/projects/">projects</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/datasette/">datasette</a>, <a href="/tags/mermaid/">mermaid</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm/">llm</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/model-context-protocol/">model-context-protocol</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9404">
+  <h3><a href="/2026/Jul/22/openai-cyberattack/" rel="bookmark">OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened</a></h3>
+  
+  <p>
+    <p>This story is wild. The short version: OpenAI were running a cybersecurity test against an unreleased model, with the model’s guardrail features turned off. Rather than solve the test, the model broke its way out of OpenAI’s sandbox, then found exploits to break <em>in</em> to Hugging Face, all so it could cheat on the test by stealing the answers.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/22/openai-cyberattack/">1,979 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/22/openai-cyberattack/" title="Permalink for &quot;OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened&quot;">11:51 pm</a> / <a href="/2026/Jul/22/">22nd July 2026</a> / <a href="/tags/sandboxing/">sandboxing</a>, <a href="/tags/security/">security</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/hugging-face/">hugging-face</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/paper-review/">paper-review</a>, <a href="/tags/ai-security-research/">ai-security-research</a>, <a href="/tags/openai-hugging-face-incident/">openai-hugging-face-incident</a>, <a href="/tags/accidental-cyberattacks/">accidental-cyberattacks</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9403">
+  <h3><a href="/2026/Jul/21/cat-and-thariq/" rel="bookmark">A Fireside Chat with Cat and Thariq from the Claude Code team</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jul/21/cat-and-thariq/"><img src="https://img.youtube.com/vi/uU5Gv2h8-9g/maxresdefault.jpg" alt="Visit A Fireside Chat with Cat and Thariq from the Claude Code team"></a>
+    </div>
+  
+  <p>
+    <p>Earlier this month I hosted a fireside chat session at the <a href="https://www.ai.engineer/worldsfair/2026">AI Engineer World’s Fair</a> with Cat Wu and Thariq Shihipar from Anthropic’s Claude Code team. We talked about Claude Code, Claude Tag, Fable, coding agent security, evals, tool design, and how Anthropic use these tools themselves.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/21/cat-and-thariq/">8,609 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/21/cat-and-thariq/" title="Permalink for &quot;A Fireside Chat with Cat and Thariq from the Claude Code team&quot;">12:54 pm</a> / <a href="/2026/Jul/21/">21st July 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/prompt-engineering/">prompt-engineering</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/annotated-talks/">annotated-talks</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/thariq-shihipar/">thariq-shihipar</a>, <a href="/tags/cat-wu/">cat-wu</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9376">
+  <h3><a href="/2026/Jul/16/kimi-k3/" rel="bookmark">Kimi K3, and what we can still learn from the pelican benchmark</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jul/16/kimi-k3/"><img src="https://static.simonwillison.net/static/2026/kimi-3-pelican.jpg" alt="Visit Kimi K3, and what we can still learn from the pelican benchmark"></a>
+    </div>
+  
+  <p>
+    <p>Chinese AI lab Moonshot AI <a href="https://www.kimi.com/blog/kimi-k3">announced Kimi K3</a> this morning, describing it as their “most capable model to date, with 2.8 trillion parameters”. It’s currently available via their website and API, but an open weight release is promised “by July 27, 2026”.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/16/kimi-k3/">1,113 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/16/kimi-k3/" title="Permalink for &quot;Kimi K3, and what we can still learn from the pelican benchmark&quot;">8:19 pm</a> / <a href="/2026/Jul/16/">16th July 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm-pricing/">llm-pricing</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-release/">llm-release</a>, <a href="/tags/ai-in-china/">ai-in-china</a>, <a href="/tags/artificial-analysis/">artificial-analysis</a>, <a href="/tags/moonshot/">moonshot</a>, <a href="/tags/kimi/">kimi</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9375">
+  <h3><a href="/2026/Jul/9/gpt-5-6/" rel="bookmark">The new GPT-5.6 family: Luna, Terra, Sol</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jul/9/gpt-5-6/"><img src="https://static.simonwillison.net/static/2026/gpt-5.6-pelicans.webp" alt="Visit The new GPT-5.6 family: Luna, Terra, Sol"></a>
+    </div>
+  
+  <p>
+    <p>OpenAI’s latest flagship model <a href="https://openai.com/index/gpt-5-6/">hit general availability this morning</a>, and comes in three sizes: Luna, Terra, and Sol (from smallest to largest).</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/9/gpt-5-6/">661 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/9/gpt-5-6/" title="Permalink for &quot;The new GPT-5.6 family: Luna, Terra, Sol&quot;">7:46 pm</a> / <a href="/2026/Jul/9/">9th July 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm-tool-use/">llm-tool-use</a>, <a href="/tags/llm-pricing/">llm-pricing</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-release/">llm-release</a>, <a href="/tags/gpt-5/">gpt-5</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9374">
+  <h3><a href="/2026/Jul/7/sqlite-utils-4/" rel="bookmark">sqlite-utils 4.0, now with database schema migrations</a></h3>
+  
+  <p>
+    <p>This morning I released <a href="https://sqlite-utils.datasette.io/en/stable/changelog.html#v4-0">sqlite-utils 4.0</a>, the 124th release of that project and the first major version bump since <a href="https://sqlite-utils.datasette.io/en/stable/changelog.html#v3-0">3.0</a> in November 2020. In addition to some small but significant breaking changes (described in <a href="https://sqlite-utils.datasette.io/en/stable/upgrading.html">this upgrade guide</a>), this version introduces three major features: <strong>database migrations</strong>, <strong>nested transactions</strong> (via a new <code>db.atomic()</code> method), and support for <strong>compound foreign keys</strong>.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/7/sqlite-utils-4/">2,121 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/7/sqlite-utils-4/" title="Permalink for &quot;sqlite-utils 4.0, now with database schema migrations&quot;">7:32 pm</a> / <a href="/2026/Jul/7/">7th July 2026</a> / <a href="/tags/schema-migrations/">schema-migrations</a>, <a href="/tags/projects/">projects</a>, <a href="/tags/sqlite/">sqlite</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/sqlite-utils/">sqlite-utils</a>, <a href="/tags/annotated-release-notes/">annotated-release-notes</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude/">claude</a>, <a href="/tags/agentic-engineering/">agentic-engineering</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9373">
+  <h3><a href="/2026/Jul/5/sqlite-utils-fable/" rel="bookmark">sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jul/5/sqlite-utils-fable/"><img src="https://static.simonwillison.net/static/2026/fable-plan-usage.webp" alt="Visit sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)"></a>
+    </div>
+  
+  <p>
+    <p>I wrote about the <a href="https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/">sqlite-utils 4.0rc1</a> release a couple of weeks ago. Since we only have Claude Fable on our Max subscriptions for a few more days, I decided to see if it could help me get to a 4.0 stable release that I felt truly comfortable about, since I try to keep to <a href="https://semver.org">SemVer</a> and like my incompatible major versions to be as rare as possible.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jul/5/sqlite-utils-fable/">2,427 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jul/5/sqlite-utils-fable/" title="Permalink for &quot;sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)&quot;">1 am</a> / <a href="/2026/Jul/5/">5th July 2026</a> / <a href="/tags/projects/">projects</a>, <a href="/tags/sqlite/">sqlite</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/sqlite-utils/">sqlite-utils</a>, <a href="/tags/annotated-release-notes/">annotated-release-notes</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude/">claude</a>, <a href="/tags/llm-pricing/">llm-pricing</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/agentic-engineering/">agentic-engineering</a>, <a href="/tags/gpt/">gpt</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9372">
+  <h3><a href="/2026/Jun/30/shot-scraper-video/" rel="bookmark">Have your agent record video demos of its work with shot-scraper video</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/30/shot-scraper-video/"><img src="https://static.simonwillison.net/static/2026/shot-scraper-video-card.jpg" alt="Visit Have your agent record video demos of its work with shot-scraper video"></a>
+    </div>
+  
+  <p>
+    <p><a href="https://shot-scraper.datasette.io/en/stable/video.html">shot-scraper video</a> is a new command introduced in today’s <a href="https://github.com/simonw/shot-scraper/releases/tag/1.10">shot-scraper 1.10</a> release which accepts a <code>storyboard.yml</code> file defining a routine to run against a web application and uses Playwright to record a video of that routine. I’ve written before about the importance of <a href="https://simonwillison.net/2026/Feb/10/showboat-and-rodney/#proving-code-actually-works">having coding agents produce demos</a> of their work; this is my latest attempt at enabling them to do that.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/30/shot-scraper-video/">1,162 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/30/shot-scraper-video/" title="Permalink for &quot;Have your agent record video demos of its work with shot-scraper video&quot;">4:54 pm</a> / <a href="/2026/Jun/30/">30th June 2026</a> / <a href="/tags/projects/">projects</a>, <a href="/tags/python/">python</a>, <a href="/tags/yaml/">yaml</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/datasette/">datasette</a>, <a href="/tags/playwright/">playwright</a>, <a href="/tags/shot-scraper/">shot-scraper</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/pydantic/">pydantic</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/agentic-engineering/">agentic-engineering</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9371">
+  <h3><a href="/2026/Jun/22/porting-moebius/" rel="bookmark">Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/22/porting-moebius/"><img src="https://static.simonwillison.net/static/2026/inpainter.jpg" alt="Visit Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code"></a>
+    </div>
+  
+  <p>
+    <p>This morning <a href="https://news.ycombinator.com/item?id=48630171">on Hacker News</a> I saw <a href="https://hustvl.github.io/Moebius/">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</a>, describing a small but effective inpainting model—a model where you can mark regions of an image to remove and the model imagines what should fill the space. The released model <a href="https://github.com/hustvl/Moebius/blob/9310b76e368f5f7a8ecdf06493231af279c9973b/requirements.txt#L1">required PyTorch and NVIDIA CUDA</a>, but since it described itself as 0.2B I decided to try and get it running using WebGPU in a browser. TL;DR: I got it working, and you can try the demo at <a href="https://simonw.github.io/moebius-web/">simonw.github.io/moebius-web/</a>. Read on for the details.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/22/porting-moebius/">1,764 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/22/porting-moebius/" title="Permalink for &quot;Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code&quot;">11:43 pm</a> / <a href="/2026/Jun/22/">22nd June 2026</a> / <a href="/tags/browsers/">browsers</a>, <a href="/tags/transformers-js/">transformers-js</a>, <a href="/tags/webgl/">webgl</a>, <a href="/tags/vibe-coding/">vibe-coding</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/onnx/">onnx</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9370">
+  <h3><a href="/2026/Jun/21/sqlite-utils-40rc1/" rel="bookmark">sqlite-utils 4.0rc1 adds migrations and nested transactions</a></h3>
+  
+  <p>
+    <p><a href="https://sqlite-utils.datasette.io/en/latest/">sqlite-utils</a> is my combined Python library and CLI tool for working with SQLite databases. It provides an extensive set of higher-level operations on top of Python’s default <a href="https://docs.python.org/3/library/sqlite3.html">sqlite3 package</a>, including support for <a href="https://sqlite-utils.datasette.io/en/latest/cli.html#transforming-tables">complex table transformations</a>, automatic table creation <a href="https://sqlite-utils.datasette.io/en/latest/cli.html#inserting-json-data">from JSON data</a> and a whole lot more.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/21/sqlite-utils-40rc1/">975 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/21/sqlite-utils-40rc1/" title="Permalink for &quot;sqlite-utils 4.0rc1 adds migrations and nested transactions&quot;">11:35 pm</a> / <a href="/2026/Jun/21/">21st June 2026</a> / <a href="/tags/schema-migrations/">schema-migrations</a>, <a href="/tags/projects/">projects</a>, <a href="/tags/sqlite/">sqlite</a>, <a href="/tags/sqlite-utils/">sqlite-utils</a>, <a href="/tags/annotated-release-notes/">annotated-release-notes</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9341">
+  <h3><a href="/2026/Jun/18/datasette-apps/" rel="bookmark">Datasette Apps: Host custom HTML applications inside Datasette</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/18/datasette-apps/"><img src="https://static.simonwillison.net/static/2026/datasette-apps-card.jpg" alt="Visit Datasette Apps: Host custom HTML applications inside Datasette"></a>
+    </div>
+  
+  <p>
+    <p>Today we launched a new plugin for Datasette, <a href="https://github.com/datasette/datasette-apps">datasette-apps</a>, with <a href="https://datasette.io/blog/2026/datasette-apps/">this launch announcement post</a> on the Datasette project blog. That post has the <em>what</em>, but I’m going to expand on that a little bit here to provide the <em>why</em>.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/18/datasette-apps/">2,301 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/18/datasette-apps/" title="Permalink for &quot;Datasette Apps: Host custom HTML applications inside Datasette&quot;">11:58 pm</a> / <a href="/2026/Jun/18/">18th June 2026</a> / <a href="/tags/iframes/">iframes</a>, <a href="/tags/javascript/">javascript</a>, <a href="/tags/projects/">projects</a>, <a href="/tags/sandboxing/">sandboxing</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/datasette/">datasette</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/content-security-policy/">content-security-policy</a>, <a href="/tags/datasette-apps/">datasette-apps</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9340">
+  <h3><a href="/2026/Jun/17/glm-52/" rel="bookmark">GLM-5.2 is probably the most powerful text-only open weights LLM</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/17/glm-52/"><img src="https://static.simonwillison.net/static/2026/glm-5.2-pelican-card.jpg" alt="Visit GLM-5.2 is probably the most powerful text-only open weights LLM"></a>
+    </div>
+  
+  <p>
+    <p>Chinese AI lab <a href="https://z.ai/">Z.ai</a> released GLM-5.2 <a href="https://x.com/Zai_org/status/2065704919299235870">to their coding plan subscribers</a> on June 13th, and then yesterday (June 16th) released the full open weights under an MIT license. Similar in size to their previous GLM-5 and GLM-5.1 releases this is a 753B parameter, <a href="https://huggingface.co/zai-org/GLM-5.2">1.51TB</a> monster—with 40 active parameters (Mixture of Experts). GLM-5.2 is a text input only model—Z.ai have a separate vision family most recently represented by <a href="https://x.com/Zai_org/status/2039371126984360085">GLM-5V-Turbo</a>, but that one isn’t open weights. GLM-5.2 has a 1 million token context window, up from GLM-5.1’s 200,000.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/17/glm-52/">599 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/17/glm-52/" title="Permalink for &quot;GLM-5.2 is probably the most powerful text-only open weights LLM&quot;">11:58 pm</a> / <a href="/2026/Jun/17/">17th June 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-release/">llm-release</a>, <a href="/tags/openrouter/">openrouter</a>, <a href="/tags/ai-in-china/">ai-in-china</a>, <a href="/tags/glm/">glm</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9339">
+  <h3><a href="/2026/Jun/13/publishing-wasm-wheels/" rel="bookmark">Publishing WASM wheels to PyPI for use with Pyodide</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/13/publishing-wasm-wheels/"><img src="https://static.simonwillison.net/static/2026/luau-wasm.jpg" alt="Visit Publishing WASM wheels to PyPI for use with Pyodide"></a>
+    </div>
+  
+  <p>
+    <p>The <a href="https://blog.pyodide.org/posts/314-release/">Pyodide 314.0 release announcement</a> (via <a href="https://news.ycombinator.com/item?id=48462759">Hacker News</a>) includes news I’ve been looking forward to for a long time:</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/13/publishing-wasm-wheels/">757 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/13/publishing-wasm-wheels/" title="Permalink for &quot;Publishing WASM wheels to PyPI for use with Pyodide&quot;">11:55 pm</a> / <a href="/2026/Jun/13/">13th June 2026</a> / <a href="/tags/lua/">lua</a>, <a href="/tags/pypi/">pypi</a>, <a href="/tags/python/">python</a>, <a href="/tags/sandboxing/">sandboxing</a>, <a href="/tags/webassembly/">webassembly</a>, <a href="/tags/github-actions/">github-actions</a>, <a href="/tags/pyodide/">pyodide</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9338">
+  <h3><a href="/2026/Jun/11/fable-is-relentlessly-proactive/" rel="bookmark">Claude Fable is relentlessly proactive</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/11/fable-is-relentlessly-proactive/"><img src="https://static.simonwillison.net/static/2026/jump-to-bug.jpg" alt="Visit Claude Fable is relentlessly proactive"></a>
+    </div>
+  
+  <p>
+    <p>After two days of experience with <a href="https://simonwillison.net/2026/Jun/9/claude-fable-5/">Claude Fable 5</a> I think the best way to describe it is <strong>relentlessly proactive</strong>. It knows a whole lot of tricks and it will deploy pretty much any of them to get to its goal.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/11/fable-is-relentlessly-proactive/">1,939 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/11/fable-is-relentlessly-proactive/" title="Permalink for &quot;Claude Fable is relentlessly proactive&quot;">11:35 pm</a> / <a href="/2026/Jun/11/">11th June 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/prompt-injection/">prompt-injection</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9337">
+  <h3><a href="/2026/Jun/9/claude-fable-5/" rel="bookmark">Initial impressions of Claude Fable 5</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/9/claude-fable-5/"><img src="https://static.simonwillison.net/static/2026/fable-max.jpg" alt="Visit Initial impressions of Claude Fable 5"></a>
+    </div>
+  
+  <p>
+    <p>I didn’t have early access to today’s <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5</a> release, but I’ve spent the past ~5.5 hours putting it through its paces. My initial impressions are that this is something of a <em>beast</em>. It’s slow, expensive and has been quite happily churning through everything I’ve thrown at it so far. As is frequently the case with current frontier models the challenge is finding tasks that it can’t do.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/9/claude-fable-5/">2,404 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/9/claude-fable-5/" title="Permalink for &quot;Initial impressions of Claude Fable 5&quot;">11:59 pm</a> / <a href="/2026/Jun/9/">9th June 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude/">claude</a>, <a href="/tags/llm-pricing/">llm-pricing</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-release/">llm-release</a>, <a href="/tags/claude-mythos-fable/">claude-mythos-fable</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9310">
+  <h3><a href="/2026/Jun/6/micropython-in-a-sandbox/" rel="bookmark">Running Python code in a sandbox with MicroPython and WASM</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Jun/6/micropython-in-a-sandbox/"><img src="https://static.simonwillison.net/static/2026/micropython-card.jpg" alt="Visit Running Python code in a sandbox with MicroPython and WASM"></a>
+    </div>
+  
+  <p>
+    <p>I’ve been experimenting with different approaches to running code in a sandbox for several years now, but my latest attempt feels like it might finally have all of the characteristics I’ve been looking for. I’ve released it as an alpha package called <a href="https://github.com/simonw/micropython-wasm">micropython-wasm</a>, and I’m using it for a code execution sandbox plugin for <a href="https://github.com/datasette/datasette-agent">Datasette Agent</a> called <a href="https://github.com/datasette/datasette-agent-micropython">datasette-agent-micropython</a>.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Jun/6/micropython-in-a-sandbox/">2,024 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Jun/6/micropython-in-a-sandbox/" title="Permalink for &quot;Running Python code in a sandbox with MicroPython and WASM&quot;">3:53 am</a> / <a href="/2026/Jun/6/">6th June 2026</a> / <a href="/tags/python/">python</a>, <a href="/tags/sandboxing/">sandboxing</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/datasette/">datasette</a>, <a href="/tags/webassembly/">webassembly</a>, <a href="/tags/pyodide/">pyodide</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/ai-assisted-programming/">ai-assisted-programming</a>, <a href="/tags/codex/">codex</a>, <a href="/tags/datasette-agent/">datasette-agent</a>, <a href="/tags/micropython/">micropython</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9309">
+  <h3><a href="/2026/May/28/claude-opus-4-8/" rel="bookmark">Claude Opus 4.8: “a modest but tangible improvement”</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/May/28/claude-opus-4-8/"><img src="https://static.simonwillison.net/static/2026/opus-3-8-card.jpg" alt="Visit Claude Opus 4.8: &quot;a modest but tangible improvement&quot;"></a>
+    </div>
+  
+  <p>
+    <p>Anthropic shipped <a href="https://www.anthropic.com/news/claude-opus-4-8">Claude Opus 4.8</a> today. My favourite thing about it is this note in the release announcement:</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/28/claude-opus-4-8/">983 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/28/claude-opus-4-8/" title="Permalink for &quot;Claude Opus 4.8: &quot;a modest but tangible improvement&quot;&quot;">11:59 pm</a> / <a href="/2026/May/28/">28th May 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude/">claude</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-release/">llm-release</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9308">
+  <h3><a href="/2026/May/27/product-market-fit/" rel="bookmark">I think Anthropic and OpenAI have found product-market fit</a></h3>
+  
+  <p>
+    <p>Anthropic are <a href="https://techcrunch.com/2026/05/20/anthropic-says-its-about-to-have-its-first-profitable-quarter/">strongly rumored</a> to be about to have their first profitable quarter. Stories <a href="https://www.theinformation.com/newsletters/applied-ai/uber-cto-shows-claude-code-can-blow-ai-budgets">are circulating</a> of companies surprised at how expensive their LLM bills are becoming from usage by their staff. I think this is because OpenAI and Anthropic have both found product-market fit.</p>
+
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/27/product-market-fit/">1,931 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/27/product-market-fit/" title="Permalink for &quot;I think Anthropic and OpenAI have found product-market fit&quot;">4:38 pm</a> / <a href="/2026/May/27/">27th May 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/datasette/">datasette</a>, <a href="/tags/openai/">openai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/llm-pricing/">llm-pricing</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/codex/">codex</a>, <a href="/tags/claude-cowork/">claude-cowork</a>, <a href="/tags/november-2025-inflection/">november-2025-inflection</a>, <a href="/tags/datasette-agent/">datasette-agent</a>, <a href="/tags/uber/">uber</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9307">
+  <h3><a href="/2026/May/25/encyclical-on-ai/" rel="bookmark">Notes on Pope Leo XIV’s encyclical on AI</a></h3>
+  
+  <p>
+    <p>Dropped this morning by the Vatican: <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">Magnifica Humanitas of His Holiness Pope Leo XIV on Safeguarding the Human Person in the Time of Artificial Intelligence</a>. This is a <em>very interesting</em> document. It’s some of the clearest writing I’ve seen on the ethics of integrating AI into modern society.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/25/encyclical-on-ai/">1,865 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/25/encyclical-on-ai/" title="Permalink for &quot;Notes on Pope Leo XIV&#x27;s encyclical on AI&quot;">11:58 pm</a> / <a href="/2026/May/25/">25th May 2026</a> / <a href="/tags/predictions/">predictions</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/kakapo/">kakapo</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/bryan-cantrill/">bryan-cantrill</a>, <a href="/tags/ai-ethics/">ai-ethics</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9306">
+  <h3><a href="/2026/May/21/datasette-agent/" rel="bookmark">Datasette Agent</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/May/21/datasette-agent/"><img src="https://static.simonwillison.net/static/2026/datasette-agent.jpg" alt="Visit Datasette Agent"></a>
+    </div>
+  
+  <p>
+    <p>We just <a href="https://datasette.io/blog/2026/datasette-agent/">announced the first release of Datasette Agent</a>, a new extensible AI assistant for Datasette. I’ve been working on my <a href="https://llm.datasette.io/">LLM</a> Python library for just over three years now, and Datasette Agent represents the moment that LLM and <a href="https://datasette.io/">Datasette</a> finally come together. I’m really excited about it!</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/21/datasette-agent/">659 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/21/datasette-agent/" title="Permalink for &quot;Datasette Agent&quot;">7:52 pm</a> / <a href="/2026/May/21/">21st May 2026</a> / <a href="/tags/projects/">projects</a>, <a href="/tags/sqlite/">sqlite</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/datasette/">datasette</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm/">llm</a>, <a href="/tags/uv/">uv</a>, <a href="/tags/datasette-agent/">datasette-agent</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9305">
+  <h3><a href="/2026/May/19/gemini-35-flash/" rel="bookmark">Gemini 3.5 Flash: more expensive, but Google plan to use it for everything</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/May/19/gemini-35-flash/"><img src="https://static.simonwillison.net/static/2026/gemini-3.5-flash.png" alt="Visit Gemini 3.5 Flash: more expensive, but Google plan to use it for everything"></a>
+    </div>
+  
+  <p>
+    <p>Today at Google I/O, Google <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/">released Gemini 3.5 Flash</a>. This one skipped the <code>-preview</code> modifier and went straight to general availability, and Google appear to be using it for a whole lot of their key products:</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/19/gemini-35-flash/">610 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/19/gemini-35-flash/" title="Permalink for &quot;Gemini 3.5 Flash: more expensive, but Google plan to use it for everything&quot;">10:40 pm</a> / <a href="/2026/May/19/">19th May 2026</a> / <a href="/tags/google/">google</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/gemini/">gemini</a>, <a href="/tags/llm-pricing/">llm-pricing</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/llm-release/">llm-release</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9304">
+  <h3><a href="/2026/May/19/5-minute-llms/" rel="bookmark">The last six months in LLMs in five minutes</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/May/19/5-minute-llms/"><img src="https://static.simonwillison.net/static/2026/5-minutes-llms/5-minutes-llms.001.jpeg" alt="Visit The last six months in LLMs in five minutes"></a>
+    </div>
+  
+  <p>
+    <p>I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the <a href="https://tools.simonwillison.net/annotated-presentations">latest iteration</a> of my <a href="https://simonwillison.net/2023/Aug/6/annotated-presentations/">annotated presentation tool</a>.</p>
+
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/19/5-minute-llms/">2,061 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/19/5-minute-llms/" title="Permalink for &quot;The last six months in LLMs in five minutes&quot;">1:09 am</a> / <a href="/2026/May/19/">19th May 2026</a> / <a href="/tags/lightning-talks/">lightning-talks</a>, <a href="/tags/pycon/">pycon</a>, <a href="/tags/speaking/">speaking</a>, <a href="/tags/my-talks/">my-talks</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/local-llms/">local-llms</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/annotated-talks/">annotated-talks</a>, <a href="/tags/pelican-riding-a-bicycle/">pelican-riding-a-bicycle</a>, <a href="/tags/coding-agents/">coding-agents</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9278">
+  <h3><a href="/2026/May/7/xai-anthropic/" rel="bookmark">Notes on the xAI/Anthropic data center deal</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/May/7/xai-anthropic/"><img src="https://static.simonwillison.net/static/2026/grok-fast-shutdown.png" alt="Visit Notes on the xAI/Anthropic data center deal"></a>
+    </div>
+  
+  <p>
+    <p>There weren’t a lot of big new announcements from Anthropic at yesterday’s Code w/ Claude event, but the biggest by far was the deal they’ve struck with SpaceX/xAI to use “all of the capacity of their Colossus data center”.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/7/xai-anthropic/">601 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/7/xai-anthropic/" title="Permalink for &quot;Notes on the xAI/Anthropic data center deal&quot;">5:09 pm</a> / <a href="/2026/May/7/">7th May 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/ai-ethics/">ai-ethics</a>, <a href="/tags/ai-energy-usage/">ai-energy-usage</a>, <a href="/tags/xai/">xai</a>, <a href="/tags/andy-masley/">andy-masley</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9277">
+  <h3><a href="/2026/May/6/code-w-claude-2026/" rel="bookmark">Live blog: Code w/ Claude 2026</a></h3>
+  
+  <p>
+    <p>I’m at Anthropic’s Code w/ Claude event today. Here’s my live blog of the morning keynote sessions.</p>
+    
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/6/code-w-claude-2026/" title="Permalink for &quot;Live blog: Code w/ Claude 2026&quot;">3:58 pm</a> / <a href="/2026/May/6/">6th May 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/anthropic/">anthropic</a>, <a href="/tags/claude/">claude</a>, <a href="/tags/claude-code/">claude-code</a>, <a href="/tags/live-blog/">live-blog</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9276">
+  <h3><a href="/2026/May/6/vibe-coding-and-agentic-engineering/" rel="bookmark">Vibe coding and agentic engineering are getting closer than I’d like</a></h3>
+  
+  <p>
+    <p>I recently talked with Joseph Ruscio about AI coding tools for Heavybit’s High Leverage podcast: <a href="https://www.heavybit.com/library/podcasts/high-leverage/ep-9-the-ai-coding-paradigm-shift-with-simon-willison">Ep. #9, The AI Coding Paradigm Shift with Simon Willison</a>. Here are some of my highlights, including my disturbing realization that vibe coding and agentic engineering have started to converge in my own work.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/May/6/vibe-coding-and-agentic-engineering/">1,542 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/May/6/vibe-coding-and-agentic-engineering/" title="Permalink for &quot;Vibe coding and agentic engineering are getting closer than I&#x27;d like&quot;">2:24 pm</a> / <a href="/2026/May/6/">6th May 2026</a> / <a href="/tags/ai/">ai</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/podcast-appearances/">podcast-appearances</a>, <a href="/tags/vibe-coding/">vibe-coding</a>, <a href="/tags/coding-agents/">coding-agents</a>, <a href="/tags/agentic-engineering/">agentic-engineering</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="entry segment" data-type="entry" data-id="9275">
+  <h3><a href="/2026/Apr/29/llm/" rel="bookmark">LLM 0.32a0  is a major backwards-compatible refactor</a></h3>
+  
+    <div class="card-container">
+      <a href="/2026/Apr/29/llm/"><img src="https://static.simonwillison.net/static/2026/llm-032a0-card.jpg" alt="Visit LLM 0.32a0  is a major backwards-compatible refactor"></a>
+    </div>
+  
+  <p>
+    <p>I just released <a href="https://llm.datasette.io/en/latest/changelog.html#a0-2026-04-28">LLM 0.32a0</a>, an alpha release of my <a href="https://llm.datasette.io/">LLM</a> Python library and CLI tool for accessing LLMs, with some consequential changes that I’ve been working towards for quite a while.</p>
+
+    <span style="font-size: 0.9em">[... <a href="/2026/Apr/29/llm/">1,874 words</a>]</span>
+  </p>
+  <div class="entryFooter">
+  <a href="/2026/Apr/29/llm/" title="Permalink for &quot;LLM 0.32a0  is a major backwards-compatible refactor&quot;">7:01 pm</a> / <a href="/2026/Apr/29/">29th April 2026</a> / <a href="/tags/projects/">projects</a>, <a href="/tags/python/">python</a>, <a href="/tags/ai/">ai</a>, <a href="/tags/annotated-release-notes/">annotated-release-notes</a>, <a href="/tags/generative-ai/">generative-ai</a>, <a href="/tags/llms/">llms</a>, <a href="/tags/llm/">llm</a>
+  </div>
+</div> <!-- end div.entry -->
+
+
+
+
+
+
+
+
+
+
+
+        
+    <div class="pagination">
+        
+        <span class="step-links">
+            
+            <span class="current">
+                page 1 / 111
+            </span>
+            
+                <a href="?page=2">next &raquo;</a>
+            
+            
+                <a href="?page=111">last &raquo;&raquo;</a>
+            
+        </span>
+    </div>
+
+
+    
+
+
+
+</div>
+
+
+
+
+</div> <!-- #primary -->
+
+<div id="secondary">
+
+<div class="metabox">
+    
+    
+    
+        <h3 id="facet-years">Years</h3>
+        <ul>
+            
+                <li><a href="/search/?type=entry&amp;year=2002">2002</a> 674</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2003">2003</a> 648</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2004">2004</a> 141</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2005">2005</a> 57</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2006">2006</a> 37</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2007">2007</a> 35</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2008">2008</a> 10</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2009">2009</a> 14</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2010">2010</a> 142</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2011">2011</a> 132</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2012">2012</a> 294</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2013">2013</a> 400</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2014">2014</a> 31</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2015">2015</a> 4</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2016">2016</a> 21</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2017">2017</a> 33</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2018">2018</a> 20</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2019">2019</a> 26</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2020">2020</a> 68</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2021">2021</a> 79</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2022">2022</a> 82</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2023">2023</a> 94</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2024">2024</a> 90</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2025">2025</a> 119</a></li>
+            
+                <li><a href="/search/?type=entry&amp;year=2026">2026</a> 72</a></li>
+            
+        </ul>
+    
+    
+    
+        <h3 id="facet-tags">Tags</h3>
+        <ul>
+            
+                <li><a href="/search/?type=entry&amp;tag=quora">quora</a> 1,003</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=ai">ai</a> 306</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=llms">llms</a> 301</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=generative-ai">generative-ai</a> 297</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=projects">projects</a> 286</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=datasette">datasette</a> 254</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=python">python</a> 232</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=weeknotes">weeknotes</a> 193</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=web-development">web-development</a> 166</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=startups">startups</a> 157</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=conferences">conferences</a> 155</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=php">php</a> 116</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=openai">openai</a> 106</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=django">django</a> 105</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=javascript">javascript</a> 104</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=programming">programming</a> 104</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=ai-assisted-programming">ai-assisted-programming</a> 89</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=css">css</a> 88</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=llm">llm</a> 85</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=sqlite">sqlite</a> 85</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=security">security</a> 84</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=speaking">speaking</a> 80</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=events">events</a> 74</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=coding-agents">coding-agents</a> 68</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=anthropic">anthropic</a> 68</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=sqlite-utils">sqlite-utils</a> 65</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=my-talks">my-talks</a> 62</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=open-source">open-source</a> 56</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=blogging">blogging</a> 55</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=claude">claude</a> 55</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=chatgpt">chatgpt</a> 54</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=ask-metafilter">ask-metafilter</a> 54</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=github">github</a> 52</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=google">google</a> 52</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=llm-release">llm-release</a> 52</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=y-combinator">y-combinator</a> 52</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=mark-pilgrim">mark-pilgrim</a> 51</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=plugins">plugins</a> 50</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=entrepreneurship">entrepreneurship</a> 47</a></li>
+            
+                <li><a href="/search/?type=entry&amp;tag=accessibility">accessibility</a> 43</a></li>
+            
+        </ul>
+    
+</div>
+<script>
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+
+function fetchTags(query) {
+  const numberFormat = new Intl.NumberFormat("en-US");
+  fetch(`/tags-autocomplete/?q=${query}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const tagsContainer = document.getElementById("autocomplete-tags");
+      tagsContainer.innerHTML = "";
+      if (data.tags.length > 0) {
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Tags "));
+        data.tags.forEach((tag) => {
+          const a = document.createElement("a");
+          a.href = `/tags/${tag.tag}/`;
+          a.className = "item-tag";
+          a.innerHTML = `${tag.tag} <span>${numberFormat.format(tag.count)}</span>`;
+          p.appendChild(a);
+          // Add a space between tags
+          p.appendChild(document.createTextNode(" "));
+        });
+        tagsContainer.appendChild(p);
+      }
+    });
+}
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener(
+  "input",
+  debounce(function () {
+    const query = this.value.trim();
+    if (query.length > 0) {
+      fetchTags(query);
+    } else {
+      document.getElementById("autocomplete-tags").innerHTML = "";
+    }
+  }, 500),
+);
+if (searchInput.value) {
+  fetchTags(searchInput.value);
+}
+</script>
+
+</div> <!-- #secondary -->
+</div> <!-- #wrapper -->
+
+
+
+
+
+
+
+
+
+<div id="ft">
+    <ul>
+      <li><a href="/about/#disclosures">Disclosures</a></li>
+      <li><a href="/about/#about-site">Colophon</a></li>
+      <li>&copy;</li>
+      <li><a href="/2002/">2002</a></li>
+      <li><a href="/2003/">2003</a></li>
+      <li><a href="/2004/">2004</a></li>
+      <li><a href="/2005/">2005</a></li>
+      <li><a href="/2006/">2006</a></li>
+      <li><a href="/2007/">2007</a></li>
+      <li><a href="/2008/">2008</a></li>
+      <li><a href="/2009/">2009</a></li>
+      <li><a href="/2010/">2010</a></li>
+      <li><a href="/2011/">2011</a></li>
+      <li><a href="/2012/">2012</a></li>
+      <li><a href="/2013/">2013</a></li>
+      <li><a href="/2014/">2014</a></li>
+      <li><a href="/2015/">2015</a></li>
+      <li><a href="/2016/">2016</a></li>
+      <li><a href="/2017/">2017</a></li>
+      <li><a href="/2018/">2018</a></li>
+      <li><a href="/2019/">2019</a></li>
+      <li><a href="/2020/">2020</a></li>
+      <li><a href="/2021/">2021</a></li>
+      <li><a href="/2022/">2022</a></li>
+      <li><a href="/2023/">2023</a></li>
+      <li><a href="/2024/">2024</a></li>
+      <li><a href="/2025/">2025</a></li>
+      <li><a href="/2026/">2026</a></li>
+      <li>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <!-- Auto/System icon (default) -->
+          <svg id="icon-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></svg>
+          <!-- Light icon -->
+          <svg id="icon-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></svg>
+          <!-- Dark icon -->
+          <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></svg>
+        </button>
+      </li>
+    </ul>
+</div>
+
+<style>image-gallery:not(:defined) img {max-height: 150px;} captioned-image-gallery:not(:defined) > figure {max-height: 240px; overflow: hidden;}</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('h2[id],h3[id],h4[id],h5[id],h6[id]').forEach(el => {
+    const id = el.getAttribute('id');
+    const permalinkContext = el.closest('[data-permalink-context]');
+    if (permalinkContext) {
+      const url = permalinkContext.getAttribute('data-permalink-context');
+      const hashLink = document.createElement('a');
+      hashLink.style.borderBottom = 'none';
+      hashLink.style.color = '#666';
+      hashLink.style.fontSize = '1em';
+      hashLink.style.opacity = 0.8;
+      hashLink.setAttribute('href', url + '#' + id);
+      hashLink.innerText = '#';
+      el.appendChild(document.createTextNode('\u00A0'));
+      el.appendChild(hashLink);
+    }
+  });
+});
+</script>
+<script type="module">
+const config = [
+  {"tag": "lite-youtube", "js": "/static/lite-yt-embed.js", "css": "/static/lite-yt-embed.css"},
+  {"tag": "image-gallery", "js": "/static/image-gallery.js", "css": null},
+  {"tag": "captioned-image-gallery", "js": "/static/captioned-image-gallery.js", "css": null},
+  {"tag": "click-to-play", "js": "/static/click-to-play.js", "css": "/static/click-to-play.css"},
+  {"tag": "github-code", "js": "/static/github-code.js", "css": null}
+];
+for (const {tag, js, css} of config) {
+  if (document.querySelector(tag)) {
+    if (css) {
+      document.head.appendChild(
+        Object.assign(document.createElement('link'), {
+          rel: 'stylesheet',
+          href: css
+        })
+      );
+    }
+    if (js) {
+      await import(js);
+    }
+  }
+}
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.localStorage.getItem('ADMIN')) {
+      document.querySelectorAll('.edit-page-link').forEach(el => {
+        const url = el.getAttribute('data-admin-url');
+        if (url) {
+          const a = document.createElement('a');
+          a.href = url;
+          a.className = 'edit-link';
+          a.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit';
+          el.appendChild(a);
+          el.style.display = 'block';
+        }
+      });
+    }
+  });
+</script>
+<script>
+// Random tag navigation - shows button if recently came from tag random
+(function() {
+  const stored = localStorage.getItem('random_tag');
+  if (!stored) return;
+
+  try {
+    const data = JSON.parse(stored);
+    const elapsed = Date.now() - data.timestamp;
+
+    // Only show if within 5 seconds
+    if (elapsed > 5000) return;
+
+    const header = document.getElementById('smallhead-inner');
+    if (!header) return;
+
+    const btn = document.createElement('a');
+    btn.href = '/random/' + encodeURIComponent(data.tag) + '/';
+    btn.className = 'random-tag-nav';
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="8.5" cy="15.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"></circle></svg> Random ' + data.tag;
+
+    btn.addEventListener('click', function(e) {
+      // Bump the timestamp before navigating
+      localStorage.setItem('random_tag', JSON.stringify({
+        tag: data.tag,
+        timestamp: Date.now()
+      }));
+    });
+
+    // Insert before the Subscribe link
+    const subscribeLink = document.getElementById('smallhead-about');
+    if (subscribeLink) {
+      header.insertBefore(btn, subscribeLink);
+    } else {
+      header.appendChild(btn);
+    }
+  } catch (e) {
+    // Invalid JSON, clear it
+    localStorage.removeItem('random_tag');
+  }
+})();
+</script>
+<script>
+// Theme toggle functionality
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const iconAuto = document.getElementById('icon-auto');
+  const iconLight = document.getElementById('icon-light');
+  const iconDark = document.getElementById('icon-dark');
+
+  // Theme states: 'auto' (default), 'light', 'dark'
+  function getTheme() {
+    return localStorage.getItem('theme') || 'auto';
+  }
+
+  function setTheme(theme) {
+    if (theme === 'auto') {
+      localStorage.removeItem('theme');
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      localStorage.setItem('theme', theme);
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    updateIcon(theme);
+  }
+
+  function updateIcon(theme) {
+    iconAuto.style.display = theme === 'auto' ? 'block' : 'none';
+    iconLight.style.display = theme === 'light' ? 'block' : 'none';
+    iconDark.style.display = theme === 'dark' ? 'block' : 'none';
+
+    // Update aria-label for accessibility
+    const labels = {
+      'auto': 'Theme: Auto (system preference). Click to switch to light.',
+      'light': 'Theme: Light. Click to switch to dark.',
+      'dark': 'Theme: Dark. Click to switch to auto.'
+    };
+    toggle.setAttribute('aria-label', labels[theme]);
+  }
+
+  // Cycle through themes: auto -> light -> dark -> auto
+  function cycleTheme() {
+    const current = getTheme();
+    const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
+    setTheme(next);
+  }
+
+  // Initialize
+  updateIcon(getTheme());
+  toggle.addEventListener('click', cycleTheme);
+})();
+</script>
+</body>
+</html>

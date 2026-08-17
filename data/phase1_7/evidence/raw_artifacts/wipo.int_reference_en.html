@@ -1,0 +1,2792 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="ltr" dir="ltr" lang="en-US">
+<head>
+	<title>IP Resources</title>
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+	<!-- Favicon for modern browsers -->
+	<link rel="icon" type="image/svg+xml" href="https://www.wipo.int/web-assets/images/favicon.svg"/>
+
+	<!-- PNG icons for legacy and specific resolutions -->
+	<link rel="icon" type="image/png" sizes="192x192" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-192.png"/>
+	<link rel="icon" type="image/png" sizes="48x48" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-48.png"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-32.png"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-16.png"/>
+
+	<!-- Apple Touch Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.wipo.int/web-assets/images/ulf-wipo-favicon-180.png"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="importmap">{"imports": {"react": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react.js", "react-16": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-16.js", "react-18": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-18.js", "react-dom": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom.js", "react-dom/client": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom$client.js", "react-dom-16": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom-16.js", "react-dom-18": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom-18.js", "react-dom-18/client": "https://cdn.webcms.wipo.int/o/frontend-js-react-web/__liferay__/exports/react-dom-18$client.js","@liferay/dynamic-data-mapping-form-field-type/api": "https://cdn.webcms.wipo.int/o/dynamic-data-mapping-form-field-type/__liferay__/api.js","@clayui/alert": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$alert.js", "@clayui/autocomplete": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$autocomplete.js", "@clayui/badge": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$badge.js", "@clayui/breadcrumb": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$breadcrumb.js", "@clayui/button": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$button.js", "@clayui/card": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$card.js", "@clayui/color-picker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$color-picker.js", "@clayui/core": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$core.js", "@clayui/data-provider": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$data-provider.js", "@clayui/date-picker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$date-picker.js", "@clayui/drop-down": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$drop-down.js", "@clayui/empty-state": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$empty-state.js", "@clayui/form": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$form.js", "@clayui/icon": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$icon.js", "@clayui/label": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$label.js", "@clayui/layout": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$layout.js", "@clayui/link": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$link.js", "@clayui/list": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$list.js", "@clayui/loading-indicator": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$loading-indicator.js", "@clayui/localized-input": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$localized-input.js", "@clayui/management-toolbar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$management-toolbar.js", "@clayui/modal": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$modal.js", "@clayui/multi-select": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$multi-select.js", "@clayui/multi-step-nav": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$multi-step-nav.js", "@clayui/nav": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$nav.js", "@clayui/navigation-bar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$navigation-bar.js", "@clayui/pagination": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$pagination.js", "@clayui/pagination-bar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$pagination-bar.js", "@clayui/panel": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$panel.js", "@clayui/popover": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$popover.js", "@clayui/progress-bar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$progress-bar.js", "@clayui/provider": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$provider.js", "@clayui/shared": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$shared.js", "@clayui/slider": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$slider.js", "@clayui/sticker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$sticker.js", "@clayui/table": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$table.js", "@clayui/tabs": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$tabs.js", "@clayui/time-picker": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$time-picker.js", "@clayui/toolbar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$toolbar.js", "@clayui/tooltip": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$tooltip.js", "@clayui/upper-toolbar": "https://cdn.webcms.wipo.int/o/frontend-js-clay-web/__liferay__/exports/@clayui$upper-toolbar.js","@ckeditor/ckeditor5-adapter-ckfinder/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-adapter-ckfinder$dist$index.js.js", "@ckeditor/ckeditor5-alignment/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-alignment$dist$index.js.js", "@ckeditor/ckeditor5-autoformat/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-autoformat$dist$index.js.js", "@ckeditor/ckeditor5-autosave/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-autosave$dist$index.js.js", "@ckeditor/ckeditor5-basic-styles/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-basic-styles$dist$index.js.js", "@ckeditor/ckeditor5-block-quote/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-block-quote$dist$index.js.js", "@ckeditor/ckeditor5-bookmark/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-bookmark$dist$index.js.js", "@ckeditor/ckeditor5-ckbox/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-ckbox$dist$index.js.js", "@ckeditor/ckeditor5-ckfinder/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-ckfinder$dist$index.js.js", "@ckeditor/ckeditor5-clipboard/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-clipboard$dist$index.js.js", "@ckeditor/ckeditor5-cloud-services/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-cloud-services$dist$index.js.js", "@ckeditor/ckeditor5-code-block/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-code-block$dist$index.js.js", "@ckeditor/ckeditor5-core/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-core$dist$index.js.js", "@ckeditor/ckeditor5-easy-image/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-easy-image$dist$index.js.js", "@ckeditor/ckeditor5-editor-balloon/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-balloon$dist$index.js.js", "@ckeditor/ckeditor5-editor-classic/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-classic$dist$index.js.js", "@ckeditor/ckeditor5-editor-decoupled/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-decoupled$dist$index.js.js", "@ckeditor/ckeditor5-editor-inline/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-inline$dist$index.js.js", "@ckeditor/ckeditor5-editor-multi-root/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-editor-multi-root$dist$index.js.js", "@ckeditor/ckeditor5-emoji/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-emoji$dist$index.js.js", "@ckeditor/ckeditor5-engine/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-engine$dist$index.js.js", "@ckeditor/ckeditor5-enter/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-enter$dist$index.js.js", "@ckeditor/ckeditor5-essentials/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-essentials$dist$index.js.js", "@ckeditor/ckeditor5-find-and-replace/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-find-and-replace$dist$index.js.js", "@ckeditor/ckeditor5-font/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-font$dist$index.js.js", "@ckeditor/ckeditor5-fullscreen/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-fullscreen$dist$index.js.js", "@ckeditor/ckeditor5-heading/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-heading$dist$index.js.js", "@ckeditor/ckeditor5-highlight/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-highlight$dist$index.js.js", "@ckeditor/ckeditor5-horizontal-line/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-horizontal-line$dist$index.js.js", "@ckeditor/ckeditor5-html-embed/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-html-embed$dist$index.js.js", "@ckeditor/ckeditor5-html-support/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-html-support$dist$index.js.js", "@ckeditor/ckeditor5-icons/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-icons$dist$index.js.js", "@ckeditor/ckeditor5-image/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-image$dist$index.js.js", "@ckeditor/ckeditor5-indent/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-indent$dist$index.js.js", "@ckeditor/ckeditor5-language/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-language$dist$index.js.js", "@ckeditor/ckeditor5-link/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-link$dist$index.js.js", "@ckeditor/ckeditor5-list/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-list$dist$index.js.js", "@ckeditor/ckeditor5-markdown-gfm/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-markdown-gfm$dist$index.js.js", "@ckeditor/ckeditor5-media-embed/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-media-embed$dist$index.js.js", "@ckeditor/ckeditor5-mention/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-mention$dist$index.js.js", "@ckeditor/ckeditor5-minimap/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-minimap$dist$index.js.js", "@ckeditor/ckeditor5-page-break/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-page-break$dist$index.js.js", "@ckeditor/ckeditor5-paragraph/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-paragraph$dist$index.js.js", "@ckeditor/ckeditor5-paste-from-office/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-paste-from-office$dist$index.js.js", "@ckeditor/ckeditor5-react": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-react.js", "@ckeditor/ckeditor5-remove-format/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-remove-format$dist$index.js.js", "@ckeditor/ckeditor5-restricted-editing/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-restricted-editing$dist$index.js.js", "@ckeditor/ckeditor5-select-all/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-select-all$dist$index.js.js", "@ckeditor/ckeditor5-show-blocks/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-show-blocks$dist$index.js.js", "@ckeditor/ckeditor5-source-editing/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-source-editing$dist$index.js.js", "@ckeditor/ckeditor5-special-characters/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-special-characters$dist$index.js.js", "@ckeditor/ckeditor5-style/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-style$dist$index.js.js", "@ckeditor/ckeditor5-table/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-table$dist$index.js.js", "@ckeditor/ckeditor5-typing/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-typing$dist$index.js.js", "@ckeditor/ckeditor5-ui/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-ui$dist$index.js.js", "@ckeditor/ckeditor5-undo/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-undo$dist$index.js.js", "@ckeditor/ckeditor5-upload/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-upload$dist$index.js.js", "@ckeditor/ckeditor5-utils/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-utils$dist$index.js.js", "@ckeditor/ckeditor5-watchdog/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-watchdog$dist$index.js.js", "@ckeditor/ckeditor5-widget/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-widget$dist$index.js.js", "@ckeditor/ckeditor5-word-count/dist/index.js": "https://cdn.webcms.wipo.int/o/frontend-editor-ckeditor-web/__liferay__/exports/@ckeditor$ckeditor5-word-count$dist$index.js.js","@liferay/frontend-js-api": "https://cdn.webcms.wipo.int/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api.js", "@liferay/frontend-js-api/data-set": "https://cdn.webcms.wipo.int/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api$data-set.js","@liferay/oauth2-provider-web/client": "https://cdn.webcms.wipo.int/o/oauth2-provider-web/__liferay__/client.js","@liferay/fragment-impl/api": "https://cdn.webcms.wipo.int/o/fragment-impl/__liferay__/api.js","@liferay/language/": "https://cdn.webcms.wipo.int/o/js/language/"}, "scopes": {}}</script><script data-senna-track="permanent" src="/o/frontend-js-svg4everybody-web/index.js" type="text/javascript"></script>
+<link data-senna-track="temporary" href="https://www.wipo.int/en/web/ip-resources" rel="canonical" />
+<link data-senna-track="temporary" href="https://www.wipo.int/es/web/ip-resources" hreflang="es-ES" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/zh/web/ip-resources" hreflang="zh-CN" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/ru/web/ip-resources" hreflang="ru-RU" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/ar/web/ip-resources" hreflang="ar-SA" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/fr/web/ip-resources" hreflang="fr-FR" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/en/web/ip-resources" hreflang="en-US" rel="alternate" />
+<link data-senna-track="temporary" href="https://www.wipo.int/en/web/ip-resources" hreflang="x-default" rel="alternate" />
+
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="ip-resources">
+<meta property="og:title" content="IP Resources">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.wipo.int/en/web/ip-resources">
+<script data-senna-track="permanent" src="/o/wipo-template-context-contributor/js/jquery-3.5.1.min.js"></script>
+
+
+<link href="https://cdn.webcms.wipo.int/o/wipo-universal-theme/images/favicon.ico" rel="apple-touch-icon" />
+<link href="https://cdn.webcms.wipo.int/o/wipo-universal-theme/images/favicon.ico" rel="icon" />
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.wipo.int/o/wipo-universal-theme/css/clay.css?browserId=chrome&amp;themeId=wipouniversaltheme_WAR_wipouniversaltheme&amp;minifierType=css&amp;languageId=en_US&amp;t=1785994158000" id="liferayAUICSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+	<link href="https://cdn.webcms.wipo.int/o/portal-search-web/css/main.(ewQ02j$q6kw).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="2fc4d944" />
+<link href="https://cdn.webcms.wipo.int/o/product-navigation-product-menu-web/css/main.(i$0IgPwR2kk).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="2f131867" />
+<link href="https://cdn.webcms.wipo.int/o/product-navigation-user-personal-bar-web/css/main.(Mc2kn1EU56k).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="932526fc" />
+<link href="https://cdn.webcms.wipo.int/o/site-navigation-menu-web/css/main.(wnU1o3f4AJ0).css" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="eaafc85d" />
+
+
+
+
+
+
+
+
+<script data-senna-track="temporary" type="text/javascript">
+(function() {
+	function buildESMStub(contextPath, symbol) {
+		return (
+			(...args) => {
+				import(
+					Liferay.ThemeDisplay.getCDNHost() +
+					Liferay.ThemeDisplay.getPathContext() +
+						'/o/' +
+						contextPath +
+						'/__liferay__/index.js'
+				).then(
+					(exports) => exports[symbol](...args)
+				);
+			}
+		);
+	}
+
+	function defineReadOnlyGlobal(name, getValue) {
+		Object.defineProperty(
+			window,
+			name,
+			{
+				get: getValue,
+				set: (x) => {
+					if (x !== getValue()) {
+						console.error(`Global variable '${name}' is read-only`);
+					}
+				}
+			}
+		);
+	}
+
+	function isObject(item) {
+		return (item && typeof item === 'object' && !Array.isArray(item));
+	}
+
+	function merge(target, source) {
+		for (const key in source) {
+			if (isObject(source[key])) {
+				if (!target[key]) {
+					Object.assign(target, { [key]: {} });
+				}
+
+				merge(target[key], source[key]);
+			}
+			else {
+				Object.assign(target, { [key]: source[key] });
+			}
+		}
+	}
+
+	let __liferay = {
+AUI: {
+getCombine: () => true,
+getComboPath: () => '/combo/?browserId=chrome&minifierType=&languageId=en_US&t=1785994114476&',
+getDateFormat: () => '%m/%d/%Y',
+getEditorCKEditorPath: () => '/o/frontend-editor-ckeditor-web',
+getFilter: () => 'min',
+getFilterConfig: () => null,
+getJavaScriptRootPath: () => '/o/frontend-js-web',
+getPortletRootPath: () => '/html/portlet',
+getStaticResourceURLParams: () => '?browserId=chrome&minifierType=&languageId=en_US&t=1785994114476',
+},
+Browser: {
+acceptsGzip: () => false,
+getMajorVersion: () => '54.0',
+getRevision: () => '537.36',
+getVersion: () => '54.0',
+isAir: () => false,
+isChrome: () => true,
+isEdge: () => false,
+isFirefox: () => false,
+isGecko: () => true,
+isIe: () => false,
+isIphone: () => false,
+isLinux: () => true,
+isMac: () => false,
+isMobile: () => true,
+isMozilla: () => false,
+isOpera: () => false,
+isRtf: () => true,
+isSafari: () => true,
+isSun: () => false,
+isWebKit: () => true,
+isWindows: () => false,
+},
+Data: {
+ICONS_INLINE_SVG: true,
+NAV_SELECTOR: '#navigation',
+NAV_SELECTOR_MOBILE: '#navigationCollapse',
+isCustomizationView: () => false,
+notices: [
+],
+},
+FeatureFlags: {
+'LPD-11342': false,
+'LPD-23840': false,
+'LPD-36010': true,
+'LPD-36719': true,
+'LPD-39203': false,
+'LPD-40529': true,
+'LPD-48372': true,
+'LPD-48975': true,
+'LPD-78863': true,
+'LPS-157670': false,
+'LPS-172416': false,
+'LPS-183672': false,
+'LPS-186360': false,
+'LRAC-14771': false,
+'COMMERCE-13024': false,
+'COMMERCE-8087': false,
+'COMMERCE-8949': false,
+'LPD-10562': false,
+'LPD-10964': false,
+'LPD-11003': false,
+'LPD-11131': true,
+'LPD-11228': false,
+'LPD-11235': false,
+'LPD-11313': false,
+'LPD-11848': false,
+'LPD-13311': true,
+'LPD-13778': true,
+'LPD-17564': false,
+'LPD-19870': false,
+'LPD-19955': false,
+'LPD-20183': false,
+'LPD-20379': false,
+'LPD-20640': false,
+'LPD-21414': false,
+'LPD-29516': false,
+'LPD-31212': false,
+'LPD-31228': false,
+'LPD-31789': false,
+'LPD-32867': false,
+'LPD-34594': false,
+'LPD-35013': true,
+'LPD-35128': false,
+'LPD-35443': false,
+'LPD-36105': false,
+'LPD-38564': false,
+'LPD-38869': true,
+'LPD-39304': true,
+'LPD-39437': false,
+'LPD-40530': true,
+'LPD-40533': true,
+'LPD-40534': true,
+'LPD-40535': true,
+'LPD-42553': false,
+'LPD-43996': false,
+'LPD-44091': true,
+'LPD-44307': true,
+'LPD-44771': true,
+'LPD-45276': false,
+'LPD-47713': true,
+'LPD-48862': true,
+'LPD-51356': false,
+'LPD-56718': false,
+'LPD-57655': false,
+'LPD-58677': false,
+'LPD-60546': true,
+'LPD-62272': false,
+'LPD-63311': false,
+'LPD-63415': false,
+'LPD-63416': false,
+'LPD-6368': false,
+'LPD-65299': false,
+'LPD-65399': false,
+'LPD-66359': false,
+'LPD-66611': true,
+'LPD-74328': false,
+'LPD-74739': true,
+'LPD-75032': false,
+'LPD-75525': false,
+'LPD-7822': false,
+'LPS-122920': false,
+'LPS-135430': false,
+'LPS-153332': false,
+'LPS-153714': false,
+'LPS-153813': false,
+'LPS-155284': false,
+'LPS-159643': false,
+'LPS-164563': false,
+'LPS-165482': false,
+'LPS-169837': false,
+'LPS-170670': false,
+'LPS-174417': false,
+'LPS-174816': false,
+'LPS-176691': false,
+'LPS-177027': false,
+'LPS-178052': false,
+'LPS-178642': false,
+'LPS-180090': false,
+'LPS-185892': false,
+'LPS-186620': false,
+'LPS-193884': false,
+'LPS-196935': true,
+'LPS-197477': false,
+'LPS-197909': false,
+'LPS-198183': false,
+'LPS-200108': false,
+'LPS-202104': false,
+'LRAC-10757': false,
+'LRAC-15017': false,
+},
+Language: {
+	_cache:
+		window?.Liferay?.Language?._cache
+			? Liferay.Language._cache
+			: {},
+	available: {
+'en_US': 'English\x20\x28United\x20States\x29',
+'es_ES': 'español\x20\x28España\x29',
+'fr_FR': 'français\x20\x28France\x29',
+'ru_RU': 'русский\x20\x28Россия\x29',
+'ar_SA': 'العربية\x20\x28المملكة\x20العربية\x20السعودية\x29',
+'de_DE': 'Deutsch\x20\x28Deutschland\x29',
+'pt_PT': 'português\x20\x28Portugal\x29',
+'ja_JP': '日本語\x20\x28日本\x29',
+'ko_KR': '한국어\x20\x28대한민국\x29',
+'tr_TR': 'Türkçe\x20\x28Türkiye\x29',
+'vi_VN': 'Tiếng\x20Việt\x20\x28Việt\x20Nam\x29',
+'zh_CN': '中文\x20\x28中国\x29',
+'it_IT': 'italiano\x20\x28Italia\x29',
+'pl_PL': 'polski\x20\x28Polska\x29',
+'bg_BG': 'български\x20\x28България\x29',
+'hr_HR': 'hrvatski\x20\x28Hrvatska\x29',
+'nl_NL': 'Nederlands\x20\x28Nederland\x29',
+'et_EE': 'eesti\x20\x28Eesti\x29',
+'hi_IN': 'हिन्दी\x20\x28भारत\x29',
+'lt_LT': 'lietuvių\x20\x28Lietuva\x29',
+'ro_RO': 'română\x20\x28România\x29',
+'th_TH': 'ไทย\x20\x28ไทย\x29',
+'uk_UA': 'українська\x20\x28Україна\x29',
+
+	},
+	direction: {
+'en_US': 'ltr',
+'es_ES': 'ltr',
+'fr_FR': 'ltr',
+'ru_RU': 'ltr',
+'ar_SA': 'rtl',
+'de_DE': 'ltr',
+'pt_PT': 'ltr',
+'ja_JP': 'ltr',
+'ko_KR': 'ltr',
+'tr_TR': 'ltr',
+'vi_VN': 'ltr',
+'zh_CN': 'ltr',
+'it_IT': 'ltr',
+'pl_PL': 'ltr',
+'bg_BG': 'ltr',
+'hr_HR': 'ltr',
+'nl_NL': 'ltr',
+'et_EE': 'ltr',
+'hi_IN': 'ltr',
+'lt_LT': 'ltr',
+'ro_RO': 'ltr',
+'th_TH': 'ltr',
+'uk_UA': 'ltr',
+
+	},
+	get:
+		(key) => {
+			let value = Liferay.Language._cache[key];
+
+			if (value === undefined) {
+				value = key;
+			}
+
+			return value;
+		},
+},
+Portlet: {
+openModal: buildESMStub('frontend-js-components-web', 'openPortletModal'),
+openWindow: buildESMStub('frontend-js-components-web', 'openPortletWindow'),
+},
+PortletKeys: {
+DOCUMENT_LIBRARY: 'com_liferay_document_library_web_portlet_DLPortlet',
+DYNAMIC_DATA_MAPPING: 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet',
+INSTANCE_SETTINGS: 'com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet',
+ITEM_SELECTOR: 'com_liferay_item_selector_web_portlet_ItemSelectorPortlet',
+},
+PropsValues: {
+JAVASCRIPT_SINGLE_PAGE_APPLICATION_TIMEOUT: 0,
+UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE: 104857600,
+},
+ThemeDisplay: {
+getLayoutId: () => '1',
+getLayoutRelativeControlPanelURL: () => '/en/group/ip-resources/~/control_panel/manage',
+getLayoutRelativeURL: () => '/en/web/ip-resources/index',
+getLayoutURL: () => 'https://www.wipo.int/en/web/ip-resources/index',
+getParentLayoutId: () => '0',
+getPathFriendlyURLPublic: () => '/web',
+isControlPanel: () => false,
+isPrivateLayout: () => false,
+isVirtualLayout: () => false,
+getBCP47LanguageId: () => 'en-US',
+getCanonicalURL: () => 'https\x3a\x2f\x2fwww\x2ewipo\x2eint\x2fen\x2fweb\x2fip-resources',
+getCDNBaseURL: () => 'https://cdn.webcms.wipo.int',
+getCDNDynamicResourcesHost: () => '',
+getCDNHost: () => 'https://cdn.webcms.wipo.int',
+getCompanyGroupId: () => '20123',
+getCompanyId: () => '20097',
+getDefaultLanguageId: () => 'en_US',
+getDoAsUserIdEncoded: () => '',
+getLanguageId: () => 'en_US',
+getParentGroupId: () => '3387719',
+getParentSiteGroupId: () => '102028',
+getPathContext: () => '',
+getPathImage: () => '/image',
+getPathJavaScript: () => '/o/frontend-js-web',
+getPathMain: () => '/en/c',
+getPathThemeImages: () => 'https://cdn.webcms.wipo.int/o/wipo-universal-theme/images',
+getPathThemeRoot: () => '/o/wipo-universal-theme',
+getPlid: () => '9530',
+getPortalURL: () => 'https://www.wipo.int',
+getRealUserId: () => '20102',
+getRemoteAddr: () => '10.44.247.9',
+getRemoteHost: () => '10.44.247.9',
+getScopeGroupId: () => '3387719',
+getScopeGroupIdOrLiveGroupId: () => '3387719',
+getSessionId: () => '',
+getSiteAdminURL: () => 'https://www.wipo.int/group/ip-resources/~/control_panel/manage?p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view',
+getSiteGroupId: () => '3387719',
+getTimeZone: () => 'Europe/Paris',
+getURLControlPanel: () => '/en/group/control_panel?refererPlid=9530',
+getURLHome: () => 'https\x3a\x2f\x2fwww\x2ewipo\x2eint\x2fweb\x2fguest',
+getUserEmailAddress: () => '',
+getUserId: () => '20102',
+getUserName: () => '',
+isAddSessionIdToURL: () => false,
+isImpersonated: () => false,
+isSignedIn: () => false,
+isStagedPortlet: () => false,
+isStateExclusive: () => false,
+isStateMaximized: () => false,
+isStatePopUp: () => false,
+},
+Util: {
+Window: {
+	_map: {},
+	getById: (id) => Liferay.Util.Window._map[id],
+},
+openAlertModal: buildESMStub('frontend-js-components-web', 'openAlertModal'),
+openConfirmModal: buildESMStub('frontend-js-components-web', 'openConfirmModal'),
+openModal: buildESMStub('frontend-js-components-web', 'openModal'),
+openSelectionModal: buildESMStub('frontend-js-components-web', 'openSelectionModal'),
+openSimpleInputModal: buildESMStub('frontend-js-components-web', 'openSimpleInputModal'),
+openToast: buildESMStub('frontend-js-components-web', 'openToast'),
+},
+authToken: 'Zw2VF3l1',
+currentURL: '\x2fen\x2fweb\x2fip-resources',
+currentURLEncoded: '\x252Fen\x252Fweb\x252Fip-resources',
+
+	};
+
+	if (window.Liferay) {
+		merge(window.Liferay, __liferay);
+	}
+	else {
+		defineReadOnlyGlobal('Liferay', () => __liferay);
+		defineReadOnlyGlobal('themeDisplay', () => window.Liferay.ThemeDisplay);
+	}
+})();
+</script>
+<script crossorigin="" data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/portal-url-builder-impl/Liferay.js" type="text/javascript"></script><script data-senna-track="permanent" src="/combo?browserId=chrome&minifierType=js&languageId=en_US&t=1785994114476&/o/frontend-js-aui-web/aui/aui/aui-min.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base-min.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex-min.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core-min.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable-min.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras-min.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base-min.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex-min.js&/o/frontend-js-aui-web/aui/oop/oop-min.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang-min.js&/o/frontend-js-aui-web/liferay/dependency.js" type="text/javascript"></script>
+<script crossorigin="" data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/frontend-js-web/Liferay.js" type="text/javascript"></script>
+<script crossorigin="" data-senna-track="permanent" type="module">await import(`@liferay/language/${Liferay.ThemeDisplay.getLanguageId()}/frontend-js-web/all.js`);</script>
+<script data-senna-track="temporary" type="text/javascript">window.__CONFIG__= {basePath: '', combine: true, defaultURLParams: null, explainResolutions: false, exposeGlobal: false, logLevel: 'warn', moduleType: 'module', namespace:'Liferay', nonce: '', reportMismatchedAnonymousModules: 'warn', resolvePath: '/o/js_resolve_modules', url: '/combo/?browserId=chrome&minifierType=js&languageId=en_US&t=1785994114476&', waitTimeout: 60000};</script><script data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/frontend-js-loader-modules-extender/loader.js" type="text/javascript"></script><script data-senna-track="temporary">Liferay.Icons = Liferay.Icons || {};Liferay.Icons.controlPanelSpritemap = 'https://cdn.webcms.wipo.int/o/admin-theme/images/clay/icons.svg'; Liferay.Icons.spritemap = 'https://cdn.webcms.wipo.int/o/wipo-universal-theme/images/clay/icons.svg';</script>
+<script data-senna-track="permanent" type="text/javascript">window.Liferay.CSP = {nonce: ''};</script>
+<script data-senna-track="permanent" src="https://cdn.webcms.wipo.int/o/oauth2-provider-web/__liferay__/global.js" type="module"></script>
+<script data-senna-track="temporary" type="text/javascript">window.Liferay = Liferay || {}; window.Liferay.OAuth2 = {getAuthorizeURL: function() {return 'https://www.wipo.int/o/oauth2/authorize';}, getBuiltInRedirectURL: function() {return 'https://www.wipo.int/o/oauth2/redirect';}, getIntrospectURL: function() { return 'https://www.wipo.int/o/oauth2/introspect';}, getTokenURL: function() {return 'https://www.wipo.int/o/oauth2/token';}, getUserAgentApplication: function(externalReferenceCode) {return Liferay.OAuth2._userAgentApplications[externalReferenceCode];}, _userAgentApplications: {}}</script><script data-senna-track="temporary" type="text/javascript">try {var MODULE_MAIN='@liferay/frontend-js-react-web@5.0.73/index';var MODULE_PATH='/o/frontend-js-react-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			react: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-alloyeditor-web@5.0.66/index';var MODULE_PATH='/o/frontend-editor-alloyeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			alloyeditor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-alloy-editor': {
+						path: 'alloyeditor.js',
+						requires: [
+							'aui-component',
+							'liferay-portlet-base',
+							'timers',
+						],
+					},
+					'liferay-alloy-editor-source': {
+						path: 'alloyeditor_source.js',
+						requires: [
+							'aui-debounce',
+							'liferay-fullscreen-source-editor',
+							'liferay-source-editor',
+							'plugin',
+						],
+					},
+					'liferay-fullscreen-source-editor': {
+						path: 'fullscreen_source_editor.js',
+						requires: ['liferay-source-editor'],
+					},
+					'liferay-source-editor': {
+						path: 'source_editor.js',
+						requires: ['aui-ace-editor'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='calendar-web@5.0.120/index';var MODULE_PATH='/o/calendar-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			calendar: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-calendar-a11y': {
+						path: 'calendar_a11y.js',
+						requires: ['calendar'],
+					},
+					'liferay-calendar-container': {
+						path: 'calendar_container.js',
+						requires: [
+							'aui-alert',
+							'aui-base',
+							'aui-component',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-date-picker-sanitizer': {
+						path: 'date_picker_sanitizer.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-interval-selector': {
+						path: 'interval_selector.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-interval-selector-scheduler-event-link': {
+						path: 'interval_selector_scheduler_event_link.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-list': {
+						path: 'calendar_list.js',
+						requires: [
+							'aui-template-deprecated',
+							'liferay-scheduler',
+						],
+					},
+					'liferay-calendar-message-util': {
+						path: 'message_util.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-calendar-recurrence-converter': {
+						path: 'recurrence_converter.js',
+						requires: [],
+					},
+					'liferay-calendar-recurrence-dialog': {
+						path: 'recurrence.js',
+						requires: [
+							'aui-base',
+							'liferay-calendar-recurrence-util',
+						],
+					},
+					'liferay-calendar-recurrence-util': {
+						path: 'recurrence_util.js',
+						requires: ['aui-base', 'liferay-util-window'],
+					},
+					'liferay-calendar-reminders': {
+						path: 'calendar_reminders.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-remote-services': {
+						path: 'remote_services.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'liferay-calendar-util',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-session-listener': {
+						path: 'session_listener.js',
+						requires: ['aui-base', 'liferay-scheduler'],
+					},
+					'liferay-calendar-simple-color-picker': {
+						path: 'simple_color_picker.js',
+						requires: ['aui-base', 'aui-template-deprecated'],
+					},
+					'liferay-calendar-simple-menu': {
+						path: 'simple_menu.js',
+						requires: [
+							'aui-base',
+							'aui-template-deprecated',
+							'event-outside',
+							'event-touch',
+							'widget-modality',
+							'widget-position',
+							'widget-position-align',
+							'widget-position-constrain',
+							'widget-stack',
+							'widget-stdmod',
+						],
+					},
+					'liferay-calendar-util': {
+						path: 'calendar_util.js',
+						requires: [
+							'aui-datatype',
+							'aui-io',
+							'aui-scheduler',
+							'aui-toolbar',
+							'autocomplete',
+							'autocomplete-highlighters',
+						],
+					},
+					'liferay-scheduler': {
+						path: 'scheduler.js',
+						requires: [
+							'async-queue',
+							'aui-datatype',
+							'aui-scheduler',
+							'dd-plugin',
+							'liferay-calendar-a11y',
+							'liferay-calendar-message-util',
+							'liferay-calendar-recurrence-converter',
+							'liferay-calendar-recurrence-util',
+							'liferay-calendar-util',
+							'liferay-scheduler-event-recorder',
+							'liferay-scheduler-models',
+							'promise',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-event-recorder': {
+						path: 'scheduler_event_recorder.js',
+						requires: [
+							'dd-plugin',
+							'liferay-calendar-util',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-models': {
+						path: 'scheduler_models.js',
+						requires: [
+							'aui-datatype',
+							'dd-plugin',
+							'liferay-calendar-util',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-state-web@1.0.35/index';var MODULE_PATH='/o/frontend-js-state-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			state: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/image-uploader-web@5.0.60/index';var MODULE_PATH='/o/image-uploader-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			imageuploaderweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-logo-editor': {
+						path: 'logo_editor.js',
+						requires: ['aui-image-cropper', 'liferay-portlet-base'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-ckeditor-web@5.0.129/index';var MODULE_PATH='/o/frontend-editor-ckeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			editor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'inline-editor-ckeditor': {
+						path: 'main.js',
+						requires: [
+							'array-invoke',
+							'liferay-inline-editor-base',
+							'node-event-simulate',
+							'overlay',
+							'yui-later',
+						],
+					},
+					'liferay-inline-editor-base': {
+						path: 'inline_editor_base.js',
+						requires: ['aui-base', 'aui-overlay-base-deprecated'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-workflow-kaleo-designer-web@5.0.165/index';var MODULE_PATH='/o/portal-workflow-kaleo-designer-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			'kaleo-designer': {
+				base: MODULE_PATH + '/designer/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-kaleo-designer-autocomplete-util': {
+						path: 'autocomplete_util.js',
+						requires: ['autocomplete', 'autocomplete-highlighters'],
+					},
+					'liferay-kaleo-designer-definition-diagram-controller': {
+						path: 'definition_diagram_controller.js',
+						requires: [
+							'liferay-kaleo-designer-field-normalizer',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-dialogs': {
+						path: 'dialogs.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-kaleo-designer-editors': {
+						path: 'editors.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-base',
+							'aui-datatype',
+							'aui-node',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-field-normalizer': {
+						path: 'field_normalizer.js',
+						requires: ['liferay-kaleo-designer-remote-services'],
+					},
+					'liferay-kaleo-designer-nodes': {
+						path: 'nodes.js',
+						requires: [
+							'aui-datatable',
+							'aui-datatype',
+							'aui-diagram-builder',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-remote-services': {
+						path: 'remote_services.js',
+						requires: ['aui-io'],
+					},
+					'liferay-kaleo-designer-templates': {
+						path: 'templates.js',
+						requires: ['aui-tpl-snippets-deprecated'],
+					},
+					'liferay-kaleo-designer-utils': {
+						path: 'utils.js',
+						requires: [],
+					},
+					'liferay-kaleo-designer-xml-definition': {
+						path: 'xml_definition.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'dataschema-xml',
+							'datatype-xml',
+						],
+					},
+					'liferay-kaleo-designer-xml-definition-serializer': {
+						path: 'xml_definition_serializer.js',
+						requires: ['escape', 'liferay-kaleo-designer-xml-util'],
+					},
+					'liferay-kaleo-designer-xml-util': {
+						path: 'xml_util.js',
+						requires: ['aui-base'],
+					},
+					'liferay-portlet-kaleo-designer': {
+						path: 'main.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-tpl-snippets-deprecated',
+							'dataschema-xml',
+							'datasource',
+							'datatype-xml',
+							'event-valuechange',
+							'io-form',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-nodes',
+							'liferay-kaleo-designer-remote-services',
+							'liferay-kaleo-designer-utils',
+							'liferay-kaleo-designer-xml-util',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/designer/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/layout-js-components-web@1.0.53/index';var MODULE_PATH='/o/layout-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			layout: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-layout': {
+						path: 'layout.js',
+					},
+					'liferay-layout-column': {
+						path: 'layout_column.js',
+						requires: ['aui-sortable-layout', 'dd'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='dynamic-data-mapping-web@5.0.126/index';var MODULE_PATH='/o/dynamic-data-mapping-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	const LiferayAUI = Liferay.AUI;
+
+	AUI().applyConfig({
+		groups: {
+			ddm: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: LiferayAUI.getFilterConfig(),
+				modules: {
+					'liferay-ddm-form': {
+						path: 'ddm_form.js',
+						requires: [
+							'aui-base',
+							'aui-datatable',
+							'aui-datatype',
+							'aui-image-viewer',
+							'aui-parse-content',
+							'aui-set',
+							'aui-sortable-list',
+							'json',
+							'liferay-form',
+							'liferay-map-base',
+							'liferay-translation-manager',
+							'liferay-util-window',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'main.js',
+						requires: [
+							'arraysort',
+							'aui-form-builder-deprecated',
+							'aui-form-validator',
+							'aui-map',
+							'aui-text-unicode',
+							'json',
+							'liferay-menu',
+							'liferay-translation-manager',
+							'liferay-util-window',
+							'text',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping-custom-fields': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'custom_fields.js',
+						requires: ['liferay-portlet-dynamic-data-mapping'],
+					},
+					'liferay-translation-manager': {
+						path: 'translation_manager.js',
+						requires: ['aui-base'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='exportimport-web@5.0.118/index';var MODULE_PATH='/o/exportimport-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			exportimportweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-export-import-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='staging-processes-web@5.0.72/index';var MODULE_PATH='/o/staging-processes-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			stagingprocessesweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-staging-processes-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-search-web@6.0.169/index';var MODULE_PATH='/o/portal-search-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			search: {
+				base: MODULE_PATH + '/js/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-search-custom-range-facet': {
+						path: 'custom_range_facet.js',
+						requires: ['aui-form-validator'],
+					},
+				},
+				root: MODULE_PATH + '/js/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='contacts-web@5.0.71/index';var MODULE_PATH='/o/contacts-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			contactscenter: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-contacts-center': {
+						path: 'main.js',
+						requires: [
+							'aui-io-plugin-deprecated',
+							'aui-toolbar',
+							'autocomplete-base',
+							'datasource-io',
+							'json-parse',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-js-components-web@2.0.100/index';var MODULE_PATH='/o/frontend-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			components: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/document-library-web@6.0.220/index';var MODULE_PATH='/o/document-library-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			dl: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'document-library-upload-component': {
+						path: 'DocumentLibraryUpload.js',
+						requires: [
+							'aui-component',
+							'aui-data-set-deprecated',
+							'aui-overlay-manager-deprecated',
+							'aui-overlay-mask-deprecated',
+							'aui-parse-content',
+							'aui-progressbar',
+							'aui-template-deprecated',
+							'liferay-search-container',
+							'querystring-parse-simple',
+							'uploader',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='site-navigation-menu-web@6.0.82/index';var MODULE_PATH='/o/site-navigation-menu-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			navigationmenuweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-navigation-interaction': {
+						path: 'navigation_interaction.js',
+						plugins: {
+							'liferay-navigation-interaction-touch': {
+								condition: {
+									name: 'liferay-navigation-interaction-touch',
+									test(A) {
+										return A.UA.touchEnabled;
+									},
+									trigger: 'liferay-navigation-interaction',
+								},
+							},
+						},
+						requires: [
+							'aui-base',
+							'aui-component',
+							'event-mouseenter',
+							'node-focusmanager',
+							'plugin',
+						],
+					},
+					'liferay-navigation-interaction-touch': {
+						path: 'navigation_interaction_touch.js',
+						requires: [
+							'event-tap',
+							'event-touch',
+							'liferay-navigation-interaction',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}</script>
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+		
+			
+				
+				
+			
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+	
+		
+		
+
+			
+
+			
+		
+		
+	
+
+
+
+	
+		
+
+			
+
+			
+		
+		
+		
+	
+
+
+
+	
+		
+		
+		
+
+			
+
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.wipo.int/o/wipo-universal-theme/css/main.css?browserId=chrome&amp;themeId=wipouniversaltheme_WAR_wipouniversaltheme&amp;minifierType=css&amp;languageId=en_US&amp;t=1785994158000" id="liferayThemeCSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+	</style>
+
+
+<style data-senna-track="temporary" type="text/css">
+</style>
+<link data-senna-track="temporary" href="/o/layout-common-styles/main.css?plid=9530&segmentsExperienceId=3387793&t=1785998005044" rel="stylesheet" type="text/css"><script type="module">
+import {init} from 'https://cdn.webcms.wipo.int/o/frontend-js-spa-web/__liferay__/index.js';
+{
+init({"navigationExceptionSelectors":":not([data-cke-saved-href]):not([data-cke-saved-href]):not([target=\"_blank\"]):not([data-senna-off]):not([data-resource-href])","cacheExpirationTime":-1,"clearScreensCache":false,"portletsBlacklist":["com_liferay_login_web_portlet_CreateAccountPortlet","com_liferay_nested_portlets_web_portlet_NestedPortletsPortlet","com_liferay_site_navigation_directory_web_portlet_SitesDirectoryPortlet","com_liferay_questions_web_internal_portlet_QuestionsPortlet","com_liferay_account_admin_web_internal_portlet_AccountUsersRegistrationPortlet","com_liferay_login_web_portlet_ForgotPasswordPortlet","com_liferay_portal_language_override_web_internal_portlet_PLOPortlet","com_liferay_digital_sales_room_web_internal_portlet_DigitalSalesRoomInviteMemberPortlet","com_liferay_login_web_portlet_LoginPortlet","com_liferay_login_web_portlet_UpdatePasswordPortlet","com_liferay_login_web_portlet_FastLoginPortlet"],"excludedTargetPortlets":["com_liferay_users_admin_web_portlet_UsersAdminPortlet","com_liferay_server_admin_web_portlet_ServerAdminPortlet"],"validStatusCodes":[221,490,494,499,491,496,492,493,495,220],"debugEnabled":false,"loginRedirect":"","excludedPaths":["/c/document_library","/documents","/image","/o/cms/download-folder","/o/cms/translations"],"preloadCSS":false,"userNotification":{"message":"It looks like this is taking longer than expected.","title":"Oops","timeout":30000},"requestTimeout":0});
+}
+
+</script><link data-senna-track="permanent" href="https://cdn.webcms.wipo.int/o/frontend-js-aui-web/alloy_ui.css" rel="stylesheet"></link>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+Liferay.on(
+	'ddmFieldBlur', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldBlurred',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					focusDuration: event.focusDuration,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFieldFocus', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldFocused',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title:event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormPageShow', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'pageViewed',
+				'Form',
+				{
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormSubmit', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formSubmitted',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormView', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formViewed',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	if (window.Analytics) {
+		window._com_liferay_document_library_analytics_isViewFileEntry = false;
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- css universal start -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;300;400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
+<link rel="stylesheet" href="https://webcomponents.wipo.int/wipo-navbar/ulf-fonts.css"> 
+<!-- css universal end -->
+<!-- Start Navbar Component-->
+	<style>
+        @font-face {
+          font-family: 'simplon';
+          font-weight: 400;
+          src: url("https://webcomponents.wipo.int/fonts/SimplonNorm-Regular-WebXL.woff2")
+        }
+        @font-face {
+          font-family: 'simplon';
+          font-weight: 500;
+          src: url("https://webcomponents.wipo.int/fonts/SimplonNorm-Medium-WebXL.woff2")
+        }
+        @font-face {
+          font-family: 'simplon';
+          font-weight: 700;
+          src: url("https://webcomponents.wipo.int/fonts/SimplonNorm-Bold-WebXL.woff2")
+        }
+      </style>
+<script src='https://cdn.webcms.wipo.int/o/wipo-universal-theme/js/cookie.js'></script>
+<script type="module" src="https://cdnjs.wipo.int/universal-lf-webcomponents/latest/components/wipo-footer.js"></script>
+<link rel="stylesheet" href="https://cdnjs.wipo.int/universal-lf-webcomponents/latest/style/footer.css">
+<script src="https://webcomponents.wipo.int/polyfills/webcomponents-loader.js"></script>
+<script src="https://webcomponents.wipo.int/wipo-navbar/wipo-navbar.js"></script>    
+<!-- End Navbar Component -->	<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+'ad_storage': 'granted',
+'ad_user_data': 'denied',
+'ad_personalization': 'denied',
+'analytics_storage': 'granted'
+});
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.wipo.int/metrics/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P7RLS2');</script>
+<!-- End Google Tag Manager -->
+<!-- Start Matomo -->
+<script type="text/javascript" src="https://webcomponents.wipo.int/wipo-analytics/wipo-analytics-oj6DkAWh.js"></script>
+<!-- End Matomo -->
+<!-- Start CrazzyEgg -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0115/2064.js" async="async"></script>
+<!-- End CrazzyEgg -->
+
+</head>
+<body  class="ulf-wipo" data-spy="scroll" data-target="#ulf-toc" id="wipo-int">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<nav aria-label="Quick Links" class="bg-dark cadmin quick-access-nav text-center text-white" id="osca_quickAccessNav">
+		
+			
+				<a class="d-block p-2 sr-only sr-only-focusable text-reset" href="#main-content">
+		Skip to Main Content
+	</a>
+			
+			
+		
+	</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d-flex flex-column min-vh-100">
+<header class="container-navbar-outer" id="container-navbar-outer">
+    <nav class="container-fluid container-fluid-max-xl">
+        <wipo-navbar
+                full-mode
+                language = 'en'
+                languageOptions = '[{"code":"ar","link":"/en/c/portal/update_language?p_l_id=9530&redirect=%2Fen%2Fweb%2Fip-resources&languageId=ar_SA"},{"code":"en"},{"code":"es","link":"/en/c/portal/update_language?p_l_id=9530&redirect=%2Fen%2Fweb%2Fip-resources&languageId=es_ES"},{"code":"fr","link":"/en/c/portal/update_language?p_l_id=9530&redirect=%2Fen%2Fweb%2Fip-resources&languageId=fr_FR"},{"code":"ru","link":"/en/c/portal/update_language?p_l_id=9530&redirect=%2Fen%2Fweb%2Fip-resources&languageId=ru_RU"},{"code":"zh","link":"/en/c/portal/update_language?p_l_id=9530&redirect=%2Fen%2Fweb%2Fip-resources&languageId=zh_CN"}]'
+        customBreadcrumbs = '[{"itemName":"IP Resources","itemURL":"/en/web/ip-resources"}]'
+            helpOptions = '[{
+            "code": "contact",
+            "link": "https://www.wipo.int/contact/en/area.jsp?area=",
+            "sameTab": "false"
+            },
+            {
+            "code": "termsOfUse",
+            "link": "https://www.wipo.int/en/web/terms-of-use"
+            },
+            {
+            "code": "privacyPolicy",
+            "link": "https://www.wipo.int/en/web/privacy-policy"
+            }]'
+            >
+    <div style="height: 48px; width: 100%"></div>
+</wipo-navbar></nav></header><!--SEO links -->
+<div id="wipo-seo-links" class="hide"><div style="display: none">	
+	<a href="https://www.wipo.int/en/web/about-ip">About Intellectual Property</a>
+	<a href="https://www.wipo.int/en/web/about-ip#training">IP Training</a>
+	<a href="https://www.wipo.int/en/web/respect-for-ip">Respect for IP</a>
+	<a href="https://www.wipo.int/en/web/ip-outreach">IP Outreach</a>
+	<a href="https://www.wipo.int/en/web/about-ip#for">IP for…</a>
+	<a href="https://www.wipo.int/en/web/about-ip#and">IP and...</a>
+	<a href="https://www.wipo.int/en/web/about-ip#in">IP in...</a>
+	<a href="https://www.wipo.int/en/web/patents/patent-information">Patent & Technology Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#trademarks">Trademark Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#designs">Design Information</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#geographical-indications">Geographical Indication Information</a>
+	<a href="https://www.upov.int/">Plant Variety Information (UPOV)</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#legal">IP Laws, Treaties & Judgments</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#analysis">IP Resources</a>
+	<a href="https://www.wipo.int/en/web/ip-resources#reports">IP Reports</a>
+	<a href="https://www.wipo.int/en/web/patents/protection">Patent Protection</a>
+	<a href="https://www.wipo.int/en/web/trademarks/protection">Trademark Protection</a>
+	<a href="https://www.wipo.int/en/web/designs/protection">Design Protection</a>
+	<a href="https://www.wipo.int/en/web/geographical-indications/protection">Geographical Indication Protection</a>
+	<a href="https://www.upov.int/portal/index.html.en">Plant Variety Protection (UPOV)</a>
+	<a href="https://www.wipo.int/en/web/amc">IP Dispute Resolution</a>
+	<a href="https://www.wipo.int/en/web/ip-office-business-solutions">IP Office Business Solutions</a>
+	<a href="https://www.wipo.int/en/web/paying-for-ip-services">Paying for IP Services</a>
+	<a href="https://www.wipo.int/en/web/decision-making-and-negotiating-bodies">Negotiation & Decision-Making</a>
+	<a href="https://www.wipo.int/en/web/cooperation">IP Cooperation</a>
+	<a href="https://www.wipo.int/en/web/patents#technology">Innovation Support</a>
+	<a href="https://www.wipo.int/en/web/cooperation/public-private-partnerships">Public-Private Partnerships</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services">AI Tools & Services</a>
+	<a href="https://www.wipo.int/en/web/about-wipo">The Organization</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo">Working at WIPO</a>
+	<a href="https://www.wipo.int/en/web/about-wipo#accountability">Accountability</a>
+	<a href="https://www.wipo.int/en/web/patents">Patents</a>
+	<a href="https://www.wipo.int/en/web/trademarks">Trademarks</a>
+	<a href="https://www.wipo.int/en/web/designs">Designs</a>
+	<a href="https://www.wipo.int/en/web/geographical-indications">Geographical Indications</a>
+	<a href="https://www.wipo.int/en/web/copyright">Copyright</a>
+	<a href="https://www.wipo.int/en/web/trade-secrets">Trade Secrets</a>
+	<a href="https://www.wipo.int/en/web/future-of-ip">Future of IP</a>
+	<a href="https://www.wipo.int/en/web/wipo-academy">WIPO Academy</a>
+	<a href="https://www.wipo.int/meetings/en/topic_type.jsp?group_id=242">Workshops & Seminars</a>
+	<a href="https://www.wipo.int/en/web/ip-enforcement">IP Enforcement</a>
+	<a href="https://www.wipo.int/en/web/wipo-alert">WIPO ALERT</a>
+	<a href="https://www.wipo.int/en/web/respect-for-ip/awareness-raising">Raising Awareness</a>
+	<a href="https://www.wipo.int/en/web/ipday">World IP Day</a>
+	<a href="https://www.wipo.int/en/web/wipo-magazine">WIPO Magazine</a>
+	<a href="https://www.wipo.int/en/web/ip-advantage">Case Studies & Success Stories</a>
+	<a href="https://www.wipo.int/en/web/news/explore">IP News</a>
+	<a href="https://www.wipo.int/en/web/awards">WIPO Awards</a>
+	<a href="https://www.wipo.int/en/web/business">Business</a>
+	<a href="https://www.wipo.int/en/web/women">Women</a>
+	<a href="https://www.wipo.int/en/web/universities">Universities</a>
+	<a href="https://www.wipo.int/en/web/traditional-knowledge/engagement">Indigenous Peoples</a>
+	<a href="https://www.wipo.int/en/web/judiciaries">Judiciaries</a>
+	<a href="https://www.wipo.int/en/web/youth-engagement">Youth</a>
+	<a href="https://www.wipo.int/en/web/examiners">Examiners</a>
+	<a href="https://www.wipo.int/en/web/innovation-ecosystems">Innovation Ecosystems</a>
+	<a href="https://www.wipo.int/en/web/economics">Economics</a>
+	<a href="https://www.wipo.int/en/web/ip-financing">Finance</a>
+	<a href="https://www.wipo.int/en/web/intangible-assets">Intangible Assets</a>
+	<a href="https://www.wipo.int/en/web/global-health">Global Health</a>
+	<a href="https://www.wipo.int/en/web/climate-change">Climate Change</a>
+	<a href="https://www.wipo.int/en/web/competition-policy">Competition Policy</a>
+	<a href="https://www.wipo.int/en/web/sdgs">Sustainable Development Goals</a>
+	<a href="https://www.wipo.int/en/web/traditional-knowledge">Genetic Resources, Traditional Knowledge and Traditional Cultural Expressions</a>
+	<a href="https://www.wipo.int/en/web/frontier-technologies">Frontier Technologies</a>
+	<a href="https://www.wipo.int/en/web/mobile-apps">Mobile Applications</a>
+	<a href="https://www.wipo.int/en/web/sports">Sports</a>
+	<a href="https://www.wipo.int/en/web/tourism">Tourism</a>
+	<a href="https://www.wipo.int/en/web/music">Music</a>
+	<a href="https://www.wipo.int/en/web/fashion">Fashion</a>
+	<a href="https://www.wipo.int/en/web/patentscope">PATENTSCOPE</a>
+	<a href="https://www.wipo.int/en/web/patent-analytics">Patent Analytics</a>
+	<a href="https://www.wipo.int/en/web/classification-ipc">International Patent Classification</a>
+	<a href="https://www.wipo.int/en/web/ardi">ARDI – Research for Innovation</a>
+	<a href="https://www.wipo.int/en/web/aspi">ASPI – Specialized Patent Information</a>
+	<a href="https://www.wipo.int/en/web/global-brand-database">Global Brand Database</a>
+	<a href="https://www3.wipo.int/madrid/monitor/en/">Madrid Monitor</a>
+	<a href="https://6ter.wipo.int/struct-search">Article 6ter Express Database</a>
+	<a href="https://www.wipo.int/en/web/classification-nice">Nice Classification</a>
+	<a href="https://www.wipo.int/en/web/classification-vienna">Vienna Classification</a>
+	<a href="https://www.wipo.int/en/web/global-design-database">Global Design Database</a>
+	<a href="https://hague.wipo.int/#/bulletin/browse-by-bulletin">International Designs Bulletin</a>
+	<a href="https://designdb.wipo.int/designdb/hague/en/">Hague Express Database</a>
+	<a href="https://www.wipo.int/en/web/classification-locarno">Locarno Classification</a>
+	<a href="https://lisbon-express.wipo.int/">Lisbon Express Database</a>
+	<a href="https://branddb.wipo.int/en/IPO-LISBON/quicksearch?by=brandName&v=&start=0&_=1676544734688">Global Brand Database for GIs</a>
+	<a href="https://pluto.upov.int/">PLUTO Plant Variety Database</a>
+	<a href="https://www.upov.int/genie/">GENIE Database</a>
+	<a href="https://www.wipo.int/en/web/treaties">WIPO-Administered Treaties</a>
+	<a href="https://www.wipo.int/en/web/wipolex">WIPO Lex - IP Laws, Treaties & Judgments</a>
+	<a href="https://www.wipo.int/en/web/standards">WIPO Standards</a>
+	<a href="https://www.wipo.int/en/web/ip-statistics">IP Statistics</a>
+	<a href="https://www.wipo.int/en/web/wipo-pearl">WIPO Pearl (Terminology)</a>
+	<a href="https://www.wipo.int/publications/en/">WIPO Publications</a>
+	<a href="https://www.wipo.int/en/web/country-profiles">Country IP Profiles</a>
+	<a href="https://www.wipo.int/en/web/wipo-knowledge-center">WIPO Knowledge Center</a>
+	<a href="https://www.wipo.int/en/web/intangible-assets/measuring-investments#highlights">World Intangible Investment Highlights</a>
+	<a href="https://www.wipo.int/en/web/technology-trends">WIPO Technology Trends</a>
+	<a href="https://www.wipo.int/en/web/global-innovation-index">Global Innovation Index</a>
+	<a href="https://www.wipo.int/en/web/world-ip-report">World Intellectual Property Report</a>
+	<a href="https://www.wipo.int/en/web/pct-system">PCT – The International Patent System</a>
+	<a href="https://pct.wipo.int/ePCT/">ePCT</a>
+	<a href="https://www.wipo.int/en/web/budapest-system">Budapest – The International Microorganism Deposit System</a>
+	<a href="https://www.wipo.int/en/web/madrid-system">Madrid – The International Trademark System</a>
+	<a href="https://madrid.wipo.int/">eMadrid</a>
+	<a href="https://www.wipo.int/en/web/article-6ter">Article 6ter (armorial bearings, flags, state emblems)</a>
+	<a href="https://www.wipo.int/en/web/hague-system">Hague – The International Design System</a>
+	<a href="https://hague.wipo.int/">eHague</a>
+	<a href="https://www.wipo.int/en/web/lisbon-system">Lisbon – The International System of Appellations of Origin and Geographical Indications</a>
+	<a href="https://lisbon-system.wipo.int/">eLisbon</a>
+	<a href="https://www3.wipo.int/upovprisma">UPOV PRISMA</a>
+	<a href="https://www.wipo.int/en/web/amc#mediation">Mediation</a>
+	<a href="https://www.wipo.int/en/web/amc#arbitration">Arbitration</a>
+	<a href="https://www.wipo.int/en/web/amc#expert-determination">Expert Determination</a>
+	<a href="https://www.wipo.int/en/web/amc/domain-name-disputes">Domain Name Disputes</a>
+	<a href="https://www.wipo.int/en/web/case">Centralized Access to Search and Examination (CASE)</a>
+	<a href="https://www.wipo.int/en/web/das">Digital Access Service (DAS)</a>
+	<a href="https://www.wipo.int/en/web/wipo-pay">WIPO Pay</a>
+	<a href="https://www.wipo.int/en/web/current-account-at-wipo">Current Account at WIPO</a>
+	<a href="https://www.wipo.int/en/web/assemblies">WIPO Assemblies</a>
+	<a href="https://www.wipo.int/en/web/decision-making-and-negotiating-bodies#bodies">Standing Committees</a>
+	<a href="https://www.wipo.int/meetings/en/">Calendar of Meetings</a>
+	<a href="https://webcast.wipo.int/">WIPO Webcast</a>
+	<a href="https://www.wipo.int/meetings/en/archive.jsp">WIPO Official Documents</a>
+	<a href="https://www.wipo.int/en/web/development-agenda">Development Agenda</a>
+	<a href="https://www.wipo.int/en/web/cooperation/tailored-initiatives">Tailored Initiatives & Projects</a>
+	<a href="https://www.wipo.int/en/web/cooperation/collaborative-forums">Collaborative Forums & Dialogues</a>
+	<a href="https://www.wipo.int/en/web/innovation-creativity-and-development-acceleration-program">Innovation, Creativity and Development Acceleration Program</a>
+	<a href="https://www.wipo.int/pressroom/en/stories/">IP for Impact</a>
+	<a href="https://www.wipo.int/en/web/national-ip-strategies">National IP Strategies</a>
+	<a href="https://www.wipo.int/en/web/cooperation/cooperation-hub">Cooperation Hub</a>
+	<a href="https://www.wipo.int/en/web/tisc">Technology and Innovation Support Centers (TISC)</a>
+	<a href="https://www.wipo.int/en/web/technology-transfer">Technology Transfer</a>
+	<a href="https://www.wipo.int/en/web/inventor-assistance-program">Inventor Assistance Program</a>
+	<a href="https://www3.wipo.int/wipogreen/en/">WIPO GREEN</a>
+	<a href="https://www.wipo.int/pat-informed/en/">WIPO's Pat-INFORMED</a>
+	<a href="https://www.accessiblebooksconsortium.org/en/portal/index">Accessible Books Consortium</a>
+	<a href="https://www.wipo.int/en/web/wipo-for-creators">WIPO for Creators</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/wipo-translate">WIPO Translate</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/speech-to-text">Speech-to-Text</a>
+	<a href="https://www.wipo.int/en/web/ai-tools-services/classification-assistant">Classification Assistant</a>
+	<a href="https://www.wipo.int/members/en/">Member States</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/observers">Observers</a>
+	<a href="https://www.wipo.int/en/web/director-general">Director General</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/activities-by-unit">Activities by Unit</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/offices">External Offices</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo#staff">Staff Positions</a>
+	<a href="https://www.wipo.int/en/web/working-at-wipo#affiliated">Affiliated Personnel Positions</a>
+	<a href="https://www.wipo.int/en/web/procurement">Procurement</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/budget">Results & Budget</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/budget/financial">Financial Reporting</a>
+	<a href="https://www.wipo.int/en/web/about-wipo/oversight">Oversight</a>
+</div></div>	
+<div class="d-flex flex-column flex-fill position-relative" id="wrapper">
+	<section class=" flex-fill" id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		<div class="layout-content portlet-layout" id="main-content" role="main">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	<div class="lfr-layout-structure-item-4d922add-42ce-6c0a-4498-4a3d207a87b4 lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="4d922add-42ce-6c0a-4498-4a3d207a87b4"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-0ddbcb4f-162d-4453-2bb0-56914f432add " data-layout-structure-item-id="0ddbcb4f-162d-4453-2bb0-56914f432add"><div id="fragment-3285ce84-3cc2-d7f3-0ee9-92a907c2c1d5" > <div class="row row-heading" id="intro">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-1b5defa3-9f5f-ad01-07c6-3eaecf6f4cb4 " data-layout-structure-item-id="1b5defa3-9f5f-ad01-07c6-3eaecf6f4cb4"><div id="fragment-c5ffd669-ed2f-d9c5-de5a-cdad96bebe7f"> <h1 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Intellectual Property Resources</h1></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-83658ffb-f20c-15e9-ec08-54eb949cc0ed lfr-layout-structure-item-row " data-layout-structure-item-id="83658ffb-f20c-15e9-ec08-54eb949cc0ed"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-8 col-sm-12 col-12 col-md-8"><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-4d193de8-029b-5f8e-f617-31ed10cd1226 " data-layout-structure-item-id="4d193de8-029b-5f8e-f617-31ed10cd1226"><div id="fragment-0be9688b-d121-6022-4bda-353aa8ffc259" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p><span class="lead">WIPO is the world's most comprehensive source of data on the&nbsp;<a href="https://www.wipo.int/about-ip/en/">intellectual property</a>&nbsp;(IP) system, as well as of empirical studies, reports and factual information on IP.</span></p>
+
+
+</div></div><style >.component-paragraph img {
+	max-width: 100%;
+}</style></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-c6b33504-f6f5-8437-e59b-d1553c042ff7 " data-layout-structure-item-id="c6b33504-f6f5-8437-e59b-d1553c042ff7"><div id="fragment-ea4b2f32-4daa-2387-78c4-0008f8b3ebdc" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><span class="lead">Whether you are seeking statistical, legal or technical information, this page is a gateway to our unique collections of resources and reference material. We make all our publications and data collections freely available online.</span></div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-w-top-image-u--copy- lfr-layout-structure-item-b23aa457-cbb7-5a08-65bd-e51f1d0efd72 " data-layout-structure-item-id="b23aa457-cbb7-5a08-65bd-e51f1d0efd72"><div id="fragment-6959bc9d-e099-8647-a552-62adbc661a13" > <div class="card feature-highlight-card">
+<div class="feature-highlight" id="card-feature">Featured</div>
+	<figure class="figure">	
+	
+	<figcaption class="credit">
+	<div>IMAGE: WIPO/Berrod</div>
+	</figcaption>
+	<a href="https://www.wipo.int/library/en/index.html"><img src="/documents/d/wipo-knowledge-center/images-wipo_library_500.jpg" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+		<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/library/en/index.html">WIPO Knowledge Center</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-c51eec91-d7a2-85b3-fa5b-1015c8fdbe32 " data-layout-structure-item-id="c51eec91-d7a2-85b3-fa5b-1015c8fdbe32"><div id="fragment-fc654902-1a5f-5638-18e1-9fb613a56046"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">The WIPO Knowledge Center (WKC) offers a unique collection of more than 35,000 IP reference materials, ranging from historical legal texts to the most recent IP journals.</div></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-d2e0d7a8-daeb-9ff4-31ff-9c245db2a0bc " data-layout-structure-item-id="d2e0d7a8-daeb-9ff4-31ff-9c245db2a0bc"><div id="fragment-662c7f03-81fc-cbda-9cb9-4c2e5f5c5591" > <div class="card ">
+	<figure class="figure">	
+	
+	<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/showcase/wipo-knowledge-and-resources"><img src="/documents/d/wipo-knowledge-center/images-knowledge-resources-linkdein-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text">Knowledge and Resources is Up on LinkedIn!</h2>
+	<div><div class="lfr-layout-structure-item-basic-component-button lfr-layout-structure-item-74f24cb6-3779-a6c0-a15d-771e861e7156 " data-layout-structure-item-id="74f24cb6-3779-a6c0-a15d-771e861e7156"><div id="fragment-652e17f4-b235-916e-b452-fdaf4f494850"> 		<div class="component-button text-break">
+			<a class="btn btn-nm btn-secondary" data-lfr-editable-id="link" data-lfr-editable-type="link" href="https://www.linkedin.com/showcase/wipo-knowledge-and-resources" id="fragment-hzif-link" target="_blank" rel="noopener noreferrer">Join us</a>
+		</div>
+</div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-card-w-top-image-u--copy- lfr-layout-structure-item-1f1b8cb5-fde4-258d-61b2-0864b0d601fe ulf-hide-en" data-layout-structure-item-id="1f1b8cb5-fde4-258d-61b2-0864b0d601fe"><div id="fragment-0fe64703-8c24-37d6-586c-ae21a1dd2611" > <div class="card feature-highlight-card">
+<div class="feature-highlight" id="card-feature">Featured</div>
+	<figure class="figure">	
+	<img src="/documents/d/wipo-knowledge-center/images-wipo_library_500.jpg" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image">
+	<figcaption class="credit">
+	<div>IMAGE: WIPO/Berrod</div>
+	</figcaption>
+	</figure>	
+	<div class="card-body">
+		<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/web/wipo-knowledge-center">WIPO Knowledge Center</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-dd4d3b48-b12c-68df-8526-c31c342afca1 " data-layout-structure-item-id="dd4d3b48-b12c-68df-8526-c31c342afca1"><div id="fragment-2bd3b112-6587-f2f0-5f63-6e40f763f2aa"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">The WIPO Knowledge Center (WKC) offers a unique collection of more than 35,000 IP reference materials, ranging from historical legal texts to the most recent IP journals.</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-7a1121b6-bd84-e66e-93f9-b60c8ecae97a lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="7a1121b6-bd84-e66e-93f9-b60c8ecae97a"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-a0114799-d9aa-26db-1eb2-6a0e039c2acc " data-layout-structure-item-id="a0114799-d9aa-26db-1eb2-6a0e039c2acc"><div id="fragment-c40f4d87-3cad-83e9-798b-118733450fff" > <div class="row row-heading" id="patents">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-29ac7884-5311-6b47-4cec-6331262632f0 " data-layout-structure-item-id="29ac7884-5311-6b47-4cec-6331262632f0"><div id="fragment-42389270-0638-5039-d729-99ed58b99a98"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Patent information</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-0c03d97a-6c7a-abda-af59-6b775b60e7a2 lfr-layout-structure-item-row " data-layout-structure-item-id="0c03d97a-6c7a-abda-af59-6b775b60e7a2"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-6645b37a-46f2-a85f-58a5-e1393f26641c " data-layout-structure-item-id="6645b37a-46f2-a85f-58a5-e1393f26641c"><div id="fragment-3bc0ec76-7c36-245f-287d-433fb4fd03c3" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a target="_self" href="https://www.wipo.int/patentscope/en/">PATENTSCOPE</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-acd9e500-5993-82bb-d7c7-ba36fb81d950 " data-layout-structure-item-id="acd9e500-5993-82bb-d7c7-ba36fb81d950"><div id="fragment-4973cee2-ce9c-6ae7-a727-0975d9b32145"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+<p>Search the PATENTSCOPE database for more than 122.5&nbsp;million patent documents, including international&nbsp;<a href="https://www.wipo.int/pct/en/">Patent Cooperation Treaty (PCT)</a>&nbsp;applications and patent documents of participating national and regional patent offices.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-01681915-9255-7ea5-b6f5-d3104dca26ee " data-layout-structure-item-id="01681915-9255-7ea5-b6f5-d3104dca26ee"><div id="fragment-d94aebec-cc04-bae1-1370-a97398c6d1a2" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a target="_self" href="https://www.wipo.int/classifications/ipc/en/">IPC — Streamlining searches</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-c870bd8d-94f9-e9ab-2fcd-009bd8c606aa " data-layout-structure-item-id="c870bd8d-94f9-e9ab-2fcd-009bd8c606aa"><div id="fragment-a7967a41-025c-6bbc-52b7-20ede88af703"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Use the International Patent Classification (IPC), updated annually, to classify patents and utility models according to the different areas of technology to which they relate.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-f2feb207-b38e-70e4-c817-ff2a5b80eeb7 " data-layout-structure-item-id="f2feb207-b38e-70e4-c817-ff2a5b80eeb7"><div id="fragment-11613e5d-1296-90bd-6c67-59a416b5cef8" > <div class="card ">
+	<div class="card-body">
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-3918fe35-7fc1-6be3-37cb-1770a2d68f46 " data-layout-structure-item-id="3918fe35-7fc1-6be3-37cb-1770a2d68f46"><div id="fragment-3fb1ea9b-40a9-241f-01ea-0ac4713979e1"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p>Explore more&nbsp;<a href="https://www.wipo.int/patents/en/patent-information.html">patent and technology information</a>&nbsp;tools or learn how to analyze patent data with our resources on&nbsp;<a href="/web/patent-analytics">patent analytics</a>.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-44def0bc-8596-e2c5-a55f-c89b4ecba31a lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="44def0bc-8596-e2c5-a55f-c89b4ecba31a"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-4c2e20a2-ae92-80ad-a2ac-6a1e83140fad " data-layout-structure-item-id="4c2e20a2-ae92-80ad-a2ac-6a1e83140fad"><div id="fragment-9091f8cd-405b-8581-e7a1-635c64e4e2ce" > <div class="row row-heading" id="trademarks">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-6f1c5dc4-26c0-3648-061e-ec8522c5dfe1 " data-layout-structure-item-id="6f1c5dc4-26c0-3648-061e-ec8522c5dfe1"><div id="fragment-9b19160e-745b-ed75-a47e-b1f529dd141d"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Trademark information</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-f3e73ee8-1195-00f5-21d6-deebc6ad407b lfr-layout-structure-item-row " data-layout-structure-item-id="f3e73ee8-1195-00f5-21d6-deebc6ad407b"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-33c5e677-af0d-95ff-0e27-bb2ac69e802f " data-layout-structure-item-id="33c5e677-af0d-95ff-0e27-bb2ac69e802f"><div id="fragment-2d209c44-c30d-16b7-adf3-38e5582d1f8a" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/reference/en/branddb/">Global Brand Database</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-b5e9bf79-0f22-5554-02e2-4286292487eb " data-layout-structure-item-id="b5e9bf79-0f22-5554-02e2-4286292487eb"><div id="fragment-9bf1bd79-9575-c0c0-0770-95fb3fd20cc1"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search <strong>brand information</strong>
+ (trademarks, appellations of origin and official emblems) from multiple national and international sources, including WIPO’s Madrid System.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-40122d4d-1aaa-aaf0-d48a-38f7ec42ac9e " data-layout-structure-item-id="40122d4d-1aaa-aaf0-d48a-38f7ec42ac9e"><div id="fragment-710b5dde-4617-34b9-a4ed-7995bb96f81a" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="https://www3.wipo.int/madrid/monitor/en/">Madrid Monitor</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-5d73d8aa-c5d3-e227-6570-400ee401befa " data-layout-structure-item-id="5d73d8aa-c5d3-e227-6570-400ee401befa"><div id="fragment-25962948-aa9a-bfed-c84e-4a8a2b1e0ae4"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Access up-to-date details on the <strong>status </strong>
+of trademarks registered under the Madrid System (trademarks which are currently in force or have expired within the past six months).</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-9844bec1-3909-3e60-9a8d-d949430e011e " data-layout-structure-item-id="9844bec1-3909-3e60-9a8d-d949430e011e"><div id="fragment-c94d3aea-c470-0b15-88bc-3b74b07287a6" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="https://6ter.wipo.int/struct-search?lang=en">Article 6ter Express Database</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-cfb3efce-2791-8e31-e09e-d9de75aae781 " data-layout-structure-item-id="cfb3efce-2791-8e31-e09e-d9de75aae781"><div id="fragment-a850af06-7994-4b7e-ebf6-b73b36b38b8c"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search for the <strong>State emblems</strong>
+, and names, abbreviations and other emblems of IGOs, which have been communicated for protection under Article 6ter.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-5191da11-cbbe-e2c8-c1ab-6333b102f00a " data-layout-structure-item-id="5191da11-cbbe-e2c8-c1ab-6333b102f00a"><div id="fragment-60740e4b-d144-d482-b860-604919e801c1" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a target="_self" href="https://www.wipo.int/classifications/nice/en/">Nice Classification (NCL)</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-c8f702b6-1bc3-b898-3669-e1a997e792b5 " data-layout-structure-item-id="c8f702b6-1bc3-b898-3669-e1a997e792b5"><div id="fragment-4b8e9403-0a04-fc3b-df7f-66b1dedaaa83"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search through the NCL system to find classified goods and services applied for the registration of marks. Since 2013, a new version of each edition is published annually.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-94908987-df76-5cd1-1241-322fc33e25a1 " data-layout-structure-item-id="94908987-df76-5cd1-1241-322fc33e25a1"><div id="fragment-d0750ead-af56-e276-a1e2-b32a6304a822" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a target="_self" href="https://www.wipo.int/classifications/vienna/en/">Vienna Classification (VCL)</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-5c57a508-943a-e8d2-42a1-19d8724d5d02 " data-layout-structure-item-id="5c57a508-943a-e8d2-42a1-19d8724d5d02"><div id="fragment-bda16310-c3a1-9c3b-cd72-2d6715df70a6"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search this hierarchical classification system to find figurative elements of marks by categories, divisions and sections, on the basis of their shape.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"></div></div></div></div><div class="lfr-layout-structure-item-31851e4c-eb7b-6c04-625d-ced7d7f3f34b lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="31851e4c-eb7b-6c04-625d-ced7d7f3f34b"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-5723cc4f-979c-02e9-3a40-e1b88a2346f8 " data-layout-structure-item-id="5723cc4f-979c-02e9-3a40-e1b88a2346f8"><div id="fragment-8c162ce1-685f-ccee-e123-2fa460dd7a24" > <div class="row row-heading" id="designs">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-37b2ba4a-86c9-4838-5bad-86bc218d77d1 " data-layout-structure-item-id="37b2ba4a-86c9-4838-5bad-86bc218d77d1"><div id="fragment-dd6a9a19-ed8f-453d-7d94-48b32d0d291a"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Industrial design information</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-050757b6-99e0-6bae-916b-cc3f71db5f68 lfr-layout-structure-item-row " data-layout-structure-item-id="050757b6-99e0-6bae-916b-cc3f71db5f68"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-15984ffb-12c6-4a2c-8fa7-2f83863f6cfb " data-layout-structure-item-id="15984ffb-12c6-4a2c-8fa7-2f83863f6cfb"><div id="fragment-475e8ef3-2d4a-0ce2-ac0b-e68bf97ac9bd" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a target="_self" href="https://www.wipo.int/reference/en/designdb/">Global Design Database</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-10827120-e83a-a09c-9af7-9b80a4d7c872 " data-layout-structure-item-id="10827120-e83a-a09c-9af7-9b80a4d7c872"><div id="fragment-18833abd-23b9-3b17-4da2-e7cbd37aa5b9"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search industrial design registrations from the Hague System plus participating national collections.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-655bce9e-d889-24c3-c2fd-1df944d86854 " data-layout-structure-item-id="655bce9e-d889-24c3-c2fd-1df944d86854"><div id="fragment-b9b1b11c-a213-d0d2-1a41-f99d9450997a" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="https://www.wipo.int/haguebulletin/">International Designs Bulletin</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-307f0b14-6341-292c-433c-b52f695f33a1 " data-layout-structure-item-id="307f0b14-6341-292c-433c-b52f695f33a1"><div id="fragment-b51b0f34-92f1-613f-cdf9-734b4b1f35b8"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Access the data regarding new international registrations, renewals, and modifications affecting existing international registrations.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-321ba73f-6fe7-61d5-7ea6-fe327a4eea2b " data-layout-structure-item-id="321ba73f-6fe7-61d5-7ea6-fe327a4eea2b"><div id="fragment-f44d7cee-88a7-5bc0-0c44-609c45522599" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/hague/en/design_search/">Hague Express Database</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-390a5b18-0941-fbc3-e630-0a8730b1a22c " data-layout-structure-item-id="390a5b18-0941-fbc3-e630-0a8730b1a22c"><div id="fragment-ac840c83-fe80-488d-d0ad-1e592291bc7f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Access details of industrial designs registered under the <strong>Hague System</strong>
+.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-3 col-sm-12 col-12 col-md-3"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-aee1ffb7-c0e7-ba42-44bd-8a778ca7f61c " data-layout-structure-item-id="aee1ffb7-c0e7-ba42-44bd-8a778ca7f61c"><div id="fragment-f5671a24-0b5f-0a61-95c0-af33fa63d246" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/classifications/locarno/en/">Locarno Classification (LOC)</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-169967e9-0043-332d-3d8c-370b2395d8bb " data-layout-structure-item-id="169967e9-0043-332d-3d8c-370b2395d8bb"><div id="fragment-0a245f94-3de7-7682-8f5b-8e8108ca65cf"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Use this international system to search through goods classified for the purposes of the registration of industrial designs.</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-5bc4947d-7dbe-3951-36c4-22bd400350e5 lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="5bc4947d-7dbe-3951-36c4-22bd400350e5"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-d79f231f-b11c-9b52-e89b-0776878b34ff " data-layout-structure-item-id="d79f231f-b11c-9b52-e89b-0776878b34ff"><div id="fragment-55cfd7cb-20d8-052a-02b4-2c0810315c6e" > <div class="row row-heading" id="geographical-indications">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-4eada3da-9fae-e340-b9fc-d5cc9ad38fe6 " data-layout-structure-item-id="4eada3da-9fae-e340-b9fc-d5cc9ad38fe6"><div id="fragment-e55ff4a1-b87c-c988-7121-10e0f3076a3b"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">Geographical indication information</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-da9540af-3a66-ed2c-e3b7-7787a15b399a lfr-layout-structure-item-row " data-layout-structure-item-id="da9540af-3a66-ed2c-e3b7-7787a15b399a"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-6 col-sm-12 col-12 col-md-6"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-ce843fcd-2e45-7b2d-2df4-4f999c4f5cb1 " data-layout-structure-item-id="ce843fcd-2e45-7b2d-2df4-4f999c4f5cb1"><div id="fragment-771929cc-5fbc-7a9d-d200-57db4f313d5a" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="https://www.wipo.int/ipdl/en/search/lisbon/search-struct.jsp">Lisbon Express Database</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-19e8a6af-0700-9884-ea27-278812ad7e80 " data-layout-structure-item-id="19e8a6af-0700-9884-ea27-278812ad7e80"><div id="fragment-8598a9e7-d77d-396e-1d4a-859063213042"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search <strong>appellations of origin</strong>
+ registered under the Lisbon system.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-6 col-sm-12 col-12 col-md-6"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-4a899f3e-c1d8-7444-0566-ca45e59f37c4 " data-layout-structure-item-id="4a899f3e-c1d8-7444-0566-ca45e59f37c4"><div id="fragment-894acc54-1144-793a-6aab-4cbb02e808c3" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a rel="noopener noreferrer" target="_blank" href="https://www.wipo.int/ipdl/en/search/lisbon/search-struct.jsp">Global Brand Database for GIs</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-64e7eabf-2e8a-3afc-1abe-9b51842bc85d " data-layout-structure-item-id="64e7eabf-2e8a-3afc-1abe-9b51842bc85d"><div id="fragment-7547d42d-a8ea-c601-838b-c1c208ff023b"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Search <strong>appellations of origin</strong>
+&nbsp;listed in the Global Brand Database.</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-9527f435-3f4b-3403-0c46-1e0da5fd7587 lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="9527f435-3f4b-3403-0c46-1e0da5fd7587"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-f20db0b8-a871-0f18-5a6e-3c2674ad6e6c " data-layout-structure-item-id="f20db0b8-a871-0f18-5a6e-3c2674ad6e6c"><div id="fragment-a73e52bb-01eb-78e0-cc3b-2b56a45518ed" > <div class="row row-heading" id="legal">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-9eba321c-b4a3-d01c-ca2e-fbc015fc55f0 " data-layout-structure-item-id="9eba321c-b4a3-d01c-ca2e-fbc015fc55f0"><div id="fragment-1581f0a5-b1b5-444d-92b7-5ec3db24e5c7"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">IP laws, treaties and judgments</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-e7fba56a-d3a7-0f80-4d50-0cc186101384 lfr-layout-structure-item-row " data-layout-structure-item-id="e7fba56a-d3a7-0f80-4d50-0cc186101384"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-6 col-sm-12 col-12 col-md-6"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-91ead172-5557-0f51-6276-50dc7bd80d71 " data-layout-structure-item-id="91ead172-5557-0f51-6276-50dc7bd80d71"><div id="fragment-0bc0fe62-82e9-5253-496a-aa2cb973cffe" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/treaties/en/">WIPO-administered treaties</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-a0183f91-6531-2c26-8cd8-7f52ae1e04d3 " data-layout-structure-item-id="a0183f91-6531-2c26-8cd8-7f52ae1e04d3"><div id="fragment-c8f6490a-73bc-14b2-377d-84846dd83584"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Find full texts, summaries and membership of the international IP treaties administered by WIPO.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-6 col-sm-12 col-12 col-md-6"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-fe0582a1-03d0-d19c-2181-f9df2767a688 " data-layout-structure-item-id="fe0582a1-03d0-d19c-2181-f9df2767a688"><div id="fragment-534c12c3-0967-37aa-2fee-bc76cb186815" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/web/wipolex">WIPO Lex database</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-8346b89a-cb90-d457-6c6e-c3b307d05719 " data-layout-structure-item-id="8346b89a-cb90-d457-6c6e-c3b307d05719"><div id="fragment-f53ab15c-bd32-6f09-5fb5-2537db7e1d2e"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">WIPO Lex is a global database that provides free of charge access to legal information on intellectual property (IP), including IP laws and regulations, WIPO-administered and IP related treaties, and leading judicial decisions on IP.</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-41ea765d-e2b6-7c02-1d02-e6cb73a530f4 lfr-layout-structure-item-container ulf-section ulf-line container-fluid container-fluid-max-xl" data-layout-structure-item-id="41ea765d-e2b6-7c02-1d02-e6cb73a530f4"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-9546d86f-ac53-3dae-79e5-602804c1be15 " data-layout-structure-item-id="9546d86f-ac53-3dae-79e5-602804c1be15"><div id="fragment-6d883272-76c9-283a-6e33-38d24f967477" > <div class="row row-heading" id="analysis">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-2dd62021-645b-0d60-800b-442662028195 " data-layout-structure-item-id="2dd62021-645b-0d60-800b-442662028195"><div id="fragment-08f69b1d-adf7-f66c-3186-c14f066fcef2"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">IP resources</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-a461cf01-791c-291d-e51f-88574b0142ff lfr-layout-structure-item-row " data-layout-structure-item-id="a461cf01-791c-291d-e51f-88574b0142ff"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-eec37cc6-9b1b-9e4c-ae30-3dae04f2b039 " data-layout-structure-item-id="eec37cc6-9b1b-9e4c-ae30-3dae04f2b039"><div id="fragment-5520bed4-3bae-a8ad-c3f9-8353b9f81a2b" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/standards/en/">WIPO Standards</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-a445e562-e1f9-d691-5c08-74d90b0b91d4 " data-layout-structure-item-id="a445e562-e1f9-d691-5c08-74d90b0b91d4"><div id="fragment-8299989d-3da6-1e2e-0280-90a5c3775b03"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">The WIPO Standards for IP offices help streamline data processing procedures for filing, examining, publishing, granting and registering patents, trademarks and industrial designs. Common standards also assist the technical exchange of IP data between offices and WIPO, and facilitate the international dissemination of and access to IP information.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-843a9a54-7093-2fa4-b1d9-57e697607f85 " data-layout-structure-item-id="843a9a54-7093-2fa4-b1d9-57e697607f85"><div id="fragment-4b96225b-3113-3c52-42a7-373d0aeec335" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/ipstats/en/">IP statistics</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-ad9acaec-5275-40bc-151e-8ae3ef0a176c " data-layout-structure-item-id="ad9acaec-5275-40bc-151e-8ae3ef0a176c"><div id="fragment-a29a9c3a-c7de-4c88-42c0-50df50f18c55"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">WIPO cooperates with IP offices across the world to collate, analyze and publish up-to-date statistics, including reports on IP filing activity worldwide.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-7425b589-3ff7-3826-7571-3e5b890f8573 " data-layout-structure-item-id="7425b589-3ff7-3826-7571-3e5b890f8573"><div id="fragment-2d780340-2c03-0e2d-bf3c-0f5ed431a639" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/reference/en/wipopearl/">WIPO Pearl – Multilingual Terminology Portal</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-b87bbcf7-35ce-bf14-961d-c14381cad556 " data-layout-structure-item-id="b87bbcf7-35ce-bf14-961d-c14381cad556"><div id="fragment-13510def-0bdb-688c-0fb0-96cfcff07e79"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">WIPO Pearl gives access to scientific and technical terms derived from patent documents, making it easier to search and share scientific and technical knowledge.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-81968e0e-fda9-40b1-fc44-8318092cdfe2 " data-layout-structure-item-id="81968e0e-fda9-40b1-fc44-8318092cdfe2"><div id="fragment-db36acef-1060-ec12-87f9-7db794edcb4b" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/publications/en/">WIPO Publications</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-0719b18b-7cff-1558-b5f0-ef7b94bfa056 " data-layout-structure-item-id="0719b18b-7cff-1558-b5f0-ef7b94bfa056"><div id="fragment-af64d67b-faa0-9f40-f09a-d49fe433d25f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">You can browse and download all our publications for free online.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-a4329920-88c7-62d5-336b-7147f2d45ced " data-layout-structure-item-id="a4329920-88c7-62d5-336b-7147f2d45ced"><div id="fragment-c4d1580b-5fac-da5d-dbb7-8d3bb079462d" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/directory/en/">Country IP profiles</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-c6c27254-e06e-742f-079d-2d868741126f " data-layout-structure-item-id="c6c27254-e06e-742f-079d-2d868741126f"><div id="fragment-90244a49-c31b-794b-9bd5-a4455814f8b4"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Find IP profiles of all our member states, including statistics, legal information, case studies, photos and WIPO cooperation activities.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-a150df2b-9112-a791-aa2a-53baa6f8fc13 ulf-hide-en" data-layout-structure-item-id="a150df2b-9112-a791-aa2a-53baa6f8fc13"><div id="fragment-ef307671-e39a-eef2-7316-64eb3eeee02c" > <div class="card card-ver-no-bg">
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/library/en/">WIPO Knowledge Center</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-cb5d77db-ed10-eb41-7313-d0b814ef57ea " data-layout-structure-item-id="cb5d77db-ed10-eb41-7313-d0b814ef57ea"><div id="fragment-66bb157b-3c03-8687-6779-8b854ea18137"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">Access over 35,000 references to support your IP research, or contact our staff to help track down what you need.</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div><div class="lfr-layout-structure-item-c6b3c788-1bee-3545-c615-c487848098d8 lfr-layout-structure-item-container bg-gray-warm" data-layout-structure-item-id="c6b3c788-1bee-3545-c615-c487848098d8"><div class="lfr-layout-structure-item-b1402679-0f2d-92d7-13eb-a8b986d37c3b lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="b1402679-0f2d-92d7-13eb-a8b986d37c3b"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-953cb7b0-6c4f-235d-6310-5320bf6231f4 " data-layout-structure-item-id="953cb7b0-6c4f-235d-6310-5320bf6231f4"><div id="fragment-6b4385f3-3eba-e558-9643-e5963f9642ac" > <div class="row row-heading" id="wkc">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-2b76f5ce-ff78-bb36-eaec-23d66044c748 " data-layout-structure-item-id="2b76f5ce-ff78-bb36-eaec-23d66044c748"><div id="fragment-d4d5a4ca-04e0-25b9-c502-27516f0de919"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">WIPO Knowledge Center</h2></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-aa7f316c-3f9a-87a7-fff3-7418cdfb5e1e lfr-layout-structure-item-row " data-layout-structure-item-id="aa7f316c-3f9a-87a7-fff3-7418cdfb5e1e"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-8 col-sm-12 col-12 col-md-8"><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-b0d3f1c7-5670-7b22-6664-84ea1d1f1103 " data-layout-structure-item-id="b0d3f1c7-5670-7b22-6664-84ea1d1f1103"><div id="fragment-872a2541-a430-bca2-f9ff-1ac7ee1b8dc4" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><span class="lead">The <a href="/web/wipo-knowledge-center" rel="noopener noreferrer">WIPO Knowledge Center (WKC)</a> offers a unique collection of more than 44,000 IP reference materials, ranging from historical legal texts to the most recent IP journals.</span></div></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-b26f6564-268a-632f-9840-01f28d2529bb " data-layout-structure-item-id="b26f6564-268a-632f-9840-01f28d2529bb"><div id="fragment-06db6e22-d7e8-fe94-84f9-a94b740d4f3b" > <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">
+Support your IP research by accessing the knowledge repository, listening to a podcast episode, or visiting one of our virtual exhibitions. &nbsp;Can’t find what you are looking for? &nbsp;Be sure to consult our <a href="https://wipo.libguides.com/wkc_guide" rel="noopener noreferrer" target="_blank">WKC Guide</a>
+ to direct you to what you need.</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-image--copy--0 lfr-layout-structure-item-400b3d48-e12c-b646-fb63-ef6e1dc04ce7 " data-layout-structure-item-id="400b3d48-e12c-b646-fb63-ef6e1dc04ce7"><div id="fragment-c4a34e5b-0722-b3f4-1b20-b3d847659f42" > <figure class="figure">	
+<img src="/documents/d/wipo-knowledge-center/images-wipo_library_500.jpg" class="img-fluid rounded" data-lfr-editable-id="image-square" data-lfr-editable-type="image" alt="#">
+<figcaption class="credit" data-lfr-editable-id="image-credit" data-lfr-editable-type="text">IMAGE: WIPO/Berrod</figcaption>
+</figure></div></div></div></div></div></div></div><div class="lfr-layout-structure-item-54d015a4-b0bd-8839-b81c-f8117cdf1761 lfr-layout-structure-item-container bg-white" data-layout-structure-item-id="54d015a4-b0bd-8839-b81c-f8117cdf1761"><div class="lfr-layout-structure-item-8d9a6023-3edb-dbc8-315d-2f57a019ca49 lfr-layout-structure-item-container ulf-section container-fluid container-fluid-max-xl" data-layout-structure-item-id="8d9a6023-3edb-dbc8-315d-2f57a019ca49"><div class="lfr-layout-structure-item-block-id-include--copy- lfr-layout-structure-item-e62524c3-c4c7-757f-7554-332509e6221d " data-layout-structure-item-id="e62524c3-c4c7-757f-7554-332509e6221d"><div id="fragment-cfd9f492-abfa-54be-41f1-22263cb2863b" > <div class="row row-heading" id="reports">
+<div class="col-md-9">
+<div><div class="lfr-layout-structure-item-basic-component-heading lfr-layout-structure-item-a70b0df7-0f1a-81a8-411b-7ec793ea01ea " data-layout-structure-item-id="a70b0df7-0f1a-81a8-411b-7ec793ea01ea"><div id="fragment-8a926191-0426-9eac-bddc-3cdbb431535a"> <h2 class="component-heading mb-0 text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="text">IP reports</h2></div></div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-468391ce-f25f-2289-3ccf-6ddca8b8a83a " data-layout-structure-item-id="468391ce-f25f-2289-3ccf-6ddca8b8a83a"><div id="fragment-785ec9e6-71b5-3547-1764-30cf9c6d2881"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text"><p>WIPO regularly publishes analytical reports on innovation and IP, to provide latest information and insights to its audience.</p>
+
+
+</div></div></div></div>
+</div>
+</div></div></div><div class="lfr-layout-structure-item-954b037e-a4c5-ab61-bd3a-fff3f26bca49 lfr-layout-structure-item-row " data-layout-structure-item-id="954b037e-a4c5-ab61-bd3a-fff3f26bca49"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-60f43291-d1e3-3ed6-18b3-88d216ecd9da " data-layout-structure-item-id="60f43291-d1e3-3ed6-18b3-88d216ecd9da"><div id="fragment-c7efa049-ab56-5ca8-5f21-26b980fd941f" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	
+	<a rel="noopener noreferrer" target="_blank" href="https://www.wipo.int/publications/en/details.jsp?id=4860&amp;plang=EN"><img src="/documents/d/wipo/webp-wiih-2026-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/publications/en/details.jsp?id=4860&amp;plang=EN">World Intangible Investment Highlights 2026</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-59a84fc3-a60a-bfe8-7899-f4b2d5783acb " data-layout-structure-item-id="59a84fc3-a60a-bfe8-7899-f4b2d5783acb"><div id="fragment-93531263-a4e0-f688-80d1-dfd33651874c"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">World Intangible Investment Highlights, together with underlying data from the Global INTAN-Invest Database, offers novel, up-to-date cross-country, quarterly and annual measures of investment into intangible assets, including those not included in official statistics</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-fc157e08-d8d5-a5c7-a8a4-853d6c7cf302 " data-layout-structure-item-id="fc157e08-d8d5-a5c7-a8a4-853d6c7cf302"><div id="fragment-a9ddbda2-4cea-a961-ccdd-352cdc62df48" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	
+	<a href="https://www.wipo.int/tech_trends/en/"><img src="/documents/d/wipo/pics-hero-witt2021_hero_500.jpg" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/tech_trends/en/">WIPO Technology Trends Report</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-b64c85bb-1866-c964-6b3d-85e042a419be " data-layout-structure-item-id="b64c85bb-1866-c964-6b3d-85e042a419be"><div id="fragment-ff625711-7531-689a-2467-04001a545d9c"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">This series of reports tracks technology trends through the analysis of patent and other data to provide solid, factual evidence on innovation in specific fields.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-e82729ed-e0d2-0617-d7ea-76da227fc04f " data-layout-structure-item-id="e82729ed-e0d2-0617-d7ea-76da227fc04f"><div id="fragment-149e8877-fa37-166e-2b9a-fcc8d3326a27" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	
+	<a href="/en/web/global-innovation-index"><img src="/documents/d/wipo/images-gii-2025-cover-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/en/web/global-innovation-index">Global Innovation Index</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-46d7f190-4f68-0a95-bf1a-fabb0edb4543 " data-layout-structure-item-id="46d7f190-4f68-0a95-bf1a-fabb0edb4543"><div id="fragment-95fab7a8-c81c-b47d-f65d-478dd467061f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">The Global Innovation Index (GII) tracks the most recent global innovation trends and reveals the most innovative economies in the world, ranking the innovation performance of around 140 economies while highlighting innovation strengths and weaknesses.</div></div></div></div>
+</div>
+</div></div></div></div></div></div><div class="lfr-layout-structure-item-4d7b4357-f53d-93ab-7402-c82434841aad lfr-layout-structure-item-row " data-layout-structure-item-id="4d7b4357-f53d-93ab-7402-c82434841aad"><div class="row align-items-lg-start align-items-sm-start align-items-start align-items-md-start flex-lg-row flex-sm-row flex-row flex-md-row"><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-1cb1784f-ffd2-0d46-8882-ec672dab6245 " data-layout-structure-item-id="1cb1784f-ffd2-0d46-8882-ec672dab6245"><div id="fragment-dee18f1d-603d-1752-c978-e0e605ac85a0" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	
+	<a href="/web/world-ip-report"><img src="/documents/d/wipo/images-wipr-2026-cover-960.webp" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="/web/world-ip-report">World Intellectual Property Report</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-cdedfdd4-e636-4571-c9fb-4aeb2a26f4cd " data-layout-structure-item-id="cdedfdd4-e636-4571-c9fb-4aeb2a26f4cd"><div id="fragment-1dc49b9c-1a6f-106e-2694-2d495a3b648f"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">The World Intellectual Property Report, published every two years, offers fresh insights into the role of innovation in market economies and, in doing so, fosters evidence-based policy-making.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"><div class="lfr-layout-structure-item-card-0 lfr-layout-structure-item-218de267-2d4a-96ea-60ba-990094298dd2 " data-layout-structure-item-id="218de267-2d4a-96ea-60ba-990094298dd2"><div id="fragment-29c9f944-22f3-468b-ab19-70e02970d40d" > <div class="card card-ver-no-bg">
+	<figure class="figure">	
+	
+	<a href="https://www.wipo.int/publications/en/details.jsp?id=4822"><img src="/documents/d/wipo/images-wipi2025-960.jpg" class="card-img-top" alt="" data-lfr-editable-id="card-image" data-lfr-editable-type="image"></a></figure>	
+	<div class="card-body">
+	<h2 class="card-title" data-lfr-editable-id="card-title" data-lfr-editable-type="text"><a href="https://www.wipo.int/publications/en/details.jsp?id=4822">World Intellectual Property Indicators 2025</a></h2>
+	<div><div class="lfr-layout-structure-item-basic-component-paragraph lfr-layout-structure-item-dda54d9d-791e-4d43-5dcb-61c81dc0b6cb " data-layout-structure-item-id="dda54d9d-791e-4d43-5dcb-61c81dc0b6cb"><div id="fragment-13d67777-1e6c-0488-9975-99589d51b1df"> <div class="clearfix component-paragraph text-break" data-lfr-editable-id="element-text" data-lfr-editable-type="rich-text">An overview of intellectual property activity based on the latest available year of complete statistics.</div></div></div></div>
+</div>
+</div></div></div></div><div class="col col-lg-4 col-sm-12 col-12 col-md-4"></div></div></div></div></div>
+
+
+
+
+		</div>
+	
+
+
+<form action="#" aria-hidden="true" class="hide" id="hrefFm" method="post" name="hrefFm"><span></span><button hidden type="submit">Hidden</button></form>
+
+	
+	</section>
+</div>
+<div class="container-footer-outer">
+<div class="container-fluid container-fluid-max-xl">
+    <wipo-footer id="footer">
+        <span slot="contact">https://www.wipo.int/contact/en/</span>
+        <span slot="media">https://www.wipo.int/pressroom/en/</span>
+        <span slot="terms">https://www.wipo.int/en/web/terms-of-use</span>
+    <span slot="privacy">https://www.wipo.int/en/web/privacy-policy</span>
+    <span slot="accessibility">https://www.wipo.int/en/web/accessibility</span>
+    <span slot="sitemap">https://www.wipo.int/en/web/sitemap</span>
+    <span slot="newsletters">https://www.wipo.int/en/web/newsletters</span>
+    <span slot="podcast">https://www.wipo.int/en/web/podcasts</span>
+    <span slot="rss-feed">https://www.wipo.int/en/web/news/rss</span>
+</wipo-footer>
+</div>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	
+		
+		
+
+			
+
+			
+		
+	
+
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="module">
+		import {Session} from 'https://cdn.webcms.wipo.int/o/frontend-js-web/__liferay__/legacy.js';
+
+		if (Liferay.Session && Liferay.Session.destructor) {
+			Liferay.Session.destructor();
+		}
+
+		Liferay.Session = new Session(
+			{
+				autoExtend: true,
+				redirectOnExpire: false,
+				redirectUrl: 'https\x3a\x2f\x2fwww\x2ewipo\x2eint\x2fweb\x2fguest',
+				rememberMe: false,
+				sessionLength: 600,
+				sessionTimeoutOffset: 130,
+				warningLength: 60
+			})
+	</script>
+
+
+<script type="text/javascript">
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onVote = function (event) {
+		if (window.Analytics) {
+			let title = event.contentTitle;
+
+			if (!title) {
+				const dmNode = document.querySelector(
+					'[data-analytics-file-entry-id="' + event.classPK + '"]'
+				);
+
+				if (dmNode) {
+					title = dmNode.dataset.analyticsFileEntryTitle;
+				}
+			}
+
+			Analytics.send('VOTE', 'Ratings', {
+				className: event.className,
+				classPK: event.classPK,
+				externalReferenceCode: event.externalReferenceCode,
+				ratingType: event.ratingType,
+				score: event.score,
+				title,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('ratings:vote', onVote);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('ratings:vote', onVote);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onShare = function (data) {
+		if (window.Analytics) {
+			Analytics.send('shared', 'SocialBookmarks', {
+				className: data.className,
+				classPK: data.classPK,
+				type: data.type,
+				url: data.url,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('socialBookmarks:share', onShare);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('socialBookmarks:share', onShare);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+
+	function getValueByAttribute(node, attr) {
+		return (
+			node.dataset[attr] ||
+			(node.parentElement && node.parentElement.dataset[attr])
+		);
+	}
+
+	function sendDocumentDownloadedAnalyticsEvent(anchor) {
+		var fileEntryId = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryId'
+		);
+		var title = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryTitle'
+		);
+		var version = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryVersion'
+		);
+		var externalReferenceCode = getValueByAttribute(
+			anchor,
+			'analyticsExternalReferenceCode'
+		);
+
+		if (fileEntryId) {
+			Analytics.send('documentDownloaded', 'Document', {
+				externalReferenceCode,
+				fileEntryId,
+				groupId: themeDisplay.getScopeGroupId(),
+				preview:
+					!!window._com_liferay_document_library_analytics_isViewFileEntry,
+				title,
+				version,
+			});
+		}
+	}
+
+	function handleDownloadClick(event) {
+		if (window.Analytics) {
+			if (event.target.nodeName.toLowerCase() === 'a') {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target
+				);
+			}
+			else if (
+				event.target.parentNode &&
+				event.target.parentNode.nodeName.toLowerCase() === 'a'
+			) {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target.parentNode
+				);
+			}
+			else {
+				var target = event.target;
+				var matchTextContent =
+					target.textContent &&
+					target.textContent.toLowerCase() ===
+						'download';
+				var matchTitle =
+					target.title && target.title.toLowerCase() === 'download';
+				var matchAction = target.action === 'download';
+				var matchLexiconIcon = !!target.querySelector(
+					'.lexicon-icon-download'
+				);
+				var matchLexiconClassName = target.classList.contains(
+					'lexicon-icon-download'
+				);
+				var matchParentTitle =
+					target.parentNode &&
+					target.parentNode.title &&
+					target.parentNode.title.toLowerCase() === 'download';
+				var matchParentLexiconClassName =
+					target.parentNode &&
+					target.parentNode.classList.contains('lexicon-icon-download');
+
+				if (
+					matchTextContent ||
+					matchTitle ||
+					matchParentTitle ||
+					matchAction ||
+					matchLexiconIcon ||
+					matchLexiconClassName ||
+					matchParentLexiconClassName
+				) {
+					var selectedFiles = document.querySelectorAll(
+						'.form .custom-control-input:checked'
+					);
+
+					selectedFiles.forEach(({value}) => {
+						var selectedFile = document.querySelector(
+							'[data-analytics-file-entry-id="' + value + '"]'
+						);
+
+						sendDocumentDownloadedAnalyticsEvent(
+							selectedFile
+						);
+					});
+				}
+			}
+		}
+	}
+
+	Liferay.once('destroyPortlet', () => {
+		document.body.removeEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+	Liferay.once('portletReady', () => {
+		document.body.addEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onDestroyPortlet = function () {
+		Liferay.detach('messagePosted', onMessagePosted);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+
+	var onMessagePosted = function (event) {
+		if (window.Analytics) {
+			const eventProperties = {
+				className: event.className,
+				classPK: event.classPK,
+				commentId: event.commentId,
+				externalReferenceCode: event.externalReferenceCode,
+				text: event.text,
+			};
+
+			const blogNode = document.querySelector(
+				'[data-analytics-asset-id="' + event.classPK + '"]'
+			);
+
+			const dmNode = document.querySelector(
+				'[data-analytics-file-entry-id="' + event.classPK + '"]'
+			);
+
+			if (blogNode) {
+				eventProperties.title = blogNode.dataset.analyticsAssetTitle;
+			}
+			else if (dmNode) {
+				eventProperties.title = dmNode.dataset.analyticsFileEntryTitle;
+			}
+
+			Analytics.send('posted', 'Comment', eventProperties);
+		}
+	};
+
+	Liferay.on('messagePosted', onMessagePosted);
+})();
+
+	if (window.svg4everybody && Liferay.Data.ICONS_INLINE_SVG) {
+		svg4everybody(
+			{
+				polyfill: true,
+				validate: function (src, svg, use) {
+					return !src || !src.startsWith('#');
+				}
+			}
+		);
+	}
+
+(function() {var $ = AUI.$;var _ = AUI._;
+	Liferay.Util.delegate(
+		document,
+		'focusin',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.add('open');
+		}
+	);
+
+	Liferay.Util.delegate(
+		document,
+		'focusout',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.remove('open');
+		}
+	);
+})();
+
+	// <![CDATA[
+
+		
+
+		Liferay.currentURL = '\x2fen\x2fweb\x2fip-resources';
+		Liferay.currentURLEncoded = '\x252Fen\x252Fweb\x252Fip-resources';
+
+	// ]]>
+
+
+</script><script type="module">
+import {InfoItemActionHandler as ComponentModule} from 'https://cdn.webcms.wipo.int/o/layout-taglib/__liferay__/render.js';
+AUI().use(
+  'liferay-menu',
+function(A) {
+{
+Liferay.component('infoItemActionComponent', new ComponentModule({"executeInfoItemActionURL":"https:\/\/www.wipo.int\/en\/c\/portal\/execute_info_item_action?p_l_mode=view&plid=9530","namespace":"","spritemap":"https:\/\/cdn.webcms.wipo.int\/o\/wipo-universal-theme\/images\/clay\/icons.svg"}), { destroyOnNavigate: true, portletId: ''});
+}
+(function() {
+var $ = AUI.$;var _ = AUI._;
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 0; i < liferayNotices.length; i++) {
+		Liferay.Util.openToast(liferayNotices[i]);
+	}
+
+})();
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.webcms.wipo.int/o/wipo-universal-theme/js/main.js?browserId=chrome&amp;minifierType=js&amp;languageId=en_US&amp;t=1785994158000" type="text/javascript"></script>
+
+
+
+
+<script type="module">
+import {main} from 'https://cdn.webcms.wipo.int/o/frontend-js-bootstrap-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {main} from 'https://cdn.webcms.wipo.int/o/frontend-js-tooltip-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="text/javascript">
+Liferay.CustomDialogs = {enabled: false};
+
+</script><script>
+
+</script><!--<script src="https://cdnjs.wipo.int/npm/jquery/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.wipo.int/npm/popper.js@1.16.0/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.wipo.int/npm/bootstrap@4.4.1/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src='https://cdn.webcms.wipo.int/o/wipo-universal-theme/js/universal.js'></script>
+</body>
+</html>
+		
+	
+

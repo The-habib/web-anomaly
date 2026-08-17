@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>What happens when you update your DNS?</title>
+<meta name="author" content="Julia Evans">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="description" content="What happens when you update your DNS?">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content='What happens when you update your DNS?'>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jvns.ca/blog/how-updating-dns-works/" />
+<meta property="og:site_name" content="Julia Evans" />
+
+<link rel="canonical" href="https://jvns.ca/blog/how-updating-dns-works/">
+<link href="/favicon.ico" rel="icon">
+
+<link href="/stylesheets/screen.css" rel="preload" type="text/css" as="style">
+
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+<link href="/atom.xml" rel="alternate" title="Julia Evans" type="application/atom+xml">
+
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+<script defer data-domain="jvns.ca" src="https://plausible.io/js/script.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+<script defer type="text/javascript">   
+window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};   
+heap.load("2242143965"); 
+</script> 
+</head>
+<body>
+<div id="skiptocontent">
+  <a href="#main">Skip to main content</a>
+</div>
+<div id="wrap">
+<header role="banner">
+<hgroup>
+<h1><a href="/">Julia Evans</a></h1>
+</hgroup>
+<ul class="header-links">
+<li><a href="/about">About</a></li>
+<li><a href="/talks">Talks</a></li>
+<li><a href="/projects/">Projects</a></li>
+<li><a rel="me" href="https://social.jvns.ca/@b0rk">Mastodon</a></li>
+<li><a href="https://bsky.app/profile/b0rk.jvns.ca">Bluesky</a></li>
+<li><a href="https://github.com/jvns">Github</a></li>
+</ul>
+</header>
+<nav role="navigation" class="header-nav"><ul class="main-navigation">
+<li><a href="/categories/favorite/">Favorites</a></li>
+<li><a href="/til/">TIL</a></li>
+<li><a href="https://wizardzines.com">Zines</a></li>
+<li class="subscription" data-subscription="rss"><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="main">
+<div id="content">
+
+
+<div>
+<article class="hentry" role="article">
+<header>
+<h1 class="entry-title">What happens when you update your DNS?</h1>
+
+<div class="post-tags">
+  
+  •
+  
+    <a class="post-tag" href="/categories/dns">dns</a> 	•
+  
+  
+</div>
+<p class="meta sans">
+<time class="date" datetime="2020-06-17T07:38:33" pubdate data-updated="true">
+
+  June 17, 2020
+  
+</time>
+</p>
+</header>
+<main>
+     <p>I&rsquo;ve seen a lot of people get confused about updating their site&rsquo;s DNS records
+to change the IP address. Why is it slow? Do you really have to wait 2 days for
+everything to update? Why do some people see the new IP and some people see the
+old IP? What&rsquo;s happening?</p>
+<p>So I wanted to write a quick exploration of what&rsquo;s happening behind the scenes
+when you update a DNS record.</p>
+<h3 id="how-dns-works-recursive-vs-authoritative-dns-servers" class="post-heading">
+    <a href="#how-dns-works-recursive-vs-authoritative-dns-servers">
+      how DNS works: recursive vs authoritative DNS servers
+    </a>
+</h3>
+<p>First, we need to explain a little bit about DNS. There are 2 kinds of DNS
+servers: <strong>authoritative</strong> and <strong>recursive</strong>.</p>
+<p><strong>authoritative</strong> DNS servers (also known as <strong>nameservers</strong>) have a database
+of IP addresses for each domain they&rsquo;re responsible for. For example, right now
+an authoritative DNS server for github.com is ns-421.awsdns-52.com. You can ask it for github.com&rsquo;s IP like this;</p>
+<pre><code>dig @ns-421.awsdns-52.com github.com
+</code></pre>
+<p><strong>recursive</strong> DNS servers, by themselves, don&rsquo;t know anything about who owns
+what IP address. They figure out the IP address for a domain by asking
+the right authoritative DNS servers, and then cache that IP address in case they&rsquo;re asked
+again. 8.8.8.8 is a recursive DNS server.</p>
+<p>When people visit your website, they&rsquo;re probably making their DNS queries to a
+recursive DNS server. So, how do recursive DNS servers work? Let&rsquo;s see!</p>
+<h3 id="how-does-a-recursive-dns-server-query-for-github-com" class="post-heading">
+    <a href="#how-does-a-recursive-dns-server-query-for-github-com">
+      how does a recursive DNS server query for github.com?
+    </a>
+</h3>
+<p>Let&rsquo;s go through an example of what a recursive DNS server (like 8.8.8.8) does
+when you ask it for an IP address (A record) for github.com. First &ndash; if it
+already has something cached, it&rsquo;ll give you what it has cached. But what if
+all of its caches are expired? Here&rsquo;s what happens:</p>
+<p><strong>step 1</strong>: it has IP addresses for the root DNS servers hardcoded in its source code. You can see this in <a href="https://github.com/NLnetLabs/unbound/blob/6e0756e819779d9cc2a14741b501cadffe446c93/iterator/iter_hints.c#L131">unbound&rsquo;s source code here</a>. Let&rsquo;s say it picks  <code>198.41.0.4</code> to start with. Here&rsquo;s the <a href="https://www.iana.org/domains/root/files">official source</a> for those hardcoded IP addresses, also known as a &ldquo;root hints file&rdquo;.</p>
+<p><strong>step 2</strong>: Ask the root nameservers about <code>github.com</code>.</p>
+<p>We can roughly reproduce what happens with <code>dig</code>. What this gives us is a new
+authoritative nameserver to ask: a nameserver for <code>.com</code>, with the IP <code>192.5.6.30</code>.</p>
+<pre><code>$ dig @198.41.0.4 github.com
+...
+com.			172800	IN	NS	a.gtld-servers.net.
+...
+a.gtld-servers.net.	172800	IN	A	192.5.6.30
+...
+</code></pre>
+<p>The details of the DNS response are a little more complicated than that &ndash; in
+this case, there&rsquo;s an authority section with some NS records and an additional
+section with A records so you don&rsquo;t need to do an extra lookup to get the IP
+addresses of those nameservers.</p>
+<p>(in practice, 99.99% of the time it&rsquo;ll already have the address of the <code>.com</code> nameservers cached, but we&rsquo;re pretending we&rsquo;re really starting from scratch)</p>
+<p><strong>step 3</strong>: Ask the <code>.com</code> nameservers about <code>github.com</code>.</p>
+<pre><code>$ dig @192.5.6.30 github.com
+...
+github.com.		172800	IN	NS	ns-421.awsdns-52.com.
+ns-421.awsdns-52.com.	172800	IN	A	205.251.193.165
+...
+</code></pre>
+<p>We have a new IP address to ask! This one is the nameserver for <code>github.com</code>.</p>
+<p><strong>step 4</strong>: Ask the <code>github.com</code> nameservers about <code>github.com</code>.</p>
+<p>We&rsquo;re almost done!</p>
+<pre><code>$ dig @205.251.193.165 github.com
+
+github.com.		60	IN	A	140.82.112.4
+</code></pre>
+<p>Hooray!! We have an <code>A</code> record for <code>github.com</code>! Now the recursive nameserver
+has <code>github.com</code>&rsquo;s IP address and can return it back to you. And it could do
+all of this by only hardcoding a few IP addresses: the addresses of the root
+nameservers.</p>
+<h3 id="how-to-see-all-of-a-recursive-dns-server-s-steps-dig-trace" class="post-heading">
+    <a href="#how-to-see-all-of-a-recursive-dns-server-s-steps-dig-trace">
+      how to see all of a recursive DNS server&rsquo;s steps: <code>dig +trace</code>
+    </a>
+</h3>
+<p>When I want to see what a recursive DNS server would do when resolving a
+domain, I run</p>
+<pre><code>$ dig @8.8.8.8 +trace github.com
+</code></pre>
+<p>This shows all the DNS records that it requests, starting at the root DNS
+servers &ndash; all the 4 steps that we just went through.</p>
+<h3 id="let-s-update-some-dns-records" class="post-heading">
+    <a href="#let-s-update-some-dns-records">
+      let&rsquo;s update some DNS records!
+    </a>
+</h3>
+<p>Now that we know the basics of how DNS works, let&rsquo;s update some DNS records and see
+what happens.</p>
+<p>When you update your DNS records, there are two main options:</p>
+<ol>
+<li>keep the same nameservers</li>
+<li>change nameservers</li>
+</ol>
+<h3 id="let-s-talk-about-ttls" class="post-heading">
+    <a href="#let-s-talk-about-ttls">
+      let&rsquo;s talk about TTLs
+    </a>
+</h3>
+<p>We&rsquo;ve forgotten something important though! TTLs! You know how
+we said earlier that the recursive DNS server will cache records until they
+expire?  The way it decides whether the record should expire is by looking at
+its <strong>TTL</strong> or &ldquo;time to live&rdquo;.</p>
+<p>In this example, the TTL for the A record github&rsquo;s nameserver returns for its
+DNS record is <code>60</code>, which means 60 seconds:</p>
+<pre><code>$ dig @205.251.193.165 github.com
+
+github.com.		60	IN	A	140.82.112.4
+</code></pre>
+<p>That&rsquo;s a pretty short TTL, and <em>in theory</em> if everybody&rsquo;s DNS implementation
+followed the <a href="https://tools.ietf.org/html/rfc1035">DNS standard</a> it means that
+if Github decided to change the IP address for <code>github.com</code>, everyone should
+get the new IP address
+within 60 seconds. Let&rsquo;s see how that plays out in practice</p>
+<h3 id="option-1-update-a-dns-record-on-the-same-nameservers" class="post-heading">
+    <a href="#option-1-update-a-dns-record-on-the-same-nameservers">
+      option 1: update a DNS record on the same nameservers
+    </a>
+</h3>
+<p>First, I updated my nameservers (Cloudflare) to have a new DNS record: an A record that maps
+<code>test.jvns.ca</code> to <code>1.2.3.4</code>.</p>
+<pre><code>$ dig @8.8.8.8 test.jvns.ca
+test.jvns.ca.		299	IN	A	1.2.3.4
+</code></pre>
+<p>This worked immediately! There was no need to wait at all, because there was no
+<code>test.jvns.ca</code> DNS record before that could have been cached. Great. But it
+looks like the new record is cached for ~5 minutes (299 seconds).</p>
+<p>So, what if we try to change that IP? I changed it to <code>5.6.7.8</code>, and then ran the same DNS query.</p>
+<pre><code>$ dig @8.8.8.8 test.jvns.ca
+test.jvns.ca.		144	IN	A	1.2.3.4
+</code></pre>
+<p>Hmm, it seems like that DNS server has the <code>1.2.3.4</code> record still cached for
+another 144 seconds. Interestingly, if I query <code>8.8.8.8</code> multiple times I actually get
+inconsistent results &ndash; sometimes it&rsquo;ll give me the new IP and sometimes the
+old IP, I guess because 8.8.8.8 actually load balances to a bunch of different
+backends which each have their own cache.</p>
+<p>After I waited 5 minutes, all of the <code>8.8.8.8</code> caches had updated and were
+always returning the new <code>5.6.7.8</code> record. Awesome. That was pretty fast!</p>
+<h3 id="you-can-t-always-rely-on-the-ttl" class="post-heading">
+    <a href="#you-can-t-always-rely-on-the-ttl">
+      you can&rsquo;t always rely on the TTL
+    </a>
+</h3>
+<p>As with most internet protocols, not everything obeys the DNS specification.
+Some ISP DNS servers will cache records for longer than the TTL specifies, like
+maybe for 2 days instead of 5 minutes. And people can always hardcode the old
+IP address in their /etc/hosts.</p>
+<p>What I&rsquo;d expect to happen in practice when updating a DNS record with a 5
+minute TTL is that a large percentage of clients will move over to the new IPs
+quickly (like within 15 minutes), and then there will be a bunch of stragglers
+that slowly update over the next few days.</p>
+<h3 id="option-2-updating-your-nameservers" class="post-heading">
+    <a href="#option-2-updating-your-nameservers">
+      option 2: updating your nameservers
+    </a>
+</h3>
+<p>So we&rsquo;ve seen that when you update an IP address without changing your
+nameservers, a lot of DNS servers will pick up the new IP pretty quickly.
+Great. But what happens if you change your nameservers? Let&rsquo;s try it!</p>
+<p>I didn&rsquo;t want to update the nameservers for my blog, so instead I went with a
+different domain I own and use in the examples for the <a href="https://wizardzines.com/zines/http/">HTTP
+zine</a>: <code>examplecat.com</code>.</p>
+<p>Previously, my nameservers were set to dns1.p01.nsone.net. I decided to switch
+them over to Google&rsquo;s nameservers &ndash; <code>ns-cloud-b1.googledomains.com</code> etc.</p>
+<p>When I made the change, my domain registrar somewhat ominously popped up the
+message &ndash; &ldquo;Changes to examplecat.com saved. They&rsquo;ll take effect within the
+next 48 hours&rdquo;. Then I set up a new A record for the domain, to make it point to <code>1.2.3.4</code></p>
+<p>Okay, let&rsquo;s see if that did anything</p>
+<pre><code>$ dig @8.8.8.8 examplecat.com
+examplecat.com.		17	IN	A	104.248.50.87
+</code></pre>
+<p>No change. If I ask a different DNS server, it knows the new IP:</p>
+<pre><code>$ dig @1.1.1.1 examplecat.com
+examplecat.com.		299	IN	A	1.2.3.4
+</code></pre>
+<p>but 8.8.8.8 is still clueless. The reason 1.1.1.1 sees the new IP even though
+I just changed it 5 minutes ago is presumably that nobody had ever queried
+1.1.1.1 about examplecat.com before, so it had nothing in its cache.</p>
+<h3 id="nameserver-ttls-are-much-longer" class="post-heading">
+    <a href="#nameserver-ttls-are-much-longer">
+      nameserver TTLs are much longer
+    </a>
+</h3>
+<p>The reason that my registrar was saying &ldquo;THIS WILL TAKE 48 HOURS&rdquo; is that the TTLs
+on NS records (which are how recursive nameservers know which nameserver to
+ask) are MUCH longer!</p>
+<p>The new nameserver is definitely returning the new IP address for
+<code>examplecat.com</code></p>
+<pre><code>$ dig @ns-cloud-b1.googledomains.com examplecat.com
+examplecat.com.		300	IN	A	1.2.3.4
+</code></pre>
+<p>But remember what happened when we queried for the <code>github.com</code> nameservers, way back?</p>
+<pre><code>$ dig @192.5.6.30 github.com
+...
+github.com.		172800	IN	NS	ns-421.awsdns-52.com.
+ns-421.awsdns-52.com.	172800	IN	A	205.251.193.165
+...
+</code></pre>
+<p>172800 seconds is 48 hours! So nameserver updates will in general take a lot
+longer to expire from caches and propagate than just updating an IP address
+without changing your nameserver.</p>
+<h3 id="how-do-your-nameservers-get-updated" class="post-heading">
+    <a href="#how-do-your-nameservers-get-updated">
+      how do your nameservers get updated?
+    </a>
+</h3>
+<p>When I update the nameservers for <code>examplecat.com</code>, what happens is that he
+<code>.com</code> nameserver gets a new <code>NS</code> record with the new domain. Like this:</p>
+<pre><code>dig ns @j.gtld-servers.net examplecat.com
+
+examplecat.com.		172800	IN	NS	ns-cloud-b1.googledomains.com
+</code></pre>
+<p>But how does that new NS record get there? What happens is that I tell my
+<strong>domain registrar</strong> what I want the new nameservers to be by updating it on
+the website, and then my domain registrar tells the <code>.com</code> nameservers to make
+the update.</p>
+<p>For <code>.com</code>, these updates happen pretty fast (within a few minutes), but I
+think for some other TLDs the TLD nameservers might not apply updates as quickly.</p>
+<h3 id="your-program-s-dns-resolver-library-might-also-cache-dns-records" class="post-heading">
+    <a href="#your-program-s-dns-resolver-library-might-also-cache-dns-records">
+      your program&rsquo;s DNS resolver library might also cache DNS records
+    </a>
+</h3>
+<p>One more reason TTLs might not be respected in practice: many programs need to
+resolve DNS names, and some programs will also cache DNS records indefinitely
+in memory (until the program is restarted).</p>
+<p>For example, AWS has an article on <a href="https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-jvm-ttl.html">Setting the JVM TTL for DNS Name
+Lookups</a>.
+I haven&rsquo;t written that much JVM code that does DNS lookups myself, but from a
+little Googling about the JVM and DNS it seems like you can configure the
+JVM so that it caches every DNS lookup indefinitely. (like <a href="https://github.com/elastic/elasticsearch/issues/16412">this elasticsearch issue</a>)</p>
+<h3 id="that-s-all" class="post-heading">
+    <a href="#that-s-all">
+      that&rsquo;s all!
+    </a>
+</h3>
+<p>I hope this helps you understand what&rsquo;s going on when updating your DNS!</p>
+<p>As a disclaimer, again &ndash; TTLs definitely don&rsquo;t tell the whole story about DNS
+propagation &ndash; some recursive DNS servers definitely don&rsquo;t respect TTLs, even
+if the major ones like 8.8.8.8 do. So even if you&rsquo;re just updating an A record
+with a short TTL, it&rsquo;s very possible that in practice you&rsquo;ll still get some
+requests to the old IP for a day or two.</p>
+<p>Also, I changed the nameservers for <code>examplecat.com</code> back to their old values
+after publishing this post.</p>
+
+</main>
+
+<footer>
+
+<style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; display: inline;}
+  #mc_embed_signup  {
+    display: inline;
+  }
+  #mc_embed_signup input.button {
+    background: #ff5e00;
+    display: inline;
+    color: white;
+    padding: 6px 12px;
+  }
+</style>
+<div class="sharing">
+
+<style>
+    .form-inline {
+        display:flex; flex-flow: row wrap; justify-content: center;
+    }
+    .form-inline input, .form-inline span {
+        padding: 10px;
+    }
+    .form-inline input {
+        display:inline;
+        max-width:30%; 
+        margin: 0 10px 0 0; 
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    button {
+        background-color: #f50;
+        box-shadow: none;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 10px;
+    }
+    @media (max-width: 800px) {
+        .form-inline input {
+            margin: 10px 0;
+            max-width:100% !important;
+        }
+        .form-inline {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+</style>
+
+<div align="center">
+    <form class="form-inline" action="https://app.convertkit.com/forms/1052396/subscriptions" method="post" data-uid="8884355abb" data-format="inline" data-version="5">
+        <span> Want a weekly digest of this blog?</span>
+        <input name="email_address" type="text" placeholder="Email address" /> 
+        <button type="submit" data-element="submit">Subscribe</button>
+    </form>
+</div>
+
+
+</div>
+
+<p class="meta">
+  
+    <a class="basic-alignment left" href="https://jvns.ca/blog/2020/06/14/questions-to-help-you-learn/" title="Previous Post: Questions to help people decide what to learn">Questions to help people decide what to learn</a>
+  
+  
+    <a class="basic-alignment right" href="https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/" title="Next Post: A little bit of plain Javascript can do a lot">A little bit of plain Javascript can do a lot</a>
+  
+</p>
+</footer>
+
+</article>
+</div>
+
+</div>
+</div>
+<nav role="navigation" class="footer-nav"> <a href="/">Archives</a>
+</nav>
+<footer role="contentinfo"><span class="credit">&copy; Julia Evans. </span>
+  <span>If you like this, you may like <a href="https://web.archive.org/web/20181228051203/http://www.uliaea.ca/">Ulia Ea</a> or, more seriously, this list of <a href="https://jvns.ca/blogroll">blogs I love</a> or some <a href="https://jvns.ca/bookshelf">books I've read</a>. <br> 
+<p class="rc-scout__text"><i class="rc-scout__logo"></i>
+You might also like the <a class="rc-scout__link" href="https://www.recurse.com/scout/click?t=546ea46360584b522270b8c3e5d830f8">Recurse Center</a>, my very favorite programming community <a href="/categories/hackerschool/">(my posts about it)</a></p>
+</span>
+<style class="rc-scout__style" type="text/css">.rc-scout{display:block;padding:0;border:0;margin:0;}.rc-scout__text{display:block;padding:0;border:0;margin:0;height:100%;font-size:100%;}.rc-scout__logo{display:inline-block;padding:0;border:0;margin:0;width:0.85em;height:0.85em;background:no-repeat center url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2015%22%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2212%22%20height%3D%2210%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2210%22%20height%3D%228%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%228%22%20height%3D%226%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%222%22%20y%3D%223%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%224%22%20y%3D%223%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%226%22%20y%3D%223%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%223%22%20y%3D%225%22%20width%3D%222%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%226%22%20y%3D%225%22%20width%3D%222%22%20height%3D%221%22%20fill%3D%22%2361ae24%22%3E%3C%2Frect%3E%3Crect%20x%3D%224%22%20y%3D%229%22%20width%3D%224%22%20height%3D%223%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%221%22%20y%3D%2211%22%20width%3D%2210%22%20height%3D%224%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%220%22%20y%3D%2212%22%20width%3D%2212%22%20height%3D%223%22%20fill%3D%22%23000%22%3E%3C%2Frect%3E%3Crect%20x%3D%222%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%223%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%224%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%225%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%226%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%227%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%228%22%20y%3D%2213%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3Crect%20x%3D%229%22%20y%3D%2212%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23fff%22%3E%3C%2Frect%3E%3C%2Fsvg%3E');}.rc-scout__link:link,.rc-scout__link:visited{color:#61ae24;text-decoration:underline;}.rc-scout__link:hover,.rc-scout__link:active{color:#4e8b1d;}</style>
+</footer>
+<script type="text/rocketscript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+</div>
+</body>
+</html>
+

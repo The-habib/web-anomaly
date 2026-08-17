@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Stevey's Blog Rants: eBay Patents 10-Click Checkout</title>
+
+  <script type="text/javascript">(function() { (function(){function b(g){this.t={};this.tick=function(h,m,f){var n=f!=void 0?f:(new Date).getTime();this.t[h]=[n,m];if(f==void 0)try{window.console.timeStamp("CSI/"+h)}catch(q){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var e=(a=window.performance.timing)&&a.responseStart;var p=e>0?new b(e):new b;window.jstiming={Timer:b,load:p};if(a){var c=a.navigationStart;c>0&&e>=c&&(window.jstiming.srt=e-c)}if(a){var d=window.jstiming.load;
+c>0&&e>=c&&(d.tick("_wtsrt",void 0,c),d.tick("wtsrt_","_wtsrt",e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&c>0&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",c))),a==null&&window.gtbExternal&&(a=window.gtbExternal.pageT()),a==null&&window.external&&(a=window.external.pageT,d&&c>0&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();window.tickAboveFold=function(b){var a=0;if(b.offsetParent){do a+=b.offsetTop;while(b=b.offsetParent)}b=a;b<=750&&window.jstiming.load.tick("aft")};var k=!1;function l(){k||(k=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",l,!1):window.attachEvent("onscroll",l);
+ })();</script><script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return c[1].search("(^|&)m=")>=0?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(d.indexOf("Mobile")!=-1&&d.indexOf("WebKit")!=-1&&d.indexOf("iPad")==-1||d.indexOf("Opera Mini")!=-1||d.indexOf("IEMobile")!=-1){var e=a();e&&window.location.replace(e)};
+</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Stevey&#39;s Blog Rants - RSS" href="https://steve-yegge.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://www.blogger.com/feeds/13674163/posts/default" />
+<link rel="alternate" type="application/atom+xml" title="Stevey&#39;s Blog Rants - Atom" href="https://steve-yegge.blogspot.com/feeds/6415077178742163594/comments/default" />
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/static/v1/v-css/1601750677-blog_controls.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=13674163&zx=e1765c07-d2d0-4d69-bd1c-c9e888df1350"/>
+
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#fff;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Georgia,Serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+a:link {
+  color:#58a;
+  text-decoration:none;
+  }
+a:visited {
+  color:#969;
+  text-decoration:none;
+  }
+a:hover {
+  color:#c60;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Header
+----------------------------------------------- */
+@media all {
+  #header {
+    width:660px;
+    margin:0 auto 10px;
+    border:1px solid #ccc;
+    }
+  }
+@media handheld {
+  #header {
+    width:90%;
+    }
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #eee;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #eee;
+  border-width:0 1px 1px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:760px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:510px;
+    float:left;
+    }
+  #sidebar {
+    width:220px;
+    float:right;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font: "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  /*text-transform:uppercase;*/
+  letter-spacing:.2em;
+  /*color:#999;*/
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#c60;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+/* styles I added for code examples, etc. */
+re {color: #4169E1;}
+code {color: #2E8B57;}
+unix {color: #9370DB;}
+span.question {color: #B22222; font-style: italic;}
+
+/* emacs font-lock faces */
+.blue-violet { color: #8a2be2; }
+.constant { color: #696969; }
+.firebrick { color: #b22222; }
+.function-name { color: #b22222; }
+.keyword { color: #0000cd; }
+.string { color: #4169e1; }
+.type { color: #4682b4; }
+.variable-name { color: #2e8b57; }
+
+/* from htmlize.el */
+.comment {
+  /* font-lock-comment-face */
+  color: #006400;
+}
+.comment-delimiter {
+}
+.function-name {
+  /* font-lock-function-name-face */
+  color: #cd2626;
+}
+.keyword {
+  /* font-lock-keyword-face */
+  color: #0000cd;
+}
+.string {
+  /* font-lock-string-face */
+  color: #4169e1;
+}
+.variable-name {
+  /* font-lock-variable-name-face */
+  color: #2e8b57;
+}
+
+</style>
+
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<!-- data-ad-client=ca-pub-1448465482748307 -->
+<!-- --><style type="text/css">@import url(//www.blogger.com/static/v1/v-css/navbar/3334278262-classic.css);
+div.b-mobile {display:none;}
+</style>
+
+</head>
+
+<body><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar/13674163?origin\x3dhttps://steve-yegge.blogspot.com',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+
+<div id="header">
+
+  <h1 id="blog-title">
+    <a href="http://steve-yegge.blogspot.com/">
+	Stevey's Blog Rants
+	</a>
+  </h1>
+  <p id="description">Random whining and stuff.</p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+<div class='adsense' style='text-align:center; padding: 0px 3px 0.5em 3px;'>
+<script type="text/javascript"><!--
+google_ad_client="ca-pub-1448465482748307";
+google_ad_host = "pub-1556223355139109";
+google_ad_width=468;
+google_ad_height=60;
+google_ad_format="468x60_as";
+google_ad_type="text";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="CC6600";
+google_color_url="CC6600";
+google_color_text="999999";
+//--></script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+
+    
+  <h2 class="date-header">Friday, July 22, 2011</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="6415077178742163594"></a>
+         
+    <h3 class="post-title">
+	 
+	 eBay Patents 10-Click Checkout
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <div style="clear:both;"></div>San Jose, CA (<span style="font-weight:bold;">Reuters</span>) &mdash; Online auctions cartel eBay (NASDAQ: EBAY) and its collections and incarceration arm PayPal announced that on July 21, 2011, the two companies had jointly been awarded United States Patent No. 105960411 for their innovative 10-click “Buy it Now” purchasing pipeline.<br /><br />The newly-patented buying system guides users through an intuitive, step-by-step process of clicking “Buy It Now”, entering your password, logging in because they signed your sorry ass out again, getting upsold shit you don’t want, continuing to your original destination, accepting the default quantity of 1 (otherwise known as “It”), committing to buy, clicking "Pay Now", entering a <span style="font-style:italic;">different</span> password than your first one, clicking "Log In" <span style="font-style:italic;">again</span> god dammit, declining to borrow money from eBay’s usury department, reviewing the goddamn purchase details since by now you’ve completely forgotten what the hell you were buying, and finally confirming the god damned payment already.<br /><br />The 10-click checkout system, known colloquially as 10CLICKFU -- which many loyal users believe stands for “10 Clicks For You” -- was recently awarded top honors by the National Alliance of Reconstructive Hand Surgeons.  10CLICKFU incorporates a variable number of clicks ranging from eight to upwards of fifteen, but eBay’s patent stipulates that any purchasing system that lies to you at least nine times about the “Now” part of “Buy It Now” is covered by their invention.<br /><br />The patent award came as a surprise to many analysts, since several of eBay’s related patent attempts had been rejected on the basis of prior art.  In one well-publicized filing, eBay had tried to patent a purely decorative, non-operational “Keep me signed in” checkbox, but Sony’s PlayStation Network already had one just like it.  And another eBay patent claim for excruciating page load times was rejected because the iPad App Store is still loading.<br /><br />But eBay’s boldest and potentially furthest-reaching patent attempt was for “100% Inaccurate Button Text”.  The invention claim was based on several of their UI elements, but rested primarily on the “Buy It Now” button, which eBay claims contains enough inaccuracies to render it "complete bullshit."  Their patent was rejected by the US Patent Office review committee on the grounds that the Firefox browser’s “Do this automatically from now on” checkbox has been complete bullshit for over fifteen years.  eBay says they will appeal the ruling because the checkbox is not technically a button.<br /><br />eBay’s spokesperson Paula Smugworth announced that eBay will continue to innovate on ways to remind their users that monopolies can do whatever the hell they want.  “Not that eBay is a monopoly,” she added.  “But if we <span style="font-style:italic;">were</span> a monopoly, then we could do whatever the hell we wanted.  I’m just sayin’.”<br /><br />eBay’s stock rose on the news, driven largely by anonymous shill bidders.<div style="clear:both; padding-bottom:0.25em"></div>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Steve Yegge at <a href="http://steve-yegge.blogspot.com/2011/07/ebay-patents-10-click-checkout.html" title="permanent link">3:36 AM</a></em>
+        <span class="item-control blog-admin pid-1139049968"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=13674163&postID=6415077178742163594&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://resources.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+  <div id="comments">
+
+	<a name="comments"></a>
+        <h4>22 Comments:</h4>
+        <dl id="comments-block">
+      
+      <dt class="comment-poster" id="c5991697459223086535"><a name="c5991697459223086535"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04131852440039642551" rel="nofollow">Pierre-Henri Trivier</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>What, wait, you mean this RSS feed is still actually *working* ? Whaoo :P</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5991697459223086535" title="comment permalink">4:49 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-1518437694"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5991697459223086535" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5880346414027751257"><a name="c5880346414027751257"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17159794696458817244" rel="nofollow">Jesse Ruderman</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I&#39;m guessing the Firefox complaint is about <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=453455" rel="nofollow">bug 453455</a>? I saved that bug from WONTFIX but it hasn&#39;t been fixed yet :(</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5880346414027751257" title="comment permalink">5:01 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-11725728"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5880346414027751257" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4271535625670878275"><a name="c4271535625670878275"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12811518880609933968" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Long time no see :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4271535625670878275" title="comment permalink">6:50 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-1069263046"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4271535625670878275" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5122226977991414653"><a name="c5122226977991414653"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06704539051879108420" rel="nofollow">Harring Figueiredo</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I was going to beg you to publish this on the Onion News site. But they just take fake stories.<br /><br />Classic!!!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5122226977991414653" title="comment permalink">8:21 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-246527710"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5122226977991414653" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5726785573146905498"><a name="c5726785573146905498"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/15113403990210471429" rel="nofollow">zacaj</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>You forgot about how they dont even GIVE you a broken &quot;remember this choice&quot; option when you choose to pay via credit card instead of from your bank account EVERY SINGLE TIME, which takes another THREE PAGE LOADS, and god forbid you have dialup, or are using a cell phone tether for internet or anything, so if you dont press every button as soon as the page loads, you get automatically logged out due to inactivity, and cant even tell if the payment finished or not until you get an email 40 minutes later</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5726785573146905498" title="comment permalink">8:37 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-1026088212"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5726785573146905498" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1004836820482990091"><a name="c1004836820482990091"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/05408953382642388888" rel="nofollow">Ken Egozi</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>shame that your blog editor&#39;s Publish button require a 100-step process, otherwise we&#39;d have gotten many more WIN posts like this one !<br /><br />Ken, who keeps yegge&#39;s rss subscription active for life</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1004836820482990091" title="comment permalink">8:56 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-1832447782"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1004836820482990091" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c548973350195382982"><a name="c548973350195382982"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/01956107862998668860" rel="nofollow">Angie</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Brilliant.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#548973350195382982" title="comment permalink">10:46 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-1928132684"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/548973350195382982" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c110747522313540750"><a name="c110747522313540750"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/04211033991391020752" rel="nofollow">das</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>I think this explains something... that this was delayed from 1 April until 22 July implies that stevey hasn&#39;t stopped posting, they&#39;re just really, really delayed.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#110747522313540750" title="comment permalink">10:52 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-896998050"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/110747522313540750" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3370173094769720376"><a name="c3370173094769720376"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/00908927302436659146" rel="nofollow">Don</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>ebay vs. Amazon Clicks-to-Purchase. eBay 18, Amazon 1. Ouch! Wow.  I would have thought that eBay had progressed on the idea of &quot;fewest clicks to purchase&quot;. It&#39;s a good payoff for everybody in the transaction -- the buyer and seller. But alas I am wrong. No wonder I gravitate to Amazon whenever possible. It takes Amazon literally 1 click. But my recent experience in purchasing HP Ink Cartridges took 18 CLICKS. And I&#39;ve been using eBay and PayPal for over 12 years. Progress seems nil.www.percussive.com.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3370173094769720376" title="comment permalink">11:20 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-804663155"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3370173094769720376" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7507570182500142911"><a name="c7507570182500142911"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10822379220678063266" rel="nofollow">Unknown</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Haha very very nice :-)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7507570182500142911" title="comment permalink">11:40 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-713059613"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7507570182500142911" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c811488514830766552"><a name="c811488514830766552"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/06537387509952609756" rel="nofollow">Dmitry</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hi Steve,<br /><br />did you see that: http://nic.ferrier.me.uk/blog/2010_10/elnode</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#811488514830766552" title="comment permalink">11:42 AM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-1388711350"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/811488514830766552" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c6516735711506825256"><a name="c6516735711506825256"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/08969242236338405291" rel="nofollow">Josh Smeaton</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>In other news, <a href="http://www.uspto.gov/" rel="nofollow">US Patent Office</a> website has crashed due to socially engineered DDOS attack.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#6516735711506825256" title="comment permalink">7:23 PM, July 22, 2011</a>
+	  <span class="item-control blog-admin pid-2121350947"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/6516735711506825256" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c3085402528433130576"><a name="c3085402528433130576"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/09288154140062715937" rel="nofollow">Ron Wolf</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Rumor is that that eBay is working on new improvements to including doubling the number of clicks and adding new logon steps. However, they are concerned about infringing on Yahoo&#39;s IP covering multiple redundant repeated logon requests.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#3085402528433130576" title="comment permalink">9:00 PM, July 23, 2011</a>
+	  <span class="item-control blog-admin pid-680830333"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/3085402528433130576" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c4472325768813696302"><a name="c4472325768813696302"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/17715564747244635267" rel="nofollow">cabhishek</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>hilarious .. your writing style reminds me of anthony bourdain..</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#4472325768813696302" title="comment permalink">11:43 PM, July 23, 2011</a>
+	  <span class="item-control blog-admin pid-1121683209"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/4472325768813696302" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c2836602703421556128"><a name="c2836602703421556128"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/11851036181036108247" rel="nofollow">ben</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>After all this waiting another yeggeblog? And then only such a short one? Oh wait is the &quot;Hand Surgeons&quot; reference maybe not about the 10 clicks but about him not being able to write anymore? If so, i wish a good recovery. Looking forward to more and longer yeggeblogs.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#2836602703421556128" title="comment permalink">2:14 AM, July 24, 2011</a>
+	  <span class="item-control blog-admin pid-232516762"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/2836602703421556128" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c8332217280660204611"><a name="c8332217280660204611"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/02042967976252150460" rel="nofollow">Paul Hobbs</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Hahaha nice one.  Keep posting!  :-)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#8332217280660204611" title="comment permalink">10:17 AM, July 25, 2011</a>
+	  <span class="item-control blog-admin pid-930739095"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/8332217280660204611" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1423475993043948888"><a name="c1423475993043948888"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/13123891452078868471" rel="nofollow">Emil</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>You are back! Good memories; Dad&#39;s Chilli recipe comes to mind... :)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1423475993043948888" title="comment permalink">1:19 PM, July 25, 2011</a>
+	  <span class="item-control blog-admin pid-946980548"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1423475993043948888" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5493556810131037448"><a name="c5493556810131037448"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/03904547908927379431" rel="nofollow">Alex Angas</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>You missed a mention of another worthy eBay invention. The &quot;Sell Your Item: Description HTML Auto-Mangler&quot;. Standards? Heck, our HTML can&#39;t even be parsed!</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5493556810131037448" title="comment permalink">4:32 PM, July 25, 2011</a>
+	  <span class="item-control blog-admin pid-296087173"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5493556810131037448" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1833483006755439175"><a name="c1833483006755439175"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/08349066765107185158" rel="nofollow">thelittlelisper</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Still waiting for that Clojure post Steve. Hopefully something constructive.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1833483006755439175" title="comment permalink">1:28 AM, July 26, 2011</a>
+	  <span class="item-control blog-admin pid-187780729"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1833483006755439175" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c1870676924553923270"><a name="c1870676924553923270"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/10025555896996100599" rel="nofollow">MCAndre</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>There are some for whom the Apple Human Interface Guidelines can offer no aid. They are known as businessmen, because it is their business to keep aloof of such minor details.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#1870676924553923270" title="comment permalink">2:12 AM, July 26, 2011</a>
+	  <span class="item-control blog-admin pid-1980942736"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/1870676924553923270" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c5487366181247261474"><a name="c5487366181247261474"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/12674916418422470054" rel="nofollow">E. Hekkert</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>@zacaj<br /><br />...god forbid you have dialup.<br /><br />People who still have an ancient dailup connection shouldn&#39;t be on the internet.</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#5487366181247261474" title="comment permalink">4:50 AM, July 29, 2011</a>
+	  <span class="item-control blog-admin pid-1505180240"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/5487366181247261474" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+      <dt class="comment-poster" id="c7996621410007017211"><a name="c7996621410007017211"></a>
+        <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="https://resources.blogblog.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="https://www.blogger.com/profile/16772806403046781521" rel="nofollow">Epsilon Given</a> said...
+      </dt>
+      <dd class="comment-body">
+
+        <p>Fantastic!  I&#39;ve grown to be completely against patents and the patent system--but this post almost makes it worthwhile!<br /><br />(I won&#39;t go into details why I&#39;m against patents here, but I&#39;ll just say my metamorphosis started with learning the evils of software patents.)</p>
+      </dd>
+      <dd class="comment-timestamp"><a href="#7996621410007017211" title="comment permalink">12:42 PM, August 18, 2011</a>
+	  <span class="item-control blog-admin pid-435613055"><a style="border:none;" href="https://www.blogger.com/comment/delete/13674163/7996621410007017211" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+	  </dd>
+      
+    </dl>
+		<p class="comment-timestamp">
+
+    <a class="comment-link" href="https://www.blogger.com/comment/fullpage/post/13674163/6415077178742163594">Post a Comment</a>
+    </p>
+    	    
+    
+
+
+		<p class="comment-timestamp">
+	<a href="http://steve-yegge.blogspot.com/">&lt;&lt; Home</a>
+    </p>
+    </div>
+
+
+
+  <!-- End #comments -->
+
+
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
+<dl class="profile-datablock"><dt class="profile-img"><a href="https://www.blogger.com/profile/14812997485690838920"><img src="//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8lMplUBvgDts4l0lod1nWJ71okMnRPkuOiZXzCG3lFp7UqiY4MymxpbZIyAtcosW8amfQNznW4wye0IIOOdBe0egaGFj0jnAopXvqmJVikZPc6QPO9WiBG1rVHYOy2t8/s220/stevey-6-21-07.jpg" width="80" height="59" alt="My Photo"></a></dt>
+<dd class="profile-data"><strong>Name:</strong> <a rel="author" href="https://www.blogger.com/profile/14812997485690838920"> Steve Yegge </a></dd>
+<dd class="profile-data"><strong>Location:</strong>  Kirkland, Washington, United States </dd></dl>
+
+<p class="profile-link"><a rel="author" href="https://www.blogger.com/profile/14812997485690838920">View my complete profile</a></p></div>
+   
+  <!-- End #profile -->
+    
+  
+
+  
+  <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://steve-yegge.blogspot.com/2010/12/haskell-researchers-announce-discovery.html">Haskell Researchers Announce Discovery of Industry...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/wikileaks-to-leak-5000-open-source-java.html">Wikileaks To Leak 5000 Open Source Java Projects W...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2010/07/blogger-finger.html">Blogger Finger</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/05/programmers-view-of-universe-part-3.html">A programmer&#39;s view of the Universe, part 3:  The ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/04/have-you-ever-legalized-marijuana.html">Have you ever legalized marijuana?</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2009/03/story-time.html">Story Time</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/12/programmers-view-of-universe-part-2.html">A programmer&#39;s view of the Universe, part 2:  Mari...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/12/fable-ii-arguably-better-than-getting.html">Fable II:  Arguably Better than Getting Your Head ...</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/11/ejacs-javascript-interpreter-for-emacs.html">Ejacs:  a JavaScript interpreter for Emacs</a></li>
+     
+        <li><a href="http://steve-yegge.blogspot.com/2008/10/programmers-view-of-universe-part-1.html">A programmer&#39;s view of the Universe, part 1:  The ...</a></li>
+     
+  </ul>
+    
+
+      <p id="powered-by"><a href="//www.blogger.com"><img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tkSp8-68tdzh-Lglx-c9GxvAepqHW8gobeBSOvQ0LscFvJ1tLuFNaYEJVCB-dwkHcf5I8oA9bwdWsJirbc8BmkiYqa9VJgv2Ny_Qm87U3o=s0-d" alt="Powered by Blogger"></a></p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+</div>
+<!-- End #footer -->
+
+
+<script src="//www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-238999-1";
+urchinTracker();
+</script>
+</body>
+</html>
