@@ -1,0 +1,48 @@
+{
+  "experiment_id": "0002",
+  "title": "Phase 1 Blind Seed-Corpus Discovery Experiment",
+  "atlas_version": "0.1.0",
+  "atlas_codename": "Atlas",
+  "git_commit": "33a81ab517c88321d2865c5c9472476b60cc58d2",
+  "python_version": "3.12.1",
+  "platform_system": "Linux",
+  "platform_release": "6.8.0-1052-azure",
+  "sampling_seed": 42,
+  "scoring_version": "phase1-v1",
+  "corpus_sha256": "8c2e3ef39c304fb0fe8eaea312fb9381bc7ecca4ef745663ad8d2ef326101178",
+  "scoring_rules_sha256": "a5b062c65136638c246b716ad76f6a1bca53cbd442db6de61b1646395c0fe7f2",
+  "execution_timestamp": "2026-08-17T19:49:03.307813+00:00",
+  "summary_metrics": {
+    "experiment_id": "0002",
+    "phase": "Phase 1 Blind Seed-Corpus Discovery",
+    "calculated_at": "2026-08-17T19:49:03.303817+00:00",
+    "coverage": {
+      "domains_selected": 1000,
+      "domains_attempted": 1000,
+      "domains_successfully_processed": 1000,
+      "preflight_success_count": 671,
+      "preflight_success_rate": 0.671,
+      "archive_coverage_rate": 0.794
+    },
+    "discovery": {
+      "candidate_count": 3,
+      "candidate_rate": 0.003,
+      "high_confidence_candidates": 2,
+      "near_miss_count": 2,
+      "zero_score_count": 997
+    },
+    "validation_sample": {
+      "sample_size": 23,
+      "validated_anomalies": 2,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "observed_validation_rate": 0.087,
+      "sample_false_positive_rate": 0.0
+    },
+    "performance_and_storage": {
+      "storage_consumed_mb": 121.99,
+      "total_raw_evidence_bytes": 127914509,
+      "average_bytes_per_domain": 127914.5
+    }
+  }
+}
