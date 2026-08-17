@@ -7,7 +7,7 @@ from atlas.core.config import DEFAULT_USER_AGENT, REQUEST_TIMEOUT_SECONDS
 from atlas.core.logger import logger
 from atlas.core.models import TimelineEvent
 
-def query_wayback_timeline(url: str, limit: int = 100) -> Tuple[List[TimelineEvent], dict]:
+def query_wayback_timeline(url: str, limit: int = 100, timeout: int = 6) -> Tuple[List[TimelineEvent], dict]:
     """
     Query the Wayback Machine CDX API to retrieve historical snapshots for a URL.
     Returns (List[TimelineEvent], summary_stats).
@@ -32,7 +32,7 @@ def query_wayback_timeline(url: str, limit: int = 100) -> Tuple[List[TimelineEve
         resp = requests.get(
             cdx_url,
             headers={"User-Agent": DEFAULT_USER_AGENT},
-            timeout=REQUEST_TIMEOUT_SECONDS
+            timeout=timeout
         )
         if resp.status_code == 200:
             data = resp.json()
