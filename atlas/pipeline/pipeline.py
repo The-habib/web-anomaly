@@ -1,9 +1,9 @@
-"""Master Evidence Pipeline for Project Atlas."""
+"""Master Evidence Pipeline for Project Atlas (Phase 0.5)."""
 
 import time
 import json
 import hashlib
-from datetime import datetime
+from datetime import datetime, timezone
 from urllib.parse import urlparse
 from typing import Optional, List
 
@@ -13,7 +13,7 @@ from atlas.core.config import (
 )
 from atlas.core.logger import logger
 from atlas.core.models import (
-    ArtifactType, EvidenceArtifact, Finding, TimelineEvent
+    ArtifactType, EvidenceArtifact, Finding, TimelineEvent, EvidenceState
 )
 from atlas.pipeline.screenshot import capture_screenshot
 from atlas.pipeline.html_extractor import fetch_and_extract_html
@@ -42,10 +42,10 @@ class EvidencePipeline:
 
         parsed = urlparse(url)
         canonical_domain = parsed.netloc or parsed.path
-        timestamp_slug = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        timestamp_slug = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         clean_name = canonical_domain.replace(":", "_").replace("/", "_").replace(".", "_")
         prefix = f"{clean_name}_{timestamp_slug}"
-        finding_id = f"ATLAS-{datetime.utcnow().strftime('%Y%m%d')}-{prefix[:16]}"
+        finding_id = f"ATLAS-{datetime.now(timezone.utc).strftime('%Y%m%d')}-{prefix[:16]}"
 
         artifacts: List[EvidenceArtifact] = []
 
@@ -73,8 +73,8 @@ class EvidencePipeline:
 
         # 6. Unified Timeline Construction
         logger.info("[6/10] Constructing unified temporal timeline...")
-        live_now_ts = datetime.utcnow().strftime("%Y%m%d%H%M%S")
-        live_iso = datetime.utcnow().isoformat() + "Z"
+        live_now_ts = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+        live_iso = datetime.now(timezone.utc).isoformat()
         live_event = TimelineEvent(
             timestamp=live_now_ts,
             datetime_iso=live_iso,
@@ -85,24 +85,30 @@ class EvidencePipeline:
             notes="Live inspection during pipeline execution"
         )
 
-        unified_events, tl_analysis, tl_artifact = build_unified_timeline(
+        unified_events, tl_metrics, tl_artifact = build_unified_timeline(
             url, prefix, wb_events, cc_events, live_event
         )
         artifacts.append(tl_artifact)
 
-        # 7. Anomaly Scoring
-        logger.info("[7/10] Calculating Anomaly Score...")
-        score, classification, signals = self.scorer.evaluate(
+        # 7. Anomaly Scoring with Confidence and Evidence State
+        logger.info("[7/10] Calculating Anomaly Score and Confidence...")
+        score, confidence, classification, overall_state, signals = self.scorer.evaluate(
             timeline=unified_events,
             metadata=html_res.get("metadata", {}),
             html_content=html_res.get("html_content", ""),
-            live_status=html_res.get("status_code", 200)
+            live_status=html_res.get("status_code", 200),
+            timeline_metrics=tl_metrics
         )
 
         # 8. Save Comprehensive Evidence JSON
         logger.info("[8/10] Serializing complete evidence package...")
         evidence_json_filename = f"{prefix}_evidence.json"
         evidence_json_path = JSON_DIR / evidence_json_filename
+
+        state_breakdown = {}
+        for s in signals:
+            state_key = s.evidence_state.value
+            state_breakdown[state_key] = state_breakdown.get(state_key, 0) + 1
         
         evidence_payload = {
             "finding_id": finding_id,
@@ -110,10 +116,13 @@ class EvidencePipeline:
             "canonical_domain": canonical_domain,
             "timestamp": live_iso,
             "anomaly_score": score,
+            "confidence": confidence,
             "classification": classification,
+            "evidence_state": overall_state.value,
             "signals": [s.model_dump() for s in signals],
-            "timeline_analysis": tl_analysis,
+            "timeline_metrics": tl_metrics.model_dump(),
             "metadata": html_res.get("metadata", {}),
+            "evidence_state_breakdown": state_breakdown,
             "artifacts": [a.model_dump() for a in artifacts]
         }
 
@@ -130,14 +139,16 @@ class EvidencePipeline:
             file_name=evidence_json_filename,
             sha256=hashlib.sha256(ev_bytes).hexdigest(),
             size_bytes=len(ev_bytes),
-            metadata={"anomaly_score": score}
+            source="pipeline_engine",
+            collection_method="serialization",
+            metadata={"anomaly_score": score, "confidence": confidence}
         )
         artifacts.append(ev_artifact)
 
         # 9. Formulate Finding Model
         human_summary = (
-            f"Target {url} analyzed with Anomaly Score {score} ({classification}). "
-            f"Observed {len(signals)} anomaly signals across a {tl_analysis.get('span_years', 0)}-year historical timeline."
+            f"Target {url} analyzed with Anomaly Score {score} (Confidence: {confidence:.2f}, Classification: {classification}). "
+            f"Observed {len(signals)} signals across a {tl_metrics.years_span}-year span with {tl_metrics.continuity_level.value} continuity."
         )
 
         finding = Finding(
@@ -146,14 +157,18 @@ class EvidencePipeline:
             canonical_domain=canonical_domain,
             created_at=live_iso,
             anomaly_score=score,
+            confidence=confidence,
             classification=classification,
+            evidence_state=overall_state,
             signals=signals,
             artifacts=artifacts,
-            timeline_summary=tl_analysis,
+            timeline_summary=tl_metrics.model_dump(),
             metadata_summary=html_res.get("metadata", {}),
+            evidence_state_breakdown=state_breakdown,
             human_summary=human_summary,
             machine_summary=evidence_payload,
-            reproducible_command=f"python3 scripts/run_pipeline.py {url}"
+            reproducible_command=f"python3 scripts/run_pipeline.py {url}",
+            verification_status="verified_on_creation"
         )
 
         # Save finding in findings/
@@ -172,7 +187,7 @@ class EvidencePipeline:
             url,
             duration_total,
             True,
-            extra={"finding_id": finding_id, "score": score, "signals_count": len(signals)}
+            extra={"finding_id": finding_id, "score": score, "confidence": confidence, "state": overall_state.value}
         )
 
         return finding
