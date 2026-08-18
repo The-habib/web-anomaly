@@ -1,0 +1,59 @@
+{
+  "experiment": "PROJECT ATLAS \u2014 PHASE 1.9 CONTROLLED REPLICATION",
+  "verdict": "PROMISING_BUT_UNCONFIRMED",
+  "primary_unit_of_analysis": "DOMAIN",
+  "sample_size": {
+    "intent_to_treat": {
+      "treatment": 100,
+      "control": 100,
+      "total": 200
+    },
+    "full_exposure": {
+      "treatment": 69,
+      "control": 64,
+      "total": 133
+    },
+    "per_protocol": {
+      "treatment": 65,
+      "control": 63,
+      "total": 128
+    }
+  },
+  "domain_level_primary": {
+    "treatment_discoveries": 2,
+    "treatment_probability": 0.02,
+    "control_discoveries": 0,
+    "control_probability": 0.0,
+    "risk_difference": 0.02,
+    "risk_difference_95_ci": [
+      -0.0197,
+      0.07
+    ],
+    "risk_ratio_haldane_anscombe": 5.0,
+    "risk_ratio_95_ci": [
+      0.2431,
+      102.8412
+    ],
+    "fisher_exact_p_value_two_sided": 0.4975,
+    "fisher_exact_p_value_greater": 0.2487
+  },
+  "retrieval_level_secondary": {
+    "treatment_slots_allocated": 1000,
+    "control_slots_allocated": 1000,
+    "treatment_yield_per_slot": 0.002,
+    "control_yield_per_slot": 0.0,
+    "yield_difference": 0.002,
+    "clustered_standard_error": 0.0014,
+    "z_score": 1.4286
+  },
+  "budget_equality": {
+    "theoretical_slots_treatment": 1000,
+    "theoretical_slots_control": 1000,
+    "slot_equality_ratio": 1.0,
+    "fixed_slots_per_domain": 10
+  },
+  "holdout_audit": {
+    "total_holdout_domains": 200,
+    "holdout_isolation_status": "VALID_AND_ISOLATED"
+  }
+}
