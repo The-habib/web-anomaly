@@ -19,12 +19,15 @@ from atlas.treasure.models import (
 
 def generate_review_packets(
     investigations: List[InvestigationRecord],
-    output_file: Path = Path("data/treasure_runs/TREASURE_RUN_0002/review_packets.jsonl")
+    output_file: Optional[Path] = None,
+    run_id: str = "TREASURE_RUN_0003"
 ) -> List[ReviewPacket]:
     """
     Export neutral, partially-blind review packets for human archaeological review.
     Excludes model-derived scores, research priority, strategy names, and expected verdicts.
     """
+    if output_file is None:
+        output_file = Path(f"data/treasure_runs/{run_id}/review_packets.jsonl")
     output_file.parent.mkdir(parents=True, exist_ok=True)
     packets: List[ReviewPacket] = []
 

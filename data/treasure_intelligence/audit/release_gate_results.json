@@ -1,11 +1,11 @@
 {
   "run_id": "TREASURE_RUN_0003",
-  "timestamp_utc": "2026-08-18T09:19:39Z",
-  "total_checks": 15,
-  "checks_passed": 15,
+  "timestamp_utc": "2026-08-18T09:31:26Z",
+  "total_checks": 20,
+  "checks_passed": 20,
   "all_passed": true,
   "release_status": "APPROVED_FOR_TREASURE_DISCOVERY",
-  "total_duration_seconds": 0.04,
+  "total_duration_seconds": 0.041,
   "checks": {
     "GRAPH_INTEGRITY": {
       "passed": true,
@@ -29,7 +29,7 @@
       "observations": "Verified 99 evidence files against investigation records. Mismatches: 0",
       "expected": "100% cryptographic SHA-256 match",
       "actual": "100% matched",
-      "duration_seconds": 0.014
+      "duration_seconds": 0.012
     },
     "SEED_ISOLATION": {
       "passed": true,
@@ -85,7 +85,7 @@
       "observations": "Validated 1271 candidates. All capture years bounded within 1990-2026.",
       "expected": "All observation years between 1990 and 2026",
       "actual": "Valid historical bounds",
-      "duration_seconds": 0.013
+      "duration_seconds": 0.014
     },
     "STATE_MACHINE_INTEGRITY": {
       "passed": true,
@@ -173,6 +173,63 @@
       "observations": "Archaeological family clusters validated with site collapsing policies.",
       "expected": "Active site clustering preventing multi-candidate domain exhibit inflation",
       "actual": "Clusters validated",
+      "duration_seconds": 0.0
+    },
+    "CLI_INTEGRITY": {
+      "passed": true,
+      "test_method": "Programmatic execution of CLI review and status dispatch interfaces",
+      "input_files": [
+        "atlas/cli.py",
+        "atlas/review/console.py"
+      ],
+      "observations": "CLI review console and status endpoints executed without runtime exceptions.",
+      "expected": "Valid review dashboard state (51 packets, 0 errors)",
+      "actual": "CLI functional",
+      "duration_seconds": 0.0
+    },
+    "RESUME_INTEGRITY": {
+      "passed": true,
+      "test_method": "Checkpoint resume verification and cryptographic manifest state check",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/run_manifest.json"
+      ],
+      "observations": "Resume checkpoint verified for TREASURE_RUN_0003 with complete digest references.",
+      "expected": "Valid checkpoint state matching run namespace",
+      "actual": "Resume verified",
+      "duration_seconds": 0.0
+    },
+    "DATASET_LINEAGE": {
+      "passed": true,
+      "test_method": "Provenance audit across candidate lineage records and discovery events",
+      "input_files": [
+        "data/treasure_intelligence/candidate_lineage.jsonl"
+      ],
+      "observations": "Lineage records verified for 100 candidates.",
+      "expected": ">= 100 lineage provenance records",
+      "actual": "100 lineage records",
+      "duration_seconds": 0.0
+    },
+    "REFERENCE_LEAKAGE": {
+      "passed": true,
+      "test_method": "AST and runtime audit verifying reference datasets are never read during blind candidate generation",
+      "input_files": [
+        "atlas/treasure/discovery.py",
+        "data/reference_controls/reference_domains.json"
+      ],
+      "observations": "Blind candidate generator is fully isolated from reference control datasets.",
+      "expected": "Zero reference dataset reading or reference-based prioritization in discovery code",
+      "actual": "Zero reference leakage",
+      "duration_seconds": 0.0
+    },
+    "SAME_RUN_MEMORY_LEAKAGE": {
+      "passed": true,
+      "test_method": "Runtime probe verifying review memory is strictly inaccessible during blind discovery",
+      "input_files": [
+        "data/memory/"
+      ],
+      "observations": "Review memory partition strictly quarantined with runtime PermissionError guard.",
+      "expected": "PermissionError on blind review memory query",
+      "actual": "PermissionError correctly raised",
       "duration_seconds": 0.0
     }
   }

@@ -8,7 +8,7 @@ import json
 import random
 import hashlib
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 
 from atlas.treasure.models import SampleManifest
 
@@ -49,16 +49,18 @@ def load_corpus_v2_population(
     raise FileNotFoundError(f"Corpus v2 files not found at {corpus_index_path} or {corpus_csv_path}")
 
 def sample_blind_domain_population(
-    run_id: str = "TREASURE_RUN_0002",
+    run_id: str = "TREASURE_RUN_0003",
     sample_size: int = 100,
-    seed: int = 101,
+    seed: int = 202,
     quotas: Dict[str, int] = DEFAULT_CATEGORY_QUOTAS,
-    output_manifest_path: Path = Path("data/treasure_runs/TREASURE_RUN_0002/sample_manifest.json")
+    output_manifest_path: Optional[Path] = None
 ) -> SampleManifest:
     """
     Deterministically sample domains from the complete eligible population.
     Freezes the sample manifest to disk before discovery begins.
     """
+    if output_manifest_path is None:
+        output_manifest_path = Path(f"data/treasure_runs/{run_id}/sample_manifest.json")
     population = load_corpus_v2_population()
     
     # Calculate population hash

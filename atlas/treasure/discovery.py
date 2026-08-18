@@ -161,7 +161,7 @@ def evaluate_path_strategies(norm_path: str, path_cat: PathCategory14) -> List[T
 def generate_multi_strategy_candidates(
     sampled_domains: List[Dict[str, str]],
     mode: ExecutionMode = ExecutionMode.LIVE_BLIND,
-    output_file: Path = Path("data/treasure_runs/TREASURE_RUN_0002/candidates.jsonl"),
+    output_file: Optional[Path] = None,
     max_workers: int = 15,
     run_id: str = "TREASURE_RUN_0003",
     max_candidates_per_strategy: int = 50,
@@ -171,6 +171,8 @@ def generate_multi_strategy_candidates(
     Execute 8 modular discovery strategies across the frozen domain sample and live CDX indices.
     """
     assert_live_blind_isolation(mode, context="generate_multi_strategy_candidates")
+    if output_file is None:
+        output_file = Path(f"data/treasure_runs/{run_id}/candidates.jsonl")
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
     candidates_map: Dict[str, CandidateRecord] = {}
