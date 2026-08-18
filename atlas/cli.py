@@ -120,22 +120,33 @@ def cmd_evidence_verify(args):
     print(f"    Total Artifacts: {m_data.get('total_artifacts', 0)}")
     print(f"    Integrity Check: PASSED\n")
 
-def cmd_evidence_audit(args):
+def cmd_evidence_archive(args):
     print_banner()
-    raw_dir = Path("data/phase1_3_live/evidence/raw_artifacts")
-    if not raw_dir.exists():
-        print("[-] No live artifacts found in data/phase1_3_live/evidence/raw_artifacts/")
-        return
+    from atlas.core.archiver import bundle_evidence_directory
+    target_dirs = [
+        Path("data/phase1_7/evidence/raw_artifacts"),
+        Path("data/phase1_5/evidence/raw_artifacts"),
+        Path("experiments/0002/evidence/raw_artifacts"),
+        Path("data/phase1_3_live/evidence/raw_artifacts")
+    ]
+    if args.dir:
+        target_dirs = [Path(args.dir)]
 
-    artifacts = list(raw_dir.glob("*_live.html"))
-    print(f"[+] Auditing Live Evidence Raw Artifacts ({len(artifacts)} files):")
-    valid_hashes = 0
-    for art in artifacts:
-        h = hashlib.sha256(art.read_bytes()).hexdigest()
-        if len(h) == 64:
-            valid_hashes += 1
-    print(f"    Cryptographically Valid Artifacts: {valid_hashes}/{len(artifacts)}")
-    print(f"    Tampering Detected: 0\n")
+    print(f"[*] Compressing bulk evidence artifacts across {len(target_dirs)} directories...")
+    for d in target_dirs:
+        if d.exists():
+            success, msg = bundle_evidence_directory(d)
+            print(f"    - {d}: {'[+]' if success else '[-]'} {msg}")
+    print("[+] Evidence archiving complete.\n")
+
+def cmd_evidence_extract(args):
+    print_banner()
+    from atlas.core.archiver import extract_evidence_bundle
+    bundle_path = Path(args.bundle)
+    target_dir = Path(args.target_dir) if args.target_dir else bundle_path.parent / "raw_artifacts"
+    print(f"[*] Extracting {bundle_path} to {target_dir}...")
+    success, msg = extract_evidence_bundle(bundle_path, target_dir)
+    print(f"    {'[+]' if success else '[-]'} {msg}\n")
 
 # Phase 1 Subcommands
 def cmd_phase1(args):
@@ -520,7 +531,11 @@ def main():
     evidence_sub = evidence_parser.add_subparsers(dest="subcommand")
     evidence_verify = evidence_sub.add_parser("verify", help="Verify cryptographic SHA-256 integrity of evidence artifacts")
     evidence_verify.add_argument("finding_id", nargs="?", help="Specific Finding ID to verify")
-    evidence_audit = evidence_sub.add_parser("audit", help="Audit live raw HTML payloads and artifacts")
+    evidence_archive = evidence_sub.add_parser("archive", help="Compress non-discovery raw HTML files to zstandard archive bundles")
+    evidence_archive.add_argument("--dir", help="Specific raw artifacts directory to compress", default=None)
+    evidence_extract = evidence_sub.add_parser("extract", help="Extract compressed evidence bundle back to directory")
+    evidence_extract.add_argument("bundle", help="Path to archive bundle file (.tar.zst / .tar.gz)")
+    evidence_extract.add_argument("--target-dir", help="Target extraction directory", default=None)
 
     # phase1
     p1_parser = subparsers.add_parser("phase1", help="Phase 1 Blind Seed-Corpus Discovery Experiment")
@@ -583,8 +598,10 @@ def main():
     elif args.command == "evidence":
         if args.subcommand == "verify":
             cmd_evidence_verify(args)
-        elif args.subcommand == "audit":
-            cmd_evidence_audit(args)
+        elif args.subcommand == "archive":
+            cmd_evidence_archive(args)
+        elif args.subcommand == "extract":
+            cmd_evidence_extract(args)
         else:
             evidence_parser.print_help()
     elif args.command == "phase1":

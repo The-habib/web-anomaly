@@ -36,6 +36,21 @@ cache/*
 !cache/.gitkeep
 data/temp/
 
+# Large Archive Bundles & Bulk Evidence
+*.tar.zst
+*.tar.gz
+*.tar
+data/*/evidence/raw_artifacts/*.html
+!data/*/evidence/raw_artifacts/*halifax*.html
+!data/*/evidence/raw_artifacts/*cslug*.html
+!data/*/evidence/raw_artifacts/toastytech*.html
+!data/*/evidence/raw_artifacts/zombo*.html
+!data/*/evidence/raw_artifacts/spacejam*.html
+!data/*/evidence/raw_artifacts/catb*.html
+!data/*/evidence/raw_artifacts/textfiles*.html
+experiments/*/evidence/raw/
+experiments/*/evidence/raw_artifacts/*.html
+
 # Logs (keep directory)
 logs/*
 !logs/.gitkeep
