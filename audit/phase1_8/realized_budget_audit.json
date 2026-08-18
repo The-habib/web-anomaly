@@ -18,7 +18,7 @@
     "domains_below_15_cap": 2
   },
   "disparity_ratio_realized": 1.7479,
-  "root_cause_analysis": "Arm D domains contained abundant candidate paths (mean > 15 available), saturating the 15-retrieval cap (84/100 hit cap). Arm U domains were path-sparse (mean 8.41 available paths), exhausting candidate pools before reaching the 15-retrieval cap (only 12/100 hit cap).",
+  "root_cause_analysis": "Arm D domains contained abundant candidate paths (mean > 15 available), saturating the 15-retrieval cap (98/100 hit cap). Arm U domains were path-sparse (mean 8.41 available paths), exhausting candidate pools before reaching the 15-retrieval cap (50/100 below cap).",
   "budget_definitions": {
     "allowed_budget": "15 retrievals/domain cap across both arms (fair protocol ceiling)",
     "attempted_budget": "Actual requests executed (841 in U vs 1470 in D)",

@@ -339,8 +339,8 @@ def audit_realized_budgets(data_dir: Path, output_dir: Path) -> Dict[str, Any]:
         },
         "disparity_ratio_realized": round(float(sum(d_attempted) / sum(u_attempted)), 4),
         "root_cause_analysis": (
-            "Arm D domains contained abundant candidate paths (mean > 15 available), saturating the 15-retrieval cap (84/100 hit cap). "
-            "Arm U domains were path-sparse (mean 8.41 available paths), exhausting candidate pools before reaching the 15-retrieval cap (only 12/100 hit cap)."
+            "Arm D domains contained abundant candidate paths (mean > 15 available), saturating the 15-retrieval cap (98/100 hit cap). "
+            "Arm U domains were path-sparse (mean 8.41 available paths), exhausting candidate pools before reaching the 15-retrieval cap (50/100 below cap)."
         ),
         "budget_definitions": {
             "allowed_budget": "15 retrievals/domain cap across both arms (fair protocol ceiling)",
