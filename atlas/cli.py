@@ -536,6 +536,47 @@ def cmd_phase1_9(args):
         print(f"    Fisher Two-Sided:  p = {st['domain_level_primary']['fisher_exact_p_value_two_sided']}")
         print(f"    Risk Difference:   RD = {st['domain_level_primary']['risk_difference']} (+2.0%)\n")
 
+def cmd_phase1_9_1(args):
+    print_banner()
+    from atlas.research.release_gate_phase1_9_1 import run_phase1_9_1_release_gate
+    from atlas.replication.review import generate_blind_review_packets
+
+    if args.p191_action == "release-check":
+        print("[*] Executing Phase 1.9.1 Scientific Release Gate Audit...")
+        report = run_phase1_9_1_release_gate()
+        print("\nPHASE 1.9.1 SCIENTIFIC RELEASE GATE RESULTS:")
+        print("-" * 65)
+        for check_name, check_data in report["checks"].items():
+            status = "PASS" if check_data["passed"] else "FAIL"
+            print(f"{check_name:<44}: {status}")
+        print("-" * 65)
+        print(f"SCIENTIFIC RELEASE:   {report['decision']}")
+        print(f"CLASSIFICATION:       {report['classification']}")
+        print(f"GATE CHECKS PASSED:   {report['passed_checks']} / {report['total_checks']}\n")
+        if not report["all_passed"]:
+            sys.exit(1)
+    elif args.p191_action in ("audit", "run"):
+        print("[*] Executing Phase 1.9.1 Decontamination Audit & Packet Generator...")
+        pkts, cands, m = generate_blind_review_packets()
+        print(f"\n[+] Generated {len(pkts)} decontaminated review packets in data/phase1_9_1/review_packets.jsonl\n")
+
+def cmd_review(args):
+    print_banner()
+    from atlas.replication.review import generate_blind_review_packets, import_human_review_submissions
+    from pathlib import Path
+
+    if args.review_action == "export-packets":
+        print("[*] Exporting Blind Human Review Packets...")
+        pkts, cands, m = generate_blind_review_packets()
+        print(f"[+] Exported {len(pkts)} packets to data/phase1_9_1/review_packets.jsonl")
+    elif args.review_action == "import":
+        if not args.file:
+            print("[!] Error: --file <submissions.jsonl> is required for review import.")
+            sys.exit(1)
+        print(f"[*] Importing Human Review Submissions from {args.file}...")
+        subs, adjs, val_discs = import_human_review_submissions(Path(args.file))
+        print(f"[+] Imported {len(subs)} submissions, {len(val_discs)} validated discoveries promoted.")
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -618,6 +659,15 @@ def main():
     p19_parser = subparsers.add_parser("phase1_9", help="Phase 1.9 Controlled Replication of Path-Density Prioritization Subsystem")
     p19_parser.add_argument("p19_action", choices=["release-check", "audit", "run", "pipeline"], help="Phase 1.9 action")
 
+    # phase1_9_1 (Phase 1.9.1 Review Decontamination & Salvage)
+    p191_parser = subparsers.add_parser("phase1_9_1", help="Phase 1.9.1 Review Decontamination & Salvage Subsystem")
+    p191_parser.add_argument("p191_action", choices=["release-check", "audit", "run"], help="Phase 1.9.1 action")
+
+    # review (Independent Human Review Interface)
+    review_parser = subparsers.add_parser("review", help="Independent Human Review Interface")
+    review_parser.add_argument("review_action", choices=["export-packets", "import"], help="Review operation")
+    review_parser.add_argument("--file", "-f", help="Path to submissions JSONL file for import", default=None)
+
     args = parser.parse_args()
 
     if args.command == "scan":
@@ -663,10 +713,13 @@ def main():
         cmd_phase1_8(args)
     elif args.command == "phase1_9":
         cmd_phase1_9(args)
+    elif args.command == "phase1_9_1":
+        cmd_phase1_9_1(args)
+    elif args.command == "review":
+        cmd_review(args)
     else:
         print_banner()
         parser.print_help()
 
 if __name__ == "__main__":
     main()
-
