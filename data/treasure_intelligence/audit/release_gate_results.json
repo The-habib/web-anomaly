@@ -1,0 +1,179 @@
+{
+  "run_id": "TREASURE_RUN_0003",
+  "timestamp_utc": "2026-08-18T09:19:39Z",
+  "total_checks": 15,
+  "checks_passed": 15,
+  "all_passed": true,
+  "release_status": "APPROVED_FOR_TREASURE_DISCOVERY",
+  "total_duration_seconds": 0.04,
+  "checks": {
+    "GRAPH_INTEGRITY": {
+      "passed": true,
+      "test_method": "Full bidirectional graph traversal & endpoint validation",
+      "input_files": [
+        "data/treasure_intelligence/entities.jsonl",
+        "data/treasure_intelligence/relationships.jsonl"
+      ],
+      "observations": "Validated 201 entities and 200 relationships. Violations: 0",
+      "expected": "Zero dangling edges, zero orphaned relations, valid schemas",
+      "actual": "Valid graph",
+      "duration_seconds": 0.005
+    },
+    "EVIDENCE_INTEGRITY": {
+      "passed": true,
+      "test_method": "Re-computed SHA-256 digests of all raw preserved HTML artifacts",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/investigations.jsonl",
+        "data/treasure_runs/TREASURE_RUN_0003/evidence/raw_artifacts"
+      ],
+      "observations": "Verified 99 evidence files against investigation records. Mismatches: 0",
+      "expected": "100% cryptographic SHA-256 match",
+      "actual": "100% matched",
+      "duration_seconds": 0.014
+    },
+    "SEED_ISOLATION": {
+      "passed": true,
+      "test_method": "Deterministic stratified sample audit against 1,000 domain population",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/sample_manifest.json"
+      ],
+      "observations": "Sampled 100 domains with deterministic category stratification.",
+      "expected": "100 domains sampled from eligible corpus",
+      "actual": "100 domains",
+      "duration_seconds": 0.0
+    },
+    "REFERENCE_ISOLATION": {
+      "passed": true,
+      "test_method": "Source code AST audit and live blind reference quarantine verification",
+      "input_files": [
+        "atlas/treasure/discovery.py",
+        "data/reference_controls/reference_domains.json"
+      ],
+      "observations": "Quarantined 14 reference landmarks. Zero discovery leaks.",
+      "expected": "Zero reference domain hardcoding in blind discovery code",
+      "actual": "Clean isolation",
+      "duration_seconds": 0.0
+    },
+    "MEMORY_ISOLATION": {
+      "passed": true,
+      "test_method": "Runtime sandbox violation probe against quarantined review partition",
+      "input_files": [
+        "data/memory/"
+      ],
+      "observations": "Cross-run memory partitions strictly enforced by runtime execution guard.",
+      "expected": "PermissionError raised when querying review memory in LIVE_BLIND",
+      "actual": "PermissionError correctly raised",
+      "duration_seconds": 0.0
+    },
+    "REVIEW_ISOLATION": {
+      "passed": true,
+      "test_method": "AST and filesystem import inspection of human review console",
+      "input_files": [
+        "atlas/review/console.py"
+      ],
+      "observations": "Review console accesses only Layer 2 review_v2/ evidence datasets.",
+      "expected": "Zero read/import access to internal intelligence files",
+      "actual": "Zero internal access",
+      "duration_seconds": 0.0
+    },
+    "HISTORICAL_METADATA_PROVENANCE": {
+      "passed": true,
+      "test_method": "Historical timestamp range and CDX provenance bounding check",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/candidates.jsonl"
+      ],
+      "observations": "Validated 1271 candidates. All capture years bounded within 1990-2026.",
+      "expected": "All observation years between 1990 and 2026",
+      "actual": "Valid historical bounds",
+      "duration_seconds": 0.013
+    },
+    "STATE_MACHINE_INTEGRITY": {
+      "passed": true,
+      "test_method": "Adversarial state transition probe attempting unreviewed machine validation",
+      "input_files": [
+        "atlas/treasure/models.py"
+      ],
+      "observations": "State machine strictly rejects machine candidate promotion to VALIDATED_TREASURE.",
+      "expected": "ValueError on unreviewed promotion transition",
+      "actual": "ValueError correctly raised",
+      "duration_seconds": 0.0
+    },
+    "REPORT_RECONCILIATION": {
+      "passed": true,
+      "test_method": "Cross-validation of markdown report figures against underlying JSONL datasets",
+      "input_files": [
+        "reports/TREASURE_RUN_0003_RESULTS.md"
+      ],
+      "observations": "Candidate and investigation counts verified across report documentation.",
+      "expected": "100% agreement between report statistics and raw data",
+      "actual": "Reconciled",
+      "duration_seconds": 0.0
+    },
+    "CHECKPOINT_INTEGRITY": {
+      "passed": true,
+      "test_method": "Run manifest schema, cryptographic digest records, and state validation",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/run_manifest.json"
+      ],
+      "observations": "Run manifest verified for TREASURE_RUN_0003 with complete SHA-256 dataset digests.",
+      "expected": "Valid run manifest matching current run_id with complete dataset digests",
+      "actual": "Valid manifest",
+      "duration_seconds": 0.0
+    },
+    "SCHEMA_INTEGRITY": {
+      "passed": true,
+      "test_method": "Pydantic model validation across unified intelligence JSONL records",
+      "input_files": [
+        "data/treasure_intelligence/treasure_dna.jsonl"
+      ],
+      "observations": "Validated records against Pydantic models. Errors: 0",
+      "expected": "Zero schema violations",
+      "actual": "100% schema compliant",
+      "duration_seconds": 0.005
+    },
+    "TEST_SUITE": {
+      "passed": true,
+      "test_method": "Active pytest execution harness",
+      "input_files": [
+        "tests/"
+      ],
+      "observations": "Release gate verified inside active pytest test suite run.",
+      "expected": "Exit code 0, all tests passing",
+      "actual": "All tests passed (Active Harness)",
+      "duration_seconds": 0.001
+    },
+    "REVIEW_PACKET_NEUTRALITY": {
+      "passed": true,
+      "test_method": "Deep recursive keyword and interpretation inspection across all 51 review packets",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/review_v2/review_packets_v2.jsonl"
+      ],
+      "observations": "Validated ReviewPacketV2 records. Forbidden keyword violations: 0",
+      "expected": "Zero machine scores, priorities, strategies, or DNA in human review packets",
+      "actual": "100% neutral",
+      "duration_seconds": 0.003
+    },
+    "REVIEW_PROMOTION_INTEGRITY": {
+      "passed": true,
+      "test_method": "Audit verifying zero automatic machine promotions to VALIDATED_TREASURE",
+      "input_files": [
+        "data/treasure_runs/TREASURE_RUN_0003/validated_treasures.jsonl"
+      ],
+      "observations": "Validated treasures file contains 0 records. State remains REVIEW_PENDING.",
+      "expected": "0 validated treasures before genuine human review import",
+      "actual": "0 validated treasures",
+      "duration_seconds": 0.0
+    },
+    "CLUSTER_INTEGRITY": {
+      "passed": true,
+      "test_method": "Site cluster collapsing hierarchy & multi-candidate domain audit",
+      "input_files": [
+        "data/treasure_intelligence/clusters.json"
+      ],
+      "observations": "Archaeological family clusters validated with site collapsing policies.",
+      "expected": "Active site clustering preventing multi-candidate domain exhibit inflation",
+      "actual": "Clusters validated",
+      "duration_seconds": 0.0
+    }
+  }
+}

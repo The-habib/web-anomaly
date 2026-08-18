@@ -74,7 +74,7 @@ def run_post_hoc_reference_evaluation(
             f.write(json.dumps(c) + "\n")
 
     summary = {
-        "total_evaluated": len(investigations),
+        "total_evaluated": len(inv_list),
         "reference_recoveries_count": reference_recoveries,
         "new_to_atlas_count": new_to_atlas,
         "reference_comparison_file": str(output_comparison_file)

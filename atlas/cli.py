@@ -642,6 +642,114 @@ def cmd_treasure(args):
             print(f"#{idx:02d} | {cid:<15} | Score: {score:>4.1f} | {url}")
         print("-" * 85 + "\n")
 
+    elif args.treasure_action == "review":
+        from atlas.review.console import (
+            load_review_packets_v2,
+            get_review_status,
+            render_packet_console,
+            submit_human_review,
+            export_review_session
+        )
+        from atlas.review.importer import import_human_reviews
+        from atlas.review.packet_v2 import validate_packet_v2_neutrality
+
+        sub_act = getattr(args, "review_action", "status")
+        rev_v2_dir = Path("data/treasure_runs/TREASURE_RUN_0003/review_v2")
+
+        if sub_act == "status":
+            st = get_review_status(rev_v2_dir)
+            print("\n[*] Project Atlas — Human Review Dashboard (Run #003):")
+            print("-" * 55)
+            print(f"  Total Review Packets: {st['total_packets']}")
+            print(f"  Human Reviews Logged: {st['reviewed_count']}")
+            print(f"  Remaining to Review:  {st['remaining_count']}")
+            print(f"  Active Reviewers:     {st['reviewer_count']}")
+            print(f"  Review Lifecycle:     {st['review_state']}")
+            print("-" * 55)
+            print("  Use 'atlas treasure review next' to inspect the next candidate.\n")
+
+        elif sub_act == "next":
+            packets = load_review_packets_v2(rev_v2_dir)
+            st = get_review_status(rev_v2_dir)
+            idx = st["reviewed_count"]
+            if idx >= len(packets):
+                print("\n[+] All 51 review packets have been evaluated! Review session complete.\n")
+                return
+            pkt = packets[idx]
+            print("\n" + render_packet_console(pkt, idx, len(packets)) + "\n")
+
+        elif sub_act == "show":
+            target_id = getattr(args, "packet_id", None) or getattr(args, "treasure_id", None)
+            if not target_id:
+                print("[!] Error: Specify --id <PACKET_ID/CANDIDATE_ID> or --packet-id <ID>")
+                return
+            packets = load_review_packets_v2(rev_v2_dir)
+            pkt = next((p for p in packets if p.review_packet_id == target_id or p.candidate_id == target_id), None)
+            if not pkt:
+                print(f"[!] Review packet '{target_id}' not found.")
+                return
+            idx = next(i for i, p in enumerate(packets) if p.review_packet_id == pkt.review_packet_id)
+            print("\n" + render_packet_console(pkt, idx, len(packets)) + "\n")
+
+        elif sub_act == "submit":
+            target_id = getattr(args, "packet_id", None) or getattr(args, "treasure_id", None)
+            if not target_id or not args.verdict:
+                print("[!] Error: Specify --packet-id <ID> (or --id) and --verdict <CLEAR_TREASURE|POTENTIAL_TREASURE|ORDINARY|INSUFFICIENT_EVIDENCE>")
+                return
+            rec = submit_human_review(
+                packet_id=target_id,
+                reviewer_id=args.reviewer,
+                verdict=args.verdict,
+                confidence=args.confidence,
+                notes=args.notes,
+                review_v2_dir=rev_v2_dir
+            )
+            print(f"\n[+] Successfully logged human review {rec.review_id}")
+            print(f"    Candidate:  {rec.candidate_id}")
+            print(f"    Verdict:    {rec.verdict} (Confidence: {rec.confidence:.2f})")
+            print(f"    Timestamp:  {rec.timestamp_utc}\n")
+
+        elif sub_act == "export":
+            out_file = Path(args.file) if args.file else rev_v2_dir / "review_session.json"
+            export_review_session(out_file, reviewer_id=args.reviewer, review_v2_dir=rev_v2_dir)
+
+        elif sub_act == "import":
+            if not args.file:
+                print("[!] Error: Specify --file <PATH_TO_REVIEWS>")
+                return
+            inv_file = Path("data/treasure_runs/TREASURE_RUN_0003/investigations.jsonl")
+            known = set()
+            if inv_file.exists():
+                with open(inv_file, "r", encoding="utf-8") as f:
+                    known = {json.loads(l).get("candidate_id") for l in f if l.strip()}
+            imported, summary = import_human_reviews(Path(args.file), known_candidates=known)
+            print("\n[*] Human Review Import Summary:")
+            print("-" * 55)
+            print(f"  Processed:       {summary.total_records_processed}")
+            print(f"  Valid Imported:  {summary.valid_reviews_imported}")
+            print(f"  Rejected:        {summary.rejected_reviews_count}")
+            print(f"  Disputes:        {summary.disputes_flagged}")
+            print(f"  Promoted:        {summary.promoted_treasures_count}")
+            if summary.rejections:
+                print("\n  Rejection Reasons:")
+                for r in summary.rejections[:5]:
+                    print(f"    - {r}")
+            print("-" * 55 + "\n")
+
+        elif sub_act == "audit":
+            packets = load_review_packets_v2(rev_v2_dir)
+            total_violations = []
+            for p in packets:
+                is_v, viols = validate_packet_v2_neutrality(p.model_dump())
+                if not is_v:
+                    total_violations.extend(viols)
+            print("\n[*] Review Packet Neutrality Audit:")
+            print("-" * 55)
+            print(f"  Total Packets Inspected: {len(packets)}")
+            print(f"  Neutrality Violations:   {len(total_violations)}")
+            print(f"  Status:                  {'PASS (100% Evidence-Only)' if len(total_violations) == 0 else 'FAIL'}")
+            print("-" * 55 + "\n")
+
     elif args.treasure_action == "show":
         if not args.treasure_id:
             print("[!] Error: Specify --id <ID> to inspect.")
@@ -852,6 +960,9 @@ def main():
         "hunt", "list", "show", "release-check", "status", "candidates", "review",
         "lineage", "timeline", "similar", "museum", "graph", "prior-art", "compare", "audit", "resume"
     ], help="Treasure action")
+    treasure_parser.add_argument("review_action", nargs="?", default="status", choices=[
+        "status", "next", "show", "submit", "resume", "export", "import", "audit"
+    ], help="Optional review subaction when action is 'review'")
     treasure_parser.add_argument("--count", "-n", type=int, default=100, help="Target number of candidate URLs to investigate")
     treasure_parser.add_argument("--seed", "-s", type=int, default=202, help="Deterministic sampling seed")
     treasure_parser.add_argument("--mode", "-m", type=str, default="LIVE_BLIND", choices=["LIVE_BLIND", "REPLAY", "SIMULATION", "REFERENCE_EVALUATION"], help="Execution mode guard")
@@ -859,7 +970,12 @@ def main():
     treasure_parser.add_argument("--category", "-c", type=str, default=None, help="Filter to specific domain category")
     treasure_parser.add_argument("--deep", action="store_true", default=True, help="Enable deep structural investigation")
     treasure_parser.add_argument("--resume", action="store_true", default=False, help="Resume from last checkpoint")
-    treasure_parser.add_argument("--id", dest="treasure_id", type=str, default=None, help="Treasure or candidate ID")
+    treasure_parser.add_argument("--id", dest="treasure_id", type=str, default=None, help="Treasure, candidate, or packet ID")
+    treasure_parser.add_argument("--packet-id", type=str, default=None, help="Specific review packet ID")
+    treasure_parser.add_argument("--reviewer", type=str, default="HUMAN_ARCHAEOLOGIST_01", help="Human reviewer ID")
+    treasure_parser.add_argument("--verdict", type=str, default=None, choices=["CLEAR_TREASURE", "POTENTIAL_TREASURE", "ORDINARY", "INSUFFICIENT_EVIDENCE"], help="Human review verdict")
+    treasure_parser.add_argument("--confidence", type=float, default=1.0, help="Reviewer confidence score (0.0 to 1.0)")
+    treasure_parser.add_argument("--notes", type=str, default="", help="Reviewer archaeological justification notes")
     treasure_parser.add_argument("--query", "-q", type=str, default=None, help="Search or graph query string")
     treasure_parser.add_argument("--compare-to", type=str, default=None, help="Target ID to compare against")
     treasure_parser.add_argument("--file", "-f", type=str, default=None, help="Input or output file path")

@@ -12,7 +12,7 @@
 | **Finding ID** | `ATLAS-20260817-TESTREPORT` |
 | **Target URL** | [https://test.edu/archive/](https://test.edu/archive/) |
 | **Canonical Domain** | `test.edu` |
-| **Investigation Timestamp** | `2026-08-18T08:55:21.135417+00:00` |
+| **Investigation Timestamp** | `2026-08-18T09:18:39.288039+00:00` |
 | **Anomaly Score** | **`6`** |
 | **Confidence Score** | **`0.85`** |
 | **Overall Evidence State** | **`[VALIDATED]`** |

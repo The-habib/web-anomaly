@@ -41,10 +41,13 @@ class GraphEdge(BaseModel):
     relation_type: RelationType
     evidence_ids: List[str] = Field(default_factory=list)
     created_at_utc: str
-    method: str
+    method: str = "DIRECT_OBSERVATION"
+    source_run_id: str = "TREASURE_RUN_0003"
     confidence: RelationConfidence = RelationConfidence.OBSERVED
     status: str = "ACTIVE"
     attributes: Dict[str, Any] = Field(default_factory=dict)
+
+RelationshipRecord = GraphEdge
 
 def generate_edge_id(source_id: str, relation: RelationType, target_id: str) -> str:
     """Generate a deterministic edge ID."""

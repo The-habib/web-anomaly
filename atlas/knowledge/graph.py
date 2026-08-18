@@ -96,3 +96,6 @@ class KnowledgeGraph:
         nodes = [self.entities[nid] for nid in visited_nodes]
         edges = [self.edges[eid] for eid in collected_edges]
         return nodes, edges
+
+ArchaeologicalKnowledgeGraph = KnowledgeGraph
+
