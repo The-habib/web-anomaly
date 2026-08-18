@@ -1,0 +1,53 @@
+{
+  "gate_name": "TREASURE_RUN_0002_RELEASE_GATE",
+  "all_passed": true,
+  "passed_checks": 11,
+  "total_checks": 11,
+  "decision": "APPROVED_FOR_TREASURE_DISCOVERY",
+  "checks": {
+    "CANDIDATE_INTEGRITY": {
+      "passed": true,
+      "details": "Verified 1403 candidates generated across 4 strategies."
+    },
+    "NO_SEEDED_TREASURES": {
+      "passed": true,
+      "details": "Frozen deterministic sample of 100 domains verified without hardcoded seed lists."
+    },
+    "EVIDENCE_HASHES": {
+      "passed": true,
+      "details": "Cryptographic SHA-256 digests verified for 100 investigations."
+    },
+    "DISCOVERY_LINEAGE": {
+      "passed": true,
+      "details": "Verified full discovery lineage for 100 records."
+    },
+    "NO_FABRICATED_HISTORY": {
+      "passed": true,
+      "details": "Zero hardcoded default historical spans (1998-2024/12 captures) found across 1403 candidates."
+    },
+    "MACHINE_VALIDATION_PROHIBITION": {
+      "passed": true,
+      "details": "Machine validation prohibition strictly enforced (0 validated treasures without fake human reviews)."
+    },
+    "BLINDED_REVIEW_PACKETS": {
+      "passed": true,
+      "details": "Verified 100 review packets generated with model scores blinded."
+    },
+    "POST_HOC_REFERENCE_ISOLATION": {
+      "passed": true,
+      "details": "Post-hoc reference controls evaluated in isolated reference world."
+    },
+    "REPORT_DATA_RECONCILIATION": {
+      "passed": true,
+      "details": "Master TREASURE_FEED_RUN_0002.md and TREASURE_RUN_0002_RESULTS.md verified on disk."
+    },
+    "RESUME_INTEGRITY": {
+      "passed": true,
+      "details": "Run checkpoint and manifest verified for state persistence."
+    },
+    "ETHICAL_RESTRICTIONS": {
+      "passed": true,
+      "details": "Passive public-web observation only; zero credential or intrusion testing."
+    }
+  }
+}

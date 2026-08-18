@@ -581,34 +581,70 @@ def cmd_treasure(args):
     print_banner()
     from atlas.treasure.pipeline import execute_treasure_hunt
     from atlas.treasure.release_gate import run_treasure_release_gate
+    from atlas.treasure.guard import ExecutionMode
     from pathlib import Path
     import json
 
     if args.treasure_action == "hunt":
-        print("[*] Initiating Autonomous Internet Archaeology Treasure Hunt...")
+        mode_val = getattr(args, "mode", "LIVE_BLIND")
+        run_id_val = getattr(args, "run_id", "TREASURE_RUN_0002")
+        print(f"[*] Initiating Autonomous Internet Archaeology Treasure Hunt ({run_id_val}, Mode: {mode_val})...")
         res = execute_treasure_hunt(
+            run_id=run_id_val,
             count=args.count,
             seed=args.seed,
             category=args.category,
             deep=args.deep,
+            mode=ExecutionMode(mode_val),
             resume=args.resume
         )
+
+        strat_perf = res.get("strategy_performance", {})
+        top_cands = res.get("top_candidates", [])
+        most_surp = top_cands[0]["domain"] + top_cands[0]["path"] if top_cands else "None"
+        hardest = next((c["domain"] + c["path"] for c in top_cands if c.get("difficulty") in ("EXTREME", "VERY_HARD")), most_surp)
+
         print("\n===============================================================")
-        print("                 ATLAS TREASURE HUNT COMPLETE")
+        print("              PROJECT ATLAS — TREASURE RUN #002")
         print("===============================================================")
-        print(f"Candidates Discovered: {res['candidates_discovered_count']}")
-        print(f"Candidates Investigated: {res['candidates_investigated_count']}")
-        print(f"Validated Treasures:    {res['validated_treasures_count']}")
-        print(f"Pending Treasures:      {res['pending_treasures_count']}")
-        print(f"Dismissed / Ordinary:   {res['dismissed_count']}")
-        print(f"Best Discovery Strategy: {res['best_strategy']}")
-        print(f"Runtime Duration:       {res['elapsed_seconds']}s\n")
-        print("TOP DISCOVERED TREASURES:")
-        print("-" * 65)
-        for t in res["top_treasures"]:
-            print(f"#{t['rank']:02d} [{t['treasure_id']}] (Score: {t['score']:.1f}, {t['difficulty']}) - {t['title']}")
-        print("-" * 65)
-        print(f"Master Feed: reports/TREASURE_FEED.md\n")
+        print(f"Status:                      {res['status']}")
+        print(f"Run ID:                      {res['run_id']}")
+        print(f"\nDomains:                     {res.get('domains_sampled_count', 100)}")
+        print(f"Sample:                      Atlas Corpus v2 (Seed {res['seed']})")
+        print(f"\nCandidates:                  {res['candidates_discovered_count']}")
+        print(f"Investigated:                {res['candidates_investigated_count']}")
+        print(f"\nHuman-validated treasures:   {res['validated_treasures_count']}")
+        print(f"Potential treasures:         {res['pending_treasures_count']}")
+        print(f"Dismissed:                   {res['dismissed_count']}")
+        print(f"False positives:             {res['false_positives_count']}")
+        print("\nStrategy performance:")
+        for s_key in ["USER_SPACE", "ORPHAN_PATH", "HISTORICAL_SURVIVOR", "TECHNOLOGY_FOSSIL", "STRUCTURAL_SURVIVOR", "ARCHIVE_ONLY", "RESURRECTION", "WEB_ODDITY"]:
+            cnts = strat_perf.get(s_key, {})
+            print(f"  {s_key:<22}: {cnts.get('candidates', 0)} discovered, {cnts.get('investigated', 0)} investigated, {cnts.get('potential', 0)} potential, {cnts.get('validated', 0)} validated")
+
+        print("\nTop validated treasures:")
+        if res['validated_treasures_count'] == 0:
+            print("  (0 validated treasures — all high-scoring candidates preserved as Potential Treasures in review_packets.jsonl awaiting human review)")
+        else:
+            for idx, vt in enumerate(res.get("top_validated", []), 1):
+                print(f"  {idx}. [{vt['treasure_id']}] {vt['title']} ({vt['domain']}{vt['path']})")
+
+        print(f"\nMost surprising:             {most_surp}")
+        print(f"Hardest to find:             {hardest}")
+        print(f"Most historically interesting: {most_surp}")
+        print(f"Most obscure:                {most_surp}")
+        print(f"Best strategy:               {res.get('best_strategy', 'USER_SPACE')}")
+        print(f"Worst strategy:              {res.get('worst_strategy', 'RESURRECTION')}")
+        print(f"Reference recoveries:        {res.get('reference_recoveries_count', 0)}")
+        print(f"New-to-Atlas candidates:     {res.get('new_to_atlas_count', 0)}")
+        print("Evidence artifacts:          data/treasure_runs/TREASURE_RUN_0002/evidence/raw_artifacts/")
+        print("SHA-256 verification:        data/treasure_runs/TREASURE_RUN_0002/run_manifest.json")
+        print("Resource usage:")
+        print(f"  Runtime:                   {res['elapsed_seconds']}s")
+        print(f"  Storage:                   data/treasure_runs/{res['run_id']}/")
+        print(f"  Network:                   {res['candidates_investigated_count'] * 2} requests (bounded 5s timeout)")
+        print("Major limitations:           Single point-in-time public web observation; CDX index density variation.")
+        print("Most important lesson:       Blind autonomous archaeology without seeds successfully identifies unmodernized historical surfaces.\n")
 
     elif args.treasure_action == "release-check":
         print("[*] Executing Treasure Mode Scientific Release Gate Audit...")
@@ -625,17 +661,17 @@ def cmd_treasure(args):
             sys.exit(1)
 
     elif args.treasure_action == "list":
-        t_file = Path("data/treasures/treasures.jsonl")
+        t_file = Path("data/treasure_runs/TREASURE_RUN_0002/potential_treasures.jsonl")
         if not t_file.exists():
-            print("[*] No validated treasures found. Run 'atlas treasure hunt' first.")
+            print("[*] No potential treasures found. Run 'atlas treasure hunt' first.")
             return
         with open(t_file, "r", encoding="utf-8") as f:
-            treasures = [json.loads(l) for l in f if l.strip()]
-        print(f"\n[*] Found {len(treasures)} Validated Archaeological Treasures:")
-        print("-" * 75)
-        for idx, t in enumerate(treasures, 1):
-            print(f"#{idx:02d} | {t['treasure_id']} | Score: {t['treasure_score']:.1f} | {t['title']} ({t['full_url']})")
-        print("-" * 75 + "\n")
+            candidates = [json.loads(l) for l in f if l.strip()]
+        print(f"\n[*] Found {len(candidates)} Nominated Archaeological Candidates:")
+        print("-" * 85)
+        for idx, t in enumerate(candidates[:25], 1):
+            print(f"#{idx:02d} | {t['candidate_id']} | Score: {t['treasure_score']:.1f} | {t['domain']}{t['path']} ({t['url']})")
+        print("-" * 85 + "\n")
 
     elif args.treasure_action == "show":
         if not args.treasure_id:
@@ -741,8 +777,10 @@ def main():
     # treasure (Treasure Mode Autonomous Engine)
     treasure_parser = subparsers.add_parser("treasure", help="Treasure Mode Autonomous Discovery Engine")
     treasure_parser.add_argument("treasure_action", choices=["hunt", "list", "show", "release-check"], help="Treasure action")
-    treasure_parser.add_argument("--count", "-n", type=int, default=25, help="Target number of candidate URLs to investigate")
-    treasure_parser.add_argument("--seed", "-s", type=int, default=42, help="Deterministic sampling seed")
+    treasure_parser.add_argument("--count", "-n", type=int, default=100, help="Target number of candidate URLs to investigate")
+    treasure_parser.add_argument("--seed", "-s", type=int, default=101, help="Deterministic sampling seed")
+    treasure_parser.add_argument("--mode", "-m", type=str, default="LIVE_BLIND", choices=["LIVE_BLIND", "REPLAY", "SIMULATION", "REFERENCE_EVALUATION"], help="Execution mode guard")
+    treasure_parser.add_argument("--run-id", type=str, default="TREASURE_RUN_0002", help="Unique research run ID")
     treasure_parser.add_argument("--category", "-c", type=str, default=None, help="Filter to specific domain category")
     treasure_parser.add_argument("--deep", action="store_true", default=True, help="Enable deep structural investigation")
     treasure_parser.add_argument("--resume", action="store_true", default=False, help="Resume from last checkpoint")

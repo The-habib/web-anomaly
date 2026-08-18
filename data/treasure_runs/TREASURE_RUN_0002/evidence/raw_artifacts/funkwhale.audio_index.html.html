@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description"
+          content="Funkwhale - A platform for all your audio" />
+    <meta name="keywords"
+          content="Audio, Music, Free, Podcasts, Fediverse, ActivitPub, Creative Commons" />
+    <meta name="author" content="Funkwhale Collective" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Funkwhale</title>
+    <link rel="stylesheet" href="https://www.funkwhale.audio/theme/css/style.css" />
+    <link rel="stylesheet"
+          href="https://www.funkwhale.audio/theme/fork-awesome/css/fork-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.funkwhale.audio/theme/css/website.css" />
+    <link rel="icon"
+          type="image/x-icon"
+          href="https://www.funkwhale.audio/theme/favicon.ico" />
+    <script src="https://www.funkwhale.audio/theme/js/navbar-burger.js"></script>
+  </head>
+  <body>
+    <style scoped>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .skip-to-content-link {
+            background: var(--fw-beige-100);
+            height: 30px;
+            left: 50%;
+            padding: 8px;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+        }
+
+        .skip-to-content-link:focus {
+            transform: translateY(0%);
+        }
+    </style>
+    <a class="skip-to-content-link" href="#main-content">Skip to content</a>
+    <header>
+  <style>
+      .navbar {
+          height: 64px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 12px 50px;
+          box-sizing: border-box;
+      }
+
+      .navbar-burger {
+          display: none;
+          border: none;
+          background: transparent;
+      }
+
+      .navbar .logo img {
+          height: 100%;
+          width: 233px;
+      }
+
+      .navbar a {
+          text-decoration: none;
+          text-align: center;
+      }
+
+      .navbar a:not(.button) {
+          color: #000 !important;
+      }
+
+      .navbar ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+      }
+
+      .navbar ul li {
+          display: inline;
+          padding-left: 50px;
+          text-align: center;
+      }
+
+      @media only screen and (max-width: 1024px) {
+          #navbar-main {
+              display: none;
+          }
+
+          .navbar-burger {
+              display: block;
+              position: absolute;
+              top: 22px;
+              left: 22px;
+          }
+
+          .navbar {
+              flex-direction: column;
+              justify-content: space-around;
+              height: auto;
+          }
+
+          .navbar ul {
+              border-bottom: 1px solid var(--fw-blue-100);
+          }
+
+          .navbar ul li {
+              display: block;
+              padding: 10px 0;
+          }
+      }
+
+      @media only screen and (min-width: 1600px) {
+          nav.navbar {
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+  </style>
+<div class="background-wrapper">
+  <nav class="navbar"
+       role="navigation"
+       aria-label="main navigation">
+    <a class="logo" href="https://www.funkwhale.audio/">
+      <img alt="Home"
+           src="https://www.funkwhale.audio/theme/images/logo.svg" />
+    </a>
+    <button role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbar-main">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul id="navbar-main">
+      <li>
+        <a href="https://www.funkwhale.audio/help" class="navbar-item">Help</a>
+      </li>
+      <li>
+        <a href="https://www.funkwhale.audio/contribute" class="navbar-item">Contribute</a>
+      </li>
+      <li>
+        <a href="https://www.funkwhale.audio/donate" class="navbar-item">Support us</a>
+      </li>
+    </ul>
+  </nav>
+</div>    </header>
+    <main id="main-content">
+<div class="background-wrapper">
+  <section class="hero">
+    <div class="hero-box">
+      <h1>A platform for all your audio</h1>
+      <h2>
+Your music. Your podcasts.        <br />
+Enjoy anywhere, share with anyone.      </h2>
+      <div>
+        <a href="https://www.funkwhale.audio#get-started" class="funkwhale button is-primary">Get started</a>
+      </div>
+    </div>
+    <div class="hero-box">
+      <img alt="A screenshot of the Funkwhale web interface displaying an artist page with a list of albums and controls for playing the artist's content. The bottom of the screen shows an audio player bar."
+           src="https://www.funkwhale.audio/theme/images/screenshot.png" />
+    </div>
+  </section>
+</div><section class="target-group">
+  <style>
+      section.target-group {
+          padding: 50px 0px;
+          background-color: var(--fw-beige-100);
+      }
+
+      div.target-group {
+          display: flex;
+          flex-shrink: 0;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-around;
+      }
+
+      .target-group .funkwhale.card {
+          text-align: center;
+          background-color: #fff;
+      }
+  </style>
+  <div class="background-wrapper">
+    <div class="target-group">
+      <div class="funkwhale card slider-item" data-position="1">
+        <img alt=""
+             class="icon"
+             src="https://www.funkwhale.audio/theme/images/benefits-music.svg" />
+        <h2 class="title">For music lovers</h2>
+        <p>
+Access your personal music collection from anywhere. Funkwhale supports advanced sharing features to promote Freely licensed content.        </p>
+      </div>
+      <div class="funkwhale card slider-item" data-position="2">
+        <img alt=""
+             class="icon"
+             src="https://www.funkwhale.audio/theme/images/benefits-federated.svg" />
+        <h2 class="title">For artists and podcasters</h2>
+        <p>
+Publish your music and podcasts on Funkwhale. Let people follow your releases or subscribe to your podcast in their favorite podcatcher.        </p>
+      </div>
+      <div class="funkwhale card slider-item" data-position="3">
+        <img alt=""
+             class="icon"
+             src="https://www.funkwhale.audio/theme/images/benefits-creators.svg" />
+        <h2 class="title">Decentralized & Federated</h2>
+        <p>
+Content can be shared across instances, or moderated to restrict bad actors. The network is not tied to any corporation or entity, so you have total independence.        </p>
+      </div>
+      <div class="funkwhale card slider-item" data-position="4">
+        <img alt=""
+             class="icon"
+             src="https://www.funkwhale.audio/theme/images/benefits-community.svg" />
+        <h2 class="title">Community-driven</h2>
+        <p>
+Free software build by the community using standard protocols and open-source technology. No third-party analytics. No tracking. No ads. You are in control.        </p>
+      </div>
+    </div>
+  </div>
+</section><section class="features">
+  <style>
+      .features {
+          background-color: #fff;
+          padding-bottom: 50px;
+      }
+
+      .features div.feature {
+          display: flex;
+          flex-wrap: wrap;
+          border-bottom: 1px solid black;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10vh;
+      }
+
+      .features div.feature:last-child {
+          border-bottom: none;
+      }
+
+      .features div img {
+          max-width: 100vw;
+      }
+
+      .features .feature .content {
+          margin: 5vw 5vh;
+      }
+
+      .features .feature .content p {
+          line-height: 1.5;
+      }
+
+      @media screen and (min-width: 800px) {
+          .features div img {
+              width: 50%;
+          }
+
+          .features .feature .content {
+              width: 50%;
+              margin: 0;
+              padding: 5vh 5vw;
+              box-sizing: border-box;
+          }
+
+          .features .feature:nth-child(2n) img {
+              order: -1;
+          }
+
+      }
+
+      @media screen and (min-width: 1024px) {
+          .features {
+              padding: 5vh 10vw;
+          }
+
+          .features div img {
+              max-height: 50vh;
+          }
+
+          .features .feature {
+              padding: 5vh 0;
+          }
+      }
+
+      @media screen and (min-width: 1600px) {
+          .features {
+              padding: 5vh 0vw;
+          }
+      }
+  </style>
+  <div class="background-wrapper">
+    <div class="feature">
+      <div class="content">
+        <h2 class="title">Your music and podcasts, anywhere</h2>
+        <p>
+Listen to your music and podcasts from your web browser, or a wide range of compatible apps for every platform. This includes the Subsonic client of your choice and your favourite podcast app.        </p>
+      </div>
+      <img alt=""
+           src="https://www.funkwhale.audio/theme/images/undraw_audio_player_re_cl20.svg" />
+    </div>
+    <div class="feature">
+      <div class="content">
+        <h2 class="title">Share your music library</h2>
+        <p>
+Share your playlists and albums, or whole parts of your library, with your friends and family. Promote free art by sharing it with users on your pod, or with the entire Funkwhale network.        </p>
+      </div>
+      <img alt=""
+           src="https://www.funkwhale.audio/theme/images/undraw_social_friends_re_7uaa.svg" />
+    </div>
+    <div class="feature">
+      <div class="content">
+        <h2 class="title">Extend your horizons</h2>
+        <p>
+Explore the content shared by the community to discover new artists and podcasts. Keep tracks of your favorites in your library.        </p>
+      </div>
+      <img alt=""
+           src="https://www.funkwhale.audio/theme/images/undraw_imagination_re_i0xi.svg" />
+    </div>
+    <div class="feature">
+      <div class="content">
+        <h2 class="title">Publish your work</h2>
+        <p>
+Create channels for your music or podcast and let people get notified of your latest releases. Use our export widget to embed your content on other platforms and websites.        </p>
+      </div>
+      <img alt=""
+           src="https://www.funkwhale.audio/theme/images/undraw_podcast_audience_re_4i5q.svg" />
+    </div>
+  </div>
+</section><section class="get-started">
+  <style scoped>
+      section.get-started {
+          padding: 30px 0 60px;
+          background-color: var(--fw-gray-100);
+      }
+
+      section.get-started .entrypoints {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 5vw 10vh;
+      }
+
+      section.get-started .funkwhale.card {
+          background-color: #fff;
+      }
+
+      /* We need to have a pretty long selector to overwrite the original color. The main aim is to have a proper contrast ratio */
+      section.get-started .funkwhale.card .card-button .is-secondary.is-outline:not(:active):not(.is-active):not(.funkwhale.button.is-loading) {
+          color: #7c7474 !important;
+      }
+
+      section.get-started .content {
+          margin: 5vw 5vh;
+      }
+
+      section.get-started .content p {
+          line-height: 2;
+      }
+
+      @media screen and (min-width: 1024px) {
+          section.get-started .content {
+              text-align: center;
+              margin: auto;
+              width: 40vw;
+          }
+
+      }
+  </style>
+  <div class="background-wrapper">
+    <div class="content">
+      <h2 class="title" id="get-started">Get started</h2>
+      <p>
+Sign up on a pod to upload your music library, share it, keep track of your favorites, and more! Each pod has its own rules and conditions, but thanks to federation you'll be able to share content with other people regardless of which pod they're using.      </p>
+    </div>
+    <div class="entrypoints">
+      <div class="funkwhale card is-link is-cta">
+        <h2 class="title">Join an existing pod</h2>
+        <p>
+The easiest way to start using Funkwhale is to register an account on one of the many available pods.        </p>
+        <div class="card-button">
+          <a href="https://www.funkwhale.audio/join"
+             class="funkwhale button is-secondary is-outline">Find a pod</a>
+        </div>
+      </div>
+      <div class="funkwhale card is-link is-cta">
+        <h2 class="title">Start your own pod</h2>
+        <p>
+Running your own pod requires some system administration skills, but also gives you more independence and control.        </p>
+        <div class="card-button">
+          <a href="https://docs.funkwhale.audio/admin/index.html"
+             class="funkwhale button is-secondary is-outline">Read the docs</a>
+        </div>
+      </div>
+      <div class="funkwhale card is-link is-cta">
+        <h2 class="title">Third-party hosting</h2>
+        <p>
+If you'd prefer to have someone else host your pod for you, here are a few providers who offer hosted solutions:        </p>
+        <ul>
+          <li>
+            <a href="https://weingaertner-it.de/index.php/produkt-kategorie/funkwhale-hosting/">Weingärtner IT</a>
+          </li>
+          <li>
+            <a href="https://cloud68.co/instances/funkwhale">Cloud68</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section><div class="support-us">
+  <style scoped>
+      .support-us {
+          background-color: var(--fw-gray-700);
+          color: #fff;
+          padding: 50px 0;
+      }
+
+      .support-us .content.container {
+          margin: 5vw 5vh;
+      }
+
+      .level {
+          display: flex;
+          justify-content: space-between;
+      }
+
+      .funkwhale.button {
+          flex-grow: 1;
+      }
+
+      .support-us .funkwhale.button {
+          color: #fff;
+      }
+
+      @media screen and (min-width: 1024px) {
+          .support-us .content.container {
+              margin: auto;
+              text-align: center;
+              width: 60%;
+          }
+      }
+  </style>
+  <div class="background-wrapper">
+    <div class="block">
+      <div class="content container">
+        <h2 class="title">Support Us</h2>
+        <p>
+Funkwhale is a community-driven project maintained by a non-profit organization called the Funkwhale Collective. We strive to make Funkwhale better and there are many things you can do to help!        </p>
+        <div class="level">
+          <a href="https://www.funkwhale.audio/donate" class="funkwhale button is-outline">Make a donation</a>
+          <a href="https://www.funkwhale.audio/contribute" class="funkwhale button is-outline">Contribute</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    </main>
+<footer class="footer">
+  <style scoped>
+      footer {
+          background-color: var(--fw-gray-900);
+          color: #929090;
+          /* we break the color schema to provide better contrast */
+          padding-bottom: 30px;
+      }
+
+      .columns {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5vw;
+          justify-content: space-around;
+      }
+
+      footer ul {
+          list-style-type: none;
+          padding: 0;
+      }
+
+      li {
+          margin: 15px 0;
+      }
+
+      footer a {
+          color: white !important;
+      }
+
+      @media screen and (min-width: 800px) {
+          .credits {
+              margin-top: 55px;
+          }
+      }
+
+      .social {
+          display: flex;
+          justify-content: space-between;
+          margin: 50px 5% 0;
+      }
+  </style>
+  <div class="background-wrapper">
+    <div class="columns">
+      <div class="column">
+        <h2 class="title">About</h2>
+        <ul>
+          <li>
+            <a href="https://www.funkwhale.audio/credits">Credits</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2 class="title">Get started</h2>
+        <ul>
+          <li>
+            <a href="https://www.funkwhale.audio/join">Find a pod</a>
+          </li>
+          <li>
+            <a href="https://docs.funkwhale.audio/admin/" target="_blank">Start your own pod</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/apps">Find an app</a>
+          </li>
+          <li>
+            <a href="https://docs.funkwhale.audio/index.html" target="_blank">Documentation</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2 class="title">Community</h2>
+        <ul>
+          <li>
+            <a href="https://www.funkwhale.audio/help">Help</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/donate">Make a donation</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/contribute">Contribute</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column credits">
+        <ul>
+          <li>Logo by Francis Ganding</li>
+          <li>
+Artwork by <a href="https://gallery.robin-jay.blue/">Robin Bluejay</a>
+          </li>
+          <li>Website by the Funkwhale Collective</li>
+          <li>
+funding support by <a href="https://nlnet.nl/" target="_blank">NLnet Foundation</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/logos">Logos and identity guidelines</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+<div class="language-switch">
+  <style>
+      div.language-switch {
+          display: inline-block;
+          position: relative;
+          float: left;
+      }
+
+      select {
+          background-color: transparent !important;
+          color: var(--fw-bg-color) !important;
+          border: 1px solid var(--fw-bg-color);
+          font-family: Lato, sans-serif;
+          font-weight: 900;
+          font-size: .875em;
+          line-height: 1em;
+          padding: .6428571429em;
+          border-radius: var(--fw-border-radius);
+      }
+  </style>
+    <label hidden for="language-selector">Choose your language</label>
+    <select id="language-selector" onchange="location = this.value;">
+        <option value="https://www.funkwhale.audio/index.html"
+selected>English</option>
+        <option value="https://www.funkwhale.audio/gl/index.html"
+>galego</option>
+        <option value="https://www.funkwhale.audio/de/index.html"
+>Deutsch</option>
+        <option value="https://www.funkwhale.audio/zh_cn/index.html"
+>中文（中国）</option>
+        <option value="https://www.funkwhale.audio/es/index.html"
+>español</option>
+        <option value="https://www.funkwhale.audio/fr_fr/index.html"
+>français (France)</option>
+    </select>
+</div>      <div class="social-content">
+        <span>Follow us</span>
+        <a href="https://dev.funkwhale.audio/funkwhale/funkwhale"
+           title="Sourcecode"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-gitlab" aria-hidden="true"></i>
+        </a>
+        <a href="https://blog.funkwhale.audio/feeds/all.atom.xml"
+           title="via RSS"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        </a>
+        <a href="https://social.funkwhale.audio/@funkwhale"
+           title="via Mastodon"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-mastodon" aria-hidden="true"></i>
+        </a>
+        <a href="https://hub.funkwhale.audio/"
+           title="via Mattermost"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-comment" aria-hidden="true"></i>
+        </a>
+        <a href="https://matrix.to/#/#funkwhale:matrix.org"
+           title="via Matrix"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>  </body>
+</html>

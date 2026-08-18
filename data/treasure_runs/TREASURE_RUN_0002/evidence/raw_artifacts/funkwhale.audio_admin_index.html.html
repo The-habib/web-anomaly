@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description"
+          content="Funkwhale - A platform for all your audio" />
+    <meta name="keywords"
+          content="Audio, Music, Free, Podcasts, Fediverse, ActivitPub, Creative Commons" />
+    <meta name="author" content="Funkwhale Collective" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Funkwhale</title>
+    <link rel="stylesheet" href="https://www.funkwhale.audio/theme/css/style.css" />
+    <link rel="stylesheet"
+          href="https://www.funkwhale.audio/theme/fork-awesome/css/fork-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.funkwhale.audio/theme/css/website.css" />
+    <link rel="icon"
+          type="image/x-icon"
+          href="https://www.funkwhale.audio/theme/favicon.ico" />
+    <script src="https://www.funkwhale.audio/theme/js/navbar-burger.js"></script>
+  </head>
+  <body>
+    <style scoped>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .skip-to-content-link {
+            background: var(--fw-beige-100);
+            height: 30px;
+            left: 50%;
+            padding: 8px;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+        }
+
+        .skip-to-content-link:focus {
+            transform: translateY(0%);
+        }
+    </style>
+    <a class="skip-to-content-link" href="#main-content">Skip to content</a>
+    <header>
+  <style>
+      .navbar {
+          height: 64px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 12px 50px;
+          box-sizing: border-box;
+      }
+
+      .navbar-burger {
+          display: none;
+          border: none;
+          background: transparent;
+      }
+
+      .navbar .logo img {
+          height: 100%;
+          width: 233px;
+      }
+
+      .navbar a {
+          text-decoration: none;
+          text-align: center;
+      }
+
+      .navbar a:not(.button) {
+          color: #000 !important;
+      }
+
+      .navbar ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+      }
+
+      .navbar ul li {
+          display: inline;
+          padding-left: 50px;
+          text-align: center;
+      }
+
+      @media only screen and (max-width: 1024px) {
+          #navbar-main {
+              display: none;
+          }
+
+          .navbar-burger {
+              display: block;
+              position: absolute;
+              top: 22px;
+              left: 22px;
+          }
+
+          .navbar {
+              flex-direction: column;
+              justify-content: space-around;
+              height: auto;
+          }
+
+          .navbar ul {
+              border-bottom: 1px solid var(--fw-blue-100);
+          }
+
+          .navbar ul li {
+              display: block;
+              padding: 10px 0;
+          }
+      }
+
+      @media only screen and (min-width: 1600px) {
+          nav.navbar {
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+  </style>
+<div class="background-wrapper">
+  <nav class="navbar"
+       role="navigation"
+       aria-label="main navigation">
+    <a class="logo" href="https://www.funkwhale.audio/">
+      <img alt="Home"
+           src="https://www.funkwhale.audio/theme/images/logo.svg" />
+    </a>
+    <button role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbar-main">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul id="navbar-main">
+      <li>
+        <a href="https://www.funkwhale.audio/help" class="navbar-item">Help</a>
+      </li>
+      <li>
+        <a href="https://www.funkwhale.audio/contribute" class="navbar-item">Contribute</a>
+      </li>
+      <li>
+        <a href="https://www.funkwhale.audio/donate" class="navbar-item">Support us</a>
+      </li>
+        <li>
+          <a href="https://www.funkwhale.audio#get-started"
+             class="funkwhale button is-colored is-primary">Get Started</a>
+        </li>
+    </ul>
+  </nav>
+</div>    </header>
+    <main id="main-content">
+  <article class="article not-found">
+    <style scoped>
+        article {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .content ul {
+            list-style-type: initial !important;
+            padding-left: 15px !important;
+        }
+    </style>
+    <section class="content">
+      <h1 id="page-not-found">Page not found</h1>
+<p>The page you're looking for doesn't exist. <a href="/">Return to the homepage</a>.</p>
+    </section>
+  </article>
+    </main>
+<footer class="footer">
+  <style scoped>
+      footer {
+          background-color: var(--fw-gray-900);
+          color: #929090;
+          /* we break the color schema to provide better contrast */
+          padding-bottom: 30px;
+      }
+
+      .columns {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5vw;
+          justify-content: space-around;
+      }
+
+      footer ul {
+          list-style-type: none;
+          padding: 0;
+      }
+
+      li {
+          margin: 15px 0;
+      }
+
+      footer a {
+          color: white !important;
+      }
+
+      @media screen and (min-width: 800px) {
+          .credits {
+              margin-top: 55px;
+          }
+      }
+
+      .social {
+          display: flex;
+          justify-content: space-between;
+          margin: 50px 5% 0;
+      }
+  </style>
+  <div class="background-wrapper">
+    <div class="columns">
+      <div class="column">
+        <h2 class="title">About</h2>
+        <ul>
+          <li>
+            <a href="https://www.funkwhale.audio/credits">Credits</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2 class="title">Get started</h2>
+        <ul>
+          <li>
+            <a href="https://www.funkwhale.audio/join">Find a pod</a>
+          </li>
+          <li>
+            <a href="https://docs.funkwhale.audio/admin/" target="_blank">Start your own pod</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/apps">Find an app</a>
+          </li>
+          <li>
+            <a href="https://docs.funkwhale.audio/index.html" target="_blank">Documentation</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2 class="title">Community</h2>
+        <ul>
+          <li>
+            <a href="https://www.funkwhale.audio/help">Help</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/donate">Make a donation</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/contribute">Contribute</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column credits">
+        <ul>
+          <li>Logo by Francis Ganding</li>
+          <li>
+Artwork by <a href="https://gallery.robin-jay.blue/">Robin Bluejay</a>
+          </li>
+          <li>Website by the Funkwhale Collective</li>
+          <li>
+funding support by <a href="https://nlnet.nl/" target="_blank">NLnet Foundation</a>
+          </li>
+          <li>
+            <a href="https://www.funkwhale.audio/logos">Logos and identity guidelines</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+<div class="language-switch">
+  <style>
+      div.language-switch {
+          display: inline-block;
+          position: relative;
+          float: left;
+      }
+
+      select {
+          background-color: transparent !important;
+          color: var(--fw-bg-color) !important;
+          border: 1px solid var(--fw-bg-color);
+          font-family: Lato, sans-serif;
+          font-weight: 900;
+          font-size: .875em;
+          line-height: 1em;
+          padding: .6428571429em;
+          border-radius: var(--fw-border-radius);
+      }
+  </style>
+    <label hidden for="language-selector">Choose your language</label>
+    <select id="language-selector" onchange="location = this.value;">
+        <option value="https://www.funkwhale.audio/404.html"
+selected>English</option>
+        <option value="https://www.funkwhale.audio/gl/404.html"
+>galego</option>
+        <option value="https://www.funkwhale.audio/de/404.html"
+>Deutsch</option>
+        <option value="https://www.funkwhale.audio/zh_cn/404.html"
+>中文（中国）</option>
+        <option value="https://www.funkwhale.audio/es/404.html"
+>español</option>
+        <option value="https://www.funkwhale.audio/fr_fr/404.html"
+>français (France)</option>
+    </select>
+</div>      <div class="social-content">
+        <span>Follow us</span>
+        <a href="https://dev.funkwhale.audio/funkwhale/funkwhale"
+           title="Sourcecode"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-gitlab" aria-hidden="true"></i>
+        </a>
+        <a href="https://blog.funkwhale.audio/feeds/all.atom.xml"
+           title="via RSS"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        </a>
+        <a href="https://social.funkwhale.audio/@funkwhale"
+           title="via Mastodon"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-mastodon" aria-hidden="true"></i>
+        </a>
+        <a href="https://hub.funkwhale.audio/"
+           title="via Mattermost"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-comment" aria-hidden="true"></i>
+        </a>
+        <a href="https://matrix.to/#/#funkwhale:matrix.org"
+           title="via Matrix"
+           rel="me"
+           class="funkwhale button is-outline icon-only">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>  </body>
+</html>

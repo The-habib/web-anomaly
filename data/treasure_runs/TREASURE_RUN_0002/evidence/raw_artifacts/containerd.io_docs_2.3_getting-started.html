@@ -1,0 +1,482 @@
+<!doctype html><html lang=en-us><head><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-71407002-1","auto"),ga("send","pageview")</script><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta property="og:title" content="containerd &amp;ndash; Getting Started"><meta property="og:type" content="documentation"><meta property="og:url" content="https://containerd.io/docs/2.3/getting-started/"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="containerd"><meta name=og:type content="article"><meta name=og:image content="https://containerd.io/img/logos/horizontal/color/containerd-horizontal-color.png"><meta name=og:image:alt content="containerd project logo"><meta name=og:image:type content="image/png"><meta name=twitter:card content="summary"><meta name=twitter:site content="@containerd"><meta name=twitter:creator content="@containerd"><link rel=canonical href=https://containerd.io/docs/2.3/getting-started/><link rel="shortcut icon" href=/favicon.png type=image/png><meta name=generator content="Hugo 0.116.0"><title>containerd docs &ndash; Getting Started</title><link rel=stylesheet href=/css/style.d3bddcb3643397e3158234933494403d557aafa86f6e947809a99a051168e77f.css integrity="sha256-073cs2Qzl+MVgjSTNJRAPVV6r6hvbpR4CamaBRFo538="><link rel=stylesheet href=/css/syntax.6c8d2b9fbc19b041114d99efbca542518afe85fe83e683218ccc997fc35bb6ec.css integrity="sha256-bI0rn7wZsEERTZnvvKVCUYr+hf6D5oMhjMyZf8Nbtuw=">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KGB7V28PEJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KGB7V28PEJ');
+</script>
+</head><body class="page is-docs-page has-navbar-fixed-top"><div class="navbar is-fixed-top has-shadow"><div class=container><div class=navbar-brand><a class=navbar-item href=https://containerd.io><img src=/img/logos/navbar-dark-logo.png alt="containerd navbar logo"></a><div class="navbar-item is-docs-title has-text-weight-bold is-hidden-mobile"></div><a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarMenu><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu id=navbarMenu><div class=navbar-end><a class="navbar-item has-text-weight-bold" href=/downloads>Downloads</a><div class="navbar-item is-hoverable has-dropdown has-text-weight-bold"><a class=navbar-link href=/docs/2.3/>Docs</a><div class=navbar-dropdown><a class=navbar-item href=/docs/2.3/>2.3</a>
+<a class=navbar-item href=/docs/2.2/>2.2</a>
+<a class=navbar-item href=/docs/2.1/>2.1</a>
+<a class=navbar-item href=/docs/1.7/>1.7</a>
+<a class=navbar-item href=/docs/main/>main</a></div></div><div class="navbar-item is-hoverable has-dropdown has-text-weight-bold"><div class=navbar-link>Project</div><div class="navbar-dropdown is-right"><a class=navbar-item href=https://github.com/cncf/foundation/blob/master/code-of-conduct.md>Code of conduct</a>
+<a class=navbar-item href=/keps/>Collaboration with Kubernetes SIG-Node</a>
+<a class=navbar-item href=/contributing/>Contributing</a>
+<a class=navbar-item href=/roadmap/>Roadmap</a>
+<a class=navbar-item href=/scope/>Scope and principles</a>
+<a class=navbar-item href=/security/>Security and audits</a>
+<a class=navbar-item href=/releases/>Versioning and release</a>
+<a class=navbar-item href=https://github.com/cncf/artwork/blob/master/examples/graduated.md#containerd-logos>containerd branding</a></div></div><div class=navbar-item><div class="field is-grouped"><p class=control><a class="button is-borderless has-background-black has-text-white" href=https://github.com/containerd/containerd aria-label=GitHub><span class=icon><i class="fab fa-github" aria-hidden=true></i></span></a>
+<a class="button has-background-slack-green is-borderless has-text-white" href=https://slack.containerd.io/ aria-label=Slack><span class=icon><i class="fab fa-slack" aria-hidden=true></i></span></a>
+<a class="button has-background-bluesky-blue is-borderless has-text-white" href=https://bsky.app/profile/containerd.dev aria-label=Bluesky><span class=icon><i class="fab fa-bluesky" aria-hidden=true></i></span></a></p></div></div></div></div></div></div><main class=main><section class="hero is-dark"><div class=container><div class=hero-body><p class="title is-size-2 is-size-3 has-text-weight-bold">Getting Started</p></div></div></section><article class=is-docs-article><div class="container mt-5"><div class=columns><aside class="column is-hidden-touch is-fullheight is-hidden-mobile"><ul class=menu-list><li><div class="select is-fullwidth mb-3"><select onchange="window.location.href=this.value"><option value=/docs/2.3/ selected>
+Version: 2.3</option><option value=/docs/2.2/>
+Version: 2.2</option><option value=/docs/2.1/>
+Version: 2.1</option><option value=/docs/1.7/>
+Version: 1.7</option><option value=/docs/main/>
+Version: main</option></select></div></li><li><a href=/docs/2.3/><span class=icon><i class="fa fa-info"></i></span> README</a></li><ul class=nestedmenu><li><a href=/docs/2.3/client-opts/>Client Opts</a></li><li><a href=/docs/2.3/containerd-2.0/>containerd 2.0</a></li><li><a href=/docs/2.3/content-flow/>Content Flow</a></li><li class=haschildren><a class=nestedmenu-toggle>CRI</a><ul><li><a href=/docs/2.3/cri/architecture/>Architecture</a></li><li><a href=/docs/2.3/cri/config/>Config</a></li><li><a href=/docs/2.3/cri/crictl/>crictl</a></li><li><a href=/docs/2.3/cri/decryption/>Decryption</a></li><li><a href=/docs/2.3/cri/registry/>Registry</a></li><li><a href=/docs/2.3/cri/testing/>Testing</a></li></ul></li><li><a href=/docs/2.3/features/>Features</a></li><li><a href=/docs/2.3/garbage-collection/>Garbage Collection</a></li><li class=active><a href=/docs/2.3/getting-started/>Getting Started</a></li><li><a href=/docs/2.3/hosts/>Hosts</a></li><li><a href=/docs/2.3/image-verification/>Image Verification</a></li><li class=haschildren><a class=nestedmenu-toggle>Manual pages</a><ul><li><a href=/docs/2.3/man/containerd-config.8/>containerd-config(8)</a></li><li><a href=/docs/2.3/man/containerd-config.toml.5/>containerd-config.toml(5)</a></li></ul></li><li><a href=/docs/2.3/managed-opt/>Managed Opt</a></li><li><a href=/docs/2.3/mounts/>Mounts</a></li><li><a href=/docs/2.3/namespaces/>Namespaces</a></li><li><a href=/docs/2.3/nri/>NRI</a></li><li><a href=/docs/2.3/ops/>Ops</a></li><li><a href=/docs/2.3/plugins/>Plugins</a></li><li><a href=/docs/2.3/rootless/>Rootless</a></li><li><a href=/docs/2.3/runc/>runc</a></li><li><a href=/docs/2.3/runtime-v2/>Runtime V2</a></li><li><a href=/docs/2.3/sandbox-api/>Sandbox API</a></li><li class=haschildren><a class=nestedmenu-toggle>Snapshotters</a><ul><li><a href=/docs/2.3/snapshotters/blockfile/>Blockfile</a></li><li><a href=/docs/2.3/snapshotters/devmapper/>Devmapper</a></li><li><a href=/docs/2.3/snapshotters/erofs/>erofs</a></li><li><a href=/docs/2.3/snapshotters/readme/>README</a></li><li><a href=/docs/2.3/snapshotters/remote-snapshotter/>Remote Snapshotter</a></li></ul></li><li><a href=/docs/2.3/stream_processors/>Stream Processors</a></li><li><a href=/docs/2.3/tracing/>Tracing</a></li><li><a href=/docs/2.3/transfer/>Transfer</a></li><li class=haschildren><a class=nestedmenu-toggle>User Namespaces</a><ul><li><a href=/docs/2.3/user-namespaces/readme/>README</a></li></ul></li></ul></ul></aside><div class="column is-7 is-full-mobile"><div class=content><div class=is-hidden-desktop><div class="buttons mb-4"><div class=dropdown><div class=dropdown-trigger><button class="button is-dark" aria-haspopup=true aria-controls=version-dropdown-menu>
+<span>Version: 2.3</span>
+<span class="icon is-small"><i class="fas fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu id=version-dropdown-menu role=menu><div class=dropdown-content><a class="dropdown-item is-active" href=/docs/2.3/>2.3</a>
+<a class=dropdown-item href=/docs/2.2/>2.2</a>
+<a class=dropdown-item href=/docs/2.1/>2.1</a>
+<a class=dropdown-item href=/docs/1.7/>1.7</a>
+<a class=dropdown-item href=/docs/main/>main</a></div></div></div><div class=dropdown><div class=dropdown-trigger><button class="button is-dark" aria-haspopup=true aria-controls=docs-dropdown-menu>
+<span>Docs</span>
+<span class="icon is-small"><i class="fas fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu id=docs-dropdown-menu role=menu><div class=dropdown-content><a href=/docs/2.3/ class=dropdown-item>README</a>
+<a class=dropdown-item href=/docs/2.3/client-opts/>Client Opts</a>
+<a class=dropdown-item href=/docs/2.3/containerd-2.0/>containerd 2.0</a>
+<a class=dropdown-item href=/docs/2.3/content-flow/>Content Flow</a>
+<a class=dropdown-item href=/docs/2.3/cri/architecture/>CRI: Architecture</a>
+<a class=dropdown-item href=/docs/2.3/cri/config/>CRI: Config</a>
+<a class=dropdown-item href=/docs/2.3/cri/crictl/>CRI: crictl</a>
+<a class=dropdown-item href=/docs/2.3/cri/decryption/>CRI: Decryption</a>
+<a class=dropdown-item href=/docs/2.3/cri/registry/>CRI: Registry</a>
+<a class=dropdown-item href=/docs/2.3/cri/testing/>CRI: Testing</a>
+<a class=dropdown-item href=/docs/2.3/features/>Features</a>
+<a class=dropdown-item href=/docs/2.3/garbage-collection/>Garbage Collection</a>
+<a class="dropdown-item is-active" href=/docs/2.3/getting-started/>Getting Started</a>
+<a class=dropdown-item href=/docs/2.3/hosts/>Hosts</a>
+<a class=dropdown-item href=/docs/2.3/image-verification/>Image Verification</a>
+<a class=dropdown-item href=/docs/2.3/man/containerd-config.8/>Manual pages: containerd-config(8)</a>
+<a class=dropdown-item href=/docs/2.3/man/containerd-config.toml.5/>Manual pages: containerd-config.toml(5)</a>
+<a class=dropdown-item href=/docs/2.3/managed-opt/>Managed Opt</a>
+<a class=dropdown-item href=/docs/2.3/mounts/>Mounts</a>
+<a class=dropdown-item href=/docs/2.3/namespaces/>Namespaces</a>
+<a class=dropdown-item href=/docs/2.3/nri/>NRI</a>
+<a class=dropdown-item href=/docs/2.3/ops/>Ops</a>
+<a class=dropdown-item href=/docs/2.3/plugins/>Plugins</a>
+<a class=dropdown-item href=/docs/2.3/rootless/>Rootless</a>
+<a class=dropdown-item href=/docs/2.3/runc/>runc</a>
+<a class=dropdown-item href=/docs/2.3/runtime-v2/>Runtime V2</a>
+<a class=dropdown-item href=/docs/2.3/sandbox-api/>Sandbox API</a>
+<a class=dropdown-item href=/docs/2.3/snapshotters/blockfile/>Snapshotters: Blockfile</a>
+<a class=dropdown-item href=/docs/2.3/snapshotters/devmapper/>Snapshotters: Devmapper</a>
+<a class=dropdown-item href=/docs/2.3/snapshotters/erofs/>Snapshotters: erofs</a>
+<a class=dropdown-item href=/docs/2.3/snapshotters/readme/>Snapshotters: README</a>
+<a class=dropdown-item href=/docs/2.3/snapshotters/remote-snapshotter/>Snapshotters: Remote Snapshotter</a>
+<a class=dropdown-item href=/docs/2.3/stream_processors/>Stream Processors</a>
+<a class=dropdown-item href=/docs/2.3/tracing/>Tracing</a>
+<a class=dropdown-item href=/docs/2.3/transfer/>Transfer</a>
+<a class=dropdown-item href=/docs/2.3/user-namespaces/readme/>User Namespaces: README</a></div></div></div><div class="dropdown ml-2"><div class=dropdown-trigger><button class="button is-light">
+<span>Contents</span>
+<span class="icon is-small"><i class="fas fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu><div class="dropdown-content is-dropdown-toc"><nav id=TableOfContents><ul><li><a href=#installing-containerd>Installing containerd</a><ul><li><a href=#option-1-from-the-official-binaries>Option 1: From the official binaries</a></li><li><a href=#option-2-from-apt-get-or-dnf>Option 2: From <code>apt-get</code> or <code>dnf</code></a></li><li><a href=#option-3-from-source>Option 3: From source</a></li></ul></li><li><a href=#installing-containerd-on-windows>Installing containerd on Windows</a></li><li><a href=#interacting-with-containerd-via-cli>Interacting with containerd via CLI</a></li><li><a href=#setting-up-containerd-for-kubernetes>Setting up containerd for Kubernetes</a></li></ul><ul><li><a href=#customizing-containerd>Customizing containerd</a></li><li><a href=#implementing-your-own-containerd-client>Implementing your own containerd client</a><ul><li><a href=#connecting-to-containerd>Connecting to containerd</a></li><li><a href=#pulling-the-redis-image>Pulling the redis image</a></li><li><a href=#creating-an-oci-spec-and-container>Creating an OCI Spec and Container</a></li><li><a href=#creating-a-running-task>Creating a running Task</a></li><li><a href=#task-wait-and-start>Task Wait and Start</a></li><li><a href=#killing-the-task>Killing the task</a></li><li><a href=#full-example>Full Example</a></li></ul></li></ul></nav></div></div></div></div><hr></div><section class=is-inner-content><div class="has-text-right mb-3"><a href=https://github.com/containerd/containerd/edit/release/2.3/docs/getting-started.md target=_blank class=is-size-6><span class="icon is-small"><i class="fas fa-edit"></i></span> Edit this page</a></div><h1 id=getting-started-with-containerd>Getting started with containerd</h1><h2 id=installing-containerd>Installing containerd</h2><h3 id=option-1-from-the-official-binaries>Option 1: From the official binaries</h3><p>The official binary releases of containerd are available for the <code>amd64</code> (also known as <code>x86_64</code>) and <code>arm64</code> (also known as <code>aarch64</code>) architectures.</p><p>Typically, you will have to install
+<a href=https://github.com/opencontainers/runc/releases>runc</a>
+and
+<a href=https://github.com/containernetworking/plugins/releases>CNI plugins</a>
+from their official sites too.</p><h4 id=step-1-installing-containerd>Step 1: Installing containerd</h4><p>Download the <code>containerd-&lt;VERSION>-&lt;OS>-&lt;ARCH>.tar.gz</code> archive from
+<a href=https://github.com/containerd/containerd/releases>https://github.com/containerd/containerd/releases</a>
+,
+verify its sha256sum, and extract it under <code>/usr/local</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=gp>$</span> tar Cxzvf /usr/local containerd-1.6.2-linux-amd64.tar.gz
+</span></span><span class=line><span class=cl><span class=go>bin/
+</span></span></span><span class=line><span class=cl><span class=go>bin/containerd-shim-runc-v2
+</span></span></span><span class=line><span class=cl><span class=go>bin/containerd-shim
+</span></span></span><span class=line><span class=cl><span class=go>bin/ctr
+</span></span></span><span class=line><span class=cl><span class=go>bin/containerd-shim-runc-v1
+</span></span></span><span class=line><span class=cl><span class=go>bin/containerd
+</span></span></span><span class=line><span class=cl><span class=go>bin/containerd-stress
+</span></span></span></code></pre></div><p>The <code>containerd</code> binary is built dynamically for glibc-based Linux distributions such as Ubuntu and Rocky Linux.
+This binary may not work on musl-based distributions such as Alpine Linux.
+Users of such distributions may have to install containerd from the source or a third party package.</p><blockquote><p><strong>FAQ</strong>: For Kubernetes, do I need to download <code>cri-containerd-(cni-)&lt;VERSION>-&lt;OS-&lt;ARCH>.tar.gz</code> too?</p><p><strong>Answer</strong>: No.</p><p>As the Kubernetes CRI feature has been already included in <code>containerd-&lt;VERSION>-&lt;OS>-&lt;ARCH>.tar.gz</code>,
+you do not need to download the <code>cri-containerd-....</code> archives to use CRI.</p><p>The <code>cri-containerd-...</code> archives are
+<a href=https://github.com/containerd/containerd/blob/main/RELEASES.md#deprecated-features>deprecated</a>
+,
+do not work on old Linux distributions, and will be removed in containerd 2.0.</p></blockquote><h5 id=systemd>systemd</h5><p>If you intend to start containerd via systemd, you should also download the <code>containerd.service</code> unit file from
+<a href=https://raw.githubusercontent.com/containerd/containerd/main/containerd.service>https://raw.githubusercontent.com/containerd/containerd/main/containerd.service</a>
+into <code>/usr/local/lib/systemd/system/containerd.service</code>,
+and run the following commands:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>systemctl daemon-reload
+</span></span><span class=line><span class=cl>systemctl <span class=nb>enable</span> --now containerd
+</span></span></code></pre></div><h4 id=step-2-installing-runc>Step 2: Installing runc</h4><p>Download the <code>runc.&lt;ARCH></code> binary from
+<a href=https://github.com/opencontainers/runc/releases>https://github.com/opencontainers/runc/releases</a>
+,
+verify its sha256sum, and install it as <code>/usr/local/sbin/runc</code>.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=gp>$</span> install -m <span class=m>755</span> runc.amd64 /usr/local/sbin/runc
+</span></span></code></pre></div><p>The binary is built statically and should work on any Linux distribution.</p><h4 id=step-3-installing-cni-plugins>Step 3: Installing CNI plugins</h4><p>Download the <code>cni-plugins-&lt;OS>-&lt;ARCH>-&lt;VERSION>.tgz</code> archive from
+<a href=https://github.com/containernetworking/plugins/releases>https://github.com/containernetworking/plugins/releases</a>
+,
+verify its sha256sum, and extract it under <code>/opt/cni/bin</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=line><span class=cl><span class=gp>$</span> mkdir -p /opt/cni/bin
+</span></span><span class=line><span class=cl><span class=gp>$</span> tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.1.1.tgz
+</span></span><span class=line><span class=cl><span class=go>./
+</span></span></span><span class=line><span class=cl><span class=go>./macvlan
+</span></span></span><span class=line><span class=cl><span class=go>./static
+</span></span></span><span class=line><span class=cl><span class=go>./vlan
+</span></span></span><span class=line><span class=cl><span class=go>./portmap
+</span></span></span><span class=line><span class=cl><span class=go>./host-local
+</span></span></span><span class=line><span class=cl><span class=go>./vrf
+</span></span></span><span class=line><span class=cl><span class=go>./bridge
+</span></span></span><span class=line><span class=cl><span class=go>./tuning
+</span></span></span><span class=line><span class=cl><span class=go>./firewall
+</span></span></span><span class=line><span class=cl><span class=go>./host-device
+</span></span></span><span class=line><span class=cl><span class=go>./sbr
+</span></span></span><span class=line><span class=cl><span class=go>./loopback
+</span></span></span><span class=line><span class=cl><span class=go>./dhcp
+</span></span></span><span class=line><span class=cl><span class=go>./ptp
+</span></span></span><span class=line><span class=cl><span class=go>./ipvlan
+</span></span></span><span class=line><span class=cl><span class=go>./bandwidth
+</span></span></span></code></pre></div><p>The binaries are built statically and should work on any Linux distribution.</p><h3 id=option-2-from-apt-get-or-dnf>Option 2: From <code>apt-get</code> or <code>dnf</code></h3><p>The <code>containerd.io</code> packages in DEB and RPM formats are distributed by Docker (not by the containerd project).
+See the Docker documentation for how to set up <code>apt-get</code> or <code>dnf</code> to install <code>containerd.io</code> packages:</p><ul><li><a href=https://docs.docker.com/engine/install/centos/>CentOS</a></li><li><a href=https://docs.docker.com/engine/install/debian/>Debian</a></li><li><a href=https://docs.docker.com/engine/install/fedora/>Fedora</a></li><li><a href=https://docs.docker.com/engine/install/ubuntu/>Ubuntu</a></li></ul><p>The <code>containerd.io</code> package contains runc too, but does not contain CNI plugins.</p><h3 id=option-3-from-source>Option 3: From source</h3><p>To install containerd and its dependencies from the source, see
+<a href=/BUILDING><code>BUILDING.md</code></a>
+.</p><h2 id=installing-containerd-on-windows>Installing containerd on Windows</h2><p>From an elevated PowerShell session (<em>running as Admin</em>) run the following commands:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-PowerShell data-lang=PowerShell><span class=line><span class=cl><span class=c># If containerd previously installed run:</span>
+</span></span><span class=line><span class=cl><span class=nb>Stop-Service</span> <span class=n>containerd</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Download and extract desired containerd Windows binaries</span>
+</span></span><span class=line><span class=cl><span class=nv>$Version</span><span class=p>=</span><span class=s2>&#34;1.7.13&#34;</span>	<span class=c># update to your preferred version</span>
+</span></span><span class=line><span class=cl><span class=nv>$Arch</span> <span class=p>=</span> <span class=s2>&#34;amd64&#34;</span>	<span class=c># arm64 also available</span>
+</span></span><span class=line><span class=cl><span class=n>curl</span><span class=p>.</span><span class=py>exe</span> <span class=n>-LO</span> <span class=n>https</span><span class=err>:</span><span class=p>//</span><span class=n>github</span><span class=p>.</span><span class=n>com</span><span class=p>/</span><span class=n>containerd</span><span class=p>/</span><span class=n>containerd</span><span class=p>/</span><span class=n>releases</span><span class=p>/</span><span class=n>download</span><span class=p>/</span><span class=n>v</span><span class=nv>$Version</span><span class=p>/</span><span class=n>containerd</span><span class=p>-</span><span class=nv>$Version</span><span class=n>-windows</span><span class=p>-</span><span class=nv>$Arch</span><span class=p>.</span><span class=py>tar</span><span class=p>.</span><span class=py>gz</span>
+</span></span><span class=line><span class=cl><span class=n>tar</span><span class=p>.</span><span class=py>exe</span> <span class=n>xvf</span> <span class=p>.\</span><span class=n>containerd</span><span class=p>-</span><span class=nv>$Version</span><span class=n>-windows</span><span class=p>-</span><span class=nv>$Arch</span><span class=p>.</span><span class=py>tar</span><span class=p>.</span><span class=py>gz</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Copy</span>
+</span></span><span class=line><span class=cl><span class=nb>Copy-Item</span> <span class=n>-Path</span> <span class=p>.\</span><span class=n>bin</span> <span class=n>-Destination</span> <span class=nv>$Env:ProgramFiles</span><span class=p>\</span><span class=n>containerd</span> <span class=n>-Recurse</span> <span class=n>-Force</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># add the binaries (containerd.exe, ctr.exe) in $env:Path</span>
+</span></span><span class=line><span class=cl><span class=nv>$Path</span> <span class=p>=</span> <span class=p>[</span><span class=no>Environment</span><span class=p>]::</span><span class=n>GetEnvironmentVariable</span><span class=p>(</span><span class=s2>&#34;PATH&#34;</span><span class=p>,</span> <span class=s2>&#34;Machine&#34;</span><span class=p>)</span> <span class=p>+</span> <span class=p>[</span><span class=no>IO.Path</span><span class=p>]::</span><span class=n>PathSeparator</span> <span class=p>+</span> <span class=s2>&#34;</span><span class=nv>$Env:ProgramFiles</span><span class=s2>\containerd&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=no>Environment</span><span class=p>]::</span><span class=n>SetEnvironmentVariable</span><span class=p>(</span> <span class=s2>&#34;Path&#34;</span><span class=p>,</span> <span class=nv>$Path</span><span class=p>,</span> <span class=s2>&#34;Machine&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c># reload path, so you don&#39;t have to open a new PS terminal later if needed</span>
+</span></span><span class=line><span class=cl><span class=nv>$Env:Path</span> <span class=p>=</span> <span class=p>[</span><span class=no>System.Environment</span><span class=p>]::</span><span class=n>GetEnvironmentVariable</span><span class=p>(</span><span class=s2>&#34;Path&#34;</span><span class=p>,</span><span class=s2>&#34;Machine&#34;</span><span class=p>)</span> <span class=p>+</span> <span class=s2>&#34;;&#34;</span> <span class=p>+</span> <span class=p>[</span><span class=no>System.Environment</span><span class=p>]::</span><span class=n>GetEnvironmentVariable</span><span class=p>(</span><span class=s2>&#34;Path&#34;</span><span class=p>,</span><span class=s2>&#34;User&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># configure</span>
+</span></span><span class=line><span class=cl><span class=n>containerd</span><span class=p>.</span><span class=py>exe</span> <span class=n>config</span> <span class=k>default</span> <span class=p>|</span> <span class=nb>Out-File</span> <span class=nv>$Env:ProgramFiles</span><span class=p>\</span><span class=n>containerd</span><span class=p>\</span><span class=n>config</span><span class=p>.</span><span class=py>toml</span> <span class=n>-Encoding</span> <span class=n>ascii</span>
+</span></span><span class=line><span class=cl><span class=c># Review the configuration. Depending on setup you may want to adjust:</span>
+</span></span><span class=line><span class=cl><span class=c># - the sandbox_image (Kubernetes pause image)</span>
+</span></span><span class=line><span class=cl><span class=c># - cni bin_dir and conf_dir locations</span>
+</span></span><span class=line><span class=cl><span class=nb>Get-Content</span> <span class=nv>$Env:ProgramFiles</span><span class=p>\</span><span class=n>containerd</span><span class=p>\</span><span class=n>config</span><span class=p>.</span><span class=py>toml</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Register and start service</span>
+</span></span><span class=line><span class=cl><span class=n>containerd</span><span class=p>.</span><span class=py>exe</span> <span class=p>-</span><span class=n>-register-service</span>
+</span></span><span class=line><span class=cl><span class=nb>Start-Service</span> <span class=n>containerd</span>
+</span></span></code></pre></div><blockquote><p><strong>Tip for Running <code>containerd</code> Service on Windows:</strong></p><p><code>containerd</code> logs are not persisted when we start it as a service
+using Windows Service Manager.
+<a href=https://nssm.cc><code>nssm</code></a>
+can be used to
+configure logs to go into a cyclic buffer:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>nssm</span><span class=p>.</span><span class=py>exe</span> <span class=n>install</span> <span class=n>containerd</span>
+</span></span><span class=line><span class=cl><span class=n>nssm</span><span class=p>.</span><span class=py>exe</span> <span class=nb>set </span><span class=n>containerd</span> <span class=n>AppStdout</span> <span class=s2>&#34;\containerd.log&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>nssm</span><span class=p>.</span><span class=py>exe</span> <span class=nb>set </span><span class=n>containerd</span> <span class=n>AppStderr</span> <span class=s2>&#34;\containerd.err.log&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>nssm</span><span class=p>.</span><span class=py>exe</span> <span class=nb>start </span><span class=n>containerd</span>
+</span></span><span class=line><span class=cl><span class=c># to stop:</span>
+</span></span><span class=line><span class=cl><span class=n>nssm</span><span class=p>.</span><span class=py>exe</span> <span class=n>stop</span> <span class=n>containerd</span>
+</span></span></code></pre></div></blockquote><h2 id=interacting-with-containerd-via-cli>Interacting with containerd via CLI</h2><p>There are several command line interface (CLI) projects for interacting with containerd:</p><table><thead><tr><th>Name</th><th>Community</th><th>API</th><th>Target</th><th>Web site</th></tr></thead><tbody><tr><td><code>ctr</code></td><td>containerd</td><td>Native</td><td>For debugging only</td><td>(None, see <code>ctr --help</code> to learn the usage)</td></tr><tr><td><code>nerdctl</code></td><td>containerd (non-core)</td><td>Native</td><td>General-purpose</td><td><a href=https://github.com/containerd/nerdctl>https://github.com/containerd/nerdctl</a></td></tr><tr><td><code>crictl</code></td><td>Kubernetes SIG-node</td><td>CRI</td><td>For debugging only</td><td><a href=https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md>https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md</a></td></tr></tbody></table><p>While the <code>ctr</code> tool is bundled together with containerd, it should be noted the <code>ctr</code> tool is solely made for debugging containerd.
+The
+<a href=https://github.com/containerd/nerdctl><code>nerdctl</code></a>
+tool provides stable and human-friendly user experience.</p><p>Example (<code>ctr</code>):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ctr images pull docker.io/library/redis:alpine
+</span></span><span class=line><span class=cl>ctr run docker.io/library/redis:alpine redis
+</span></span></code></pre></div><p>Example (<code>nerdctl</code>):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>nerdctl run --name redis redis:alpine
+</span></span></code></pre></div><h2 id=setting-up-containerd-for-kubernetes>Setting up containerd for Kubernetes</h2><p>containerd has built-in support for Kubernetes Container Runtime Interface (CRI).</p><p>To set up containerd nodes for managed Kubernetes services, see the service providers&rsquo; documentations:</p><ul><li><a href=https://docs.aws.amazon.com/eks/latest/userguide/dockershim-deprecation.html>Amazon Elastic Kubernetes Service</a></li><li><a href=https://docs.microsoft.com/en-us/azure/aks/cluster-configuration>Azure Kubernetes Service</a></li><li><a href=https://cloud.google.com/kubernetes-engine/docs/concepts/using-containerd>Google Kubernetes Engine</a></li></ul><p>For non-managed environments, see the following Kubernetes documentations:</p><ul><li><a href=https://kubernetes.io/docs/setup/production-environment/container-runtimes/>Getting started / Production environment / Container runtimes</a></li><li><a href=https://kubernetes.io/docs/setup/production-environment/tools/>Getting started / Production environment / Installing Kubernetes with deployment tools</a></li></ul><hr><h1 id=advanced-topics>Advanced topics</h1><h2 id=customizing-containerd>Customizing containerd</h2><p>containerd uses a configuration file located in <code>/etc/containerd/config.toml</code> for specifying daemon level options.
+A sample configuration file can be found
+<a href=/docs/man/containerd-config.toml.5>here</a>
+.</p><p>The default configuration can be generated via <code>containerd config default > /etc/containerd/config.toml</code>.</p><h2 id=implementing-your-own-containerd-client>Implementing your own containerd client</h2><p>There are many different ways to use containerd.
+If you are a developer working on containerd you can use the <code>ctr</code> tool or the <code>nerdctl</code> tool to quickly test features and functionality without writing extra code.
+However, if you want to integrate containerd into your project we have an easy to use client package that allows you to work with containerd.</p><p>In this guide we will pull and run a redis server with containerd using the client package.
+This project requires a recent version of Go.
+See the header of
+<a href=https://github.com/containerd/containerd/blob/main/go.mod><code>go.mod</code></a>
+for the recommended Go version.</p><h3 id=connecting-to-containerd>Connecting to containerd</h3><p>We will start a new <code>main.go</code> file and import the containerd client package.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=kn>package</span> <span class=nx>main</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;log&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=nx>containerd</span> <span class=s>&#34;github.com/containerd/containerd/v2/client&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nf>redisExample</span><span class=p>();</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatal</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>redisExample</span><span class=p>()</span> <span class=kt>error</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=nx>client</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>containerd</span><span class=p>.</span><span class=nf>New</span><span class=p>(</span><span class=s>&#34;/run/containerd/containerd.sock&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>defer</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Close</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>This will create a new client with the default containerd socket path.
+Because we are working with a daemon over GRPC we need to create a <code>context</code> for use with calls to client methods.
+containerd is also namespaced for callers of the API.
+We should also set a namespace for our guide after creating the context.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl>	<span class=nx>ctx</span> <span class=o>:=</span> <span class=nx>namespaces</span><span class=p>.</span><span class=nf>WithNamespace</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=s>&#34;example&#34;</span><span class=p>)</span>
+</span></span></code></pre></div><p>Having a namespace for our usage ensures that containers, images, and other resources without containerd do not conflict with other users of a single daemon.</p><h3 id=pulling-the-redis-image>Pulling the redis image</h3><p>Now that we have a client to work with we need to pull an image.
+We can use the redis image based on Alpine Linux from the DockerHub.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl>	<span class=nx>image</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Pull</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=s>&#34;docker.io/library/redis:alpine&#34;</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithPullUnpack</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span></code></pre></div><p>The containerd client uses the <code>Opts</code> pattern for many of the method calls.
+We use the <code>containerd.WithPullUnpack</code> so that we not only fetch and download the content into containerd&rsquo;s content store but also unpack it into a snapshotter for use as a root filesystem.</p><p>Let&rsquo;s put the code together that will pull the redis image based on alpine linux from Dockerhub and then print the name of the image on the console&rsquo;s output.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=kn>package</span> <span class=nx>main</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;context&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;log&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>containerd</span> <span class=s>&#34;github.com/containerd/containerd/v2/client&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;github.com/containerd/containerd/v2/pkg/namespaces&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nf>redisExample</span><span class=p>();</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nx>log</span><span class=p>.</span><span class=nf>Fatal</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>redisExample</span><span class=p>()</span> <span class=kt>error</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>client</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>containerd</span><span class=p>.</span><span class=nf>New</span><span class=p>(</span><span class=s>&#34;/run/containerd/containerd.sock&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>defer</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Close</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>ctx</span> <span class=o>:=</span> <span class=nx>namespaces</span><span class=p>.</span><span class=nf>WithNamespace</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=s>&#34;example&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=nx>image</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Pull</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=s>&#34;docker.io/library/redis:alpine&#34;</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithPullUnpack</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>log</span><span class=p>.</span><span class=nf>Printf</span><span class=p>(</span><span class=s>&#34;Successfully pulled %s image\n&#34;</span><span class=p>,</span> <span class=nx>image</span><span class=p>.</span><span class=nf>Name</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&gt; go build main.go
+</span></span><span class=line><span class=cl>&gt; sudo ./main
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>2017/08/13 17:43:21 Successfully pulled docker.io/library/redis:alpine image
+</span></span></code></pre></div><h3 id=creating-an-oci-spec-and-container>Creating an OCI Spec and Container</h3><p>Now that we have an image to base our container off of, we need to generate an OCI runtime specification that the container can be based off of as well as the new container.</p><p>containerd provides reasonable defaults for generating OCI runtime specs.
+There is also an <code>Opt</code> for modifying the default config based on the image that we pulled.</p><p>The container will be based off of the image, and we will:</p><ol><li>allocate a new read-write snapshot so the container can store any persistent information.</li><li>create a new spec for the container.</li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl>	<span class=nx>container</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>NewContainer</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>		<span class=nx>ctx</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=s>&#34;redis-server&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=nx>containerd</span><span class=p>.</span><span class=nf>WithNewSnapshot</span><span class=p>(</span><span class=s>&#34;redis-server-snapshot&#34;</span><span class=p>,</span> <span class=nx>image</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>		<span class=nx>containerd</span><span class=p>.</span><span class=nf>WithNewSpec</span><span class=p>(</span><span class=nx>oci</span><span class=p>.</span><span class=nf>WithImageConfig</span><span class=p>(</span><span class=nx>image</span><span class=p>)),</span>
+</span></span><span class=line><span class=cl>	<span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>defer</span> <span class=nx>container</span><span class=p>.</span><span class=nf>Delete</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithSnapshotCleanup</span><span class=p>)</span>
+</span></span></code></pre></div><p>If you have an existing OCI specification created you can use <code>containerd.WithSpec(spec)</code> to set it on the container.</p><p>When creating a new snapshot for the container we need to provide a snapshot ID as well as the Image that the container will be based on.
+By providing a separate snapshot ID than the container ID we can easily reuse, existing snapshots across different containers.</p><p>We also add a line to delete the container along with its snapshot after we are done with this example.</p><p>Here is example code to pull the redis image based on alpine linux from Dockerhub, create an OCI spec, create a container based on the spec and finally delete the container.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=kn>package</span> <span class=nx>main</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;context&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;log&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>containerd</span> <span class=s>&#34;github.com/containerd/containerd/v2/client&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;github.com/containerd/containerd/v2/pkg/namespaces&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s>&#34;github.com/containerd/containerd/v2/pkg/oci&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nf>redisExample</span><span class=p>();</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nx>log</span><span class=p>.</span><span class=nf>Fatal</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>redisExample</span><span class=p>()</span> <span class=kt>error</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>client</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>containerd</span><span class=p>.</span><span class=nf>New</span><span class=p>(</span><span class=s>&#34;/run/containerd/containerd.sock&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>defer</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Close</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>ctx</span> <span class=o>:=</span> <span class=nx>namespaces</span><span class=p>.</span><span class=nf>WithNamespace</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=s>&#34;example&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=nx>image</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Pull</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=s>&#34;docker.io/library/redis:alpine&#34;</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithPullUnpack</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nx>log</span><span class=p>.</span><span class=nf>Printf</span><span class=p>(</span><span class=s>&#34;Successfully pulled %s image\n&#34;</span><span class=p>,</span> <span class=nx>image</span><span class=p>.</span><span class=nf>Name</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=nx>container</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>NewContainer</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>                <span class=nx>ctx</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s>&#34;redis-server&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=nx>containerd</span><span class=p>.</span><span class=nf>WithNewSnapshot</span><span class=p>(</span><span class=s>&#34;redis-server-snapshot&#34;</span><span class=p>,</span> <span class=nx>image</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>                <span class=nx>containerd</span><span class=p>.</span><span class=nf>WithNewSpec</span><span class=p>(</span><span class=nx>oci</span><span class=p>.</span><span class=nf>WithImageConfig</span><span class=p>(</span><span class=nx>image</span><span class=p>)),</span>
+</span></span><span class=line><span class=cl>        <span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>defer</span> <span class=nx>container</span><span class=p>.</span><span class=nf>Delete</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithSnapshotCleanup</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=nx>log</span><span class=p>.</span><span class=nf>Printf</span><span class=p>(</span><span class=s>&#34;Successfully created container with ID %s and snapshot with ID redis-server-snapshot&#34;</span><span class=p>,</span> <span class=nx>container</span><span class=p>.</span><span class=nf>ID</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Let&rsquo;s see it in action.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&gt; go build main.go
+</span></span><span class=line><span class=cl>&gt; sudo ./main
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>2017/08/13 18:01:35 Successfully pulled docker.io/library/redis:alpine image
+</span></span><span class=line><span class=cl>2017/08/13 18:01:35 Successfully created container with ID redis-server and snapshot with ID redis-server-snapshot
+</span></span></code></pre></div><h3 id=creating-a-running-task>Creating a running Task</h3><p>One thing that may be confusing at first for new containerd users is the separation between a <code>Container</code> and a <code>Task</code>.
+A container is a metadata object that resources are allocated and attached to.
+A task is a live, running process on the system.
+Tasks should be deleted after each run while a container can be used, updated, and queried multiple times.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl>	<span class=nx>task</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>container</span><span class=p>.</span><span class=nf>NewTask</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>cio</span><span class=p>.</span><span class=nf>NewCreator</span><span class=p>(</span><span class=nx>cio</span><span class=p>.</span><span class=nx>WithStdio</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>defer</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Delete</span><span class=p>(</span><span class=nx>ctx</span><span class=p>)</span>
+</span></span></code></pre></div><p>The new task that we just created is actually a running process on your system.
+We use <code>cio.WithStdio</code> so that all IO from the container is sent to our <code>main.go</code> process.
+This is a <code>cio.Opt</code> that configures the <code>Streams</code> used by <code>NewCreator</code> to return a <code>cio.IO</code>
+for the new task.</p><p>If you are familiar with the OCI runtime actions, the task is currently in the &ldquo;created&rdquo; state.
+This means that the namespaces, root filesystem, and various container level settings have been initialized but the user defined process, in this example &ldquo;redis-server&rdquo;, has not been started.
+This gives users a chance to setup network interfaces or attach different tools to monitor the container.
+containerd also takes this opportunity to monitor your container as well.
+Waiting on things like the container&rsquo;s exit status and cgroup metrics are setup at this point.</p><p>If you are familiar with prometheus you can curl the containerd metrics endpoint (in the <code>config.toml</code> that we created) to see your container&rsquo;s metrics:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&gt; curl 127.0.0.1:1338/v1/metrics
+</span></span></code></pre></div><p>Pretty cool right?</p><h3 id=task-wait-and-start>Task Wait and Start</h3><p>Now that we have a task in the created state we need to make sure that we wait on the task to exit.
+It is essential to wait for the task to finish so that we can close our example and cleanup the resources that we created.
+You always want to make sure you <code>Wait</code> before calling <code>Start</code> on a task.
+This makes sure that you do not encounter any races if the task has a simple program like <code>/bin/true</code> that exits promptly after calling start.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl>	<span class=nx>exitStatusC</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Wait</span><span class=p>(</span><span class=nx>ctx</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Start</span><span class=p>(</span><span class=nx>ctx</span><span class=p>);</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span></code></pre></div><p>Now we should see the <code>redis-server</code> logs in our terminal when we run the <code>main.go</code> file.</p><h3 id=killing-the-task>Killing the task</h3><p>Since we are running a long running server we will need to kill the task in order to exit out of our example.
+To do this we will simply call <code>Kill</code> on the task after waiting a couple of seconds so we have a chance to see the redis-server logs.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl>	<span class=nx>time</span><span class=p>.</span><span class=nf>Sleep</span><span class=p>(</span><span class=mi>3</span> <span class=o>*</span> <span class=nx>time</span><span class=p>.</span><span class=nx>Second</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Kill</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>syscall</span><span class=p>.</span><span class=nx>SIGTERM</span><span class=p>);</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=nx>status</span> <span class=o>:=</span> <span class=o>&lt;-</span><span class=nx>exitStatusC</span>
+</span></span><span class=line><span class=cl>	<span class=nx>code</span><span class=p>,</span> <span class=nx>exitedAt</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>status</span><span class=p>.</span><span class=nf>Result</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Printf</span><span class=p>(</span><span class=s>&#34;redis-server exited with status: %d\n&#34;</span><span class=p>,</span> <span class=nx>code</span><span class=p>)</span>
+</span></span></code></pre></div><p>We wait on our exit status channel that we setup to ensure the task has fully exited and we get the exit status.
+If you have to reload containers or miss waiting on a task, <code>Delete</code> will also return the exit status when you finally delete the task.
+We got you covered.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=nx>status</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Delete</span><span class=p>(</span><span class=nx>ctx</span><span class=p>)</span>
+</span></span></code></pre></div><h3 id=full-example>Full Example</h3><p>Here is the full example that we just put together.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=kn>package</span> <span class=nx>main</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;context&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;fmt&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;log&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;syscall&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;time&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;github.com/containerd/containerd/v2/pkg/cio&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=nx>containerd</span> <span class=s>&#34;github.com/containerd/containerd/v2/client&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;github.com/containerd/containerd/v2/pkg/oci&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=s>&#34;github.com/containerd/containerd/v2/pkg/namespaces&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nf>redisExample</span><span class=p>();</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatal</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>redisExample</span><span class=p>()</span> <span class=kt>error</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=c1>// create a new client connected to the default socket path for containerd
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>client</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>containerd</span><span class=p>.</span><span class=nf>New</span><span class=p>(</span><span class=s>&#34;/run/containerd/containerd.sock&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>defer</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Close</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// create a new context with an &#34;example&#34; namespace
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>ctx</span> <span class=o>:=</span> <span class=nx>namespaces</span><span class=p>.</span><span class=nf>WithNamespace</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=s>&#34;example&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// pull the redis image from DockerHub
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>image</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>Pull</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=s>&#34;docker.io/library/redis:alpine&#34;</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithPullUnpack</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// create a container
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>container</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>client</span><span class=p>.</span><span class=nf>NewContainer</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>		<span class=nx>ctx</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=s>&#34;redis-server&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=nx>containerd</span><span class=p>.</span><span class=nf>WithImage</span><span class=p>(</span><span class=nx>image</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>		<span class=nx>containerd</span><span class=p>.</span><span class=nf>WithNewSnapshot</span><span class=p>(</span><span class=s>&#34;redis-server-snapshot&#34;</span><span class=p>,</span> <span class=nx>image</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>		<span class=nx>containerd</span><span class=p>.</span><span class=nf>WithNewSpec</span><span class=p>(</span><span class=nx>oci</span><span class=p>.</span><span class=nf>WithImageConfig</span><span class=p>(</span><span class=nx>image</span><span class=p>)),</span>
+</span></span><span class=line><span class=cl>	<span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>defer</span> <span class=nx>container</span><span class=p>.</span><span class=nf>Delete</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>containerd</span><span class=p>.</span><span class=nx>WithSnapshotCleanup</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// create a task from the container
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>task</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>container</span><span class=p>.</span><span class=nf>NewTask</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>cio</span><span class=p>.</span><span class=nf>NewCreator</span><span class=p>(</span><span class=nx>cio</span><span class=p>.</span><span class=nx>WithStdio</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>defer</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Delete</span><span class=p>(</span><span class=nx>ctx</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// make sure we wait before calling start
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>exitStatusC</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Wait</span><span class=p>(</span><span class=nx>ctx</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// call start on the task to execute the redis server
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Start</span><span class=p>(</span><span class=nx>ctx</span><span class=p>);</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// sleep for a lil bit to see the logs
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>time</span><span class=p>.</span><span class=nf>Sleep</span><span class=p>(</span><span class=mi>3</span> <span class=o>*</span> <span class=nx>time</span><span class=p>.</span><span class=nx>Second</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// kill the process and get the exit status
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>task</span><span class=p>.</span><span class=nf>Kill</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>syscall</span><span class=p>.</span><span class=nx>SIGTERM</span><span class=p>);</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1>// wait for the process to fully exit and print out the exit status
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>	<span class=nx>status</span> <span class=o>:=</span> <span class=o>&lt;-</span><span class=nx>exitStatusC</span>
+</span></span><span class=line><span class=cl>	<span class=nx>code</span><span class=p>,</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>status</span><span class=p>.</span><span class=nf>Result</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>err</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Printf</span><span class=p>(</span><span class=s>&#34;redis-server exited with status: %d\n&#34;</span><span class=p>,</span> <span class=nx>code</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>We can build this example and run it as follows to see our hard work come together.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&gt; go build main.go
+</span></span><span class=line><span class=cl>&gt; sudo ./main
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>1:C <span class=m>04</span> Aug 20:41:37.682 <span class=c1># oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span>
+</span></span><span class=line><span class=cl>1:C <span class=m>04</span> Aug 20:41:37.682 <span class=c1># Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started</span>
+</span></span><span class=line><span class=cl>1:C <span class=m>04</span> Aug 20:41:37.682 <span class=c1># Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.682 <span class=c1># You requested maxclients of 10000 requiring at least 10032 max file descriptors.</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.682 <span class=c1># Server can&#39;t set maximum open files to 10032 because of OS error: Operation not permitted.</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.682 <span class=c1># Current maximum open files is 1024. maxclients has been reduced to 992 to compensate for low ulimit. If you need higher maxclients increase &#39;ulimit -n&#39;.</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.683 * Running <span class=nv>mode</span><span class=o>=</span>standalone, <span class=nv>port</span><span class=o>=</span>6379.
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.683 <span class=c1># WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.684 <span class=c1># Server initialized</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.684 <span class=c1># WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &#39;vm.overcommit_memory = 1&#39; to /etc/sysctl.conf and then reboot or run the command &#39;sysctl vm.overcommit_memory=1&#39; for this to take effect.</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.684 <span class=c1># WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &#39;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#39; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:37.684 * Ready to accept connections
+</span></span><span class=line><span class=cl>1:signal-handler <span class=o>(</span>1501879300<span class=o>)</span> Received SIGTERM scheduling shutdown...
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:40.791 <span class=c1># User requested shutdown...</span>
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:40.791 * Saving the final RDB snapshot before exiting.
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:40.794 * DB saved on disk
+</span></span><span class=line><span class=cl>1:M <span class=m>04</span> Aug 20:41:40.794 <span class=c1># Redis is now ready to exit, bye bye...</span>
+</span></span><span class=line><span class=cl>redis-server exited with status: <span class=m>0</span>
+</span></span></code></pre></div><p>In the end, we really did not write that much code when you use the client package.</p><hr><p>We hope this guide helped to get you up and running with containerd.
+Feel free to join the <code>#containerd</code> and <code>#containerd-dev</code> slack channels on Cloud Native Computing Foundation&rsquo;s (CNCF) slack - <code>cloud-native.slack.com</code> if you have any questions and like all things, if you want to help contribute to containerd or this guide, submit a pull request.
+<a href=https://slack.cncf.io>Get Invite to CNCF slack.</a></p></section></div></div><div class="column is-hidden-touch"><aside class=is-toc-container><p class="is-size-4 is-toc-title">On this page</p><div id=toc><nav id=TableOfContents><ul><li><a href=#installing-containerd>Installing containerd</a><ul><li><a href=#option-1-from-the-official-binaries>Option 1: From the official binaries</a></li><li><a href=#option-2-from-apt-get-or-dnf>Option 2: From <code>apt-get</code> or <code>dnf</code></a></li><li><a href=#option-3-from-source>Option 3: From source</a></li></ul></li><li><a href=#installing-containerd-on-windows>Installing containerd on Windows</a></li><li><a href=#interacting-with-containerd-via-cli>Interacting with containerd via CLI</a></li><li><a href=#setting-up-containerd-for-kubernetes>Setting up containerd for Kubernetes</a></li></ul><ul><li><a href=#customizing-containerd>Customizing containerd</a></li><li><a href=#implementing-your-own-containerd-client>Implementing your own containerd client</a><ul><li><a href=#connecting-to-containerd>Connecting to containerd</a></li><li><a href=#pulling-the-redis-image>Pulling the redis image</a></li><li><a href=#creating-an-oci-spec-and-container>Creating an OCI Spec and Container</a></li><li><a href=#creating-a-running-task>Creating a running Task</a></li><li><a href=#task-wait-and-start>Task Wait and Start</a></li><li><a href=#killing-the-task>Killing the task</a></li><li><a href=#full-example>Full Example</a></li></ul></li></ul></nav></div></aside></div></div></div></article><nav class="navbar is-fixed-bottom is-hidden-desktop"><div class=navbar-end><div class=navbar-item><a class="button is-dark is-radiusless is-arrow-up" href=#><span class=icon><i class="fas fa-chevron-up"></i></span></a></div></div></nav></main><div class=footer><div class=container><div class=columns><div class=column><img src=/img/logos/footer-logo.png class=is-footer-logo alt="containerd footer logo"></div><div class=column><span class="is-size-4 is-size-5-mobile">Docs</span><hr class="hr has-background-grey"><ul><li><a href=/docs/2.3/>2.3.x</a></li><li><a href=/docs/2.2/>2.2.x</a></li><li><a href=/docs/2.1/>2.1.x</a></li><li><a href=/docs/1.7/>1.7.x</a></li><li><a href=/docs/main/>main</a></li></ul></div><div class=column><span class="is-size-4 is-size-5-mobile">Project</span><hr class="hr has-background-grey"><ul><li><a href=https://github.com/cncf/foundation/blob/master/code-of-conduct.md>Code of conduct</a></li><li><a href=/keps/>Collaboration with Kubernetes SIG-Node</a></li><li><a href=/contributing/>Contributing</a></li><li><a href=/roadmap/>Roadmap</a></li><li><a href=/scope/>Scope and principles</a></li><li><a href=/security/>Security and audits</a></li><li><a href=/releases/>Versioning and release</a></li></ul></div><div class=column><span class="is-size-4 is-size-5-mobile">Community</span><hr class="hr has-background-grey"><div class=buttons><a class="button is-borderless has-background-black has-text-white" href=https://github.com/containerd/containerd><span class=icon><i class="fab fa-github" aria-hidden=true></i></span>
+<span>GitHub</span></a>
+<a class="button is-borderless has-background-slack-green has-text-white" href=https://slack.containerd.io/><span class=icon><i class="fab fa-slack" aria-hidden=true></i></span>
+<span>Slack</span></a>
+<a class="button is-borderless has-background-bluesky-blue has-text-white" href=https://bsky.app/profile/containerd.dev><span class=icon><i class="fab fa-bluesky" aria-hidden=true></i></span>
+<span>Bluesky</span></a>
+<a class="button is-borderless has-background-mastodon-purple has-text-white" href=https://hachyderm.io/@containerd><span class=icon><i class="fab fa-mastodon" aria-hidden=true></i></span>
+<span>Mastodon</span></a>
+<a class="button has-background-twitter-blue is-borderless has-text-white" href=https://twitter.com/@containerd><span class=icon><i class="fab fa-twitter" aria-hidden=true></i></span>
+<span>Twitter</span></a>
+<a class="button is-borderless has-background-youtube-red has-text-white" href=https://www.youtube.com/@CNCFcontainerd><span class=icon><i class="fab fa-youtube" aria-hidden=true></i></span>
+<span>YouTube</span></a></div></div></div><hr class="hr has-background-grey-lighter"></div><div class="container has-text-centered"><div class=has-text-weight-light><p class="is-size-5 is-size-6-mobile">&copy; containerd Authors 2026 | Documentation Distributed under <a href=https://creativecommons.org/licenses/by/4.0/>CC-BY-4.0</a></p><br><p>&copy; 2026 The Linux Foundation. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page.</p></div></div></div><script src=/js/tippy-3.1.1.min.63fe7258687ea683ab01fd463d14b350c9e020570f1d36eab5aab96304ca8b35.js integrity="sha256-Y/5yWGh+poOrAf1GPRSzUMngIFcPHTbqtaq5YwTKizU="></script>
+<script src=/js/jquery-3.6.0.min.c2156ca5c12237ebf18ff9ec78fc535fff871cc650b8afcb1538dec731a9df2c.js integrity="sha256-whVspcEiN+vxj/nsePxTX/+HHMZQuK/LFTjexzGp3yw="></script>
+<script src=/js/anchor-4.1.1.min.e7bdd354cae47f18095b8b258ef736d89d287649a05f7f25ee023d303d1410f5.js integrity="sha256-573TVMrkfxgJW4sljvc22J0odkmgX38l7gI9MD0UEPU="></script>
+<script src=/js/clipboard-2.0.0.min.ca2d628003949ac3388afb43fc5dd95550de7a5092b514655d381745e456e4cb.js integrity="sha256-yi1igAOUmsM4ivtD/F3ZVVDeelCStRRlXTgXReRW5Ms="></script>
+<script src=/js/app.min.f5d71b357770cfa702a856635ed1f602e19345dfc7c4432e7faa32251f0a1c69.js integrity="sha256-9dcbNXdwz6cCqFZjXtH2AuGTRd/HxEMuf6oyJR8KHGk="></script></body></html>

@@ -1,0 +1,510 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=preload as=font href=/fonts/vendor/SourceSansPro-Regular.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=/fonts/vendor/SourceSansPro-Regular.woff type=font/woff2 crossorigin><link rel=preload as=font href=/fonts/vendor/SourceSansPro-Italic.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=/fonts/vendor/SourceSansPro-Italic.woff type=font/woff2 crossorigin><link rel=preload as=font href=/fonts/vendor/SourceSansPro-SemiBold.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=/fonts/vendor/SourceSansPro-SemiBold.woff type=font/woff2 crossorigin><link rel=preload href=/main.f50b4c4f750ededa321bf6c10894a885f2ace1fe84adce0981c0477e5009be53c7aa8708e10b555680da339b1e6a934cd04b0a8dfdc1e5ff766188172d17d8aa.css integrity="sha512-9QtMT3UO3toyG/bBCJSohfKs4f6Erc4JgcBHflAJvlPHqocI4QtVVoDaM5seapNM0EsKjf3B5f92YYgXLRfYqg==" crossorigin=anonymous as=style><link rel=stylesheet href=/main.f50b4c4f750ededa321bf6c10894a885f2ace1fe84adce0981c0477e5009be53c7aa8708e10b555680da339b1e6a934cd04b0a8dfdc1e5ff766188172d17d8aa.css integrity="sha512-9QtMT3UO3toyG/bBCJSohfKs4f6Erc4JgcBHflAJvlPHqocI4QtVVoDaM5seapNM0EsKjf3B5f92YYgXLRfYqg==" crossorigin=anonymous><link rel=preload href=/page.41fe9a941484bed79e358ab8a9de0b4a7054ad0b7071d08cb94106481a9feaa1cdf05ec0995cf7d3cbb545b1bd1cebf81d2080342ee692c6d10ba841b73e79eb.css integrity="sha512-Qf6alBSEvteeNYq4qd4LSnBUrQtwcdCMuUEGSBqf6qHN8F7AmVz308u1RbG9HOv4HSCANC7mksbRC6hBtz556w==" crossorigin=anonymous as=style><link rel=stylesheet href=/page.41fe9a941484bed79e358ab8a9de0b4a7054ad0b7071d08cb94106481a9feaa1cdf05ec0995cf7d3cbb545b1bd1cebf81d2080342ee692c6d10ba841b73e79eb.css integrity="sha512-Qf6alBSEvteeNYq4qd4LSnBUrQtwcdCMuUEGSBqf6qHN8F7AmVz308u1RbG9HOv4HSCANC7mksbRC6hBtz556w==" crossorigin=anonymous><link rel=preload href=/css/vendor/prismjs/prism.8ed591de97588c6c1fc3d75feb4d5817ab86aca7615d5dfb73effa54dccd72d9ab5e83b49e4807712d37045c5f916c9c39ad8fd8dc3d63d3c24fdbe31bd8e456.css integrity="sha512-jtWR3pdYjGwfw9df601YF6uGrKdhXV37c+/6VNzNctmrXoO0nkgHcS03BFxfkWycOa2P2Nw9Y9PCT9vjG9jkVg==" crossorigin=anonymous as=style><link rel=stylesheet href=/css/vendor/prismjs/prism.8ed591de97588c6c1fc3d75feb4d5817ab86aca7615d5dfb73effa54dccd72d9ab5e83b49e4807712d37045c5f916c9c39ad8fd8dc3d63d3c24fdbe31bd8e456.css integrity="sha512-jtWR3pdYjGwfw9df601YF6uGrKdhXV37c+/6VNzNctmrXoO0nkgHcS03BFxfkWycOa2P2Nw9Y9PCT9vjG9jkVg==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><meta name=robots content="index, follow"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><title>Extra Varnish Cache features - Varnish Cache</title><meta name=description content="Learn about the extra Varnish features that are part of the Varnish Cache distribution."><link rel=canonical href=https://www.varnish.org/docs/extra-features/><meta name=twitter:card content="summary"><meta name=twitter:title content="Extra Varnish Cache features"><meta name=twitter:description content="Learn about the extra Varnish features that are part of the Varnish Cache distribution."><meta property="og:title" content="Extra Varnish Cache features"><meta property="og:description" content="Learn about the extra Varnish features that are part of the Varnish Cache distribution."><meta property="og:type" content="website"><meta property="og:url" content="https://www.varnish.org/docs/extra-features/"><meta property="og:updated_time" content="2026-03-17T00:00:00+00:00"><meta property="og:locale" content="en-us"><meta property="og:site_name" content="Varnish Cache"><link rel=alternate type=application/rss+xml href=/docs/extra-features/index.xml><script type=application/ld+json>{"@context":"https://schema.org","@type":"TechArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.varnish.org\/docs\/extra-features\/"},"headline":"Extra Varnish Cache features","image":[],"datePublished":"2026-03-17T00:00:00CET","dateModified":"2026-03-17T00:00:00CET","publisher":{"@type":"Organization","name":"Varnish Cache","logo":{"@type":"ImageObject","url":"https:\/\/www.varnish.org\/images\/varnish-cache-logo.svg"}},"description":"Learn about the extra Varnish features that are part of the Varnish Cache distribution."}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.varnish.org\/"},{"@type":"ListItem","position":2,"name":"Docs","item":"https:\/\/www.varnish.org\/docs\/"},{"@type":"ListItem","position":3,"name":"Extra Features","item":"https:\/\/www.varnish.org\/docs\/extra-features\/"}]}</script><meta name=theme-color content><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest crossorigin=use-credentials><script>window.op=window.op||function(){var e=[];return new Proxy(function(){arguments.length&&e.push([].slice.call(arguments))},{get:function(t,n){return"q"===n?e:function(){e.push([n].concat([].slice.call(arguments)))}},has:function(e,t){return"q"===t}})}(),window.op("init",{clientId:"869e228a-5e04-45a5-9ad6-9e2f6cc3b791",trackScreenViews:!0,trackOutgoingLinks:!0,trackAttributes:!0})</script><script src=https://openpanel.dev/op1.js defer async></script></head><body class="docs list"><header class="navbar fixed-top navbar-expand-md navbar-light"><div class="container-fluid justify-content-md-between"><input class="menu-btn order-0" type=checkbox id=menu-btn>
+<span class="d-flex align-items-center"><label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
+<a href=/><span class=navbar-logo></span></a></span><div class="collapse flex-grow-0 navbar-collapse order-4 order-md-1"><ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li onmouseover=onMouseOverhandler(event) class=nav-item><a class=nav-link href=/>Home</a></li><li onmouseover=onMouseOverhandler(event) class=nav-item><a class=nav-link href=/#getting-started>Getting started</a></li><li onmouseover=onMouseOverhandler(event) class=nav-item><a class=nav-link href=/docs/>Documentation</a></li><li onmouseover=onMouseOverhandler(event) class=nav-item><a class=nav-link href=/releases/>Releases</a></li><li onmouseover=onMouseOverhandler(event) class=nav-item><a class=nav-link href=/#getting-help>Getting help</a></li><li onmouseover=onMouseOverhandler(event) class=nav-item><a class=nav-link href=https://github.com/varnish/varnish target=_blank rel=noopener aria-label="View on GitHub"><img width=20 height=20 src=/images/github.svg alt="View on GitHub" style=position:relative;top:-1px></a></li></ul><script>function onMouseOverhandler(e){let n=e.target.closest(".nav-item"),t=n.querySelector(".sub-menu");if(t){console.log();const e=t.getBoundingClientRect();e.width+e.left>window.innerWidth&&(t.style.right="100%",t.style.left="auto")}}</script><div class="break order-6 d-md-none"></div></div></div></header><div class=wrap role=document><div class=content><div class=container><div class="row flex-xl-nowrap"><div class="col-lg-5 col-xl-4 docs-sidebar"><nav class=docs-links aria-label="Main navigation"><div class=page-links><h3>Table of contents</h3><nav id=TableOfContents><ul><li><a href=#core-engine-features-as-of-varnish-90>Core Engine Features (as of Varnish 9.0+)</a></li><li><a href=#packaged-modules-vmods>Packaged Modules (VMODs)</a><ul><li><a href=#varnish-software-vmods>Varnish-Software Vmods</a></li><li><a href=#third-party-packaged-unofficial-vmods>Third Party Packaged Unofficial Vmods</a></li></ul></li><li><a href=#vmod-accept>vmod-accept</a></li><li><a href=#vmod-bodyaccess>vmod-bodyaccess</a></li><li><a href=#vmod-header>vmod-header</a></li><li><a href=#vmod-saintmode>vmod-saintmode</a></li><li><a href=#vmod-str>vmod-str</a></li><li><a href=#vmod-tcp>vmod-tcp</a></li><li><a href=#vmod-var>vmod-var</a></li><li><a href=#vmod-vsthrottle>vmod-vsthrottle</a></li><li><a href=#vmod-xkey>vmod-xkey</a></li><li><a href=#vmod-cfg>vmod-cfg</a><ul><li><a href=#local-ini-file-example>Local ini file example</a></li><li><a href=#javascript-example>Javascript example</a></li></ul></li><li><a href=#vmod-digest>vmod-digest</a></li><li><a href=#vmod-fileserver>vmod-fileserver</a></li><li><a href=#vmod-geoip2>vmod-geoip2</a></li><li><a href=#vmod-jq>vmod-jq</a></li><li><a href=#vmod-querystring>vmod-querystring</a></li><li><a href=#vmod-redis>vmod-redis</a></li><li><a href=#vmod-reqwest>vmod-reqwest</a><ul><li><a href=#dynamic-backend-example>Dynamic backend example</a></li><li><a href=#synchronous-third-party-request-example>Synchronous third-party request example</a></li><li><a href=#asynchronous-third-party-request-example>Asynchronous third-party request example</a></li></ul></li><li><a href=#vmod-rers>vmod-rers</a><ul><li><a href=#regular-expression-matching-example>Regular expression matching example</a></li><li><a href=#request-body-captureing-example>Request body captureing example</a></li><li><a href=#response-body-manipulation-example>Response body manipulation example</a></li></ul></li><li><a href=#vmod-uuid>vmod-uuid</a></li></ul></nav></div></nav></div><main class="col-lg-11 col-xl-9"><nav aria-label=breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a href=/>Home</a></li><li class=breadcrumb-item><a href=/docs/>Documentation</a></li><li class="breadcrumb-item active" aria-current=page>Extra Varnish Cache features</li></ol></nav><h1>Extra Varnish Cache features</h1><div><p>The Varnish Cache distribution provides a powerful, cloud-native content delivery engine. Beyond the standard caching capabilities, it introduces major core engine features and packages a comprehensive set of extra modules (VMODs) that aren&rsquo;t available out of the box in a basic Vinyl Cache setup.</p><h2 id=core-engine-features-as-of-varnish-90>Core Engine Features (as of Varnish 9.0+)</h2><p>We are basing Varnish Cache on the latest release of Vinyl Cache. Our aim is to transform Varnish Cache into a cloud-native distribution with built-in capabilities designed for modern edge architectures, specifically:</p><ul><li><strong>Native TLS Support:</strong> Terminate TLS directly within Varnish without needing an external proxy. Enable it via <code>varnishd -A</code> with a hitch-like configuration file, or bind directly using <a href=/docs/reference/varnishd/><code>varnishd -a :443,https</code></a>. Certificates can be managed dynamically via <a href=/docs/reference/varnish-cli/><code>varnishdadm tls.*</code></a>. Take a look at our <a href=/docs/tutorials/tls/>TLS configuration tutorial</a> to learn more.</li><li><strong>Structured JSON Logging:</strong> Improve observability and simplify log aggregation in cloud environments with the new <code>varnishlog-json</code> utility, which produces structured JSON logs out of the box.</li><li><strong>And more to come.</strong></li></ul><hr><h2 id=packaged-modules-vmods>Packaged Modules (VMODs)</h2><p>On top of the <a href=/docs/reference/#bundled-vmods>bundled VMODS</a>, Varnish Cache packages the following extra modules:</p><h3 id=varnish-software-vmods>Varnish-Software Vmods</h3><ul><li><a href=#vmod-accept><code>vmod-accept</code></a> - sanitize accept-headers</li><li><a href=#vmod-bodyaccess><code>vmod-bodyaccess</code></a> - modify the body</li><li><a href=#vmod-header><code>vmod-header</code></a> - better handling of headers</li><li><a href=#vmod-saintmode><code>vmod-saintmode</code></a> - protect backends</li><li><a href=#vmod-str><code>vmod-str</code></a> - string manipulation</li><li><a href=#vmod-tcp><code>vmod-tcp</code></a> - TCP tuning</li><li><a href=#vmod-var><code>vmod-var</code></a> - basic variable support</li><li><a href=#vmod-vsthrottle><code>vmod-vsthrottle</code></a> - ratelimiting</li><li><a href=#vmod-xkey><code>vmod-xkey</code></a> - surrogate key support</li></ul><h3 id=third-party-packaged-unofficial-vmods>Third Party Packaged Unofficial Vmods</h3><ul><li><a href=#vmod-cfg><code>vmod-cfg</code></a> - easy access to envir</li><li><a href=#vmod-digest><code>vmod-digest</code></a> - computing HMAC signatures</li><li><a href=#vmod-fileserver><code>vmod-fileserver</code></a> - file backend</li><li><a href=#vmod-geoip2><code>vmod-geoip2</code></a> - maxmind GeoIP database</li><li><a href=#vmod-jq><code>vmod-jq</code></a> - parse json</li><li><a href=#vmod-querystring><code>vmod-querystring</code></a> - manipulate querystrings</li><li><a href=#vmod-redis><code>vmod-redis</code></a> - redis support</li><li><a href=#vmod-reqwest><code>vmod-reqwest</code></a> - http client and dynamic backend with SSL support</li><li><a href=#vmod-rers><code>vmod-rers</code></a> - expand rexep support</li><li><a href=#vmod-uuid><code>vmod-uuid</code></a> - generate uuids</li></ul><p>Let&rsquo;s take a look at some of the capabilities of these modules on a per-VMOD basis.</p><h2 id=vmod-accept>vmod-accept</h2><p>The <code>accept</code> VMOD sanitizes content-negotiation headers like <code>Accept</code>, <code>Accept-Charset</code>, <code>Accept-Encoding</code> and <code>Accept-Language</code>.</p><p>Sanitizing and normalizing these accept headers is important when cache variations take place: backends can return different responses for the same URL based on the value of a request header. If for example an application has support for multiple languages based on the conventional <code>Accept-Language</code> header, you want to minimize the amount of variations that happen.</p><p>By normalizing the supported values, the number of unnecessary variations is reduced. Here&rsquo;s an example that normalizes the <code>Accept</code> and <code>Accept-Language</code> headers:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;w
+
+import accept;
+
+sub vcl_init {
+    # Only support plain text, HTML &amp; JSON.
+    # Use plain text as a fallback in case the value doesn&#39;t match.
+    new format = accept.rule(&#34;text/plain&#34;);
+    format.add(&#34;text/plain&#34;);
+    format.add(&#34;text/html&#34;);
+    format.add(&#34;application/json&#34;);
+
+    # Only allow English &amp; French content
+    # Fall back to English when the value doesn&#39;t match
+    new lang = accept.rule(&#34;en&#34;);
+    lang.add(&#34;en&#34;);
+    lang.add(&#34;fr&#34;);
+}
+
+sub vcl_recv {
+    # Overwrite headers with the normalized values
+    set req.http.accept = format.filter(req.http.accept);
+    set req.http.accept-language = lang.filter(req.http.accept-language);
+}
+</code></pre><p>This example only supports <code>text/plain</code>, <code>text/html</code> and <code>application/json</code> as valid <code>Accept</code> header values. Any other value triggers <code>text/plain</code> as the fallback. The example only supports <code>en</code> and <code>fr</code> as valid languages, any other value falls back to <code>en</code>.</p><p>This module is part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-bodyaccess>vmod-bodyaccess</h2><p>The <code>bodyaccess</code> VMOD provides an API to access the request body:</p><ul><li><code>bodyaccess.rematch_req_body()</code> lets you match a regular expression to the request body</li><li><code>bodyaccess.hash_req_body()</code> adds the request body to the cache lookup hash</li><li><code>bodyaccess.len_req_body()</code> returns the length of the request body</li><li><code>bodyaccess.log_req_body()</code> logs the request body in the Varnish Shared Memory Logs</li></ul><p>Here&rsquo;s a VCL example that uses <code>vmod_bodyaccess</code>:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+import std;
+import bodyaccess;
+
+sub vcl_recv {
+    if (req.method == &#34;POST&#34;) {
+        set req.http.x-method = req.method;
+        if (std.cache_req_body(110KB)) {
+            set req.http.x-len = bodyaccess.len_req_body();
+            set req.http.x-re = bodyaccess.rematch_req_body(&#34;Regex&#34;);
+            bodyaccess.log_req_body(&#34;PREFIX:&#34;, 250);
+        }
+    }
+    return(hash);
+}
+
+sub vcl_hash {
+        bodyaccess.hash_req_body();
+        return (lookup);
+}
+
+sub vcl_backend_fetch {
+        set bereq.method = bereq.http.x-method;
+}
+
+sub vcl_deliver {
+        set resp.http.x-len = req.http.x-len;
+        set resp.http.x-re = req.http.x-re;
+}
+</code></pre><p>This VCL example overrides the standard caching behavior and allows HTTP <code>POST</code> requests to be cached. <code>std.cache_req_body(110KB)</code> ensures the request body can only be 110 KB in size before adding that request body to the cache lookup hash. The example stores the request body length in the custom <code>x-len</code> request header while storing the result of a regular expression match for <code>Regex</code> in the <code>x-re</code> request header.</p><p>A cache lookup is forced regardless of the HTTP request header and when performing the cache lookup, the request body is added to the lookup hash. For debugging purposes the body length and regular expression matches that were stored in custom request headers, these values end up in the <code>x-len</code> and <code>x-re</code> response headers.</p><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-header>vmod-header</h2><p>The <code>header</code> VMOD exposes an API that facilitates manipulation of duplicated HTTP headers.</p><p>There are situations where certain headers appear multiple times. This VMOD allows you to add, delete, modify and delete these headers.</p><p>Here&rsquo;s an example where <code>Set-Cookie</code> headers are manipulated:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+import header;
+
+sub vcl_backend_response {
+    if (beresp.http.Set-Cookie) {
+        # Add another line of Set-Cookie in the response.
+        header.append(beresp.http.Set-Cookie, &#34;VSESS=abbabeef&#34;);
+
+        # CMS always set this, but doesn&#39;t really need it.
+        header.remove(beresp.http.Set-Cookie, &#34;JSESSIONID=&#34;);
+    }
+}
+</code></pre><p>This example adds an additional <code>Set-Cookie</code> response header and uses <code>VSESS=abbabeef</code> as its value. At the same time <code>Set-Cookie</code> headers are removed if the value contains <code>JSESSIONID=</code>.</p><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-saintmode>vmod-saintmode</h2><p>The <code>saintmode</code> VMOD marks backends as <em>sick</em> for specific objects during a certain amount of time. It does this based on a <em>deny list</em>, and as long as a backend has an object on that list, these objects will not be served by this backend.</p><p>When the number of objects marked as <em>sick</em> for a backend exceeds the threshold, the entire backend is marked as <em>sick</em>.</p><p>Here&rsquo;s a VCL example that features <code>vmod_saintmode</code>:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import saintmode;
+import directors;
+
+backend b1 { .host = &#34;192.0.2.11&#34;; .port = &#34;80&#34;; }
+backend b2 { .host = &#34;192.0.2.12&#34;; .port = &#34;80&#34;; }
+
+sub vcl_init {
+    # Instantiate sm1, sm2 for backends b1, b2
+    # with 10 denylisted objects as the threshold for marking the
+    # whole backend sick.
+    new sm1 = saintmode.saintmode(b1, 10);
+    new sm2 = saintmode.saintmode(b2, 10);
+
+    # Add both to a director. Use sm1, sm2 in place of b1, b2.
+    # Other director types can be used in place of random.
+    new loadbalancer = directors.random();
+    loadbalancer.add_backend(sm1.backend(), 1);
+    loadbalancer.add_backend(sm2.backend(), 1);
+}
+
+sub vcl_backend_fetch {
+    # Get a backend from the director.
+    # When returning a backend, the director will only return backends
+    # saintmode says are healthy.
+    set bereq.backend = loadbalancer.backend();
+}
+
+sub vcl_backend_response {
+    if (beresp.status &gt;= 500) {
+        # This marks the backend as sick for this specific
+        # object for the next 20s.
+        saintmode.denylist(20s);
+        # Retry the request. This will result in a different backend
+        # being used.
+        return (retry);
+    }
+}
+</code></pre><p>This example puts <code>vmod-saintmode</code> in front of the 2 backends and marks each backend as sick when it has 10 items on the deny list. Individual responses that return a status code that is greater than <code>500</code> are added to the deny list and cause the backend to be marked as <em>sick</em> for these objects. Objects are only added to the deny list for 20 seconds.</p><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-str>vmod-str</h2><p>The <code>str</code> VMOD is a utility module for strings that supports counting, substrings, splitting and various types of matching.</p><p>Here&rsquo;s a VCL example:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import str;
+
+sub vcl_deliver {
+    # Only perform these actions for iPads
+    if(str.contains(req.http.User-Agent, &#34;iPad&#34;)) {
+        # Returns the ASCII character count of the User-Agent value
+        set resp.http.ua-count = str.count(req.http.User-Agent);
+        # Stores the first 10 characters of the User-Agent
+        set resp.http.ua-first-10 = str.take(req.http.User-Agent, 10);
+    }
+}
+</code></pre><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-tcp>vmod-tcp</h2><p>The <code>tcp</code> VMOD contains functions to control TCP congestion control algorithms, throttling and perform logging of protocol-related information.</p><p>Here&rsquo;s a throttling example where all clients are limited to 1000 KB/s:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import tcp;
+
+sub vcl_recv {
+  # Limit all clients to 1000 KB/s.
+  tcp.set_socket_pace(1000);
+}
+</code></pre><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-var>vmod-var</h2><p>The <code>var</code> VMOD offers basic variable support in VCL. It supports strings, integers, real numbers, durations, IP addresses and backends. There are methods to get and set each data type.</p><p>Both global and local variables are supported in <code>vmod-var</code>. Here&rsquo;s a VCL example:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+import var;
+
+sub vcl_recv {
+    # Set and get some values.
+    var.set(&#34;foo&#34;, &#34;bar&#34;);
+    set req.http.x-foo = var.get(&#34;foo&#34;);
+
+    var.set_int(&#34;ten&#34;, 10);
+    var.set_int(&#34;five&#34;, 5);
+    set req.http.twenty = var.get_int(&#34;ten&#34;) + var.get_int(&#34;five&#34;) + 5;
+
+    # VCL will use the first token to decide on the final data type.
+    # set req.http.X-lifetime = var.get_int(&#34;ten&#34;) + &#34; seconds&#34;; #  Won&#39;t work.
+    set req.http.X-lifetime = &#34;&#34; + var.get_int(&#34;ten&#34;) + &#34; seconds&#34;;  # Works!
+
+    var.set_duration(&#34;timedelta&#34;, 1m);  # 60s
+    set req.http.d1 = var.get_duration(&#34;timedelta&#34;);
+
+    var.set_ip(&#34;endpoint&#34;, client.ip);
+    set req.http.x-client = var.get_ip(&#34;endpoint&#34;);
+
+    # Unset all non-global variables.
+    var.clear();
+
+    # Demonstrate use of global variables as state flags.
+    if (req.url ~ &#34;/close$&#34;) {
+        var.global_set(&#34;open&#34;, &#34;no&#34;);
+    }
+    else if (req.url ~ &#34;/open$&#34;) {
+        var.global_set(&#34;open&#34;, &#34;yes&#34;);
+    }
+
+    if (var.global_get(&#34;open&#34;) != &#34;yes&#34;) {
+        return (synth(200, &#34;We are currently closed, sorry!&#34;));
+    }
+}
+</code></pre><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-vsthrottle>vmod-vsthrottle</h2><p>The <code>vsthrottle</code> vmod allows for rate limiting traffic on a single Varnish server. The VMOD offers a simple interface for rate limiting traffic on a per-key basis to a specific request rate.</p><p>Here&rsquo;s a simple VCL example that illustrates the different types of key-based rate limiting:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import vsthrottle;
+
+sub vcl_recv {
+  # Varnish will set client.identity for you based on client IP.
+
+  if (vsthrottle.is_denied(client.identity, 15, 10s, 30s)) {
+    # Client has exceeded 15 reqs per 10s.
+    # When this happens, block altogether for the next 30s.
+    return (synth(429, &#34;Too Many Requests&#34;));
+  }
+
+  # There is a quota per API key that must be fulfilled.
+  if (vsthrottle.is_denied(&#34;apikey:&#34; + req.http.Key, 30, 60s)) {
+      return (synth(429, &#34;Too Many Requests&#34;));
+  }
+
+  # Only allow a few POST/PUTs per client.
+  if (req.method == &#34;POST&#34; || req.method == &#34;PUT&#34;) {
+    if (vsthrottle.is_denied(&#34;rw&#34; + client.identity, 2, 10s)) {
+      return (synth(429, &#34;Too Many Requests&#34;));
+    }
+  }
+}
+</code></pre><p>The first check rate limits clients based on their IP address and allows 15 requests in a 10-second timeframe. If the rate limit is exceeded, any request from that client returns a <code>429, Too Many Requests</code> error for the next 30 seconds.</p><p>The next check adds an extra rate limit based on the <code>Key</code> request header: 30 requests are allowed within a 60-second timeframe.</p><p>The final check limits HTTP <code>POST</code> and <code>PUT</code> requests per IP address at 2 requests in a 10-second timeframe.</p><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-xkey>vmod-xkey</h2><p>The <code>xkey</code> VMOD offers surrogate key support for Varnish. This means that secondary hashes are added to objects that are not based on the URL or <code>Host</code> header. This allows for fast purging of objects based on arbitrary keys. One could consider these secondary hashes to be <em>tags</em>, offering <em>tag-based</em> cache invalidation to Varnish.</p><p>Here&rsquo;s a VCL example:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import xkey;
+
+acl purgers {
+    &#34;203.0.113.0&#34;/24;
+}
+
+sub vcl_recv {
+    if (req.method == &#34;PURGE&#34;) {
+        if (client.ip !~ purgers) {
+            return (synth(403, &#34;Forbidden&#34;));
+        }
+        if (req.http.xkey) {
+            set req.http.n-gone = xkey.purge(req.http.xkey);
+            # or: set req.http.n-gone = xkey.softpurge(req.http.xkey)
+            return (synth(200, &#34;Invalidated &#34;+req.http.n-gone+&#34; objects&#34;));
+        } else {
+            return (purge);
+        }
+    }
+}
+</code></pre><p>This example provides an alternative cache purging interface that leverages the <code>PURGE</code> request method. The standard implementation triggers <code>return(purge)</code> to purge objects based on the URL. However, by adding a <code>xkey</code> request header, the VCL code uses the key to match objects instead. All objects that were tagged with that key will be matched and purged.</p><p>The <code>xkey.purge()</code> method performs <em>hard purges</em>, meaning that matched objects are immediately removed from the cache and cause cache misses. The <code>xkey.softpurge()</code> method has similar behavior, but marks objects as expired, rather than remove them immediately.</p><p>The <em>soft purge</em> behavior leverages the <em>grace</em> mechanism, which is Varnish&rsquo;s implementation of <code>stale-while-revalidate</code>. Soft-purged objects have a TTL of zero, but if there&rsquo;s <em>grace</em> left, the object is still served from the cache, while an asynchronous fetch to the backend takes place to update the object.</p><p>Tagging objects is done by setting the <code>xkey</code> response header. Here&rsquo;s an example response that contains the <code>xkey</code> header:</p><pre tabindex=0><code>HTTP/1.1 OK
+Server: Apache
+xkey: 8155054 166412 234323
+</code></pre><p>Varnish picks up the <code>xkey</code> header and adds <code>8155054</code>, <code>166412</code>, and <code>234323</code> as secondary hashes.</p><p>The following HTTP request can be made to match the second key:</p><pre tabindex=0><code>PURGE / HTTP/1.1
+Host: www.example.com
+xkey: 166412
+</code></pre><p>Every object that is tagged with <code>166412</code> is matched and purged through this <code>PURGE</code> request.</p><p>This module is also part of the <a href=https://github.com/varnish/varnish-modules/tree/master>Varnish module collection by Varnish Software</a>.</p><h2 id=vmod-cfg>vmod-cfg</h2><p>The <code>cfg</code> VMOD provides easy access to environment variables and local or remote (config) files in VCL.</p><p>The module supports the following file types:</p><ul><li>JSON files</li><li><code>.ini</code> files</li><li>Lua scripts</li><li>ECMAScript</li><li>Files containing collections of pattern matching rules</li></ul><p>Besides reading the configuration files, <code>vmod-cfg</code> can also execute Lua & Javascript locally.</p><h3 id=local-ini-file-example>Local ini file example</h3><p>Here&rsquo;s an example of an <code>.ini</code> file that we&rsquo;ll use in the VCL code. We&rsquo;ll call this one <code>vcl.ini</code></p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=display:flex><span><span style=color:#1f2328>hello: world</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>[more]</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>foo: bar</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>hello: world</span>
+</span></span></code></pre></div><p>We&rsquo;ll make the path to this file dynamic and store it in an environment variable:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#6639ba>export</span> <span style=color:#953800>VCL_SETTINGS</span><span style=color:#0550ae>=</span>file:///etc/varnish/vcl.ini
+</span></span></code></pre></div><p>Now we can load the environment variable and use its value to load and parse the <code>vcl.ini</code> file:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import cfg;
+
+backend default none;
+
+sub vcl_init {
+    new env = cfg.env();
+
+    if (env.is_set(&#34;VCL_SETTINGS&#34;)) {
+        new settings = cfg.file(env.get(&#34;VCL_SETTINGS&#34;));
+    } else {
+        return (fail);
+    }
+}
+
+sub vcl_recv {
+    return(synth(200));
+}
+
+sub vcl_synth {
+    set resp.http.Content-Type = &#34;text/plain&#34;;
+    if(settings.is_set(&#34;more:hello&#34;)) {
+        set resp.body = &#34;Hello &#34; + settings.get(&#34;more:hello&#34;);
+    } else {
+        set resp.body = &#34;Settings not available&#34;;
+    }
+    return(deliver);
+}
+</code></pre><p>This example returns <code>Hello world</code> if the <code>VCL_SETTINGS</code> environment variable is set, if the referenced file can be loaded, and if it contains the <code>more:hello</code> key. Otherwise it just returns <code>Settings not available</code>.</p><h3 id=javascript-example>Javascript example</h3><p>Here&rsquo;s another example that loads remote files and executes Javascript locally.</p><p>This is the Javascript file that is run locally inside Varnish:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#cf222e>return</span> <span style=color:#0a3069>&#34;Foo &#34;</span> <span style=color:#0550ae>+</span> <span style=color:#1f2328>ARGV</span><span style=color:#1f2328>[</span><span style=color:#0550ae>0</span><span style=color:#1f2328>]</span>
+</span></span></code></pre></div><p>We&rsquo;ll call this file <code>script.js</code> and store it in <code>/etc/varnish</code>. Here&rsquo;s the VCL code:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import cfg;
+
+backend default none;
+
+sub vcl_init {
+    new settings = cfg.file(&#34;https://www.example.com/settings.json&#34;, format=json);
+    new script = cfg.script(&#34;file:///etc/varnish/script.js&#34;, type=javascript);
+}
+
+sub vcl_recv {
+    return(synth(200));
+}
+
+sub vcl_synth {
+    set resp.http.Content-Type = &#34;text/plain&#34;;
+    if(settings.is_set(&#34;foo&#34;)) {
+        script.init();
+        script.push(settings.get(&#34;foo&#34;));
+        script.execute();
+        set resp.body = script.get_result();
+        script.free_result();
+    } else {
+        set resp.body = &#34;Settings not available&#34;;
+    }
+    return(deliver);
+}
+</code></pre><p>This example fetches <code>settings.json</code> remotely from <code>https://www.example.com/settings.json</code> and parses the JSON content. Here&rsquo;s the output:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&#34;foo&#34;</span><span style=color:#1f2328>:</span> <span style=color:#0a3069>&#34;bar&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>}</span>
+</span></span></code></pre></div><p>The VCL example also loads the local <code>script.js</code> file and instantiates it as Javascript. If the <code>settings.json</code> file returns a <code>foo</code> property, the value of that property is passed to the Javascript as an argument.</p><p>This means the output will be <code>Foo bar</code>. If the remote settings cannot be loaded, the fallback output is <code>Settings not available</code>.</p><p>More information about this VMOD is available on the <a href=https://github.com/carlosabalde/libvmod-cfg>corresponding GitHub repository</a>.</p><h2 id=vmod-digest>vmod-digest</h2><p>The <code>digest</code> VMOD allows for computing HMAC signatures, create hashes and working with base64.</p><p>Here&rsquo;s an example where we validate a <em>SHA256-encoded HMAC signature</em> that get stored in the <code>x-data-sig</code> request header:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import digest;
+
+sub vcl_recv {
+    if (digest.hmac_sha256(&#34;key&#34;,req.http.x-data) != req.http.x-data-sig) {
+        return (synth(401));
+    }
+}
+</code></pre><p>This example compares the HMAC signature that is stored in the <code>x-data-sig</code> request header to the new HMAC signature that is generated based on the payload of the <code>x-data</code> request header.</p><p>The secret key that is used the generate that HMAC is <code>key</code>. It is recommended to make the secret key more complex, have the ability to regularly change the key, and potentially fetch the secret key from a secure external source.</p><p>More information about <code>vmod-digest</code> is available on the <a href=https://github.com/varnish/libvmod-digest/tree/master>corresponding GitHub repository</a>.</p><h2 id=vmod-fileserver>vmod-fileserver</h2><p>The <code>fileserver</code> VMOD serves files directly from Varnish without needing an external backend.</p><p>Here&rsquo;s an example where files are directly served from the <code>/var/www/html</code> folder on the Varnish server:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import fileserver;
+
+backend default none;
+
+sub vcl_init {
+	new www = fileserver.root(&#34;/var/www/html&#34;);
+}
+
+sub vcl_recv {
+	set req.backend_hint = www.backend();
+}
+</code></pre><p>More information can be found on the <code>vmod-fileserver</code> <a href=https://github.com/varnish-rs/vmod-fileserver>GitHub repository</a>.</p><h2 id=vmod-geoip2>vmod-geoip2</h2><p>The <code>geoip2</code> VMOD reads <a href=https://dev.maxmind.com/geoip/>MaxMind GeoIP2</a> database files and returns geolocation information for IP addresses.</p><p>Here&rsquo;s a VCL example where we only allow access to users from Sweden and Germany, but we log the country and city of the client:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import geoip2;
+import std;
+
+sub vcl_init {
+    new geo = geoip2.geoip2(&#34;/etc/varnish/GeoLite2-City.mmdb&#34;);
+}
+
+sub vcl_recv {
+    set req.http.x-city = geo.lookup(&#34;city/names/en&#34;, client.ip);
+    set req.http.x-country-name = geo.lookup(&#34;country/names/en&#34;, client.ip);
+    set req.http.x-country-iso = geo.lookup(&#34;country/iso_code&#34;, client.ip);
+
+    std.log(&#34;city: &#34; + req.http.x-city);
+    std.log(&#34;country: &#34; + req.http.x-country-name);
+    std.log(&#34;country-iso: &#34; + req.http.x-country-iso);
+
+    if(req.http.x-country-iso != &#34;SE&#34; &amp;&amp; req.http.x-country-iso != &#34;DE&#34;) {
+        return(synth(401,&#34;Content not available in &#34; + req.http.x-country-name));
+    }
+}
+</code></pre><p>The GeoIP databases can be download from the <a href=/>Maxmind website</a>. More information about <code>vmod-geoip2</code> is available on the <a href=https://github.com/varnishcache-friends/libvmod-geoip2>corresponding GitHub repository</a>.</p><h2 id=vmod-jq>vmod-jq</h2><p>The <code>jq</code> VMOD parses JSON and offers a clean API to access individual properties. It is based on the <a href=/>jq program</a> and offers similar filtering capabilities.</p><p>This VMOD can parse arbitrary strings, but can also access the request body. Here&rsquo;s an example of a JSON request body being parsed:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import jq;
+import std;
+backend default none;
+
+sub vcl_recv {
+    std.cache_req_body(1KB);
+    return(synth(200));
+}
+
+sub vcl_synth {
+    set resp.http.Content-Type = &#34;text/plain&#34;;
+    jq.parse(request);
+    if(jq.length() &gt; 0) {
+        set resp.body = jq.get(&#34;.foo.bar&#34;, &#34;Fallback value&#34;, raw=1);
+    }
+    return(deliver);
+}
+</code></pre><p>This example expects the following request body:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&#34;foo&#34;</span><span style=color:#1f2328>:</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&#34;bar&#34;</span><span style=color:#1f2328>:</span> <span style=color:#0a3069>&#34;Hello world&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>}</span>
+</span></span></code></pre></div><p>The response that Varnish returns is either the value of <code>.foo.bar</code> or <code>Fallback value</code> as the fallback value in case of an error.</p><p>The following <code>curl</code> command send the right request body to Varnish and gets <code>Hello world</code> as the response:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>curl -X POST http://localhost/ <span style=color:#0a3069>\
+</span></span></span><span style=display:flex><span><span style=color:#0a3069></span>  -H <span style=color:#0a3069>&#34;Content-Type: application/json&#34;</span> <span style=color:#0a3069>\
+</span></span></span><span style=display:flex><span><span style=color:#0a3069></span>  -d <span style=color:#0a3069>&#39;{ &#34;foo&#34;: { &#34;bar&#34;: &#34;Hello world&#34; } }&#39;</span>
+</span></span></code></pre></div><p>More information about <code>vmod-jq</code> is available on the <a href=https://github.com/varnishcache-friends/libvmod-jq>corresponding GitHub repository</a>.</p><h2 id=vmod-querystring>vmod-querystring</h2><p>The <code>querystring</code> VMOD inspects, filters, cleans and manipulate URL querystring parameters and <code>application/x-www-form-urlencoded</code> strings.</p><p>Here&rsquo;s an example where specific querystring parameters are removed from the URL:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import querystring;
+
+sub vcl_init {
+    new qf = querystring.filter(sort = true);
+    qf.add_glob(&#34;utm_*&#34;); # google analytics parameters
+    qf.add_regex(&#34;sess[0-9]+&#34;); # anti-CSRF token
+}
+
+sub vcl_recv {
+    set req.url = qf.apply();
+}
+</code></pre><ul><li>This example alphabetically sorts the querystring parameters</li><li>It removes Google Analytics parameters that start with <code>utm_</code></li><li>It removes session parameters like <code>&amp;sess1234=96BE2C35-7929-4011-A9BE-F4E8C44E4576</code></li></ul><p>If you request <code>http://localhost?hello=world&amp;x=4&amp;a=b&amp;utm_z=xyz&amp;sess1234=96BE2C35-7929-4011-A9BE-F4E8C44E4576</code>, this example internally rewrites the URL to <code>http://localhost/?a=b&amp;hello=world&amp;x=4</code>. By removing unnecessary query string parameters from the URL, you improve the hit rate of the cache.</p><p>More information about <code>vmod-querystring</code> is available at the <a href=https://git.sr.ht/~dridi/vmod-querystring>https://git.sr.ht/~dridi/vmod-querystring</a>.</p><h2 id=vmod-redis>vmod-redis</h2><p>The <code>redis</code> VMOD offers a Redis client API allowing your VCL code to interact with a Redis server.</p><p>Here&rsquo;s a VCL example that queries a Redis server for user access information based on a session cookie:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import redis;
+import cookie;
+
+sub vcl_init {
+    new db = redis.db(location=&#34;localhost:6379&#34;);
+}
+
+sub vcl_recv {
+    if(req.url ~ &#34;^/admin(/|$)&#34;) {
+        cookie.parse(req.http.Cookie);
+        if(!cookie.isset(&#34;SESSIONID&#34;)) {
+            return(synth(401));
+        }
+
+        db.command(&#34;HGET&#34;);
+        db.push(cookie.get(&#34;SESSIONID&#34;));
+        db.push(&#34;allowed&#34;);
+        db.execute();
+
+        if(db.get_string_reply() != &#34;true&#34;) {
+            return(synth(403));
+        }
+    }
+}
+</code></pre><p>This example uses the <code>SESSIONID</code> cookie to retrieve a hash object from the Redis server. The <code>allowed</code> field from the hash object that is identified by its sessionid dictates whether the user is allowed to access the admin pages.</p><p>If the Redis server doesn&rsquo;t respond with <code>true</code> a <code>403 Forbidden</code> response is returned.</p><p>More information about <code>vmod-redis</code> is available on the <a href=https://github.com/carlosabalde/libvmod-redis>corresponding GitHub repository</a>.</p><h2 id=vmod-reqwest>vmod-reqwest</h2><p>The <code>reqwest</code> VMOD sends and receives HTTP requests in VCL. It is used to communicate with third-party servers, but also provides dynamic backends in Varnish.</p><h3 id=dynamic-backend-example>Dynamic backend example</h3><p>Here&rsquo;s a VCL example that showcases the dynamic backend capabilities of <code>vmod-reqwest</code>:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import reqwest;
+
+backend default none;
+
+sub vcl_init {
+	# note that &#34;/sub/directory&#34; will be prefixed to `bereq.url`
+	# upon sending the request to the backend
+	new be = reqwest.client(base_url = &#34;https://www.example.com/sub/directory&#34;, follow = 5, auto_brotli = true);
+}
+
+sub vcl_recv {
+	set req.backend_hint = be.backend();
+}
+</code></pre><p>This example creates a dynamic backend that routes all traffic to <code>www.example.com</code> over HTTPS. Up to 5 redirections are followed, and support automatic Brotli decompression.</p><p>Because the <code>base_url</code> parameter points to the <code>/sub/directory</code> path, this path is added as a prefix to all backend requests. If someone requests <code>http://localhost/test</code>, the actual backend request will be <code>https://www.example.com/sub/directory/test</code>.</p><p>If the <code>www.example.com</code> hostname resolves to another hostname, the VCL code notices the changes and re-route accordingly.</p><p>This feature circumvents some of the limitations of Vinyl Cache:</p><ul><li>Vinyl Cache only supports static backends</li><li>Vinyl Cache can only connect to backends using plain HTTP</li></ul><h3 id=synchronous-third-party-request-example>Synchronous third-party request example</h3><p>Here&rsquo;s an example where <code>vmod-reqwest</code> is used to perform requests to thir-party servers:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import reqwest;
+
+sub vcl_init {
+	new client = reqwest.client();
+}
+
+sub vcl_recv {
+	# use an HTTP request to grant (or not) access to the client
+	client.init(&#34;sync&#34;, &#34;https://api.example.com/authorized/&#34; + req.http.user);
+	if (client.status(&#34;sync&#34;) != 200) {
+		return (synth(403));
+	}
+	# grab a response header (&#34;id-header&#34;) and save it to our VCL request
+	set req.http.user-id = client.header(&#34;sync&#34;, &#34;id-header&#34;);
+}
+</code></pre><p>This example takes the <code>user</code> request header that is received by Varnish and appends it to <code>https://api.example.com/authorized/</code>. If that request returns a <code>200</code> status the <code>id-header</code> response header is copied into the <code>user-id</code> request header of the main Varnish request.</p><p>If the third-party service returns anything else than a <code>200 status</code>, a <code>403 Forbidden</code> response is returned.</p><h3 id=asynchronous-third-party-request-example>Asynchronous third-party request example</h3><p>Here&rsquo;s another example where the VCL code triggers an HTTP call to an external endpoint:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import reqwest;
+
+sub vcl_init {
+	new client = reqwest.client();
+}
+
+sub vcl_recv {
+	# send a request into the void and don&#39;t worry if it completes or not
+	client.init(&#34;async&#34;, &#34;https://api.example.com/log&#34;, &#34;POST&#34;)
+	client.set_body(&#34;async&#34;, &#34;URL = &#34; + req.url);
+	client.send(&#34;async&#34;);
+}
+</code></pre><p>This example sends an asynchronous <code>POST</code> request to <code>https://api.example.com/log</code> with <code>URL = ...</code> as the request body. This is a <em>fire and forget</em> request where we don&rsquo;t care about the response.</p><h2 id=vmod-rers>vmod-rers</h2><p>The <code>rers</code> VMOD expands the possibilities of standard regular expression in VCL and offers support for Rust-based regular expressions.</p><p>Besides the clean API to capture, match, group and replace strings, <code>vmod-rers</code> offers some advanced capabilities:</p><ul><li>Capture values from the request body based on regular expressions</li><li>Change the response body based on regular expression replacements</li></ul><h3 id=regular-expression-matching-example>Regular expression matching example</h3><p>The first example performs a regular expression match on the URL, and captures specific patterns from the <code>Authorization</code> header:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import rers;
+
+sub vcl_init {
+	new re_cache = rers.init(100);
+}
+
+sub vcl_recv {
+	if (re_cache.is_match(req.url, &#34;admin&#34;)) {
+		return (pass);
+	}
+	if (re_cache.capture(req.http.Authorization, &#34;(\w+) (\S+)&#34;)) {
+		set req.http.auth_type = re_cache.group(1);
+		set req.http.auth_credential = re_cache.group(2);
+	}
+}
+</code></pre><p>This example looks for <code>admin</code> in the URL and bypasses the cache when it matches. For non-admin content, the example captures values from the <code>Authorization</code> header and stores them in custom headers by leveraging access to captured groups.</p><h3 id=request-body-captureing-example>Request body captureing example</h3><p>The next example captures values from the request body and stores these values in custom headers:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import rers;
+import std;
+
+sub vcl_init {
+	new re_cache = rers.init(100);
+}
+
+sub vcl_recv {
+    std.cache_req_body(100B);
+    if (re_cache.capture_req_body(&#34;(?:^|&amp;)name=([^&amp;]*)&#34;)) {
+        set req.http.x-name = re_cache.group(1);
+    }
+}
+</code></pre><p>This example extract the <code>name</code> field from the request body and stores its value in the custom <code>x-name</code> request header. The following <code>curl</code> command triggers this action:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>curl -XPOST -d <span style=color:#0a3069>&#34;x=y&amp;name=John&amp;b=1&#34;</span> http://localhost
+</span></span></code></pre></div><p>Despite the different key/value pairs in the request body, captured group extracts the right value.</p><h3 id=response-body-manipulation-example>Response body manipulation example</h3><p>The next example uses <code>vmod-rers</code> to perform regular expression-based find and replace actions on the response body:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import rers;
+
+sub vcl_init {
+	new re_cache = rers.init(100);
+}
+
+sub vcl_deliver {
+    re_cache.replace_resp_body(&#34;Welcome (\w+)!&#34;, &#34;Welcome to my website!&#34;);
+    set resp.filters = &#34;rers&#34;;
+}
+</code></pre><p>This example replaces the <code>Welcome (\w+)!</code> pattern in the response body with <code>Welcome to my website!</code>. Because the replacement happens in <code>vcl_deliver</code>, the result is not stored in the cache, but is computed every time a result is returned.</p><p>By moving this logic to <code>vcl_backend_response</code>, you can store the result in the cache and not replace content on a per-request basis. Here&rsquo;s what that looks like:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import rers;
+
+sub vcl_init {
+	new re_cache = rers.init(100);
+}
+
+sub vcl_backend_response {
+    re_cache.replace_resp_body(&#34;Welcome (\w+)!&#34;, &#34;Welcome to my website!&#34;);
+    set beresp.filters = &#34;rers&#34;;
+}
+</code></pre><p>Keep in mind that <code>set resp.filters = "rers";</code> becomes <code>set beresp.filters = "rers";</code>.</p><p>More information about <code>vmod-rers</code> is available on the <a href=https://github.com/varnish-rs/vmod-rers>corresponding GitHub repository</a>.</p><h2 id=vmod-uuid>vmod-uuid</h2><p>The <code>uuid</code> VMOD generates uuids that are <a href=https://datatracker.ietf.org/doc/html/rfc4122>RFC 4122</a> compliant.</p><p>Here&rsquo;s a simple VCL example of a uuid that is generated with <code>vmod-uuid</code>:</p><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.1;
+
+import uuid;
+
+sub vcl_recv {
+    if(!req.http.x-session-id) {
+        set req.http.x-session-id = + uuid.uuid();
+    }
+}
+</code></pre><p><code>vmod-uuid</code> also has separate methods for specific versions of the uuid specification. More information about <code>vmod-rers</code> is available on the <a href=https://github.com/otto-de/libvmod-uuid/tree/master>corresponding GitHub repository</a>.</p></div></main></div></div></div></div><footer class=footer><div class="container text-center"><div class=text-center><div><img src="data:image/svg+xml,%3Csvg%20id=%22Layer_1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20420.5%20298.6%22%20style=%22enable-background:new%200%200%20420.5%20298.6%22%3E%3Cstyle%3E.st0%7Bfill:%230072ce%7D%3C/style%3E%3Cpath%20d=%22M95.4%20133.2h8.5l6.5%2039%2020.3-39h8.9l-25.9%2049.4H104l-8.6-49.4zM173%20182.6h-8.5l-1.8-11.6h-19.6l-5.9%2011.6h-8.9l25.9-49.4h10.2l8.6%2049.4zm-26.2-18.9h14.7L158%20142l-11.2%2021.7zm39.5-30.5h20.3c9.9.0%2014.3%204.7%2013.9%2012.8-.4%209.5-4.9%2015.5-12.2%2017.9l6.5%2018.7H206l-6-17.6h-10.9l-3.1%2017.6h-8.4l8.7-49.4zm4.1%2024.5h11.2c4.9.0%209.7-2.3%2010.2-10.2.4-4.7-1.8-6.9-6.6-6.9h-11.7l-3.1%2017.1zM237.7%20148.6l-6%2034h-8.4l8.7-49.4h7.8l15.9%2034%206-34h8.4l-8.7%2049.4h-7.8l-15.9-34zM281%20133.2h8.4l-8.7%2049.4h-8.4l8.7-49.4zm34%2029.2-8.5-1.6c-7.8-1.5-10.8-5.7-10.8-11.1.0-8.7%205.9-17.3%2020.6-17.3%2011.4.0%2017.9%205%2016%2015.9h-8.4c1.1-6-2-8.5-8.3-8.5-6.4.0-10.9%202.5-10.9%208.2.0%202.5%201.6%204.4%205.3%205.2l8.5%201.6c8.1%201.6%2010.8%205.8%2010.8%2010.9.0%209.5-6.4%2017.7-20.8%2017.7-11.4.0-18.1-5-16.2-15.9h8.4c-1.1%206%202.2%208.5%208.5%208.5%206.5.0%2011.2-2.5%2011.2-8.5-.1-2.4-1.6-4.4-5.4-5.1zM369%20161.5h-21.3l-3.7%2021h-8.4l8.7-49.4h8.4l-3.7%2021h21.3l3.7-21h8.4l-8.7%2049.4h-8.4l3.7-21z%22/%3E%3Cg%3E%3Cpath%20class=%22st0%22%20d=%22M69.7%20106.4c4.8%2013.2%2019.4%2020.1%2032.6%2015.3%2013.2-4.8%2020.1-19.4%2015.3-32.6C112.8%2075.9%2098.2%2069%2085%2073.8s-20.1%2019.4-15.3%2032.6zM49.1%20149.7c-5%208.8-1.9%2020%207%2025%208.8%205%2020.1%201.9%2025-7%205-8.8%201.9-20-7-25-8.7-5-20-1.8-25%207zM38%20117.9c-1.2%205.8%202.6%2011.4%208.3%2012.5%205.8%201.2%2011.4-2.6%2012.5-8.3%201.2-5.8-2.6-11.4-8.3-12.5-5.7-1.2-11.3%202.5-12.5%208.3z%22/%3E%3C/g%3E%3Cg%3E%3Cpath%20d=%22m111.3%20212.3-5.4-1c-5-.9-8-3.7-8-8.4.0-6.1%204.2-9.1%2011.3-9.1s11.3%203.1%2011.3%209.3v.6h-5.2v-.7c0-3.2-2.1-4.8-6.1-4.8s-6%201.4-6%204.3c0%202.2%201.6%203.6%203.9%204l5.4%201c5.2%201%208%203.8%208%208.4.0%206.3-4.3%209.3-11.4%209.3s-11.4-3.1-11.4-9.3v-.6h5.2v.6c0%203.2%202.3%204.7%206.2%204.7%204%200%206.1-1.3%206.1-4.4.0-2.1-1.6-3.4-3.9-3.9zM158%20214.2c0%207.2-4.7%2011.1-12.1%2011.1-7.3.0-12-3.9-12-11.1v-9.4c0-7.2%204.7-11%2012.1-11%207.3.0%2012%203.9%2012%2011v9.4zm-5.2-9.4c0-4.2-2.6-6.5-6.8-6.5-4.2.0-6.9%202.3-6.9%206.5v9.4c0%204.2%202.6%206.5%206.8%206.5%204.2.0%206.9-2.3%206.9-6.5v-9.4zM172%20194.2h19.7v4.5h-14.5v9.6h12.3v4.5h-12.3v12H172v-30.6zm28.8.0h23.9v4.5h-9.4v26.1h-5.2v-26.1h-9.4v-4.5zm32.9.0h5.3l5.6%2024%205.8-24h5l5.7%2024%205.6-24h5.2l-7.8%2030.6h-5.9l-5.4-21.1-5.4%2021.1h-5.9l-7.8-30.6zm72.7%2030.6h-5.6l-2.4-7.2h-12.1l-2.4%207.2h-5.2l10.7-30.6h6.3l10.7%2030.6zm-18.7-11.6h9.3l-4.6-13.4-4.7%2013.4zm30.3-19h12.6c6.1.0%2010.2%202.9%2010.2%209.9.0%205-2.1%207.9-5.5%209.2l5.8%2011.6h-6l-5.3-10.9h-6.6v10.9H318v-30.7zm5.3%2015.2h7.2c3%200%204.9-1.5%204.9-5.4s-1.9-5.3-4.9-5.3h-7.2v10.7zm31.1-15.2H375v4.5h-15.4v8.5h13.2v4.5h-13.2v8.5H375v4.6h-20.6v-30.6z%22/%3E%3C/g%3E%3C/svg%3E" width=120 alt="varnish software logo"></div><div><a class="btn btn-link" href=https://www.varnish-software.com/privacy-policy/>Privacy Policy</a>
+<a class="btn btn-link" href=https://www.varnish-software.com/contact-us/>Contact Us</a>
+<a class="btn btn-link" href=https://www.varnish-software.com/press/>Press</a>
+<a class="btn btn-link" href=https://www.varnish-software.com/branding/>Branding</a></div></div><div class=text-center><span class=small>®Varnish Software, Wallingatan 12, 111 60 Stockholm, Organization nr. 556805-6203</span></div></div></div></footer><script src=/js/bootstrap.min.5631fa5e5ee617ca5e11e6cdc1cd00a4cc6e2cf47fb74ed2ea13fc326a94e1d40d8d75af313a458544cbc61d68513ee4a6092c8a9771129e6d098be8a4a072eb.js integrity="sha512-VjH6Xl7mF8peEebNwc0ApMxuLPR/t07S6hP8MmqU4dQNjXWvMTpFhUTLxh1oUT7kpgksipdxEp5tCYvopKBy6w==" crossorigin=anonymous defer></script><script src=/js/highlight.min.aefa13a7e11e50dd4e5efef6b7097c310b07536883c386fc99ddaf8493bea80e6b352a2afcc401a197130f48e850206462ae82f049c30e72adb21d4686cc329e.js integrity="sha512-rvoTp+EeUN1OXv72twl8MQsHU2iDw4b8md2vhJO+qA5rNSoq/MQBoZcTD0joUCBkYq6C8EnDDnKtsh1Ghswyng==" crossorigin=anonymous defer></script><script src=/main.min.550a8fa6bbc4d775a5f316789a1679a48554bcb997de80a1f72df816911527777703201bbd0f067a24213ee74478040aba75b46bfb923cf682db7d1deb3eeefd.js integrity="sha512-VQqPprvE13Wl8xZ4mhZ5pIVUvLmX3oCh9y34FpEVJ3d3AyAbvQ8GeiQhPudEeAQKunW0a/uSPPaC230d6z7u/Q==" crossorigin=anonymous defer></script></body></html>

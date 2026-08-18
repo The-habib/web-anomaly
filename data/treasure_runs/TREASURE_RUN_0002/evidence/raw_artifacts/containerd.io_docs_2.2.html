@@ -1,0 +1,200 @@
+<!doctype html><html lang=en-us><head><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-71407002-1","auto"),ga("send","pageview")</script><meta charset=utf-8><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no"><meta property="og:title" content="containerd &amp;ndash; README"><meta property="og:type" content="documentation"><meta property="og:url" content="https://containerd.io/docs/2.2/"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="containerd"><meta name=og:type content="article"><meta name=og:image content="https://containerd.io/img/logos/horizontal/color/containerd-horizontal-color.png"><meta name=og:image:alt content="containerd project logo"><meta name=og:image:type content="image/png"><meta name=twitter:card content="summary"><meta name=twitter:site content="@containerd"><meta name=twitter:creator content="@containerd"><link rel=canonical href=https://containerd.io/docs/2.2/><link rel="shortcut icon" href=/favicon.png type=image/png><meta name=generator content="Hugo 0.116.0"><title>containerd docs &ndash; README</title><link rel=stylesheet href=/css/style.d3bddcb3643397e3158234933494403d557aafa86f6e947809a99a051168e77f.css integrity="sha256-073cs2Qzl+MVgjSTNJRAPVV6r6hvbpR4CamaBRFo538="><link rel=stylesheet href=/css/syntax.6c8d2b9fbc19b041114d99efbca542518afe85fe83e683218ccc997fc35bb6ec.css integrity="sha256-bI0rn7wZsEERTZnvvKVCUYr+hf6D5oMhjMyZf8Nbtuw=">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KGB7V28PEJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KGB7V28PEJ');
+</script>
+</head><body class="page is-docs-page has-navbar-fixed-top"><div class="navbar is-fixed-top has-shadow"><div class=container><div class=navbar-brand><a class=navbar-item href=https://containerd.io><img src=/img/logos/navbar-dark-logo.png alt="containerd navbar logo"></a><div class="navbar-item is-docs-title has-text-weight-bold is-hidden-mobile"></div><a role=button class=navbar-burger aria-label=menu aria-expanded=false data-target=navbarMenu><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a></div><div class=navbar-menu id=navbarMenu><div class=navbar-end><a class="navbar-item has-text-weight-bold" href=/downloads>Downloads</a><div class="navbar-item is-hoverable has-dropdown has-text-weight-bold"><a class=navbar-link href=/docs/2.3/>Docs</a><div class=navbar-dropdown><a class=navbar-item href=/docs/2.3/>2.3</a>
+<a class=navbar-item href=/docs/2.2/>2.2</a>
+<a class=navbar-item href=/docs/2.1/>2.1</a>
+<a class=navbar-item href=/docs/1.7/>1.7</a>
+<a class=navbar-item href=/docs/main/>main</a></div></div><div class="navbar-item is-hoverable has-dropdown has-text-weight-bold"><div class=navbar-link>Project</div><div class="navbar-dropdown is-right"><a class=navbar-item href=https://github.com/cncf/foundation/blob/master/code-of-conduct.md>Code of conduct</a>
+<a class=navbar-item href=/keps/>Collaboration with Kubernetes SIG-Node</a>
+<a class=navbar-item href=/contributing/>Contributing</a>
+<a class=navbar-item href=/roadmap/>Roadmap</a>
+<a class=navbar-item href=/scope/>Scope and principles</a>
+<a class=navbar-item href=/security/>Security and audits</a>
+<a class=navbar-item href=/releases/>Versioning and release</a>
+<a class=navbar-item href=https://github.com/cncf/artwork/blob/master/examples/graduated.md#containerd-logos>containerd branding</a></div></div><div class=navbar-item><div class="field is-grouped"><p class=control><a class="button is-borderless has-background-black has-text-white" href=https://github.com/containerd/containerd aria-label=GitHub><span class=icon><i class="fab fa-github" aria-hidden=true></i></span></a>
+<a class="button has-background-slack-green is-borderless has-text-white" href=https://slack.containerd.io/ aria-label=Slack><span class=icon><i class="fab fa-slack" aria-hidden=true></i></span></a>
+<a class="button has-background-bluesky-blue is-borderless has-text-white" href=https://bsky.app/profile/containerd.dev aria-label=Bluesky><span class=icon><i class="fab fa-bluesky" aria-hidden=true></i></span></a></p></div></div></div></div></div></div><main class=main><section class="hero is-dark"><div class=container><div class=hero-body><p class="title is-size-2 is-size-3 has-text-weight-bold">README</p></div></div></section><article class=is-docs-article><div class="container mt-5"><div class=columns><aside class="column is-hidden-touch is-fullheight is-hidden-mobile"><ul class=menu-list><li><div class="select is-fullwidth mb-3"><select onchange="window.location.href=this.value"><option value=/docs/2.3/>
+Version: 2.3</option><option value=/docs/2.2/ selected>
+Version: 2.2</option><option value=/docs/2.1/>
+Version: 2.1</option><option value=/docs/1.7/>
+Version: 1.7</option><option value=/docs/main/>
+Version: main</option></select></div></li><li><a href=/docs/2.2/ class=is-active><span class=icon><i class="fa fa-info"></i></span> README</a></li><ul class=nestedmenu><li><a href=/docs/2.2/client-opts/>Client Opts</a></li><li><a href=/docs/2.2/containerd-2.0/>containerd 2.0</a></li><li><a href=/docs/2.2/content-flow/>Content Flow</a></li><li class=haschildren><a class=nestedmenu-toggle>CRI</a><ul><li><a href=/docs/2.2/cri/architecture/>Architecture</a></li><li><a href=/docs/2.2/cri/config/>Config</a></li><li><a href=/docs/2.2/cri/crictl/>crictl</a></li><li><a href=/docs/2.2/cri/decryption/>Decryption</a></li><li><a href=/docs/2.2/cri/registry/>Registry</a></li><li><a href=/docs/2.2/cri/testing/>Testing</a></li></ul></li><li><a href=/docs/2.2/features/>Features</a></li><li><a href=/docs/2.2/garbage-collection/>Garbage Collection</a></li><li><a href=/docs/2.2/getting-started/>Getting Started</a></li><li><a href=/docs/2.2/hosts/>Hosts</a></li><li><a href=/docs/2.2/image-verification/>Image Verification</a></li><li class=haschildren><a class=nestedmenu-toggle>Manual pages</a><ul><li><a href=/docs/2.2/man/containerd-config.8/>containerd-config(8)</a></li><li><a href=/docs/2.2/man/containerd-config.toml.5/>containerd-config.toml(5)</a></li></ul></li><li><a href=/docs/2.2/managed-opt/>Managed Opt</a></li><li><a href=/docs/2.2/mounts/>Mounts</a></li><li><a href=/docs/2.2/namespaces/>Namespaces</a></li><li><a href=/docs/2.2/nri/>NRI</a></li><li><a href=/docs/2.2/ops/>Ops</a></li><li><a href=/docs/2.2/plugins/>Plugins</a></li><li><a href=/docs/2.2/remote-snapshotter/>Remote Snapshotter</a></li><li><a href=/docs/2.2/rootless/>Rootless</a></li><li><a href=/docs/2.2/runc/>runc</a></li><li class=haschildren><a class=nestedmenu-toggle>Snapshotters</a><ul><li><a href=/docs/2.2/snapshotters/blockfile/>Blockfile</a></li><li><a href=/docs/2.2/snapshotters/devmapper/>Devmapper</a></li><li><a href=/docs/2.2/snapshotters/erofs/>erofs</a></li><li><a href=/docs/2.2/snapshotters/readme/>README</a></li></ul></li><li><a href=/docs/2.2/stream_processors/>Stream Processors</a></li><li><a href=/docs/2.2/tracing/>Tracing</a></li><li><a href=/docs/2.2/transfer/>Transfer</a></li><li class=haschildren><a class=nestedmenu-toggle>User Namespaces</a><ul><li><a href=/docs/2.2/user-namespaces/readme/>README</a></li></ul></li></ul></ul></aside><div class="column is-7 is-full-mobile"><div class=content><div class=is-hidden-desktop><div class="buttons mb-4"><div class=dropdown><div class=dropdown-trigger><button class="button is-dark" aria-haspopup=true aria-controls=version-dropdown-menu>
+<span>Version: 2.2</span>
+<span class="icon is-small"><i class="fas fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu id=version-dropdown-menu role=menu><div class=dropdown-content><a class=dropdown-item href=/docs/2.3/>2.3</a>
+<a class="dropdown-item is-active" href=/docs/2.2/>2.2</a>
+<a class=dropdown-item href=/docs/2.1/>2.1</a>
+<a class=dropdown-item href=/docs/1.7/>1.7</a>
+<a class=dropdown-item href=/docs/main/>main</a></div></div></div><div class=dropdown><div class=dropdown-trigger><button class="button is-dark" aria-haspopup=true aria-controls=docs-dropdown-menu>
+<span>Docs</span>
+<span class="icon is-small"><i class="fas fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu id=docs-dropdown-menu role=menu><div class=dropdown-content><a href=/docs/2.2/ class="dropdown-item is-active">README</a>
+<a class=dropdown-item href=/docs/2.2/client-opts/>Client Opts</a>
+<a class=dropdown-item href=/docs/2.2/containerd-2.0/>containerd 2.0</a>
+<a class=dropdown-item href=/docs/2.2/content-flow/>Content Flow</a>
+<a class=dropdown-item href=/docs/2.2/cri/architecture/>CRI: Architecture</a>
+<a class=dropdown-item href=/docs/2.2/cri/config/>CRI: Config</a>
+<a class=dropdown-item href=/docs/2.2/cri/crictl/>CRI: crictl</a>
+<a class=dropdown-item href=/docs/2.2/cri/decryption/>CRI: Decryption</a>
+<a class=dropdown-item href=/docs/2.2/cri/registry/>CRI: Registry</a>
+<a class=dropdown-item href=/docs/2.2/cri/testing/>CRI: Testing</a>
+<a class=dropdown-item href=/docs/2.2/features/>Features</a>
+<a class=dropdown-item href=/docs/2.2/garbage-collection/>Garbage Collection</a>
+<a class=dropdown-item href=/docs/2.2/getting-started/>Getting Started</a>
+<a class=dropdown-item href=/docs/2.2/hosts/>Hosts</a>
+<a class=dropdown-item href=/docs/2.2/image-verification/>Image Verification</a>
+<a class=dropdown-item href=/docs/2.2/man/containerd-config.8/>Manual pages: containerd-config(8)</a>
+<a class=dropdown-item href=/docs/2.2/man/containerd-config.toml.5/>Manual pages: containerd-config.toml(5)</a>
+<a class=dropdown-item href=/docs/2.2/managed-opt/>Managed Opt</a>
+<a class=dropdown-item href=/docs/2.2/mounts/>Mounts</a>
+<a class=dropdown-item href=/docs/2.2/namespaces/>Namespaces</a>
+<a class=dropdown-item href=/docs/2.2/nri/>NRI</a>
+<a class=dropdown-item href=/docs/2.2/ops/>Ops</a>
+<a class=dropdown-item href=/docs/2.2/plugins/>Plugins</a>
+<a class=dropdown-item href=/docs/2.2/remote-snapshotter/>Remote Snapshotter</a>
+<a class=dropdown-item href=/docs/2.2/rootless/>Rootless</a>
+<a class=dropdown-item href=/docs/2.2/runc/>runc</a>
+<a class=dropdown-item href=/docs/2.2/snapshotters/blockfile/>Snapshotters: Blockfile</a>
+<a class=dropdown-item href=/docs/2.2/snapshotters/devmapper/>Snapshotters: Devmapper</a>
+<a class=dropdown-item href=/docs/2.2/snapshotters/erofs/>Snapshotters: erofs</a>
+<a class=dropdown-item href=/docs/2.2/snapshotters/readme/>Snapshotters: README</a>
+<a class=dropdown-item href=/docs/2.2/stream_processors/>Stream Processors</a>
+<a class=dropdown-item href=/docs/2.2/tracing/>Tracing</a>
+<a class=dropdown-item href=/docs/2.2/transfer/>Transfer</a>
+<a class=dropdown-item href=/docs/2.2/user-namespaces/readme/>User Namespaces: README</a></div></div></div><div class="dropdown ml-2"><div class=dropdown-trigger><button class="button is-light">
+<span>Contents</span>
+<span class="icon is-small"><i class="fas fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu><div class="dropdown-content is-dropdown-toc"><nav id=TableOfContents><ul><li><a href=#announcements>Announcements</a><ul><li><a href=#containerd-v20-is-now-released>containerd v2.0 is now released!</a></li><li><a href=#now-recruiting>Now Recruiting</a></li></ul></li><li><a href=#getting-started>Getting Started</a></li><li><a href=#nightly-builds>Nightly builds</a></li><li><a href=#kubernetes-k8s-ci-dashboard-group>Kubernetes (k8s) CI Dashboard Group</a></li><li><a href=#runtime-requirements>Runtime Requirements</a></li><li><a href=#supported-registries>Supported Registries</a></li><li><a href=#features>Features</a><ul><li><a href=#releases-and-api-stability>Releases and API Stability</a></li><li><a href=#cri>CRI</a></li><li><a href=#communication>Communication</a></li><li><a href=#security-audit>Security audit</a></li><li><a href=#reporting-security-issues>Reporting security issues</a></li></ul></li><li><a href=#licenses>Licenses</a></li><li><a href=#project-details>Project details</a></li><li><a href=#adoption>Adoption</a></li></ul></nav></div></div></div></div><hr></div><section class=is-inner-content><div class="has-text-right mb-3"><a href=https://github.com/containerd/containerd/edit/release/2.2/README.md target=_blank class=is-size-6><span class="icon is-small"><i class="fas fa-edit"></i></span> Edit this page</a></div><p><img src=https://raw.githubusercontent.com/cncf/artwork/master/projects/containerd/horizontal/color/containerd-horizontal-color.png#gh-light-mode-only alt="containerd banner light mode">
+<img src=https://raw.githubusercontent.com/cncf/artwork/master/projects/containerd/horizontal/white/containerd-horizontal-white.png#gh-dark-mode-only alt="containerd banner dark mode"></p><p><a href=https://pkg.go.dev/github.com/containerd/containerd/v2><img src=https://pkg.go.dev/badge/github.com/containerd/containerd/v2 alt=PkgGoDev></a>
+<a href="https://github.com/containerd/containerd/actions?query=workflow%3ACI+event%3Amerge_group"><img src="https://github.com/containerd/containerd/actions/workflows/ci.yml/badge.svg?event=merge_group" alt="Build Status"></a>
+<a href="https://github.com/containerd/containerd/actions?query=workflow%3ANightly"><img src=https://github.com/containerd/containerd/workflows/Nightly/badge.svg alt=Nightlies></a>
+<a href=https://goreportcard.com/report/github.com/containerd/containerd/v2><img src=https://goreportcard.com/badge/github.com/containerd/containerd/v2 alt="Go Report Card"></a>
+<a href=https://bestpractices.coreinfrastructure.org/projects/1271><img src=https://bestpractices.coreinfrastructure.org/projects/1271/badge alt="CII Best Practices"></a>
+<a href="https://scorecard.dev/viewer/?uri=github.com/containerd/containerd"><img src=https://api.scorecard.dev/projects/github.com/containerd/containerd/badge alt="OpenSSF Scorecard"></a>
+<a href=https://github.com/containerd/containerd/actions/workflows/links.yml><img src=https://github.com/containerd/containerd/actions/workflows/links.yml/badge.svg alt="Check Links"></a></p><p>containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability. It is available as a daemon for Linux and Windows, which can manage the complete container lifecycle of its host system: image transfer and storage, container execution and supervision, low-level storage and network attachments, etc.</p><p>containerd is a member of CNCF with
+<a href="https://landscape.cncf.io/?selected=containerd">&lsquo;graduated&rsquo;</a>
+status.</p><p>containerd is designed to be embedded into a larger system, rather than being used directly by developers or end-users.</p><p><img src=historical/design/architecture.png alt=architecture></p><h2 id=announcements>Announcements</h2><h3 id=containerd-v20-is-now-released>containerd v2.0 is now released!</h3><p>See
+<a href=containerd-2.0><code>docs/containerd-2.0.md</code></a>
+.</p><h3 id=now-recruiting>Now Recruiting</h3><p>We are a large inclusive OSS project that is welcoming help of any kind shape or form:</p><ul><li>Documentation help is needed to make the product easier to consume and extend.</li><li>We need OSS community outreach/organizing help to get the word out; manage
+and create messaging and educational content; and help with social media, community forums/groups, and google groups.</li><li>We are actively inviting new
+<a href=https://github.com/containerd/project/blob/main/GOVERNANCE.md#security-advisors>security advisors</a>
+to join the team.</li><li>New subprojects are being created, core and non-core that could use additional development help.</li><li>Each of the
+<a href=https://github.com/containerd>containerd projects</a>
+has a list of issues currently being worked on or that need help resolving.<ul><li>If the issue has not already been assigned to someone or has not made recent progress, and you are interested, please inquire.</li><li>If you are interested in starting with a smaller/beginner-level issue, look for issues with an <code>exp/beginner</code> tag, for example
+<a href="https://github.com/containerd/containerd/issues?q=is%3Aissue+is%3Aopen+label%3Aexp%2Fbeginner">containerd/containerd beginner issues.</a></li></ul></li></ul><h2 id=getting-started>Getting Started</h2><p>See our documentation on
+<a href=https://containerd.io>containerd.io</a>
+:</p><ul><li><a href=ops>for ops and admins</a></li><li><a href=namespaces>namespaces</a></li><li><a href=client-opts>client options</a></li></ul><p>To get started contributing to containerd, see
+<a href=CONTRIBUTING>CONTRIBUTING</a>
+.</p><p>If you are interested in trying out containerd see our example at
+<a href=getting-started>Getting Started</a>
+.</p><h2 id=nightly-builds>Nightly builds</h2><p>There are nightly builds available for download
+<a href="https://github.com/containerd/containerd/actions?query=workflow%3ANightly">here</a>
+.
+Binaries are generated from <code>main</code> branch every night for <code>Linux</code> and <code>Windows</code>.</p><p>Please be aware: nightly builds might have critical bugs, it&rsquo;s not recommended for use in production and no support provided.</p><h2 id=kubernetes-k8s-ci-dashboard-group>Kubernetes (k8s) CI Dashboard Group</h2><p>The
+<a href=https://testgrid.k8s.io/containerd>k8s CI dashboard group for containerd</a>
+contains test results regarding
+the health of kubernetes when run against main and a number of containerd release branches.</p><ul><li><a href=https://testgrid.k8s.io/containerd-periodic>containerd-periodics</a></li></ul><h2 id=runtime-requirements>Runtime Requirements</h2><p>Runtime requirements for containerd are very minimal. Most interactions with
+the Linux and Windows container feature sets are handled via
+<a href=https://github.com/opencontainers/runc>runc</a>
+and/or
+OS-specific libraries (e.g.
+<a href=https://github.com/Microsoft/hcsshim>hcsshim</a>
+for Microsoft).
+The current required version of <code>runc</code> is described in
+<a href=RUNC>RUNC.md</a>
+.</p><p>There are specific features
+used by containerd core code and snapshotters that will require a minimum kernel
+version on Linux. With the understood caveat of distro kernel versioning, a
+reasonable starting point for Linux is a minimum 4.x kernel version.</p><p>The overlay filesystem snapshotter, used by default, uses features that were
+finalized in the 4.x kernel series. If you choose to use btrfs, there may
+be more flexibility in kernel version (minimum recommended is 3.18), but will
+require the btrfs kernel module and btrfs tools to be installed on your Linux
+distribution.</p><p>To use Linux checkpoint and restore features, you will need <code>criu</code> installed on
+your system. See more details in
+<a href=features#checkpoint-and-restore>Checkpoint and Restore</a>
+.</p><p>Build requirements for developers are listed in
+<a href=BUILDING>BUILDING</a>
+.</p><h2 id=supported-registries>Supported Registries</h2><p>Any registry which is compliant with the
+<a href=https://github.com/opencontainers/distribution-spec>OCI Distribution Specification</a>
+is supported by containerd.</p><p>For configuring registries, see
+<a href=hosts>registry host configuration documentation</a></p><h2 id=features>Features</h2><p>For a detailed overview of containerd&rsquo;s core concepts and the features it supports,
+please refer to the
+<a href=features>FEATURES.MD</a>
+document.</p><h3 id=releases-and-api-stability>Releases and API Stability</h3><p>Please see
+<a href=RELEASES>RELEASES.md</a>
+for details on versioning and stability
+of containerd components.</p><p>Downloadable 64-bit Intel/AMD binaries of all official releases are available on
+our
+<a href=https://github.com/containerd/containerd/releases>releases page</a>
+.</p><p>For other architectures and distribution support, you will find that many
+Linux distributions package their own containerd and provide it across several
+architectures, such as
+<a href=https://launchpad.net/ubuntu/bionic/+package/containerd>Canonical&rsquo;s Ubuntu packaging</a>
+.</p><h4 id=enabling-command-auto-completion>Enabling command auto-completion</h4><p>Starting with containerd 1.4, the urfave client feature for auto-creation of bash and zsh
+autocompletion data is enabled. To use the autocomplete feature in a bash shell for example, source
+the autocomplete/ctr file in your <code>.bashrc</code>, or manually like:</p><pre tabindex=0><code>$ source ./contrib/autocomplete/ctr
+</code></pre><h4 id=distribution-of-ctr-autocomplete-for-bash-and-zsh>Distribution of <code>ctr</code> autocomplete for bash and zsh</h4><p>For bash, copy the <code>contrib/autocomplete/ctr</code> script into
+<code>/etc/bash_completion.d/</code> and rename it to <code>ctr</code>. The <code>zsh_autocomplete</code>
+file is also available and can be used similarly for zsh users.</p><p>Provide documentation to users to <code>source</code> this file into their shell if
+you don&rsquo;t place the autocomplete file in a location where it is automatically
+loaded for the user&rsquo;s shell environment.</p><h3 id=cri>CRI</h3><p><code>cri</code> is a
+<a href=https://containerd.io/>containerd</a>
+plugin implementation of the Kubernetes
+<a href=https://github.com/kubernetes/cri-api/blob/master/pkg/apis/runtime/v1/api.proto>container runtime interface (CRI)</a>
+. With it, you are able to use containerd as the container runtime for a Kubernetes cluster.</p><p><img src=cri/cri.png alt=cri></p><h4 id=cri-status>CRI Status</h4><p><code>cri</code> is a native plugin of containerd. Since containerd 1.1, the cri plugin is built into the release binaries and enabled by default.</p><p>The <code>cri</code> plugin has reached GA status, representing that it is:</p><ul><li>Feature complete</li><li>Works with Kubernetes 1.10 and above</li><li>Passes all
+<a href=https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/cri-validation.md>CRI validation tests</a>
+.</li><li>Passes all
+<a href=https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/e2e-node-tests.md>node e2e tests</a>
+.</li><li>Passes all
+<a href=https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md>e2e tests</a>
+.</li></ul><p>See results on the containerd k8s
+<a href=https://testgrid.k8s.io/containerd>test dashboard</a></p><h4 id=validating-your-cri-setup>Validating Your <code>cri</code> Setup</h4><p>A Kubernetes incubator project,
+<a href=https://github.com/kubernetes-sigs/cri-tools>cri-tools</a>
+, includes programs for exercising CRI implementations. More importantly, cri-tools includes the program <code>critest</code> which is used for running
+<a href=https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/cri-validation.md>CRI Validation Testing</a>
+.</p><h4 id=cri-guides>CRI Guides</h4><ul><li><a href=contrib/ansible/README>Installing with Ansible and Kubeadm</a></li><li><a href=getting-started>For Non-Ansible Users, Preforming a Custom Installation Using the Release Tarball and Kubeadm</a></li><li><a href=cri/testing>CRI Plugin Testing Guide</a></li><li><a href=cri/crictl>Debugging Pods, Containers, and Images with <code>crictl</code></a></li><li><a href=cri/config>Configuring <code>cri</code> Plugins</a></li><li><a href=https://github.com/containerd/containerd/blob/main/docs/man/containerd-config.8.md>Configuring containerd</a></li></ul><h3 id=communication>Communication</h3><p>For async communication and long-running discussions please use issues and pull requests on the GitHub repo.
+This will be the best place to discuss design and implementation.</p><p>For sync communication catch us in the <code>#containerd</code> and <code>#containerd-dev</code> Slack channels on Cloud Native Computing Foundation&rsquo;s (CNCF) Slack - <code>cloud-native.slack.com</code>. Everyone is welcome to join and chat.
+<a href=https://slack.cncf.io>Get Invite to CNCF Slack.</a></p><p>Join our next community meeting hosted on Zoom. The schedule is posted on the
+<a href=https://www.cncf.io/calendar/>CNCF Calendar</a>
+(search &lsquo;containerd&rsquo; to filter).</p><h3 id=security-audit>Security audit</h3><p>Security audits for the containerd project are hosted on our website. Please see the
+<a href=https://containerd.io/security/>security page at containerd.io</a>
+for more information.</p><h3 id=reporting-security-issues>Reporting security issues</h3><p>Please follow the instructions at
+<a href=https://github.com/containerd/project/blob/main/SECURITY.md#reporting-a-vulnerability>containerd/project</a></p><h2 id=licenses>Licenses</h2><p>The containerd codebase is released under the
+<a href=LICENSE>Apache 2.0 license</a>
+.
+The README.md file and files in the &ldquo;docs&rdquo; folder are licensed under the
+Creative Commons Attribution 4.0 International License. You may obtain a
+copy of the license, titled CC-BY-4.0, at
+<a href=http://creativecommons.org/licenses/by/4.0/>http://creativecommons.org/licenses/by/4.0/</a>
+.</p><h2 id=project-details>Project details</h2><p><strong>containerd</strong> is the primary open source project within the broader containerd GitHub organization.
+However, all projects within the repo have common maintainership, governance, and contributing
+guidelines which are stored in a <code>project</code> repository commonly for all containerd projects.</p><p>Please find all these core project documents, including the:</p><ul><li><a href=https://github.com/containerd/project/blob/main/GOVERNANCE.md>Project governance</a>
+,</li><li><a href=https://github.com/containerd/project/blob/main/MAINTAINERS>Maintainers</a>
+,</li><li>and
+<a href=https://github.com/containerd/project/blob/main/CONTRIBUTING.md>Contributing guidelines</a></li></ul><p>information in our
+<a href=https://github.com/containerd/project><code>containerd/project</code></a>
+repository.</p><h2 id=adoption>Adoption</h2><p>Interested to see who is using containerd? Are you using containerd in a project?
+Please add yourself via pull request to our
+<a href=./ADOPTERS>ADOPTERS.md</a>
+file.</p></section></div></div><div class="column is-hidden-touch"><aside class=is-toc-container><p class=is-toc-title>On this page</p><div id=toc><nav id=TableOfContents><ul><li><a href=#announcements>Announcements</a><ul><li><a href=#containerd-v20-is-now-released>containerd v2.0 is now released!</a></li><li><a href=#now-recruiting>Now Recruiting</a></li></ul></li><li><a href=#getting-started>Getting Started</a></li><li><a href=#nightly-builds>Nightly builds</a></li><li><a href=#kubernetes-k8s-ci-dashboard-group>Kubernetes (k8s) CI Dashboard Group</a></li><li><a href=#runtime-requirements>Runtime Requirements</a></li><li><a href=#supported-registries>Supported Registries</a></li><li><a href=#features>Features</a><ul><li><a href=#releases-and-api-stability>Releases and API Stability</a></li><li><a href=#cri>CRI</a></li><li><a href=#communication>Communication</a></li><li><a href=#security-audit>Security audit</a></li><li><a href=#reporting-security-issues>Reporting security issues</a></li></ul></li><li><a href=#licenses>Licenses</a></li><li><a href=#project-details>Project details</a></li><li><a href=#adoption>Adoption</a></li></ul></nav></div></aside></div></div></div></article><nav class="navbar is-fixed-bottom is-hidden-desktop"><div class=navbar-end><div class=navbar-item><a class="button is-dark is-radiusless is-arrow-up" href=#><span class=icon><i class="fas fa-chevron-up"></i></span></a></div></div></nav></main><div class=footer><div class=container><div class=columns><div class=column><img src=/img/logos/footer-logo.png class=is-footer-logo alt="containerd footer logo"></div><div class=column><span class="is-size-4 is-size-5-mobile">Docs</span><hr class="hr has-background-grey"><ul><li><a href=/docs/2.3/>2.3.x</a></li><li><a href=/docs/2.2/>2.2.x</a></li><li><a href=/docs/2.1/>2.1.x</a></li><li><a href=/docs/1.7/>1.7.x</a></li><li><a href=/docs/main/>main</a></li></ul></div><div class=column><span class="is-size-4 is-size-5-mobile">Project</span><hr class="hr has-background-grey"><ul><li><a href=https://github.com/cncf/foundation/blob/master/code-of-conduct.md>Code of conduct</a></li><li><a href=/keps/>Collaboration with Kubernetes SIG-Node</a></li><li><a href=/contributing/>Contributing</a></li><li><a href=/roadmap/>Roadmap</a></li><li><a href=/scope/>Scope and principles</a></li><li><a href=/security/>Security and audits</a></li><li><a href=/releases/>Versioning and release</a></li></ul></div><div class=column><span class="is-size-4 is-size-5-mobile">Community</span><hr class="hr has-background-grey"><div class=buttons><a class="button is-borderless has-background-black has-text-white" href=https://github.com/containerd/containerd><span class=icon><i class="fab fa-github" aria-hidden=true></i></span>
+<span>GitHub</span></a>
+<a class="button is-borderless has-background-slack-green has-text-white" href=https://slack.containerd.io/><span class=icon><i class="fab fa-slack" aria-hidden=true></i></span>
+<span>Slack</span></a>
+<a class="button is-borderless has-background-bluesky-blue has-text-white" href=https://bsky.app/profile/containerd.dev><span class=icon><i class="fab fa-bluesky" aria-hidden=true></i></span>
+<span>Bluesky</span></a>
+<a class="button is-borderless has-background-mastodon-purple has-text-white" href=https://hachyderm.io/@containerd><span class=icon><i class="fab fa-mastodon" aria-hidden=true></i></span>
+<span>Mastodon</span></a>
+<a class="button has-background-twitter-blue is-borderless has-text-white" href=https://twitter.com/@containerd><span class=icon><i class="fab fa-twitter" aria-hidden=true></i></span>
+<span>Twitter</span></a>
+<a class="button is-borderless has-background-youtube-red has-text-white" href=https://www.youtube.com/@CNCFcontainerd><span class=icon><i class="fab fa-youtube" aria-hidden=true></i></span>
+<span>YouTube</span></a></div></div></div><hr class="hr has-background-grey-lighter"></div><div class="container has-text-centered"><div class=has-text-weight-light><p class="is-size-5 is-size-6-mobile">&copy; containerd Authors 2026 | Documentation Distributed under <a href=https://creativecommons.org/licenses/by/4.0/>CC-BY-4.0</a></p><br><p>&copy; 2026 The Linux Foundation. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page.</p></div></div></div><script src=/js/tippy-3.1.1.min.63fe7258687ea683ab01fd463d14b350c9e020570f1d36eab5aab96304ca8b35.js integrity="sha256-Y/5yWGh+poOrAf1GPRSzUMngIFcPHTbqtaq5YwTKizU="></script>
+<script src=/js/jquery-3.6.0.min.c2156ca5c12237ebf18ff9ec78fc535fff871cc650b8afcb1538dec731a9df2c.js integrity="sha256-whVspcEiN+vxj/nsePxTX/+HHMZQuK/LFTjexzGp3yw="></script>
+<script src=/js/anchor-4.1.1.min.e7bdd354cae47f18095b8b258ef736d89d287649a05f7f25ee023d303d1410f5.js integrity="sha256-573TVMrkfxgJW4sljvc22J0odkmgX38l7gI9MD0UEPU="></script>
+<script src=/js/clipboard-2.0.0.min.ca2d628003949ac3388afb43fc5dd95550de7a5092b514655d381745e456e4cb.js integrity="sha256-yi1igAOUmsM4ivtD/F3ZVVDeelCStRRlXTgXReRW5Ms="></script>
+<script src=/js/app.min.f5d71b357770cfa702a856635ed1f602e19345dfc7c4432e7faa32251f0a1c69.js integrity="sha256-9dcbNXdwz6cCqFZjXtH2AuGTRd/HxEMuf6oyJR8KHGk="></script></body></html>

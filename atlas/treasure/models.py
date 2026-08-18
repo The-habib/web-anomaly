@@ -1,7 +1,7 @@
 """
 Data Models for Project Atlas — Treasure Mode Subsystem.
 Defines schemas for multi-strategy candidate discovery, adaptive investigations,
-treasures, lineage tracking, and run checkpoints.
+review packets, human review submissions, lineages, sample manifests, and checkpoints.
 """
 
 from enum import Enum
@@ -39,11 +39,25 @@ class PriorArtStatus(str, Enum):
     POORLY_DOCUMENTED = "POORLY_DOCUMENTED"
     PRIOR_ART_UNCERTAIN = "PRIOR_ART_UNCERTAIN"
 
+class CandidateState(str, Enum):
+    DISCOVERED = "DISCOVERED"
+    CANDIDATE = "CANDIDATE"
+    EVIDENCE_PENDING = "EVIDENCE_PENDING"
+    EVIDENCE_COMPLETE = "EVIDENCE_COMPLETE"
+    REVIEW_PENDING = "REVIEW_PENDING"
+    HUMAN_VALIDATED = "HUMAN_VALIDATED"
+    REJECTED = "REJECTED"
+    INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
+    ORDINARY = "ORDINARY"
+    FALSE_POSITIVE = "FALSE_POSITIVE"
+
 class TreasureDecision(str, Enum):
     TREASURE_VALIDATED = "TREASURE_VALIDATED"
-    TREASURE_PENDING = "TREASURE_PENDING"
+    REVIEW_PENDING = "REVIEW_PENDING"
+    POTENTIAL_TREASURE = "POTENTIAL_TREASURE"
     DISMISSED = "DISMISSED"
     FALSE_POSITIVE = "FALSE_POSITIVE"
+    INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
 
 class CandidateRecord(BaseModel):
     candidate_id: str
@@ -55,14 +69,25 @@ class CandidateRecord(BaseModel):
     discovery_timestamp_utc: str
     discovery_reason: str
     path_type: str = "OTHER"
+    archive_presence: str = "AVAILABLE"
+    current_status: Optional[int] = None
+    raw_evidence_available: bool = False
     earliest_capture_year: Optional[int] = None
     latest_capture_year: Optional[int] = None
     historical_span_years: int = 0
     capture_count: int = 0
-    current_status: Optional[int] = None
-    archive_status: str = "AVAILABLE"
-    discovery_priority: float = 0.0
+    research_priority: float = 0.0
     seen_by_strategies: List[str] = Field(default_factory=list)
+    state: CandidateState = CandidateState.DISCOVERED
+
+    # Backwards compatibility alias for discovery_priority
+    @property
+    def discovery_priority(self) -> float:
+        return self.research_priority
+
+    @discovery_priority.setter
+    def discovery_priority(self, value: float):
+        self.research_priority = value
 
 class InvestigationRecord(BaseModel):
     investigation_id: str
@@ -89,12 +114,48 @@ class InvestigationRecord(BaseModel):
     prior_art: PriorArtStatus = PriorArtStatus.OBSCURE
     discovery_difficulty: DiscoveryDifficulty = DiscoveryDifficulty.MODERATE
     treasure_score: float = 0.0
-    decision: TreasureDecision = TreasureDecision.DISMISSED
+    decision: TreasureDecision = TreasureDecision.REVIEW_PENDING
+    state: CandidateState = CandidateState.EVIDENCE_COMPLETE
     human_explanation: str = ""
     why_interesting: str = ""
     why_search_misses_it: str = ""
     evidence_artifact_path: Optional[str] = None
     investigated_at_utc: str = ""
+
+class ReviewPacket(BaseModel):
+    review_id: str
+    candidate_id: str
+    url: str
+    domain: str
+    path: str
+    blinding_level: str = "PARTIALLY_BLIND"
+    live_status_code: int
+    features_observed: List[str]
+    orphan_status: str
+    timeline_observed: str
+    evidence_sha256: str
+    artifact_path: str
+    neutral_summary: str
+
+class HumanReviewSubmission(BaseModel):
+    review_id: str
+    candidate_id: str
+    reviewer_id: str
+    verdict: str  # CLEAR_TREASURE, POTENTIAL_TREASURE, ORDINARY, INSUFFICIENT_EVIDENCE
+    confidence: float
+    notes: str
+    reviewed_at_utc: str
+
+class SampleManifest(BaseModel):
+    run_id: str
+    corpus_version: str
+    sample_seed: int
+    sample_size: int
+    category_quotas: Dict[str, int]
+    population_sha256: str
+    selected_domains_sha256: str
+    selected_domains: List[Dict[str, str]]
+    created_at_utc: str
 
 class TreasureRecord(BaseModel):
     treasure_id: str
@@ -143,10 +204,12 @@ class RunCheckpoint(BaseModel):
     run_id: str
     seed: int
     start_time_utc: str
+    batch_id: str = "batch-001"
     completed_candidate_ids: List[str] = Field(default_factory=list)
     pending_candidate_ids: List[str] = Field(default_factory=list)
     investigated_count: int = 0
     validated_treasure_ids: List[str] = Field(default_factory=list)
+    potential_treasure_ids: List[str] = Field(default_factory=list)
     dismissed_count: int = 0
     false_positive_count: int = 0
     is_completed: bool = False

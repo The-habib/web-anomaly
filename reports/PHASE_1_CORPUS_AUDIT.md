@@ -1,6 +1,6 @@
 # Project Atlas — Phase 1 Seed Corpus Audit
 
-**Date**: 2026-08-17  
+**Date**: 2026-08-18  
 **Experiment ID**: `0002`  
 **Sampling Seed**: `42`  
 **Total Corpus Size**: `20` domains  

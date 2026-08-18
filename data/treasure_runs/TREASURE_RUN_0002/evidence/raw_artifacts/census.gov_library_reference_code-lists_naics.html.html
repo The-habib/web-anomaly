@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html style="font-size: 10px;" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>North American Industry Classification System (NAICS) U.S. Census Bureau</title>
+    <link href="/main/resources/css/census.css" rel="stylesheet">
+<!--add project specific styles after-->
+    <link href="resources/css/naics.css" rel="stylesheet">
+  
+		<script type="text/javascript">
+		var digitalData = window.digitalData || {};
+		digitalData = {
+			page: {
+				pageInfo: {
+					pageName: document.title , //U.S. Census Bureau - NAICS
+					pageURL: window.location.href, // <baseURL>/naics
+					language: "en",
+					tool: "NAICS",
+					siteSection: "NAICS"
+				}
+			},
+			event: {
+				eventName: "",
+				eventInfo: {
+					myTribalArea: {
+						stateSelection: "",
+						tribalAreaSelection: "",
+						tabSelection: "",
+						marginOfError: "",
+						tribalAreaSearch: ""
+					},
+					download: {
+						fileUrl: "",
+						fileName: ""
+					},
+					share: {
+						sharingAction: ""
+					}
+				} //end eventInfo
+			} // end event
+		};
+		</script>
+	<style>
+	
+	p.usa-banner__header-text{
+	
+	font-size: 1.3rem;
+	
+	}
+	img.usa-banner__header-flag{
+	
+	width: 16px;
+	}
+	
+	span.usa-banner__button-text{
+	
+	font-size: 1.3rem;
+	
+	}
+	
+	.usa-banner__button:after{
+	
+	height: 1.0rem;
+	width: 1.0rem;
+	position: relative;
+	top: 3px;
+	
+	}
+	
+	/*div.usa-banner__inner{
+	
+	margin-left: 0;
+	
+	}*/
+	
+	header.usa-banner__header{
+	
+	padding: .5rem;
+	}
+	
+	</style>	
+	
+</head>
+<body>
+<!-- GOV BANNER AND SIMPLE HEADER LAST UPDATED 11/17/2021 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://www.census.gov/main/uswds/uswds-2.12.0/js/uswds-init.min.js"></script>
+    <script async type="text/javascript" id="_fed_an_ua_tag" src="/main/javascript/dap/Universal-Federated-Analytics-Min.js?agency=DOC"></script>
+   <!-- <link rel="stylesheet" href="https://www.census.gov/main/uswds/uswds-2.12.0/css/uswds.min.css" /> -->
+  <!--  <link rel="stylesheet" href="https://www.census.gov/main/.in/css/all_header_styles.css" /> -->
+  <link rel="stylesheet" href="/main/css/all_header_styles.css" />
+   
+   
+  </head>
+  <body>
+    <script src="https://www.census.gov/main/uswds/uswds-2.12.0/js/uswds.min.js"></script>
+    <section class="usa-banner" aria-label="Official government website">
+        <div class="usa-accordion">
+          <header class="usa-banner__header">
+            <div class="usa-banner__inner">
+              <div class="grid-col-auto">
+                <img
+                  class="usa-banner__header-flag"
+                  src="https://www.census.gov/main/uswds/uswds-2.12.0/img/us_flag_small.png"
+                  alt="U.S. flag"
+                />
+              </div>
+              <div class="grid-col-fill tablet:grid-col-auto">
+                <p class="usa-banner__header-text">
+                  An official website of the United States government
+                </p>
+                <!-- <p class="usa-banner__header-action" aria-hidden="true">
+                  Here's how you know
+                </p>
+              </div>
+              <button
+                class="usa-accordion__button usa-banner__button"
+                aria-expanded="false"
+                aria-controls="gov-banner-default"
+              >
+                <span class="usa-banner__button-text">Here's how you know</span>
+              </button>
+            </div>
+          </header>
+          <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+            <div class="grid-row grid-gap-lg">
+              <div class="usa-banner__guidance tablet:grid-col-6">
+                <img
+                  class="usa-banner__icon usa-media-block__img"
+                  src="https://www.census.gov/main/uswds/uswds-2.12.0/img/icon-dot-gov.svg"
+                  role="img"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="usa-media-block__body">
+                  <p>
+                    <strong> Official websites use .gov </strong>
+                    <br />
+                    A <strong>.gov</strong> website belongs to an official government
+                    organization in the United States.
+                  </p>
+                </div>
+              </div>
+              <div class="usa-banner__guidance tablet:grid-col-6">
+                <img
+                  class="usa-banner__icon usa-media-block__img"
+                  src="https://www.census.gov/main/uswds/uswds-2.12.0/img/icon-https.svg"
+                  role="img"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="usa-media-block__body">
+                  <p>
+                    <strong> Secure .gov websites use HTTPS </strong>
+                    <br />
+                    A <strong>lock</strong> (
+                    <span class="icon-lock"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="52"
+                        height="64"
+                        viewBox="0 0 52 64"
+                        class="usa-banner__lock-image"
+                        role="img"
+                        aria-labelledby="banner-lock-title-default banner-lock-description-default"
+                        focusable="false"
+                      >
+                        <title id="banner-lock-title-default">Lock</title>
+                        <desc id="banner-lock-description-default">A locked padlock</desc>
+                        <path
+                          fill="#000000"
+                          fill-rule="evenodd"
+                          d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/>
+                        </svg></span>
+                    ) or <strong>https://</strong> means you’ve safely connected to
+                    the .gov website. Share sensitive information only on official,
+                    secure websites.
+                  </p> -->
+                </div>
+              </div>
+            </div>
+         <!-- </div>
+        </div>-->
+      </section>
+
+
+<!-- Adding original census.gov css -->
+<!-- 
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/bootstrap.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/base.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/extra.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/typeahead.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/header.css" class="cb-main-support global-file">
+<link rel="stylesheet" href="https://www.census.gov/main/css/_new/search.css" class="cb-main-support global-file">
+ -->
+
+<style id="antiClickjack">
+    body {
+        display: none !important
+    }
+</style>
+<script type="text/javascript" src="https://www.census.gov/main/javascript/clickjack.js"></script>
+<script type="text/javascript" src="/main/jquery/jquery-3.7.1/jquery.min.js"></script>
+<!-- <script src="https://www.census.gov/main/javascript/jquery-ui-1.13.2/jquery-ui.js" class="cb-main-support global-file"></script> -->
+
+<!-- Check for jquery conflict -->
+<script type="text/javascript">
+
+	$.ajax({
+		type : 'get',
+		url : '/main/app-config/header/adobe-launch.txt',	
+		dataType: 'text',            	
+		success : function(data){		 		
+	                var adobeLaunchScript = document.createElement("script");
+	                adobeLaunchScript.setAttribute("src",data);
+	                document.head.appendChild(adobeLaunchScript);
+	            },
+	    error : function(xhr, errorText, errorMessage){
+	                console.log('adobe-launch URL recognition failed: ' + errorText);
+	            }
+	});
+
+    $acn = jQuery.noConflict();
+    if (typeof jQuery === 'undefined' || typeof $ === 'undefined') {
+        jQuery = $acn;
+        $ = $acn;
+    }
+    $(function () {
+        $('.cb-header-skip-nav').click(function () {
+            $('#cb-after-header-anchor').focus();
+        });
+    });
+</script>
+
+<script src="https://www.census.gov/main/responsive-header/bootstrap-custom/js/bootstrap.js"
+    class="cb-main-support global-file"></script>
+<!-- <script src="https://www.census.gov/main/responsive-header/js/typeahead.js" class="cb-main-support global-file"></script> -->
+
+
+<style type="text/css">
+    header.hdr-primary,
+    header.hdr-primary>nav {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 64px !important;
+        background-color: #ffffff !important;
+       /* border-color: #112e51 !important;*/
+    }
+
+    header.hdr-primary>nav>div {
+        box-sizing: border-box !important;
+        height: 36.62px !important;
+        font-size: 20px !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.02em !important;
+        line-height: 30px !important;
+        white-space: nowrap !important;
+        vertical-align: baseline !important;
+        padding: 0 0 0 16px !important;
+        margin: 0 !important;
+        min-width: 150px !important;
+    }
+
+    header.hdr-primary>nav>div>a,
+    header.hdr-primary>nav>div>a>img {
+        padding: 0 !important;
+        margin: 0 !important;
+        border-style: none !important;
+        background: transparent !important;
+        text-decoration: none !important;
+    }
+
+    header.hdr-primary>nav>div>a {
+        box-sizing: border-box !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+    }
+
+    header.hdr-primary>nav>div>a>img {
+        width: 86px !important;
+        height: 33.62px !important;
+        margin-left: 15px !important;
+    }
+    hr.blue-line {
+   /* border-top-width: 2px;*/
+   /* border-color: #d0dce1;*/
+    margin: 0px;
+    border-bottom: #d0dce1 1px solid;
+    
+    }
+    
+</style>
+<button class="cb-header-skip-nav sr-only sr-only-focusable">Skip to main content</button>
+<header class="hdr-primary">
+    <nav>
+        <!--  <div><a href="https://www.census.gov" id="census-home-link"><img src="https://data.census.gov/cedsci/img/census-logo-white.25c8cb29.svg" alt="United States Census Bureau" title="U.S. Census Bureau"></a></div> 
+          <div><a href="https://www.census.gov" id="census-home-link"><img src="https://www.census.gov/main/.in/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg" alt="United States Census Bureau" title="U.S. Census Bureau"></a></div>
+    -->
+        <div><a href="https://www.census.gov" id="census-home-link"><img
+                    src="/main/img/USCENSUS_IDENTITY_SOLO_BLACK_1.5in_R_no_padding.svg"
+                    alt="United States Census Bureau" title="U.S. Census Bureau"></a></div>
+    </nav>
+</header>
+<hr class="blue-line">
+<a class="sr-only" tabindex="-1" id="cb-after-header-anchor">end of header</a>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2cf393d8b5a322f',t:'MTc4NzAzODMzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>
+
+<main class="naics container-fluid">
+    <section class="row">
+        <div class="naics-app-heading clearfix">
+            <h1>
+                North American Industry Classification System<span class="sr-only"> - NAICS</span>
+            </h1>
+            <div class="dropdown hidden-lg pull-right" id="naics-mobile-menu">
+                <button class="naics-menu-nav-dd dropdown-toggle btn btn-default"
+                        id="naics-menu-nav-dd"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    Menu
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="naics-menu-nav-dd">
+                    <li>
+                        <button class="naics-menu-mobile-toggle btn-link" data-tab="0" aria-controls="main-tab">
+                        	Main
+                        </button>
+                    </li>
+                    <li>
+                        <button class="naics-menu-mobile-toggle btn-link" data-tab="1" aria-controls="history-tab">
+                            History
+                        </button>
+                    </li>
+                    <li>
+                        <button class="naics-menu-mobile-toggle btn-link" data-tab="2" aria-controls="dev-partners-tab">
+                            Development Partners
+                        </button>
+                    </li>
+                    <li>
+                        <button id="fedreg" class="naics-menu-mobile-toggle btn-link" data-tab="3" aria-controls="notices-tab">
+                            Federal Register Notices
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="naics-menu-mobile-toggle btn-link" data-tab="4" aria-controls="faqs-tab">
+                        	FAQs
+                        </button>
+                    </li>
+                    <li>
+                    	<button class="naics-menu-mobile-toggle btn-link" data-tab="5" aria-controls="naics-2022-tab" data-year="2022">
+                            2022 NAICS
+                        </button>
+                    </li>
+                    <li>
+                    	<button class="naics-menu-mobile-toggle btn-link" data-tab="6" aria-controls="naics-2017-tab" data-year="2017">
+                            2017 NAICS
+                        </button>
+                    </li>
+                    <li>
+                    	<button class="naics-menu-mobile-toggle btn-link" data-tab="7" aria-controls="naics-2012-tab" data-year="2012">
+                            2012 NAICS
+                        </button>
+                    </li>
+                    <li>
+                    	<button class="naics-menu-mobile-toggle btn-link" data-tab="8" aria-controls="naics-2007-tab" data-year="2007">
+                            2007 NAICS
+                        </button>
+                    </li>
+                    <li>
+                    	 <button class="naics-menu-mobile-toggle btn-link" data-tab="9" aria-controls="naics-2002-tab" data-year="2002">
+                            2002 NAICS
+                        </button>
+                    </li>
+                   <li>
+                   		<button class="naics-menu-mobile-toggle btn-link" data-tab="10" aria-controls="naics-1997-tab" data-year="1997">
+                            1997 NAICS
+                        </button>
+                   </li>       
+                    <li>
+                        <button class="naics-menu-mobile-toggle btn-link" data-tab="11" aria-controls="concordances-tab">
+                            Concordances
+                        </button>
+                    </li>
+                    <li>
+                        <button class="naics-menu-mobile-toggle btn-link" data-tab="12" aria-controls="downloadables-tab">
+                            Downloadable Files
+                        </button>
+                    </li>
+                    <li class="naics-search-results-toggle hide">
+                        <button class="naics-menu-mobile-toggle search-results-toggle btn-link" aria-disabled="true" data-tab="11">
+                        	Search Results
+                        </button>
+                    </li>
+                    <li>
+                        <a href="./napcs/" class="dropdown-submenu-trigger naics-menu-mobile-toggle btn-link">NAPCS<span
+                                class="sr-only"> - North American Product Classification System</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <tabs class="naics-desktop-nav col-md-12 visible-lg">
+            <div class="clearfix">
+                <ul class="naics-menu-full-toggle nav nav-tabs" role="tablist">
+                    <li role="presentation">
+                        <a href="#main-tab" class="naics-nav-tabs btn btn-default" id="main-tab-control"
+                           aria-controls="main-tab" role="tab"
+                           data-tab="0" data-toggle="tab">Main</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#history-tab" class="naics-nav-tabs btn btn-default" id="history-tab-control"
+                           aria-controls="history-tab"
+                           role="tab" data-tab="1"
+                           data-toggle="tab">History</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#dev-partners-tab" class="naics-nav-tabs btn btn-default" id="dev-partners-tab-control"
+                           aria-controls="dev-partners-tab" role="tab" data-tab="2"
+                           data-toggle="tab">Development<br>Partners</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#notices-tab" class="naics-nav-tabs btn btn-default" id="notices-tab-control"
+                           aria-controls="notices-tab"
+                           role="tab" data-tab="3" data-toggle="tab">Federal<br>Register
+                            Notices</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#faqs-tab" class="naics-nav-tabs btn btn-default" id="faqs-tab-control"
+                           aria-controls="faqs-tab" role="tab"
+                           data-tab="4" data-toggle="tab">FAQs</a>
+                    </li>
+                    <li class="naics-tab-dropdown dropdown" role="presentation">
+
+                        <a href="javascript:void(0)"
+                           class="naics-nav-tabs-dropdown-trigger btn btn-default dropdown-toggle" role="button"
+                           id="dropdownMenu1"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Reference Files
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                             <li role="presentation">
+                                <a href="#naics-2022-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="naics-2022-tab-control" aria-controls="naics-2022-tab"
+                                   role="tab"
+                                   data-tab="5" data-toggle="tab" data-year="2022">2022 NAICS</a>
+                            </li>                       
+                            <li role="presentation">
+                                <a href="#naics-2017-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="naics-2017-tab-control" aria-controls="naics-2017-tab"
+                                   role="tab"
+                                   data-tab="6" data-toggle="tab" data-year="2017">2017 NAICS</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#naics-2012-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="naics-2012-tab-control" aria-controls="naics-2012-tab"
+                                   role="tab"
+                                   data-tab="7" data-toggle="tab" data-year="2012">2012 NAICS</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#naics-2007-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="naics-2007-tab-control" aria-controls="naics-2007-tab"
+                                   role="tab"
+                                   data-tab="8" data-toggle="tab" data-year="2007">2007 NAICS</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#naics-2002-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="naics-2002-tab-control" aria-controls="naics-2002-tab"
+                                   role="tab"
+                                   data-tab="9" data-toggle="tab" data-year="2002">2002 NAICS</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#naics-1997-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="naics-1997-tab-control" aria-controls="naics-1997-tab"
+                                   role="tab"
+                                   data-tab="10" data-toggle="tab" data-year="1997">1997 NAICS</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#concordances-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="concordances-tab-control"
+                                   aria-controls="concordances-tab" role="tab"
+                                   data-tab="11" data-toggle="tab">Concordances</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#downloadables-tab"
+                                   class="naics-nav-dropdown-tab"
+                                   id="downloadables-tab-control"
+                                   aria-controls="downloadables-tab" role="tab"
+                                   data-tab="12" data-toggle="tab">Downloadable Files</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="https:/naics/reference_files_tools/NAICS_Update_Process_Fact_Sheet.pdf" title="NAICS Update Process Fact Sheet" target="_blank">NAICS Update Process Fact Sheet</a>
+                            </li>
+                        </ul>
+
+                    </li>                
+                    <li class="naics-search-results-toggle hide" role="presentation">
+                        <a href="#results-tab" class="search-results-toggle naics-nav-tabs btn btn-default"
+                           id="results-tab-control"
+                           aria-controls="results-tab" role="tab"
+                           data-tab="12"
+                           data-toggle="tab">Search<br>Results</a>
+                    </li>
+                    <li class="naics-desktop-napcs-drop-down">
+                        <a href="./napcs/"
+                           class="dropdown-submenu-trigger naics-nav-tabs btn btn-default">NAPCS</a>
+                    </li>
+                </ul>
+
+            </div>
+        </tabs>
+        <naics-search class="col-md-4 col-lg-3">
+            <h2>NAICS Search</h2>
+            <div>
+                  <fieldset id="Search-2022">
+                    <legend class="sr-only">2022 NAICS Search</legend>
+                    <div>
+                        <label for="a2022">Enter keyword or 2-6 digit code</label>
+                        <input type="text" name="input" class="naics-search-input form-control" id="a2022"
+                               maxlength="40"
+                               placeholder="2022 NAICS Search">
+                        <button class="naics-search-submit-btn btn btn-default" type="button" name="search"
+                                id="search-2022-submit" data-year="2022" data-search-type="search">Go
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset id="Search-2017">
+                    <legend class="sr-only">2017 NAICS Search</legend>
+                    <div>
+                        <label for="a2017">Enter keyword or 2-6 digit code</label>
+                        <input type="text" name="input" class="naics-search-input form-control" id="a2017"
+                               maxlength="40"
+                               placeholder="2017 NAICS Search">
+                        <button class="naics-search-submit-btn btn btn-default" type="button" name="search"
+                                id="search-2017-submit" data-year="2017" data-search-type="search">Go
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset id="Search-2012">
+                    <legend class="sr-only">2012 NAICS Search</legend>
+                    <div>
+                        <label for="a2012">Enter keyword or 2-6 digit code</label>
+                        <input type="text" name="input" class="naics-search-input form-control" id="a2012"
+                               maxlength="40"
+                               placeholder="2012 NAICS Search">
+                        <button class="naics-search-submit-btn btn btn-default" type="button" name="search"
+                                id="search-2012-submit" data-year="2012" data-search-type="search">Go
+                        </button>
+                    </div>
+                </fieldset>
+            </div>
+        </naics-search>
+        <tab-content class="col-md-8">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade clearfix main in active" id="main-tab">
+                    <h2> Introduction to NAICS</h2>
+                    <p>The North American Industry Classification System (NAICS) is the standard used by Federal
+                        statistical
+                        agencies in classifying business establishments for the purpose of collecting, analyzing, and
+                        publishing
+                        statistical data related to the U.S. business economy.</p>
+                    <p>NAICS was developed under the auspices of the Office of Management and Budget (OMB), and adopted
+                        in 1997
+                        to replace the <a href="http://www.osha.gov/pls/imis/sic_manual.html">Standard Industrial
+                            Classification
+                            (SIC) system</a>. It was developed jointly by the <a role="button" href="javascript:void(0)"
+                                                                                 class="naics-tab-toggle-btn"
+                                                                                 data-tab="dev-partners-tab-control">U.S.
+                            Economic Classification
+                            Policy
+                            Committee (ECPC)</a>, <a href="https://www.statcan.gc.ca/eng/concepts/index"
+                                                     aria-describedby="non-gov-site-warning">Statistics Canada</a><span
+                                class="exit-link" aria-hidden="true"></span>, and Mexico's <a
+                                href="http://www.inegi.org.mx/" aria-describedby="non-gov-site-warning">Instituto
+                            Nacional de
+                            Estadistica y Geografia</a><span class="exit-link" aria-hidden="true"></span>, to allow for
+                        a high
+                        level of
+                        comparability in business
+                        statistics among the North American countries.
+                    </p>
+                    <p>
+                        This official U.S. Government Web site provides the latest information on plans for NAICS
+                        revisions, as
+                        well as access to various NAICS reference files and tools. Additional information on the
+                        background and
+                        development of NAICS is available in the
+                        <button class="naics-history-toggle btn-link">History</button>
+                        section of this Web site.
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade clearfix history" id="history-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix dev-partners" id="dev-partners-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix faqs" id="faqs-tab"></div>               
+                
+                <div role="tabpanel" class="tab-pane fade clearfix notices" id="notices-tab">
+                    <fed-notices-table class="clearfix d-block" id="fed-notices-table"></fed-notices-table>
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade clearfix naics-2022" id="naics-2022-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix naics-2017" id="naics-2017-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix naics-2012" id="naics-2012-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix naics-2007" id="naics-2007-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix naics-2002" id="naics-2002-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix naics-1997" id="naics-1997-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix concordances" id="concordances-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix downloadables" id="downloadables-tab"></div>
+                <div role="tabpanel" class="tab-pane fade clearfix results" id="results-tab" aria-atomic="false"
+                     aria-live="polite">
+                    <h2 id='txtResult'  style="visibility: hidden">Search Results</h2>
+                    <div class="results-spinner clearfix" aria-hidden="true"></div>
+                    <div class="naics-search-results-list col-md-10 hide" id="naics-search-results-list">
+                        <h3><a href="javascript:void(0)" class="sr-only">top of search results for </a><span
+                                id="naics-search-results-year"></span> NAICS Definition</h3>
+                         <p id="comp-desc-results"></p> 
+                       <h4 id="srch_rslt"></h4>
+                       <h4> <small id="srch_rslt2"> </small></h4>
+						<p id="comp-zero-results"></p> 
+                        <ul class="list-unstyled"></ul>
+                    </div>
+                    <div class="naics-search-results-details col-md-10 hide"
+                         id="naics-search-results-details">
+ <!--                        <div class="results-spinner-details clearfix" aria-hidden="true"></div>   -->
+<!--                                                 <br class="br1">    -->
+                        <naics-results id="year-2">                                   
+                           <h4>  <span id="naics-search-results-year-2"></span> NAICS Definition</h4>
+                           
+                           
+                            <ul class="naics-results-details-breadcrumb-list list-inline"
+                                id="naics-results-details-breadcrumb-list">
+                                <li class='hide'></li>
+                            </ul>
+                            <p id="comp-desc-results-details"></p>                         
+                            <div id="naics-result-details"></div>
+                            <div class="table-responsive">
+                                <table class="naics-results-details-table table"
+                                       id="naics-results-details-table">
+                                </table>
+                            </div>
+                        </naics-results>
+                    </div>
+                </div>
+            </div>
+        </tab-content>
+    </section>
+    <aside class="text-center row">
+        <ul class="naics-sidebar-list clearfix list-unstyled">
+            <li class="naics-sidebar-btn col-xs-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-0">
+                <button role="button" data-target="#manual-collapse" data-toggle="collapse" aria-expanded="false"
+                        aria-controls="manual-collapse" class="btn btn-block hidden-lg">2022 NAICS Manual<span
+                        class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                <h2 class="col-heading visible-lg">2022 NAICS Manual</h2>
+                <div class="collapse in" id="manual-collapse">
+                    <div class="well clearfix">
+                        <a href="reference_files_tools/2022_NAICS_Manual.pdf" class="naics-manual-img"
+                           title="2022 NAICS Manual">
+                            <img src="resources/img/2022_manual_cover.png" class="img-responsive"
+                                 alt="image displaying the 2022 NAICS Manual"></a>
+                        <p class="naics-manual-pdf">
+                            <a href="reference_files_tools/2022_NAICS_Manual.pdf" title="2022 NAICS Manual">View or
+                                download this publication</a><br>[PDF, 7MB]
+                        </p>
+                        <img src="resources/img/NAICS_logo.jpg" alt="" class="img-responsive naics-logo">
+                    </div>
+                </div>
+            </li>
+            <li class="naics-sidebar-btn col-xs-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-0">
+                <button role="button" data-target="#ref-collapse" data-toggle="collapse" aria-expanded="false"
+                        aria-controls="ref-collapse" class="btn btn-block hidden-lg">Reference Files<span
+                        class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                <h2 class="col-heading visible-lg">Reference Files</h2>
+                <div class="collapse in" id="ref-collapse">
+                    <div class="well">
+                        <ul class="naics-ref-list list-unstyled text-left">
+                          <li>
+                                <button id="naics-2022-toggle-btn" class="naics-ref-file-toggle btn-link">2022 NAICS
+                                </button>
+                            </li>
+                            <li>
+                                <button id="naics-2017-toggle-btn" class="naics-ref-file-toggle btn-link">2017 NAICS
+                                </button>
+                            </li>
+                            <li>
+                                <button id="naics-2012-toggle-btn" class="naics-ref-file-toggle btn-link">2012 NAICS
+                                </button>
+                            </li>
+                            <li>
+                                <button id="naics-2007-toggle-btn" class="naics-ref-file-toggle btn-link">2007 NAICS
+                                </button>
+                            </li>
+                            <li>
+                                <button id="naics-2002-toggle-btn" class="naics-ref-file-toggle btn-link">2002 NAICS
+                                </button>
+                            </li>
+                            <li>
+                                <button id="naics-1997-toggle-btn" class="naics-ref-file-toggle btn-link">1997 NAICS
+                                </button>
+                            </li>
+                            <li>
+                                <button id="naics-concordances-toggle-btn" class="naics-ref-file-toggle btn-link">
+                                    Concordances
+                                </button>
+                            </li>
+                            <li>
+                                 <button id="naics-downloadables-toggle-btn" class="naics-ref-file-toggle btn-link">
+                                    Downloadable Files
+                                </button>
+                            </li>
+                            <li><a href="reference_files_tools/NAICS_Update_Process_Fact_Sheet.pdf"
+                                   target="_blank">NAICS Update Process Fact Sheet</a> <br>[PDF, 91.0KB]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="naics-sidebar-btn col-xs-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-0">
+                <button role="button" data-target="#announcement-collapse" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="announcement-collapse" class="btn btn-block hidden-lg">
+                    Announcements<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                <h2 class="col-heading visible-lg">Announcements</h2>
+                <div class="collapse in" id="announcement-collapse">  
+                    <!-- div class="well">
+                        <div class="text-left">
+                         <b> 
+                         April 30, 2025</b>                         
+                         <p>Due to a reduction in government resources, the Dr. NAICS telephone line was discontinued effective April 30th. For all NAICS-related inquiries, please contact us by email at <font color='blue'>naics@census.gov</font>. We appreciate your understanding and thank you for your continued interest in the North American Industry Classification System.
+                        </div>
+                    </div  -->     
+                    
+                    <div class="well">
+                        <div class="text-left">
+                            
+                                <a href="https://www.govinfo.gov/content/pkg/FR-2026-07-13/pdf/2026-14086.pdf"
+                                   target="_blank">July 13, 2026</a><br> [PDF,
+                                242KB] Statistical Policy Directive No. 8: North American Industry Classification System (NAICS)—Request for Comments on Proposed Updates for 2027; Notice. Vol. 91, No. 132.                            
+                             
+                        </div>
+                    </div>
+                     
+                    <div class="well">
+                        <div class="text-left">
+                            
+                                <a href="federal_register_notices/notices/OMB_FRDOC_0001-0388.pdf"
+                                   target="_blank">December 20, 2024</a><br> [PDF,
+                                224KB] Statistical Policy Directive No. 8 North American Industry Classification System (NAICS) - Request for Comments on Possible Revision Updates for 2027; Notice. Vol. 89, No. 245                            
+                             
+                        </div>
+                    </div>
+                
+                    <div class="well">
+                        <div class="text-left">
+							<a  href="reference_files_tools/NAICS_Update_Process_Fact_Sheet.pdf" target="blank"> September 14, 2023</a><br>
+							 NAICS Update Process Fact Sheet is now available. 
+						</div>
+                    </div>
+                                  
+                	 <div class="well">
+
+			
+			<div class="text-left">
+				
+				<a href="2022NAICS/2022_NAICS_Structure.xlsx"
+                                   target="_blank">2022 NAICS Structure with Change Indicator</a> [XLSX,
+                                86KB]
+                        </div>
+                    </div>                	               
+
+
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <section class="row">
+        <div class="naics-contact col-sm-10 col-sm-offset-1 text-center"><h4>Contact Us</h4>
+            <ul class="list-unstyled">
+                <li>Source: U.S. Census Bureau</li>
+                <li> North American Industry Classification System (NAICS)</li>
+                <!-- li><a href="tel:1-888-756-2427">(888) 756-2427</a></li>  -->
+                <li><a href="/cdn-cgi/l/email-protection#93fdf2faf0e0d3f0f6fde0e6e0bdf4fce5"><span class="__cf_email__" data-cfemail="9ff1fef6fcecdffcfaf1eceaecb1f8f0e9">[email&#160;protected]</span></a></li>
+                <li>Last Revised: <span id="naics-last-mod-date"></span></li>
+            </ul>
+            <a href="/cdn-cgi/l/email-protection#a9c7c8c0cadae9caccc7dadcda87cec6df">
+
+            </a></div>
+        
+        <warning class="col-xs-12">
+            <p>
+                                    <span id="pdf">[PDF] or <a href="/main/www/pdf.html"><img
+                                            src="/main/www/img/pdficon.gif" alt="PDF" width="17" height="17"></a> denotes a file in Adobe’s <a
+                                            href="/main/www/pdf.html">Portable Document Format</a>. To view the file, you will need the <a
+                                            href="http://www.adobe.com/products/reader/">Adobe® Reader®</a> <img
+                                            src="/main/www/img/offsite.gif"
+                                            width="15" height="12"
+                                            alt="Off Site"> available <span
+                                            style="font-weight: bold;">free</span> from Adobe.
+                                    </span>
+                <span id="excel">[Excel] or the letters [xls] indicate a document is in the Microsoft® Excel® Spreadsheet Format (XLS).
+                To view the file, you will need MS Excel installed on your computer, or you can download the latest online Excel Viewer "Microsoft Docs" at
+                <a href='https://docs.microsoft.com/en-us/office/troubleshoot/excel/get-latest-excel-viewer'>https://docs.microsoft.com/en-us/office/troubleshoot/excel/get-latest-excel-viewer.</a>
+
+                                    </span>
+                <span id="offsite">This symbol <img src="/main/www/img/offsite.gif" width="15"
+                                                    height="12" alt="Off Site"> indicates a link to a non-government web site.  Our linking to these sites does not constitute an endorsement of any products, services or the information found on them. Once you link to another site you are subject to the policies of the new site.
+                                    </span>
+            </p>
+        </warning>
+    </section>
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="resources/js/naics5.js"></script>
+<a id="bckbtnlink2"></a>
+<!-- START CB Footer - Last Revised: 10/04/2022 -->
+<!-- Responsive Version -->
+<!DOCTYPE html>
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<!--  <link rel="stylesheet" type="text/css" href="/main/css/bootstrap-4.3.1.min.css">-->
+<link rel="stylesheet" type="text/css" href="/main/css/new_footer.css">
+<link rel="stylesheet" href="/main/css/font-awesome-6.5.1/css/all.min.css">
+<script src="/main/css/font-awesome-6.5.1/js/all.min.js"></script>
+
+
+<!-- <script src="/main/javascript/jquery-3.0.0/jquery.min.js"></script>
+<script src="/main/javascript/bootstrap-4.3.1/bootstrap.min.js"></script>-->
+
+<style>
+
+@media only screen and (max-width: 700px) {
+    .val {
+    width: 100%;
+    margin: auto 0;
+    
+}
+
+a{
+font-size: small;
+}
+
+.foot_bottom_links{
+width: 100%;
+
+text-align:left;
+}
+
+}
+
+hr.foot-line {
+margin-bottom: 10px;
+}
+
+
+
+</style>
+
+</head>
+        
+        <footer class="footer container-fluid">
+   <div class="row">
+  
+    <div class="grid_footer_links cf">
+   
+
+        <div class="foot_bottom">
+            <div class="foot_bottom_links">
+            
+                <div class="footerbottom">
+                
+                 
+                <div class="val">
+					<a class="foot_bottom_socialLinks" href="https://www.census.gov/about/contact-us/social_media.html">CONNECT WITH US</a>
+                    <a class="social-icon" href="https://www.facebook.com/uscensusbureau"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="social-icon" href="https://twitter.com/uscensusbureau"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a class="social-icon" href="https://www.linkedin.com/company/us-census-bureau"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://www.youtube.com/user/uscensusbureau"><i class="fa-brands fa-youtube"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/uscensusbureau/"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <i class="foot_bottom_socialLinks" href="https://public.govdelivery.com/accounts/USCENSUS/subscriber/new" target="_blank"><img src="//www.census.gov/main/img/Mail_White.svg" alt="Email Updates logo" title="Email Updates"/></i> -->
+</div>
+
+<div class="val">
+                    <ul class="legal-menu">
+                    <li><a href="https://www.census.gov/quality/">Information Quality</a></li>
+                    <li><a href="https://www.census.gov/datalinkage/">Data Linkage Infrastructure</a></li>
+                    <li><a href="https://www.census.gov/privacy/">Data Protection and Privacy Policy</a></li>
+                    <li><a href="https://www.census.gov/about/policies/privacy/privacy-policy.html#accessibility">Accessibility</a></li>      
+                    <li><a href="https://www.census.gov/foia/">FOIA</a></li>
+                    <li><a href="https://www.oig.doc.gov/Pages/default.aspx">Inspector General</a></li>
+                    <li><a href="https://www.commerce.gov/cr/reports-and-resources/no-fear-act">No FEAR Act</a></li>
+                    <li><a href="https://www.commerce.gov/">U.S. Department of Commerce</a></li>
+                    <li><a href="https://www.usa.gov/">USA.gov</a></li>
+                        
+                    </ul>
+                   
+                   </div>
+                   <hr class="foot-line">
+                   <p class="foot_bottom_tagline">Measuring America's People and Economy</p>
+                   </div> 
+                </div> <!-- end class=footerbotom -->
+            </div> <!-- end class=foot_bottom_links -->
+        </div> <!-- end class=grid_footer_links -->
+    </div>
+</footer> <!-- end class=footer -->
+
+<div id="ratingTool"><!-- START Rating Tool -->
+
+
+<div id = "ratingtooljquery"></div>
+
+
+<script id="ratingtooljs" type="text/javascript" src="/ratingtool/js/ratingtool.js"></script> 
+
+
+ <style>
+ 
+ *::before,
+*::after {
+  box-sizing: content-box !important; 
+}
+ 
+ 
+ 
+ /*prevent scrollbar in IE10 from covering tool*/
+html {
+   -ms-overflow-style: scrollbar;
+}
+/*thumbs div*/
+#thumbs_div {
+	display: none;
+}
+#ratingtooljquery center{
+	
+	position: relative;
+	top: 15px;
+	right: 34px;
+	
+}
+
+.rate-ratingtool_div { 
+    position:fixed;
+    right:0.2%;
+    bottom:0.5%;
+    margin: 0;
+    width:174px;
+    height:56px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-size:100%;
+    cursor: default;
+    z-index:100;
+   /*border: 1px solid lightgrey;*/
+   padding: 12px;
+   box-shadow: -2px -4px 12px 0px #D1D1D1;
+   box-sizing: content-box;
+   background-color: white;
+}
+
+.rate-WasThisPageHelpful_div{
+/*     position:absolute; */
+    top:0px;
+    bottom:-0.5%;
+    left:0px;
+    right:-1px;
+    height:85%;
+    width:85%;
+    margin:auto;
+    text-align:left;
+    background: #fff;
+    padding: 5px;
+    box-sizing: content-box;
+}
+.rate-WasThisPageHelpfulText{
+    font-family: "Roboto", "Roboto Bold";
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #333333;
+    font-style: normal;
+    position: relative;
+   /* top: 11;
+    left: 6;*/
+}
+
+
+.yes-no-box{
+    padding-top: 3px;
+}
+
+.YesNoText{
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    color: #333333;
+    cursor: pointer;
+}
+
+
+.YesNoText:hover{
+	
+	border-bottom: 2px solid #333333;
+	
+	
+}
+
+.thumbs-valign {
+  	vertical-align: middle;
+/*   	padding-left:1.4em; */
+  	cursor: pointer;
+  	box-sizing: content-box;
+}
+.thumbs-valign:focus{
+  	vertical-align: middle;
+  	padding-left:1.4em;
+  	cursor: pointer;
+        /*outline: 1px dotted #036391;*/
+}
+
+.thumbs-valign:hover{
+	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4)); 
+	
+}
+
+#thumbsdown{
+    padding-left:1.4em;
+}
+
+.NoThanks:focus{
+        outline: 1px dotted #036391;
+}
+
+#RatingToolSubmit:focus{
+        outline: 1px dotted #036391;
+}
+
+/*****Popup******/
+#popupRating {
+	position:fixed;
+	right:0.2%;
+	bottom:0.5%;
+	margin:0;
+	width: 293px;
+	height: 263px;
+	font-family:'Roboto';
+	box-sizing: border-box;
+	box-shadow: -2px -4px 12px 0px #D1D1D1;
+	background-color:white;
+	cursor: default;
+	z-index:100;
+	display: none;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+#popupRatingHeadingContainer{
+	padding-left: 12px;
+	padding-top: 12px;
+}
+#popupRatingHeading {
+	font-family: "Arial-BoldMT", "Arial Bold", "Arial";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    color: #3d6eb1;
+    margin-bottom: 10px;
+}
+
+#RatingTool_textarea {
+	position: absolute;
+	left: 8.5px;
+	top: 109px;
+	width:260px;
+	height:127px;
+	font-family: "Roboto";
+	line-height: 20px;
+	font-weight: 400;
+	font-size: 16px;
+	color:  #333333;
+	text-align: left;
+	box-sizing: border-box;
+	border:solid 1px #7E99A6;
+	outline: none;
+	padding:5px;
+}
+
+textarea#RatingTool_textarea:focus { 
+        border: 2px solid #2492FF; 
+} 
+
+#RatingTool_textarea::-webkit-input-placeholder {
+	color: rgba(204,204,204,1);
+}
+#RatingTool_textarea:-moz-placeholder { /* Firefox 18- */
+	color: rgba(204,204,204,1); 
+}
+#RatingTool_textarea::-moz-placeholder {  /* Firefox 19+ */
+	color: rgba(204,204,204,1);
+}
+#RatingTool_textarea:-ms-input-placeholder {
+	color: rgba(204,204,204,1); 
+}
+
+#popupRatingContainer{
+	
+	border-width: 0px;
+	left: 9px;
+	top: -72px;
+	width: 274px;
+	height:350px;
+	overflow-x: hidden;
+	text-align: center;
+	position: absolute;
+	overflow:hidden;
+}
+#RatingToolSubmit{
+    position: absolute;
+    right: 6px;
+    bottom: 23px;
+    width: 100px;
+    height: 38px;
+    background: inherit;
+    background-color: #2B74B7;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff ;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+   /* outline: none;*/  /*removes blue glow around submit*/
+}
+#RatingToolSubmit:active {
+}
+
+#RatingToolSubmit:hover {
+	background-color: #2340AA;
+	color: #ffffff;
+	border: 2px solid #2340AA;
+	
+}
+
+.NoThanks {
+    border: 2px solid #2B74B7;
+    position: absolute;
+    left: 11px;
+    top: 289px;
+    width: 107px;
+    height: 34px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    color: #2B74B7;
+    cursor:pointer;
+    line-height: 35px;
+}
+
+.NoThanks:hover{
+	
+	background-color: #2340AA;
+	color: #ffffff;
+	border: 2px solid #2340AA;
+	
+}
+
+#rate-CharCounter {
+	color: #000000;
+	cursor: pointer;
+	font-family: "Roboto";
+	font-size: 12px;
+	font-weight: 400;
+	left: 8px;
+	position: absolute;
+	top: 240px;
+	
+}
+
+
+/*thank you div*/
+.rate-thankyou_div { 
+    position:fixed;
+    right:0.2%;
+    bottom:0.5%;
+    margin:0;
+    width:250px;
+    height:85px;
+    background-color: white;
+    box-shadow: -2px -4px 12px 0 #D1D1D1;
+    background-size:100%;
+    cursor: default;
+    display: none; 
+    z-index:100;
+}
+
+.rate-comments-suggestions, #linkcomments{
+	
+	color: #2B74B7;
+	border: none;
+	position: relative;
+	top: 15px;
+	left: 2px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Roboto;
+	
+}
+
+#linkcomments:hover{
+	
+	text-decoration: underline;
+	color: #2340AA;
+}
+
+.rate-thankyouforfeedback_div{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:100%;
+    width:100%;
+    
+    text-align:left;
+    padding: 12px;
+}
+.rate-thankyouText{
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 15px;
+    color: #333333;
+    font-style: normal;
+    display:inline-block;
+    line-height: 22px;
+}
+
+/* x to close feedback form*/
+#closeX{
+	position: relative;
+	top: -18px;
+	right:-14px;
+	float:right;
+	vertical-align:top;
+	color:#333333;
+	text-align:center;
+	font-size:17px;
+	font-weight:400;
+	cursor:pointer;
+	z-index: 1;
+	padding: 30px;
+}
+#closeXX{	
+	
+	position: relative;
+	top: 11px;
+	right: 11px;
+	float:right;
+	vertical-align:top;
+	color:#333333;
+	text-align:center;
+	font-size:17px;
+	/*font-weight:700;*/
+	cursor:pointer;
+	z-index: 1;
+}
+
+/* x to close thumbs*/
+#CloseThumbs{
+	
+	position: relative;
+	bottom: 9px;
+/* 	right: -6px; */
+	float:right;
+	vertical-align:top;
+	color:#333333;
+	text-align:center;
+	font-size:16px;
+	/*font-weight:700;*/
+	cursor:pointer;
+	z-index: 1;
+}
+
+.rate-popupRatingHeading{
+	
+	position: relative;
+	left: 4px;
+	top: 3px;
+}
+
+::placeholder {
+  color: #646464;
+  font-family:"Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #646464;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #646464;
+}
+
+.rate-max-reached{
+	display: none;
+	color: #BF350C;
+	position: absolute;
+	left: -3px;
+	width: 220px;
+	
+}
+
+.rate-comments-suggestions img.rate-arrow-hover {
+      position: relative;   
+      right: 23px;
+      opacity: 0;
+      transition: opacity .2s;
+      
+      
+    }
+    .rate-comments-suggestions:hover img.rate-arrow-hover {
+      opacity: 1;
+      
+    }
+    
+ .counter{
+ 
+ float: right;
+ position: relative;
+ bottom: 10px;
+ left: 42px;
+ 
+ } 
+ 
+ </style>
+ 
+ 
+ 
+ 
+
+<div id="thumbs_div" class="rate-ratingtool_div" > 
+    <div id="CloseThumbs" alt="Close" tabindex="3">&#10005;</div>    
+    <div class="rate-WasThisPageHelpful_div" >
+		<span class="rate-WasThisPageHelpfulText" align="top">Is this page helpful?</span><br>
+		<div class="yes-no-box">
+    		<img class="thumbs-valign" id="thumbsup" src="/ratingtool/images/like-hand-3122.svg" width="29px;" alt="Thumbs Up Image" tabindex="1"/>
+      		<span class="YesNoText" id="yes">Yes</span>
+      		<img class="thumbs-valign" id="thumbsdown" src="/ratingtool/images/unlike-hand-3123.svg" width="29px;" alt="Thumbs Down Image" tabindex="2"/>
+      		<span class="YesNoText" id="no">No</span>
+  		</div>
+  		
+    </div>
+</div>
+
+<div id="popupRating">
+        <div id="closeX" alt="Close"  tabindex="4">&#10005;</div>
+		<div id="popupRatingHeadingContainer">
+		<span class="rate-popupRatingHeading"></span>
+		</div>
+		<div id="popupRatingContainer" >
+			<form id="rtform" method="post" name="rtform">
+				<textarea id="RatingTool_textarea" name="message" placeholder="Tell us more." alt="Comments or Suggestions 255 characters max" tabindex="2" maxlength="256"></textarea>
+				<input alt="Submit" tabindex="3" id="RatingToolSubmit" type="submit" value="SUBMIT">
+			</form>
+			<div id="NoThanksDiv">
+			     <span tabindex="1"  class="NoThanks" alt="No thanks" >NO THANKS</span>
+			
+			</div>
+			<div id="rate-CharCounter">
+				<span class="rate-start-text">255 characters maximum</span>
+				<span class="rate-max-reached"><img src="/ratingtool/images/exclamation-icon.png" width="20px;" style="position:absolute; top:-2px; left: -1px;">255 characters maximum reached</span>
+			</div>
+		</div>
+</div>
+
+<div id="thnx_div" class="rate-thankyou_div">
+    <div id="closeXX" alt="Close" tabindex="2">&#10005;</div>
+	<div class="rate-thankyouforfeedback_div">
+		<span class="rate-thankyouText">Thank you for your feedback.</span><br>
+		<span class="rate-comments-suggestions" id="linkcomments" tabindex="1">Comments or suggestions? <img class="rate-arrow" src="/ratingtool/images/angle-circle-arrow-right.png" style="width:19px; position: absolute; top: -1px; right: -30px;"><img class="rate-arrow-hover" src="/ratingtool/images/angle-circle-arrow-right-hover.png" style="width:19px; position: absolute; top: -1px; right: -30px;">
+
+	</span></div>
+	
+	
+</div>
+
+<!-- END Rating Tool -->
+
+
+</div>
+</html>
+
+</body>
+</html>

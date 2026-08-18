@@ -1,13 +1,11 @@
 """
 Prior-Art & Obscurity Assessment Engine for Project Atlas — Treasure Mode.
-Evaluates public web and archive documentation levels without overclaiming novelty.
+Evaluates public web and archive documentation levels using structural signals
+and path discoverability metrics without domain hardcoding.
 """
 
 from typing import Tuple, List
 from atlas.treasure.models import PriorArtStatus
-
-WELL_KNOWN_SITES = ["spacejam.com", "zombo.com", "catb.org", "toastytech.com"]
-DOCUMENTED_ARCHIVES = ["uspto.gov", "gnu.org", "textfiles.com", "w3.org", "ietf.org"]
 
 def evaluate_prior_art_status(
     domain: str,
@@ -16,36 +14,31 @@ def evaluate_prior_art_status(
     structural_signals: List[str]
 ) -> Tuple[PriorArtStatus, str]:
     """
-    Classify prior-art documentation level for an investigated archaeological candidate.
+    Classify prior-art documentation level for an investigated archaeological candidate
+    based on objective structural discoverability.
     """
-    dom_lower = domain.lower()
-    path_lower = path.lower()
+    path_depth = path.strip("/").count("/") + 1
+    is_orphan = "orphaned_from_root_navigation" in structural_signals
 
-    if any(ws in dom_lower for ws in WELL_KNOWN_SITES) and (path == "/" or not path):
+    if is_orphan and path_depth >= 2 and len(structural_signals) >= 3:
         return (
-            PriorArtStatus.WELL_DOCUMENTED,
-            "Widely recognized early web cultural landmark with substantial external public documentation."
+            PriorArtStatus.OBSCURE,
+            "Deeply nested and orphaned archaeological surface with low public search discoverability."
         )
 
-    if any(da in dom_lower for da in DOCUMENTED_ARCHIVES) and ("manual" in path_lower or "mpep" in path_lower or "rfc" in path_lower):
+    if is_orphan or path_depth >= 2:
+        return (
+            PriorArtStatus.POORLY_DOCUMENTED,
+            "Surviving subpath with limited modern search engine indexing or discoverability."
+        )
+
+    if path == "/" or not path:
         return (
             PriorArtStatus.DOCUMENTED,
-            "Documented official organizational or technical repository preserving legacy publication formatting."
-        )
-
-    if "rotten.com" in path_lower or "halifax" in path_lower or "~" in path_lower:
-        return (
-            PriorArtStatus.OBSCURE,
-            "Atlas did not identify substantial contemporary search visibility or mainstream index references for this specific nested path."
-        )
-
-    if len(structural_signals) >= 3 and "orphaned_from_root_navigation" in structural_signals:
-        return (
-            PriorArtStatus.OBSCURE,
-            "Buried unlinked archaeological surface with low public search discoverability."
+            "Root domain surface accessible via standard search indexing."
         )
 
     return (
-        PriorArtStatus.POORLY_DOCUMENTED,
-        "Surviving subpath with limited modern search engine indexing."
+        PriorArtStatus.DOCUMENTED,
+        "Public subpath indexed across standard public directories."
     )

@@ -1,0 +1,824 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome - BookWyrm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/css/themes/bookwyrm-light.css" rel="stylesheet" type="text/css" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="BookWyrm search" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/logos/886fa857d5f6b7e9.png">
+    <link rel="apple-touch-icon" href="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/logo.png">
+    <link rel="manifest" href="/manifest.json" />
+
+    
+        
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/previews/logos/1-d66e8519-390f-4ad7-899d-f23c23e2b53a.jpg">
+    <meta name="og:image" content="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/previews/logos/1-d66e8519-390f-4ad7-899d-f23c23e2b53a.jpg">
+
+
+<meta name="twitter:title" content="BookWyrm">
+<meta name="og:title" content="BookWyrm">
+
+
+<meta name="twitter:description" content="None">
+<meta name="og:description" content="None">
+    
+
+    
+</head>
+<body>
+
+<nav class="navbar" aria-label="main navigation">
+    <div class="container">
+        
+        
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img class="image logo" src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/logo-small.png" alt="BookWyrm home page" loading="lazy" decoding="async">
+            </a>
+            <form class="navbar-item column is-align-items-start pt-5" action="/search">
+                <div class="field has-addons">
+                    <div class="control">
+                        
+                            
+                        
+                        <input aria-label="Search for a book" id="tour-search" class="input" type="text" name="q" placeholder="Search for a book" value="" spellcheck="false">
+                    </div>
+                    <div class="control">
+                        <button class="button" type="submit">
+                            <span class="icon icon-search" title="Search">
+                                <span class="is-sr-only">Search</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="control">
+                        <button class="button" type="button" data-modal-open="barcode-scanner-modal">
+                            <span class="icon icon-barcode" title="Scan Barcode" id="tour-barcode">
+                                <span class="is-sr-only">Scan Barcode</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+
+<div class="modal " id="barcode-scanner-modal">
+    <div class="modal-background" data-modal-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" tabindex="-1" aria-described-by="barcode-scanner-modal_header">
+        <header class="modal-card-head">
+            <h2 class="modal-card-title mb-0" id="barcode-scanner-modal_header">
+                
+    Scan Barcode
+
+            </h2>
+            <button
+                type="button"
+                class="delete"
+                aria-label="Close"
+                data-modal-close
+            ></button>
+        </header>
+
+        
+        <section class="modal-card-body">
+            
+    <div class="block">
+        <div id="barcode-scanner"></div>
+    </div>
+
+    <div id="barcode-camera-list" class="select is-small">
+        <select>
+        </select>
+    </div>
+    <template id="barcode-grant-access">
+        <span class="icon icon-lock"></span>
+        <span class="is-size-5">Requesting camera...</span><br/>
+        <span>Grant access to the camera to scan a book's barcode.</span>
+    </template>
+    <template id="barcode-access-denied">
+        <span class="icon icon-warning"></span>
+        <span class="is-size-5">Access denied</span><br/>
+        <span>Could not access camera</span>
+    </template>
+    <template id="barcode-scanning">
+        <span class="icon icon-barcode"></span>
+        <span class="is-size-5">Scanning...</span><br/>
+        <span>Align your book's barcode with the camera.</span><span class="isbn"></span>
+    </template>
+    <template id="barcode-found">
+        <span class="icon icon-check"></span>
+        <span class="is-size-5">ISBN scanned</span><br/>
+        Searching for book: <span class="isbn"></span>...
+    </template>
+    <div id="barcode-status" class="block"></div>
+
+        </section>
+        <footer class="modal-card-foot">
+            
+    <button class="button" type="button" data-modal-close>Cancel</button>
+
+        </footer>
+        
+    </div>
+    <button
+        type="button"
+        class="modal-close is-large"
+        aria-label="Close"
+        data-modal-close
+    ></button>
+</div>
+
+
+            <button
+                type="button"
+                tabindex="0"
+                class="navbar-burger pulldown-menu my-4 is-flex-touch is-align-items-center is-justify-content-center"
+                data-controls="main_nav"
+                aria-expanded="false"
+                aria-label="Main navigation menu"
+            >
+                <i class="icon-dots-three-vertical" aria-hidden="true"></i>
+
+                <strong
+                    class="is-hidden  tag is-small px-1"
+                    data-poll-wrapper
+                >
+                    <span class="is-sr-only">Notifications</span>
+                    <strong data-poll="notifications" class="has-text-white">
+                        
+                    </strong>
+                </strong>
+            </button>
+        </div>
+        <div class="navbar-menu" id="main_nav">
+            <div class="navbar-start" id="tour-navbar-start">
+                
+            </div>
+
+            <div class="navbar-end">
+            
+                <div class="navbar-item pt-5 pb-0">
+                    
+                    <div class="columns">
+                        <div class="column">
+                            <form name="login" method="post" action="/login?next=/">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="YYwKTQoNs8FggHhwOienPu1j6Anm1drLzGg180wmSbrEcQ9bd5sBG7eKNJ6WOZJP">
+                                <div class="columns is-variable is-1">
+                                    <div class="column">
+                                        <label class="is-sr-only" for="id_localname">Username:</label>
+                                        <input type="text" name="localname" maxlength="150" class="input" required="" id="id_localname" placeholder="username">
+                                    </div>
+                                    <div class="column">
+                                        <label class="is-sr-only" for="id_password">Password:</label>
+                                        <div class="control has-icons-right">
+                                            <input type="password" name="password" maxlength="128" class="input" required="" id="id_password" placeholder="password">
+                                            <span data-password-icon data-for="id_password" class="icon is-right is-clickable">
+                                                <button type="button" aria-controls="id_password" class="icon-eye-blocked" title="Show/Hide password"></button>
+                                            </span>
+                                        </div>
+                                        <p class="help"><a href="/password-reset">Forgot your password?</a></p>
+                                    </div>
+                                    <div class="column is-narrow">
+                                        <button class="button is-primary" type="submit">Log in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+</nav>
+
+
+
+<main class="section is-flex-grow-1">
+    <div class="container">
+        
+            
+            
+            
+<header class="block has-text-centered">
+    <h1 class="title">BookWyrm</h1>
+    <h2 class="subtitle">Social Reading and Reviewing</h2>
+</header>
+
+<section class="level is-mobile">
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="title has-text-weight-normal"><span class="icon icon-graphic-paperplane"></span></p>
+            <p class="heading">Decentralized</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="title has-text-weight-normal"><span class="icon icon-graphic-heart"></span></p>
+            <p class="heading">Friendly</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="title has-text-weight-normal"><span class="icon icon-graphic-banknote"></span></p>
+            <p class="heading">Anti-Corporate</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="tile is-ancestor">
+    <div class="tile is-7 is-parent">
+        <div class="tile is-child notification">
+            
+
+<div class="columns">
+    <div class="column is-narrow is-hidden-mobile">
+        <figure class="block is-w-xl">
+            <img src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/logo.png" alt="BookWyrm logo" loading="lazy" decoding="async">
+        </figure>
+    </div>
+    <div class="column content">
+        <p class="block">
+            <p class="title is-5">Talk about books, track your reading, and find out what your friends are reading, on your own terms.</p>
+
+<p>BookWyrm is ad-free, anti-corporate, and federated. You can seamlessly follow and interact with users on other BookWyrm instances, and on services like Mastodon.</p>
+        </p>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class="tile is-5 is-parent">
+        
+        <div class="tile is-child box content">
+            <h2 class="title">
+                
+                    Join BookWyrm
+                
+            </h2>
+
+            
+                <form name="register" method="post" action="/register">
+                    
+<input type="hidden" name="csrfmiddlewaretoken" value="YYwKTQoNs8FggHhwOienPu1j6Anm1drLzGg180wmSbrEcQ9bd5sBG7eKNJ6WOZJP">
+<div class="field">
+    <label class="label" for="id_localname_register">Username:</label>
+    <div class="control">
+        <input
+            type="text"
+            name="localname"
+            maxlength="150"
+            class="input"
+            required=""
+            id="id_localname_register"
+            value=""
+            aria-describedby="desc_localname_register_panel"
+        >
+        <div id="desc_localname_register_panel">
+            <p class="help">
+                Choose wisely! Your username cannot be changed.
+            </p>
+
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="field">
+    <label class="label" for="id_email_register">Email address:</label>
+    <div class="control">
+        <input
+            type="email"
+            name="email"
+            maxlength="254"
+            class="input"
+            id="id_email_register"
+            value=""
+            required
+            aria-describedby="desc_email_register"
+        >
+
+        
+
+    </div>
+</div>
+
+<div class="field">
+    <label class="label" for="id_password_register">Password:</label>
+    <div class="control">
+        <input
+            type="password"
+            name="password"
+            maxlength="128"
+            class="input"
+            required=""
+            id="id_password_register"
+            aria-describedby="desc_password_register"
+        >
+
+        
+
+    </div>
+</div>
+
+<input type="hidden" name="preferred_timezone" />
+
+<div class="field">
+    <div class="control">
+        <button class="button is-primary" type="submit">
+            Sign Up
+        </button>
+    </div>
+</div>
+
+                </form>
+            
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+<div class="block is-hidden-tablet">
+    <h2 class="title has-text-centered">Recent Books</h2>
+</div>
+
+
+
+
+
+<section class="columns is-multiline is-mobile">
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2357004/s/power-despite-precarity">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/e102a2fa-f1c3-42f7-9bc6-9700dfa578ba/15e3dbcb76644be803ed64469d172fd0.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/e102a2fa-f1c3-42f7-9bc6-9700dfa578ba/be68a7ddb53b38f4abfedcb961dee1ad.jpeg"
+                /><img
+                alt="Joe Berry, Helena Worthen: Power Despite Precarity (Paperback, 2021, Pluto Press)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/e102a2fa-f1c3-42f7-9bc6-9700dfa578ba.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2357003/s/aces-high">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/e2cd7397-dfea-480c-abcb-d050e74ce3bf/61d3a4e15fff5fd20846d6a728b58453.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/e2cd7397-dfea-480c-abcb-d050e74ce3bf/384ff749317d0f09cd184022d8a85687.jpeg"
+                /><img
+                alt="J. Daniel Phillips: ACES HIGH (Paperback)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/e2cd7397-dfea-480c-abcb-d050e74ce3bf.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2357001/s/abandoned-places">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/749648e6-fe3d-4589-ab7c-011ffac2c30d/9b96e15da1e7e229ddea8867f8422ce3.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/749648e6-fe3d-4589-ab7c-011ffac2c30d/457095977752ced0af8054291609e11e.jpeg"
+                /><img
+                alt="Abandoned Places (Paperback)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/749648e6-fe3d-4589-ab7c-011ffac2c30d.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356923/s/21-unbreakable-laws-of-life">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/6a2a6e66-18b8-46a5-8f78-22325d881823/5562d6ca8777d44396731f41ba11b045.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/6a2a6e66-18b8-46a5-8f78-22325d881823/db596473651ff8d5f87950c7016648d1.jpeg"
+                /><img
+                alt="Max E. Anders: 21 unbreakable laws of life (1996, T. Nelson)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/6a2a6e66-18b8-46a5-8f78-22325d881823.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356992/s/teen-to-teen">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/1bd10c9c-df49-4aef-9b39-5a5b2bd438ac/6e5dda354cafe648f7202a0626cd845f.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/1bd10c9c-df49-4aef-9b39-5a5b2bd438ac/452f381537189c5d0739271dbba8e7ed.jpeg"
+                /><img
+                alt="Patti M. Hummel: Teen to teen (2013, B &amp; H Publishing Group)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/1bd10c9c-df49-4aef-9b39-5a5b2bd438ac.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356922/s/the-will-of-god">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/9a130d90-6507-4b6b-9ebf-54f877e5918c/9b9cf3d2bed32d57a509963748adbade.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/9a130d90-6507-4b6b-9ebf-54f877e5918c/67a8212c271f16f1c3ece4964eca6b13.jpeg"
+                /><img
+                alt="Leslie Dixon Weatherhead: The Will of God (Paperback, Abingdon Press)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/9a130d90-6507-4b6b-9ebf-54f877e5918c.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356920/s/stroke-of-faith">
+            <figure class="cover-container no-cover "><img
+            class="book-cover"
+            src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/no_cover.jpg"
+            alt="No cover"
+        ><figcaption class="cover-caption"><p>Mark Moore, Andy Butcher: Stroke of Faith (2017, Little, Brown Book Group Limited)</p></figcaption></figure>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356921/s/they-only-saw-feet">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/9022f05d-ee63-4e80-b28b-a94da928b6a6/0e85acf7d0c3f288bd6d74035b1b59d9.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/9022f05d-ee63-4e80-b28b-a94da928b6a6/147fe8b9545cc7b60d3b6e9679bdacb4.jpeg"
+                /><img
+                alt="Dean Nelson: They only saw feet (2007, Beacon Hill Press of Kansas City)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/9022f05d-ee63-4e80-b28b-a94da928b6a6.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356984/s/a-dogs-hope">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/b6a8d8e2-2bb8-4345-808d-140c302af190/bac98a068e5de3fe88a99f70da71cadc.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/b6a8d8e2-2bb8-4345-808d-140c302af190/ec441925234fa5f087c70acce0816bc3.jpeg"
+                /><img
+                alt="Casey Wilson: A Dog&#x27;s Hope (Paperback, Grand Central Publishing)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/b6a8d8e2-2bb8-4345-808d-140c302af190.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356925/s/the-love-of-god">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/82dd841d-a043-400a-a929-45e0c7b13f32/1ca070063dbd431468da7936aa648683.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/82dd841d-a043-400a-a929-45e0c7b13f32/a8e8d3a5b9a3bead0feec589837ec92a.jpg"
+                /><img
+                alt="Oswald Chambers: The love of God (1985)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/82dd841d-a043-400a-a929-45e0c7b13f32.webp"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356911/s/the-true-love">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/68cfa768-4499-466a-b539-47d67059e5e1/241671bc70f1bbea4f2b05fc0ab60abe.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/68cfa768-4499-466a-b539-47d67059e5e1/393725d52b1d21ef66de29e317a881b4.jpeg"
+                /><img
+                alt="Samy Tanagho: The True Love (n/a)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/68cfa768-4499-466a-b539-47d67059e5e1.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356910/s/built-different">
+            <figure class="cover-container no-cover "><img
+            class="book-cover"
+            src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/no_cover.jpg"
+            alt="No cover"
+        ><figcaption class="cover-caption"><p>Gabe Poirot: Built Different (2023, Harrison House Publishers)</p></figcaption></figure>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356909/s/i-am-in-here-hb">
+            <figure class="cover-container no-cover "><img
+            class="book-cover"
+            src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/no_cover.jpg"
+            alt="No cover"
+        ><figcaption class="cover-caption"><p>Creston Mapes: I Am in Here (HB) (2024, Indy Pub)</p></figcaption></figure>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356977/s/no-wonder-they-call-him-the-savior">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/d271e54c-5d10-4d7e-9b0c-213e1eec8f67/b689847fca9c3230f114f2165158b64b.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/d271e54c-5d10-4d7e-9b0c-213e1eec8f67/9a5abbca2d25745b4c01f6d81cd4f692.jpeg"
+                /><img
+                alt="Max Lucado: No Wonder They Call Him the Savior (Paperback, Multnomah)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/d271e54c-5d10-4d7e-9b0c-213e1eec8f67.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356968/s/receiving-from-heaven">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/9e40c1dd-2998-4c82-982e-38b6f5758a64/937151f337383b9dfeb25efdb0e07dd9.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/9e40c1dd-2998-4c82-982e-38b6f5758a64/179511e24b5bc11e49554bdd2513b1d6.jpeg"
+                /><img
+                alt="Kevin Zadai: Receiving from Heaven (2020, Destiny Image Publishers)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/9e40c1dd-2998-4c82-982e-38b6f5758a64.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356965/s/the-chance">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/92e1414e-872d-4a97-929a-eb79fa1ce3a5/5c652be9e53a3aff879c430408f88143.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/92e1414e-872d-4a97-929a-eb79fa1ce3a5/3bdad85ee7190f69db66b5807e3ff78d.jpeg"
+                /><img
+                alt="Karen Kingsbury: The chance (2013, Howard Books)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/92e1414e-872d-4a97-929a-eb79fa1ce3a5.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356901/s/perfectly-yourself">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/489e955f-49b5-4391-b7a3-ba07e2a64b1a/95c5946055a81dd3794bc94e22ecff39.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/489e955f-49b5-4391-b7a3-ba07e2a64b1a/45ae8c4518060cdcd11b464fe8eba3fd.jpeg"
+                /><img
+                alt="Matthew Kelly: Perfectly Yourself (Hardcover, Ballantine Books)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/489e955f-49b5-4391-b7a3-ba07e2a64b1a.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356900/s/minecraft-zombies">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/b30738cd-f556-4fa7-a0a5-16cc3b339040/2e75e2ca7684a6dcb7e8bf08990ca8ee.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/b30738cd-f556-4fa7-a0a5-16cc3b339040/75272a5fbeb57f2be9e79d19d67f91ae.jpeg"
+                /><img
+                alt="Mojang: Minecraft Zombies (2022, Random House Publishing Group, Random House Worlds)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/b30738cd-f556-4fa7-a0a5-16cc3b339040.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356898/s/small-miracles-extraordinary-coincidences-from-everyday-life">
+            <figure class="cover-container no-cover "><img
+            class="book-cover"
+            src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/images/no_cover.jpg"
+            alt="No cover"
+        ><figcaption class="cover-caption"><p>Yitta Halberstam, Yitta Halberstam Mandelbaum: Small miracles : extraordinary coincidences from everyday life</p></figcaption></figure>
+
+        </a>
+    </div>
+    
+    
+    
+    <div class="column is-one-fifth-tablet is-half-mobile">
+        <a href="/book/2356952/s/the-gauntlet">
+            <picture class="cover-container "><source
+                    type="image/webp"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/4b362587-ccf9-4672-ab9b-e7c44d988d2e/fec96492ffd0f98f711c6bb6e20f26c4.webp"
+                /><source
+                    type="image/jpg"
+                    srcset="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/thumbnails/covers/4b362587-ccf9-4672-ab9b-e7c44d988d2e/2005f922649b725d0e390e7709b2de74.jpeg"
+                /><img
+                alt="Eoin Colfer: The gauntlet (2016)"
+                class="book-cover"
+                itemprop="thumbnailUrl"
+                src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/images/covers/4b362587-ccf9-4672-ab9b-e7c44d988d2e.jpeg"
+            ></picture>
+
+        </a>
+    </div>
+    
+    
+</section>
+
+
+
+
+
+            
+        
+    </div>
+</main>
+
+<div role="region" aria-live="polite" id="live-messages">
+    <p id="status-success-message" class="live-message is-sr-only is-hidden">Successfully posted status</p>
+    <p id="status-error-message" class="live-message notification is-danger p-3 pr-5 pl-5 is-hidden">Error posting status</p>
+</div>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-2">
+                <p>
+                    <a href="/about">About BookWyrm</a>
+                </p>
+                
+                <p>
+                    <a href="mailto:mousereeve@riseup.net">Contact site admin</a>
+                </p>
+                
+                <p>
+                    <a href="https://docs.joinbookwyrm.com/">Documentation</a>
+                </p>
+                
+            </div>
+            <div class="column is-2">
+                <p>
+                    <a href ="/conduct">Code of Conduct</a>
+                </p>
+                <p>
+                    <a href ="/privacy">Privacy Policy</a>
+                </p>
+                
+            </div>
+            <div class="column content">
+                
+                <p>
+                    <span class="icon icon-heart"></span>
+                    Support BookWyrm on <a href="https://www.patreon.com/bookwyrm" target="_blank" rel="nofollow noopener noreferrer">Patreon</a>
+                </p>
+                
+                <p>
+                BookWyrm's source code is freely available. You can contribute or report issues on <a href="https://github.com/bookwyrm-social/bookwyrm" target="_blank" rel="nofollow noopener noreferrer">GitHub</a>.
+                </p>
+            </div>
+            
+            <div class="column is-4">
+                <p>BookWyrm is managed from the unceded ancestral homeland of the <a href="https://www.ramaytush.org/" target="_blank" rel="nofollow noopener noreferrer">Ramaytush Ohlone</a> peoples, the original inhabitants of the San Francisco Peninsula. A portion of the proceeds go towards the <a href="https://www.ramaytush.org/donate.html" target="_blank"  rel="nofollow noopener noreferrer"><em> Yunakin</em> land tax</a>.</p>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+
+<script nonce="JCO1Zo4fr9E9i9hUdiZ1CQ==">
+    var csrf_token = 'YYwKTQoNs8FggHhwOienPu1j6Anm1drLzGg180wmSbrEcQ9bd5sBG7eKNJ6WOZJP';
+</script>
+
+<script src="/jsi18n/"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/bookwyrm.js"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/localstorage.js"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/status_cache.js"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/xhr_files.js"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/vendor/quagga.min.js"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/vendor/shepherd.min.js"></script>
+<script src="https://bookwyrm-social.sfo3.digitaloceanspaces.com/static/js/guided_tour.js"></script>
+
+
+
+</body>
+</html>

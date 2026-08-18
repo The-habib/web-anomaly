@@ -1,0 +1,60 @@
+{
+  "run_id": "TREASURE_RUN_0002",
+  "corpus_version": "Atlas Corpus v2 (1,000 domains)",
+  "sample_seed": 101,
+  "sample_size": 100,
+  "execution_mode": "LIVE_BLIND",
+  "selected_domain_hash": "28a252280f4dfd854d858dccf591cc4f0c9f91897ac23f374839b6ba143758bc",
+  "start_timestamp_utc": "2026-08-18T07:31:43Z",
+  "end_timestamp_utc": "2026-08-18T07:32:30Z",
+  "elapsed_seconds": 46.22,
+  "total_candidates": 1403,
+  "total_investigated": 100,
+  "human_validated_count": 0,
+  "potential_treasures_count": 21,
+  "dismissed_count": 79,
+  "false_positives_count": 0,
+  "strategy_performance": {
+    "ORPHAN_PATH": {
+      "candidates": 27,
+      "investigated": 27,
+      "potential": 0,
+      "validated": 0
+    },
+    "USER_SPACE": {
+      "candidates": 24,
+      "investigated": 24,
+      "potential": 17,
+      "validated": 0
+    },
+    "TECHNOLOGY_FOSSIL": {
+      "candidates": 239,
+      "investigated": 48,
+      "potential": 4,
+      "validated": 0
+    },
+    "HISTORICAL_SURVIVOR": {
+      "candidates": 1113,
+      "investigated": 1,
+      "potential": 0,
+      "validated": 0
+    }
+  },
+  "reference_comparison_summary": {
+    "total_evaluated": 100,
+    "reference_recoveries_count": 2,
+    "new_to_atlas_count": 98,
+    "reference_comparison_file": "data/reference_controls/reference_comparison.jsonl"
+  },
+  "artifact_hashes": {
+    "sample_manifest.json": "f193a8c7927f863590a6cc96ecbb8672db746997334cf2cc45d7b148801d7ca0",
+    "candidates.jsonl": "21be4b1411e5906a98a5de178a699c8e8e49f444474397139423f412c212c06c",
+    "investigations.jsonl": "6e88ab71ce5268d861eaad3b087bb630d77e6830a0fc38af5f1c371b2a1749bc",
+    "review_packets.jsonl": "0bef5a40182e49c346c107f3859b7d5eeb4dd9f63362586594ab951d62035f67",
+    "lineage.jsonl": "088a1139f28ab1d19a67b6f55421decf849d8bf130b52d60f9a28f4439300262",
+    "prior_art.jsonl": "d400e9dc7e14038c99d0115d19e926c784afa14596ff1420428cd3fa763685e4",
+    "potential_treasures.jsonl": "dcaffdce4d4a41a199ff7b50ed67aa2faca9d88d19e5e99c270e932a367d037b",
+    "reference_comparison.jsonl": "3200ec41f2ccbdafad49d575ceb14132fae007ab88b571d4e2d1a342fe5ded5b",
+    "TREASURE_FEED_RUN_0002.md": "f4a8a8ffa2f264fd1d9ad351a25a04e02877d437c5a757c84547b773092c7599"
+  }
+}

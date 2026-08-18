@@ -1,0 +1,47 @@
+{
+  "url": "https://example.org",
+  "metrics": {
+    "first_seen": "20200101120000",
+    "last_seen": "20200101120000",
+    "earliest_iso": "2020-01-01T12:00:00Z",
+    "latest_iso": "2020-01-01T12:00:00Z",
+    "years_span": 0,
+    "total_captures": 2,
+    "unique_years_observed": 1,
+    "observed_year_ratio": 1.0,
+    "longest_evidence_gap_years": 0.0,
+    "average_captures_per_year": 2.0,
+    "continuity_level": "HISTORICAL_PRESENCE",
+    "continuity_claim": "short_span_presence",
+    "archive_sources": [
+      "commoncrawl",
+      "wayback"
+    ],
+    "has_documented_failures": false,
+    "failure_intervals": []
+  },
+  "events": [
+    {
+      "timestamp": "20200101120000",
+      "datetime_iso": "2020-01-01T12:00:00Z",
+      "source": "wayback",
+      "status_code": 200,
+      "content_length": null,
+      "mime_type": null,
+      "digest": null,
+      "snapshot_url": null,
+      "notes": null
+    },
+    {
+      "timestamp": "20200101120000",
+      "datetime_iso": "2020-01-01T12:00:00Z",
+      "source": "commoncrawl",
+      "status_code": 200,
+      "content_length": null,
+      "mime_type": null,
+      "digest": null,
+      "snapshot_url": null,
+      "notes": null
+    }
+  ]
+}
