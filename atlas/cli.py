@@ -577,6 +577,76 @@ def cmd_review(args):
         subs, adjs, val_discs = import_human_review_submissions(Path(args.file))
         print(f"[+] Imported {len(subs)} submissions, {len(val_discs)} validated discoveries promoted.")
 
+def cmd_treasure(args):
+    print_banner()
+    from atlas.treasure.pipeline import execute_treasure_hunt
+    from atlas.treasure.release_gate import run_treasure_release_gate
+    from pathlib import Path
+    import json
+
+    if args.treasure_action == "hunt":
+        print("[*] Initiating Autonomous Internet Archaeology Treasure Hunt...")
+        res = execute_treasure_hunt(
+            count=args.count,
+            seed=args.seed,
+            category=args.category,
+            deep=args.deep,
+            resume=args.resume
+        )
+        print("\n===============================================================")
+        print("                 ATLAS TREASURE HUNT COMPLETE")
+        print("===============================================================")
+        print(f"Candidates Discovered: {res['candidates_discovered_count']}")
+        print(f"Candidates Investigated: {res['candidates_investigated_count']}")
+        print(f"Validated Treasures:    {res['validated_treasures_count']}")
+        print(f"Pending Treasures:      {res['pending_treasures_count']}")
+        print(f"Dismissed / Ordinary:   {res['dismissed_count']}")
+        print(f"Best Discovery Strategy: {res['best_strategy']}")
+        print(f"Runtime Duration:       {res['elapsed_seconds']}s\n")
+        print("TOP DISCOVERED TREASURES:")
+        print("-" * 65)
+        for t in res["top_treasures"]:
+            print(f"#{t['rank']:02d} [{t['treasure_id']}] (Score: {t['score']:.1f}, {t['difficulty']}) - {t['title']}")
+        print("-" * 65)
+        print(f"Master Feed: reports/TREASURE_FEED.md\n")
+
+    elif args.treasure_action == "release-check":
+        print("[*] Executing Treasure Mode Scientific Release Gate Audit...")
+        report = run_treasure_release_gate()
+        print("\nTREASURE MODE SCIENTIFIC RELEASE GATE RESULTS:")
+        print("-" * 65)
+        for check_name, check_data in report["checks"].items():
+            status = "PASS" if check_data["passed"] else "FAIL"
+            print(f"{check_name:<44}: {status}")
+        print("-" * 65)
+        print(f"SCIENTIFIC RELEASE:   {report['decision']}")
+        print(f"GATE CHECKS PASSED:   {report['passed_checks']} / {report['total_checks']}\n")
+        if not report["all_passed"]:
+            sys.exit(1)
+
+    elif args.treasure_action == "list":
+        t_file = Path("data/treasures/treasures.jsonl")
+        if not t_file.exists():
+            print("[*] No validated treasures found. Run 'atlas treasure hunt' first.")
+            return
+        with open(t_file, "r", encoding="utf-8") as f:
+            treasures = [json.loads(l) for l in f if l.strip()]
+        print(f"\n[*] Found {len(treasures)} Validated Archaeological Treasures:")
+        print("-" * 75)
+        for idx, t in enumerate(treasures, 1):
+            print(f"#{idx:02d} | {t['treasure_id']} | Score: {t['treasure_score']:.1f} | {t['title']} ({t['full_url']})")
+        print("-" * 75 + "\n")
+
+    elif args.treasure_action == "show":
+        if not args.treasure_id:
+            print("[!] Error: Specify --id <TREASURE_ID> to inspect.")
+            sys.exit(1)
+        dossier_path = Path(f"reports/treasures/{args.treasure_id}.md")
+        if dossier_path.exists():
+            print(dossier_path.read_text(encoding="utf-8"))
+        else:
+            print(f"[!] Treasure dossier not found at {dossier_path}.")
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -637,7 +707,7 @@ def main():
     research_parser = subparsers.add_parser("research", help="Scientific Release Gate & Research Validation")
     research_parser.add_argument("research_action", choices=["release-check"], help="Research action")
 
-    # phase1_5 (Phase 1.5)
+    # phase1_5 (Phase 1.5 Deep Web Archaeology Subsystem)
     p15_parser = subparsers.add_parser("phase1_5", help="Phase 1.5 Deep Web Archaeology Subsystem")
     p15_parser.add_argument("p15_action", choices=["sample", "run", "resume", "review", "compare", "report"], help="Phase 1.5 action")
     p15_parser.add_argument("--mode", choices=["LIVE", "SIMULATION", "REPLAY"], default="LIVE", help="Execution mode")
@@ -667,6 +737,16 @@ def main():
     review_parser = subparsers.add_parser("review", help="Independent Human Review Interface")
     review_parser.add_argument("review_action", choices=["export-packets", "import"], help="Review operation")
     review_parser.add_argument("--file", "-f", help="Path to submissions JSONL file for import", default=None)
+
+    # treasure (Treasure Mode Autonomous Engine)
+    treasure_parser = subparsers.add_parser("treasure", help="Treasure Mode Autonomous Discovery Engine")
+    treasure_parser.add_argument("treasure_action", choices=["hunt", "list", "show", "release-check"], help="Treasure action")
+    treasure_parser.add_argument("--count", "-n", type=int, default=25, help="Target number of candidate URLs to investigate")
+    treasure_parser.add_argument("--seed", "-s", type=int, default=42, help="Deterministic sampling seed")
+    treasure_parser.add_argument("--category", "-c", type=str, default=None, help="Filter to specific domain category")
+    treasure_parser.add_argument("--deep", action="store_true", default=True, help="Enable deep structural investigation")
+    treasure_parser.add_argument("--resume", action="store_true", default=False, help="Resume from last checkpoint")
+    treasure_parser.add_argument("--id", dest="treasure_id", type=str, default=None, help="Treasure ID to inspect")
 
     args = parser.parse_args()
 
@@ -717,6 +797,8 @@ def main():
         cmd_phase1_9_1(args)
     elif args.command == "review":
         cmd_review(args)
+    elif args.command == "treasure":
+        cmd_treasure(args)
     else:
         print_banner()
         parser.print_help()

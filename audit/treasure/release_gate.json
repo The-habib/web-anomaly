@@ -1,0 +1,53 @@
+{
+  "gate_name": "TREASURE_MODE_RELEASE_GATE",
+  "all_passed": true,
+  "passed_checks": 11,
+  "total_checks": 11,
+  "decision": "APPROVED_FOR_TREASURE_DISCOVERY",
+  "checks": {
+    "CANDIDATE_INTEGRITY": {
+      "passed": true,
+      "details": "Verified 24 candidates generated across multi-strategy discovery."
+    },
+    "EVIDENCE_HASHES": {
+      "passed": true,
+      "details": "SHA-256 cryptographic digests verified for all 5 validated treasures."
+    },
+    "DISCOVERY_LINEAGE": {
+      "passed": true,
+      "details": "Verified complete discovery lineage for 5 treasures."
+    },
+    "NO_SYNTHETIC_DATA": {
+      "passed": true,
+      "details": "Live HTTP retrieval mode enforced; zero synthetic web evidence."
+    },
+    "NO_DUPLICATE_TREASURES": {
+      "passed": true,
+      "details": "Zero URL duplication across 5 validated treasures."
+    },
+    "RESOURCE_LIMITS": {
+      "passed": true,
+      "details": "Request budgets and timeouts strictly enforced; no unbounded crawling."
+    },
+    "PRIOR_ART_SEPARATION": {
+      "passed": true,
+      "details": "Prior-art obscurity properly classified ({'OBSCURE', 'DOCUMENTED'})."
+    },
+    "REPORT_DATA_RECONCILIATION": {
+      "passed": true,
+      "details": "Master TREASURE_FEED.md and individual dossiers verified on disk."
+    },
+    "RESUME_INTEGRITY": {
+      "passed": true,
+      "details": "Run checkpoint verified for state resumption."
+    },
+    "TEST_SUITE": {
+      "passed": true,
+      "details": "Permanent test suite verified in tests/test_treasure_engine.py."
+    },
+    "ETHICAL_RESTRICTIONS": {
+      "passed": true,
+      "details": "Strict public network observation only; zero credential or penetration testing."
+    }
+  }
+}
