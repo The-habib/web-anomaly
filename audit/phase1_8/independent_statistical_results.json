@@ -1,0 +1,99 @@
+{
+  "audit_version": "1.8.0",
+  "sample_sizes": {
+    "arm_uniform_domains": 100,
+    "arm_density_domains": 100,
+    "arm_uniform_retrievals": 841,
+    "arm_density_retrievals": 1470
+  },
+  "discoveries": {
+    "arm_uniform_discoveries": 0,
+    "arm_density_discoveries": 2
+  },
+  "discovery_yields": {
+    "uniform_yield_per_1000_retrievals": 0.0,
+    "density_yield_per_1000_retrievals": 1.3605,
+    "uniform_yield_per_100_domains": 0.0,
+    "density_yield_per_100_domains": 2.0,
+    "absolute_yield_difference_per_1000": 1.3605
+  },
+  "fisher_exact_tests": {
+    "domain_level": {
+      "contingency_table": [
+        [
+          2,
+          98
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "p_value_two_sided": 0.4975,
+      "p_value_one_sided_greater": 0.2487,
+      "significance_at_0_05": false
+    },
+    "retrieval_level": {
+      "contingency_table": [
+        [
+          2,
+          1468
+        ],
+        [
+          0,
+          841
+        ]
+      ],
+      "p_value_two_sided": 0.5368,
+      "p_value_one_sided_greater": 0.4045,
+      "significance_at_0_05": false
+    }
+  },
+  "rate_ratio_forensics": {
+    "published_rate_ratio": 1361.0,
+    "published_rate_ratio_ci_95": [
+      0.5,
+      15.0
+    ],
+    "published_ci_mathematical_validity": false,
+    "published_rr_derivation_flaw": "Calculated as 1.361 / 0.001 (arbitrary placeholder division). Hardcoded CI [0.5, 15.0] excluded the point estimate 1361.0.",
+    "corrected_haldane_anscombe_retrieval_rate_ratio": {
+      "rate_ratio": 2.8613,
+      "ci_95": [
+        0.1374,
+        59.5984
+      ],
+      "formula": "((2 + 0.5) / 1470.5) / ((0 + 0.5) / 841.5)",
+      "is_ci_valid": true
+    },
+    "corrected_haldane_anscombe_domain_rate_ratio": {
+      "rate_ratio": 5.0,
+      "ci_95": [
+        0.24,
+        104.1468
+      ],
+      "formula": "((2 + 0.5) / 100.5) / ((0 + 0.5) / 100.5)",
+      "is_ci_valid": true
+    }
+  },
+  "exact_poisson_rate_test": {
+    "p_value_greater": 0.4046,
+    "p_value_two_sided": 0.537,
+    "exposure_proportion_pi0": 0.6361,
+    "total_events": 2
+  },
+  "bootstrap_results": {
+    "n_resamples": 10000,
+    "yield_1k_diff_mean": 1.3577,
+    "yield_1k_diff_ci_95": [
+      0.0,
+      3.4364
+    ],
+    "domain_rate_diff_mean": 1.9949,
+    "domain_rate_diff_ci_95": [
+      0.0,
+      5.0
+    ]
+  },
+  "scientific_interpretation": "Because Uniform yielded 0 discoveries and Density yielded 2, the empirical rate ratio is positive (RR_HA = 2.86 per retrieval, 5.00 per domain), but under sparse event counts (N=2 total discoveries across 200 domains), the two-sided Fisher exact p-value is p = 0.4987 (domain) / p = 0.5368 (retrieval). The 95% confidence interval is wide ([0.14, 59.3]). The result is exploratory and PROMISING, but does not constitute conclusive proof."
+}

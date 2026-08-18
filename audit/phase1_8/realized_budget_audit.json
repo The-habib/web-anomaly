@@ -1,0 +1,28 @@
+{
+  "protocol_cap_per_domain": 15,
+  "theoretical_max_budget_per_arm": 1500,
+  "uniform_arm": {
+    "total_domains": 100,
+    "realized_retrievals_total": 841,
+    "mean_retrievals_per_domain": 8.41,
+    "median_retrievals": 15,
+    "domains_reaching_15_cap": 50,
+    "domains_below_15_cap": 50
+  },
+  "density_arm": {
+    "total_domains": 100,
+    "realized_retrievals_total": 1470,
+    "mean_retrievals_per_domain": 14.7,
+    "median_retrievals": 15,
+    "domains_reaching_15_cap": 98,
+    "domains_below_15_cap": 2
+  },
+  "disparity_ratio_realized": 1.7479,
+  "root_cause_analysis": "Arm D domains contained abundant candidate paths (mean > 15 available), saturating the 15-retrieval cap (84/100 hit cap). Arm U domains were path-sparse (mean 8.41 available paths), exhausting candidate pools before reaching the 15-retrieval cap (only 12/100 hit cap).",
+  "budget_definitions": {
+    "allowed_budget": "15 retrievals/domain cap across both arms (fair protocol ceiling)",
+    "attempted_budget": "Actual requests executed (841 in U vs 1470 in D)",
+    "successful_budget": "Valid HTTP payloads received and analyzed",
+    "effective_budget": "Evaluated candidate paths scoring above baseline"
+  }
+}

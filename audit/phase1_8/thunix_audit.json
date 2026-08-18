@@ -1,0 +1,19 @@
+{
+  "domain": "thunix.net",
+  "phase1_6_context": "Validated deep discovery in Phase 1.5/1.6 (thunix.net/~cslug).",
+  "phase1_7_allocation": {
+    "is_in_holdout_cohort": true,
+    "holdout_rank": 168,
+    "is_in_study_arms": false
+  },
+  "phase1_7_actual_discoveries": [
+    "gnu.org",
+    "tilde.club"
+  ],
+  "code_artifact_forensics": {
+    "p17_script_logic": "Filter looked for 'thunix' not in domain. Since thunix was in holdout and not in Arm D, filtering matched all 100 Arm D records (len=2 discoveries).",
+    "p17_branching_bug": "Script had 'if u_yield > 0: rr = ... else: rr_no_thunix = 1.0'. Because u_yield was 0, it hardcoded rr_no_thunix = 1.0 despite discoveries remaining 2.",
+    "false_narrative_generated": "Claimed that excluding thunix reduced rate ratio from 1361 to 1.0, creating an erroneous 'thunix-dominant effect' narrative."
+  },
+  "reconciled_scientific_reality": "thunix.net was never in Phase 1.7 Arm D; the two validated discoveries were gnu.org (/software/halifax/) and tilde.club (/~cslug). Excluding thunix from Arm D is a no-op because it was not in Arm D. The sensitivity drop was an arithmetic artifact of the zero-cell fallback branch."
+}

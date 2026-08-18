@@ -1,0 +1,45 @@
+{
+  "design_classification": "TAIL_SELECTION_VS_REMAINDER_CONTROL",
+  "sampling_order": "Arm D sampled first via descending density sort; Arm U sampled second from remaining eligible pool.",
+  "is_arm_u_true_uniform_population_sample": false,
+  "arm_u_design_note": "Arm U is a remainder control, censored from containing the upper density tail.",
+  "category_balance": {
+    "is_category_distribution_identical": true,
+    "uniform_categories": {
+      "Government": 20,
+      "Long-running companies": 15,
+      "Nonprofits": 15,
+      "Open-source/project sites": 15,
+      "Personal/independent sites": 15,
+      "Universities": 20
+    },
+    "density_categories": {
+      "Government": 20,
+      "Long-running companies": 15,
+      "Nonprofits": 15,
+      "Open-source/project sites": 15,
+      "Personal/independent sites": 15,
+      "Universities": 20
+    }
+  },
+  "density_metrics_comparison": {
+    "d_raw": {
+      "uniform_mean": 27.44,
+      "uniform_median": 14.0,
+      "uniform_min": 1,
+      "uniform_max": 108,
+      "density_mean": 250.26,
+      "density_median": 147.0,
+      "density_min": 68,
+      "density_max": 3898
+    },
+    "d_user": {
+      "uniform_mean": 0.31,
+      "density_mean": 76.99
+    },
+    "total_captures": {
+      "uniform_mean": 27.82,
+      "density_mean": 251.48
+    }
+  }
+}

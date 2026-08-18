@@ -1,0 +1,47 @@
+{
+  "total_validated_discoveries": 2,
+  "discoveries": [
+    {
+      "discovery_id": "DISC-17-0001",
+      "domain": "gnu.org",
+      "discovery_path": "/software/halifax/",
+      "category": "Open-source/project sites",
+      "arm": "DENSITY_PRIORITIZED",
+      "density_tier": "HIGH",
+      "root_score": 0.0,
+      "deep_score": 55.0,
+      "human_verdict": "CLEAR_ANOMALY",
+      "evidence_file_exists": true,
+      "evidence_file_path": "data/phase1_7/evidence/raw_artifacts/gnu.org_software_halifax.html",
+      "sha256": "bcab414744bf85104fd69f2315170135bda87de320974adfa32e68cacd322a56",
+      "size_bytes": 3321,
+      "novelty_classification": "OBSCURE / NEW_TO_ATLAS",
+      "world_novelty": "NEW_TO_ATLAS_PUBLIC_WEB_RELIC",
+      "historical_continuity": "Authentic 1990s/2000s vintage web preservation."
+    },
+    {
+      "discovery_id": "DISC-17-0002",
+      "domain": "tilde.club",
+      "discovery_path": "/~cslug",
+      "category": "Personal/independent sites",
+      "arm": "DENSITY_PRIORITIZED",
+      "density_tier": "EXTREME",
+      "root_score": 35.0,
+      "deep_score": 55.0,
+      "human_verdict": "CLEAR_ANOMALY",
+      "evidence_file_exists": true,
+      "evidence_file_path": "data/phase1_7/evidence/raw_artifacts/tilde.club_tilde_cslug.html",
+      "sha256": "d129e9a86db1cebfdfacc3d8ba525ba709f8c913fb194ed1863a6f86bb95d6da",
+      "size_bytes": 14707,
+      "novelty_classification": "OBSCURE / NEW_TO_ATLAS",
+      "world_novelty": "NEW_TO_ATLAS_PUBLIC_WEB_RELIC",
+      "historical_continuity": "Authentic 1990s/2000s vintage web preservation."
+    }
+  ],
+  "reference_contamination_check": {
+    "cross_checked_with_benchmarks": true,
+    "is_either_discovery_in_negative_controls": false,
+    "is_either_discovery_in_benchmark_fixtures": false,
+    "contamination_status": "NONE"
+  }
+}
