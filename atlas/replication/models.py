@@ -1,32 +1,23 @@
 """
-Data Models for Project Atlas Phase 1.9 Controlled Replication Experiment.
+Data Models for Project Atlas Phase 1.9 & Phase 1.9.1.
+Enforces strict Discovery State Machine, Blind Review Packets, Human Review Submissions,
+and Discovery Lineage Provenance.
 """
 
 from enum import Enum
-from typing import Dict, List, Optional, Any
+from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
 
 class Phase19ArmType(str, Enum):
-    TREATMENT = "TREATMENT"
-    CONTROL = "CONTROL"
-
-class PathOrderStrategy(str, Enum):
-    DENSITY_PRIORITIZED = "DENSITY_PRIORITIZED"
-    NEUTRAL_RANDOM = "NEUTRAL_RANDOM"
+    TREATMENT = "TREATMENT"  # Density-informed path prioritization
+    CONTROL = "CONTROL"      # Neutral pseudo-random path ordering
 
 class SlotStatus(str, Enum):
+    PLANNED = "PLANNED"
     SUCCESS = "SUCCESS"
     HTTP_ERROR = "HTTP_ERROR"
     TIMEOUT = "TIMEOUT"
-    REDIRECT = "REDIRECT"
-    EMPTY_RESPONSE = "EMPTY_RESPONSE"
-    NON_HTML = "NON_HTML"
     EMPTY_POOL_EXHAUSTED = "EMPTY_POOL_EXHAUSTED"
-
-class AnalysisPopulation(str, Enum):
-    INTENT_TO_TREAT = "INTENT_TO_TREAT"
-    FULL_EXPOSURE = "FULL_EXPOSURE"
-    PER_PROTOCOL = "PER_PROTOCOL"
 
 class DiscoveryStatus(str, Enum):
     CLEAR_ANOMALY = "CLEAR_ANOMALY"
@@ -35,8 +26,8 @@ class DiscoveryStatus(str, Enum):
     INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
 
 class PriorArtStatus(str, Enum):
-    DOCUMENTED = "DOCUMENTED"
     OBSCURE = "OBSCURE"
+    DOCUMENTED = "DOCUMENTED"
     PRIOR_ART_UNCERTAIN = "PRIOR_ART_UNCERTAIN"
 
 class ReplicationVerdict(str, Enum):
@@ -46,32 +37,37 @@ class ReplicationVerdict(str, Enum):
     INCONCLUSIVE = "INCONCLUSIVE"
     DESIGN_FAILURE = "DESIGN_FAILURE"
 
-class Phase19DomainRecord(BaseModel):
+class DiscoveryState(str, Enum):
+    """
+    Formal 8-Stage Discovery State Machine.
+    Transitions must proceed sequentially:
+    OBSERVED -> RETRIEVED -> SCORED -> CANDIDATE -> REVIEW_PENDING -> HUMAN_REVIEWED -> (VALIDATED | REJECTED | INSUFFICIENT)
+    """
+    OBSERVED = "OBSERVED"
+    RETRIEVED = "RETRIEVED"
+    SCORED = "SCORED"
+    CANDIDATE = "CANDIDATE"
+    REVIEW_PENDING = "REVIEW_PENDING"
+    HUMAN_REVIEWED = "HUMAN_REVIEWED"
+    VALIDATED = "VALIDATED"
+    REJECTED = "REJECTED"
+    INSUFFICIENT = "INSUFFICIENT"
+
+class PopulationDomainRecord(BaseModel):
     domain: str
     category: str
-    canonical_url: str
     d_raw: int
-    d_year: float
-    d_capture: float
-    d_span: int
-    d_user: int
-    d_legacy: int
-    d_diversity: float
-    d_content: float
-    earliest_observed_year: int
-    latest_observed_year: int
-    total_captures: int
-    density_tier: Optional[str] = "UNSPECIFIED"
+    corpus_version: str = "v2"
+    is_holdout: bool = False
 
-class BlockPairRecord(BaseModel):
+class BlockRecord(BaseModel):
     block_id: str
     category: str
-    treatment_domain: str
-    control_domain: str
-    treatment_d_raw: int
-    control_d_raw: int
-    d_raw_delta: int
-    random_seed: int
+    domain_treatment: str
+    domain_control: str
+    d_raw_treatment: int
+    d_raw_control: int
+    delta_d_raw: int
 
 class AssignmentRecord(BaseModel):
     domain: str
@@ -79,34 +75,32 @@ class AssignmentRecord(BaseModel):
     block_id: str
     arm: Phase19ArmType
     blinded_arm_label: str
-    path_strategy: PathOrderStrategy
-    fixed_slot_budget: int = 10
     d_raw: int
-    density_tier: Optional[str] = "UNSPECIFIED"
+    allocated_slots: int = 10
+
+class RetrievalSlotRecord(BaseModel):
+    domain: str
+    slot_number: int
+    arm: Phase19ArmType
+    blinded_arm_label: str
+    candidate_url: str
+    path: str
+    path_priority: float = 0.0
+    path_order_rank: int
+    status: SlotStatus = SlotStatus.PLANNED
+    http_status: Optional[int] = None
+    html_sha256: Optional[str] = None
+    artifact_path: Optional[str] = None
+    raw_anomaly_score: Optional[float] = None
+    triggered_rules: List[str] = Field(default_factory=list)
 
 class CandidatePoolRecord(BaseModel):
     domain: str
     category: str
     arm: Phase19ArmType
     total_candidates_found: int
-    candidate_paths: List[str]
-    has_full_exposure: bool  # len(candidate_paths) >= 10
-
-class RetrievalSlotRecord(BaseModel):
-    domain: str
-    slot_number: int  # 1 to 10
-    arm: Phase19ArmType
-    blinded_arm_label: str
-    candidate_url: str
-    path: str
-    path_priority: float
-    path_order_rank: int
-    status: SlotStatus
-    http_status: Optional[int] = None
-    html_sha256: Optional[str] = None
-    artifact_path: Optional[str] = None
-    raw_anomaly_score: float = 0.0
-    triggered_rules: List[str] = Field(default_factory=list)
+    ordered_candidate_paths: List[str]
+    has_full_exposure: bool
 
 class Phase19ResultRecord(BaseModel):
     domain: str
@@ -123,14 +117,68 @@ class Phase19ResultRecord(BaseModel):
     best_deep_classification: str
     best_deep_rules: List[str]
     slots_allocated: int = 10
-    slots_attempted: int
-    slots_successful: int
-    candidates_available: int
-    is_full_exposure: bool
-    is_candidate_discovery: bool  # max_deep_score >= 40 and root < 40
-    is_validated_discovery: bool  # verified by human review
+    slots_attempted: int = 0
+    slots_successful: int = 0
+    candidates_available: int = 0
+    is_full_exposure: bool = False
+    is_candidate_discovery: bool = False
+    is_validated_discovery: bool = False
     discovery_url: Optional[str] = None
 
+# Decontaminated Blind Review Packet (strictly hides score, arm, density rank, expected answers)
+class ReviewPacket(BaseModel):
+    packet_id: str
+    candidate_id: str
+    domain: str
+    evaluated_path: str
+    full_url: str
+    page_title: str = ""
+    text_snippet: str = ""
+    detected_structural_features: List[str] = Field(default_factory=list)
+    timeline_summary: str = ""
+    evidence_sha256: str
+    evidence_artifact_path: str
+    generated_at_utc: str
+    protocol_version: str = "1.9.1"
+    blinding_level: str = "PARTIALLY_BLIND_SCORE_AND_ARM_STRIPPED"
+
+# Human Review Submission from real reviewer import
+class HumanReviewSubmission(BaseModel):
+    submission_id: str
+    packet_id: str
+    candidate_id: str
+    reviewer_id: str
+    review_timestamp_utc: str
+    verdict: DiscoveryStatus
+    evidence_quality: str = "HIGH"
+    historical_significance: str = "AUTHENTIC_UNMODERNIZED_RELIC"
+    confidence: str = "HIGH"
+    reviewer_notes: str
+    is_genuine_human: bool = True
+
+class AdjudicationRecord(BaseModel):
+    adjudication_id: str
+    candidate_id: str
+    review_submission_ids: List[str]
+    consensus_reached: bool
+    final_verdict: DiscoveryStatus
+    adjudication_notes: str
+    adjudicated_at_utc: str
+
+class DiscoveryLineageRecord(BaseModel):
+    candidate_id: str
+    domain: str
+    path: str
+    full_url: str
+    arm: Phase19ArmType
+    raw_anomaly_score: float
+    evidence_sha256: str
+    state: DiscoveryState
+    human_verdict: Optional[DiscoveryStatus] = None
+    validation_status: str = "HUMAN_REVIEW_PENDING"
+    lineage_notes: str
+
+# Legacy models maintained for historical schema compatibility
 class ReviewRecord(BaseModel):
     dossier_id: str
     domain: str
