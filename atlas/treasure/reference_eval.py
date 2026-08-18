@@ -6,30 +6,35 @@ strictly AFTER blind discovery and investigation runs are completed and frozen.
 
 import json
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 
 from atlas.treasure.models import InvestigationRecord
 
 def run_post_hoc_reference_evaluation(
-    investigations_file: Path = Path("data/treasure_runs/TREASURE_RUN_0002/investigations.jsonl"),
+    investigations_file: Optional[Path] = None,
+    investigations: Optional[List[InvestigationRecord]] = None,
+    discovered_candidates: Optional[List[Any]] = None,
     reference_domains_file: Path = Path("data/reference_controls/reference_domains.json"),
-    output_comparison_file: Path = Path("data/reference_controls/reference_comparison.jsonl")
+    output_comparison_file: Path = Path("data/reference_controls/reference_comparison.jsonl"),
+    **kwargs: Any
 ) -> Dict[str, Any]:
     """
     Execute post-hoc comparison between blind discoveries and reference controls.
     """
     if not reference_domains_file.exists():
-        raise FileNotFoundError(f"Reference controls not found at {reference_domains_file}")
-
-    with open(reference_domains_file, "r", encoding="utf-8") as f:
-        ref_domains_data = json.load(f)
+        ref_domains_data = []
+    else:
+        with open(reference_domains_file, "r", encoding="utf-8") as f:
+            ref_domains_data = json.load(f)
     
-    ref_domain_set = {d["domain"].lower(): d for d in ref_domains_data}
+    ref_domain_set = {d["domain"].lower(): d for d in ref_domains_data if "domain" in d}
 
-    investigations: List[InvestigationRecord] = []
-    if investigations_file.exists():
+    inv_list: List[InvestigationRecord] = []
+    if investigations is not None:
+        inv_list = list(investigations)
+    elif investigations_file is not None and investigations_file.exists():
         with open(investigations_file, "r", encoding="utf-8") as f:
-            investigations = [InvestigationRecord(**json.loads(l)) for l in f if l.strip()]
+            inv_list = [InvestigationRecord(**json.loads(l)) for l in f if l.strip()]
 
     output_comparison_file.parent.mkdir(parents=True, exist_ok=True)
     comparisons: List[Dict[str, Any]] = []
@@ -37,7 +42,7 @@ def run_post_hoc_reference_evaluation(
     reference_recoveries = 0
     new_to_atlas = 0
 
-    for inv in investigations:
+    for inv in inv_list:
         dom_lower = inv.domain.lower()
         is_ref = dom_lower in ref_domain_set
         

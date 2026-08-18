@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Daring Fireball: Baby Needs a New Pair of Processors</title>
+
+	<link rel="apple-touch-icon-precomposed" href="/graphics/apple-touch-icon.png" />
+	<link rel="shortcut icon" href="/graphics/favicon.ico?v=005" />
+	<link rel="mask-icon" href="/graphics/dfstar.svg" color="#4a525a">
+	<link rel="stylesheet" type="text/css" media="screen"  href="/css/fireball_screen.css?v1.2026-05-29" />
+	<link rel="stylesheet" type="text/css" media="screen"  href="/css/ie_sucks.php" />
+	<link rel="stylesheet" type="text/css" media="print"   href="/css/fireball_print.css?v01" />
+	<link rel="alternate"  type="application/atom+xml"     href="/feeds/main" />
+	<link rel="alternate"  type="application/json"         href="/feeds/json" />
+	<link rel="me"                                         href="https://mastodon.social/@gruber" />
+	<link rel="me"                                         href="https://mastodon.social/@daringfireball" />
+	<script src="/js/js-global/FancyZoom.js"></script>
+	<script src="/js/js-global/FancyZoomHTML.js"></script>
+	<link rel="home" href="/" title="Home" />
+	
+	<link rel="next" href="https://daringfireball.net/2002/08/jack_valenti_does_not_smell_like_teen_spirit" title="Jack Valenti Does Not Smell Like Teen Spirit" />
+	<!-- Twitter Card bullshit -->
+	<meta name="twitter:card"         content="summary" />
+	<meta name="twitter:site"         content="@daringfireball" />
+	<meta name="twitter:creator"      content="@gruber" />
+	<meta name="twitter:title"        content="Baby Needs a New Pair of Processors" />
+	<meta name="twitter:description"  content="Have pro users stayed away from Mac OS X because they weren’t happy with the previous crop of PowerMacs? Or, have they postponed buying new PowerMacs because they aren’t happy with Mac OS X?" />
+	<meta name="twitter:image"        content="https://daringfireball.net/graphics/df-wide-card.png" />
+	<!-- Facebook Open Graph bullshit -->
+	<meta property="og:title"       content="Baby Needs a New Pair of Processors" />
+	<meta property="og:type"        content="article" />
+	<meta property="og:url"         content="https://daringfireball.net/2002/08/baby_needs_a_new_pair_of_processors" />
+	<meta property="og:image"       content="https://daringfireball.net/graphics/df-wide-card.png" />
+	<meta property="og:site_name"   content="Daring Fireball" />
+	<meta property="og:description" content="Have pro users stayed away from Mac OS X because they weren’t happy with the previous crop of PowerMacs? Or, have they postponed buying new PowerMacs because they aren’t happy with Mac OS X?" />
+
+	<!-- Short URL:	http://df4.us/6 -->
+</head>
+
+<body onload="setupZoom()">
+<div id="Box">
+<div id="Banner">
+<a href="/" title="Daring Fireball: Home"><img src="/graphics/logos/" alt="Daring Fireball" height="56" /></a>
+</div>
+<div id="Sidebar">
+<p>By <strong>John&nbsp;Gruber</strong></p>
+
+<ul><!--&#9733;-->
+<li><a href="/archive/" title="Previous articles.">Archive</a></li><li><script>
+// <![CDATA[
+function ReadCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
+}
+var display_linked_list = ReadCookie('displayLinkedList');
+var li_linked = '<a href="/linked/" title="The Linked List.">Linked List<\/a>';
+if (display_linked_list == "hide") {
+	// Linked List is off on home page, so show it in menu:
+	document.write(li_linked + "<\/li>\n<li>");
+}
+else {
+	// Default to not putting separate LL item in sidebar:
+}
+// ]]>
+</script></li>
+<li><a href="/thetalkshow/" title="America’s favorite 3-star podcast.">The Talk Show</a></li>
+<li><a href="https://dithering.fm/" title="Two episodes per week, 15 minutes per episode. Not a minute less, not a minute more.">Dithering</a></li>
+<li><a href="/projects/" title="Software projects, including SmartyPants and Markdown.">Projects</a></li>
+<li><a href="/contact/" title="How to send email or feedback regarding Daring Fireball.">Contact</a></li>
+<li><a href="/colophon/" title="About this site and the tools used to produce it.">Colophon</a></li>
+<li><a href="/feeds/">Feeds / Social</a></li>
+<!-- 
+<li><a href="https://twitter.com/daringfireball">Twitter</a></li>
+ -->
+<li><a href="/feeds/sponsors/">Sponsorship</a></li>
+</ul>
+
+<div id="SidebarMartini">
+<a href="https://drata.com/daring">
+	<img alt="Drata" src="/martini/images/drata-blue.png" height="90">
+</a>
+<p>Manage GRC Faster with <a href="https://drata.com/daring">Drata’s Agentic Trust Management Platform</a></p>
+</div>
+
+</div> <!-- Sidebar -->
+
+<div id="Main">
+
+<div class="article">
+<h1>Baby Needs a New Pair of Processors</h1>
+<h6 class="dateline">Tuesday, 13 August 2002</h6>
+
+<p>
+You might think that if you were about to debut a Macintosh-oriented weblog, it would be quite a stroke of good fortune for some Really Big News to break on the very day you plan to start writing. Like, say, a <a href="https://web.archive.org/web/20020814192759/http://www.apple.com/pr/library/2002/aug/13pmg4.html">brand new line of PowerMac G4’s</a>.
+</p>
+
+<p>
+The Daring Fireball’s verdict? Well, they certainly pass the “Do I Want One?” test. While the processor speeds are — surprise, surprise — only modest improvements over the previous models, the new plumbing under the hood is a nice improvement indeed: the mid- and high-end models feature a 167MHz bus and PC2700 DDR SDRAM. But is there a single surprise in the feature set? The architectural improvements (the faster bus and DDR SDRAM) debuted with the <a href="https://web.archive.org/web/20021010194732/http://www.apple.com/xserve/">Xserve</a>, which was announced nearly three months ago.
+</p>
+
+<p>
+Apple is continuing to offer a very appealing <a href="https://web.archive.org/web/20020903110012/http://www.apple.com/promo/dualoffer/">display promotion</a> with the new G4’s: $200 towards the purchase of a 17&#34; flat-panel, and $500 towards a Cinema Display. And, if you have a lot more money than the Daring Fireball does and want to take advantage of the new machines’ built-in support for dual displays, you can use this rebate offer to buy as many monitors as you want. Sweet.
+</p>
+
+<p>
+Recent Apple news and discussion has been inexplicably focused on the cost of upcoming software, namely Jaguar (which people want to be free or cheap for existing OS X users) and .Mac (née <i>iTools</i>, which, once again, people want to be free or cheap). (Come to think of it, this overblown focus on the price of Jaguar and .Mac isn’t really inexplicable at all — the modern Mac user is a cheap bastard.)
+</p>
+
+<p>
+But these issues are silly and shortsighted. There are two big problems facing Apple. The first is that PowerMac sales are down, and have been down for quite some time. No other problem compares to this one in magnitude, because the fact remains that Apple is in the business of selling computers. And while low-end consumer machines like the iMac and iBook have been great for revenue, it’s the high-end PowerBooks and PowerMacs that keep the company in business. It’s simple: low-end machines are low-margin, high-end machines are high-margin.
+</p>
+
+<p>
+The second problem is the relatively slow adoption rate of Mac OS X, especially amongst professional users (where by “professional users” I mean artists, graphic designers, and multimedia producers). Developers and Unix geeks have been all over Mac OS X since before it even shipped. And 10.1 has proven to be a pretty good system for moms and pops — the “I just use the Web and email” crowd. It’s the pro users who haven’t switched to OS X, the very same people who haven’t been buying new PowerMacs lately.
+</p>
+
+<p>
+Note that neither problem is dire. PowerMac sales have been poor, not terrible. And Mac OS X is in most regards a success. The fear, before Mac OS X debuted, was that it was going to be an utter flop. Which would have been absolutely catastrophic for Apple, because there was no Plan B. While that situation has clearly been averted, Mac OS X is by no means a smash hit.
+</p>
+
+<p>
+The connection between these two problems is fairly obvious. While the new PowerMacs can still run Mac OS 9 (<a href="http://www.eweek.com/print_article/0,3668,a%3D29748,00.asp">rumors to the contrary</a> notwithstanding), they’re obviously meant for Mac OS X; a second processor just doesn’t do much for you under Mac OS 9. The big question is which problem is driving the other: Have pro users stayed away from Mac OS X because they weren’t happy with the previous crop of PowerMacs? Or, have they postponed buying new PowerMacs because they aren’t happy with Mac OS X?
+</p>
+
+<p>
+If it’s the former, it’ll be interesting to see if the new machines announced today turn things around. Faster buses, faster memory, and (slightly) faster processors. Good news all around.
+</p>
+
+<p>
+But if it’s the latter — that is, if pro users are giving the finger to Mac OS X — things could get ugly.
+</p>
+
+
+<div id="PreviousNext">
+<table>
+
+<tr valign="top"><td align="right"><strong>Next:</strong></td><td><a href="https://daringfireball.net/2002/08/jack_valenti_does_not_smell_like_teen_spirit">Jack Valenti Does Not Smell Like Teen Spirit</a></td></tr>
+</table>
+</div> <!-- PreviousNext -->
+</div> <!-- article -->
+
+<div id="Footer">
+<form id="SiteSearch" action="https://daringfireball.net/search" method="get" style="margin-bottom: 2.5em;">
+<div>
+<input name="q" type="text" value="" style="margin-right: 8px; width: 66%;" />
+<input type="submit" value="Search" />
+</div>
+</form>
+
+<p class="smallprint">
+<a href="/preferences/" title="Customize the font size and presentation options for this web site.">Display Preferences</a>
+<br /><br />
+Copyright &copy; 2002–2026 The Daring Fireball Company LLC.
+</p>
+</div>
+
+
+<!-- Google Analytics -->
+
+<!-- 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593949-1']);
+  _gaq.push (['_gat._anonymizeIp']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+ -->
+
+<!-- Asynchronously load Mint -->
+<!-- No, screw mint
+<script type="text/javascript">
+(function () {
+	var ma = document.createElement('script');
+	ma.type = 'text/javascript';
+	ma.src = '/mint/?js';
+	ma.async = true;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ma, s);
+})();
+</script>
+-->
+</div> <!-- Main -->
+
+</div> <!-- box -->
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2cfba7599280f3f',t:'MTc4NzA0MzYyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<!-- 0.0009 seconds -->

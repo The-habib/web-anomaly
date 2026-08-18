@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Daring Fireball: Movable Type Smart Quote Devilry</title>
+
+	<link rel="apple-touch-icon-precomposed" href="/graphics/apple-touch-icon.png" />
+	<link rel="shortcut icon" href="/graphics/favicon.ico?v=005" />
+	<link rel="mask-icon" href="/graphics/dfstar.svg" color="#4a525a">
+	<link rel="stylesheet" type="text/css" media="screen"  href="/css/fireball_screen.css?v1.2026-05-29" />
+	<link rel="stylesheet" type="text/css" media="screen"  href="/css/ie_sucks.php" />
+	<link rel="stylesheet" type="text/css" media="print"   href="/css/fireball_print.css?v01" />
+	<link rel="alternate"  type="application/atom+xml"     href="/feeds/main" />
+	<link rel="alternate"  type="application/json"         href="/feeds/json" />
+	<link rel="me"                                         href="https://mastodon.social/@gruber" />
+	<link rel="me"                                         href="https://mastodon.social/@daringfireball" />
+	<script src="/js/js-global/FancyZoom.js"></script>
+	<script src="/js/js-global/FancyZoomHTML.js"></script>
+	<link rel="home" href="/" title="Home" />
+	<link rel="prev" href="https://daringfireball.net/2002/08/jack_valenti_does_not_smell_like_teen_spirit" title="Jack Valenti Does Not Smell Like Teen Spirit" />
+	<link rel="next" href="https://daringfireball.net/2002/08/why_hypercard_failed" title="Why HyperCard Failed" />
+	<!-- Twitter Card bullshit -->
+	<meta name="twitter:card"         content="summary" />
+	<meta name="twitter:site"         content="@daringfireball" />
+	<meta name="twitter:creator"      content="@gruber" />
+	<meta name="twitter:title"        content="Movable Type Smart Quote Devilry" />
+	<meta name="twitter:description"  content="&lt;p&gt;
+Over at &lt;a href=&quot;http://diveintomark.org&quot;&gt;DiveIntoMark&lt;/a&gt;, Mark Pilgrim has some excellent tips with regard to hacking Movable Type &lt;a href=&quot;http://diveintomark.org/archives/2002/08/15.html#better_living_through_regular_expressions&quot;&gt;to generate smart quotes&lt;/a&gt; (a.k.a. curly quotes, a.k.a. typographer’s quotes). This got the gears turning here at Daring Fireball — surely, this could and should be even easier.
+&lt;/p&gt;" />
+	<meta name="twitter:image"        content="https://daringfireball.net/graphics/df-wide-card.png" />
+	<!-- Facebook Open Graph bullshit -->
+	<meta property="og:title"       content="Movable Type Smart Quote Devilry" />
+	<meta property="og:type"        content="article" />
+	<meta property="og:url"         content="https://daringfireball.net/2002/08/movable_type_smart_quote_devilry" />
+	<meta property="og:image"       content="https://daringfireball.net/graphics/df-wide-card.png" />
+	<meta property="og:site_name"   content="Daring Fireball" />
+	<meta property="og:description" content="&lt;p&gt;
+Over at &lt;a href=&quot;http://diveintomark.org&quot;&gt;DiveIntoMark&lt;/a&gt;, Mark Pilgrim has some excellent tips with regard to hacking Movable Type &lt;a href=&quot;http://diveintomark.org/archives/2002/08/15.html#better_living_through_regular_expressions&quot;&gt;to generate smart quotes&lt;/a&gt; (a.k.a. curly quotes, a.k.a. typographer’s quotes). This got the gears turning here at Daring Fireball — surely, this could and should be even easier.
+&lt;/p&gt;" />
+
+	<!-- Short URL:	http://df4.us/8 -->
+</head>
+
+<body onload="setupZoom()">
+<div id="Box">
+<div id="Banner">
+<a href="/" title="Daring Fireball: Home"><img src="/graphics/logos/" alt="Daring Fireball" height="56" /></a>
+</div>
+<div id="Sidebar">
+<p>By <strong>John&nbsp;Gruber</strong></p>
+
+<ul><!--&#9733;-->
+<li><a href="/archive/" title="Previous articles.">Archive</a></li><li><script>
+// <![CDATA[
+function ReadCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
+}
+var display_linked_list = ReadCookie('displayLinkedList');
+var li_linked = '<a href="/linked/" title="The Linked List.">Linked List<\/a>';
+if (display_linked_list == "hide") {
+	// Linked List is off on home page, so show it in menu:
+	document.write(li_linked + "<\/li>\n<li>");
+}
+else {
+	// Default to not putting separate LL item in sidebar:
+}
+// ]]>
+</script></li>
+<li><a href="/thetalkshow/" title="America’s favorite 3-star podcast.">The Talk Show</a></li>
+<li><a href="https://dithering.fm/" title="Two episodes per week, 15 minutes per episode. Not a minute less, not a minute more.">Dithering</a></li>
+<li><a href="/projects/" title="Software projects, including SmartyPants and Markdown.">Projects</a></li>
+<li><a href="/contact/" title="How to send email or feedback regarding Daring Fireball.">Contact</a></li>
+<li><a href="/colophon/" title="About this site and the tools used to produce it.">Colophon</a></li>
+<li><a href="/feeds/">Feeds / Social</a></li>
+<!-- 
+<li><a href="https://twitter.com/daringfireball">Twitter</a></li>
+ -->
+<li><a href="/feeds/sponsors/">Sponsorship</a></li>
+</ul>
+
+<div id="SidebarMartini">
+<a href="https://drata.com/daring">
+	<img alt="Drata" src="/martini/images/drata-blue.png" height="90">
+</a>
+<p>Manage GRC Faster with <a href="https://drata.com/daring">Drata’s Agentic Trust Management Platform</a></p>
+</div>
+
+</div> <!-- Sidebar -->
+
+<div id="Main">
+
+<div class="article">
+<h1>Movable Type Smart Quote Devilry</h1>
+<h6 class="dateline">Friday, 16 August 2002</h6>
+
+<p>
+Over at <a href="http://diveintomark.org">DiveIntoMark</a>, Mark Pilgrim has some excellent tips with regard to hacking Movable Type <a href="http://web.archive.org/web/20021205190859/http://diveintomark.org/archives/2002/08/15.html#better_living_through_regular_expressions">to generate smart quotes</a> (a.k.a. curly quotes, a.k.a. typographer’s quotes). This got the gears turning here at Daring Fireball — surely, this could and should be even easier.
+</p>
+
+<p>
+[<em><strong>13 Nov 2002:</strong> If you’re using Movable Type 2.5 or later, these instructions are now obsoleted by my new <a href="http://daringfireball.net/projects/smartypants/">SmartyPants plug-in</a>.</em>]
+</p>
+
+<p>
+[<em><strong>5 Oct 2002:</strong> This article was edited on October 5 to (1) fix a few bugs; (2) take advantage of improvements in the latest versions of Brad Choate’s plug-ins; and (3) improve the smart-quotes algorithm. See <a href="http://daringfireball.net/2002/10/movable_type_smart_quotes_now_with_retsin.html">this article</a> for details about the changes.</em>]
+</p>
+
+<p>
+For, what, at least the last 15 years or so, Mac users have come to expect proper quotes to happen automatically simply by typing regular apostrophes and quotation marks. In their word processors, that is. In HTML markup, however, smart quotes have been a royal pain in the ass.
+</p>
+
+<p>
+The problem with getting smart quotes in HTML is that the curly quote characters aren’t part of the standard cross-platform ASCII character set, which means that if you want them to appear properly on all platforms, you need to use entities. But raw entities are ugly and distracting — it’s hard to write and edit when your text looks like this:
+</p>
+
+<pre>&amp;#8220;Who&amp;#8217;re you?&amp;#8221;, she said.
+</pre>
+
+<p>
+So, most people ignore the issue, and simply use good old-fashioned dumb quotes in their HTML. Typography nerds who persevere and insist upon doing the right thing, like <a href="http://textism.com">Textism’s</a> Dean Allen, typically resort to <a href="http://web.archive.org/web/20040603082220/http://www.textism.com/resources/index.html?id=9">preflighting scripts</a> to generate smart quote entities. In other words, a three-step process:
+</p>
+
+<ol>
+<li>Write, edit, and fuss over a blog article, using plain text.</li>
+<li>Run preflight script(s) to generate the desired entities.</li>
+<li>Post the article to the web.</li>
+</ol>
+
+<p>
+But the whole point of modern blogging tools is that they make posting articles easy. Normal, non-obsessive people will only tolerate steps 1 and 3: write, then post. And they’re right — educating quotes is not a difficult problem to solve, and your software should be able to do it for you.
+</p>
+
+<p>
+Our own preflight scripts here at Daring Fireball are BBEdit text filters, written in Perl. But why invoke them manually, when Movable Type itself is extensible with Perl? Why indeed.
+</p>
+
+<p>
+The way it ought to work is to write using plain old easy-to-type dumb quotes, store the article in Movable Type’s database with the dumb quotes, and have the quote education take place at the template level, when the article gets published.
+</p>
+
+<p>
+Here’s our solution:
+</p>
+
+<ol>
+<li>
+<p>
+Install two of Brad Choate’s free Movable Type plug-ins: <a href="http://www.bradchoate.com/past/mtperlscript.php">MTPerlScript</a> (version 1.3 or later) and <a href="http://www.bradchoate.com/past/mtmacros.php">MTMacro</a> (version 1.5 or later). They’re a cinch to install — instructions are included in the readme files. Be sure to install the latest versions of both plug-ins — older versions won’t work with the macros defined below. Mr. Pilgrim is using one of Mr. Choate’s other plug-ins, MTRegex, but the smart quotes algorithm we’re using can’t be expressed as a single regular expression. We need multiple patterns and few <code>while()</code> loops. The amazing MTPerlScript plug-in allows us to do that.
+</p>
+</li>
+
+<li>
+<p>
+Add a template module containing the following text. I named my module “Educate Quotes”. This module contains two things: (1) a macro that defines a new <code>&lt;educate_quotes&gt;</code> tag for MT templates; and (2) the Perl script that does all our quote education, including both single and double quotes. The Perl script also creates em dashes — like the ones bracketing this very clause — by turning each occurrence of “ &#45;&#45; ” (space dash dash space) into a genuine em dash HTML entity.
+</p>
+
+<pre>
+&lt;MTMacroDefine ctag=&quot;educate_quotes&quot; script=&quot;PerlScript&quot;&gt;
+print educate_quotes::educate($MTMacroContent);
+&lt;/MTMacroDefine&gt;
+
+
+&lt;&#77;TPerlScript package=&quot;educate_quotes&quot; cache=&quot;1&quot; once=&quot;1&quot;&gt;
+
+sub educate {
+    &#36;_ = shift;
+
+    # First, check to see if the text we&#39;re educating contains
+    # markup. If it does, we need to take extra steps to avoid
+    # smartening any quotes within HTML tags.
+
+    if (m/&lt;.+&gt;/s) {
+
+        # Find single quotes that need to be turned into closing
+        # curly quotes. The pattern looks for text between tags.
+        1 while s{
+            (?&lt;=&gt;)          # Positive lookbehind for a &quot;&gt;&quot;
+            ([^&lt;]+)?        # One or more of anything but &quot;&lt;&quot;, optionally.
+            (?&lt;!\s)         # Negative lookbehind for a whitespace char
+            &#39;               # A quote
+            (?(1)|(?=\s))   # If $1 captured, then do nothing;
+                            # if not, then make sure the next char is whitespace  
+        }{$1&amp;#8217;}xgs;
+        
+        # Any remaining single quotes should be turned into
+        # opening curly quotes.
+        1 while s/(&gt;[^&lt;]*)&#39;/&#36;1&amp;#8216;/xgs;
+        
+        # Closing double-quotes (same pattern as above)
+        1 while s{
+            (?&lt;=&gt;)          # Positive lookbehind for a &quot;&gt;&quot;
+            ([^&lt;]+)?        # One or more of anything but &quot;&lt;&quot;, optionally.
+            (?&lt;!\s)         # Negative lookbehind for a whitespace char
+            &quot;               # A quote
+            (?(1)|(?=\s))   # If $1 captured, then do nothing;
+                            # if not, then make sure the next char is whitespace  
+        }{$1&amp;#8221;}xgs;
+        
+        # Opening double-quotes
+        1 while s/(&gt;[^&lt;]*)&quot;/&#36;1&amp;#8220;/xgs;
+        
+        # Let&#39;s make real em-dashes while we&#39;re here.
+        1 while s/(&gt;[^&lt;]*)(\ --\ )/&#36;1\ &amp;#8212;\ /gs;
+    }
+    else {
+        # The text we&#39;re educating doesn&#39;t contain markup,
+        # so we don&#39;t need anything fancy.
+        
+        s/(\S)&#39;/&#36;1&amp;#8217;/g;    # closing single quotes
+        s/&#39;/&amp;#8216;/g;          # opening single quotes
+        
+        s/(\S)&quot;/&#36;1&amp;#8221;/g;    # closing double quotes
+        s/&quot;/&amp;#8220;/g;          # opening double quotes
+        
+        s/ &#45;&amp;#45 /&amp;#8212;/g;       # em dashes
+    }
+
+    return &#36;_;
+}
+
+&lt;/MTPerlScript&gt;
+</pre>
+</li>
+
+
+<li>
+<p>
+In each of your blog templates in which you want smart quotes, include the Educate Quotes module by inserting the following code. (It doesn’t matter where you put this in the template; somewhere near the top is as good a place as any.)
+</p>
+
+<pre>&lt;&#36;MTInclude module=&quot;Educate Quotes&quot;&#36;&gt;</pre>
+</li>
+
+
+<li>
+<p>
+Finally, wrap the MT tags whose quotes you want to educate in <code>MT</code> tags that call our script. For example, the only tags we want to educate here at Daring Fireball are each entry’s title and body. Here’s the template code we previously used:
+</p>
+
+<pre>&lt;h1&gt;&lt;&#36;MTEntryTitle&#36;&gt;&lt;/h1&gt;<br />
+&lt;&#36;MTEntryBody&#36;&gt;
+</pre>
+
+<p>
+And here’s what we use now to generate the same output, but with educated quotes:
+</p>
+
+<pre>&lt;MTMacroApply&gt;
+&lt;h1&gt;&lt;educate_quotes&gt;&lt;MTEntryTitle&gt;&lt;/educate_quotes&gt;&lt;/h1&gt;
+	
+&lt;educate_quotes&gt;&lt;MTEntryBody&gt;&lt;/educate_quotes&gt;
+&lt;/MTMacroApply&gt;
+</pre>
+</li>
+
+</ol>
+
+
+<h2>Notes and Warnings</h2>
+
+<p>
+We’re eating our own dog food here at Daring Fireball, so we’re using this very script ourselves (at least at the time of this writing) with no ill effects whatsoever. But bugs happen; if you find one, please do let us know.
+</p>
+
+<p>
+The whole thing gives off a tad whiff of being a hack. It’d be slicker, safer, and easier to use in templates if this were its own plug-in, rather than a script that runs inside the MTPerlScript plug-in.
+</p>
+
+
+<h2>Nerdy Overview of the Smart Quotes Algorithm and Regex Patterns</h2>
+
+<p>
+The curious reader might question why the <code>educate()</code> routine is as complicated as it is. At first thought, you might be tempted to simply use the technique used in the <code>else</code> block — four simple calls to the substitution operator. The problem is that when you’re educating quotes in HTML markup, you can’t mess with the quotes inside tags. You don’t want to change 
+</p>
+
+<pre>    &lt;a href=&quot;foo&quot;&gt;</pre>
+
+<p>into</p>
+
+<pre>    &lt;a href=&amp;#8220;foo&amp;#8221;&gt;</pre>
+
+<p>So, the first step in the script is to see if the text we’re working with contains HTML markup:
+</p>
+
+<pre>    if (m/&lt;.+&gt;/s) {
+</pre>
+
+<p>
+If it doesn’t, then it’s a piece of cake to smarten up the quotes. Jump to the <code>else</code> block and run a few simple substitutions.
+</p>
+
+<p>
+If the text <em>does</em> contain markup, then we need to use loops to search for every straight quote (and apostrophe) that <em>isn’t</em> inside a tag:
+</p>
+
+<pre>    1 while s{
+            (?&lt;=&gt;)          # Positive lookbehind for a "&gt;"
+            ([^&lt;]+)?        # One or more of anything but "&lt;", optionally.
+            (?&lt;!\s)         # Negative lookbehind for a whitespace char
+            &#39;               # A quote
+            (?(1)|(?=\s))   # If $1 captured, then do nothing;
+                            # if not, then make sure the next char is whitespace  
+        }{$1&amp;#8217;}xgs;
+</pre>
+
+<p>
+We need a loop because a single regex substitution pattern can’t find multiple quotes in a single stretch of text between tags. In English, the pattern for closing single quotes is looking for “&gt;” followed by one or more characters that are not “&lt;”, followed by a non-whitespace character, followed by an apostrophe.
+</p>
+
+<p>
+But if there are two or more closing single quote characters in a run of text, the pattern is only going to match the first, because the subsequent quotes won’t have the “&gt;” to match, because the regex engine moved past that text in the first match. Thus, we loop. The <code>while</code> loop keeps running as long as the pattern matches. Once we’ve smartened up all the quotes, it stops and moves on to the next one.
+</p>
+
+<p>
+The logic for determining whether a quote is opening or closing is fairly simple: if the character immediately preceding is non-whitespace, then it’s a closing quote. It’s also a closing quote if the quote is the first character after the tag, and the next character after the quote is a space (for example: <code>if you have &quot;&lt;i&gt;italics&lt;/i&gt;&quot; inside quotes</code>). Once you’ve changed those, any remainders are opening quotes.
+</p>
+
+<p>
+One last note. If you ever actually want to use literal straight quote characters — like we did here in our code sections — you’ll need to explicitly ask for them by using HTML entities. “&amp;quot;” will give you a straight double quote character, and “&amp;#39;” will give you a straight apostrophe.
+</p>
+
+<h2>Credits</h2>
+
+<p>
+Special thanks to <a href="http://www.bradchoate.com">Brad Choate</a>, who not only wrote the amazing plug-ins upon which this article depends, but also wrote in with a fix to a glaring bug in my original implementation. Brad is the man.
+</p>
+<div id="PreviousNext">
+<table>
+<tr valign="top"><td align="right"><strong>Previous:</strong></td><td><a href="https://daringfireball.net/2002/08/jack_valenti_does_not_smell_like_teen_spirit">Jack Valenti Does Not Smell Like Teen Spirit</a></td></tr>
+<tr valign="top"><td align="right"><strong>Next:</strong></td><td><a href="https://daringfireball.net/2002/08/why_hypercard_failed">Why HyperCard Failed</a></td></tr>
+</table>
+</div> <!-- PreviousNext -->
+</div> <!-- article -->
+
+<div id="Footer">
+<form id="SiteSearch" action="https://daringfireball.net/search" method="get" style="margin-bottom: 2.5em;">
+<div>
+<input name="q" type="text" value="" style="margin-right: 8px; width: 66%;" />
+<input type="submit" value="Search" />
+</div>
+</form>
+
+<p class="smallprint">
+<a href="/preferences/" title="Customize the font size and presentation options for this web site.">Display Preferences</a>
+<br /><br />
+Copyright &copy; 2002–2026 The Daring Fireball Company LLC.
+</p>
+</div>
+
+
+<!-- Google Analytics -->
+
+<!-- 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593949-1']);
+  _gaq.push (['_gat._anonymizeIp']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+ -->
+
+<!-- Asynchronously load Mint -->
+<!-- No, screw mint
+<script type="text/javascript">
+(function () {
+	var ma = document.createElement('script');
+	ma.type = 'text/javascript';
+	ma.src = '/mint/?js';
+	ma.async = true;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ma, s);
+})();
+</script>
+-->
+</div> <!-- Main -->
+
+</div> <!-- box -->
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2cfba55eb8bdc57',t:'MTc4NzA0MzYyMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<!-- 0.0012 seconds -->

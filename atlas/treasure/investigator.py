@@ -164,7 +164,7 @@ def investigate_single_candidate(
         c_state = CandidateState.ORDINARY
     else:
         decision = TreasureDecision.DISMISSED
-        c_state = CandidateState.REJECTED
+        c_state = CandidateState.ORDINARY
 
     # 9. Human Explanations
     explanation = f"Atlas discovered an unmodernized archaeological surface at '{cand.path}' on {cand.domain}. "
@@ -217,30 +217,47 @@ def investigate_single_candidate(
         human_explanation=explanation,
         why_interesting=why_int,
         why_search_misses_it=why_miss,
-        evidence_artifact_path=deep_ev.raw_artifact_path,
+        evidence_artifact_path=deep_ev.raw_artifact_path or "",
+        artifact_path=deep_ev.raw_artifact_path or "",
         investigated_at_utc=now_utc
     )
 
 def run_adaptive_investigations(
-    candidates_file: Path = Path("data/treasure_runs/TREASURE_RUN_0002/candidates.jsonl"),
+    candidates_file: Optional[Path] = None,
+    candidates: Optional[List[CandidateRecord]] = None,
     max_investigate: int = 100,
-    output_dir: Path = Path("data/treasure_runs/TREASURE_RUN_0002"),
+    limit: Optional[int] = None,
+    output_dir: Optional[Path] = None,
+    data_dir: Optional[Path] = None,
     mode: ExecutionMode = ExecutionMode.LIVE_BLIND,
-    max_workers: int = 12
+    max_workers: int = 12,
+    run_id: str = "TREASURE_RUN_0003",
+    **kwargs: Any
 ) -> Tuple[List[InvestigationRecord], List[InvestigationRecord]]:
     """
     Concurrently investigate prioritized candidates under LIVE_BLIND mode.
     """
     assert_live_blind_isolation(mode, context="run_adaptive_investigations")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    raw_artifacts_dir = output_dir / "evidence" / "raw_artifacts"
+    target_out_dir = output_dir or data_dir or Path(f"data/treasure_runs/{run_id}")
+    target_out_dir.mkdir(parents=True, exist_ok=True)
+    raw_artifacts_dir = target_out_dir / "evidence" / "raw_artifacts"
     raw_artifacts_dir.mkdir(parents=True, exist_ok=True)
 
-    with open(candidates_file, "r", encoding="utf-8") as f:
-        candidates = [CandidateRecord(**json.loads(l)) for l in f if l.strip()]
+    cand_pool_source: List[CandidateRecord] = []
+    if candidates is not None:
+        cand_pool_source = list(candidates)
+    elif candidates_file is not None and candidates_file.exists():
+        with open(candidates_file, "r", encoding="utf-8") as f:
+            cand_pool_source = [CandidateRecord(**json.loads(l)) for l in f if l.strip()]
+    else:
+        default_cf = target_out_dir / "candidates.jsonl"
+        if default_cf.exists():
+            with open(default_cf, "r", encoding="utf-8") as f:
+                cand_pool_source = [CandidateRecord(**json.loads(l)) for l in f if l.strip()]
 
-    candidates.sort(key=lambda x: x.research_priority, reverse=True)
-    investigation_pool = candidates[:max_investigate]
+    investigate_limit = limit or max_investigate
+    cand_pool_source.sort(key=lambda x: x.research_priority, reverse=True)
+    investigation_pool = cand_pool_source[:investigate_limit]
 
     print(f"[*] Launching adaptive investigations on {len(investigation_pool)} candidate URLs with {max_workers} concurrent workers...")
 
@@ -269,7 +286,7 @@ def run_adaptive_investigations(
     all_investigations.sort(key=lambda x: x.treasure_score, reverse=True)
     nominated_candidates.sort(key=lambda x: x.treasure_score, reverse=True)
 
-    with open(output_dir / "investigations.jsonl", "w", encoding="utf-8") as f:
+    with open(target_out_dir / "investigations.jsonl", "w", encoding="utf-8") as f:
         for inv in all_investigations:
             f.write(inv.model_dump_json() + "\n")
 

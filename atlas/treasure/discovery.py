@@ -162,7 +162,10 @@ def generate_multi_strategy_candidates(
     sampled_domains: List[Dict[str, str]],
     mode: ExecutionMode = ExecutionMode.LIVE_BLIND,
     output_file: Path = Path("data/treasure_runs/TREASURE_RUN_0002/candidates.jsonl"),
-    max_workers: int = 15
+    max_workers: int = 15,
+    run_id: str = "TREASURE_RUN_0003",
+    max_candidates_per_strategy: int = 50,
+    **kwargs: Any
 ) -> List[CandidateRecord]:
     """
     Execute 8 modular discovery strategies across the frozen domain sample and live CDX indices.

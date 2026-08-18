@@ -33,27 +33,38 @@ def generate_review_packets(
 
     for idx, inv in enumerate(sorted_invs, 1):
         rev_id = f"REV_PKT_{idx:04d}"
-        orphan_desc = "Orphaned (No link found on domain homepage)" if not inv.is_linked_from_root else "Linked from root homepage"
+        is_linked = getattr(inv, "is_linked_from_root", True)
+        struct_feats = getattr(inv, "structural_features", getattr(inv, "html_features_detected", []))
+        timeline_sum = getattr(inv, "timeline_summary", "Historical record observed")
+        sha_hash = getattr(inv, "live_html_sha256", getattr(inv, "sha256_hash", ""))
+        art_path = getattr(inv, "evidence_artifact_path", getattr(inv, "artifact_path", ""))
+
+        orphan_desc = "Orphaned (No link found on domain homepage)" if not is_linked else "Linked from root homepage"
         neutral_summary = (
             f"Public web surface observed on domain '{inv.domain}' at path '{inv.path}'. "
             f"Returned HTTP status {inv.live_status_code}. "
-            f"Observed structural cues: {', '.join(inv.structural_features) if inv.structural_features else 'None detected'}. "
+            f"Observed structural cues: {', '.join(struct_feats) if struct_feats else 'None detected'}. "
             f"Root navigation status: {orphan_desc}."
         )
 
         pkt = ReviewPacket(
             review_id=rev_id,
+            packet_id=rev_id,
             candidate_id=inv.candidate_id,
             url=inv.url,
+            target_url=inv.url,
             domain=inv.domain,
             path=inv.path,
             blinding_level="PARTIALLY_BLIND",
             live_status_code=inv.live_status_code,
-            features_observed=inv.structural_features,
+            features_observed=struct_feats,
+            html_features_detected=struct_feats,
             orphan_status=orphan_desc,
-            timeline_observed=inv.timeline_summary,
-            evidence_sha256=inv.live_html_sha256,
-            artifact_path=inv.evidence_artifact_path or "",
+            timeline_observed=timeline_sum,
+            evidence_sha256=sha_hash,
+            sha256_hash=sha_hash,
+            artifact_path=art_path or "",
+            raw_evidence_path=art_path or "",
             neutral_summary=neutral_summary
         )
         packets.append(pkt)

@@ -1,0 +1,56 @@
+{
+  "run_id": "TREASURE_RUN_0003",
+  "release_status": "APPROVED_FOR_TREASURE_DISCOVERY",
+  "checks_passed": 12,
+  "total_checks": 12,
+  "checks": {
+    "GRAPH_INTEGRITY": {
+      "passed": true,
+      "details": "Knowledge graph verified: 201 entities and 200 relationships."
+    },
+    "EVIDENCE_INTEGRITY": {
+      "passed": true,
+      "details": "Cryptographic SHA-256 digests verified for 100 investigations."
+    },
+    "SEED_ISOLATION": {
+      "passed": true,
+      "details": "Deterministic stratified sample of 100 domains verified without hardcoded seed lists."
+    },
+    "REFERENCE_ISOLATION": {
+      "passed": true,
+      "details": "Known reference landmarks strictly quarantined in data/reference_controls/reference_domains.json."
+    },
+    "MEMORY_ISOLATION": {
+      "passed": true,
+      "details": "Cross-run memory partitions isolated with runtime guards preventing blind pipeline contamination."
+    },
+    "REVIEW_ISOLATION": {
+      "passed": true,
+      "details": "Neutral partially-blind review packets verified (100 packets, zero score/strategy leakage)."
+    },
+    "HISTORICAL_METADATA_PROVENANCE": {
+      "passed": true,
+      "details": "Zero fabricated default historical spans found across 1271 candidates."
+    },
+    "STATE_MACHINE_INTEGRITY": {
+      "passed": true,
+      "details": "Machine validation prohibition strictly enforced (0 validated treasures without imported human reviews)."
+    },
+    "REPORT_RECONCILIATION": {
+      "passed": true,
+      "details": "Cryptographic run manifest reconciled with generated intelligence datasets."
+    },
+    "CHECKPOINT_INTEGRITY": {
+      "passed": true,
+      "details": "Checkpoint state recording and safe resumption verified."
+    },
+    "SCHEMA_INTEGRITY": {
+      "passed": true,
+      "details": "Schema versioning and dataset contracts verified across all JSONL outputs."
+    },
+    "TEST_SUITE": {
+      "passed": true,
+      "details": "Automated regression and adversarial test suites operational."
+    }
+  }
+}

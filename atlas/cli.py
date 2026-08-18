@@ -582,13 +582,19 @@ def cmd_treasure(args):
     from atlas.treasure.pipeline import execute_treasure_hunt
     from atlas.treasure.release_gate import run_treasure_release_gate
     from atlas.treasure.guard import ExecutionMode
+    from atlas.knowledge.storage import load_knowledge_graph
+    from atlas.knowledge.query import GraphQueryEngine
     from pathlib import Path
     import json
+    import sys
 
-    if args.treasure_action == "hunt":
+    intel_dir = Path("data/treasure_intelligence")
+
+    if args.treasure_action in ("hunt", "resume"):
         mode_val = getattr(args, "mode", "LIVE_BLIND")
-        run_id_val = getattr(args, "run_id", "TREASURE_RUN_0002")
-        print(f"[*] Initiating Autonomous Internet Archaeology Treasure Hunt ({run_id_val}, Mode: {mode_val})...")
+        run_id_val = getattr(args, "run_id", "TREASURE_RUN_0003")
+        is_resume = (args.treasure_action == "resume") or getattr(args, "resume", False)
+        print(f"[*] Initiating Autonomous Internet Archaeology Hunt ({run_id_val}, Mode: {mode_val}, Resume: {is_resume})...")
         res = execute_treasure_hunt(
             run_id=run_id_val,
             count=args.count,
@@ -596,92 +602,158 @@ def cmd_treasure(args):
             category=args.category,
             deep=args.deep,
             mode=ExecutionMode(mode_val),
-            resume=args.resume
+            resume=is_resume
         )
 
-        strat_perf = res.get("strategy_performance", {})
-        top_cands = res.get("top_candidates", [])
-        most_surp = top_cands[0]["domain"] + top_cands[0]["path"] if top_cands else "None"
-        hardest = next((c["domain"] + c["path"] for c in top_cands if c.get("difficulty") in ("EXTREME", "VERY_HARD")), most_surp)
+    elif args.treasure_action == "status":
+        print("[*] Project Atlas — Treasure Intelligence Platform Status:")
+        print("-" * 65)
+        for r_id in ["TREASURE_RUN_0002", "TREASURE_RUN_0003"]:
+            r_dir = Path(f"data/treasure_runs/{r_id}")
+            if r_dir.exists():
+                m_file = r_dir / "run_manifest.json"
+                if m_file.exists():
+                    with open(m_file, "r", encoding="utf-8") as f:
+                        m = json.load(f)
+                    print(f"  {r_id:<20}: Potential={m.get('potential_treasures_count', 0)}, Validated={m.get('validated_treasures_count', 0)}, Mode={m.get('execution_mode', 'LIVE_BLIND')}")
+                else:
+                    print(f"  {r_id:<20}: Manifest pending")
+            else:
+                print(f"  {r_id:<20}: Not executed yet")
+        print("-" * 65 + "\n")
 
-        print("\n===============================================================")
-        print("              PROJECT ATLAS — TREASURE RUN #002")
-        print("===============================================================")
-        print(f"Status:                      {res['status']}")
-        print(f"Run ID:                      {res['run_id']}")
-        print(f"\nDomains:                     {res.get('domains_sampled_count', 100)}")
-        print(f"Sample:                      Atlas Corpus v2 (Seed {res['seed']})")
-        print(f"\nCandidates:                  {res['candidates_discovered_count']}")
-        print(f"Investigated:                {res['candidates_investigated_count']}")
-        print(f"\nHuman-validated treasures:   {res['validated_treasures_count']}")
-        print(f"Potential treasures:         {res['pending_treasures_count']}")
-        print(f"Dismissed:                   {res['dismissed_count']}")
-        print(f"False positives:             {res['false_positives_count']}")
-        print("\nStrategy performance:")
-        for s_key in ["USER_SPACE", "ORPHAN_PATH", "HISTORICAL_SURVIVOR", "TECHNOLOGY_FOSSIL", "STRUCTURAL_SURVIVOR", "ARCHIVE_ONLY", "RESURRECTION", "WEB_ODDITY"]:
-            cnts = strat_perf.get(s_key, {})
-            print(f"  {s_key:<22}: {cnts.get('candidates', 0)} discovered, {cnts.get('investigated', 0)} investigated, {cnts.get('potential', 0)} potential, {cnts.get('validated', 0)} validated")
+    elif args.treasure_action in ("candidates", "list"):
+        c_file = intel_dir / "review_queue.jsonl"
+        if not c_file.exists():
+            c_file = Path("data/treasure_runs/TREASURE_RUN_0003/potential_treasures.jsonl")
+        if not c_file.exists():
+            c_file = Path("data/treasure_runs/TREASURE_RUN_0002/potential_treasures.jsonl")
+        if not c_file.exists():
+            print("[*] No candidates found. Run 'atlas treasure hunt' first.")
+            return
+        with open(c_file, "r", encoding="utf-8") as f:
+            candidates = [json.loads(l) for l in f if l.strip()]
+        print(f"\n[*] Candidate Queue ({len(candidates)} records):")
+        print("-" * 85)
+        for idx, t in enumerate(candidates[:25], 1):
+            cid = t.get("candidate_id", t.get("target_url", "UNKNOWN"))
+            score = t.get("queue_score", t.get("archaeological_score", 0.0))
+            url = t.get("target_url", t.get("url", ""))
+            print(f"#{idx:02d} | {cid:<15} | Score: {score:>4.1f} | {url}")
+        print("-" * 85 + "\n")
 
-        print("\nTop validated treasures:")
-        if res['validated_treasures_count'] == 0:
-            print("  (0 validated treasures — all high-scoring candidates preserved as Potential Treasures in review_packets.jsonl awaiting human review)")
+    elif args.treasure_action == "show":
+        if not args.treasure_id:
+            print("[!] Error: Specify --id <ID> to inspect.")
+            sys.exit(1)
+        dna_file = intel_dir / "treasure_dna.jsonl"
+        found = False
+        if dna_file.exists():
+            with open(dna_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        dna = json.loads(line.strip())
+                        if dna.get("candidate_id") == args.treasure_id or dna.get("dna_id") == args.treasure_id:
+                            print(f"\n[*] Treasure DNA Profile: {dna['dna_id']} ({dna['url']})")
+                            print(json.dumps(dna, indent=2))
+                            found = True
+                            break
+        if not found:
+            print(f"[!] Entity/Candidate ID '{args.treasure_id}' not found in Treasure DNA dataset.")
+
+    elif args.treasure_action == "timeline":
+        if not args.treasure_id:
+            print("[!] Error: Specify --id <CANDIDATE_ID> to inspect timeline.")
+            sys.exit(1)
+        tl_file = intel_dir / "timelines.jsonl"
+        if tl_file.exists():
+            with open(tl_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        tl = json.loads(line.strip())
+                        if tl.get("candidate_id") == args.treasure_id or tl.get("timeline_id") == args.treasure_id:
+                            print(f"\n[*] Historical Timeline for {tl['url']}:")
+                            for ev in tl.get("events", []):
+                                print(f"  [{ev['timestamp_observed']}] {ev['event_type']}: {ev['description']}")
+                            print()
+                            return
+        print(f"[!] Timeline not found for ID '{args.treasure_id}'.")
+
+    elif args.treasure_action == "lineage":
+        if not args.treasure_id:
+            print("[!] Error: Specify --id <CANDIDATE_ID> to inspect lineage.")
+            sys.exit(1)
+        lin_file = intel_dir / "candidate_lineage.jsonl"
+        if lin_file.exists():
+            with open(lin_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        lin = json.loads(line.strip())
+                        if lin.get("candidate_url") == args.treasure_id or lin.get("lineage_id") == args.treasure_id:
+                            print(json.dumps(lin, indent=2))
+                            return
+        print(f"[!] Lineage not found for ID '{args.treasure_id}'.")
+
+    elif args.treasure_action == "similar":
+        if not args.treasure_id:
+            print("[!] Error: Specify --id <CANDIDATE_ID> to query similar artifacts.")
+            sys.exit(1)
+        print(f"[*] Querying structurally and platform-similar artifacts for '{args.treasure_id}'...")
+        cl_file = intel_dir / "clusters.json"
+        if cl_file.exists():
+            with open(cl_file, "r", encoding="utf-8") as f:
+                clusters = json.load(f)
+            for cl in clusters:
+                if any(args.treasure_id in cid for cid in cl.get("member_candidate_ids", [])):
+                    print(f"\n[+] Member of Archaeological Cluster: {cl['cluster_name']}")
+                    print(f"    Description: {cl['description']}")
+                    print(f"    Features:    {', '.join(cl['common_features'])}")
+                    print(f"    Members:     {len(cl['member_candidate_ids'])} candidates across {len(cl['member_domains'])} domains\n")
+                    return
+        print(f"[*] No specific cluster matched '{args.treasure_id}'.")
+
+    elif args.treasure_action == "graph":
+        ent_file = intel_dir / "entities.jsonl"
+        rel_file = intel_dir / "relationships.jsonl"
+        if not ent_file.exists():
+            print("[!] Knowledge graph dataset not found. Run 'atlas treasure hunt' first.")
+            return
+        kg = load_knowledge_graph(ent_file, rel_file)
+        engine = GraphQueryEngine(kg)
+        q_str = getattr(args, "query", "") or getattr(args, "treasure_id", "") or "all"
+        print(f"\n[*] Archaeological Knowledge Graph Query ('{q_str}'):")
+        print(f"    Total Entities:      {len(kg.entities)}")
+        print(f"    Total Relationships: {len(kg.edges)}")
+        if q_str and q_str != "all":
+            matches = [e for e in kg.entities.values() if q_str.lower() in e.name.lower() or q_str.lower() in e.entity_id.lower()]
+            print(f"    Matching Entities:   {len(matches)}")
+            for m in matches[:10]:
+                print(f"      - [{m.entity_type.value}] {m.entity_id}: {m.name}")
+        print()
+
+    elif args.treasure_action == "audit":
+        audit_file = intel_dir / "self_audit.json"
+        if audit_file.exists():
+            with open(audit_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print("\n[*] Project Atlas — Operating System Self-Audit:")
+            print(json.dumps(data, indent=2) + "\n")
         else:
-            for idx, vt in enumerate(res.get("top_validated", []), 1):
-                print(f"  {idx}. [{vt['treasure_id']}] {vt['title']} ({vt['domain']}{vt['path']})")
-
-        print(f"\nMost surprising:             {most_surp}")
-        print(f"Hardest to find:             {hardest}")
-        print(f"Most historically interesting: {most_surp}")
-        print(f"Most obscure:                {most_surp}")
-        print(f"Best strategy:               {res.get('best_strategy', 'USER_SPACE')}")
-        print(f"Worst strategy:              {res.get('worst_strategy', 'RESURRECTION')}")
-        print(f"Reference recoveries:        {res.get('reference_recoveries_count', 0)}")
-        print(f"New-to-Atlas candidates:     {res.get('new_to_atlas_count', 0)}")
-        print("Evidence artifacts:          data/treasure_runs/TREASURE_RUN_0002/evidence/raw_artifacts/")
-        print("SHA-256 verification:        data/treasure_runs/TREASURE_RUN_0002/run_manifest.json")
-        print("Resource usage:")
-        print(f"  Runtime:                   {res['elapsed_seconds']}s")
-        print(f"  Storage:                   data/treasure_runs/{res['run_id']}/")
-        print(f"  Network:                   {res['candidates_investigated_count'] * 2} requests (bounded 5s timeout)")
-        print("Major limitations:           Single point-in-time public web observation; CDX index density variation.")
-        print("Most important lesson:       Blind autonomous archaeology without seeds successfully identifies unmodernized historical surfaces.\n")
+            print("[*] Self-audit dataset not found. Run 'atlas treasure hunt' first.")
 
     elif args.treasure_action == "release-check":
         print("[*] Executing Treasure Mode Scientific Release Gate Audit...")
-        report = run_treasure_release_gate()
+        report = run_treasure_release_gate(run_id=getattr(args, "run_id", "TREASURE_RUN_0003"))
         print("\nTREASURE MODE SCIENTIFIC RELEASE GATE RESULTS:")
         print("-" * 65)
         for check_name, check_data in report["checks"].items():
             status = "PASS" if check_data["passed"] else "FAIL"
             print(f"{check_name:<44}: {status}")
         print("-" * 65)
-        print(f"SCIENTIFIC RELEASE:   {report['decision']}")
-        print(f"GATE CHECKS PASSED:   {report['passed_checks']} / {report['total_checks']}\n")
-        if not report["all_passed"]:
+        print(f"SCIENTIFIC RELEASE:   {report['release_status']}")
+        print(f"GATE CHECKS PASSED:   {report['checks_passed']} / {report['total_checks']}\n")
+        if report["release_status"] != "APPROVED_FOR_TREASURE_DISCOVERY":
             sys.exit(1)
-
-    elif args.treasure_action == "list":
-        t_file = Path("data/treasure_runs/TREASURE_RUN_0002/potential_treasures.jsonl")
-        if not t_file.exists():
-            print("[*] No potential treasures found. Run 'atlas treasure hunt' first.")
-            return
-        with open(t_file, "r", encoding="utf-8") as f:
-            candidates = [json.loads(l) for l in f if l.strip()]
-        print(f"\n[*] Found {len(candidates)} Nominated Archaeological Candidates:")
-        print("-" * 85)
-        for idx, t in enumerate(candidates[:25], 1):
-            print(f"#{idx:02d} | {t['candidate_id']} | Score: {t['treasure_score']:.1f} | {t['domain']}{t['path']} ({t['url']})")
-        print("-" * 85 + "\n")
-
-    elif args.treasure_action == "show":
-        if not args.treasure_id:
-            print("[!] Error: Specify --id <TREASURE_ID> to inspect.")
-            sys.exit(1)
-        dossier_path = Path(f"reports/treasures/{args.treasure_id}.md")
-        if dossier_path.exists():
-            print(dossier_path.read_text(encoding="utf-8"))
-        else:
-            print(f"[!] Treasure dossier not found at {dossier_path}.")
 
 def main():
     parser = argparse.ArgumentParser(
@@ -775,16 +847,22 @@ def main():
     review_parser.add_argument("--file", "-f", help="Path to submissions JSONL file for import", default=None)
 
     # treasure (Treasure Mode Autonomous Engine)
-    treasure_parser = subparsers.add_parser("treasure", help="Treasure Mode Autonomous Discovery Engine")
-    treasure_parser.add_argument("treasure_action", choices=["hunt", "list", "show", "release-check"], help="Treasure action")
+    treasure_parser = subparsers.add_parser("treasure", help="Treasure Intelligence Autonomous Operating System")
+    treasure_parser.add_argument("treasure_action", choices=[
+        "hunt", "list", "show", "release-check", "status", "candidates", "review",
+        "lineage", "timeline", "similar", "museum", "graph", "prior-art", "compare", "audit", "resume"
+    ], help="Treasure action")
     treasure_parser.add_argument("--count", "-n", type=int, default=100, help="Target number of candidate URLs to investigate")
-    treasure_parser.add_argument("--seed", "-s", type=int, default=101, help="Deterministic sampling seed")
+    treasure_parser.add_argument("--seed", "-s", type=int, default=202, help="Deterministic sampling seed")
     treasure_parser.add_argument("--mode", "-m", type=str, default="LIVE_BLIND", choices=["LIVE_BLIND", "REPLAY", "SIMULATION", "REFERENCE_EVALUATION"], help="Execution mode guard")
-    treasure_parser.add_argument("--run-id", type=str, default="TREASURE_RUN_0002", help="Unique research run ID")
+    treasure_parser.add_argument("--run-id", type=str, default="TREASURE_RUN_0003", help="Unique research run ID")
     treasure_parser.add_argument("--category", "-c", type=str, default=None, help="Filter to specific domain category")
     treasure_parser.add_argument("--deep", action="store_true", default=True, help="Enable deep structural investigation")
     treasure_parser.add_argument("--resume", action="store_true", default=False, help="Resume from last checkpoint")
-    treasure_parser.add_argument("--id", dest="treasure_id", type=str, default=None, help="Treasure ID to inspect")
+    treasure_parser.add_argument("--id", dest="treasure_id", type=str, default=None, help="Treasure or candidate ID")
+    treasure_parser.add_argument("--query", "-q", type=str, default=None, help="Search or graph query string")
+    treasure_parser.add_argument("--compare-to", type=str, default=None, help="Target ID to compare against")
+    treasure_parser.add_argument("--file", "-f", type=str, default=None, help="Input or output file path")
 
     args = parser.parse_args()
 

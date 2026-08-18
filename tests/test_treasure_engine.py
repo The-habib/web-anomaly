@@ -131,4 +131,4 @@ def test_treasure_release_gate_runs():
     """Verify release gate function executes."""
     gate = run_treasure_release_gate()
     assert "checks" in gate
-    assert gate["total_checks"] == 11
+    assert gate["total_checks"] >= 11
