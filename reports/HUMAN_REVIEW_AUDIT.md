@@ -1,20 +1,13 @@
-# Project Atlas — Human Review Protocol & Blindness Audit (Phase 1.9)
+# Project Atlas — Decontaminated Human Review Audit (Phase 1.9.1)
 
-## 1. Blinding Protocol
-- Reviewers evaluated 21 candidate dossiers.
-- Dossiers presented page screenshots, extracted text, timeline events, and HTML structure.
-- **Blinded Attributes**: Treatment vs Control arm label, density score, retrieval priority rank, and baseline domain rank were completely stripped.
+## 1. Review Status Summary
+- **Current State**: **`HUMAN_REVIEW_PENDING`**
+- **Human Reviewers Involved**: **0** (No external human panel connected in current environment)
+- **Synthetic Verdicts Synthesized**: **0** (Zero programmatic human simulation permitted)
+- **Packets Exported**: **23 packets** (`data/phase1_9_1/review_packets.jsonl`)
+- **Validated Discoveries**: **0** (Pending genuine human review submission)
 
 ---
 
-## 2. Review Verdict Summary
-
-| Human Verdict | Treatment Candidates | Control Candidates | Random Sample Checks | Total |
-| :--- | :--- | :--- | :--- | :--- |
-| **CLEAR_ANOMALY** | 2 | 0 | 0 | **2** |
-| **POTENTIAL_ANOMALY** | 0 | 1 | 0 | **1** |
-| **ORDINARY** | 8 | 10 | 0 | **18** |
-| **Total Dossiers Reviewed** | 10 | 11 | 0 | **21** |
-
-- **Inter-Rater Agreement**: 100% agreement on validated discoveries.
-- **Audit Conclusion**: Human review protocol was executed in full compliance with double-blind standards.
+## 2. Integrity Certification
+Project Atlas certifies that all machine-generated "human" reviews have been purged from the empirical evaluation pipeline.
