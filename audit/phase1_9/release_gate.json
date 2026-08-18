@@ -1,0 +1,67 @@
+{
+  "gate_name": "PHASE_1_9_SCIENTIFIC_RELEASE_GATE",
+  "timestamp_utc": 1787035203.8058245,
+  "all_passed": true,
+  "passed_checks": 14,
+  "total_checks": 14,
+  "classification": "PROMISING_BUT_UNCONFIRMED",
+  "decision": "APPROVED_FOR_PHASE_2_HEURISTIC_EXPLORATION",
+  "checks": {
+    "POPULATION_INTEGRITY": {
+      "passed": true,
+      "details": "Verified 200 study domains across 6 categories."
+    },
+    "RANDOMIZATION_INTEGRITY": {
+      "passed": true,
+      "details": "100 matched pairs, treatment mean d_raw=165.61, control mean d_raw=166.65 (delta=1.04)"
+    },
+    "BUDGET_EQUALITY": {
+      "passed": true,
+      "details": "Strict equality verified: Treatment=1000 slots, Control=1000 slots (1.0000x)"
+    },
+    "CANDIDATE_POOL_EQUALITY": {
+      "passed": true,
+      "details": "Candidate pools built for all 200 domains from unified historical index."
+    },
+    "PATH_ORDER_INDEPENDENCE": {
+      "passed": true,
+      "details": "Control ordered via neutral deterministic shuffle (seed=999); Treatment ordered via density priority."
+    },
+    "SCORER_IMMUTABILITY": {
+      "passed": true,
+      "details": "Atlas scoring engine weights and fossil detection rules strictly frozen."
+    },
+    "BLIND_REVIEW": {
+      "passed": true,
+      "details": "Verified 21 dossiers reviewed under double-blind protocol."
+    },
+    "HOLDOUT_ISOLATION": {
+      "passed": true,
+      "details": "Holdout cohort of 200 domains strictly isolated until post-freeze unblinding."
+    },
+    "NO_SYNTHETIC_DATA": {
+      "passed": true,
+      "details": "Live mode guard enforced; 100% live/archive network evidence."
+    },
+    "DOMAIN_LEVEL_ANALYSIS": {
+      "passed": true,
+      "details": "Primary outcome evaluated as domain discovery probability."
+    },
+    "STATISTICAL_REPRODUCIBILITY": {
+      "passed": true,
+      "details": "Fisher p=0.4975, RD=0.02 (+2.0%), RR_HA=5.0."
+    },
+    "REPORT_RECONCILIATION": {
+      "passed": true,
+      "details": "All 13 scientific reports published and reconciled."
+    },
+    "EVIDENCE_LINEAGE": {
+      "passed": true,
+      "details": "2 discoveries verified with SHA-256 evidence digests."
+    },
+    "PHASE_2_READINESS": {
+      "passed": true,
+      "details": "Heuristic exploration tier proposal documented."
+    }
+  }
+}

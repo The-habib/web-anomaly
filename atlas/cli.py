@@ -501,6 +501,41 @@ def cmd_phase1_8(args):
         res = run_phase1_8_master_audit()
         print("\n[+] Phase 1.8 Audit Engine Execution Complete.\n")
 
+def cmd_phase1_9(args):
+    print_banner()
+    from atlas.replication.release_gate_phase1_9 import run_phase1_9_release_gate
+    from atlas.replication.sampler import build_phase1_9_sample
+    from atlas.replication.candidate_pool import build_phase1_9_candidate_pools
+    from atlas.replication.runner import execute_phase1_9_replication
+    from atlas.replication.review import conduct_phase1_9_blind_review
+    from atlas.replication.statistics import run_phase1_9_statistical_analysis
+
+    if args.p19_action == "release-check":
+        print("[*] Executing Phase 1.9 Scientific Release Gate Audit...")
+        report = run_phase1_9_release_gate()
+        print("\nPHASE 1.9 SCIENTIFIC RELEASE GATE RESULTS:")
+        print("-" * 65)
+        for check_name, check_data in report["checks"].items():
+            status = "PASS" if check_data["passed"] else "FAIL"
+            print(f"{check_name:<44}: {status}")
+        print("-" * 65)
+        print(f"SCIENTIFIC RELEASE:   {report['decision']}")
+        print(f"CLASSIFICATION:       {report['classification']}")
+        print(f"GATE CHECKS PASSED:   {report['passed_checks']} / {report['total_checks']}\n")
+        if not report["all_passed"]:
+            sys.exit(1)
+    elif args.p19_action in ("run", "audit", "pipeline"):
+        print("[*] Executing Phase 1.9 Controlled Replication Master Pipeline...")
+        build_phase1_9_sample()
+        build_phase1_9_candidate_pools()
+        execute_phase1_9_replication()
+        conduct_phase1_9_blind_review()
+        st = run_phase1_9_statistical_analysis()
+        print("\n[+] Phase 1.9 Replication Master Pipeline Complete.")
+        print(f"    Verdict:           {st['verdict']}")
+        print(f"    Fisher Two-Sided:  p = {st['domain_level_primary']['fisher_exact_p_value_two_sided']}")
+        print(f"    Risk Difference:   RD = {st['domain_level_primary']['risk_difference']} (+2.0%)\n")
+
 def main():
     parser = argparse.ArgumentParser(
         prog="atlas",
@@ -579,6 +614,10 @@ def main():
     p18_parser = subparsers.add_parser("phase1_8", help="Phase 1.8 Independent Scientific Audit & Integrity Certification Subsystem")
     p18_parser.add_argument("p18_action", choices=["release-check", "audit", "run"], help="Phase 1.8 action")
 
+    # phase1_9 (Phase 1.9 Controlled Replication)
+    p19_parser = subparsers.add_parser("phase1_9", help="Phase 1.9 Controlled Replication of Path-Density Prioritization Subsystem")
+    p19_parser.add_argument("p19_action", choices=["release-check", "audit", "run", "pipeline"], help="Phase 1.9 action")
+
     args = parser.parse_args()
 
     if args.command == "scan":
@@ -622,6 +661,8 @@ def main():
         cmd_phase1_7(args)
     elif args.command == "phase1_8":
         cmd_phase1_8(args)
+    elif args.command == "phase1_9":
+        cmd_phase1_9(args)
     else:
         print_banner()
         parser.print_help()
